@@ -42,9 +42,8 @@
     ? "Last updated: " + relativeTime(latestTs) + " (" + formatDate(latestTs) + ")"
     : "Last updated: unknown";
 
-  // Render weekly summary, contributors, then project cards
+  // Render weekly summary, then project cards
   renderWeeklySummary(dataMap);
-  renderContributors(dataMap);
   renderCards(projects.projects, dataMap);
 })();
 
@@ -74,30 +73,6 @@ function renderWeeklySummary(dataMap) {
     '<div class="weekly-box weekly-box-issues"><div class="weekly-num">' + totalIssues + '</div><div class="weekly-label">Issues</div></div>' +
     '<div class="weekly-box weekly-box-releases"><div class="weekly-num">' + totalReleases + '</div><div class="weekly-label">Releases</div></div>' +
     '</div>';
-}
-
-function renderContributors(dataMap) {
-  const contributors = aggregateContributors(dataMap);
-  if (!contributors.length) return;
-
-  const el = document.getElementById("contributors");
-  let html = '<h2>Top Contributors</h2>';
-  html += '<table class="contributors-table">';
-  html += '<tr><th>#</th><th>Author</th><th>PRs</th><th>Projects</th></tr>';
-
-  for (let i = 0; i < contributors.length; i++) {
-    const c = contributors[i];
-    const projList = Array.from(c.projects).join(", ");
-    html += '<tr>';
-    html += '<td class="contrib-rank">' + (i + 1) + '</td>';
-    html += '<td><a href="https://github.com/' + encodeURIComponent(c.author) + '" target="_blank">' + escapeHtml(c.author) + '</a></td>';
-    html += '<td class="contrib-count">' + c.prCount + '</td>';
-    html += '<td class="contrib-projects">' + escapeHtml(projList) + '</td>';
-    html += '</tr>';
-  }
-
-  html += '</table>';
-  el.innerHTML = html;
 }
 
 function renderCards(projectsCfg, dataMap) {
@@ -142,6 +117,9 @@ function buildCard(name, cfg, d) {
 
   // This Week section
   html += buildWeekSection(prs, issues, releases, cfg);
+
+  // Top Contributors section
+  html += buildContributorSection(prs);
 
   // PRs section
   html += buildPRSection(openPrs);
@@ -192,6 +170,29 @@ function buildWeekSection(prs, issues, releases, cfg) {
   }
 
   html += "</details>";
+  return html;
+}
+
+function buildContributorSection(prs) {
+  const contributors = getProjectContributors(prs, 10);
+  if (!contributors.length) {
+    return "<details><summary>Top Contributors (0)</summary><p class='empty'>None</p></details>";
+  }
+
+  let html = "<details><summary>Top Contributors (" + contributors.length + ")</summary>";
+  html += '<table><tr><th>#</th><th>Author</th><th>Submitted</th><th>Merged</th></tr>';
+
+  for (let i = 0; i < contributors.length; i++) {
+    const c = contributors[i];
+    html += "<tr>";
+    html += '<td class="contrib-rank">' + (i + 1) + "</td>";
+    html += '<td><a href="https://github.com/' + encodeURIComponent(c.author) + '" target="_blank">' + escapeHtml(c.author) + "</a></td>";
+    html += '<td class="contrib-count">' + c.submitted + "</td>";
+    html += '<td class="contrib-count">' + c.merged + "</td>";
+    html += "</tr>";
+  }
+
+  html += "</table></details>";
   return html;
 }
 

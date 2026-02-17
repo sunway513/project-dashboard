@@ -124,50 +124,7 @@ header h1 {
   }
 }
 
-/* Contributors Panel */
-#contributors {
-  margin-bottom: 24px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 16px;
-}
-
-#contributors h2 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--text-muted);
-}
-
-.contributors-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-}
-
-.contributors-table th {
-  text-align: left;
-  padding: 6px 10px;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-muted);
-  font-weight: 500;
-  font-size: 12px;
-}
-
-.contributors-table td {
-  padding: 5px 10px;
-  border-bottom: 1px solid var(--border);
-}
-
-.contributors-table tr:last-child td {
-  border-bottom: none;
-}
-
-.contributors-table tr:hover td {
-  background: var(--hover);
-}
-
+/* Contributor ranking (inside cards) */
 .contrib-rank {
   color: var(--text-muted);
   font-weight: 600;
@@ -177,11 +134,7 @@ header h1 {
 .contrib-count {
   font-weight: 600;
   width: 60px;
-}
-
-.contrib-projects {
-  color: var(--text-muted);
-  font-size: 13px;
+  text-align: center;
 }
 
 /* Dashboard grid */

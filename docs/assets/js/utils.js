@@ -60,21 +60,18 @@ function getWeeklyStats(prs, issues, releases) {
   return { prsOpened, prsMerged, issuesOpened, newReleases };
 }
 
-function aggregateContributors(dataMap) {
+function getProjectContributors(prs, limit) {
   const map = new Map();
-  for (const [project, d] of Object.entries(dataMap)) {
-    const prs = (d.prs && d.prs.prs) || [];
-    for (const pr of prs) {
-      if (!pr.author) continue;
-      if (!map.has(pr.author)) {
-        map.set(pr.author, { author: pr.author, prCount: 0, projects: new Set() });
-      }
-      const entry = map.get(pr.author);
-      entry.prCount++;
-      entry.projects.add(project);
+  for (const pr of prs) {
+    if (!pr.author) continue;
+    if (!map.has(pr.author)) {
+      map.set(pr.author, { author: pr.author, submitted: 0, merged: 0 });
     }
+    const entry = map.get(pr.author);
+    entry.submitted++;
+    if (pr.merged) entry.merged++;
   }
   return Array.from(map.values())
-    .sort((a, b) => b.prCount - a.prCount)
-    .slice(0, 15);
+    .sort((a, b) => b.submitted - a.submitted || b.merged - a.merged)
+    .slice(0, limit || 10);
 }
