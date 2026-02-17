@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-02-17T22:45:06Z",
+  "collected_at": "2026-02-17T23:02:26Z",
   "prs": [
     {
       "number": 34702,
@@ -65,6 +65,22 @@
       "draft": false
     },
     {
+      "number": 31768,
+      "title": "[ROCm] Support lowering through PJRT_Triton_Extension",
+      "author": "amd-jianli12",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-09-12T12:27:33Z",
+      "updated_at": "2026-02-16T17:55:57Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/31768",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
       "number": 34722,
       "title": "[ROCm] ToT ROCm Unit Test Skips",
       "author": "gulsumgudukbay",
@@ -89,6 +105,36 @@
       "draft": false
     },
     {
+      "number": 34829,
+      "title": "[ROCm] Add ROCm LU solver to backward compatibility tests",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-04T20:12:52Z",
+      "updated_at": "2026-02-16T14:16:22Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34829",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34929,
+      "title": "[ROCm] Modified `test_with_memory_space` to include ROCm tests.",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-09T17:39:25Z",
+      "updated_at": "2026-02-15T21:12:08Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34929",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
       "number": 35091,
       "title": "fixed scan crash on GPU with non-default matmul precision",
       "author": "sarayusapa",
@@ -98,6 +144,21 @@
       "updated_at": "2026-02-14T18:34:09Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35091",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 34966,
+      "title": "[ROCm] Skip test_batch_axis_sharding_jvp",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-10T20:39:00Z",
+      "updated_at": "2026-02-14T03:35:47Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34966",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
       "draft": false
     },
     {
@@ -112,6 +173,21 @@
       "labels": [
         "AMD GPU",
         "GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34561,
+      "title": "[ROCm] Enable ToeplitzSymmetricConstruction and condition number tests",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T16:47:47Z",
+      "updated_at": "2026-02-13T22:49:38Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34561",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
       ],
       "draft": false
     },
@@ -132,6 +208,127 @@
       "draft": false
     },
     {
+      "number": 34870,
+      "title": "[ROCm] Add ROCm backward compatibility test for lu_pivots_to_permutation",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-05T19:17:44Z",
+      "updated_at": "2026-02-13T10:25:01Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34870",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34501,
+      "title": "[ROCm] Enable cuda array interface test on ROCm",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-21T00:02:17Z",
+      "updated_at": "2026-02-13T06:53:20Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34501",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34894,
+      "title": "Add ROCm backward compatibility test for cholesky solver",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-06T20:53:55Z",
+      "updated_at": "2026-02-13T06:40:18Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34894",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35011,
+      "title": "[ROCm] Remove incorrect ROCm lowering for scaled_matmul to prevent segfault",
+      "author": "Ruturaj4",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-12T00:12:08Z",
+      "updated_at": "2026-02-13T06:21:51Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35011",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 33157,
+      "title": "[ROCm] Resolve undefined behavior in bitshift unit test",
+      "author": "mminutoli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-11-07T01:40:17Z",
+      "updated_at": "2026-02-13T00:28:03Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/33157",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34974,
+      "title": "[ROCm] Added ROCm tests to `device_test.py` unit test file.",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-10T22:45:05Z",
+      "updated_at": "2026-02-12T19:23:18Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34974",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34574,
+      "title": "[ROCm] Enable test_variadic_reduce_window on GPUs",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T22:51:02Z",
+      "updated_at": "2026-02-12T19:01:19Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34574",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34500,
+      "title": "[ROCm] Fix KeyError for bytes_reservable_limit on ROCm",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-20T23:44:55Z",
+      "updated_at": "2026-02-12T18:59:33Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34500",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
       "number": 34601,
       "title": "[ROCm] Enable neural network tests on ROCm",
       "author": "phambinhfin",
@@ -148,6 +345,21 @@
       "draft": false
     },
     {
+      "number": 34675,
+      "title": "[ROCm] Update Skip Reason Outputs",
+      "author": "gulsumgudukbay",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-28T07:25:48Z",
+      "updated_at": "2026-02-12T18:15:50Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34675",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
       "number": 25043,
       "title": "[ROCM] Jax/Pallas unit test, limiting tile to 64 in for pallas kernel in multihead attention test.",
       "author": "zahiqbal",
@@ -157,6 +369,97 @@
       "updated_at": "2026-02-12T17:56:25Z",
       "html_url": "https://github.com/jax-ml/jax/pull/25043",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 34474,
+      "title": "[ROCm] Added support for GESVDJ on ROCm devices",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-19T18:42:29Z",
+      "updated_at": "2026-02-12T16:29:30Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34474",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34802,
+      "title": "[ROCm] Enable lax backend scipy tests on ROCm GPUs",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-03T20:49:54Z",
+      "updated_at": "2026-02-12T15:15:46Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34802",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34774,
+      "title": "[ROCm] Enable lobpcg tests on ROCm platform",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-02T20:45:48Z",
+      "updated_at": "2026-02-12T14:59:01Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34774",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34575,
+      "title": "[ROCm] Enabled the Triton Pallas tests to run for ROCm.",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T23:58:43Z",
+      "updated_at": "2026-02-12T14:56:15Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34575",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34893,
+      "title": "[ROCm] Enable test deviceless aot compile test on ROCm",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-06T20:17:13Z",
+      "updated_at": "2026-02-12T14:39:42Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34893",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34494,
+      "title": "[ROCm] Enabled ROCm devices to default to Jacobi SVD on smaller matrices.",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-20T21:50:17Z",
+      "updated_at": "2026-02-12T14:36:45Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34494",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
       "draft": false
     },
     {
@@ -190,6 +493,21 @@
       "draft": false
     },
     {
+      "number": 34875,
+      "title": "[ROCm] Add ROCm backward compatibility test for threefry2x32",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-05T21:37:49Z",
+      "updated_at": "2026-02-12T08:56:59Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34875",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
       "number": 34602,
       "title": "[ROCm] Fix and enable Pallas ops tests on ROCm",
       "author": "phambinhfin",
@@ -200,6 +518,112 @@
       "html_url": "https://github.com/jax-ml/jax/pull/34602",
       "labels": [
         "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34832,
+      "title": "[ROCm] Add ROCm support to annotate_device_placement backward compatibility \u2026",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-04T20:27:17Z",
+      "updated_at": "2026-02-12T07:29:35Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34832",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34869,
+      "title": "[ROCm] Added back compatibility test for hipsolver_gesvd",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-05T19:10:57Z",
+      "updated_at": "2026-02-12T06:47:27Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34869",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34689,
+      "title": "[ROCm] Fix ROCm GPU architecture detection and route to Triton backend",
+      "author": "Ruturaj4",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-29T00:15:47Z",
+      "updated_at": "2026-02-11T10:49:29Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34689",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34578,
+      "title": "[ROCm] Unskip supported dtypes for testConvolutionsPreferredElementType on ROCm",
+      "author": "gulsumgudukbay",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-23T01:12:49Z",
+      "updated_at": "2026-02-11T09:47:20Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34578",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34534,
+      "title": "[ROCm] Enable testDotAlgorithm BF16/TF32 tests on ROCm",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-21T16:04:22Z",
+      "updated_at": "2026-02-11T09:45:28Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34534",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34577,
+      "title": "[ROCm] Enabled RNN unit test \"test_no_workspace_overflow\" for ROCm.",
+      "author": "tsrw2048",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-23T00:36:27Z",
+      "updated_at": "2026-02-11T09:21:24Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34577",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34567,
+      "title": "[ROCm]Unskip testMultivariateNormalSingularCovariance on ROCm",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T19:59:20Z",
+      "updated_at": "2026-02-11T09:19:34Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34567",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
       ],
       "draft": false
     },
@@ -216,6 +640,97 @@
       "draft": false
     },
     {
+      "number": 34571,
+      "title": "[ROCm] Enable reduce_window tests on ROCm",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T21:15:34Z",
+      "updated_at": "2026-02-11T09:16:43Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34571",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34890,
+      "title": "[ROCm] Enable memory space export tests on ROCm GPUs",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-06T19:35:24Z",
+      "updated_at": "2026-02-11T09:14:18Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34890",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34304,
+      "title": "[ROCm] Add ROCm platform support for psend/precv collective operations",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-13T16:11:31Z",
+      "updated_at": "2026-02-11T02:33:17Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34304",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34662,
+      "title": "[ROCm] Enable array interoperability tests on ROCm platform",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-27T21:06:17Z",
+      "updated_at": "2026-02-11T02:31:19Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34662",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34560,
+      "title": "[ROCm] Enable optimizer tests on ROCm",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-22T16:34:18Z",
+      "updated_at": "2026-02-11T01:49:17Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34560",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34450,
+      "title": "[ROCm] Upstream ROCm CI Nightly Wheel Testing",
+      "author": "mminutoli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-16T23:33:11Z",
+      "updated_at": "2026-02-05T17:55:17Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34450",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
       "number": 34598,
       "title": "[ROCm] Implement approx_tanh for ROCm using OCML tanh function",
       "author": "phambinhfin",
@@ -225,6 +740,21 @@
       "updated_at": "2026-02-05T16:23:01Z",
       "html_url": "https://github.com/jax-ml/jax/pull/34598",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 32115,
+      "title": "Relax version requirements for ROCm Jax Plugin wheels",
+      "author": "JehandadKhan",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-09-25T19:47:00Z",
+      "updated_at": "2026-02-04T19:12:40Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/32115",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
       "draft": false
     },
     {
@@ -243,6 +773,22 @@
       "draft": false
     },
     {
+      "number": 34610,
+      "title": "[ROCm] Skip sparse tests on ROCm due to hipSPARSE issue",
+      "author": "magaonka-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-23T18:42:46Z",
+      "updated_at": "2026-01-27T04:59:22Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34610",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
       "number": 26683,
       "title": "Replace setup.py with pyproject.toml",
       "author": "NeilGirdhar",
@@ -252,6 +798,50 @@
       "updated_at": "2025-10-23T22:20:41Z",
       "html_url": "https://github.com/jax-ml/jax/pull/26683",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 29281,
+      "title": "[ROCm] ROCm7 Plugin Updates",
+      "author": "mrodden",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-06-05T20:25:12Z",
+      "updated_at": "2025-08-13T21:56:55Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/29281",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 9986,
+      "title": "Fix for hipsparse in ROCm.",
+      "author": "reza-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2022-03-21T21:06:44Z",
+      "updated_at": "2025-06-20T15:14:16Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/9986",
+      "labels": [
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 26975,
+      "title": "Update install docs for AMDGPU",
+      "author": "mrodden",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-03-06T21:36:47Z",
+      "updated_at": "2025-04-23T13:35:57Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/26975",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
       "draft": false
     },
     {
@@ -269,6 +859,18 @@
       "draft": true
     },
     {
+      "number": 27512,
+      "title": "Add Jax tracing micro benchmarks.",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-03-27T12:51:02Z",
+      "updated_at": "2025-03-31T14:35:28Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/27512",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 26768,
       "title": "Add plugin versions to print_environment_info.",
       "author": "dfm",
@@ -278,6 +880,106 @@
       "updated_at": "2025-02-26T15:24:00Z",
       "html_url": "https://github.com/jax-ml/jax/pull/26768",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 26327,
+      "title": "Check \"jax_rocm_visible_devices\" at client creation.",
+      "author": "ksebaz",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-02-05T07:55:50Z",
+      "updated_at": "2025-02-26T13:41:23Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/26327",
+      "labels": [
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 25810,
+      "title": "[ROCm] Add post-merge check on main for AMD GPUs",
+      "author": "charleshofer",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-01-09T17:51:09Z",
+      "updated_at": "2025-02-07T17:52:04Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/25810",
+      "labels": [
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 26368,
+      "title": "Fix invalid lowerings for ROCm in Pallas",
+      "author": "mrodden",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-02-06T20:06:34Z",
+      "updated_at": "2025-02-07T14:52:09Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/26368",
+      "labels": [
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 25137,
+      "title": "[ROCm] Update http to https in amd artifactory url.",
+      "author": "Ruturaj4",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2024-11-26T22:39:01Z",
+      "updated_at": "2024-11-29T02:45:57Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/25137",
+      "labels": [
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 24523,
+      "title": "[ROCm] ci build fixes",
+      "author": "Ruturaj4",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2024-10-25T10:02:57Z",
+      "updated_at": "2024-10-25T14:57:39Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/24523",
+      "labels": [
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 22410,
+      "title": "Update installation instructions",
+      "author": "garymm",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2024-07-12T00:05:46Z",
+      "updated_at": "2024-10-21T21:05:55Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/22410",
+      "labels": [
+        "documentation",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 23146,
+      "title": "[ROCm] Rocm62 fixes",
+      "author": "Ruturaj4",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2024-08-20T14:43:50Z",
+      "updated_at": "2024-08-22T17:37:38Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/23146",
+      "labels": [
+        "pull ready"
+      ],
       "draft": false
     }
   ]

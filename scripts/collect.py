@@ -44,10 +44,10 @@ def gh_api(endpoint, method="GET", paginate=False):
 
 
 def fetch_prs(repo, authors, labels, keywords):
-    """Fetch open PRs matching filters."""
+    """Fetch open and recently merged PRs matching filters."""
     prs = []
 
-    # Fetch PRs by author
+    # Fetch PRs by author (all states)
     for author in authors:
         items = gh_api(
             f"/repos/{repo}/pulls?state=all&sort=updated&direction=desc&per_page=30"
@@ -56,24 +56,28 @@ def fetch_prs(repo, authors, labels, keywords):
             if pr.get("user", {}).get("login") == author:
                 prs.append(pr)
 
-    # Fetch PRs by label
+    # Fetch PRs by label (open + closed/merged)
     for label in labels:
-        items = gh_api(
-            f"/repos/{repo}/pulls?state=open&sort=updated&direction=desc&per_page=30"
-        )
-        for pr in items:
-            pr_labels = [l["name"].lower() for l in pr.get("labels", [])]
-            if label.lower() in pr_labels and pr not in prs:
-                prs.append(pr)
+        for state in ["open", "closed"]:
+            items = gh_api(
+                f"/repos/{repo}/pulls?state={state}&sort=updated&direction=desc&per_page=30"
+            )
+            for pr in items:
+                pr_labels = [l["name"].lower() for l in pr.get("labels", [])]
+                if label.lower() in pr_labels and not any(
+                    p["number"] == pr["number"] for p in prs
+                ):
+                    prs.append(pr)
 
-    # Search PRs by keyword (uses search API)
+    # Search PRs by keyword (open + merged)
     for kw in keywords:
-        search_results = gh_api(
-            f"/search/issues?q={kw}+repo:{repo}+is:pr+is:open&sort=updated&per_page=30"
-        )
-        for pr in search_results.get("items", []):
-            if not any(p["number"] == pr["number"] for p in prs):
-                prs.append(pr)
+        for pr_filter in ["is:open", "is:merged"]:
+            search_results = gh_api(
+                f"/search/issues?q={kw}+repo:{repo}+is:pr+{pr_filter}&sort=updated&per_page=30"
+            )
+            for pr in search_results.get("items", []):
+                if not any(p["number"] == pr["number"] for p in prs):
+                    prs.append(pr)
 
     # Deduplicate by number
     seen = set()
