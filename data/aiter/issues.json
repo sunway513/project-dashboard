@@ -1,4 +1,919 @@
 {
-  "collected_at": "2026-02-17T19:45:18Z",
-  "issues": []
+  "collected_at": "2026-02-17T20:01:49Z",
+  "issues": [
+    {
+      "number": 2054,
+      "title": "[Feature]: Migrate Python bindings from pybind11 to apache-tvm-ffi",
+      "author": "carlushuang",
+      "state": "open",
+      "created_at": "2026-02-16T14:24:47Z",
+      "updated_at": "2026-02-16T14:53:17Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2054",
+      "labels": []
+    },
+    {
+      "number": 2046,
+      "title": "Questions about topk_per_row_kernel in topk_plain_kernels.cu",
+      "author": "zjin-lcf",
+      "state": "open",
+      "created_at": "2026-02-12T20:55:25Z",
+      "updated_at": "2026-02-12T20:55:25Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2046",
+      "labels": []
+    },
+    {
+      "number": 2033,
+      "title": "[Feature]: Add OPUS tests in Aiter CI",
+      "author": "gyohuangxin",
+      "state": "open",
+      "created_at": "2026-02-11T14:33:47Z",
+      "updated_at": "2026-02-12T06:04:18Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2033",
+      "labels": [
+        "frameworks-devops"
+      ]
+    },
+    {
+      "number": 2021,
+      "title": "[Issue]: layernorm build error",
+      "author": "kurapov-peter",
+      "state": "open",
+      "created_at": "2026-02-10T11:01:12Z",
+      "updated_at": "2026-02-12T03:55:29Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2021",
+      "labels": []
+    },
+    {
+      "number": 1542,
+      "title": "[Issue]: AITER all reduce kernel segmentation fault in MI300x",
+      "author": "graceleeis",
+      "state": "open",
+      "created_at": "2025-12-03T00:43:33Z",
+      "updated_at": "2026-02-11T02:05:50Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1542",
+      "labels": []
+    },
+    {
+      "number": 2013,
+      "title": "[Feature]: Add head_dim=256 support to fmha_v3_fwd kernels",
+      "author": "jennyyyyzhen",
+      "state": "open",
+      "created_at": "2026-02-09T19:17:07Z",
+      "updated_at": "2026-02-09T19:17:07Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2013",
+      "labels": []
+    },
+    {
+      "number": 1943,
+      "title": "[Issue]: OSError: Building PyTorch extensions using ROCm and Windows is not supported.",
+      "author": "astrelsky",
+      "state": "open",
+      "created_at": "2026-02-01T19:50:06Z",
+      "updated_at": "2026-02-07T17:45:51Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1943",
+      "labels": []
+    },
+    {
+      "number": 900,
+      "title": "[Question] Is GFX1201 support planned?",
+      "author": "sa-mendez",
+      "state": "open",
+      "created_at": "2025-08-28T01:23:15Z",
+      "updated_at": "2026-02-07T16:31:46Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/900",
+      "labels": []
+    },
+    {
+      "number": 1913,
+      "title": "[Issue]:GPU Core Dump in Multi-GPU Parallel GEMM Tuning (hipBLASLt 1.1.0, 8x MI308X)",
+      "author": "archwine",
+      "state": "open",
+      "created_at": "2026-01-27T06:44:40Z",
+      "updated_at": "2026-02-07T14:18:48Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1913",
+      "labels": []
+    },
+    {
+      "number": 1972,
+      "title": "[Issue]: rmsnorm kernel issue in SGLang with aiter v0.1.10.post1",
+      "author": "bingxche",
+      "state": "open",
+      "created_at": "2026-02-04T10:06:49Z",
+      "updated_at": "2026-02-04T10:23:44Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1972",
+      "labels": []
+    },
+    {
+      "number": 1956,
+      "title": "[Issue]: Build of aiter asm kernels in op_tests/cpp/mha take too much time",
+      "author": "manu-web",
+      "state": "open",
+      "created_at": "2026-02-03T02:31:21Z",
+      "updated_at": "2026-02-03T02:31:21Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1956",
+      "labels": []
+    },
+    {
+      "number": 1946,
+      "title": "[Feature]: Add `record_param_comms` instrumentation to communication kernels for profiler metadata",
+      "author": "ajassani",
+      "state": "open",
+      "created_at": "2026-02-01T21:08:03Z",
+      "updated_at": "2026-02-02T02:41:47Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1946",
+      "labels": []
+    },
+    {
+      "number": 1945,
+      "title": "[Issue]: Build Failing for MI250 on fused_attn",
+      "author": "zixianwang2022",
+      "state": "open",
+      "created_at": "2026-02-01T20:58:35Z",
+      "updated_at": "2026-02-01T20:59:54Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1945",
+      "labels": []
+    },
+    {
+      "number": 1934,
+      "title": "[Feature]: [CI] Optimize the MI355 usage in Aiter CI",
+      "author": "gyohuangxin",
+      "state": "open",
+      "created_at": "2026-01-30T16:01:03Z",
+      "updated_at": "2026-01-30T16:01:03Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1934",
+      "labels": []
+    },
+    {
+      "number": 1901,
+      "title": "[Issue]: ck_tile::type_convert<float> not working for half to float",
+      "author": "michael604work",
+      "state": "open",
+      "created_at": "2026-01-24T02:33:56Z",
+      "updated_at": "2026-01-30T09:27:46Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1901",
+      "labels": []
+    },
+    {
+      "number": 1886,
+      "title": "[Issue]: Not support conv3d triton kernel. the APP ComfyUI will call them.",
+      "author": "kxyk99",
+      "state": "open",
+      "created_at": "2026-01-22T06:52:45Z",
+      "updated_at": "2026-01-22T06:52:45Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1886",
+      "labels": []
+    },
+    {
+      "number": 726,
+      "title": "[Feature]: decode MLA kernel support nhead=8",
+      "author": "wufann",
+      "state": "open",
+      "created_at": "2025-07-25T02:06:27Z",
+      "updated_at": "2026-01-20T08:26:46Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/726",
+      "labels": [
+        "High Priority"
+      ]
+    },
+    {
+      "number": 1819,
+      "title": "[Documentation]: fused_fp8_quant docstrings incorrect",
+      "author": "tpopp",
+      "state": "open",
+      "created_at": "2026-01-12T10:53:43Z",
+      "updated_at": "2026-01-12T15:17:54Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1819",
+      "labels": []
+    },
+    {
+      "number": 1802,
+      "title": "[KERNEL] AMDGPU@ROCM ramp up doc/link for kernel contributors",
+      "author": "carlushuang",
+      "state": "open",
+      "created_at": "2026-01-09T08:31:31Z",
+      "updated_at": "2026-01-09T08:31:31Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1802",
+      "labels": []
+    },
+    {
+      "number": 1332,
+      "title": "module_fmha_v3_fwd/blob/asm_fmha_fwd_v3_gfx942.cpp:141 fail to call hipModuleLaunchKernel",
+      "author": "jinz2014",
+      "state": "open",
+      "created_at": "2025-11-04T21:52:07Z",
+      "updated_at": "2026-01-06T08:12:22Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1332",
+      "labels": []
+    },
+    {
+      "number": 1766,
+      "title": "[Feature]: Per tensor act + Per channel weight int8 gemm",
+      "author": "ZhiweiYan-96",
+      "state": "open",
+      "created_at": "2026-01-05T02:15:38Z",
+      "updated_at": "2026-01-05T05:38:22Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1766",
+      "labels": []
+    },
+    {
+      "number": 1765,
+      "title": "[Issue]: Does gemm_a8w8 support per-tensor quant?",
+      "author": "byjiang1996",
+      "state": "open",
+      "created_at": "2026-01-03T19:05:28Z",
+      "updated_at": "2026-01-03T19:05:28Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1765",
+      "labels": []
+    },
+    {
+      "number": 1220,
+      "title": "[Issue]: asm MoE failed `fail to call hipModuleLaunchKernel( kernel_func, gdx, gdy, gdz, bdx, 1, 1, 0, stream, nullptr, (void**)&config) ---> [HIP error](invalid argument)`",
+      "author": "b8zhong",
+      "state": "open",
+      "created_at": "2025-10-17T23:36:14Z",
+      "updated_at": "2025-12-26T05:50:22Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1220",
+      "labels": []
+    },
+    {
+      "number": 1468,
+      "title": "[Issue]: \"AssertionError: Aiter MLA only supports 16 or 128 number of heads. Provided 32 number of heads\" in DeepSeek R1 + TP4 + MXFP4 +MI355 test",
+      "author": "leishaoSC",
+      "state": "open",
+      "created_at": "2025-11-22T21:57:17Z",
+      "updated_at": "2025-12-22T09:57:27Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1468",
+      "labels": []
+    },
+    {
+      "number": 1702,
+      "title": "Add support for non-causal (encoder-only) attention",
+      "author": "westers",
+      "state": "open",
+      "created_at": "2025-12-20T18:01:51Z",
+      "updated_at": "2025-12-22T05:06:01Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1702",
+      "labels": []
+    },
+    {
+      "number": 1689,
+      "title": "fp4 gemm aiter.gemm_a4w4 API to handle missing heuristics",
+      "author": "hongxiayang",
+      "state": "open",
+      "created_at": "2025-12-19T01:12:14Z",
+      "updated_at": "2025-12-19T06:04:27Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1689",
+      "labels": []
+    },
+    {
+      "number": 1223,
+      "title": "how to benchmark the triton kernels",
+      "author": "simran-arora",
+      "state": "open",
+      "created_at": "2025-10-19T21:49:35Z",
+      "updated_at": "2025-12-18T15:56:19Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1223",
+      "labels": []
+    },
+    {
+      "number": 1641,
+      "title": "[Feature]: Support pre-build multi arches for ck_gemm_moe_2stages_codegen",
+      "author": "yuguo68",
+      "state": "open",
+      "created_at": "2025-12-13T00:10:07Z",
+      "updated_at": "2025-12-13T00:10:07Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1641",
+      "labels": []
+    },
+    {
+      "number": 1385,
+      "title": "-mllvm -amdgpu-coerce-illegal-types=1 is not supported by hipcc",
+      "author": "jinz2014",
+      "state": "open",
+      "created_at": "2025-11-11T15:30:49Z",
+      "updated_at": "2025-12-09T12:28:56Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1385",
+      "labels": []
+    },
+    {
+      "number": 1549,
+      "title": "[Issue]: Deploy GLM-4.6 on MI300X failed. Error msg \"aiter : wrapper_mha_batch_prefill() Expected a value of type 'int'  for argument 'max_seqlen_k\u2018 but instead found type 'NoneType'",
+      "author": "naiveshen",
+      "state": "open",
+      "created_at": "2025-12-03T09:57:46Z",
+      "updated_at": "2025-12-03T09:57:46Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1549",
+      "labels": []
+    },
+    {
+      "number": 1533,
+      "title": "[Feature]: Add NN layout for gradlib",
+      "author": "DoubleRedX",
+      "state": "open",
+      "created_at": "2025-12-02T09:18:19Z",
+      "updated_at": "2025-12-02T09:18:19Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1533",
+      "labels": []
+    },
+    {
+      "number": 1455,
+      "title": "[Issue]: VLLM_ROCM_USE_AITER_MLA accuracy loss with Kimi DP2TP4",
+      "author": "bradleyhd",
+      "state": "open",
+      "created_at": "2025-11-20T20:53:01Z",
+      "updated_at": "2025-11-24T21:27:40Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1455",
+      "labels": []
+    },
+    {
+      "number": 718,
+      "title": "[AOT Build] Cannot compile all modules ahead of time",
+      "author": "yyccli",
+      "state": "open",
+      "created_at": "2025-07-24T09:55:56Z",
+      "updated_at": "2025-11-24T06:15:00Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/718",
+      "labels": []
+    },
+    {
+      "number": 1420,
+      "title": "[Issue,MLA]:  Issues Found in aiter/aiter/mla.py",
+      "author": "vllmellm",
+      "state": "open",
+      "created_at": "2025-11-17T12:30:03Z",
+      "updated_at": "2025-11-24T03:01:48Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1420",
+      "labels": []
+    },
+    {
+      "number": 1436,
+      "title": "[Feature]: AITER path should allow for experimentation",
+      "author": "dimon777",
+      "state": "open",
+      "created_at": "2025-11-19T00:29:20Z",
+      "updated_at": "2025-11-21T07:37:41Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1436",
+      "labels": []
+    },
+    {
+      "number": 1391,
+      "title": "[Issue]: Dead code in FmoeTuner.get_1stage_fmoe_func: unreachable `elif` branch and incorrect logical operator.",
+      "author": "antsaukk",
+      "state": "open",
+      "created_at": "2025-11-12T09:15:30Z",
+      "updated_at": "2025-11-20T13:19:02Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1391",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 351,
+      "title": "[Enquiry] Is there a way to disable the logs as optimization?",
+      "author": "tjtanaa",
+      "state": "open",
+      "created_at": "2025-04-28T13:59:00Z",
+      "updated_at": "2025-11-19T08:49:14Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/351",
+      "labels": []
+    },
+    {
+      "number": 1395,
+      "title": "[Issue]: AttributeError: module 'torch._C' has no attribute '_PYBIND11_COMPILER_TYPE'",
+      "author": "fxmarty-amd",
+      "state": "open",
+      "created_at": "2025-11-12T15:36:27Z",
+      "updated_at": "2025-11-17T19:03:05Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1395",
+      "labels": []
+    },
+    {
+      "number": 1354,
+      "title": "[Feature]: Need a Gather-GEMM kernel before MHA for DeepSeeek model",
+      "author": "junhaha666",
+      "state": "open",
+      "created_at": "2025-11-06T13:29:18Z",
+      "updated_at": "2025-11-10T14:05:44Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1354",
+      "labels": []
+    },
+    {
+      "number": 1248,
+      "title": "[Feature]: Add more configuration options for MoE assembly kernels",
+      "author": "sumin-hong",
+      "state": "open",
+      "created_at": "2025-10-23T09:36:44Z",
+      "updated_at": "2025-11-04T05:06:40Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1248",
+      "labels": []
+    },
+    {
+      "number": 548,
+      "title": "[Feature]: Support tp=4 when number of heads = 32 for Deepseek MLA aiter kernel",
+      "author": "hongxiayang",
+      "state": "open",
+      "created_at": "2025-06-16T15:31:25Z",
+      "updated_at": "2025-10-29T19:18:58Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/548",
+      "labels": []
+    },
+    {
+      "number": 632,
+      "title": "[Question] What's mori?",
+      "author": "danielhua23",
+      "state": "open",
+      "created_at": "2025-07-09T07:54:00Z",
+      "updated_at": "2025-10-23T08:16:06Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/632",
+      "labels": []
+    },
+    {
+      "number": 1162,
+      "title": "[Issue]: AITER asm attention kernel JIT compile take very long time for multinode training",
+      "author": "JohnQinAMD",
+      "state": "open",
+      "created_at": "2025-10-11T03:56:36Z",
+      "updated_at": "2025-10-18T01:28:34Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1162",
+      "labels": []
+    },
+    {
+      "number": 887,
+      "title": "[Issue]: site-packages/aiter/jit/build folder needs to be created manually.",
+      "author": "sfantao",
+      "state": "open",
+      "created_at": "2025-08-25T22:19:31Z",
+      "updated_at": "2025-10-12T18:27:51Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/887",
+      "labels": []
+    },
+    {
+      "number": 898,
+      "title": "[Feature]: AITER fused MoE to support gpt-oss MoE with bias",
+      "author": "HAIAI",
+      "state": "open",
+      "created_at": "2025-08-27T23:00:51Z",
+      "updated_at": "2025-10-10T07:15:11Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/898",
+      "labels": [
+        "High Priority"
+      ]
+    },
+    {
+      "number": 1150,
+      "title": "Request for Official ROCm Program and Library Download Area FOR ALL AI RELATED PLATFORMS, LIBTAIRIES AND TOOLS TOOLS",
+      "author": "FredDobrowski",
+      "state": "open",
+      "created_at": "2025-10-09T18:02:15Z",
+      "updated_at": "2025-10-10T06:58:06Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1150",
+      "labels": []
+    },
+    {
+      "number": 421,
+      "title": "Is there a plan to make DeepEP compatible for MI300?",
+      "author": "ghostplant",
+      "state": "open",
+      "created_at": "2025-05-15T06:17:41Z",
+      "updated_at": "2025-10-09T23:07:08Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/421",
+      "labels": []
+    },
+    {
+      "number": 1143,
+      "title": "[Issue]: Memory Access Fault When Running Deepseek-R1 on Vllm on MI300X",
+      "author": "vllmellm",
+      "state": "open",
+      "created_at": "2025-10-09T06:54:26Z",
+      "updated_at": "2025-10-09T08:04:27Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1143",
+      "labels": []
+    },
+    {
+      "number": 1121,
+      "title": "[Issue]: grouped_topk_opt_sort_kernel kernel memory segmentation fault",
+      "author": "yichiche",
+      "state": "open",
+      "created_at": "2025-10-01T02:45:47Z",
+      "updated_at": "2025-10-03T08:41:42Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1121",
+      "labels": []
+    },
+    {
+      "number": 620,
+      "title": "Increase the Precision of fused_rope kernel",
+      "author": "amd-sriram",
+      "state": "open",
+      "created_at": "2025-07-07T10:20:30Z",
+      "updated_at": "2025-10-02T07:53:21Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/620",
+      "labels": []
+    },
+    {
+      "number": 1042,
+      "title": "[Issue]: Running DS-R1-0528 hit abort if aiter was built with PREBUILD_KERNELS=1 in SGLang",
+      "author": "sogalin",
+      "state": "open",
+      "created_at": "2025-09-19T16:26:29Z",
+      "updated_at": "2025-09-19T17:10:57Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1042",
+      "labels": []
+    },
+    {
+      "number": 940,
+      "title": "[Issue]: possible wrong vector width for fp8/int8 and fp16/bf16",
+      "author": "michael604work",
+      "state": "open",
+      "created_at": "2025-09-02T22:47:22Z",
+      "updated_at": "2025-09-15T16:13:08Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/940",
+      "labels": []
+    },
+    {
+      "number": 1000,
+      "title": "[Question]: Support to Different Hardware",
+      "author": "zixianwang2022",
+      "state": "open",
+      "created_at": "2025-09-13T18:42:58Z",
+      "updated_at": "2025-09-13T18:42:58Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/1000",
+      "labels": []
+    },
+    {
+      "number": 666,
+      "title": "[Issue]: -mllvm --amdgpu-use-amdgpu-trackers=1 is not supported by hipcc",
+      "author": "fxmarty-amd",
+      "state": "open",
+      "created_at": "2025-07-16T09:29:38Z",
+      "updated_at": "2025-09-10T09:08:56Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/666",
+      "labels": []
+    },
+    {
+      "number": 964,
+      "title": "[Issue]:mi350 f4gemm kernel 256x256 corner case hang",
+      "author": "junxiaguo",
+      "state": "open",
+      "created_at": "2025-09-07T09:56:06Z",
+      "updated_at": "2025-09-08T09:20:28Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/964",
+      "labels": []
+    },
+    {
+      "number": 963,
+      "title": "moe backward",
+      "author": "zixianwang2022",
+      "state": "open",
+      "created_at": "2025-09-06T22:47:37Z",
+      "updated_at": "2025-09-06T22:47:37Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/963",
+      "labels": []
+    },
+    {
+      "number": 922,
+      "title": "[Issue]: build: MAX_JOBS not respected",
+      "author": "dtrifiro",
+      "state": "open",
+      "created_at": "2025-08-29T13:04:06Z",
+      "updated_at": "2025-09-01T15:31:39Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/922",
+      "labels": []
+    },
+    {
+      "number": 899,
+      "title": "[Feature]: Add FP8 KV Cache support to Aiter MLA",
+      "author": "HAIAI",
+      "state": "open",
+      "created_at": "2025-08-28T00:30:26Z",
+      "updated_at": "2025-08-28T08:43:23Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/899",
+      "labels": [
+        "High Priority",
+        "must-have"
+      ]
+    },
+    {
+      "number": 873,
+      "title": "[Feature]: document for AOT",
+      "author": "carlushuang",
+      "state": "open",
+      "created_at": "2025-08-21T23:42:28Z",
+      "updated_at": "2025-08-22T07:46:58Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/873",
+      "labels": []
+    },
+    {
+      "number": 862,
+      "title": "[feat]: fix splitK ASM kernel wrong output when splitK=0",
+      "author": "zufayu",
+      "state": "open",
+      "created_at": "2025-08-20T13:10:51Z",
+      "updated_at": "2025-08-21T01:34:03Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/862",
+      "labels": []
+    },
+    {
+      "number": 792,
+      "title": "[Question] Does Aiter support FusedGptOSSMoe?",
+      "author": "ghostplant",
+      "state": "open",
+      "created_at": "2025-08-08T16:14:26Z",
+      "updated_at": "2025-08-08T16:14:26Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/792",
+      "labels": []
+    },
+    {
+      "number": 785,
+      "title": "[Issue]: Kernel fusion issues with torch.compile (and possibly gradient checkpointing)",
+      "author": "mjkvaak-amd",
+      "state": "open",
+      "created_at": "2025-08-06T10:06:21Z",
+      "updated_at": "2025-08-06T10:06:21Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/785",
+      "labels": []
+    },
+    {
+      "number": 767,
+      "title": "[Issue]: Attention not correct",
+      "author": "ChengYao-amd",
+      "state": "open",
+      "created_at": "2025-08-05T03:05:42Z",
+      "updated_at": "2025-08-05T03:05:42Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/767",
+      "labels": []
+    },
+    {
+      "number": 759,
+      "title": "[Question]: Can I add more supported head sizes for attention_v1?",
+      "author": "hoangvictor",
+      "state": "open",
+      "created_at": "2025-08-01T04:02:53Z",
+      "updated_at": "2025-08-01T06:31:32Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/759",
+      "labels": []
+    },
+    {
+      "number": 753,
+      "title": "[Feature]: Any plan to support MI100?",
+      "author": "hnhyzz",
+      "state": "open",
+      "created_at": "2025-07-31T10:49:25Z",
+      "updated_at": "2025-07-31T10:49:25Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/753",
+      "labels": []
+    },
+    {
+      "number": 706,
+      "title": "[Feature]: Ship assembly/HIP instead of binary",
+      "author": "fxmarty-amd",
+      "state": "open",
+      "created_at": "2025-07-23T13:05:12Z",
+      "updated_at": "2025-07-23T13:05:12Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/706",
+      "labels": []
+    },
+    {
+      "number": 670,
+      "title": "[Issue]: The `bias` is not used consistently in `gemm_a8w8_bpreshuffle`",
+      "author": "tjtanaa",
+      "state": "open",
+      "created_at": "2025-07-17T06:14:52Z",
+      "updated_at": "2025-07-21T03:08:09Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/670",
+      "labels": []
+    },
+    {
+      "number": 454,
+      "title": "[Issue]: MoE UT fail to compile: op_tests/test_moe_2stage.py",
+      "author": "CrimsonDump",
+      "state": "open",
+      "created_at": "2025-05-21T07:00:43Z",
+      "updated_at": "2025-07-19T07:46:14Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/454",
+      "labels": []
+    },
+    {
+      "number": 663,
+      "title": "[Issue]: The skinny gemm in the tuned_gemm does not adhere to the specified output dtype `otype`.",
+      "author": "vllmellm",
+      "state": "open",
+      "created_at": "2025-07-16T08:57:35Z",
+      "updated_at": "2025-07-16T09:20:58Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/663",
+      "labels": []
+    },
+    {
+      "number": 638,
+      "title": "[Issue]:Rope test error: ModuleNotFound No module named 'aiter.jit.module_rope_general_fwd'",
+      "author": "amd-sriram",
+      "state": "open",
+      "created_at": "2025-07-10T11:42:40Z",
+      "updated_at": "2025-07-11T10:02:46Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/638",
+      "labels": []
+    },
+    {
+      "number": 614,
+      "title": "A8W4 fuse moe kernel in testx branch issue",
+      "author": "xiaonans",
+      "state": "open",
+      "created_at": "2025-07-04T08:26:08Z",
+      "updated_at": "2025-07-08T10:13:44Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/614",
+      "labels": []
+    },
+    {
+      "number": 583,
+      "title": "[Feature]: Do we support per-tensor GEMM W8A8?",
+      "author": "hoangvictor",
+      "state": "open",
+      "created_at": "2025-06-26T02:58:34Z",
+      "updated_at": "2025-06-26T06:23:44Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/583",
+      "labels": []
+    },
+    {
+      "number": 442,
+      "title": "[Issue]: binary_operator.cu build time is very long",
+      "author": "xw285cornell",
+      "state": "open",
+      "created_at": "2025-05-20T02:49:46Z",
+      "updated_at": "2025-06-12T18:15:37Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/442",
+      "labels": []
+    },
+    {
+      "number": 473,
+      "title": "Support KVsplit for `aiter.flash_attn_func()`",
+      "author": "ghostplant",
+      "state": "open",
+      "created_at": "2025-05-25T09:20:47Z",
+      "updated_at": "2025-05-25T09:39:29Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/473",
+      "labels": []
+    },
+    {
+      "number": 472,
+      "title": "Support BatchMM for `aiter.gemm_a8w8_blockscale()`",
+      "author": "ghostplant",
+      "state": "open",
+      "created_at": "2025-05-25T08:02:03Z",
+      "updated_at": "2025-05-25T08:13:08Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/472",
+      "labels": []
+    },
+    {
+      "number": 244,
+      "title": "[Issue]: Some AITER Operators are not compatible with torch.compile",
+      "author": "tjtanaa",
+      "state": "open",
+      "created_at": "2025-03-25T15:33:47Z",
+      "updated_at": "2025-05-22T04:03:49Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/244",
+      "labels": []
+    },
+    {
+      "number": 427,
+      "title": "[Feature]: Strongly suggest add SHAPE+DEVICE+DTYPE CHECK before kernel invoke",
+      "author": "danielhua23",
+      "state": "open",
+      "created_at": "2025-05-16T00:50:34Z",
+      "updated_at": "2025-05-20T00:41:19Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/427",
+      "labels": []
+    },
+    {
+      "number": 428,
+      "title": "bad performance of quant op when enabled EP",
+      "author": "ZhaiFeiyue",
+      "state": "open",
+      "created_at": "2025-05-16T02:32:16Z",
+      "updated_at": "2025-05-19T10:16:20Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/428",
+      "labels": []
+    },
+    {
+      "number": 426,
+      "title": "[Issue]: seems batch gemm does not support some specific shapes?",
+      "author": "danielhua23",
+      "state": "open",
+      "created_at": "2025-05-16T00:41:20Z",
+      "updated_at": "2025-05-16T00:41:20Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/426",
+      "labels": []
+    },
+    {
+      "number": 407,
+      "title": "[Issue]: flatmm precision issue",
+      "author": "yiakwy-xpu-ml-framework-team",
+      "state": "open",
+      "created_at": "2025-05-11T06:26:51Z",
+      "updated_at": "2025-05-12T04:46:10Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/407",
+      "labels": []
+    },
+    {
+      "number": 346,
+      "title": "[Issue]: UT test_moe.py stuck with certain problem size",
+      "author": "CrimsonDump",
+      "state": "open",
+      "created_at": "2025-04-27T05:39:13Z",
+      "updated_at": "2025-04-28T06:37:32Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/346",
+      "labels": []
+    },
+    {
+      "number": 254,
+      "title": "[Issue]: CK attention still doesn't work on 7900 XTX?",
+      "author": "FeepingCreature",
+      "state": "open",
+      "created_at": "2025-03-30T16:44:12Z",
+      "updated_at": "2025-04-24T20:55:36Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/254",
+      "labels": []
+    },
+    {
+      "number": 330,
+      "title": "[Question] Does aiter support FA3?",
+      "author": "danielhua23",
+      "state": "open",
+      "created_at": "2025-04-23T02:48:54Z",
+      "updated_at": "2025-04-23T02:48:54Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/330",
+      "labels": []
+    },
+    {
+      "number": 321,
+      "title": "[Feature]: gfx1201 support",
+      "author": "l33tm4st3r",
+      "state": "open",
+      "created_at": "2025-04-19T01:13:47Z",
+      "updated_at": "2025-04-19T01:14:56Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/321",
+      "labels": []
+    },
+    {
+      "number": 298,
+      "title": "[Feature]: fmoe tkw1 suppprt for bf16",
+      "author": "sijiac",
+      "state": "open",
+      "created_at": "2025-04-15T20:29:24Z",
+      "updated_at": "2025-04-16T07:39:48Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/298",
+      "labels": []
+    },
+    {
+      "number": 289,
+      "title": "test_mha.py:test_mha_backward fails with causal=True and seqlen_q < seqlen_k",
+      "author": "juuso-oskari",
+      "state": "open",
+      "created_at": "2025-04-14T10:47:12Z",
+      "updated_at": "2025-04-14T12:12:17Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/289",
+      "labels": [
+        "bug",
+        "triton"
+      ]
+    },
+    {
+      "number": 246,
+      "title": "[Documentation]: Fill out supported operators in README",
+      "author": "garrettbyrd",
+      "state": "open",
+      "created_at": "2025-03-26T02:01:09Z",
+      "updated_at": "2025-03-29T04:22:02Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/246",
+      "labels": []
+    },
+    {
+      "number": 210,
+      "title": "[Help] Does branch triton_mha_fwd_kernel should suport rdna2/gfx1030 amd gpu?",
+      "author": "inevity",
+      "state": "open",
+      "created_at": "2025-03-17T18:24:23Z",
+      "updated_at": "2025-03-18T02:50:43Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/210",
+      "labels": []
+    },
+    {
+      "number": 179,
+      "title": "[Issue]: Build errors for gfx90a (MI250) architecture",
+      "author": "OscarSavNS",
+      "state": "open",
+      "created_at": "2025-03-05T17:29:05Z",
+      "updated_at": "2025-03-13T17:41:20Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/179",
+      "labels": []
+    },
+    {
+      "number": 181,
+      "title": "[Feature]: support seqlen_q large than 1 for PagedAttention with FP8KV",
+      "author": "sijiac",
+      "state": "open",
+      "created_at": "2025-03-06T05:57:49Z",
+      "updated_at": "2025-03-06T05:57:49Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/181",
+      "labels": []
+    }
+  ]
 }

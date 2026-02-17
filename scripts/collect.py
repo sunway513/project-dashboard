@@ -182,6 +182,29 @@ def fetch_fork_prs(fork_repo, upstream_repo, authors):
     return sorted(unique, key=lambda p: p["updated_at"], reverse=True)
 
 
+def fetch_all_open_prs(repo):
+    """Fetch all open PRs for a repo (for active_dev projects)."""
+    items = gh_api(
+        f"/repos/{repo}/pulls?state=open&sort=updated&direction=desc&per_page=100",
+        paginate=True,
+    )
+    if not isinstance(items, list):
+        items = []
+    return [normalize_pr(pr) for pr in items]
+
+
+def fetch_all_open_issues(repo):
+    """Fetch all open issues for a repo (for active_dev projects)."""
+    items = gh_api(
+        f"/repos/{repo}/issues?state=open&sort=updated&direction=desc&per_page=100",
+        paginate=True,
+    )
+    if not isinstance(items, list):
+        items = []
+    # Filter out pull requests (GitHub API returns PRs as issues too)
+    return [normalize_issue(i) for i in items if "pull_request" not in i]
+
+
 def collect_project(name, cfg):
     """Collect all data for a single project."""
     print(f"Collecting {name} ({cfg['repo']})...")
@@ -189,18 +212,23 @@ def collect_project(name, cfg):
     project_dir.mkdir(parents=True, exist_ok=True)
 
     repo = cfg["repo"]
+    role = cfg.get("role", "upstream_watch")
     authors = cfg.get("track_authors", [])
     labels = cfg.get("track_labels", [])
     keywords = cfg.get("track_keywords", [])
 
     # Collect PRs
-    prs = fetch_prs(repo, authors, labels, keywords)
+    if role == "active_dev":
+        # For our own projects, fetch ALL open PRs
+        prs = fetch_all_open_prs(repo)
+    else:
+        # For upstream projects, only fetch PRs matching filters
+        prs = fetch_prs(repo, authors, labels, keywords)
 
     # If there's a fork, also collect our PRs to upstream
     fork = cfg.get("fork")
     if fork and authors:
         fork_prs = fetch_fork_prs(fork, repo, authors)
-        # Merge, dedup by number
         existing_nums = {p["number"] for p in prs}
         for fp in fork_prs:
             if fp["number"] not in existing_nums:
@@ -210,7 +238,12 @@ def collect_project(name, cfg):
         json.dump({"collected_at": now_iso(), "prs": prs}, f, indent=2)
 
     # Collect issues
-    issues = fetch_issues(repo, labels, keywords)
+    if role == "active_dev":
+        # For our own projects, fetch ALL open issues
+        issues = fetch_all_open_issues(repo)
+    else:
+        # For upstream projects, only fetch issues matching filters
+        issues = fetch_issues(repo, labels, keywords)
     with open(project_dir / "issues.json", "w") as f:
         json.dump({"collected_at": now_iso(), "issues": issues}, f, indent=2)
 

@@ -1,6 +1,93 @@
 {
-  "collected_at": "2026-02-17T19:45:30Z",
+  "collected_at": "2026-02-17T20:02:02Z",
   "prs": [
+    {
+      "number": 34741,
+      "title": "[ROCm] Enable FP8 KV-cache and relax constraints for RDNA4 custom paged attention",
+      "author": "laudney",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-17T19:59:05Z",
+      "updated_at": "2026-02-17T20:01:07Z",
+      "html_url": "https://github.com/vllm-project/vllm/pull/34741",
+      "labels": [
+        "rocm"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34631,
+      "title": "[ROCm] Make Whisper causal attention backend-agnostic",
+      "author": "laudney",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-16T17:07:15Z",
+      "updated_at": "2026-02-17T20:00:41Z",
+      "html_url": "https://github.com/vllm-project/vllm/pull/34631",
+      "labels": [
+        "rocm"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34632,
+      "title": "[ROCm] Add MXFP4 inline dequant Triton kernel for RDNA4/gfx12",
+      "author": "laudney",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-16T17:09:38Z",
+      "updated_at": "2026-02-17T20:00:36Z",
+      "html_url": "https://github.com/vllm-project/vllm/pull/34632",
+      "labels": [
+        "new-model",
+        "rocm"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34740,
+      "title": "[ROCm] Use supports_fp8() for FP8 feature gates instead of arch checks",
+      "author": "laudney",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-17T19:58:37Z",
+      "updated_at": "2026-02-17T19:59:59Z",
+      "html_url": "https://github.com/vllm-project/vllm/pull/34740",
+      "labels": [
+        "rocm"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34709,
+      "title": "[ROCm] Enable wvSplitK skinny GEMM kernel for RDNA4/gfx1x decode",
+      "author": "laudney",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-17T14:41:45Z",
+      "updated_at": "2026-02-17T19:59:51Z",
+      "html_url": "https://github.com/vllm-project/vllm/pull/34709",
+      "labels": [
+        "new-model",
+        "rocm",
+        "ci/build"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34275,
+      "title": "[ROCm] Add RDNA3 tile-size heuristic for \"triton_scaled_mm\" kernel",
+      "author": "monajafi-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-10T20:50:32Z",
+      "updated_at": "2026-02-17T19:47:40Z",
+      "html_url": "https://github.com/vllm-project/vllm/pull/34275",
+      "labels": [
+        "rocm"
+      ],
+      "draft": false
+    },
     {
       "number": 34652,
       "title": "[AMD][CI] Fix test new_weight_syncing/rlhf.py",
@@ -79,27 +166,6 @@
       "draft": false
     },
     {
-      "number": 32564,
-      "title": "[MoE Refactor] Create MK for TRTLLM Kernels",
-      "author": "robertgshaw2-redhat",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-19T02:12:32Z",
-      "updated_at": "2026-02-17T18:26:08Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/32564",
-      "labels": [
-        "documentation",
-        "performance",
-        "rocm",
-        "ci/build",
-        "llama",
-        "gpt-oss",
-        "nvidia",
-        "ready-run-all-tests"
-      ],
-      "draft": false
-    },
-    {
       "number": 31740,
       "title": "feat: Add SM121/GB10 (DGX Spark) Blackwell-class GPU support",
       "author": "seli-equinix",
@@ -132,20 +198,6 @@
         "v1"
       ],
       "draft": true
-    },
-    {
-      "number": 34275,
-      "title": "[ROCm] Add RDNA3 tile-size heuristic for \"triton_scaled_mm\" kernel",
-      "author": "monajafi-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-10T20:50:32Z",
-      "updated_at": "2026-02-17T17:57:30Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/34275",
-      "labels": [
-        "rocm"
-      ],
-      "draft": false
     },
     {
       "number": 34653,
@@ -268,22 +320,6 @@
       "draft": false
     },
     {
-      "number": 34709,
-      "title": "[ROCm] Enable wvSplitK skinny GEMM kernel for RDNA4/gfx1x decode",
-      "author": "laudney",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-17T14:41:45Z",
-      "updated_at": "2026-02-17T14:56:07Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/34709",
-      "labels": [
-        "new-model",
-        "rocm",
-        "ci/build"
-      ],
-      "draft": false
-    },
-    {
       "number": 34574,
       "title": "[Frontend] Support multimodal inputs for late-interaction scoring (ColQwen3)",
       "author": "craftsangjae",
@@ -359,20 +395,6 @@
       "labels": [
         "multi-modality",
         "qwen"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34631,
-      "title": "[ROCm] Make Whisper causal attention backend-agnostic",
-      "author": "laudney",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-16T17:07:15Z",
-      "updated_at": "2026-02-17T04:11:17Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/34631",
-      "labels": [
-        "rocm"
       ],
       "draft": false
     },
@@ -486,22 +508,6 @@
       "draft": false
     },
     {
-      "number": 33443,
-      "title": "[ROCm] AITER fused RoPE+KVCache",
-      "author": "Rohan138",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T19:27:35Z",
-      "updated_at": "2026-02-16T19:20:48Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/33443",
-      "labels": [
-        "rocm",
-        "v1",
-        "gpt-oss"
-      ],
-      "draft": false
-    },
-    {
       "number": 34481,
       "title": "[Bugfix][Hardware][AMD] Add ahead-of-time weight dequantization for quantization emulation",
       "author": "c0de128",
@@ -512,20 +518,6 @@
       "html_url": "https://github.com/vllm-project/vllm/pull/34481",
       "labels": [
         "bug",
-        "rocm"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34456,
-      "title": "[CI/Build] Add .deps to .dockerignore to prevent state from being pulled into ROCm build image",
-      "author": "tlrmchlsmth",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T19:40:39Z",
-      "updated_at": "2026-02-16T18:46:33Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/34456",
-      "labels": [
         "rocm"
       ],
       "draft": false
@@ -707,23 +699,6 @@
       "html_url": "https://github.com/vllm-project/vllm/pull/33955",
       "labels": [
         "rocm"
-      ],
-      "draft": false
-    },
-    {
-      "number": 31118,
-      "title": "[Bugfix][Hardware][AMD] Fix uninitialized prefix_scheduler_metadata",
-      "author": "c0de128",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-12-22T04:51:25Z",
-      "updated_at": "2026-02-13T16:27:54Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/31118",
-      "labels": [
-        "bug",
-        "rocm",
-        "ready",
-        "v1"
       ],
       "draft": false
     },
@@ -1004,21 +979,6 @@
       "labels": [
         "rocm",
         "ci/build"
-      ],
-      "draft": false
-    },
-    {
-      "number": 24068,
-      "title": "Gfx908 attn fix",
-      "author": "UD-mmcminn",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-09-02T03:19:25Z",
-      "updated_at": "2025-12-18T02:24:18Z",
-      "html_url": "https://github.com/vllm-project/vllm/pull/24068",
-      "labels": [
-        "rocm",
-        "unstale"
       ],
       "draft": false
     }
