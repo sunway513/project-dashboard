@@ -60,10 +60,16 @@ function getWeeklyStats(prs, issues, releases) {
   return { prsOpened, prsMerged, issuesOpened, newReleases };
 }
 
+function isBot(author) {
+  if (!author) return true;
+  var a = author.toLowerCase();
+  return a.includes("bot") || a.includes("copybara");
+}
+
 function getProjectContributors(prs, limit) {
   const map = new Map();
   for (const pr of prs) {
-    if (!pr.author) continue;
+    if (isBot(pr.author)) continue;
     if (!map.has(pr.author)) {
       map.set(pr.author, { author: pr.author, submitted: 0, merged: 0 });
     }
