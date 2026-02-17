@@ -1,6 +1,138 @@
 {
-  "collected_at": "2026-02-17T20:02:23Z",
+  "collected_at": "2026-02-17T22:45:04Z",
   "issues": [
+    {
+      "number": 166001,
+      "title": "`torch.onnx.export`'s `dynamic_shape` should take renamed inputs into account",
+      "author": "mqudsi",
+      "state": "open",
+      "created_at": "2025-10-21T16:36:24Z",
+      "updated_at": "2026-02-17T22:01:31Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/166001",
+      "labels": [
+        "module: onnx",
+        "low priority",
+        "triaged",
+        "OSS contribution wanted"
+      ]
+    },
+    {
+      "number": 175188,
+      "title": "[MPS] tanh/sigmoid/silu backward produces wrong gradients on permuted tensors",
+      "author": "npinto",
+      "state": "open",
+      "created_at": "2026-02-17T21:12:46Z",
+      "updated_at": "2026-02-17T21:54:48Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175188",
+      "labels": [
+        "triage review",
+        "module: autograd",
+        "has workaround",
+        "module: correctness (silent)",
+        "module: mps",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 175187,
+      "title": "[MPS] sort and digamma produce wrong results on non-contiguous (transposed) tensors",
+      "author": "npinto",
+      "state": "open",
+      "created_at": "2026-02-17T21:12:41Z",
+      "updated_at": "2026-02-17T21:48:57Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175187",
+      "labels": [
+        "triage review",
+        "module: macos",
+        "module: third_party",
+        "module: correctness (silent)",
+        "module: sorting and selection",
+        "module: special",
+        "module: mps",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 175192,
+      "title": "[MPS] linalg.solve backward gives wrong gradients for both A and B",
+      "author": "npinto",
+      "state": "open",
+      "created_at": "2026-02-17T21:14:03Z",
+      "updated_at": "2026-02-17T21:39:55Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175192",
+      "labels": [
+        "triage review",
+        "module: mps",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 175190,
+      "title": "[MPS] AvgPool2d/AdaptiveAvgPool2d backward crashes (SIGABRT) on channels_last inputs",
+      "author": "npinto",
+      "state": "open",
+      "created_at": "2026-02-17T21:13:32Z",
+      "updated_at": "2026-02-17T21:39:40Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175190",
+      "labels": [
+        "triage review",
+        "module: crash",
+        "module: autograd",
+        "module: nn",
+        "has workaround",
+        "module: memory format",
+        "module: pooling",
+        "module: mps",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 175189,
+      "title": "[MPS] BatchNorm2d backward produces wildly wrong weight gradients on channels_last inputs",
+      "author": "npinto",
+      "state": "open",
+      "created_at": "2026-02-17T21:12:50Z",
+      "updated_at": "2026-02-17T21:38:54Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175189",
+      "labels": [
+        "triage review",
+        "module: autograd",
+        "has workaround",
+        "module: memory format",
+        "module: correctness (silent)",
+        "module: norms and normalization",
+        "module: mps",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 175182,
+      "title": "RuntimeError not raised on Thor/Spark in `test_float8_basics_cuda`",
+      "author": "gderossi",
+      "state": "open",
+      "created_at": "2026-02-17T20:46:58Z",
+      "updated_at": "2026-02-17T20:48:34Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175182",
+      "labels": [
+        "module: cuda",
+        "module: tests",
+        "triaged",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 175145,
+      "title": "[torch.disitributed] Persistent Deadlock when overlapping NCCL P2P and Collectives from separate Python Threads",
+      "author": "ilmarkov",
+      "state": "open",
+      "created_at": "2026-02-17T11:06:52Z",
+      "updated_at": "2026-02-17T20:38:55Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175145",
+      "labels": [
+        "oncall: distributed",
+        "bot-triaged"
+      ]
+    },
     {
       "number": 173659,
       "title": "DataDependentOutputException: aten.equal.default when exporting torch.quantile",
@@ -186,21 +318,6 @@
       ]
     },
     {
-      "number": 174919,
-      "title": "UNSTABLE inductor / inductor-test / test (inductor_torchbench)",
-      "author": "xmfan",
-      "state": "open",
-      "created_at": "2026-02-12T23:17:01Z",
-      "updated_at": "2026-02-17T17:36:31Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/174919",
-      "labels": [
-        "module: ci",
-        "triaged",
-        "unstable",
-        "bot-triaged"
-      ]
-    },
-    {
       "number": 174272,
       "title": "BiLSTM is unexportable to ONNX with dynamic shapes",
       "author": "DLumi",
@@ -290,19 +407,6 @@
       ]
     },
     {
-      "number": 175145,
-      "title": "[torch.disitributed] Persistent Deadlock when overlapping NCCL P2P and Collectives from separate Python Threads",
-      "author": "ilmarkov",
-      "state": "open",
-      "created_at": "2026-02-17T11:06:52Z",
-      "updated_at": "2026-02-17T13:44:03Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175145",
-      "labels": [
-        "oncall: distributed",
-        "bot-triaged"
-      ]
-    },
-    {
       "number": 148752,
       "title": "Compiling Flex Attention on CPU: torch._inductor.exc.InductorError: IndexError: tuple index out of range",
       "author": "JCBrouwer",
@@ -366,86 +470,6 @@
         "oncall: pt2",
         "module: dynamic shapes",
         "module: inductor"
-      ]
-    },
-    {
-      "number": 175143,
-      "title": "UNSTABLE inductor-periodic / rocm-periodic-dynamo-benchmarks-test / test (dynamo_eager_torchbench)",
-      "author": "xmfan",
-      "state": "open",
-      "created_at": "2026-02-17T06:34:35Z",
-      "updated_at": "2026-02-17T06:35:38Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175143",
-      "labels": [
-        "module: rocm",
-        "module: ci",
-        "triaged",
-        "unstable",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 175142,
-      "title": "UNSTABLE inductor-periodic / rocm-periodic-dynamo-benchmarks-test / test (dynamic_inductor_torchbench)",
-      "author": "xmfan",
-      "state": "open",
-      "created_at": "2026-02-17T06:34:28Z",
-      "updated_at": "2026-02-17T06:35:33Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175142",
-      "labels": [
-        "module: rocm",
-        "module: ci",
-        "triaged",
-        "unstable",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 175141,
-      "title": "UNSTABLE inductor-periodic / rocm-periodic-dynamo-benchmarks-test / test (dynamic_aot_eager_torchbench)",
-      "author": "xmfan",
-      "state": "open",
-      "created_at": "2026-02-17T06:34:19Z",
-      "updated_at": "2026-02-17T06:35:23Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175141",
-      "labels": [
-        "module: rocm",
-        "module: ci",
-        "triaged",
-        "unstable",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 175140,
-      "title": "UNSTABLE inductor-periodic / rocm-periodic-dynamo-benchmarks-test / test (aot_inductor_torchbench)",
-      "author": "xmfan",
-      "state": "open",
-      "created_at": "2026-02-17T06:34:11Z",
-      "updated_at": "2026-02-17T06:35:17Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175140",
-      "labels": [
-        "module: rocm",
-        "module: ci",
-        "triaged",
-        "unstable",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 175139,
-      "title": "UNSTABLE inductor-periodic / rocm-periodic-dynamo-benchmarks-test / test (aot_eager_torchbench)",
-      "author": "xmfan",
-      "state": "open",
-      "created_at": "2026-02-17T06:34:05Z",
-      "updated_at": "2026-02-17T06:35:10Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175139",
-      "labels": [
-        "module: rocm",
-        "module: ci",
-        "triaged",
-        "unstable",
-        "bot-triaged"
       ]
     },
     {
@@ -752,6 +776,66 @@
         "triaged",
         "module: linear algebra",
         "rocm-skipped-tests"
+      ]
+    },
+    {
+      "number": 174876,
+      "title": "[export] while_loop raises GuardOnDataDependentSymNode if any input has data-dependent shape",
+      "author": "Callidior",
+      "state": "open",
+      "created_at": "2026-02-12T12:23:35Z",
+      "updated_at": "2026-02-12T19:55:14Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/174876",
+      "labels": [
+        "oncall: pt2",
+        "oncall: export",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 173367,
+      "title": "Segfault on AMD Strix Halo (Radeon 8060S) with PyTorch ROCm 7.1 / Fedora 43",
+      "author": "boommasterxd",
+      "state": "open",
+      "created_at": "2026-01-26T14:08:15Z",
+      "updated_at": "2026-02-12T17:49:17Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/173367",
+      "labels": [
+        "module: crash",
+        "module: rocm",
+        "triaged"
+      ]
+    },
+    {
+      "number": 167414,
+      "title": "C10_CUDA_KERNEL_LAUNCH_CHECK uses getLastError without clearing the error.",
+      "author": "UD-mmcminn",
+      "state": "open",
+      "created_at": "2025-11-08T19:39:14Z",
+      "updated_at": "2026-02-12T17:27:28Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/167414",
+      "labels": [
+        "needs reproduction",
+        "module: rocm",
+        "module: error checking",
+        "triaged"
+      ]
+    },
+    {
+      "number": 174468,
+      "title": "Memory leak by torch.compile",
+      "author": "fanganpai",
+      "state": "open",
+      "created_at": "2026-02-06T12:27:50Z",
+      "updated_at": "2026-02-12T06:57:05Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/174468",
+      "labels": [
+        "needs reproduction",
+        "module: memory usage",
+        "triaged",
+        "module: regression",
+        "oncall: pt2",
+        "bot-triaged"
       ]
     }
   ]
