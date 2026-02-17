@@ -1,34 +1,17 @@
 projects:
-  aiter:
-    repo: ROCm/aiter
-    fork: sunway513/aiter
-    role: active_dev
-    track_authors: [sunway513]
-    track_labels: []
-    track_keywords: []
+  pytorch:
+    repo: pytorch/pytorch
+    role: upstream_watch
+    track_authors: []
+    track_labels: ["module: rocm"]
+    track_keywords: [ROCm, AMD]
 
-  atom:
-    repo: ROCm/ATOM
-    fork: sunway513/ATOM
-    role: active_dev
-    track_authors: [sunway513]
+  jax:
+    repo: jax-ml/jax
+    role: upstream_watch
+    track_authors: []
     track_labels: []
-    track_keywords: []
-
-  flydsl:
-    repo: sunway513/FlyDSL
-    role: active_dev
-    track_authors: [sunway513]
-    track_labels: []
-    track_keywords: []
-
-  mori:
-    repo: ROCm/mori
-    fork: sunway513/mori
-    role: active_dev
-    track_authors: [sunway513]
-    track_labels: []
-    track_keywords: []
+    track_keywords: [ROCm, AMD]
 
   vllm:
     repo: vllm-project/vllm
@@ -45,16 +28,33 @@ projects:
     track_labels: [rocm, amd]
     track_keywords: [ROCm, AMD, HIP]
 
-  pytorch:
-    repo: pytorch/pytorch
-    role: upstream_watch
-    track_authors: []
-    track_labels: ["module: rocm"]
-    track_keywords: [ROCm, AMD]
-
-  jax:
-    repo: jax-ml/jax
-    role: upstream_watch
-    track_authors: []
+  aiter:
+    repo: ROCm/aiter
+    fork: sunway513/aiter
+    role: active_dev
+    track_authors: [sunway513]
     track_labels: []
-    track_keywords: [ROCm, AMD]
+    track_keywords: []
+
+  atom:
+    repo: ROCm/ATOM
+    fork: sunway513/ATOM
+    role: active_dev
+    track_authors: [sunway513]
+    track_labels: []
+    track_keywords: []
+
+  mori:
+    repo: ROCm/mori
+    fork: sunway513/mori
+    role: active_dev
+    track_authors: [sunway513]
+    track_labels: []
+    track_keywords: []
+
+  flydsl:
+    repo: sunway513/FlyDSL
+    role: active_dev
+    track_authors: [sunway513]
+    track_labels: []
+    track_keywords: []
