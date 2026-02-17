@@ -1,6 +1,79 @@
 {
-  "collected_at": "2026-02-17T20:02:06Z",
+  "collected_at": "2026-02-17T22:44:46Z",
   "issues": [
+    {
+      "number": 34583,
+      "title": "[Bug] Missing Vocabulary Validation for MTP and Eagle Speculative Methods leads to potential OOB Access",
+      "author": "amadhan882",
+      "state": "open",
+      "created_at": "2026-02-15T13:31:28Z",
+      "updated_at": "2026-02-17T22:22:42Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34583",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 34755,
+      "title": "Qwen3-Coder-Next-FP8 with tool calling causes system hard-freeze on multi-GPU tensor parallel (v0.15.1)",
+      "author": "zaidorx",
+      "state": "open",
+      "created_at": "2026-02-17T21:59:44Z",
+      "updated_at": "2026-02-17T21:59:44Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34755",
+      "labels": [
+        "usage"
+      ]
+    },
+    {
+      "number": 33812,
+      "title": "[CI Failure]:  mi325_4: LM Eval Large Models (H100)",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-02-04T17:50:56Z",
+      "updated_at": "2026-02-17T21:49:16Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/33812",
+      "labels": [
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 32221,
+      "title": "[CI Failure]:  Qwen3-Next-80B-A3B-Instruct MTP Async EPLB Accuracy",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-01-12T23:29:26Z",
+      "updated_at": "2026-02-17T21:47:13Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/32221",
+      "labels": [
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 34752,
+      "title": "[Bug]: Improve `--kv-cache-dtype` behavior when checkpoint specifies `kv_cache_quant_algo`",
+      "author": "pavanimajety",
+      "state": "open",
+      "created_at": "2026-02-17T21:29:55Z",
+      "updated_at": "2026-02-17T21:34:43Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34752",
+      "labels": [
+        "bug",
+        "good first issue"
+      ]
+    },
+    {
+      "number": 34634,
+      "title": "[Bug]: SharedStorageConnector: vectorized_gather_kernel assertion on Blackwell (B200) GPUs",
+      "author": "mmkamani7",
+      "state": "open",
+      "created_at": "2026-02-16T17:21:43Z",
+      "updated_at": "2026-02-17T21:11:46Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34634",
+      "labels": [
+        "bug"
+      ]
+    },
     {
       "number": 33857,
       "title": "[Bug]: Qwen3-Coder-Next fails with Triton allocator error on DGX Spark cluster (GB10, sm121)",
@@ -9,18 +82,6 @@
       "created_at": "2026-02-05T02:15:14Z",
       "updated_at": "2026-02-17T19:31:45Z",
       "html_url": "https://github.com/vllm-project/vllm/issues/33857",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 34583,
-      "title": "[Bug] Missing Vocabulary Validation for MTP and Eagle Speculative Methods leads to potential OOB Access",
-      "author": "amadhan882",
-      "state": "open",
-      "created_at": "2026-02-15T13:31:28Z",
-      "updated_at": "2026-02-17T18:36:42Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34583",
       "labels": [
         "bug"
       ]
@@ -334,18 +395,6 @@
       ]
     },
     {
-      "number": 34634,
-      "title": "[Bug]: SharedStorageConnector: vectorized_gather_kernel assertion on Blackwell (B200) GPUs",
-      "author": "mmkamani7",
-      "state": "open",
-      "created_at": "2026-02-16T17:21:43Z",
-      "updated_at": "2026-02-16T17:58:17Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34634",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 31244,
       "title": "[CI Failure]:  mi325_2: Plugin Tests (2 GPUs)",
       "author": "AndreasKaratzas",
@@ -521,19 +570,6 @@
       ]
     },
     {
-      "number": 28572,
-      "title": "[Bug]: vllm refuses to serve LLM in the presence of multiple GPUs",
-      "author": "tigran123",
-      "state": "open",
-      "created_at": "2025-11-12T17:42:25Z",
-      "updated_at": "2026-02-16T02:15:04Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/28572",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
       "number": 28626,
       "title": "[Bug]:Qwen3-VL-32B-AWQ model memory usage: 8k context limit with 40GB VRAM?",
       "author": "maxin9966",
@@ -609,45 +645,6 @@
       "labels": [
         "feature request",
         "rocm"
-      ]
-    },
-    {
-      "number": 28806,
-      "title": "[Bug]: Hermes tool call parser drops empty arguments for parameterless tools while streaming",
-      "author": "shakez0901",
-      "state": "open",
-      "created_at": "2025-11-16T11:48:10Z",
-      "updated_at": "2026-02-15T02:14:36Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/28806",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
-      "number": 21336,
-      "title": "[Bug]: vLLM crashes when using --enable-sleep-mode with Blackwell PRO 6000 GPUs",
-      "author": "0xhaggis",
-      "state": "open",
-      "created_at": "2025-07-21T21:45:48Z",
-      "updated_at": "2026-02-14T12:26:54Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/21336",
-      "labels": [
-        "bug",
-        "unstale"
-      ]
-    },
-    {
-      "number": 31683,
-      "title": "[Feature]: Error Logging Redesign",
-      "author": "robertgshaw2-redhat",
-      "state": "open",
-      "created_at": "2026-01-04T14:53:38Z",
-      "updated_at": "2026-02-13T17:19:30Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/31683",
-      "labels": [
-        "help wanted",
-        "feature request"
       ]
     }
   ]

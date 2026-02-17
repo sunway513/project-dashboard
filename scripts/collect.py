@@ -25,7 +25,9 @@ def gh_api(endpoint, method="GET", paginate=False):
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         return json.loads(result.stdout) if result.stdout.strip() else []
     except subprocess.CalledProcessError as e:
-        print(f"  WARNING: gh api {endpoint} failed: {e.stderr.strip()}", file=sys.stderr)
+        print(
+            f"  WARNING: gh api {endpoint} failed: {e.stderr.strip()}", file=sys.stderr
+        )
         return []
     except json.JSONDecodeError:
         # --paginate can return concatenated JSON arrays
@@ -35,7 +37,9 @@ def gh_api(endpoint, method="GET", paginate=False):
         try:
             return json.loads(raw)
         except json.JSONDecodeError:
-            print(f"  WARNING: could not parse response for {endpoint}", file=sys.stderr)
+            print(
+                f"  WARNING: could not parse response for {endpoint}", file=sys.stderr
+            )
             return []
 
 
@@ -65,7 +69,7 @@ def fetch_prs(repo, authors, labels, keywords):
     # Search PRs by keyword (uses search API)
     for kw in keywords:
         search_results = gh_api(
-            f'/search/issues?q={kw}+repo:{repo}+is:pr+is:open&sort=updated&per_page=30'
+            f"/search/issues?q={kw}+repo:{repo}+is:pr+is:open&sort=updated&per_page=30"
         )
         for pr in search_results.get("items", []):
             if not any(p["number"] == pr["number"] for p in prs):
@@ -89,7 +93,8 @@ def normalize_pr(pr):
         "title": pr.get("title", ""),
         "author": pr.get("user", {}).get("login", ""),
         "state": pr.get("state", ""),
-        "merged": pr.get("merged_at") is not None or pr.get("pull_request", {}).get("merged_at") is not None,
+        "merged": pr.get("merged_at") is not None
+        or pr.get("pull_request", {}).get("merged_at") is not None,
         "created_at": pr.get("created_at", ""),
         "updated_at": pr.get("updated_at", ""),
         "html_url": pr.get("html_url", ""),
@@ -113,7 +118,7 @@ def fetch_issues(repo, labels, keywords):
 
     for kw in keywords:
         search_results = gh_api(
-            f'/search/issues?q={kw}+repo:{repo}+is:issue+is:open&sort=updated&per_page=30'
+            f"/search/issues?q={kw}+repo:{repo}+is:issue+is:open&sort=updated&per_page=30"
         )
         for item in search_results.get("items", []):
             if not any(i["number"] == item["number"] for i in issues):
@@ -149,7 +154,10 @@ def fetch_releases(repo):
     if not releases:
         # Fallback to tags
         tags = gh_api(f"/repos/{repo}/tags?per_page=3")
-        return [{"tag_name": t["name"], "published_at": "", "html_url": ""} for t in tags[:3]]
+        return [
+            {"tag_name": t["name"], "published_at": "", "html_url": ""}
+            for t in tags[:3]
+        ]
     return [
         {
             "tag_name": r["tag_name"],
@@ -193,6 +201,16 @@ def fetch_all_open_prs(repo):
     return [normalize_pr(pr) for pr in items]
 
 
+def fetch_recently_merged_prs(repo):
+    """Fetch recently merged PRs (most recent 100 closed, filtered to merged)."""
+    items = gh_api(
+        f"/repos/{repo}/pulls?state=closed&sort=updated&direction=desc&per_page=100",
+    )
+    if not isinstance(items, list):
+        items = []
+    return [normalize_pr(pr) for pr in items if pr.get("merged_at")]
+
+
 def fetch_all_open_issues(repo):
     """Fetch all open issues for a repo (for active_dev projects)."""
     items = gh_api(
@@ -219,11 +237,22 @@ def collect_project(name, cfg):
 
     # Collect PRs
     if role == "active_dev":
-        # For our own projects, fetch ALL open PRs
+        # For our own projects, fetch ALL open PRs + recently merged
         prs = fetch_all_open_prs(repo)
+        merged_prs = fetch_recently_merged_prs(repo)
+        existing_nums = {p["number"] for p in prs}
+        for mp in merged_prs:
+            if mp["number"] not in existing_nums:
+                prs.append(mp)
     else:
-        # For upstream projects, only fetch PRs matching filters
+        # For upstream projects, fetch filtered PRs + recently merged by our authors
         prs = fetch_prs(repo, authors, labels, keywords)
+        if authors:
+            merged_prs = fetch_recently_merged_prs(repo)
+            existing_nums = {p["number"] for p in prs}
+            for mp in merged_prs:
+                if mp["number"] not in existing_nums and mp["author"] in authors:
+                    prs.append(mp)
 
     # If there's a fork, also collect our PRs to upstream
     fork = cfg.get("fork")
