@@ -1,19 +1,18 @@
 {
-  "collected_at": "2026-02-17T23:02:21Z",
+  "collected_at": "2026-02-18T08:14:35Z",
   "issues": [
     {
-      "number": 166001,
-      "title": "`torch.onnx.export`'s `dynamic_shape` should take renamed inputs into account",
-      "author": "mqudsi",
+      "number": 175192,
+      "title": "[MPS] linalg.solve backward gives wrong gradients for both A and B",
+      "author": "npinto",
       "state": "open",
-      "created_at": "2025-10-21T16:36:24Z",
-      "updated_at": "2026-02-17T22:57:45Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/166001",
+      "created_at": "2026-02-17T21:14:03Z",
+      "updated_at": "2026-02-18T06:21:44Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175192",
       "labels": [
-        "module: onnx",
-        "low priority",
-        "triaged",
-        "OSS contribution wanted"
+        "triage review",
+        "module: mps",
+        "bot-triaged"
       ]
     },
     {
@@ -22,15 +21,193 @@
       "author": "npinto",
       "state": "open",
       "created_at": "2026-02-17T21:12:46Z",
-      "updated_at": "2026-02-17T21:54:48Z",
+      "updated_at": "2026-02-18T05:38:22Z",
       "html_url": "https://github.com/pytorch/pytorch/issues/175188",
       "labels": [
         "triage review",
         "module: autograd",
-        "has workaround",
         "module: correctness (silent)",
         "module: mps",
         "bot-triaged"
+      ]
+    },
+    {
+      "number": 158212,
+      "title": "wrong gradients with compiled flex attention",
+      "author": "tsengalb99",
+      "state": "open",
+      "created_at": "2025-07-14T03:44:01Z",
+      "updated_at": "2026-02-18T05:07:40Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/158212",
+      "labels": [
+        "high priority",
+        "triaged",
+        "oncall: pt2",
+        "upstream triton",
+        "module: higher order operators",
+        "module: flex attention"
+      ]
+    },
+    {
+      "number": 24422,
+      "title": "Label tracking meta-issue (edit me to get automatically CC'ed on issues! cc bot)",
+      "author": "ezyang",
+      "state": "open",
+      "created_at": "2019-08-15T18:28:22Z",
+      "updated_at": "2026-02-18T05:03:54Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/24422",
+      "labels": [
+        "triaged"
+      ]
+    },
+    {
+      "number": 142457,
+      "title": "Aborted (core dumped) in `slow_conv_transpose3d`",
+      "author": "LongZE666",
+      "state": "open",
+      "created_at": "2024-12-10T03:26:06Z",
+      "updated_at": "2026-02-18T03:11:51Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/142457",
+      "labels": [
+        "module: crash",
+        "module: nn",
+        "module: error checking",
+        "module: convolution",
+        "triaged",
+        "actionable",
+        "module: edge cases"
+      ]
+    },
+    {
+      "number": 164299,
+      "title": "MPS Memory Leaks across core MPS files",
+      "author": "dharvpat",
+      "state": "open",
+      "created_at": "2025-09-30T21:57:15Z",
+      "updated_at": "2026-02-18T02:55:33Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/164299",
+      "labels": [
+        "triaged",
+        "module: mps"
+      ]
+    },
+    {
+      "number": 142454,
+      "title": "Segmentation fault (core dumped) in `torch.max_pool1d`",
+      "author": "LongZE666",
+      "state": "open",
+      "created_at": "2024-12-10T03:12:05Z",
+      "updated_at": "2026-02-18T02:21:10Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/142454",
+      "labels": [
+        "module: crash",
+        "module: nn",
+        "module: error checking",
+        "triaged",
+        "actionable",
+        "module: pooling",
+        "module: edge cases"
+      ]
+    },
+    {
+      "number": 174417,
+      "title": "[release 2.11] [triton] test/inductor/test_loop_ordering.py::LoopOrderingTest::test_fp8_cast_and_t",
+      "author": "atalman",
+      "state": "open",
+      "created_at": "2026-02-05T20:47:03Z",
+      "updated_at": "2026-02-18T01:36:48Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/174417",
+      "labels": [
+        "triaged",
+        "oncall: pt2",
+        "module: inductor",
+        "upstream triton",
+        "module: floatx (formerly float8)",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 142459,
+      "title": "Segmentation fault (core dumped) in `max_pool3d_with_indices_backward`",
+      "author": "LongZE666",
+      "state": "open",
+      "created_at": "2024-12-10T03:39:23Z",
+      "updated_at": "2026-02-18T01:34:31Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/142459",
+      "labels": [
+        "module: crash",
+        "module: nn",
+        "module: error checking",
+        "triaged",
+        "actionable",
+        "module: edge cases"
+      ]
+    },
+    {
+      "number": 175190,
+      "title": "[MPS] AvgPool2d/AdaptiveAvgPool2d backward crashes (SIGABRT) on channels_last inputs",
+      "author": "npinto",
+      "state": "open",
+      "created_at": "2026-02-17T21:13:32Z",
+      "updated_at": "2026-02-18T01:02:25Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175190",
+      "labels": [
+        "triage review",
+        "module: crash",
+        "module: autograd",
+        "module: nn",
+        "module: memory format",
+        "module: pooling",
+        "module: mps",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 175211,
+      "title": "CUDA/ROCm/Accelerator testing should replace get_device_capability() with feature queries",
+      "author": "jeffdaily",
+      "state": "open",
+      "created_at": "2026-02-18T00:22:38Z",
+      "updated_at": "2026-02-18T00:24:15Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/175211",
+      "labels": [
+        "feature",
+        "module: cuda",
+        "module: rocm",
+        "module: tests",
+        "triaged",
+        "module: accelerator",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 160230,
+      "title": "Offer official Pytorch Vulkan backend on pytorch.org",
+      "author": "alshdavid",
+      "state": "open",
+      "created_at": "2025-08-08T23:19:51Z",
+      "updated_at": "2026-02-18T00:11:26Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/160230",
+      "labels": [
+        "feature",
+        "triaged",
+        "needs research",
+        "module: vulkan"
+      ]
+    },
+    {
+      "number": 166001,
+      "title": "`torch.onnx.export`'s `dynamic_shape` should take renamed inputs into account",
+      "author": "mqudsi",
+      "state": "open",
+      "created_at": "2025-10-21T16:36:24Z",
+      "updated_at": "2026-02-17T23:10:52Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/166001",
+      "labels": [
+        "module: onnx",
+        "low priority",
+        "triaged",
+        "OSS contribution wanted"
       ]
     },
     {
@@ -48,40 +225,6 @@
         "module: correctness (silent)",
         "module: sorting and selection",
         "module: special",
-        "module: mps",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 175192,
-      "title": "[MPS] linalg.solve backward gives wrong gradients for both A and B",
-      "author": "npinto",
-      "state": "open",
-      "created_at": "2026-02-17T21:14:03Z",
-      "updated_at": "2026-02-17T21:39:55Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175192",
-      "labels": [
-        "triage review",
-        "module: mps",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 175190,
-      "title": "[MPS] AvgPool2d/AdaptiveAvgPool2d backward crashes (SIGABRT) on channels_last inputs",
-      "author": "npinto",
-      "state": "open",
-      "created_at": "2026-02-17T21:13:32Z",
-      "updated_at": "2026-02-17T21:39:40Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175190",
-      "labels": [
-        "triage review",
-        "module: crash",
-        "module: autograd",
-        "module: nn",
-        "has workaround",
-        "module: memory format",
-        "module: pooling",
         "module: mps",
         "bot-triaged"
       ]
@@ -379,34 +522,6 @@
       ]
     },
     {
-      "number": 173921,
-      "title": "[Inductor] Significant numerical divergence (4.7% relative error) in Conv2d on CPU with torch.compile",
-      "author": "zifan6699",
-      "state": "open",
-      "created_at": "2026-01-30T11:27:13Z",
-      "updated_at": "2026-02-17T16:37:41Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/173921",
-      "labels": [
-        "high priority",
-        "oncall: pt2",
-        "module: inductor",
-        "oncall: cpu inductor",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 24422,
-      "title": "Label tracking meta-issue (edit me to get automatically CC'ed on issues! cc bot)",
-      "author": "ezyang",
-      "state": "open",
-      "created_at": "2019-08-15T18:28:22Z",
-      "updated_at": "2026-02-17T15:51:30Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/24422",
-      "labels": [
-        "triaged"
-      ]
-    },
-    {
       "number": 148752,
       "title": "Compiling Flex Attention on CPU: torch._inductor.exc.InductorError: IndexError: tuple index out of range",
       "author": "JCBrouwer",
@@ -424,55 +539,6 @@
       ]
     },
     {
-      "number": 145610,
-      "title": "mmap fails on 64k page aarch64 systems for AOTI model loading",
-      "author": "lukalt",
-      "state": "open",
-      "created_at": "2025-01-24T13:32:24Z",
-      "updated_at": "2026-02-17T08:26:10Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/145610",
-      "labels": [
-        "module: crash",
-        "module: arm",
-        "oncall: pt2",
-        "export-triaged",
-        "oncall: export",
-        "module: aotinductor"
-      ]
-    },
-    {
-      "number": 175058,
-      "title": "torch.compile VRAM usage regression between 2.9.1 and 2.10.0",
-      "author": "dxqb",
-      "state": "open",
-      "created_at": "2026-02-15T17:14:00Z",
-      "updated_at": "2026-02-17T06:49:41Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175058",
-      "labels": [
-        "high priority",
-        "triage review",
-        "needs reproduction",
-        "module: memory usage",
-        "oncall: pt2"
-      ]
-    },
-    {
-      "number": 175057,
-      "title": "torch.compile / Inductor generates invalid C++ (undeclared zuf0/zuf1) during compile (CppCompileError) on RTX 3090",
-      "author": "griffinstalha",
-      "state": "open",
-      "created_at": "2026-02-15T16:23:39Z",
-      "updated_at": "2026-02-17T06:43:03Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175057",
-      "labels": [
-        "needs reproduction",
-        "triaged",
-        "oncall: pt2",
-        "module: dynamic shapes",
-        "module: inductor"
-      ]
-    },
-    {
       "number": 174794,
       "title": "REGRESSION: Shadowed variable name crashes `torch.compile` in `2.10` (not `2.9`)",
       "author": "rwkeane",
@@ -484,22 +550,6 @@
         "triaged",
         "oncall: pt2",
         "module: dynamo"
-      ]
-    },
-    {
-      "number": 158212,
-      "title": "wrong gradients with compiled flex attention",
-      "author": "tsengalb99",
-      "state": "open",
-      "created_at": "2025-07-14T03:44:01Z",
-      "updated_at": "2026-02-17T06:10:58Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/158212",
-      "labels": [
-        "high priority",
-        "triaged",
-        "oncall: pt2",
-        "module: higher order operators",
-        "module: flex attention"
       ]
     },
     {
@@ -656,23 +706,6 @@
       ]
     },
     {
-      "number": 174417,
-      "title": "[release 2.11] [triton] test/inductor/test_loop_ordering.py::LoopOrderingTest::test_fp8_cast_and_t",
-      "author": "atalman",
-      "state": "open",
-      "created_at": "2026-02-05T20:47:03Z",
-      "updated_at": "2026-02-13T22:24:50Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/174417",
-      "labels": [
-        "triaged",
-        "oncall: pt2",
-        "module: inductor",
-        "upstream triton",
-        "module: floatx (formerly float8)",
-        "bot-triaged"
-      ]
-    },
-    {
       "number": 174986,
       "title": "`torch.istft` returns an unhelpful internal error",
       "author": "SilentTester73",
@@ -789,52 +822,6 @@
       "labels": [
         "oncall: pt2",
         "oncall: export",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 173367,
-      "title": "Segfault on AMD Strix Halo (Radeon 8060S) with PyTorch ROCm 7.1 / Fedora 43",
-      "author": "boommasterxd",
-      "state": "open",
-      "created_at": "2026-01-26T14:08:15Z",
-      "updated_at": "2026-02-12T17:49:17Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/173367",
-      "labels": [
-        "module: crash",
-        "module: rocm",
-        "triaged"
-      ]
-    },
-    {
-      "number": 167414,
-      "title": "C10_CUDA_KERNEL_LAUNCH_CHECK uses getLastError without clearing the error.",
-      "author": "UD-mmcminn",
-      "state": "open",
-      "created_at": "2025-11-08T19:39:14Z",
-      "updated_at": "2026-02-12T17:27:28Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/167414",
-      "labels": [
-        "needs reproduction",
-        "module: rocm",
-        "module: error checking",
-        "triaged"
-      ]
-    },
-    {
-      "number": 174468,
-      "title": "Memory leak by torch.compile",
-      "author": "fanganpai",
-      "state": "open",
-      "created_at": "2026-02-06T12:27:50Z",
-      "updated_at": "2026-02-12T06:57:05Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/174468",
-      "labels": [
-        "needs reproduction",
-        "module: memory usage",
-        "triaged",
-        "module: regression",
-        "oncall: pt2",
         "bot-triaged"
       ]
     }
