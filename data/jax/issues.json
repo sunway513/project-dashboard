@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-02-18T08:14:41Z",
+  "collected_at": "2026-02-18T05:05:37Z",
   "issues": [
     {
       "number": 34711,
@@ -27,6 +27,19 @@
       ]
     },
     {
+      "number": 34668,
+      "title": "Enable Per PR CI Build and Test",
+      "author": "JehandadKhan",
+      "state": "open",
+      "created_at": "2026-01-27T23:10:24Z",
+      "updated_at": "2026-01-27T23:20:41Z",
+      "html_url": "https://github.com/jax-ml/jax/issues/34668",
+      "labels": [
+        "enhancement",
+        "AMD GPU"
+      ]
+    },
+    {
       "number": 34667,
       "title": "Enable Nightly CI Phase III: Build PJRT wheel and Plugin using tip of tree",
       "author": "JehandadKhan",
@@ -34,6 +47,19 @@
       "created_at": "2026-01-27T23:05:07Z",
       "updated_at": "2026-01-27T23:20:31Z",
       "html_url": "https://github.com/jax-ml/jax/issues/34667",
+      "labels": [
+        "enhancement",
+        "AMD GPU"
+      ]
+    },
+    {
+      "number": 34666,
+      "title": "Enable Nightly CI Phase II: Build intree jax-lib",
+      "author": "JehandadKhan",
+      "state": "open",
+      "created_at": "2026-01-27T23:03:08Z",
+      "updated_at": "2026-01-27T23:20:26Z",
+      "html_url": "https://github.com/jax-ml/jax/issues/34666",
       "labels": [
         "enhancement",
         "AMD GPU"
@@ -391,342 +417,16 @@
       ]
     },
     {
-      "number": 34184,
-      "title": "have ROCm test parity with CUDA & TPUs in upstream",
-      "author": "functionstackx",
+      "number": 34384,
+      "title": "Unsupported ROCm Tests `tests/string_array_test.py`",
+      "author": "JehandadKhan",
       "state": "open",
-      "created_at": "2026-01-07T03:50:29Z",
-      "updated_at": "2026-01-08T19:41:04Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/34184",
-      "labels": [
-        "enhancement"
-      ]
-    },
-    {
-      "number": 29740,
-      "title": "Warning - All configs were filtered out because none of them sufficiently match the hints.",
-      "author": "adam-hartshorne",
-      "state": "open",
-      "created_at": "2025-06-25T11:12:47Z",
-      "updated_at": "2026-01-08T16:40:57Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/29740",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 33359,
-      "title": "Upgrade jax_rocm60_plugin to ROCm 7.1",
-      "author": "reneleonhardt",
-      "state": "open",
-      "created_at": "2025-11-17T13:08:49Z",
-      "updated_at": "2025-12-02T23:15:28Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/33359",
-      "labels": [
-        "enhancement",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 29316,
-      "title": "Jax SDPA AMD support",
-      "author": "ZagButNoZig",
-      "state": "open",
-      "created_at": "2025-06-07T12:03:51Z",
-      "updated_at": "2025-11-18T15:35:56Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/29316",
-      "labels": [
-        "enhancement",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 33364,
-      "title": "jaxopt compilation took hours on certain machines",
-      "author": "rupengli",
-      "state": "open",
-      "created_at": "2025-11-17T14:58:43Z",
-      "updated_at": "2025-11-18T02:09:30Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/33364",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 29801,
-      "title": "build fails with unknown type name errors",
-      "author": "sebastian-de",
-      "state": "open",
-      "created_at": "2025-06-27T08:34:00Z",
-      "updated_at": "2025-11-14T17:51:46Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/29801",
+      "created_at": "2026-01-14T22:49:16Z",
+      "updated_at": "2026-01-21T04:15:59Z",
+      "html_url": "https://github.com/jax-ml/jax/issues/34384",
       "labels": [
         "bug",
         "AMD GPU"
-      ]
-    },
-    {
-      "number": 26846,
-      "title": "Results mismatch between different GEMM algorithms on AMD Instinct accelerator",
-      "author": "ffrancesco94",
-      "state": "open",
-      "created_at": "2025-02-28T14:48:44Z",
-      "updated_at": "2025-11-14T17:49:49Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/26846",
-      "labels": [
-        "bug",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 27187,
-      "title": "JAX shows more ROCM devices than GPUs after calling jax.distributed.initialize()",
-      "author": "bentherien",
-      "state": "open",
-      "created_at": "2025-03-17T04:49:51Z",
-      "updated_at": "2025-11-14T17:35:41Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/27187",
-      "labels": [
-        "bug",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 24458,
-      "title": "[ROCM] Sharding leads to HIP errors",
-      "author": "PhilipVinc",
-      "state": "open",
-      "created_at": "2024-10-22T14:01:35Z",
-      "updated_at": "2025-10-08T19:17:29Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/24458",
-      "labels": [
-        "bug",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 23919,
-      "title": "Add a fused multiply-add function",
-      "author": "carlosgmartin",
-      "state": "open",
-      "created_at": "2024-09-25T18:29:51Z",
-      "updated_at": "2025-08-25T09:14:16Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/23919",
-      "labels": [
-        "enhancement"
-      ]
-    },
-    {
-      "number": 30423,
-      "title": "Not Implemented functions in Pallas",
-      "author": "cdelv",
-      "state": "open",
-      "created_at": "2025-07-23T00:29:01Z",
-      "updated_at": "2025-07-28T16:24:08Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/30423",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 29669,
-      "title": "Device ordinal error when oversubscribing GPUs under SLURM",
-      "author": "nestordemeure",
-      "state": "open",
-      "created_at": "2025-06-23T20:20:17Z",
-      "updated_at": "2025-06-23T20:20:17Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/29669",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 28547,
-      "title": "`special.betainc`, `stdtr`, and `stdtrit` are very slow",
-      "author": "crusaderky",
-      "state": "open",
-      "created_at": "2025-05-06T14:38:26Z",
-      "updated_at": "2025-05-23T09:15:13Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/28547",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 9235,
-      "title": "Implement scipy.spatial",
-      "author": "oleg-kachan",
-      "state": "open",
-      "created_at": "2022-01-19T00:36:38Z",
-      "updated_at": "2025-05-17T20:14:46Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/9235",
-      "labels": [
-        "enhancement",
-        "contributions welcome"
-      ]
-    },
-    {
-      "number": 28097,
-      "title": "`accumulate` poor performance",
-      "author": "crusaderky",
-      "state": "open",
-      "created_at": "2025-04-17T16:53:53Z",
-      "updated_at": "2025-05-04T20:10:09Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/28097",
-      "labels": [
-        "performance"
-      ]
-    },
-    {
-      "number": 19453,
-      "title": "Support for AMD/ROCm with Pallas",
-      "author": "reachtarunhere",
-      "state": "open",
-      "created_at": "2024-01-22T13:18:06Z",
-      "updated_at": "2025-03-31T17:39:41Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/19453",
-      "labels": [
-        "enhancement",
-        "contributions welcome",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 5022,
-      "title": "JAX running in CPU only mode only uses a single core",
-      "author": "JossWhittle",
-      "state": "open",
-      "created_at": "2020-11-26T22:36:09Z",
-      "updated_at": "2024-12-10T06:41:57Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/5022",
-      "labels": [
-        "enhancement"
-      ]
-    },
-    {
-      "number": 19138,
-      "title": "AMD+Jax Docker container incompatible with Singularity",
-      "author": "PhilipVinc",
-      "state": "open",
-      "created_at": "2023-12-29T10:56:00Z",
-      "updated_at": "2024-10-31T19:51:08Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/19138",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 23506,
-      "title": "[ROCM] x64 mode crashes with \"redzone_checker with block dimensions: 1024x1x1: hipError_t\"",
-      "author": "PhilipVinc",
-      "state": "open",
-      "created_at": "2024-09-09T12:44:51Z",
-      "updated_at": "2024-09-17T17:24:29Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/23506",
-      "labels": [
-        "bug",
-        "XLA",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 22767,
-      "title": "Intel (i)GPU support",
-      "author": "arunoruto",
-      "state": "open",
-      "created_at": "2024-07-30T20:28:54Z",
-      "updated_at": "2024-08-12T07:39:40Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/22767",
-      "labels": [
-        "enhancement"
-      ]
-    },
-    {
-      "number": 19989,
-      "title": "Errors when building on AMD GPU",
-      "author": "markliuchina",
-      "state": "open",
-      "created_at": "2024-02-27T02:24:06Z",
-      "updated_at": "2024-07-17T11:43:14Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/19989",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 18976,
-      "title": "ROCM build fails when the ROCM_PATH is a symlinked location",
-      "author": "BillHuang2001",
-      "state": "open",
-      "created_at": "2023-12-14T07:26:08Z",
-      "updated_at": "2024-07-17T11:43:14Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/18976",
-      "labels": [
-        "bug",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 18681,
-      "title": "Spurious data during copying on multiple GPU Jax/ROCm setup ",
-      "author": "ThePerfectComputer",
-      "state": "open",
-      "created_at": "2023-11-27T14:56:12Z",
-      "updated_at": "2024-07-17T11:43:13Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/18681",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 19891,
-      "title": "Jaxlib : Compiling/Building from source failed (Linux, amdgpu rocm)",
-      "author": "unoexperto",
-      "state": "open",
-      "created_at": "2024-02-20T15:11:05Z",
-      "updated_at": "2024-03-20T17:48:10Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/19891",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 19643,
-      "title": ".at[].set() is dangerous",
-      "author": "jglaser",
-      "state": "open",
-      "created_at": "2024-02-03T00:53:21Z",
-      "updated_at": "2024-02-05T13:31:23Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/19643",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 18535,
-      "title": "Test failures: numerical error in`tests/qdwh_test.py::QdwhTest::testQdwhWithOnRankDeficientInput5`",
-      "author": "BillHuang2001",
-      "state": "open",
-      "created_at": "2023-11-15T02:42:50Z",
-      "updated_at": "2023-11-20T16:04:52Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/18535",
-      "labels": [
-        "bug",
-        "contributions welcome",
-        "needs info",
-        "CPU"
-      ]
-    },
-    {
-      "number": 16278,
-      "title": "Possible memory leak / OOM when closing over large constant in jitted loop",
-      "author": "f0uriest",
-      "state": "open",
-      "created_at": "2023-06-06T18:53:42Z",
-      "updated_at": "2023-06-07T02:17:39Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/16278",
-      "labels": [
-        "bug"
       ]
     }
   ]

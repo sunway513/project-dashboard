@@ -43,7 +43,7 @@ def gh_api(endpoint, method="GET", paginate=False):
             return []
 
 
-def fetch_prs(repo, authors, labels, keywords):
+def fetch_prs(repo, authors, labels, keywords, keyword_scope=""):
     """Fetch open and recently merged PRs matching filters."""
     prs = []
 
@@ -70,10 +70,11 @@ def fetch_prs(repo, authors, labels, keywords):
                     prs.append(pr)
 
     # Search PRs by keyword (open + merged)
+    scope = f"+in:{keyword_scope}" if keyword_scope else ""
     for kw in keywords:
         for pr_filter in ["is:open", "is:merged"]:
             search_results = gh_api(
-                f"/search/issues?q={kw}+repo:{repo}+is:pr+{pr_filter}&sort=updated&per_page=30"
+                f"/search/issues?q={kw}{scope}+repo:{repo}+is:pr+{pr_filter}&sort=updated&per_page=30"
             )
             for pr in search_results.get("items", []):
                 if not any(p["number"] == pr["number"] for p in prs):
@@ -107,7 +108,7 @@ def normalize_pr(pr):
     }
 
 
-def fetch_issues(repo, labels, keywords):
+def fetch_issues(repo, labels, keywords, keyword_scope=""):
     """Fetch open issues matching filters."""
     issues = []
 
@@ -120,9 +121,10 @@ def fetch_issues(repo, labels, keywords):
             if "pull_request" not in item:
                 issues.append(item)
 
+    scope = f"+in:{keyword_scope}" if keyword_scope else ""
     for kw in keywords:
         search_results = gh_api(
-            f"/search/issues?q={kw}+repo:{repo}+is:issue+is:open&sort=updated&per_page=30"
+            f"/search/issues?q={kw}{scope}+repo:{repo}+is:issue+is:open&sort=updated&per_page=30"
         )
         for item in search_results.get("items", []):
             if not any(i["number"] == item["number"] for i in issues):
@@ -238,6 +240,7 @@ def collect_project(name, cfg):
     authors = cfg.get("track_authors", [])
     labels = cfg.get("track_labels", [])
     keywords = cfg.get("track_keywords", [])
+    keyword_scope = cfg.get("keyword_scope", "")
 
     # Collect PRs
     if role == "active_dev":
@@ -250,7 +253,7 @@ def collect_project(name, cfg):
                 prs.append(mp)
     else:
         # For upstream projects, fetch filtered PRs + recently merged by our authors
-        prs = fetch_prs(repo, authors, labels, keywords)
+        prs = fetch_prs(repo, authors, labels, keywords, keyword_scope)
         if authors:
             merged_prs = fetch_recently_merged_prs(repo)
             existing_nums = {p["number"] for p in prs}
@@ -276,7 +279,7 @@ def collect_project(name, cfg):
         issues = fetch_all_open_issues(repo)
     else:
         # For upstream projects, only fetch issues matching filters
-        issues = fetch_issues(repo, labels, keywords)
+        issues = fetch_issues(repo, labels, keywords, keyword_scope)
     with open(project_dir / "issues.json", "w") as f:
         json.dump({"collected_at": now_iso(), "issues": issues}, f, indent=2)
 
