@@ -29,6 +29,21 @@ projects:
     track_labels: [rocm, amd]
     track_keywords: [ROCm, AMD, HIP]
 
+  triton:
+    repo: triton-lang/triton
+    role: upstream_watch
+    track_authors: []
+    track_labels: []
+    track_keywords: ["[AMD]"]
+    keyword_scope: title
+
+  migraphx:
+    repo: ROCm/AMDMIGraphX
+    role: active_dev
+    track_authors: []
+    track_labels: []
+    track_keywords: []
+
   aiter:
     repo: ROCm/aiter
     fork: sunway513/aiter

@@ -1,0 +1,2606 @@
+{
+  "collected_at": "2026-02-18T16:58:24Z",
+  "issues": [
+    {
+      "number": 4618,
+      "title": "[Issue]: MIGraphX Dynamic Shape Issue ONNXRuntime",
+      "author": "DiarmuidKelly",
+      "state": "open",
+      "created_at": "2026-02-18T14:35:00Z",
+      "updated_at": "2026-02-18T15:45:35Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4618",
+      "labels": [
+        "status: triage"
+      ]
+    },
+    {
+      "number": 4164,
+      "title": "[Issue]: Slow model compilation",
+      "author": "Artoriuz",
+      "state": "open",
+      "created_at": "2025-07-23T20:03:13Z",
+      "updated_at": "2026-02-12T16:36:04Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4164",
+      "labels": [
+        "status: triage"
+      ]
+    },
+    {
+      "number": 4605,
+      "title": "#4550 introduces doubling bug to DNT model",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2026-02-11T20:33:27Z",
+      "updated_at": "2026-02-11T20:33:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4605",
+      "labels": []
+    },
+    {
+      "number": 4569,
+      "title": "[Issue]: `concat_op.axis >= 0` assertion violates onnx spec",
+      "author": "shssoichiro",
+      "state": "open",
+      "created_at": "2026-01-24T17:50:27Z",
+      "updated_at": "2026-01-26T00:26:24Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4569",
+      "labels": []
+    },
+    {
+      "number": 2869,
+      "title": "Horizontal Fusion",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2024-03-07T17:19:01Z",
+      "updated_at": "2026-01-02T18:07:01Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2869",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 4206,
+      "title": "Error out of the migraphx-driver when --batch is wrongly used",
+      "author": "amd-mwu10004",
+      "state": "open",
+      "created_at": "2025-08-06T16:50:04Z",
+      "updated_at": "2025-12-19T20:17:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4206",
+      "labels": []
+    },
+    {
+      "number": 4491,
+      "title": "Fix bug with shape_transform_descriptor for Llama3.2 model",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2025-12-08T22:53:21Z",
+      "updated_at": "2025-12-18T21:29:19Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4491",
+      "labels": []
+    },
+    {
+      "number": 4233,
+      "title": "Uint8 and Int8 quantization handling as a compiler pass",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2025-08-13T19:09:40Z",
+      "updated_at": "2025-12-18T17:06:07Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4233",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 4308,
+      "title": "Disable offloading attention like kernels to rocMLIR if there is no wmma/mfma for requested dtype",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2025-09-19T18:30:02Z",
+      "updated_at": "2025-12-08T13:48:02Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4308",
+      "labels": []
+    },
+    {
+      "number": 4479,
+      "title": "Investigate why reduction fusions are not being sent to rocMLIR",
+      "author": "justinrosner",
+      "state": "open",
+      "created_at": "2025-12-03T18:14:24Z",
+      "updated_at": "2025-12-03T18:16:06Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4479",
+      "labels": []
+    },
+    {
+      "number": 4351,
+      "title": "[Issue]: Incompatible with OneDNN 3+",
+      "author": "LunNova",
+      "state": "open",
+      "created_at": "2025-10-05T21:53:51Z",
+      "updated_at": "2025-12-01T16:36:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4351",
+      "labels": [
+        "status: triage"
+      ]
+    },
+    {
+      "number": 4475,
+      "title": "Request for a dedicated man-page",
+      "author": "utk4r-sh",
+      "state": "open",
+      "created_at": "2025-11-28T08:05:17Z",
+      "updated_at": "2025-11-28T15:18:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4475",
+      "labels": [
+        "documentation",
+        "status: triage"
+      ]
+    },
+    {
+      "number": 4334,
+      "title": "Implement flash decoding",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2025-09-29T17:07:35Z",
+      "updated_at": "2025-11-03T16:15:38Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4334",
+      "labels": []
+    },
+    {
+      "number": 4357,
+      "title": "Implement different sinks for logger",
+      "author": "eddieliao",
+      "state": "open",
+      "created_at": "2025-10-06T16:40:01Z",
+      "updated_at": "2025-10-17T16:55:36Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4357",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 4368,
+      "title": "[Issue]: gfx_default_rocblas used without checking MIGRAPHX_USE_HIPBLASLT",
+      "author": "trixirt",
+      "state": "open",
+      "created_at": "2025-10-09T19:43:29Z",
+      "updated_at": "2025-10-09T19:43:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4368",
+      "labels": []
+    },
+    {
+      "number": 4366,
+      "title": "[Issue]: msgpack symbols in migraphx conflict with the ones in rocroller",
+      "author": "harakas",
+      "state": "open",
+      "created_at": "2025-10-08T17:51:57Z",
+      "updated_at": "2025-10-08T18:39:44Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4366",
+      "labels": []
+    },
+    {
+      "number": 4356,
+      "title": "Replace existing usages of std output with logger",
+      "author": "eddieliao",
+      "state": "open",
+      "created_at": "2025-10-06T16:37:46Z",
+      "updated_at": "2025-10-06T16:37:46Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4356",
+      "labels": []
+    },
+    {
+      "number": 4199,
+      "title": "[Issue]: Running Argmax op using MiGraphX EP (ONNX Runtime)",
+      "author": "smohta-all3",
+      "state": "open",
+      "created_at": "2025-08-04T10:48:08Z",
+      "updated_at": "2025-10-06T12:31:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4199",
+      "labels": [
+        "Under Investigation"
+      ]
+    },
+    {
+      "number": 4350,
+      "title": "Incorrect ref version for pooling with count_include_pad=True",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2025-10-05T21:09:40Z",
+      "updated_at": "2025-10-05T21:09:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4350",
+      "labels": []
+    },
+    {
+      "number": 4313,
+      "title": "Issue in MIGraphX execution provider for onnxruntime.",
+      "author": "aravindhv10",
+      "state": "open",
+      "created_at": "2025-09-24T05:13:30Z",
+      "updated_at": "2025-10-02T04:47:26Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4313",
+      "labels": []
+    },
+    {
+      "number": 4318,
+      "title": "Add optional elementwise fusion between gemms in G+G fusion",
+      "author": "bdevorem",
+      "state": "open",
+      "created_at": "2025-09-24T19:04:16Z",
+      "updated_at": "2025-09-24T19:04:35Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4318",
+      "labels": []
+    },
+    {
+      "number": 4305,
+      "title": "Refactor `generic_float` to handle `E8M0` type",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2025-09-18T22:37:37Z",
+      "updated_at": "2025-09-18T22:37:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4305",
+      "labels": []
+    },
+    {
+      "number": 4228,
+      "title": "test MFMA tiled layout in migraphx",
+      "author": "dhernandez0",
+      "state": "open",
+      "created_at": "2025-08-11T10:03:22Z",
+      "updated_at": "2025-09-17T09:42:08Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4228",
+      "labels": []
+    },
+    {
+      "number": 3708,
+      "title": "Update docs for `driver time` command",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-12-12T13:29:21Z",
+      "updated_at": "2025-09-08T19:51:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3708",
+      "labels": []
+    },
+    {
+      "number": 4289,
+      "title": "Add heuristic for g+g fusion",
+      "author": "bdevorem",
+      "state": "open",
+      "created_at": "2025-09-08T19:16:54Z",
+      "updated_at": "2025-09-08T19:16:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4289",
+      "labels": []
+    },
+    {
+      "number": 4276,
+      "title": "Enable split-k Fusions",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2025-09-03T17:13:55Z",
+      "updated_at": "2025-09-08T13:15:01Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4276",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 4286,
+      "title": "Add support for 'SplitToSequence' ONNX operator.",
+      "author": "Exile333",
+      "state": "open",
+      "created_at": "2025-09-05T21:39:12Z",
+      "updated_at": "2025-09-08T09:52:15Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4286",
+      "labels": [
+        "onnx",
+        "Onnx Operators",
+        "Example Model"
+      ]
+    },
+    {
+      "number": 4282,
+      "title": "Issue Triaging Guide for suspected migraphx issue",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2025-09-05T16:46:44Z",
+      "updated_at": "2025-09-05T16:46:46Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4282",
+      "labels": []
+    },
+    {
+      "number": 4279,
+      "title": "Use `hip_fp4` header for `pack_fp4` and `unpack_fp4` in future release",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2025-09-03T19:15:47Z",
+      "updated_at": "2025-09-03T19:16:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4279",
+      "labels": [
+        "enhancement",
+        "MXFP4"
+      ]
+    },
+    {
+      "number": 4272,
+      "title": "[Issue]: migraphx for rocm-6.4.3 no python 3.10 support",
+      "author": "gbmerrall",
+      "state": "open",
+      "created_at": "2025-08-31T00:56:42Z",
+      "updated_at": "2025-09-02T18:11:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4272",
+      "labels": [
+        "Under Investigation"
+      ]
+    },
+    {
+      "number": 4268,
+      "title": "\"migx_yolov10\" Performance does not attain the mentioned numbers",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-08-27T19:36:18Z",
+      "updated_at": "2025-08-27T19:36:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4268",
+      "labels": []
+    },
+    {
+      "number": 4267,
+      "title": "~5% to ~20% perf. drops are observed in MIGX models",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-08-27T19:33:55Z",
+      "updated_at": "2025-08-27T19:33:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4267",
+      "labels": []
+    },
+    {
+      "number": 4265,
+      "title": "Drop is seen in torch_migx_quantized's model due to volatility in scores for multiple runs",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-08-27T19:14:20Z",
+      "updated_at": "2025-08-27T19:14:20Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4265",
+      "labels": []
+    },
+    {
+      "number": 4256,
+      "title": "Improve horizontal fusion with multi-used splits",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2025-08-22T22:13:54Z",
+      "updated_at": "2025-08-22T22:33:09Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4256",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 4252,
+      "title": "[Issue]: Linker Error: mlir::TypeID symbol redefinition during migraphx_gpu.dll when build MIGraphX with MIOpen on Windows",
+      "author": "menglcai",
+      "state": "open",
+      "created_at": "2025-08-21T10:10:26Z",
+      "updated_at": "2025-08-21T10:10:26Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4252",
+      "labels": []
+    },
+    {
+      "number": 4249,
+      "title": "Add EmbedLayerNorm Contrib OP",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2025-08-20T18:18:13Z",
+      "updated_at": "2025-08-20T18:20:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4249",
+      "labels": [
+        "Onnx Operators",
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 4248,
+      "title": "Add SkipGroupNorm Contrib Op",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2025-08-20T18:16:23Z",
+      "updated_at": "2025-08-20T18:20:35Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4248",
+      "labels": [
+        "Onnx Operators",
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 4235,
+      "title": "Scale is 0 for quantizelinear and dequantizelinear",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2025-08-14T20:18:43Z",
+      "updated_at": "2025-08-20T16:24:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4235",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 4230,
+      "title": "Fuse Gemm-Elementwise-Gemm with mlir",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2025-08-12T14:11:39Z",
+      "updated_at": "2025-08-18T22:47:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4230",
+      "labels": []
+    },
+    {
+      "number": 4231,
+      "title": "Measure when MLIR is faster or slower to update the heuristic",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2025-08-12T14:19:05Z",
+      "updated_at": "2025-08-12T14:19:05Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4231",
+      "labels": []
+    },
+    {
+      "number": 2621,
+      "title": "Make Onnx resize ALWAYS parse to a Resize op",
+      "author": "bpickrel",
+      "state": "open",
+      "created_at": "2024-01-10T00:05:52Z",
+      "updated_at": "2025-08-08T22:11:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2621",
+      "labels": [
+        "enhancement",
+        "onnx"
+      ]
+    },
+    {
+      "number": 1720,
+      "title": "Python API - Hide GPU specific functions",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-04-26T18:23:52Z",
+      "updated_at": "2025-08-08T20:06:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1720",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 2433,
+      "title": "Refactor gemm fusion paths to allow benchmarking CK, MLIR, and rocBLAS together during compilation",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2023-11-10T17:32:48Z",
+      "updated_at": "2025-08-07T19:48:20Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2433",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3149,
+      "title": "MIGraphX is generating deadcode while compiling BERT model",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-06-05T12:35:40Z",
+      "updated_at": "2025-08-07T19:44:58Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3149",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3232,
+      "title": "Pooling JIT kernel causes random perf drop and end to end performance is low",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-06-28T19:39:06Z",
+      "updated_at": "2025-08-07T19:34:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3232",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 2895,
+      "title": "Improve fusions around reshape/transpose/broadcast",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2024-03-18T17:11:27Z",
+      "updated_at": "2025-08-07T19:28:10Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2895",
+      "labels": []
+    },
+    {
+      "number": 2577,
+      "title": "Add Sequence Operators",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2023-12-28T18:52:31Z",
+      "updated_at": "2025-08-07T17:04:48Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2577",
+      "labels": [
+        "onnx",
+        "Onnx Operators"
+      ]
+    },
+    {
+      "number": 2619,
+      "title": "Add TurnkeyML Hooks for MIGraphX",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2024-01-09T22:39:29Z",
+      "updated_at": "2025-08-07T16:48:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2619",
+      "labels": [
+        "onnxruntime",
+        "TurnkeyML",
+        "Icebox"
+      ]
+    },
+    {
+      "number": 2778,
+      "title": "Unsupported operator: com.microsoft.FusedMatMul",
+      "author": "gyulaz-htec",
+      "state": "open",
+      "created_at": "2024-02-15T12:02:58Z",
+      "updated_at": "2025-08-07T16:42:07Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2778",
+      "labels": []
+    },
+    {
+      "number": 4210,
+      "title": "Drop is seen in torch_migx_quantized's model due to volatility in scores for multiple runs",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-08-06T19:49:11Z",
+      "updated_at": "2025-08-06T19:49:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4210",
+      "labels": []
+    },
+    {
+      "number": 4208,
+      "title": "~6 to ~23% Performance drops are observed in AMDMIGRAPHX Models",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-08-06T19:47:40Z",
+      "updated_at": "2025-08-06T19:47:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4208",
+      "labels": []
+    },
+    {
+      "number": 3442,
+      "title": "Use GPU intrinsics and HIP types for FP8 for MIGX JIT kernels",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-09-13T16:47:34Z",
+      "updated_at": "2025-08-06T19:04:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3442",
+      "labels": [
+        "enhancement",
+        "FP8"
+      ]
+    },
+    {
+      "number": 3552,
+      "title": "Use dynamic shapes for kv-cache",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2024-10-24T18:03:13Z",
+      "updated_at": "2025-08-06T19:03:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3552",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 2595,
+      "title": "split multiple of the same dynamic dimension for dynamic batch",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-01-03T18:53:59Z",
+      "updated_at": "2025-08-06T19:02:34Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2595",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 2744,
+      "title": "Update `pass_manager` to handle updating the cached shape when submodule shapes change",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-02-09T17:17:56Z",
+      "updated_at": "2025-08-06T16:33:03Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2744",
+      "labels": [
+        "enhancement",
+        "Cleanup"
+      ]
+    },
+    {
+      "number": 1929,
+      "title": "Make python API examples for dynamic batch",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-07-07T17:32:50Z",
+      "updated_at": "2025-07-31T18:11:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1929",
+      "labels": []
+    },
+    {
+      "number": 1736,
+      "title": "C/C++ API and Python API dynamic batch with offload_copy = false",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-05-03T19:34:44Z",
+      "updated_at": "2025-07-31T18:10:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1736",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 1734,
+      "title": "C/C++ API supporting tuple arguments",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-05-03T19:32:58Z",
+      "updated_at": "2025-07-31T18:04:34Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1734",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 4185,
+      "title": "~5 to ~48% Perf. drops are observed in AMDMIGRAPHX Models of int8 precision",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-07-30T19:08:56Z",
+      "updated_at": "2025-07-30T19:08:56Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4185",
+      "labels": []
+    },
+    {
+      "number": 4184,
+      "title": "Llama3 ORT test falls back to CPU EP",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2025-07-30T19:04:31Z",
+      "updated_at": "2025-07-30T19:04:32Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4184",
+      "labels": []
+    },
+    {
+      "number": 4183,
+      "title": "Fix Navi4x ASAN failure in CI",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2025-07-30T19:03:50Z",
+      "updated_at": "2025-07-30T19:03:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4183",
+      "labels": []
+    },
+    {
+      "number": 4141,
+      "title": "Error in running inceptionv3 benchmark from AMDMIGraphX examples",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-07-16T19:18:02Z",
+      "updated_at": "2025-07-30T19:03:09Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4141",
+      "labels": []
+    },
+    {
+      "number": 4170,
+      "title": "[Issue]: Inference performance is relatively bad in FP32",
+      "author": "Artoriuz",
+      "state": "open",
+      "created_at": "2025-07-25T20:10:48Z",
+      "updated_at": "2025-07-29T17:56:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4170",
+      "labels": [
+        "Under Investigation"
+      ]
+    },
+    {
+      "number": 4177,
+      "title": "[Issue]:",
+      "author": "xiaokaiwang1984",
+      "state": "open",
+      "created_at": "2025-07-29T05:00:12Z",
+      "updated_at": "2025-07-29T17:21:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4177",
+      "labels": [
+        "Under Investigation"
+      ]
+    },
+    {
+      "number": 4166,
+      "title": "Generate broadcast for matrix multiplication where one of the matrix is filled with ones",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2025-07-24T14:55:43Z",
+      "updated_at": "2025-07-24T19:24:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4166",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3998,
+      "title": "Performance regression on bert_squad_bs1_fp16",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-05-07T19:36:14Z",
+      "updated_at": "2025-07-16T19:07:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3998",
+      "labels": []
+    },
+    {
+      "number": 4129,
+      "title": "Test Epic",
+      "author": "amd-mwu10004",
+      "state": "open",
+      "created_at": "2025-07-09T16:28:47Z",
+      "updated_at": "2025-07-09T16:28:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4129",
+      "labels": []
+    },
+    {
+      "number": 4117,
+      "title": "[Issue]: MIGRAPHX_MLIR_USE_SPECIFIC_OPS with where operator and boolean inputs + slowdown",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2025-07-02T18:17:58Z",
+      "updated_at": "2025-07-02T21:37:57Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4117",
+      "labels": []
+    },
+    {
+      "number": 4092,
+      "title": "Slow migraphx-driver params retrieval for input shapes",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2025-06-23T15:30:23Z",
+      "updated_at": "2025-06-23T20:33:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4092",
+      "labels": []
+    },
+    {
+      "number": 4090,
+      "title": "qwen1.5 not giving attention kernels for int8",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2025-06-23T14:03:44Z",
+      "updated_at": "2025-06-23T15:26:08Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4090",
+      "labels": []
+    },
+    {
+      "number": 4091,
+      "title": "migraphx-driver params error",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2025-06-23T15:25:37Z",
+      "updated_at": "2025-06-23T15:25:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4091",
+      "labels": []
+    },
+    {
+      "number": 4087,
+      "title": "Fix disabled tests when using debug libstdc++",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2025-06-20T17:18:43Z",
+      "updated_at": "2025-06-20T17:18:43Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4087",
+      "labels": []
+    },
+    {
+      "number": 4060,
+      "title": "Tile and interleave scale and bias with int4 weights",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2025-06-07T22:45:10Z",
+      "updated_at": "2025-06-20T14:03:24Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4060",
+      "labels": []
+    },
+    {
+      "number": 4057,
+      "title": "Comparison of Performance - CK vs MLIR - on MI300",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-06-06T16:11:29Z",
+      "updated_at": "2025-06-06T16:42:52Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4057",
+      "labels": []
+    },
+    {
+      "number": 4056,
+      "title": "CK integration",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-06-06T16:10:20Z",
+      "updated_at": "2025-06-06T16:10:20Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4056",
+      "labels": []
+    },
+    {
+      "number": 3060,
+      "title": "Torch Benchmarks Performance: dlrm",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2024-05-09T03:18:20Z",
+      "updated_at": "2025-05-28T19:28:05Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3060",
+      "labels": [
+        "TorchMIGraphX",
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 4036,
+      "title": "KV-Cache Tuning config",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2025-05-28T18:59:27Z",
+      "updated_at": "2025-05-28T18:59:28Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4036",
+      "labels": []
+    },
+    {
+      "number": 4021,
+      "title": "llama2 not giving attention kernel with int8",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2025-05-21T18:12:36Z",
+      "updated_at": "2025-05-21T18:12:36Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4021",
+      "labels": []
+    },
+    {
+      "number": 4016,
+      "title": "Extract opset from ONNX model",
+      "author": "eddieliao",
+      "state": "open",
+      "created_at": "2025-05-19T16:46:40Z",
+      "updated_at": "2025-05-19T16:46:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/4016",
+      "labels": [
+        "enhancement",
+        "onnx"
+      ]
+    },
+    {
+      "number": 3914,
+      "title": "SDXL Accuracy improvement",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2025-03-26T19:59:02Z",
+      "updated_at": "2025-05-14T19:48:52Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3914",
+      "labels": []
+    },
+    {
+      "number": 2761,
+      "title": "flatten: Shapes are not in standard layout",
+      "author": "attila-dusnoki-htec",
+      "state": "open",
+      "created_at": "2024-02-12T15:42:11Z",
+      "updated_at": "2025-05-13T20:19:07Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2761",
+      "labels": []
+    },
+    {
+      "number": 2720,
+      "title": "Support Stable Diffusion XL Model",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2024-02-02T17:40:55Z",
+      "updated_at": "2025-05-02T16:45:56Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2720",
+      "labels": []
+    },
+    {
+      "number": 3983,
+      "title": "Refactor parse_group_query_attention to remove use of GQA ref op",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2025-04-30T17:48:41Z",
+      "updated_at": "2025-04-30T17:48:43Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3983",
+      "labels": []
+    },
+    {
+      "number": 3976,
+      "title": "Refactor parsing and handling of RNN to be compatible with internal quantizer",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2025-04-25T20:07:52Z",
+      "updated_at": "2025-04-25T20:13:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3976",
+      "labels": [
+        "bugfix",
+        "FP8"
+      ]
+    },
+    {
+      "number": 2814,
+      "title": "Fuse `gather` and `pointwise`",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-02-22T18:29:47Z",
+      "updated_at": "2025-04-23T23:39:03Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2814",
+      "labels": [
+        "Perf Improve",
+        "Tier1"
+      ]
+    },
+    {
+      "number": 2818,
+      "title": "GEMM fusion (over slice or not)",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-02-22T21:05:22Z",
+      "updated_at": "2025-04-23T23:38:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2818",
+      "labels": [
+        "Perf Improve",
+        "Tier1"
+      ]
+    },
+    {
+      "number": 2967,
+      "title": "Update attention fusion to support SDXL Clip2 pattern",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-04-11T16:20:44Z",
+      "updated_at": "2025-04-23T23:37:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2967",
+      "labels": [
+        "Perf Improve",
+        "Tier1"
+      ]
+    },
+    {
+      "number": 3598,
+      "title": "Dangling quantizelinear from horizontal fusion, BERT and DistilGPT2",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-11-07T22:43:38Z",
+      "updated_at": "2025-04-23T23:37:13Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3598",
+      "labels": [
+        "FP8",
+        "Perf Improve",
+        "INT8"
+      ]
+    },
+    {
+      "number": 3597,
+      "title": "Missing constant propagation: `Literal` -> `Multibroadcast` -> `Quantizelinear` ",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-11-07T22:38:49Z",
+      "updated_at": "2025-04-23T23:37:04Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3597",
+      "labels": [
+        "FP8",
+        "Perf Improve",
+        "INT8"
+      ]
+    },
+    {
+      "number": 3967,
+      "title": "Add padded_fill1 param to driver",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2025-04-23T19:12:44Z",
+      "updated_at": "2025-04-23T19:12:48Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3967",
+      "labels": []
+    },
+    {
+      "number": 3966,
+      "title": "Verify janus-pro-7b accuracy with end-to-end script",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2025-04-23T19:10:48Z",
+      "updated_at": "2025-04-23T19:10:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3966",
+      "labels": []
+    },
+    {
+      "number": 3964,
+      "title": "Fuse janus-pro-7b attention into GroupQueryAttention",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2025-04-23T19:07:32Z",
+      "updated_at": "2025-04-23T19:07:41Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3964",
+      "labels": []
+    },
+    {
+      "number": 3915,
+      "title": "Improve wording of environment variables",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2025-03-26T23:05:03Z",
+      "updated_at": "2025-04-17T20:58:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3915",
+      "labels": []
+    },
+    {
+      "number": 3939,
+      "title": "Analyze runtime as a function of tuning iterations and see when GPU clocks throttle down",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-04-09T18:55:37Z",
+      "updated_at": "2025-04-10T15:00:24Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3939",
+      "labels": []
+    },
+    {
+      "number": 3906,
+      "title": "Reduce op tests with empty set inputs generate dynamic shapes",
+      "author": "eddieliao",
+      "state": "open",
+      "created_at": "2025-03-25T21:21:51Z",
+      "updated_at": "2025-03-25T21:21:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3906",
+      "labels": [
+        "bug",
+        "onnx"
+      ]
+    },
+    {
+      "number": 3890,
+      "title": "Investigate hip types BF16 and FP8",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2025-03-14T15:05:28Z",
+      "updated_at": "2025-03-14T15:33:49Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3890",
+      "labels": []
+    },
+    {
+      "number": 3852,
+      "title": "Implement CK support in MIGraphX for flash attention",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2025-02-26T20:45:33Z",
+      "updated_at": "2025-02-26T20:53:02Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3852",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 3836,
+      "title": "Efficiently support mixed precision w8a16 models",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2025-02-20T22:09:04Z",
+      "updated_at": "2025-02-21T22:04:24Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3836",
+      "labels": []
+    },
+    {
+      "number": 3791,
+      "title": "Fuse quantizelinear for skip layers using multioutput fusions",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2025-01-31T21:31:30Z",
+      "updated_at": "2025-01-31T21:38:22Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3791",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3788,
+      "title": "Skinny GEMM",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2025-01-30T20:39:38Z",
+      "updated_at": "2025-01-30T20:40:03Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3788",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3646,
+      "title": "Use select_module to compile single prefill/decode program for llama2",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-11-20T17:50:48Z",
+      "updated_at": "2024-11-20T17:51:06Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3646",
+      "labels": []
+    },
+    {
+      "number": 3633,
+      "title": "Improve simplify_algebra",
+      "author": "aarushjain29",
+      "state": "open",
+      "created_at": "2024-11-19T16:39:58Z",
+      "updated_at": "2024-11-19T17:16:32Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3633",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3622,
+      "title": "Investigate memory failures when workspace size is set to 0 in compile hipblaslt pass",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2024-11-14T19:55:57Z",
+      "updated_at": "2024-11-14T19:55:57Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3622",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 3525,
+      "title": "Support text export of fusion subgraphs",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2024-10-11T17:37:39Z",
+      "updated_at": "2024-11-13T20:05:49Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3525",
+      "labels": []
+    },
+    {
+      "number": 3617,
+      "title": "Investigate llama2 int4 memory usage",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-11-13T20:00:42Z",
+      "updated_at": "2024-11-13T20:00:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3617",
+      "labels": []
+    },
+    {
+      "number": 3596,
+      "title": "GroupQueryAttention produces incorrect results when loaded from mxr",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-11-06T16:19:55Z",
+      "updated_at": "2024-11-11T23:52:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3596",
+      "labels": []
+    },
+    {
+      "number": 3612,
+      "title": "Quantized distillgpt2 accuracy issue when quant params are inputs",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2024-11-11T23:31:22Z",
+      "updated_at": "2024-11-11T23:31:23Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3612",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 3432,
+      "title": "Improve `simplify_algebra` to find more horizontal fusion opportunities",
+      "author": "kahmed10",
+      "state": "open",
+      "created_at": "2024-09-10T21:30:53Z",
+      "updated_at": "2024-11-08T18:02:44Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3432",
+      "labels": []
+    },
+    {
+      "number": 3601,
+      "title": "UAI llama2 script recompiles for each prompt even with prefill approach",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-11-08T17:32:21Z",
+      "updated_at": "2024-11-08T17:32:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3601",
+      "labels": []
+    },
+    {
+      "number": 3592,
+      "title": "Remove hipblaslt version check in `hip_gemm_impl.cpp` for OCP FP8 types",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-11-05T23:16:42Z",
+      "updated_at": "2024-11-05T23:16:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3592",
+      "labels": []
+    },
+    {
+      "number": 3588,
+      "title": "PagedAttention support in MIGraphX",
+      "author": "gyulaz-htec",
+      "state": "open",
+      "created_at": "2024-11-05T11:50:40Z",
+      "updated_at": "2024-11-05T11:53:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3588",
+      "labels": [
+        "Under Investigation"
+      ]
+    },
+    {
+      "number": 1252,
+      "title": "Incorrect output aliases",
+      "author": "Slimakanzer",
+      "state": "open",
+      "created_at": "2022-06-18T00:53:31Z",
+      "updated_at": "2024-11-04T21:46:05Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1252",
+      "labels": []
+    },
+    {
+      "number": 3534,
+      "title": "Benchmark llama2 int4 performance",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-10-16T18:05:18Z",
+      "updated_at": "2024-10-16T18:05:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3534",
+      "labels": []
+    },
+    {
+      "number": 1335,
+      "title": "shapes are not in standard layout",
+      "author": "HikariTJU",
+      "state": "open",
+      "created_at": "2022-08-11T07:47:51Z",
+      "updated_at": "2024-10-07T19:57:41Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1335",
+      "labels": [
+        "Under Investigation"
+      ]
+    },
+    {
+      "number": 845,
+      "title": "Reporting kernel efficiency",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2021-06-01T18:34:09Z",
+      "updated_at": "2024-10-02T20:22:37Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/845",
+      "labels": []
+    },
+    {
+      "number": 412,
+      "title": "improved \"capability\" to judge operators migraphx can support",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2019-12-18T22:19:50Z",
+      "updated_at": "2024-10-02T18:06:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/412",
+      "labels": [
+        "onnxruntime"
+      ]
+    },
+    {
+      "number": 787,
+      "title": "refine the instruction::print() function for literal",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2021-04-01T14:00:42Z",
+      "updated_at": "2024-10-02T18:03:24Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/787",
+      "labels": [
+        "good first issue"
+      ]
+    },
+    {
+      "number": 1159,
+      "title": "context used as input to migraphx eval() function",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2022-04-04T14:10:40Z",
+      "updated_at": "2024-10-02T17:25:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1159",
+      "labels": []
+    },
+    {
+      "number": 3128,
+      "title": "Simplify `log(softmax(x))`",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-05-28T22:06:21Z",
+      "updated_at": "2024-09-25T19:52:46Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3128",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3250,
+      "title": "Simplify using distributive property of matrix multiplication ",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-07-08T15:28:49Z",
+      "updated_at": "2024-09-25T18:55:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3250",
+      "labels": [
+        "enhancement",
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3177,
+      "title": "Lower unsupported pooling sizes for the CPU to Reference backend",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-06-13T12:51:38Z",
+      "updated_at": "2024-09-17T12:54:59Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3177",
+      "labels": [
+        "good first issue"
+      ]
+    },
+    {
+      "number": 3207,
+      "title": "Weight Stripping",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2024-06-21T10:39:29Z",
+      "updated_at": "2024-09-10T20:45:30Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3207",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 3431,
+      "title": "Update formatter github action to make suggestions",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-09-10T15:16:40Z",
+      "updated_at": "2024-09-10T15:16:41Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3431",
+      "labels": [
+        "enhancement",
+        "Continous Integration"
+      ]
+    },
+    {
+      "number": 3427,
+      "title": "Add padding for preloading tiles into LDS for transpose",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-09-06T22:09:22Z",
+      "updated_at": "2024-09-06T22:09:22Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3427",
+      "labels": []
+    },
+    {
+      "number": 3420,
+      "title": "Figure out why test_gemm_add verify test is inaccurate for fp8",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-09-06T13:50:44Z",
+      "updated_at": "2024-09-06T13:50:52Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3420",
+      "labels": [
+        "bugfix",
+        "FP8"
+      ]
+    },
+    {
+      "number": 3415,
+      "title": "Perf regressions after moving auto_contiguous before lowering pass",
+      "author": "kahmed10",
+      "state": "open",
+      "created_at": "2024-09-04T19:56:28Z",
+      "updated_at": "2024-09-04T20:00:02Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3415",
+      "labels": []
+    },
+    {
+      "number": 3384,
+      "title": "Refactor mlir rewrites into single function",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-08-16T20:04:13Z",
+      "updated_at": "2024-08-16T20:04:13Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3384",
+      "labels": []
+    },
+    {
+      "number": 3382,
+      "title": "Investigate verification failure of MLIR + ReduceSum test ",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-08-16T17:13:11Z",
+      "updated_at": "2024-08-16T17:13:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3382",
+      "labels": []
+    },
+    {
+      "number": 3233,
+      "title": "Reduce compile time by reducing calls to `compute_shape()` for each IR transformation",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-06-28T19:48:24Z",
+      "updated_at": "2024-08-13T16:22:50Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3233",
+      "labels": []
+    },
+    {
+      "number": 3367,
+      "title": "Pooling Improvements",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-08-12T19:48:55Z",
+      "updated_at": "2024-08-12T20:01:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3367",
+      "labels": []
+    },
+    {
+      "number": 3020,
+      "title": "Add verification for `--int8` and `--fp16 --int8` and `--fp8` in `migraphx-driver`",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-04-30T14:30:57Z",
+      "updated_at": "2024-08-12T12:41:41Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3020",
+      "labels": []
+    },
+    {
+      "number": 2849,
+      "title": "Concat + Convert Fusion",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-02-29T21:16:30Z",
+      "updated_at": "2024-08-12T12:41:37Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2849",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 3356,
+      "title": "Consider `ceil_mode` when doing `rewrite_pooling` pass",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-08-09T19:09:17Z",
+      "updated_at": "2024-08-09T19:09:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3356",
+      "labels": []
+    },
+    {
+      "number": 3334,
+      "title": "[BUG] Buffer shape not the same as Output Shape",
+      "author": "richagadgil",
+      "state": "open",
+      "created_at": "2024-08-01T22:35:37Z",
+      "updated_at": "2024-08-01T22:35:37Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3334",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 3175,
+      "title": "Use blockwise reduction for pooling",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2024-06-12T22:43:56Z",
+      "updated_at": "2024-07-25T16:14:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3175",
+      "labels": [
+        "Perf Improve",
+        "Tier1"
+      ]
+    },
+    {
+      "number": 3137,
+      "title": "Scatter elements simplification",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2024-05-30T17:08:51Z",
+      "updated_at": "2024-07-25T16:12:36Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3137",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 2867,
+      "title": "Fuse Average Pooling with Convolution",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2024-03-07T17:16:11Z",
+      "updated_at": "2024-07-25T16:05:25Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2867",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 2819,
+      "title": "GEMM -> pointwise (GELU) -> GEMM fusion",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-02-22T21:08:57Z",
+      "updated_at": "2024-07-25T16:03:13Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2819",
+      "labels": [
+        "Perf Improve",
+        "Tier1"
+      ]
+    },
+    {
+      "number": 3077,
+      "title": "Update MIGraphX Driver to change run timing and stream synchronization for runs",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2024-05-13T19:20:35Z",
+      "updated_at": "2024-07-25T15:53:56Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3077",
+      "labels": [
+        "onnxruntime",
+        "dependencies"
+      ]
+    },
+    {
+      "number": 3239,
+      "title": "Padding as fusion",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2024-07-01T15:13:29Z",
+      "updated_at": "2024-07-01T15:13:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3239",
+      "labels": []
+    },
+    {
+      "number": 3238,
+      "title": "Symbolic shapes",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2024-07-01T15:02:18Z",
+      "updated_at": "2024-07-01T15:02:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3238",
+      "labels": []
+    },
+    {
+      "number": 3234,
+      "title": "Find a way to test JIT pooling kernel",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-06-28T20:05:07Z",
+      "updated_at": "2024-06-28T20:05:07Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3234",
+      "labels": []
+    },
+    {
+      "number": 3211,
+      "title": "Handle reshapes while fusing inputs in MLIR",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-06-21T11:57:36Z",
+      "updated_at": "2024-06-21T11:59:23Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3211",
+      "labels": []
+    },
+    {
+      "number": 3209,
+      "title": "Run-time Accuracy Debugging (\"Debug Tensors\")",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2024-06-21T11:16:24Z",
+      "updated_at": "2024-06-21T11:16:25Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3209",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 3143,
+      "title": "Softmax JIT kernel: large number of gpu work-items created for certain shapes.",
+      "author": "lakhinderwalia",
+      "state": "open",
+      "created_at": "2024-06-03T22:32:05Z",
+      "updated_at": "2024-06-03T22:32:05Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3143",
+      "labels": []
+    },
+    {
+      "number": 3136,
+      "title": "Longformer reshape simplification",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2024-05-30T17:04:48Z",
+      "updated_at": "2024-05-30T17:04:49Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3136",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 1650,
+      "title": "Add TF parsers ResizeByNearestNeighbour",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2023-03-27T22:45:40Z",
+      "updated_at": "2024-05-22T19:58:44Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1650",
+      "labels": [
+        "good first issue"
+      ]
+    },
+    {
+      "number": 3029,
+      "title": "Rocm-cmake: move unstable libraries to $ROCM_PATH/lib/migraphx",
+      "author": "ahsan-ca",
+      "state": "open",
+      "created_at": "2024-05-01T18:44:56Z",
+      "updated_at": "2024-05-21T18:53:30Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3029",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 3095,
+      "title": "Concat broadcast rewrite to handle more cases",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-05-16T15:00:49Z",
+      "updated_at": "2024-05-16T15:19:24Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3095",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 2704,
+      "title": " Accuracy issues with ONNX Zoo QDQ models",
+      "author": "gyulaz-htec",
+      "state": "open",
+      "created_at": "2024-01-31T11:13:04Z",
+      "updated_at": "2024-05-11T00:57:28Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2704",
+      "labels": [
+        "bug",
+        "onnx"
+      ]
+    },
+    {
+      "number": 3001,
+      "title": "Better handling of corrupt or invalid onnx files",
+      "author": "kahmed10",
+      "state": "open",
+      "created_at": "2024-04-25T22:10:12Z",
+      "updated_at": "2024-04-25T22:10:12Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/3001",
+      "labels": []
+    },
+    {
+      "number": 2517,
+      "title": "FP8 lossy downcast issue with \"ref\" implementation ",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2023-12-05T21:39:36Z",
+      "updated_at": "2024-04-16T18:18:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2517",
+      "labels": [
+        "FP8"
+      ]
+    },
+    {
+      "number": 2533,
+      "title": "Allow parsing of E4M3FN models using scales manipulation ",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2023-12-07T20:34:03Z",
+      "updated_at": "2024-04-16T17:42:38Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2533",
+      "labels": [
+        "FP8"
+      ]
+    },
+    {
+      "number": 2962,
+      "title": "Run llama2 example from onnxruntime",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-04-10T18:50:58Z",
+      "updated_at": "2024-04-10T18:50:58Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2962",
+      "labels": []
+    },
+    {
+      "number": 2930,
+      "title": "[MLIR,Attention] Implement gemm(i8)-dequantizelinear-softmax(fp16)-gemm(fp16) lowering",
+      "author": "manupak",
+      "state": "open",
+      "created_at": "2024-03-27T16:03:16Z",
+      "updated_at": "2024-03-27T16:03:16Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2930",
+      "labels": []
+    },
+    {
+      "number": 2916,
+      "title": "ONNX + Torch MIGRaphX SDXL Script",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2024-03-20T19:08:57Z",
+      "updated_at": "2024-03-20T19:08:57Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2916",
+      "labels": []
+    },
+    {
+      "number": 866,
+      "title": "NonMaxSuppression GPU operator",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2021-06-21T15:21:09Z",
+      "updated_at": "2024-03-15T19:50:13Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/866",
+      "labels": []
+    },
+    {
+      "number": 794,
+      "title": "Reduce congitive complexity in rewrite_rnn",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2021-04-06T21:53:39Z",
+      "updated_at": "2024-03-15T18:46:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/794",
+      "labels": []
+    },
+    {
+      "number": 2868,
+      "title": "Group Convolution ",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2024-03-07T17:18:04Z",
+      "updated_at": "2024-03-07T17:21:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2868",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 2847,
+      "title": "Fuse \"contiguous + concat\"",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2024-02-29T21:05:05Z",
+      "updated_at": "2024-02-29T21:05:10Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2847",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 2764,
+      "title": "PARSE_RESIZE: only nearest and linear modes are supported",
+      "author": "attila-dusnoki-htec",
+      "state": "open",
+      "created_at": "2024-02-12T15:43:51Z",
+      "updated_at": "2024-02-12T15:43:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2764",
+      "labels": []
+    },
+    {
+      "number": 2759,
+      "title": "Unsupported operator: com.microsoft.QAttention",
+      "author": "attila-dusnoki-htec",
+      "state": "open",
+      "created_at": "2024-02-12T15:40:58Z",
+      "updated_at": "2024-02-12T15:40:58Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2759",
+      "labels": []
+    },
+    {
+      "number": 2756,
+      "title": "Unsupported operator: com.microsoft.EmbedLayerNormalization",
+      "author": "attila-dusnoki-htec",
+      "state": "open",
+      "created_at": "2024-02-12T15:39:21Z",
+      "updated_at": "2024-02-12T15:39:21Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2756",
+      "labels": []
+    },
+    {
+      "number": 2738,
+      "title": "Use memory map files to load file buffers",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2024-02-08T19:08:17Z",
+      "updated_at": "2024-02-08T19:08:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2738",
+      "labels": []
+    },
+    {
+      "number": 2737,
+      "title": "Remove layernorm fusion and use the default reduction fusion pipeline",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2024-02-08T19:04:41Z",
+      "updated_at": "2024-02-08T19:04:59Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2737",
+      "labels": [
+        "Perf Improve"
+      ]
+    },
+    {
+      "number": 2732,
+      "title": "Use msgpack visitor APIs",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2024-02-07T18:24:23Z",
+      "updated_at": "2024-02-07T18:24:23Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2732",
+      "labels": []
+    },
+    {
+      "number": 2556,
+      "title": "FP16 inaccuracy with Llama-2",
+      "author": "attila-dusnoki-htec",
+      "state": "open",
+      "created_at": "2023-12-15T15:39:37Z",
+      "updated_at": "2024-01-18T17:03:48Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2556",
+      "labels": []
+    },
+    {
+      "number": 2624,
+      "title": "Add verify tests for common model components",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-01-11T18:28:53Z",
+      "updated_at": "2024-01-17T22:24:02Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2624",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 2653,
+      "title": "Update accuracy_checker.py script to separate absolute tolerance and relative tolerance",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-01-17T22:11:22Z",
+      "updated_at": "2024-01-17T22:22:16Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2653",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 2654,
+      "title": "Update end-to-end model accuracy tests to use real datasets and multiple inferences",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-01-17T22:21:57Z",
+      "updated_at": "2024-01-17T22:22:05Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2654",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 2651,
+      "title": "params command in driver is slow for large models",
+      "author": "kahmed10",
+      "state": "open",
+      "created_at": "2024-01-17T19:42:44Z",
+      "updated_at": "2024-01-17T19:42:44Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2651",
+      "labels": []
+    },
+    {
+      "number": 2555,
+      "title": "FP16 inaccuracy with Stable Diffusion's UNet.",
+      "author": "attila-dusnoki-htec",
+      "state": "open",
+      "created_at": "2023-12-15T09:46:50Z",
+      "updated_at": "2024-01-16T20:39:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2555",
+      "labels": []
+    },
+    {
+      "number": 2633,
+      "title": "Dynamic flash attention",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2024-01-12T18:24:36Z",
+      "updated_at": "2024-01-12T18:24:36Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2633",
+      "labels": []
+    },
+    {
+      "number": 2631,
+      "title": "Investigate test failures from Microsoft given models and data",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-01-12T17:06:45Z",
+      "updated_at": "2024-01-12T17:06:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2631",
+      "labels": []
+    },
+    {
+      "number": 2611,
+      "title": "[Issue]: Perf mismatch between tuner and perf reports",
+      "author": "giuseros",
+      "state": "open",
+      "created_at": "2024-01-08T22:38:21Z",
+      "updated_at": "2024-01-10T17:20:01Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2611",
+      "labels": []
+    },
+    {
+      "number": 2606,
+      "title": "Torch MIGraphX CI",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2024-01-05T18:03:12Z",
+      "updated_at": "2024-01-05T18:03:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2606",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 2604,
+      "title": "Investigate Navi32 performance regression in 6.0",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2024-01-05T17:06:40Z",
+      "updated_at": "2024-01-05T17:06:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2604",
+      "labels": []
+    },
+    {
+      "number": 2601,
+      "title": "Update compiler pass unit tests to also verify the replacement gets the same result",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2024-01-04T22:08:46Z",
+      "updated_at": "2024-01-04T22:08:46Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2601",
+      "labels": [
+        "enhancement"
+      ]
+    },
+    {
+      "number": 2599,
+      "title": "Investigate using hipBlasLt",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2024-01-04T16:55:58Z",
+      "updated_at": "2024-01-04T16:56:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2599",
+      "labels": []
+    },
+    {
+      "number": 2597,
+      "title": "Publish a docker image with ORT and ROCm",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2024-01-03T19:14:49Z",
+      "updated_at": "2024-01-03T19:55:28Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2597",
+      "labels": [
+        "onnxruntime"
+      ]
+    },
+    {
+      "number": 2592,
+      "title": "GPT2-L Performance Issue - INT8 Torch MIGraphX",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2024-01-03T18:27:11Z",
+      "updated_at": "2024-01-03T18:30:14Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2592",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 2571,
+      "title": "Moved from RadeonOpenCompute to ROCm",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2023-12-21T15:48:44Z",
+      "updated_at": "2023-12-21T16:03:38Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2571",
+      "labels": []
+    },
+    {
+      "number": 2515,
+      "title": "Add INT8 example for BERT, Distil, and GPT2",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2023-12-05T19:45:43Z",
+      "updated_at": "2023-12-06T20:39:07Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2515",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 2419,
+      "title": "Non-standard reshape fail during reshape_lazy lowering",
+      "author": "attila-dusnoki-htec",
+      "state": "open",
+      "created_at": "2023-11-09T08:40:08Z",
+      "updated_at": "2023-12-06T16:12:56Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2419",
+      "labels": []
+    },
+    {
+      "number": 2454,
+      "title": "[FP8] DPP Reduce for FP8",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2023-11-17T20:41:24Z",
+      "updated_at": "2023-12-01T15:05:06Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2454",
+      "labels": [
+        "FP8"
+      ]
+    },
+    {
+      "number": 2444,
+      "title": "Create Jenkins CI for Project",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2023-11-14T19:48:44Z",
+      "updated_at": "2023-11-14T19:49:14Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2444",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 2389,
+      "title": "Extend slice with 1 input to work with any dynamic shape",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-10-30T22:57:48Z",
+      "updated_at": "2023-10-30T22:57:48Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2389",
+      "labels": []
+    },
+    {
+      "number": 2333,
+      "title": "Collect all GEMM configs for models of interest and compare CK/rocBLAS/MLIR on MI300A",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2023-10-13T16:44:51Z",
+      "updated_at": "2023-10-13T16:44:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2333",
+      "labels": []
+    },
+    {
+      "number": 2318,
+      "title": "Use different default tolerance for fp16 in ORT accuracy_checker script",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-10-11T19:20:27Z",
+      "updated_at": "2023-10-11T19:20:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2318",
+      "labels": [
+        "bugfix"
+      ]
+    },
+    {
+      "number": 2181,
+      "title": "MIGraphX accuracy_checker problem when run the accuracy for different model(bert, gpt2)",
+      "author": "stefankoncarevic",
+      "state": "open",
+      "created_at": "2023-09-13T16:52:46Z",
+      "updated_at": "2023-10-05T20:12:14Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2181",
+      "labels": []
+    },
+    {
+      "number": 1936,
+      "title": "Investigate INT8 support for Torch MIGraphX",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2023-07-10T16:01:14Z",
+      "updated_at": "2023-09-20T18:13:20Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1936",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 2088,
+      "title": "Make Check fails off develop with ROCm 5.5 and 5.6 containers",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2023-08-18T14:32:00Z",
+      "updated_at": "2023-09-19T03:45:33Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2088",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 2152,
+      "title": "Display DLM results on Ginger Dashboard",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2023-09-05T18:45:54Z",
+      "updated_at": "2023-09-05T18:46:49Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2152",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 2117,
+      "title": "Extend CK API to include gemm-softmax-gemm",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2023-08-23T19:31:40Z",
+      "updated_at": "2023-08-23T19:31:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2117",
+      "labels": []
+    },
+    {
+      "number": 1987,
+      "title": "put mlir sha-1 into file",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "created_at": "2023-07-20T17:47:32Z",
+      "updated_at": "2023-08-11T13:46:30Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1987",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 2032,
+      "title": "Debug failing stable diffusion and benchmarks on nightly torch",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2023-08-02T19:05:43Z",
+      "updated_at": "2023-08-02T19:08:04Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2032",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 2027,
+      "title": "Analyze CK vs rocBLAS performance trends to improve selection criteria",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2023-08-02T16:21:00Z",
+      "updated_at": "2023-08-02T16:21:01Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/2027",
+      "labels": []
+    },
+    {
+      "number": 1879,
+      "title": "Publish Whl files for project",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2023-06-27T15:28:08Z",
+      "updated_at": "2023-07-18T15:13:12Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1879",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 1922,
+      "title": "Add prefix scan sum",
+      "author": "bpickrel",
+      "state": "open",
+      "created_at": "2023-07-06T17:23:13Z",
+      "updated_at": "2023-07-06T17:24:16Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1922",
+      "labels": []
+    },
+    {
+      "number": 1884,
+      "title": "Investigate common failures from HF",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2023-06-27T15:40:23Z",
+      "updated_at": "2023-06-27T15:41:15Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1884",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 1882,
+      "title": "Create DLM scripts",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2023-06-27T15:37:31Z",
+      "updated_at": "2023-06-27T15:39:03Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1882",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 1881,
+      "title": "Create unit tests for ATEN converters",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2023-06-27T15:36:09Z",
+      "updated_at": "2023-06-27T15:36:17Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1881",
+      "labels": [
+        "TorchMIGraphX"
+      ]
+    },
+    {
+      "number": 1486,
+      "title": "Update parameter variable names in onnx_test.cpp",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2022-12-07T16:09:33Z",
+      "updated_at": "2023-06-14T00:02:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1486",
+      "labels": [
+        "good first issue",
+        "simple"
+      ]
+    },
+    {
+      "number": 1703,
+      "title": "Integrate CK GEMMs",
+      "author": "turneram",
+      "state": "open",
+      "created_at": "2023-04-20T16:37:59Z",
+      "updated_at": "2023-04-21T16:46:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1703",
+      "labels": []
+    },
+    {
+      "number": 1629,
+      "title": "Allow spilling to host memory in memory coloring",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2023-03-17T15:52:18Z",
+      "updated_at": "2023-03-17T17:10:20Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1629",
+      "labels": []
+    },
+    {
+      "number": 1210,
+      "title": "Driver output enhancements",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2022-05-18T13:17:33Z",
+      "updated_at": "2023-01-18T18:37:57Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1210",
+      "labels": [
+        "good first issue"
+      ]
+    },
+    {
+      "number": 1525,
+      "title": "Remove `pad_mode` for `pad` operator",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-01-12T19:42:26Z",
+      "updated_at": "2023-01-12T19:42:26Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1525",
+      "labels": []
+    },
+    {
+      "number": 1511,
+      "title": "Add new ONNX shape node functionality",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2023-01-09T19:26:24Z",
+      "updated_at": "2023-01-09T19:26:24Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1511",
+      "labels": []
+    },
+    {
+      "number": 1397,
+      "title": "Performance metrics available in C++",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2022-09-21T19:31:26Z",
+      "updated_at": "2022-09-21T19:31:26Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1397",
+      "labels": []
+    },
+    {
+      "number": 1396,
+      "title": "Fast tuning mode",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2022-09-21T19:25:54Z",
+      "updated_at": "2022-09-21T19:25:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1396",
+      "labels": []
+    },
+    {
+      "number": 1392,
+      "title": "Allow non-standard output shape",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "created_at": "2022-09-19T20:55:55Z",
+      "updated_at": "2022-09-19T20:55:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1392",
+      "labels": []
+    },
+    {
+      "number": 1328,
+      "title": "Output compiled model with target data",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2022-08-04T17:41:52Z",
+      "updated_at": "2022-08-04T17:41:52Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1328",
+      "labels": []
+    },
+    {
+      "number": 1115,
+      "title": "Add warning or error for onnx_backend_test.py for misspelling",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2022-03-02T20:39:58Z",
+      "updated_at": "2022-06-30T18:07:03Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1115",
+      "labels": [
+        "good first issue"
+      ]
+    },
+    {
+      "number": 1240,
+      "title": "resnet50 int8 convolution yields sub-optimal fused kernel",
+      "author": "jerryyin",
+      "state": "open",
+      "created_at": "2022-06-13T19:05:54Z",
+      "updated_at": "2022-06-22T20:55:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1240",
+      "labels": []
+    },
+    {
+      "number": 1262,
+      "title": "Use hipHostFree to free up allocated memory on Host",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2022-06-22T19:49:50Z",
+      "updated_at": "2022-06-22T19:49:50Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1262",
+      "labels": []
+    },
+    {
+      "number": 1239,
+      "title": "int8 model compilation run into unexpected failure",
+      "author": "jerryyin",
+      "state": "open",
+      "created_at": "2022-06-10T20:35:08Z",
+      "updated_at": "2022-06-10T20:37:20Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1239",
+      "labels": []
+    },
+    {
+      "number": 1231,
+      "title": "protobuf set to 3.20.0 in requirements.txt causes a failure ",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2022-05-31T23:29:53Z",
+      "updated_at": "2022-06-01T01:40:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1231",
+      "labels": []
+    },
+    {
+      "number": 1171,
+      "title": "incorrect outputs are observed for fp16 for bert-base model with the vectorized implementation of the layernorm",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2022-04-11T14:21:43Z",
+      "updated_at": "2022-05-23T23:29:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1171",
+      "labels": []
+    },
+    {
+      "number": 1175,
+      "title": "handling softmax overflow",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2022-04-12T20:19:01Z",
+      "updated_at": "2022-04-15T14:56:32Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1175",
+      "labels": []
+    },
+    {
+      "number": 1170,
+      "title": "int8 quantization refinement for convolution",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2022-04-09T04:28:10Z",
+      "updated_at": "2022-04-09T04:28:10Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1170",
+      "labels": []
+    },
+    {
+      "number": 1167,
+      "title": "More kernel fusion in transformer-based models...",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2022-04-07T15:02:38Z",
+      "updated_at": "2022-04-07T15:02:38Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1167",
+      "labels": []
+    },
+    {
+      "number": 1158,
+      "title": "fast contiguous for tensor transpose",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2022-04-04T13:46:07Z",
+      "updated_at": "2022-04-04T18:23:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1158",
+      "labels": []
+    },
+    {
+      "number": 1156,
+      "title": "Improve documentation for new migraphx developers",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2022-04-01T16:56:39Z",
+      "updated_at": "2022-04-01T21:29:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1156",
+      "labels": []
+    },
+    {
+      "number": 1154,
+      "title": "Add Document page to enumerate all supported backend targets",
+      "author": "umangyadav",
+      "state": "open",
+      "created_at": "2022-03-31T16:49:25Z",
+      "updated_at": "2022-03-31T16:49:25Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1154",
+      "labels": []
+    },
+    {
+      "number": 1132,
+      "title": "Add overloaded [] operator to tensor_view",
+      "author": "bpickrel",
+      "state": "open",
+      "created_at": "2022-03-14T23:02:11Z",
+      "updated_at": "2022-03-14T23:02:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1132",
+      "labels": []
+    },
+    {
+      "number": 1111,
+      "title": "Investigate unifying Gather/GatherND and Scatter/ScatterND operators",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2022-03-02T15:32:14Z",
+      "updated_at": "2022-03-02T15:32:14Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1111",
+      "labels": []
+    },
+    {
+      "number": 1104,
+      "title": "Broadcast after concat runtime error",
+      "author": "CharlieL7",
+      "state": "open",
+      "created_at": "2022-02-25T01:46:35Z",
+      "updated_at": "2022-02-25T01:46:35Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1104",
+      "labels": []
+    },
+    {
+      "number": 1086,
+      "title": "FakeQuantizeWithMinMaxVars support",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2022-02-11T18:01:50Z",
+      "updated_at": "2022-02-11T18:02:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1086",
+      "labels": [
+        "good first issue"
+      ]
+    },
+    {
+      "number": 1072,
+      "title": "xorshift support",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2022-01-28T18:00:49Z",
+      "updated_at": "2022-01-28T18:00:49Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1072",
+      "labels": []
+    },
+    {
+      "number": 1052,
+      "title": "Inputs of some operators (requiring standard input shape) become non-standard after some optimization.",
+      "author": "scxiao",
+      "state": "open",
+      "created_at": "2022-01-17T15:06:55Z",
+      "updated_at": "2022-01-17T15:08:32Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1052",
+      "labels": []
+    },
+    {
+      "number": 1023,
+      "title": "Dynamic Shape Support in IR to handle shape changes",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2021-12-09T14:04:28Z",
+      "updated_at": "2021-12-09T15:34:12Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1023",
+      "labels": []
+    },
+    {
+      "number": 1003,
+      "title": "Auto-tuner infrastructure: Auto-tiling",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2021-11-10T18:51:23Z",
+      "updated_at": "2021-11-10T18:51:23Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1003",
+      "labels": []
+    },
+    {
+      "number": 1002,
+      "title": "Auto-tuner infrastructure: optimal fusion infrastructure",
+      "author": "hgaspar",
+      "state": "open",
+      "created_at": "2021-11-10T18:28:17Z",
+      "updated_at": "2021-11-10T18:28:17Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/1002",
+      "labels": []
+    },
+    {
+      "number": 926,
+      "title": "Support a NHWC layout for CPU Backend",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2021-08-24T21:52:23Z",
+      "updated_at": "2021-10-18T20:47:00Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/926",
+      "labels": []
+    },
+    {
+      "number": 958,
+      "title": "Missing debug steps in documentation",
+      "author": "kahmed10",
+      "state": "open",
+      "created_at": "2021-09-17T20:45:28Z",
+      "updated_at": "2021-09-17T20:45:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/958",
+      "labels": [
+        "good first issue"
+      ]
+    },
+    {
+      "number": 939,
+      "title": "Create a CI job for example items",
+      "author": "causten",
+      "state": "open",
+      "created_at": "2021-09-01T20:02:13Z",
+      "updated_at": "2021-09-01T20:02:13Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/939",
+      "labels": []
+    },
+    {
+      "number": 886,
+      "title": "Allow paramters to be optional and only required when they are used directly",
+      "author": "pfultz2",
+      "state": "open",
+      "created_at": "2021-07-15T00:36:47Z",
+      "updated_at": "2021-07-15T00:36:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/issues/886",
+      "labels": []
+    }
+  ]
+}

@@ -28,12 +28,17 @@ WORKFLOW_IDS = {
         "rocm": 158870224,  # Nightly Test (AMD)
         "cuda": 115218617,  # PR Test
     },
+    "triton": {
+        "rocm": 158326442,  # Integration Tests AMD
+        "cuda": 158326443,  # Integration Tests CUDA
+    },
 }
 
 # Workflow display names
 WORKFLOW_NAMES = {
     "pytorch": {"rocm": "rocm-mi300", "cuda": "trunk"},
     "sglang": {"rocm": "Nightly Test (AMD)", "cuda": "PR Test"},
+    "triton": {"rocm": "Integration Tests AMD", "cuda": "Integration Tests CUDA"},
 }
 
 
@@ -367,6 +372,62 @@ def collect_sglang(cfg):
 
 
 # ---------------------------------------------------------------------------
+# Triton: Job-level conclusions from GHA API
+# ---------------------------------------------------------------------------
+
+
+def collect_triton(cfg):
+    """Collect Triton test results for both AMD and CUDA."""
+    repo = cfg["repo"]
+    result = {"collected_at": now_iso(), "source": "automated"}
+
+    for platform in ("rocm", "cuda"):
+        wf_id = WORKFLOW_IDS["triton"][platform]
+        wf_name = WORKFLOW_NAMES["triton"][platform]
+        print(f"  Fetching {platform} ({wf_name})...")
+
+        run = get_latest_run(repo, wf_id)
+        if not run:
+            print(f"  No completed run found for {wf_name}")
+            result[platform] = None
+            continue
+
+        run_id = run["id"]
+        run_url = run["html_url"]
+        run_date = run.get("updated_at") or run.get("created_at", "")
+        conclusion = run.get("conclusion", "")
+
+        jobs = get_test_jobs(repo, run_id)
+        summary = summarize_jobs(jobs)
+
+        suites = []
+        for j in jobs:
+            suites.append(
+                {
+                    "name": j.get("name", "unknown"),
+                    "conclusion": j.get("conclusion", ""),
+                    "tests": None,
+                    "passed": None,
+                    "failed": None,
+                    "skipped": None,
+                    "errors": None,
+                }
+            )
+
+        result[platform] = {
+            "workflow_name": wf_name,
+            "run_id": run_id,
+            "run_url": run_url,
+            "run_date": run_date,
+            "conclusion": conclusion,
+            "summary": summary,
+            "suites": suites if suites else None,
+        }
+
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Manual fallback
 # ---------------------------------------------------------------------------
 
@@ -420,6 +481,7 @@ def collect_manual(name):
 AUTOMATED_PROJECTS = {
     "pytorch": collect_pytorch,
     "sglang": collect_sglang,
+    "triton": collect_triton,
 }
 
 # Projects with manual-only test data
