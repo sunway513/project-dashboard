@@ -18,27 +18,62 @@ CONFIG = ROOT / "config" / "projects.yaml"
 MANUAL_CONFIG = ROOT / "config" / "test_results_manual.yaml"
 DATA = ROOT / "data"
 
-# Workflow IDs per project — maps project name to {rocm: id, cuda: id}
-WORKFLOW_IDS = {
+# ---------------------------------------------------------------------------
+# Per-project CI workflow configuration
+# ---------------------------------------------------------------------------
+# Each platform entry can have:
+#   workflow_id  — GHA workflow ID
+#   name         — display name
+#   job_filter   — only count jobs matching this substring (case-insensitive)
+#   prefer_success — prefer successful runs (avoids partial artifacts)
+#   skip_all_skipped — skip runs where every test job was skipped
+
+WORKFLOWS = {
     "pytorch": {
-        "rocm": 139700577,  # rocm-mi300
-        "cuda": 16535519,  # trunk
+        "rocm": {
+            "workflow_id": 139700577,
+            "name": "rocm-mi300",
+        },
+        "cuda": {
+            "workflow_id": 16535519,
+            "name": "trunk",
+            "prefer_success": True,  # trunk failures have partial artifacts
+        },
     },
     "sglang": {
-        "rocm": 158870224,  # Nightly Test (AMD)
-        "cuda": 115218617,  # PR Test
+        "rocm": {
+            "workflow_id": 158870224,
+            "name": "Nightly Test (AMD)",
+        },
+        "cuda": {
+            "workflow_id": 115218617,
+            "name": "PR Test",
+        },
     },
     "triton": {
-        "rocm": 158326442,  # Integration Tests AMD
-        "cuda": 158326443,  # Integration Tests CUDA
+        # Single workflow with both AMD and NVIDIA jobs — split by job name
+        "rocm": {
+            "workflow_id": 157867169,
+            "name": "Integration Tests",
+            "job_filter": "integration-tests-amd",
+        },
+        "cuda": {
+            "workflow_id": 157867169,
+            "name": "Integration Tests",
+            "job_filter": "integration-tests-nvidia",
+        },
     },
-}
-
-# Workflow display names
-WORKFLOW_NAMES = {
-    "pytorch": {"rocm": "rocm-mi300", "cuda": "trunk"},
-    "sglang": {"rocm": "Nightly Test (AMD)", "cuda": "PR Test"},
-    "triton": {"rocm": "Integration Tests AMD", "cuda": "Integration Tests CUDA"},
+    "jax": {
+        "rocm": {
+            "workflow_id": 228445771,
+            "name": "CI - Bazel ROCm tests",
+        },
+        "cuda": {
+            "workflow_id": 166880050,
+            "name": "CI - Bazel H100 and B200 CUDA tests",
+            "skip_all_skipped": True,  # runs often have only changed_files job
+        },
+    },
 }
 
 
@@ -49,7 +84,9 @@ def gh_api(endpoint, method="GET"):
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         return json.loads(result.stdout) if result.stdout.strip() else {}
     except subprocess.CalledProcessError as e:
-        print(f"  WARNING: gh api {endpoint} failed: {e.stderr.strip()}", file=sys.stderr)
+        print(
+            f"  WARNING: gh api {endpoint} failed: {e.stderr.strip()}", file=sys.stderr
+        )
         return {}
     except json.JSONDecodeError:
         print(f"  WARNING: could not parse response for {endpoint}", file=sys.stderr)
@@ -65,24 +102,35 @@ def now_iso():
 # ---------------------------------------------------------------------------
 
 
-def get_latest_run(repo, workflow_id, max_pages=3):
-    """Get the latest completed (success or failure) run, skipping cancelled."""
+def get_latest_run(repo, workflow_id, prefer_success=False, max_pages=3):
+    """Get the latest completed (success or failure) run.
+
+    When prefer_success=True, search for the latest successful run first.
+    Falls back to the latest failure if no success found within max_pages.
+    """
+    fallback = None
     for page in range(1, max_pages + 1):
         data = gh_api(
             f"/repos/{repo}/actions/workflows/{workflow_id}/runs"
             f"?per_page=10&page={page}"
         )
         for run in data.get("workflow_runs", []):
-            if run.get("status") == "completed" and run.get("conclusion") in (
-                "success",
-                "failure",
-            ):
+            if run.get("status") != "completed":
+                continue
+            conclusion = run.get("conclusion")
+            if conclusion not in ("success", "failure"):
+                continue
+            if prefer_success and conclusion == "success":
                 return run
-    return None
+            if not prefer_success:
+                return run  # return first completed run
+            if fallback is None:
+                fallback = run  # remember first failure
+    return fallback
 
 
-def get_test_jobs(repo, run_id):
-    """Get jobs from a workflow run, filtered to test-related jobs."""
+def get_all_jobs(repo, run_id):
+    """Get ALL jobs from a workflow run (paginated)."""
     jobs = []
     page = 1
     while True:
@@ -96,12 +144,38 @@ def get_test_jobs(repo, run_id):
         if len(batch) < 100:
             break
         page += 1
-    # Filter to test jobs (heuristic: name contains "test" case-insensitive)
-    test_jobs = [j for j in jobs if "test" in j.get("name", "").lower()]
-    # If no jobs match "test", return all jobs
-    if not test_jobs:
-        test_jobs = jobs
-    return test_jobs
+    return jobs
+
+
+def filter_test_jobs(jobs, job_filter=None):
+    """Filter jobs to test-relevant ones.
+
+    If job_filter is set, only include jobs whose name contains that string.
+    Otherwise, use heuristic: jobs with "test" in name, falling back to all jobs.
+    Excludes setup/gate/changed_files jobs.
+    """
+    exclude_names = {"changed_files", "check-all-jobs", "check-changes"}
+
+    if job_filter:
+        return [
+            j
+            for j in jobs
+            if job_filter.lower() in j.get("name", "").lower()
+            and j.get("name", "").lower() not in exclude_names
+        ]
+
+    # Heuristic: prefer jobs with "test" in name
+    test_jobs = [
+        j
+        for j in jobs
+        if "test" in j.get("name", "").lower()
+        and j.get("name", "").lower() not in exclude_names
+    ]
+    if test_jobs:
+        return test_jobs
+
+    # Fallback: all jobs except known non-test ones
+    return [j for j in jobs if j.get("name", "").lower() not in exclude_names]
 
 
 def summarize_jobs(jobs):
@@ -112,9 +186,8 @@ def summarize_jobs(jobs):
     skipped = sum(
         1 for j in jobs if j.get("conclusion") in ("skipped", "cancelled", "neutral")
     )
-    # Pass rate excludes skipped jobs (they didn't run)
     ran = passed + failed
-    pass_rate = round(passed / ran * 100, 1) if ran > 0 else 0
+    pass_rate = round(passed / ran * 100, 2) if ran > 0 else None
     return {
         "total_jobs": total,
         "passed": passed,
@@ -122,6 +195,47 @@ def summarize_jobs(jobs):
         "skipped": skipped,
         "pass_rate": pass_rate,
     }
+
+
+def find_run_with_real_tests(repo, workflow_id, job_filter=None, max_runs=15):
+    """Find the latest completed run where at least one test job actually executed.
+
+    Skips runs where all test jobs were skipped/cancelled (e.g. JAX CUDA
+    workflows that gate on changed_files).
+    """
+    page = 1
+    checked = 0
+    while checked < max_runs:
+        data = gh_api(
+            f"/repos/{repo}/actions/workflows/{workflow_id}/runs"
+            f"?per_page=10&page={page}&status=completed"
+        )
+        runs = data.get("workflow_runs", [])
+        if not runs:
+            break
+        for run in runs:
+            if run.get("conclusion") not in ("success", "failure"):
+                continue
+            checked += 1
+            if checked > max_runs:
+                break
+            all_jobs = get_all_jobs(repo, run["id"])
+            test_jobs = filter_test_jobs(all_jobs, job_filter)
+            # Check if any test job actually ran (not just skipped)
+            ran_jobs = [
+                j
+                for j in test_jobs
+                if j.get("conclusion") in ("success", "failure")
+            ]
+            if ran_jobs:
+                return run, test_jobs
+        page += 1
+    return None, []
+
+
+# ---------------------------------------------------------------------------
+# Artifact helpers
+# ---------------------------------------------------------------------------
 
 
 def download_artifact(repo, artifact_id, dest_dir):
@@ -139,12 +253,15 @@ def download_artifact(repo, artifact_id, dest_dir):
     ]
     try:
         with open(zip_path, "wb") as f:
-            result = subprocess.run(cmd, stdout=f, stderr=subprocess.PIPE, check=True)
+            subprocess.run(cmd, stdout=f, stderr=subprocess.PIPE, check=True)
         with zipfile.ZipFile(zip_path, "r") as zf:
             zf.extractall(dest_dir)
         return True
     except (subprocess.CalledProcessError, zipfile.BadZipFile) as e:
-        print(f"  WARNING: Failed to download artifact {artifact_id}: {e}", file=sys.stderr)
+        print(
+            f"  WARNING: Failed to download artifact {artifact_id}: {e}",
+            file=sys.stderr,
+        )
         return False
 
 
@@ -154,7 +271,6 @@ def parse_junit_xml(path):
     try:
         tree = ElementTree.parse(path)
         root = tree.getroot()
-        # Handle both <testsuites> wrapper and direct <testsuite>
         if root.tag == "testsuites":
             elements = root.findall("testsuite")
         elif root.tag == "testsuite":
@@ -191,7 +307,6 @@ def parse_junit_xml(path):
 
 def collect_pytorch_suites(repo, run_id):
     """Download test-reports artifacts and parse JUnit XMLs."""
-    # List artifacts for this run
     artifacts = []
     page = 1
     while True:
@@ -206,7 +321,6 @@ def collect_pytorch_suites(repo, run_id):
             break
         page += 1
 
-    # Filter to test-reports artifacts
     test_artifacts = [a for a in artifacts if "test-reports" in a.get("name", "")]
 
     if not test_artifacts:
@@ -220,17 +334,17 @@ def collect_pytorch_suites(repo, run_id):
             os.makedirs(art_dir, exist_ok=True)
             if not artifact.get("expired", False):
                 if download_artifact(repo, artifact["id"], art_dir):
-                    # Find all XML files
                     for root_dir, _, files in os.walk(art_dir):
                         for fname in files:
                             if fname.endswith(".xml"):
                                 xml_path = os.path.join(root_dir, fname)
                                 suites = parse_junit_xml(xml_path)
-                                # Use parent directory as suite name (contains module name)
-                                # e.g. test-reports/python-pytest/inductor.test_aot_inductor/...xml
                                 parent_name = os.path.basename(root_dir)
                                 for s in suites:
-                                    if s["name"] == "pytest" and parent_name != "test-reports":
+                                    if (
+                                        s["name"] == "pytest"
+                                        and parent_name != "test-reports"
+                                    ):
                                         s["name"] = parent_name
                                 all_suites.extend(suites)
 
@@ -259,11 +373,13 @@ def collect_pytorch(cfg):
     result = {"collected_at": now_iso(), "source": "automated"}
 
     for platform in ("rocm", "cuda"):
-        wf_id = WORKFLOW_IDS["pytorch"][platform]
-        wf_name = WORKFLOW_NAMES["pytorch"][platform]
+        wf_cfg = WORKFLOWS["pytorch"][platform]
+        wf_id = wf_cfg["workflow_id"]
+        wf_name = wf_cfg["name"]
+        prefer_success = wf_cfg.get("prefer_success", False)
         print(f"  Fetching {platform} ({wf_name})...")
 
-        run = get_latest_run(repo, wf_id)
+        run = get_latest_run(repo, wf_id, prefer_success=prefer_success)
         if not run:
             print(f"  No completed run found for {wf_name}")
             result[platform] = None
@@ -274,26 +390,22 @@ def collect_pytorch(cfg):
         run_date = run.get("updated_at") or run.get("created_at", "")
         conclusion = run.get("conclusion", "")
 
-        # Get job-level summary
-        jobs = get_test_jobs(repo, run_id)
-        summary = summarize_jobs(jobs)
+        all_jobs = get_all_jobs(repo, run_id)
+        test_jobs = filter_test_jobs(all_jobs)
+        summary = summarize_jobs(test_jobs)
 
-        # Try to get suite-level detail from JUnit XML artifacts
+        # Try JUnit XML for detailed suite data
         suites = collect_pytorch_suites(repo, run_id)
 
-        # If we got suite data, recompute summary from suites
         if suites:
             total_tests = sum(s["tests"] for s in suites)
             total_passed = sum(s["passed"] for s in suites)
             total_failed = sum(s["failed"] for s in suites)
             total_skipped = sum(s["skipped"] for s in suites)
-            # Pass rate excludes skipped tests
             ran = total_passed + total_failed
-            suite_pass_rate = (
-                round(total_passed / ran * 100, 1) if ran > 0 else 0
-            )
+            suite_pass_rate = round(total_passed / ran * 100, 2) if ran > 0 else None
             summary = {
-                "total_jobs": len(jobs),
+                "total_jobs": len(test_jobs),
                 "total_tests": total_tests,
                 "passed": total_passed,
                 "failed": total_failed,
@@ -315,80 +427,61 @@ def collect_pytorch(cfg):
 
 
 # ---------------------------------------------------------------------------
-# SGLang: Job-level conclusions from GHA API
+# Generic job-level collector (SGLang, Triton, JAX)
 # ---------------------------------------------------------------------------
 
 
-def collect_sglang(cfg):
-    """Collect SGLang test results for both ROCm and CUDA."""
+def collect_job_level(project_name, cfg):
+    """Collect test results using job-level conclusions from GHA API.
+
+    Handles:
+    - Job name filtering (triton: split AMD/NVIDIA from one workflow)
+    - Skipped-job detection (jax CUDA: skip runs where tests didn't fire)
+    - Zero-job runs (sglang ROCm: skip runs with no jobs)
+    """
     repo = cfg["repo"]
     result = {"collected_at": now_iso(), "source": "automated"}
 
     for platform in ("rocm", "cuda"):
-        wf_id = WORKFLOW_IDS["sglang"][platform]
-        wf_name = WORKFLOW_NAMES["sglang"][platform]
+        wf_cfg = WORKFLOWS[project_name][platform]
+        wf_id = wf_cfg["workflow_id"]
+        wf_name = wf_cfg["name"]
+        job_filter = wf_cfg.get("job_filter")
+        prefer_success = wf_cfg.get("prefer_success", False)
+        skip_all_skipped = wf_cfg.get("skip_all_skipped", False)
         print(f"  Fetching {platform} ({wf_name})...")
 
-        run = get_latest_run(repo, wf_id)
-        if not run:
-            print(f"  No completed run found for {wf_name}")
-            result[platform] = None
-            continue
+        run = None
+        test_jobs = []
 
-        run_id = run["id"]
-        run_url = run["html_url"]
-        run_date = run.get("updated_at") or run.get("created_at", "")
-        conclusion = run.get("conclusion", "")
-
-        jobs = get_test_jobs(repo, run_id)
-        summary = summarize_jobs(jobs)
-
-        # Build suite-like entries from jobs (no per-test counts)
-        suites = []
-        for j in jobs:
-            suites.append(
-                {
-                    "name": j.get("name", "unknown"),
-                    "conclusion": j.get("conclusion", ""),
-                    "tests": None,
-                    "passed": None,
-                    "failed": None,
-                    "skipped": None,
-                    "errors": None,
-                }
+        if skip_all_skipped:
+            # Need to find a run where tests actually executed
+            run, test_jobs = find_run_with_real_tests(
+                repo, wf_id, job_filter=job_filter, max_runs=30
             )
+        else:
+            run = get_latest_run(repo, wf_id, prefer_success=prefer_success)
+            if run:
+                all_jobs = get_all_jobs(repo, run["id"])
+                test_jobs = filter_test_jobs(all_jobs, job_filter)
 
-        result[platform] = {
-            "workflow_name": wf_name,
-            "run_id": run_id,
-            "run_url": run_url,
-            "run_date": run_date,
-            "conclusion": conclusion,
-            "summary": summary,
-            "suites": suites if suites else None,
-        }
+                # If no test jobs found, try the next run
+                if not test_jobs:
+                    print(f"    Run {run['id']} has 0 matching jobs, searching older runs...")
+                    run2, test_jobs2 = find_run_with_real_tests(
+                        repo, wf_id, job_filter=job_filter, max_runs=10
+                    )
+                    if run2 and test_jobs2:
+                        run = run2
+                        test_jobs = test_jobs2
 
-    return result
-
-
-# ---------------------------------------------------------------------------
-# Triton: Job-level conclusions from GHA API
-# ---------------------------------------------------------------------------
-
-
-def collect_triton(cfg):
-    """Collect Triton test results for both AMD and CUDA."""
-    repo = cfg["repo"]
-    result = {"collected_at": now_iso(), "source": "automated"}
-
-    for platform in ("rocm", "cuda"):
-        wf_id = WORKFLOW_IDS["triton"][platform]
-        wf_name = WORKFLOW_NAMES["triton"][platform]
-        print(f"  Fetching {platform} ({wf_name})...")
-
-        run = get_latest_run(repo, wf_id)
         if not run:
-            print(f"  No completed run found for {wf_name}")
+            print(f"  No usable run found for {wf_name}")
+            result[platform] = None
+            continue
+
+        if not test_jobs:
+            print(f"  Run {run['id']} has no test jobs")
             result[platform] = None
             continue
 
@@ -397,11 +490,10 @@ def collect_triton(cfg):
         run_date = run.get("updated_at") or run.get("created_at", "")
         conclusion = run.get("conclusion", "")
 
-        jobs = get_test_jobs(repo, run_id)
-        summary = summarize_jobs(jobs)
+        summary = summarize_jobs(test_jobs)
 
         suites = []
-        for j in jobs:
+        for j in test_jobs:
             suites.append(
                 {
                     "name": j.get("name", "unknown"),
@@ -444,7 +536,6 @@ def collect_manual(name):
     if not project_data:
         return None
 
-    # Check if there's any actual data (not just empty/commented entries)
     has_data = False
     for platform in ("rocm", "cuda"):
         if project_data.get(platform) and project_data[platform].get("run_url"):
@@ -477,15 +568,14 @@ def collect_manual(name):
 # Main
 # ---------------------------------------------------------------------------
 
-# Projects with automated test collection
 AUTOMATED_PROJECTS = {
     "pytorch": collect_pytorch,
-    "sglang": collect_sglang,
-    "triton": collect_triton,
+    "sglang": lambda cfg: collect_job_level("sglang", cfg),
+    "triton": lambda cfg: collect_job_level("triton", cfg),
+    "jax": lambda cfg: collect_job_level("jax", cfg),
 }
 
-# Projects with manual-only test data
-MANUAL_PROJECTS = ["vllm", "jax"]
+MANUAL_PROJECTS = ["vllm"]
 
 
 def main():
@@ -506,16 +596,21 @@ def main():
                 out_dir.mkdir(parents=True, exist_ok=True)
                 with open(out_dir / "test_results.json", "w") as f:
                     json.dump(result, f, indent=2)
-                # Print summary
                 for platform in ("rocm", "cuda"):
                     pd = result.get(platform)
                     if pd and pd.get("summary"):
-                        rate = pd["summary"].get("pass_rate", "?")
-                        print(f"  {platform}: {rate}% pass rate")
+                        s = pd["summary"]
+                        rate = s.get("pass_rate")
+                        rate_str = f"{rate}%" if rate is not None else "N/A"
+                        detail = f" ({s.get('passed', '?')}/{s.get('passed', 0) + s.get('failed', 0)} passed)"
+                        print(f"  {platform}: {rate_str}{detail}")
                     else:
                         print(f"  {platform}: no data")
         except Exception as e:
             print(f"  ERROR collecting {name}: {e}", file=sys.stderr)
+            import traceback
+
+            traceback.print_exc()
 
     for name in MANUAL_PROJECTS:
         print(f"Collecting test results for {name} (manual)...")
