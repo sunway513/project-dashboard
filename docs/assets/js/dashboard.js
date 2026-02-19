@@ -16,18 +16,20 @@
   const dataMap = {};
 
   const fetches = names.map(async (name) => {
-    const [prs, issues, releases, testResults, activity] = await Promise.all([
+    const [prs, issues, releases, testResults, activity, parityReport] = await Promise.all([
       fetchJSON("data/" + name + "/prs.json"),
       fetchJSON("data/" + name + "/issues.json"),
       fetchJSON("data/" + name + "/releases.json"),
       fetchJSON("data/" + name + "/test_results.json"),
       fetchJSON("data/" + name + "/activity.json"),
+      fetchJSON("data/" + name + "/parity_report.json"),
     ]);
-    dataMap[name] = { prs, issues, releases, testResults, activity };
+    dataMap[name] = { prs, issues, releases, testResults, activity, parityReport };
   });
 
-  // Also load trend history
+  // Also load trend history + parity history
   const historyIndex = fetchJSON("data/history/index.json");
+  const parityHistPromise = fetchJSON("data/pytorch/parity_history.json");
 
   await Promise.all(fetches);
   const histIdx = await historyIndex;
@@ -58,10 +60,12 @@
     ? "Last updated: " + relativeTime(latestTs) + " (" + formatDate(latestTs) + ")"
     : "Last updated: unknown";
 
+  const parityHistData = await parityHistPromise;
+
   // Render all views
   renderWeeklySummary(dataMap);
   renderCards(projects.projects, dataMap);
-  renderParityView(projects.projects, dataMap);
+  renderParityView(projects.projects, dataMap, parityHistData);
   renderActivityView(projects.projects, dataMap);
   renderTrendsView(projects.projects, dataMap, historyData);
 
@@ -123,12 +127,12 @@ function renderCards(projectsCfg, dataMap) {
   }
 }
 
-function renderParityView(projectsCfg, dataMap) {
+function renderParityView(projectsCfg, dataMap, parityHistData) {
   var el = document.getElementById("parity-view");
   var hasAny = false;
 
   for (var name in dataMap) {
-    if (dataMap[name].testResults) { hasAny = true; break; }
+    if (dataMap[name].testResults || dataMap[name].parityReport) { hasAny = true; break; }
   }
 
   if (!hasAny) {
@@ -143,6 +147,14 @@ function renderParityView(projectsCfg, dataMap) {
     var cfg = projectsCfg[name];
     var d = dataMap[name] || {};
     var tr = d.testResults;
+    if (!tr && !d.parityReport) continue;
+
+    // Enhanced PyTorch card when parityReport is available
+    if (name === "pytorch" && d.parityReport) {
+      html += buildPytorchParityCard(name, cfg, d.parityReport, parityHistData);
+      continue;
+    }
+
     if (!tr) continue;
 
     var rocm = tr.rocm;
@@ -213,6 +225,154 @@ function renderParityView(projectsCfg, dataMap) {
 
   html += '</div>'; // parity-grid
   el.innerHTML = html;
+
+  // Init parity mini chart if history available
+  if (parityHistData && parityHistData.length > 1) {
+    drawParityMiniChart('chart-pytorch-parity', parityHistData);
+  }
+}
+
+function buildPytorchParityCard(name, cfg, report, history) {
+  var repoUrl = "https://github.com/" + cfg.repo;
+  var s = report.summary;
+  var pct = s.parity_pct;
+  var colorClass = pct >= 90 ? "rate-good-text" : pct >= 70 ? "rate-warn-text" : "rate-bad-text";
+  var barColorClass = pct >= 90 ? "rate-good" : pct >= 70 ? "rate-warn" : "rate-bad";
+
+  var html = '<div class="parity-card">';
+
+  // Header
+  html += '<div class="parity-card-header">';
+  html += '<a href="' + repoUrl + '" target="_blank">' + escapeHtml(name) + '</a>';
+  html += '<span class="parity-arch-badge">' + escapeHtml(report.arch.toUpperCase()) + '</span>';
+  html += '</div>';
+
+  // Big parity number
+  html += '<div class="parity-primary">';
+  html += '<div class="parity-big-num ' + colorClass + '">' + pct.toFixed(1) + '%</div>';
+  html += '<div class="parity-big-label">CUDA Parity (1-to-1 test-name matching)</div>';
+  html += '</div>';
+
+  // Parity bar
+  var barWidth = Math.min(pct, 100);
+  html += '<div class="pass-rate-row">';
+  html += '<span class="pass-rate-label">Parity</span>';
+  html += '<div class="pass-rate-bar-bg"><div class="pass-rate-bar-fill ' + barColorClass + '" style="width:' + barWidth + '%"></div></div>';
+  html += '<span class="pass-rate-pct">' + s.total_rocm + ' / ' + s.total_cuda + '</span>';
+  html += '</div>';
+
+  // Gap breakdown
+  html += '<div class="parity-gap-breakdown">';
+  html += '<span class="gap-item">Skipped: <strong>' + s.skipped + '</strong></span>';
+  html += '<span class="gap-item">Missed: <strong>' + s.missed + '</strong></span>';
+  html += '<span class="gap-item">Gap: <strong>' + s.gap + '</strong></span>';
+  html += '<span class="gap-item">ROCm-only: <strong>' + s.rocmonly + '</strong></span>';
+  html += '</div>';
+
+  // Per-workflow table
+  var wfs = report.by_workflow;
+  if (wfs && Object.keys(wfs).length > 0) {
+    html += '<table class="parity-workflow-table">';
+    html += '<tr><th>Workflow</th><th>ROCm</th><th>CUDA</th><th>Skipped</th><th>Missed</th><th>ROCm-only</th><th>Parity</th></tr>';
+    for (var wf in wfs) {
+      var w = wfs[wf];
+      var wGap = w.skipped + w.missed;
+      var wParity = w.cuda > 0 ? ((1 - wGap / w.cuda) * 100).toFixed(1) : "N/A";
+      var wPctClass = w.cuda > 0 ? (parseFloat(wParity) >= 90 ? "rate-good-text" : parseFloat(wParity) >= 70 ? "rate-warn-text" : "rate-bad-text") : "";
+      html += '<tr>';
+      html += '<td class="project-name">' + escapeHtml(wf) + '</td>';
+      html += '<td>' + w.rocm + '</td>';
+      html += '<td>' + w.cuda + '</td>';
+      html += '<td>' + w.skipped + '</td>';
+      html += '<td>' + w.missed + '</td>';
+      html += '<td>' + w.rocmonly + '</td>';
+      html += '<td class="' + wPctClass + '">' + wParity + '%</td>';
+      html += '</tr>';
+    }
+    html += '</table>';
+  }
+
+  // Top skip reasons (collapsible)
+  var reasons = report.top_skip_reasons;
+  if (reasons && reasons.length > 0) {
+    html += '<details>';
+    html += '<summary>Top Skip Reasons (' + reasons.length + ')</summary>';
+    html += '<div class="skip-reasons-list">';
+    for (var i = 0; i < reasons.length; i++) {
+      html += '<div class="skip-reason-item">';
+      html += '<span class="skip-reason-name">' + escapeHtml(reasons[i].reason) + '</span>';
+      html += '<span class="skip-reason-count">' + reasons[i].count + '</span>';
+      html += '</div>';
+    }
+    html += '</div></details>';
+  }
+
+  // Mini trend chart
+  if (history && history.length > 1) {
+    html += '<div class="parity-trend">';
+    html += '<h4>Parity Trend</h4>';
+    html += '<canvas id="chart-pytorch-parity" height="120"></canvas>';
+    html += '</div>';
+  }
+
+  // Metadata line
+  html += '<div class="parity-meta">';
+  var shaShort = report.commit_sha ? report.commit_sha.slice(0, 8) : "?";
+  var shaUrl = "https://github.com/" + cfg.repo + "/commit/" + report.commit_sha;
+  html += 'Commit: <a href="' + shaUrl + '" target="_blank">' + shaShort + '</a>';
+  html += ' &middot; Collected: ' + formatDate(report.collected_at);
+  if (report.running_time) {
+    html += ' &middot; ROCm: ' + formatSeconds(report.running_time.rocm_seconds);
+    html += ' / CUDA: ' + formatSeconds(report.running_time.cuda_seconds);
+  }
+  html += '</div>';
+
+  html += '</div>'; // parity-card
+  return html;
+}
+
+function drawParityMiniChart(canvasId, history) {
+  var canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+
+  var labels = history.map(function (h) { return h.date; });
+  var data = history.map(function (h) { return h.parity_pct; });
+
+  new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Parity %',
+        data: data,
+        borderColor: '#58a6ff',
+        backgroundColor: '#58a6ff33',
+        tension: 0.3,
+        pointRadius: 3,
+        borderWidth: 2,
+        fill: true,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#8b949e', font: { size: 10 } },
+          grid: { color: '#30363d' }
+        },
+        y: {
+          min: 0,
+          max: 100,
+          ticks: { color: '#8b949e', font: { size: 10 }, callback: function (v) { return v + '%'; } },
+          grid: { color: '#30363d' }
+        }
+      }
+    }
+  });
 }
 
 function buildCard(name, cfg, d) {
@@ -240,7 +400,7 @@ function buildCard(name, cfg, d) {
 
   // Test Results section (ROCm vs CUDA)
   if (d.testResults) {
-    html += buildTestSection(d.testResults);
+    html += buildTestSection(d.testResults, d.parityReport);
   }
 
   // This Week section
@@ -394,13 +554,15 @@ function buildReleaseSection(releases) {
   return html;
 }
 
-function buildTestSection(testResults) {
+function buildTestSection(testResults, parityReport) {
   var rocm = testResults.rocm;
   var cuda = testResults.cuda;
 
   // Build summary text for the <summary> line
   var summaryText = "";
-  if (testResults.cuda_parity) {
+  if (parityReport && parityReport.summary) {
+    summaryText = "Parity: " + parityReport.summary.parity_pct.toFixed(1) + "% (matched)";
+  } else if (testResults.cuda_parity) {
     summaryText = "Parity: " + testResults.cuda_parity.ratio.toFixed(1) + "%";
   } else {
     var parts = [];
@@ -734,6 +896,7 @@ function renderTrendsView(projectsCfg, dataMap, historyData) {
   html += '<div class="trend-card"><h4>Time-to-Merge (median, hours)</h4><canvas id="chart-ttm"></canvas></div>';
   html += '<div class="trend-card"><h4>CI Signal Time - ROCm (median, min)</h4><canvas id="chart-ci-signal-rocm"></canvas></div>';
   html += '<div class="trend-card"><h4>Test Pass Rate - ROCm (%)</h4><canvas id="chart-test-rate-rocm"></canvas></div>';
+  html += '<div class="trend-card"><h4>CUDA Parity - PyTorch (%)</h4><canvas id="chart-parity-pct"></canvas></div>';
   html += '</div>';
 
   el.innerHTML = html;
@@ -752,6 +915,7 @@ function renderTrendsView(projectsCfg, dataMap, historyData) {
   buildTrendChart('chart-ttm', weeks, historyData, projectNames, 'median_ttm_hours', colors);
   buildTrendChart('chart-ci-signal-rocm', weeks, historyData, projectNames, 'ci_signal_rocm_median_min', colors);
   buildTrendChart('chart-test-rate-rocm', weeks, historyData, projectNames, 'test_pass_rate_rocm', colors);
+  buildTrendChart('chart-parity-pct', weeks, historyData, ['pytorch'], 'parity_pct', ['#58a6ff']);
 }
 
 function buildTrendChart(canvasId, weeks, historyData, projectNames, metric, colors) {

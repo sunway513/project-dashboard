@@ -809,6 +809,31 @@ footer {
   border-radius: 2px;
 }
 
+/* ---------------------------------------------------------------------------
+   PyTorch Enhanced Parity Card
+   --------------------------------------------------------------------------- */
+.parity-arch-badge { padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #fff; background: #ed1c24; }
+.parity-primary { text-align: center; margin: 12px 0; }
+.parity-big-num { font-size: 48px; font-weight: 700; line-height: 1.1; }
+.parity-big-label { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+.rate-good-text { color: var(--accent-green); }
+.rate-warn-text { color: var(--accent-orange); }
+.rate-bad-text { color: var(--badge-closed); }
+.parity-gap-breakdown { display: flex; gap: 16px; justify-content: center; margin: 12px 0; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; }
+.gap-item strong { color: var(--text); }
+.parity-workflow-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+.parity-workflow-table th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); color: var(--text-muted); font-weight: 500; font-size: 12px; }
+.parity-workflow-table td { padding: 6px 8px; border-bottom: 1px solid var(--border); }
+.parity-workflow-table tr:last-child td { border-bottom: none; }
+.parity-workflow-table tr:hover td { background: var(--hover); }
+.skip-reasons-list { display: flex; flex-direction: column; gap: 4px; padding: 8px 0; }
+.skip-reason-item { display: flex; justify-content: space-between; font-size: 13px; }
+.skip-reason-name { color: var(--text-muted); }
+.skip-reason-count { font-weight: 600; }
+.parity-trend { margin-top: 12px; border-top: 1px solid var(--border); padding-top: 12px; }
+.parity-trend h4 { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
+.parity-meta { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+
 /* Empty state */
 .empty {
   color: var(--text-muted);

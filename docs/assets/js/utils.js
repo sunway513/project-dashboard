@@ -134,6 +134,13 @@ function formatHours(hours) {
   return (hours / 24).toFixed(1) + "d";
 }
 
+function formatSeconds(secs) {
+  if (secs == null) return "N/A";
+  if (secs < 60) return Math.round(secs) + "s";
+  if (secs < 3600) return (secs / 60).toFixed(1) + "m";
+  return (secs / 3600).toFixed(1) + "h";
+}
+
 function ciHealthBadge(rate) {
   if (rate == null) return '<span class="ci-badge ci-badge-unknown">N/A</span>';
   var cls = rate >= 80 ? "ci-badge-good" : rate >= 50 ? "ci-badge-warn" : "ci-badge-bad";

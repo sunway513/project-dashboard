@@ -83,6 +83,13 @@ def snapshot_project(name):
             if pd and pd.get("summary"):
                 snap[f"test_pass_rate_{platform}"] = pd["summary"].get("pass_rate")
 
+    # Parity report (from collect_parity.py)
+    parity_report = load_json(project_dir / "parity_report.json")
+    if parity_report and parity_report.get("summary"):
+        ps = parity_report["summary"]
+        snap["parity_pct"] = ps.get("parity_pct")
+        snap["parity_gap"] = ps.get("gap")
+
     return snap
 
 
