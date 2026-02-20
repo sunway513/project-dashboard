@@ -1,6 +1,215 @@
 {
-  "collected_at": "2026-02-19T08:14:37Z",
+  "collected_at": "2026-02-20T08:14:12Z",
   "issues": [
+    {
+      "number": 32180,
+      "title": "[Bug]: Performance Bottlenecks and V1 Engine Instability on AMD gfx1151 (Strix Halo)",
+      "author": "kgundbrain",
+      "state": "open",
+      "created_at": "2026-01-12T14:03:38Z",
+      "updated_at": "2026-02-20T06:25:28Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/32180",
+      "labels": [
+        "bug",
+        "performance",
+        "feature request",
+        "rocm"
+      ]
+    },
+    {
+      "number": 34943,
+      "title": "[CI Failure]: AMD Samplers Test (mi325_1)",
+      "author": "varun-sundar-rabindranath",
+      "state": "open",
+      "created_at": "2026-02-20T05:48:40Z",
+      "updated_at": "2026-02-20T05:48:50Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34943",
+      "labels": [
+        "rocm",
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 34939,
+      "title": "[CI Failure]: V1 e2e + engine : Cannot re-initialize CUDA in forked subprocess",
+      "author": "varun-sundar-rabindranath",
+      "state": "open",
+      "created_at": "2026-02-20T05:11:36Z",
+      "updated_at": "2026-02-20T05:11:36Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34939",
+      "labels": [
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 33672,
+      "title": "[Bug]: HTTP API multimodal embedding causes image_pad token duplication, producing incorrect results",
+      "author": "ojipadeson",
+      "state": "open",
+      "created_at": "2026-02-03T09:08:23Z",
+      "updated_at": "2026-02-20T03:53:20Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/33672",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 26897,
+      "title": "[Bug]: deepseekv3.2 tool_calls failure",
+      "author": "CallmeZhangChenchen",
+      "state": "open",
+      "created_at": "2025-10-15T08:34:45Z",
+      "updated_at": "2026-02-20T02:22:41Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/26897",
+      "labels": [
+        "bug",
+        "stale"
+      ]
+    },
+    {
+      "number": 27300,
+      "title": "[Bug]: vLLM produces invalid UTF-8 tokens and \u201c\ufffd\u201d replacement characters when returning logprobs",
+      "author": "yinggeh",
+      "state": "open",
+      "created_at": "2025-10-21T22:17:25Z",
+      "updated_at": "2026-02-20T01:05:51Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/27300",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 34752,
+      "title": "[Bug]: Improve `--kv-cache-dtype` behavior when checkpoint specifies `kv_cache_quant_algo`",
+      "author": "pavanimajety",
+      "state": "open",
+      "created_at": "2026-02-17T21:29:55Z",
+      "updated_at": "2026-02-20T00:39:49Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34752",
+      "labels": [
+        "bug",
+        "good first issue"
+      ]
+    },
+    {
+      "number": 34851,
+      "title": "[Feature]: Refactor Quark MoE and mxfp4 MoE to align with MoE oracle/MK",
+      "author": "BowenBao",
+      "state": "open",
+      "created_at": "2026-02-18T23:27:55Z",
+      "updated_at": "2026-02-20T00:37:45Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34851",
+      "labels": [
+        "feature request"
+      ]
+    },
+    {
+      "number": 29541,
+      "title": "[CI Failure]: mi325_1: Entrypoints Integration Test (API Server 1)",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2025-11-26T20:07:54Z",
+      "updated_at": "2026-02-19T22:09:26Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/29541",
+      "labels": [
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 34812,
+      "title": "[Bug]: GraniteMoeHybridModel not applying embedding_multiplier to input embeddings",
+      "author": "gabe-l-hart",
+      "state": "open",
+      "created_at": "2026-02-18T15:09:32Z",
+      "updated_at": "2026-02-19T22:00:03Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34812",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 34859,
+      "title": "[Bug]: missing shards from quantized checkpoint fails silently",
+      "author": "andrea-fasoli",
+      "state": "open",
+      "created_at": "2026-02-19T00:22:43Z",
+      "updated_at": "2026-02-19T21:59:55Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34859",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 33445,
+      "title": "[RFC] Remove mandatory ray installation",
+      "author": "yewentao256",
+      "state": "open",
+      "created_at": "2026-01-30T20:37:53Z",
+      "updated_at": "2026-02-19T21:40:04Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/33445",
+      "labels": []
+    },
+    {
+      "number": 34886,
+      "title": "[Bug]: #32618 performance issue",
+      "author": "gengchaogit",
+      "state": "open",
+      "created_at": "2026-02-19T10:38:26Z",
+      "updated_at": "2026-02-19T19:57:45Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34886",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 26211,
+      "title": "[Bug]: vLLM does not support DeepSeek series on RTX PRO 6000/SM120",
+      "author": "yuanyuan19",
+      "state": "open",
+      "created_at": "2025-10-04T05:52:15Z",
+      "updated_at": "2026-02-19T19:22:15Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/26211",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 34118,
+      "title": "[Feature]: [ROCm]: GPTQ INT4 MoE kernel fails on non-SiLU activations - no Marlin fallback on AMD",
+      "author": "ehartford",
+      "state": "open",
+      "created_at": "2026-02-09T05:28:24Z",
+      "updated_at": "2026-02-19T18:42:48Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34118",
+      "labels": [
+        "feature request",
+        "rocm"
+      ]
+    },
+    {
+      "number": 32455,
+      "title": "[Roadmap] vLLM Roadmap Q1 2026",
+      "author": "simon-mo",
+      "state": "open",
+      "created_at": "2026-01-16T04:23:29Z",
+      "updated_at": "2026-02-19T17:14:39Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/32455",
+      "labels": [
+        "rocm"
+      ]
+    },
+    {
+      "number": 34817,
+      "title": "[Bug]: Trying to run gpt-oss-120b on rtx pro 6000",
+      "author": "chadbek",
+      "state": "open",
+      "created_at": "2026-02-18T15:37:43Z",
+      "updated_at": "2026-02-19T11:34:00Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34817",
+      "labels": [
+        "bug"
+      ]
+    },
     {
       "number": 34759,
       "title": "[Bug]: nvidia/Llama-3.3-70B-Instruct-NVFP4 Degraded / Gibberish Output with TRITON_ATTN",
@@ -26,18 +235,6 @@
       ]
     },
     {
-      "number": 27300,
-      "title": "[Bug]: vLLM produces invalid UTF-8 tokens and \u201c\ufffd\u201d replacement characters when returning logprobs",
-      "author": "yinggeh",
-      "state": "open",
-      "created_at": "2025-10-21T22:17:25Z",
-      "updated_at": "2026-02-19T04:42:21Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/27300",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 34619,
       "title": "[Bug]: Qwen3.5. `illegal memory access`",
       "author": "vadiklyutiy",
@@ -60,18 +257,6 @@
       "labels": [
         "bug",
         "stale"
-      ]
-    },
-    {
-      "number": 33672,
-      "title": "[Bug]: HTTP API multimodal embedding causes image_pad token duplication, producing incorrect results",
-      "author": "ojipadeson",
-      "state": "open",
-      "created_at": "2026-02-03T09:08:23Z",
-      "updated_at": "2026-02-19T02:15:46Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33672",
-      "labels": [
-        "bug"
       ]
     },
     {
@@ -192,30 +377,6 @@
       ]
     },
     {
-      "number": 34817,
-      "title": "[Bug]: Trying to run gpt-oss-120b on rtx pro 6000",
-      "author": "chadbek",
-      "state": "open",
-      "created_at": "2026-02-18T15:37:43Z",
-      "updated_at": "2026-02-19T01:48:55Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34817",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 34859,
-      "title": "[Bug]: missing shards from quantized checkpoint fails silently",
-      "author": "andrea-fasoli",
-      "state": "open",
-      "created_at": "2026-02-19T00:22:43Z",
-      "updated_at": "2026-02-19T00:22:43Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34859",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 26206,
       "title": "[Bug]: Qwen3-Next-80B-A3B-Thinking fails to load with CPU offload",
       "author": "br00t4c",
@@ -253,19 +414,6 @@
       ]
     },
     {
-      "number": 34781,
-      "title": "[Feature]: parity with cuda - ROCm Kimi K2.5 disagg PD +wideEP recipe",
-      "author": "functionstackx",
-      "state": "open",
-      "created_at": "2026-02-18T06:02:12Z",
-      "updated_at": "2026-02-18T19:24:00Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34781",
-      "labels": [
-        "feature request",
-        "rocm"
-      ]
-    },
-    {
       "number": 29534,
       "title": "[CI Failure]: mi325_8: LoRA Test %N",
       "author": "AndreasKaratzas",
@@ -273,18 +421,6 @@
       "created_at": "2025-11-26T19:12:59Z",
       "updated_at": "2026-02-18T19:04:46Z",
       "html_url": "https://github.com/vllm-project/vllm/issues/29534",
-      "labels": [
-        "ci-failure"
-      ]
-    },
-    {
-      "number": 29541,
-      "title": "[CI Failure]: mi325_1: Entrypoints Integration Test (API Server 1)",
-      "author": "AndreasKaratzas",
-      "state": "open",
-      "created_at": "2025-11-26T20:07:54Z",
-      "updated_at": "2026-02-18T18:40:36Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29541",
       "labels": [
         "ci-failure"
       ]
@@ -314,18 +450,6 @@
       ]
     },
     {
-      "number": 33702,
-      "title": "[Roadmap]: PD Disaggregation with `NixlConnector` Roadmap",
-      "author": "NickLucche",
-      "state": "open",
-      "created_at": "2026-02-03T14:55:43Z",
-      "updated_at": "2026-02-18T16:53:07Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33702",
-      "labels": [
-        "feature request"
-      ]
-    },
-    {
       "number": 34583,
       "title": "[Bug] Missing Vocabulary Validation for MTP and Eagle Speculative Methods leads to potential OOB Access",
       "author": "amadhan882",
@@ -348,18 +472,6 @@
       "labels": [
         "bug",
         "unstale"
-      ]
-    },
-    {
-      "number": 34812,
-      "title": "[Bug]: GraniteMoeHybridModel not applying embedding_multiplier to input embeddings",
-      "author": "gabe-l-hart",
-      "state": "open",
-      "created_at": "2026-02-18T15:09:32Z",
-      "updated_at": "2026-02-18T15:13:35Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34812",
-      "labels": [
-        "bug"
       ]
     },
     {
@@ -388,28 +500,6 @@
       ]
     },
     {
-      "number": 34186,
-      "title": "[Bug]: LoRA adapters with mismatched module name prefixes silently produce base-model output",
-      "author": "Butanium",
-      "state": "open",
-      "created_at": "2026-02-09T23:40:03Z",
-      "updated_at": "2026-02-18T13:45:29Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34186",
-      "labels": []
-    },
-    {
-      "number": 34792,
-      "title": "[Bug]: setting VLLM_LOGGING_LEVEL=debug breaks tool calling",
-      "author": "dtrifiro",
-      "state": "open",
-      "created_at": "2026-02-18T10:27:47Z",
-      "updated_at": "2026-02-18T13:07:37Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34792",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 34650,
       "title": "Bug: Speculative Decoding (MTP) Causes </think> Detection Failure in Structured Output + Reasoning Mode",
       "author": "cicirori",
@@ -431,19 +521,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/29516",
       "labels": [
         "ci-failure"
-      ]
-    },
-    {
-      "number": 34752,
-      "title": "[Bug]: Improve `--kv-cache-dtype` behavior when checkpoint specifies `kv_cache_quant_algo`",
-      "author": "pavanimajety",
-      "state": "open",
-      "created_at": "2026-02-17T21:29:55Z",
-      "updated_at": "2026-02-18T02:30:35Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34752",
-      "labels": [
-        "bug",
-        "good first issue"
       ]
     },
     {
@@ -605,80 +682,6 @@
       "labels": [
         "bug",
         "stale"
-      ]
-    },
-    {
-      "number": 28640,
-      "title": "[Bug]: LoRA/Adapter Loading Error with Qwen3-VL-8B-Instruct Multimodal Model in vLLM Deployment (AssertionError in lora_shrink_op)",
-      "author": "pidanshourouzhou",
-      "state": "open",
-      "created_at": "2025-11-13T12:37:36Z",
-      "updated_at": "2026-02-17T02:14:57Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/28640",
-      "labels": [
-        "bug",
-        "unstale"
-      ]
-    },
-    {
-      "number": 29523,
-      "title": "[CI Failure]: mi325_4: Distributed Tests (4 GPUs)",
-      "author": "AndreasKaratzas",
-      "state": "open",
-      "created_at": "2025-11-26T18:33:22Z",
-      "updated_at": "2026-02-16T23:13:43Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29523",
-      "labels": [
-        "ci-failure"
-      ]
-    },
-    {
-      "number": 33809,
-      "title": "[CI Failure]:  Kernels MoE Test %N",
-      "author": "AndreasKaratzas",
-      "state": "open",
-      "created_at": "2026-02-04T17:31:26Z",
-      "updated_at": "2026-02-16T23:11:18Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33809",
-      "labels": [
-        "ci-failure"
-      ]
-    },
-    {
-      "number": 31920,
-      "title": "[Bug]: Prefix cache hit rate remains 0 in multi-round conversation with history of identical prompts.",
-      "author": "fdarbeha-amd-com",
-      "state": "open",
-      "created_at": "2026-01-07T20:53:40Z",
-      "updated_at": "2026-02-16T21:40:35Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/31920",
-      "labels": [
-        "bug",
-        "rocm"
-      ]
-    },
-    {
-      "number": 29511,
-      "title": "[CI Failure]: mi325_1: Multi-Modal Models Test (Extended) 1",
-      "author": "AndreasKaratzas",
-      "state": "open",
-      "created_at": "2025-11-26T17:36:17Z",
-      "updated_at": "2026-02-16T20:11:55Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29511",
-      "labels": [
-        "ci-failure"
-      ]
-    },
-    {
-      "number": 34641,
-      "title": "[ROCm] Default VLLM_ROCM_USE_AITER_FP4BMM=True crashes on MI300X (gfx942)",
-      "author": "khairulkabir1661",
-      "state": "open",
-      "created_at": "2026-02-16T19:02:38Z",
-      "updated_at": "2026-02-16T19:04:53Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34641",
-      "labels": [
-        "rocm"
       ]
     }
   ]

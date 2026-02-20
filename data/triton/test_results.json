@@ -1,32 +1,23 @@
 {
-  "collected_at": "2026-02-19T08:15:46Z",
+  "collected_at": "2026-02-20T08:14:57Z",
   "source": "automated",
   "rocm": {
     "workflow_name": "Integration Tests",
-    "run_id": 22168765641,
-    "run_url": "https://github.com/triton-lang/triton/actions/runs/22168765641",
-    "run_date": "2026-02-19T04:45:27Z",
-    "conclusion": "failure",
+    "run_id": 22210070827,
+    "run_url": "https://github.com/triton-lang/triton/actions/runs/22210070827",
+    "run_date": "2026-02-20T03:56:21Z",
+    "conclusion": "success",
     "summary": {
       "total_jobs": 3,
-      "passed": 0,
-      "failed": 2,
-      "skipped": 1,
-      "pass_rate": 0.0
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "pass_rate": 100.0
     },
     "suites": [
       {
-        "name": "integration-tests-amd / integration-tests-amd (amd-gfx950)",
-        "conclusion": "failure",
-        "tests": null,
-        "passed": null,
-        "failed": null,
-        "skipped": null,
-        "errors": null
-      },
-      {
         "name": "integration-tests-amd / integration-tests-amd (self-hosted, gfx90a)",
-        "conclusion": "cancelled",
+        "conclusion": "success",
         "tests": null,
         "passed": null,
         "failed": null,
@@ -35,7 +26,16 @@
       },
       {
         "name": "integration-tests-amd / integration-tests-amd (amd-gfx942)",
-        "conclusion": "failure",
+        "conclusion": "success",
+        "tests": null,
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "errors": null
+      },
+      {
+        "name": "integration-tests-amd / integration-tests-amd (amd-gfx950)",
+        "conclusion": "success",
         "tests": null,
         "passed": null,
         "failed": null,
@@ -46,30 +46,21 @@
   },
   "cuda": {
     "workflow_name": "Integration Tests",
-    "run_id": 22168765641,
-    "run_url": "https://github.com/triton-lang/triton/actions/runs/22168765641",
-    "run_date": "2026-02-19T04:45:27Z",
-    "conclusion": "failure",
+    "run_id": 22210070827,
+    "run_url": "https://github.com/triton-lang/triton/actions/runs/22210070827",
+    "run_date": "2026-02-20T03:56:21Z",
+    "conclusion": "success",
     "summary": {
       "total_jobs": 3,
-      "passed": 0,
-      "failed": 2,
-      "skipped": 1,
-      "pass_rate": 0.0
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "pass_rate": 100.0
     },
     "suites": [
       {
-        "name": "integration-tests-nvidia / integration-tests-nvidia (nvidia-a100)",
-        "conclusion": "cancelled",
-        "tests": null,
-        "passed": null,
-        "failed": null,
-        "skipped": null,
-        "errors": null
-      },
-      {
         "name": "integration-tests-nvidia / integration-tests-nvidia (nvidia-h100)",
-        "conclusion": "failure",
+        "conclusion": "success",
         "tests": null,
         "passed": null,
         "failed": null,
@@ -78,7 +69,16 @@
       },
       {
         "name": "integration-tests-nvidia / integration-tests-nvidia (nvidia-gb200)",
-        "conclusion": "failure",
+        "conclusion": "success",
+        "tests": null,
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "errors": null
+      },
+      {
+        "name": "integration-tests-nvidia / integration-tests-nvidia (nvidia-a100)",
+        "conclusion": "success",
         "tests": null,
         "passed": null,
         "failed": null,

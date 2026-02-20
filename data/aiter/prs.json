@@ -1,6 +1,114 @@
 {
-  "collected_at": "2026-02-19T08:15:10Z",
+  "collected_at": "2026-02-20T08:14:34Z",
   "prs": [
+    {
+      "number": 1985,
+      "title": "gfx1250 gluon initial gemm for a16w16 kernel, pipelining with 2 buffers",
+      "author": "omuhamma",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-05T19:04:27Z",
+      "updated_at": "2026-02-20T00:32:53Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1985",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 2056,
+      "title": "Enabling FPMX4 GEMM on non-FPMX4 devices (Navi31 in particular)",
+      "author": "ekuznetsov139",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-16T23:21:50Z",
+      "updated_at": "2026-02-19T22:53:50Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2056",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2067,
+      "title": "Amd/satya/gluon/gemm mxfp4",
+      "author": "Boss2002n",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-19T17:51:10Z",
+      "updated_at": "2026-02-19T22:32:17Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2067",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 2066,
+      "title": "[TRITON] Sage attention v2: Q*K in mxfp4",
+      "author": "juuso-oskari",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-19T16:53:02Z",
+      "updated_at": "2026-02-19T21:11:55Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2066",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2038,
+      "title": "gfx1250 gluon initial gemm for a8w8 MoE blockscale kernel",
+      "author": "nsusanto",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-11T21:54:47Z",
+      "updated_at": "2026-02-19T20:16:21Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2038",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2064,
+      "title": "Adding double buffer option to cross_device_reduce_1stage",
+      "author": "RichardChamberlain1",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-19T12:39:19Z",
+      "updated_at": "2026-02-19T17:00:21Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2064",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2047,
+      "title": "GFX1250 Gluon MoE A4W4 Kernel",
+      "author": "farlukas",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-12T23:02:37Z",
+      "updated_at": "2026-02-19T16:36:40Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2047",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 1859,
+      "title": "[TRITON] mHC/mHC-lite: Manifold-constrained Hyper Connection",
+      "author": "anhminhnguyenhoang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-16T15:15:28Z",
+      "updated_at": "2026-02-19T14:56:23Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1859",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 1968,
+      "title": "add igemm tile size 16mx128",
+      "author": "junxiaguo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-04T06:25:24Z",
+      "updated_at": "2026-02-19T12:15:29Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1968",
+      "labels": [],
+      "draft": true
+    },
     {
       "number": 2062,
       "title": "Add ENABLE_CK=0 build option for Triton-only builds",
@@ -64,18 +172,6 @@
       "draft": false
     },
     {
-      "number": 2038,
-      "title": "gfx1250 gluon initial gemm for a8w8 MoE blockscale kernel",
-      "author": "nsusanto",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-11T21:54:47Z",
-      "updated_at": "2026-02-18T19:50:34Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2038",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2060,
       "title": "GFX1250 Kernels - GEMMa8w8 blockscale",
       "author": "amirumoAMD",
@@ -84,54 +180,6 @@
       "created_at": "2026-02-18T16:26:59Z",
       "updated_at": "2026-02-18T16:37:36Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2060",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 1859,
-      "title": "[TRITON] mHC/mHC-lite: Manifold-constrained Hyper Connection",
-      "author": "anhminhnguyenhoang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-16T15:15:28Z",
-      "updated_at": "2026-02-18T14:36:34Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1859",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 2034,
-      "title": "Top-K Top-P Sampling Kernel Optimization",
-      "author": "aryaman-gupta",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-11T17:31:48Z",
-      "updated_at": "2026-02-18T13:58:13Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2034",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2056,
-      "title": "Enabling FPMX4 GEMM on non-FPMX4 devices (Navi31 in particular)",
-      "author": "ekuznetsov139",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-16T23:21:50Z",
-      "updated_at": "2026-02-17T22:13:10Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2056",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 1985,
-      "title": "gfx1250 gluon initial gemm for a16w16 kernel, pipelining with 2 buffers",
-      "author": "omuhamma",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-05T19:04:27Z",
-      "updated_at": "2026-02-17T21:24:25Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1985",
       "labels": [],
       "draft": true
     },
@@ -170,18 +218,6 @@
       "html_url": "https://github.com/ROCm/aiter/pull/2055",
       "labels": [],
       "draft": false
-    },
-    {
-      "number": 1968,
-      "title": "add igemm tile size 16mx128",
-      "author": "junxiaguo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-04T06:25:24Z",
-      "updated_at": "2026-02-16T06:03:28Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1968",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 1840,
@@ -240,18 +276,6 @@
       "created_at": "2026-02-11T21:04:00Z",
       "updated_at": "2026-02-12T23:30:26Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2036",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 2047,
-      "title": "GFX1250 Gluon MoE A4W4 Kernel",
-      "author": "farlukas",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T23:02:37Z",
-      "updated_at": "2026-02-12T23:03:26Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2047",
       "labels": [],
       "draft": true
     },
@@ -2398,6 +2422,30 @@
       "draft": true
     },
     {
+      "number": 2065,
+      "title": "revert triton gemm kernel config due to core dump.",
+      "author": "Duyi-Wang",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-19T12:52:00Z",
+      "updated_at": "2026-02-20T07:42:38Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2065",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2034,
+      "title": "Top-K Top-P Sampling Kernel Optimization",
+      "author": "aryaman-gupta",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-11T17:31:48Z",
+      "updated_at": "2026-02-19T10:01:02Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2034",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 2057,
       "title": "hotfix a8w8 gemm config",
       "author": "valarLip",
@@ -3274,42 +3322,6 @@
       "draft": false
     },
     {
-      "number": 1895,
-      "title": "draft",
-      "author": "zufayu",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-23T08:33:34Z",
-      "updated_at": "2026-01-30T07:12:39Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1895",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 1594,
-      "title": "[Triton] Support GDR prefill and decode",
-      "author": "huizzhan",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-09T09:16:51Z",
-      "updated_at": "2026-01-30T02:28:57Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1594",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 1926,
-      "title": "fix mla f8 v3 data sync issue",
-      "author": "liyjiang",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-29T07:35:34Z",
-      "updated_at": "2026-01-29T12:58:25Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1926",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2004,
       "title": "Add opus C++ template library documentation and unit tests",
       "author": "sunway513",
@@ -3318,18 +3330,6 @@
       "created_at": "2026-02-09T03:39:07Z",
       "updated_at": "2026-02-16T03:36:11Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2004",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2051,
-      "title": "Prepare repository for size optimization",
-      "author": "sunway513",
-      "state": "closed",
-      "merged": false,
-      "created_at": "2026-02-14T02:34:05Z",
-      "updated_at": "2026-02-14T02:38:25Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2051",
       "labels": [],
       "draft": false
     }

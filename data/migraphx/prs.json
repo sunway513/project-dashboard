@@ -1,30 +1,77 @@
 {
-  "collected_at": "2026-02-19T08:15:01Z",
+  "collected_at": "2026-02-20T08:14:27Z",
   "prs": [
     {
-      "number": 4621,
-      "title": "[AIMIGRAPHX-571] Rewrite convolutions to GEMMs for constant broadcasted inputs",
-      "author": "eddieliao",
+      "number": 4619,
+      "title": "AIMIGRAPHX-578 Reintroduce blaze for better ref gemm performance",
+      "author": "kahmed10",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-19T00:04:27Z",
-      "updated_at": "2026-02-19T08:03:39Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4621",
+      "created_at": "2026-02-18T14:37:43Z",
+      "updated_at": "2026-02-20T06:40:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4619",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4320,
+      "title": "Refactor eliminate_concat",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-09-25T17:43:23Z",
+      "updated_at": "2026-02-20T04:17:56Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4320",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4595,
+      "title": "Handle split groups when the reduction is across different dimensions",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-06T02:19:35Z",
+      "updated_at": "2026-02-20T03:24:52Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4595",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4553,
+      "title": "Add resize on the GPU",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-19T17:46:40Z",
+      "updated_at": "2026-02-20T00:08:13Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4553",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4589,
+      "title": "Fix eliminate_contiugous iterator bug",
+      "author": "CharlieL7",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-03T22:33:44Z",
+      "updated_at": "2026-02-19T23:27:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4589",
       "labels": [
-        "Matchers",
-        "Changelog: Optimized"
+        "simple"
       ],
       "draft": false
     },
     {
-      "number": 4611,
-      "title": "Improve the logic for reaches() in find_splits",
-      "author": "aarushjain29",
+      "number": 4580,
+      "title": "Onnxruntime Weekly Sync 2026-01-26",
+      "author": "causten",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-12T19:05:49Z",
-      "updated_at": "2026-02-19T04:10:17Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4611",
+      "created_at": "2026-01-29T17:04:57Z",
+      "updated_at": "2026-02-19T22:48:17Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4580",
       "labels": [],
       "draft": false
     },
@@ -35,32 +82,20 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-18T19:49:02Z",
-      "updated_at": "2026-02-19T03:45:01Z",
+      "updated_at": "2026-02-19T21:29:12Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4620",
       "labels": [],
       "draft": false
     },
     {
-      "number": 4580,
-      "title": "Onnxruntime Weekly Sync 2026-01-26",
-      "author": "causten",
+      "number": 4611,
+      "title": "Improve the logic for reaches() in find_splits",
+      "author": "aarushjain29",
       "state": "open",
       "merged": false,
-      "created_at": "2026-01-29T17:04:57Z",
-      "updated_at": "2026-02-19T01:03:32Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4580",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4320,
-      "title": "Refactor eliminate_concat",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-09-25T17:43:23Z",
-      "updated_at": "2026-02-18T23:27:12Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4320",
+      "created_at": "2026-02-12T19:05:49Z",
+      "updated_at": "2026-02-19T20:01:41Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4611",
       "labels": [],
       "draft": false
     },
@@ -73,32 +108,6 @@
       "created_at": "2026-02-17T16:20:19Z",
       "updated_at": "2026-02-18T22:36:51Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4616",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 4589,
-      "title": "Fix eliminate_contiugous iterator bug",
-      "author": "CharlieL7",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-03T22:33:44Z",
-      "updated_at": "2026-02-18T22:33:34Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4589",
-      "labels": [
-        "simple"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4619,
-      "title": "AIMIGRAPHX-578 Reintroduce blaze for better ref gemm performance",
-      "author": "kahmed10",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-18T14:37:43Z",
-      "updated_at": "2026-02-18T20:35:22Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4619",
       "labels": [],
       "draft": true
     },
@@ -153,18 +162,6 @@
       "draft": false
     },
     {
-      "number": 4609,
-      "title": "Propagate constant optimization",
-      "author": "pnikolic-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T16:36:27Z",
-      "updated_at": "2026-02-19T02:03:25Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4609",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4448,
       "title": "Gpu concat kernel improvements",
       "author": "pfultz2",
@@ -214,18 +211,6 @@
       "created_at": "2026-01-15T23:55:30Z",
       "updated_at": "2026-02-13T03:13:23Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4549",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4553,
-      "title": "Add resize on the GPU",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-19T17:46:40Z",
-      "updated_at": "2026-02-13T02:46:11Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4553",
       "labels": [],
       "draft": false
     },
@@ -314,18 +299,6 @@
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4599",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 4595,
-      "title": "Handle split groups when the reduction is across different dimensions",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-06T02:19:35Z",
-      "updated_at": "2026-02-10T19:07:08Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4595",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 4596,
@@ -1074,6 +1047,33 @@
       "updated_at": "2024-10-21T22:48:16Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/3468",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4609,
+      "title": "Propagate constant optimization",
+      "author": "pnikolic-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-12T16:36:27Z",
+      "updated_at": "2026-02-19T14:29:22Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4609",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4621,
+      "title": "[AIMIGRAPHX-571] Rewrite convolutions to GEMMs for constant broadcasted inputs",
+      "author": "eddieliao",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-19T00:04:27Z",
+      "updated_at": "2026-02-19T14:28:16Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4621",
+      "labels": [
+        "Matchers",
+        "Changelog: Optimized"
+      ],
       "draft": false
     },
     {
@@ -2047,30 +2047,6 @@
       "created_at": "2026-01-08T21:51:13Z",
       "updated_at": "2026-01-11T18:57:17Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4533",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4316,
-      "title": "Streamline find_matches function",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-09-24T16:03:00Z",
-      "updated_at": "2026-01-11T17:30:06Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4316",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4482,
-      "title": "Fix error with rewrite_reshapes",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-05T01:01:43Z",
-      "updated_at": "2026-01-09T18:07:32Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4482",
       "labels": [],
       "draft": false
     }
