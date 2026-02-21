@@ -74,6 +74,17 @@ WORKFLOWS = {
             "skip_all_skipped": True,  # runs often have only changed_files job
         },
     },
+    "xla": {
+        "rocm": {
+            "workflow_id": 203835682,
+            "name": "CI ROCm",
+        },
+        "cuda": {
+            "workflow_id": 140570787,
+            "name": "CI",
+            "job_filter": "GPU L4",
+        },
+    },
 }
 
 
@@ -605,6 +616,7 @@ AUTOMATED_PROJECTS = {
     "sglang": lambda cfg: collect_job_level("sglang", cfg),
     "triton": lambda cfg: collect_job_level("triton", cfg),
     "jax": lambda cfg: collect_job_level("jax", cfg),
+    "xla": lambda cfg: collect_job_level("xla", cfg),
 }
 
 MANUAL_PROJECTS = ["vllm"]
