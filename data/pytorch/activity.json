@@ -1,12 +1,12 @@
 {
-  "collected_at": "2026-02-21T08:07:56Z",
+  "collected_at": "2026-02-22T05:51:22Z",
   "project": "pytorch",
   "repo": "pytorch/pytorch",
   "pr_velocity": {
     "this_week": {
-      "opened": 29,
+      "opened": 28,
       "merged": 5,
-      "closed": 0
+      "closed": 1
     },
     "last_week": {
       "opened": 5,
@@ -18,7 +18,7 @@
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 34,
+    "active_this_week": 35,
     "total_contributors": 45,
     "top_contributors": [
       {
@@ -52,6 +52,12 @@
         "commits": 0
       },
       {
+        "author": "huydhn",
+        "prs_submitted": 2,
+        "prs_merged": 1,
+        "commits": 0
+      },
+      {
         "author": "eellison",
         "prs_submitted": 2,
         "prs_merged": 0,
@@ -74,54 +80,48 @@
         "prs_submitted": 2,
         "prs_merged": 0,
         "commits": 0
-      },
-      {
-        "author": "jataylo",
-        "prs_submitted": 2,
-        "prs_merged": 1,
-        "commits": 0
       }
     ],
     "bus_factor": 3
   },
   "issue_health": {
     "total_open": 49,
-    "opened_this_week": 12,
-    "closed_this_week": 108,
+    "opened_this_week": 13,
+    "closed_this_week": 117,
     "unanswered": 0
   },
   "ci_health": {
     "rocm": {
       "total_runs": 20,
       "succeeded": 10,
-      "failed": 5,
+      "failed": 6,
       "success_rate": 50.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 11,
-      "failed": 2,
-      "success_rate": 55.0
+      "succeeded": 15,
+      "failed": 4,
+      "success_rate": 75.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 123.8,
-      "p90_minutes": 207.1,
+      "median_minutes": 191.8,
+      "p90_minutes": 213.0,
       "min_minutes": 3.1,
-      "max_minutes": 213.0
+      "max_minutes": 223.3
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 144.8,
-      "p90_minutes": 300.6,
-      "min_minutes": 0.5,
-      "max_minutes": 304.9
+      "median_minutes": 252.1,
+      "p90_minutes": 290.2,
+      "min_minutes": 84.2,
+      "max_minutes": 352.4
     }
   },
   "release_cadence": {
-    "days_since_last": 30.6,
+    "days_since_last": 31.5,
     "avg_interval_days": 57.7,
     "total_releases": 5,
     "latest_tag": "v2.10.0"

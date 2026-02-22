@@ -1,6 +1,81 @@
 {
-  "collected_at": "2026-02-21T08:07:18Z",
+  "collected_at": "2026-02-22T05:50:11Z",
   "prs": [
+    {
+      "number": 19134,
+      "title": "Fix spec v2+dp attention in nsa backend",
+      "author": "Qiaolin-Yu",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-22T00:43:46Z",
+      "updated_at": "2026-02-22T05:46:17Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19134",
+      "labels": [
+        "high priority",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19103,
+      "title": "[jit_kernel] Migrate cast (downcast_fp8) from sgl-kernel AOT to JIT",
+      "author": "Johnsonms",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-21T03:34:26Z",
+      "updated_at": "2026-02-22T05:44:08Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19103",
+      "labels": [
+        "sgl-kernel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19140,
+      "title": "[Re-land][jit kernel] Support per_token_group_quant_8bit jit kernel",
+      "author": "yuan-luo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-22T04:32:22Z",
+      "updated_at": "2026-02-22T05:38:17Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19140",
+      "labels": [
+        "quant",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 18805,
+      "title": "[AMD] add testcases for Qwen3 235b Instruct 2507 models",
+      "author": "mqhc2020",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-13T16:49:20Z",
+      "updated_at": "2026-02-22T05:02:07Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/18805",
+      "labels": [
+        "documentation",
+        "amd"
+      ],
+      "draft": true
+    },
+    {
+      "number": 14105,
+      "title": "[LoRA] Add LoRA support for MoE layers",
+      "author": "Jonahcb",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-11-28T15:49:54Z",
+      "updated_at": "2026-02-22T03:12:53Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/14105",
+      "labels": [
+        "lora",
+        "sgl-kernel",
+        "run-ci"
+      ],
+      "draft": false
+    },
     {
       "number": 19113,
       "title": "[AMD] [DO NOT MERGE] Fix 3 pre-existing AMD CI test failures",
@@ -8,9 +83,10 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-21T07:47:32Z",
-      "updated_at": "2026-02-21T07:48:34Z",
+      "updated_at": "2026-02-22T02:48:20Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/19113",
       "labels": [
+        "amd",
         "lora",
         "Multi-modal",
         "run-ci"
@@ -24,8 +100,23 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-21T07:16:04Z",
-      "updated_at": "2026-02-21T07:21:31Z",
+      "updated_at": "2026-02-22T00:29:23Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/19110",
+      "labels": [
+        "amd",
+        "deepseek"
+      ],
+      "draft": true
+    },
+    {
+      "number": 19122,
+      "title": "[3/n] deepseek_v2.py Refactor: Migrate MLA forward method in deepseek_v2.py",
+      "author": "Fridge003",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-21T12:54:58Z",
+      "updated_at": "2026-02-21T13:02:20Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19122",
       "labels": [
         "amd",
         "deepseek"
@@ -60,31 +151,6 @@
         "amd",
         "ready-to-merge",
         "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 17888,
-      "title": "[Docs] Add Falcon H1, Hunyuan-Large, Qwen3-Omni support and update Diffusion usage",
-      "author": "pokymono",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-28T15:09:43Z",
-      "updated_at": "2026-02-21T04:18:39Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/17888",
-      "labels": [
-        "documentation",
-        "quant",
-        "amd",
-        "dependencies",
-        "lora",
-        "Multi-modal",
-        "deepseek",
-        "sgl-kernel",
-        "blackwell",
-        "npu",
-        "diffusion",
-        "mthreads"
       ],
       "draft": false
     },
@@ -147,18 +213,6 @@
       "draft": false
     },
     {
-      "number": 19012,
-      "title": "[AMD] fix: ensure scheme attribute exists before type checking in MoriEPMoE",
-      "author": "Duyi-Wang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-19T12:46:49Z",
-      "updated_at": "2026-02-20T16:48:20Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19012",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 17953,
       "title": "[AMD] support two batch overlapping for mori ep",
       "author": "billishyahao",
@@ -173,20 +227,6 @@
         "run-ci"
       ],
       "draft": false
-    },
-    {
-      "number": 18805,
-      "title": "[AMD] add testcases for Qwen3 235b Instruct 2507 models",
-      "author": "mqhc2020",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-13T16:49:20Z",
-      "updated_at": "2026-02-20T15:21:16Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18805",
-      "labels": [
-        "amd"
-      ],
-      "draft": true
     },
     {
       "number": 19066,
@@ -499,22 +539,6 @@
         "npu",
         "run-ci",
         "model-gateway"
-      ],
-      "draft": false
-    },
-    {
-      "number": 14105,
-      "title": "[LoRA] Add LoRA support for MoE layers",
-      "author": "Jonahcb",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-11-28T15:49:54Z",
-      "updated_at": "2026-02-16T17:40:50Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/14105",
-      "labels": [
-        "lora",
-        "sgl-kernel",
-        "run-ci"
       ],
       "draft": false
     },
@@ -903,18 +927,6 @@
       "draft": false
     },
     {
-      "number": 18684,
-      "title": "[AMD] Pad MoE weights and scales",
-      "author": "mqhc2020",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T03:21:34Z",
-      "updated_at": "2026-02-12T11:19:00Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18684",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 18607,
       "title": "[AMD] Fix accuracy issue when running TP4 dsv3 model with mtp",
       "author": "1am9trash",
@@ -1139,21 +1151,6 @@
       "updated_at": "2026-02-11T07:27:05Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/17756",
       "labels": [
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 18528,
-      "title": "Fp8 prefill attn kernel integration",
-      "author": "1am9trash",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-10T08:39:23Z",
-      "updated_at": "2026-02-11T07:23:48Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18528",
-      "labels": [
-        "amd",
         "run-ci"
       ],
       "draft": false
@@ -1587,22 +1584,6 @@
       "draft": false
     },
     {
-      "number": 18090,
-      "title": "[diffusion] docs: consolidate diffusion documentation into docs/diffu\u2026",
-      "author": "JiaxinD",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-02T03:23:39Z",
-      "updated_at": "2026-02-02T05:11:57Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18090",
-      "labels": [
-        "documentation",
-        "amd",
-        "diffusion"
-      ],
-      "draft": false
-    },
-    {
       "number": 18076,
       "title": "[AMD] Fix aiter version in rocm image",
       "author": "yctseng0211",
@@ -1993,20 +1974,6 @@
       "html_url": "https://github.com/sgl-project/sglang/pull/13842",
       "labels": [
         "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 16897,
-      "title": "fix(deepseek_v2): Add power-of-two check for MLA concat kernel",
-      "author": "ShanningZhuang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-11T10:39:48Z",
-      "updated_at": "2026-01-11T10:41:48Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/16897",
-      "labels": [
-        "deepseek"
       ],
       "draft": false
     },

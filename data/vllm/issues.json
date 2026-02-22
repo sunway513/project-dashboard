@@ -1,6 +1,145 @@
 {
-  "collected_at": "2026-02-21T08:07:11Z",
+  "collected_at": "2026-02-22T05:50:00Z",
   "issues": [
+    {
+      "number": 31631,
+      "title": "[CI Failure]:  mi325_1: V1 Test others",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-01-02T22:59:12Z",
+      "updated_at": "2026-02-22T04:09:58Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/31631",
+      "labels": [
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 13941,
+      "title": "[Bug]: wake up OOM (72B model in 8*A800(40G))",
+      "author": "LugerW-A",
+      "state": "open",
+      "created_at": "2025-02-27T03:37:20Z",
+      "updated_at": "2026-02-22T02:18:02Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/13941",
+      "labels": [
+        "bug",
+        "stale"
+      ]
+    },
+    {
+      "number": 27364,
+      "title": "[Bug]: Qwen3-VL {4B,8B} FP8 on vLLM returns only exclamation marks (\"!!!!!...\") on Jetson Thor",
+      "author": "mantyni",
+      "state": "open",
+      "created_at": "2025-10-22T19:11:19Z",
+      "updated_at": "2026-02-22T02:16:14Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/27364",
+      "labels": [
+        "bug",
+        "stale"
+      ]
+    },
+    {
+      "number": 27602,
+      "title": "[Bug]: quantized medgemma-27b-text-it producing garbage outputs",
+      "author": "kritiyer",
+      "state": "open",
+      "created_at": "2025-10-27T19:29:20Z",
+      "updated_at": "2026-02-22T02:15:46Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/27602",
+      "labels": [
+        "bug",
+        "stale"
+      ]
+    },
+    {
+      "number": 29176,
+      "title": "[CI Failure]: [AMD] Nixl PD tests",
+      "author": "NickLucche",
+      "state": "open",
+      "created_at": "2025-11-21T10:33:58Z",
+      "updated_at": "2026-02-22T02:14:34Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/29176",
+      "labels": [
+        "rocm",
+        "unstale",
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 27157,
+      "title": "[Bug]: Qwen3-VL-30B-A3B-Instruct keeps outputting the same phrases over and over",
+      "author": "kozanryusui",
+      "state": "open",
+      "created_at": "2025-10-18T23:27:10Z",
+      "updated_at": "2026-02-22T02:09:10Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/27157",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35031,
+      "title": "[Bug]: MTP Speculative Decoding with NVFP4: Weight Shape Mismatch",
+      "author": "eleqtrizit",
+      "state": "open",
+      "created_at": "2026-02-21T19:33:33Z",
+      "updated_at": "2026-02-21T19:33:33Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35031",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35028,
+      "title": "[Bug]: RuntimeError: CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx",
+      "author": "shahizat",
+      "state": "open",
+      "created_at": "2026-02-21T17:55:04Z",
+      "updated_at": "2026-02-21T17:55:04Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35028",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 31845,
+      "title": "[Bug]: [H200] DeepSeek V3.2 MTP > 1 run into error (FLASHMLA_SPARSE backend)",
+      "author": "jhaotingc",
+      "state": "open",
+      "created_at": "2026-01-06T23:39:29Z",
+      "updated_at": "2026-02-21T17:04:58Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/31845",
+      "labels": [
+        "bug",
+        "speculative-decoding",
+        "deepseek"
+      ]
+    },
+    {
+      "number": 30493,
+      "title": "[Bug]: 5090 RTX seems to be broken",
+      "author": "mobicham",
+      "state": "open",
+      "created_at": "2025-12-11T15:56:47Z",
+      "updated_at": "2026-02-21T16:16:25Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/30493",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 34812,
+      "title": "[Bug]: GraniteMoeHybridModel not applying embedding_multiplier to input embeddings",
+      "author": "gabe-l-hart",
+      "state": "open",
+      "created_at": "2026-02-18T15:09:32Z",
+      "updated_at": "2026-02-21T15:06:04Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34812",
+      "labels": [
+        "bug"
+      ]
+    },
     {
       "number": 34090,
       "title": "what am I doing wrong ? libmpi_cxx.so.40: cannot open shared object file: No such file or directory",
@@ -11,20 +150,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/34090",
       "labels": [
         "usage"
-      ]
-    },
-    {
-      "number": 29176,
-      "title": "[CI Failure]: [AMD] Nixl PD tests",
-      "author": "NickLucche",
-      "state": "open",
-      "created_at": "2025-11-21T10:33:58Z",
-      "updated_at": "2026-02-21T02:45:24Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29176",
-      "labels": [
-        "rocm",
-        "stale",
-        "ci-failure"
       ]
     },
     {
@@ -304,40 +429,6 @@
       ]
     },
     {
-      "number": 34812,
-      "title": "[Bug]: GraniteMoeHybridModel not applying embedding_multiplier to input embeddings",
-      "author": "gabe-l-hart",
-      "state": "open",
-      "created_at": "2026-02-18T15:09:32Z",
-      "updated_at": "2026-02-19T22:00:03Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34812",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 34859,
-      "title": "[Bug]: missing shards from quantized checkpoint fails silently",
-      "author": "andrea-fasoli",
-      "state": "open",
-      "created_at": "2026-02-19T00:22:43Z",
-      "updated_at": "2026-02-19T21:59:55Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34859",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 33445,
-      "title": "[RFC] Remove mandatory ray installation",
-      "author": "yewentao256",
-      "state": "open",
-      "created_at": "2026-01-30T20:37:53Z",
-      "updated_at": "2026-02-19T21:40:04Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33445",
-      "labels": []
-    },
-    {
       "number": 34118,
       "title": "[Feature]: [ROCm]: GPTQ INT4 MoE kernel fails on non-SiLU activations - no Marlin fallback on AMD",
       "author": "ehartford",
@@ -465,19 +556,6 @@
       ]
     },
     {
-      "number": 28910,
-      "title": "[Bug]:",
-      "author": "SongXiaoMao",
-      "state": "open",
-      "created_at": "2025-11-18T06:22:25Z",
-      "updated_at": "2026-02-19T02:14:38Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/28910",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
       "number": 29014,
       "title": "[Bug]: stride mismatch when using torch compile on graphs with splitting_ops and non-standard tensor dimensions",
       "author": "tomeras91",
@@ -489,31 +567,6 @@
         "bug",
         "torch.compile",
         "stale"
-      ]
-    },
-    {
-      "number": 29098,
-      "title": "[Installation]: Failed building wheel for vllm",
-      "author": "aizyler",
-      "state": "open",
-      "created_at": "2025-11-20T15:16:30Z",
-      "updated_at": "2026-02-19T02:14:18Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29098",
-      "labels": [
-        "installation",
-        "stale"
-      ]
-    },
-    {
-      "number": 33857,
-      "title": "[Bug]: Qwen3-Coder-Next fails with Triton allocator error on DGX Spark cluster (GB10, sm121)",
-      "author": "eugr",
-      "state": "open",
-      "created_at": "2026-02-05T02:15:14Z",
-      "updated_at": "2026-02-19T02:08:04Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33857",
-      "labels": [
-        "bug"
       ]
     },
     {
@@ -539,18 +592,6 @@
       "labels": [
         "bug",
         "rocm"
-      ]
-    },
-    {
-      "number": 34470,
-      "title": "[Bug]: NVIDIA Jetson Thor: Value 'sm_110a' is not defined for option 'gpu-name'",
-      "author": "Kaweees",
-      "state": "open",
-      "created_at": "2026-02-12T22:08:41Z",
-      "updated_at": "2026-02-18T22:11:52Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34470",
-      "labels": [
-        "bug"
       ]
     },
     {
@@ -653,28 +694,6 @@
         "rocm",
         "RFC"
       ]
-    },
-    {
-      "number": 33812,
-      "title": "[CI Failure]:  mi325_4: LM Eval Large Models (H100)",
-      "author": "AndreasKaratzas",
-      "state": "open",
-      "created_at": "2026-02-04T17:50:56Z",
-      "updated_at": "2026-02-17T21:49:16Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33812",
-      "labels": [
-        "ci-failure"
-      ]
-    },
-    {
-      "number": 31856,
-      "title": "[Bug]: Text degeneration / repetition loops with MiniMax-M2.1-NVFP4 on v0.14.0rc1.dev308",
-      "author": "ktsaou",
-      "state": "open",
-      "created_at": "2026-01-07T01:36:58Z",
-      "updated_at": "2026-02-17T17:41:37Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/31856",
-      "labels": []
     }
   ]
 }
