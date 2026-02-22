@@ -32,6 +32,7 @@ WORKFLOW_IDS = {
     "pytorch": {"rocm": 139700577, "cuda": 16535519},
     "sglang": {"rocm": 158870224, "cuda": 115218617},
     "triton": {"rocm": 158326442, "cuda": 158326443},
+    "xla": {"rocm": 203835682, "cuda": 140570787},
 }
 
 # Rate-limit tracking

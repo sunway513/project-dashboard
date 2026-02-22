@@ -43,6 +43,25 @@ def gh_api(endpoint, method="GET", paginate=False):
             return []
 
 
+def discover_email_domain_authors(repo, email_domains, max_pages=3):
+    """Discover GitHub usernames whose commit emails match given domains."""
+    authors = set()
+    for page in range(1, max_pages + 1):
+        commits = gh_api(
+            f"/repos/{repo}/commits?per_page=100&page={page}"
+        )
+        if not isinstance(commits, list):
+            break
+        for commit in commits:
+            email = commit.get("commit", {}).get("author", {}).get("email", "")
+            for domain in email_domains:
+                if email.endswith(f"@{domain}"):
+                    login = commit.get("author")
+                    if login and login.get("login"):
+                        authors.add(login["login"])
+    return list(authors)
+
+
 def fetch_prs(repo, authors, labels, keywords, keyword_scope=""):
     """Fetch open and recently merged PRs matching filters."""
     prs = []
@@ -241,6 +260,13 @@ def collect_project(name, cfg):
     labels = cfg.get("track_labels", [])
     keywords = cfg.get("track_keywords", [])
     keyword_scope = cfg.get("keyword_scope", "")
+
+    email_domains = cfg.get("track_email_domains", [])
+    if email_domains:
+        print(f"  Discovering authors by email domain: {email_domains}")
+        domain_authors = discover_email_domain_authors(repo, email_domains)
+        print(f"  Found {len(domain_authors)} authors: {domain_authors}")
+        authors = list(set(authors + domain_authors))
 
     # Collect PRs
     if role == "active_dev":

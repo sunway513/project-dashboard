@@ -29,6 +29,14 @@ projects:
     track_labels: [rocm, amd]
     track_keywords: [ROCm, AMD, HIP]
 
+  xla:
+    repo: openxla/xla
+    role: upstream_watch
+    track_authors: []
+    track_labels: [AMD-GPU]
+    track_keywords: [ROCm, AMD]
+    track_email_domains: ["amd.com"]
+
   triton:
     repo: triton-lang/triton
     role: upstream_watch
