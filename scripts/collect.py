@@ -95,6 +95,8 @@ def fetch_prs(repo, authors, labels, keywords, keyword_scope=""):
             search_results = gh_api(
                 f"/search/issues?q={kw}{scope}+repo:{repo}+is:pr+{pr_filter}&sort=updated&per_page=30"
             )
+            if isinstance(search_results, list):
+                search_results = {}
             for pr in search_results.get("items", []):
                 if not any(p["number"] == pr["number"] for p in prs):
                     prs.append(pr)
@@ -145,6 +147,8 @@ def fetch_issues(repo, labels, keywords, keyword_scope=""):
         search_results = gh_api(
             f"/search/issues?q={kw}{scope}+repo:{repo}+is:issue+is:open&sort=updated&per_page=30"
         )
+        if isinstance(search_results, list):
+            search_results = {}
         for item in search_results.get("items", []):
             if not any(i["number"] == item["number"] for i in issues):
                 issues.append(item)
