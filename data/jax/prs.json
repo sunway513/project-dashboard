@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-02-23T08:15:04Z",
+  "collected_at": "2026-02-24T08:15:11Z",
   "prs": [
     {
       "number": 35315,
@@ -8,10 +8,102 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-23T07:55:39Z",
-      "updated_at": "2026-02-23T08:10:47Z",
+      "updated_at": "2026-02-24T08:02:25Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35315",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 31768,
+      "title": "[ROCm] Support lowering through PJRT_Triton_Extension",
+      "author": "amd-jianli12",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-09-12T12:27:33Z",
+      "updated_at": "2026-02-24T06:36:06Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/31768",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35283,
+      "title": "[ROCm] Improve ROCm pytest results handling",
+      "author": "psanal35",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T23:18:56Z",
+      "updated_at": "2026-02-23T21:59:44Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35283",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 34722,
+      "title": "[ROCm] ToT ROCm Unit Test Skips",
+      "author": "gulsumgudukbay",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-30T07:48:47Z",
+      "updated_at": "2026-02-23T17:00:36Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34722",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 35288,
+      "title": "[ROCm] Implement Mosaic GPU detection and Auto-Skips",
+      "author": "gulsumgudukbay",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-21T13:03:07Z",
+      "updated_at": "2026-02-23T14:43:21Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35288",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 35330,
+      "title": "[pallas] Default to Triton backend on ROCm when no compiler_params specified.",
+      "author": "copybara-service[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T14:11:20Z",
+      "updated_at": "2026-02-23T14:11:21Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35330",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 34601,
+      "title": "[ROCm] Enable neural network tests on ROCm",
+      "author": "phambinhfin",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-23T15:22:12Z",
+      "updated_at": "2026-02-23T11:00:24Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34601",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34702,
+      "title": "[ROCm] Add script for running bazel tests on ROCm",
+      "author": "charleshofer",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-29T16:46:55Z",
+      "updated_at": "2026-02-23T08:28:47Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34702",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 34602,
@@ -52,30 +144,6 @@
       "draft": false
     },
     {
-      "number": 35288,
-      "title": "[ROCm] Implement Mosaic GPU detection and Auto-Skips",
-      "author": "gulsumgudukbay",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-21T13:03:07Z",
-      "updated_at": "2026-02-21T13:09:41Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35288",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 35283,
-      "title": "[ROCm] Improve ROCm pytest results handling",
-      "author": "psanal35",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T23:18:56Z",
-      "updated_at": "2026-02-20T23:20:22Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35283",
-      "labels": [],
-      "draft": true
-    },
-    {
       "number": 35102,
       "title": "[ROCm] Set release rpaths to rocm so targets",
       "author": "alekstheod",
@@ -84,18 +152,6 @@
       "created_at": "2026-02-16T08:05:22Z",
       "updated_at": "2026-02-19T17:38:46Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35102",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 34702,
-      "title": "[ROCm] Add script for running bazel tests on ROCm",
-      "author": "charleshofer",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-29T16:46:55Z",
-      "updated_at": "2026-02-19T11:37:43Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34702",
       "labels": [],
       "draft": false
     },
@@ -112,34 +168,6 @@
         "kokoro:force-run",
         "pull ready"
       ],
-      "draft": false
-    },
-    {
-      "number": 31768,
-      "title": "[ROCm] Support lowering through PJRT_Triton_Extension",
-      "author": "amd-jianli12",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-09-12T12:27:33Z",
-      "updated_at": "2026-02-16T17:55:57Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/31768",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34722,
-      "title": "[ROCm] ToT ROCm Unit Test Skips",
-      "author": "gulsumgudukbay",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T07:48:47Z",
-      "updated_at": "2026-02-16T17:18:33Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34722",
-      "labels": [],
       "draft": false
     },
     {
@@ -363,22 +391,6 @@
       "labels": [
         "kokoro:force-run",
         "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34601,
-      "title": "[ROCm] Enable neural network tests on ROCm",
-      "author": "phambinhfin",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-23T15:22:12Z",
-      "updated_at": "2026-02-12T18:55:20Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34601",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU"
       ],
       "draft": false
     },

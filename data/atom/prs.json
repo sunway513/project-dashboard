@@ -1,17 +1,65 @@
 {
-  "collected_at": "2026-02-23T08:16:31Z",
+  "collected_at": "2026-02-24T08:16:39Z",
   "prs": [
     {
-      "number": 228,
-      "title": "enable mtp=3",
-      "author": "valarLip",
+      "number": 232,
+      "title": "CI: Add path filters to ATOM test workflow",
+      "author": "gyohuangxin",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-21T13:40:19Z",
-      "updated_at": "2026-02-23T08:11:55Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/228",
+      "created_at": "2026-02-24T07:08:35Z",
+      "updated_at": "2026-02-24T08:07:20Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/232",
       "labels": [],
       "draft": false
+    },
+    {
+      "number": 223,
+      "title": "Add Quark GLM4.7-MXFP4 support",
+      "author": "thpereir",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-18T22:01:13Z",
+      "updated_at": "2026-02-24T08:06:53Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/223",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 231,
+      "title": "[Qwen3-Next](md): add user guide for qwen3-next",
+      "author": "PerryZhang01",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T03:20:22Z",
+      "updated_at": "2026-02-24T03:22:45Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/231",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 208,
+      "title": "Add support for Kimi-K2 and Kimi-K25 models in configuration and mode\u2026",
+      "author": "thpereir",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-12T00:05:43Z",
+      "updated_at": "2026-02-23T22:14:58Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/208",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 227,
+      "title": "Refactor ATOM for top-k top-p sampling support",
+      "author": "aryaman-gupta",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T16:54:40Z",
+      "updated_at": "2026-02-23T14:09:05Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/227",
+      "labels": [],
+      "draft": true
     },
     {
       "number": 220,
@@ -24,18 +72,6 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/220",
       "labels": [],
       "draft": false
-    },
-    {
-      "number": 227,
-      "title": "Refactor ATOM for top-k top-p sampling support",
-      "author": "aryaman-gupta",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T16:54:40Z",
-      "updated_at": "2026-02-20T16:54:40Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/227",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 225,
@@ -70,18 +106,6 @@
       "created_at": "2026-02-20T05:38:31Z",
       "updated_at": "2026-02-20T16:33:20Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/226",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 223,
-      "title": "Add Quark GLM4.7-MXFP4 support",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-18T22:01:13Z",
-      "updated_at": "2026-02-19T22:37:54Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/223",
       "labels": [],
       "draft": true
     },
@@ -154,30 +178,6 @@
       "created_at": "2026-01-28T03:09:49Z",
       "updated_at": "2026-02-14T00:37:21Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/168",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 210,
-      "title": "CI: Add thresholds for models accuracy tests",
-      "author": "gyohuangxin",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T06:57:01Z",
-      "updated_at": "2026-02-13T17:57:01Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/210",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 208,
-      "title": "Not yet ready for review - Add support for Kimi-K2 and Kimi-K25 models in configuration and mode\u2026",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T00:05:43Z",
-      "updated_at": "2026-02-12T00:06:16Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/208",
       "labels": [],
       "draft": true
     },
@@ -358,6 +358,42 @@
       "created_at": "2025-12-09T04:53:20Z",
       "updated_at": "2025-12-09T05:11:55Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/32",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 230,
+      "title": "CI: Optimize the cleanup",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-24T02:34:42Z",
+      "updated_at": "2026-02-24T08:09:04Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/230",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 210,
+      "title": "CI: Add thresholds for models accuracy tests",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-12T06:57:01Z",
+      "updated_at": "2026-02-24T06:02:09Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/210",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 228,
+      "title": "enable mtp=3",
+      "author": "valarLip",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-21T13:40:19Z",
+      "updated_at": "2026-02-24T03:07:49Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/228",
       "labels": [],
       "draft": false
     },
@@ -1426,42 +1462,6 @@
       "created_at": "2026-01-05T05:07:38Z",
       "updated_at": "2026-01-05T09:09:55Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/108",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 65,
-      "title": "[Perf][Qwen3] Enable qknorm_rope_cache_quant fusion",
-      "author": "gbyu-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-17T08:32:29Z",
-      "updated_at": "2026-01-04T09:53:05Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/65",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 107,
-      "title": "Update docker-release.yaml",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-31T06:03:44Z",
-      "updated_at": "2025-12-31T06:05:44Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/107",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 106,
-      "title": "CI: Add MAX_JOBS when building the nightly image",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-31T02:48:35Z",
-      "updated_at": "2025-12-31T03:01:18Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/106",
       "labels": [],
       "draft": false
     },

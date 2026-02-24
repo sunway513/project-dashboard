@@ -1,15 +1,41 @@
 {
-  "collected_at": "2026-02-23T08:16:10Z",
+  "collected_at": "2026-02-24T08:16:15Z",
   "prs": [
     {
-      "number": 38088,
-      "title": "[ROCm] Support hipblaslt group-gemm",
-      "author": "mfrancepillois",
+      "number": 38156,
+      "title": "[ROCm] fix se_gpu_pjrt_client_test target",
+      "author": "Eetusjo",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-20T12:42:35Z",
-      "updated_at": "2026-02-21T13:53:22Z",
-      "html_url": "https://github.com/openxla/xla/pull/38088",
+      "created_at": "2026-02-23T08:16:21Z",
+      "updated_at": "2026-02-24T08:07:36Z",
+      "html_url": "https://github.com/openxla/xla/pull/38156",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38208,
+      "title": "PR #38156: [ROCm] fix se_gpu_pjrt_client_test target",
+      "author": "copybara-service[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T08:06:15Z",
+      "updated_at": "2026-02-24T08:06:15Z",
+      "html_url": "https://github.com/openxla/xla/pull/38208",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 37074,
+      "title": "[ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
+      "author": "draganmladjenovic",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-30T19:08:57Z",
+      "updated_at": "2026-02-23T19:11:12Z",
+      "html_url": "https://github.com/openxla/xla/pull/37074",
       "labels": [
         "AMD-GPU"
       ],
@@ -22,8 +48,63 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-27T18:53:48Z",
-      "updated_at": "2026-02-20T16:47:50Z",
+      "updated_at": "2026-02-23T17:08:32Z",
       "html_url": "https://github.com/openxla/xla/pull/36893",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38169,
+      "title": "[ROCm] Make rocm rbe pool configurable",
+      "author": "alekstheod",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T14:32:17Z",
+      "updated_at": "2026-02-23T16:37:28Z",
+      "html_url": "https://github.com/openxla/xla/pull/38169",
+      "labels": [
+        "AMD-GPU",
+        "ready to pull"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38159,
+      "title": "Remove CUDA/ROCM Platform dependencies in `xla_compile` binary",
+      "author": "copybara-service[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T10:24:06Z",
+      "updated_at": "2026-02-23T14:35:48Z",
+      "html_url": "https://github.com/openxla/xla/pull/38159",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 37992,
+      "title": "[ROCm] Fix invalid split_k/block_k configs in autotune search space",
+      "author": "nurmukhametov",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-18T13:00:00Z",
+      "updated_at": "2026-02-23T12:40:35Z",
+      "html_url": "https://github.com/openxla/xla/pull/37992",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38088,
+      "title": "[ROCm] Support hipblaslt group-gemm",
+      "author": "mfrancepillois",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T12:42:35Z",
+      "updated_at": "2026-02-21T13:53:22Z",
+      "html_url": "https://github.com/openxla/xla/pull/38088",
       "labels": [
         "AMD-GPU"
       ],
@@ -137,20 +218,6 @@
       "draft": false
     },
     {
-      "number": 37992,
-      "title": "[ROCm] Fix invalid split_k/block_k configs in autotune search space",
-      "author": "nurmukhametov",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-18T13:00:00Z",
-      "updated_at": "2026-02-18T13:22:35Z",
-      "html_url": "https://github.com/openxla/xla/pull/37992",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 37981,
       "title": "PR #37629: [ROCm] Propagate register spill info for autotuner filtering",
       "author": "copybara-service[bot]",
@@ -162,20 +229,6 @@
       "labels": [],
       "draft": false,
       "original_author": "nurmukhametov"
-    },
-    {
-      "number": 37074,
-      "title": "[ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
-      "author": "draganmladjenovic",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T19:08:57Z",
-      "updated_at": "2026-02-16T19:00:26Z",
-      "html_url": "https://github.com/openxla/xla/pull/37074",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
     },
     {
       "number": 34572,

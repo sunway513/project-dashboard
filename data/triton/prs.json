@@ -1,6 +1,54 @@
 {
-  "collected_at": "2026-02-23T08:16:14Z",
+  "collected_at": "2026-02-24T08:16:19Z",
   "prs": [
+    {
+      "number": 9418,
+      "title": "[AMD][Membar] Add MemAsyncLocalWriteOpTrait for cleaner async ops filtering.",
+      "author": "jungpark-mlir",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-10T16:07:11Z",
+      "updated_at": "2026-02-23T21:20:10Z",
+      "html_url": "https://github.com/triton-lang/triton/pull/9418",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 9545,
+      "title": "[AMD] Fix scale layouts for batched WMMA scaled ",
+      "author": "borontion",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-23T17:20:42Z",
+      "updated_at": "2026-02-23T19:26:38Z",
+      "html_url": "https://github.com/triton-lang/triton/pull/9545",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 9541,
+      "title": "[AMD] CanonicalizePointers: Handle different base pointers and offsets",
+      "author": "kelesvol",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T12:07:17Z",
+      "updated_at": "2026-02-23T18:09:54Z",
+      "html_url": "https://github.com/triton-lang/triton/pull/9541",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 9544,
+      "title": "[AMD][BACKEND] Extend padded layout selection for AsyncCopy on GFX9",
+      "author": "AlexAUT",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T16:30:04Z",
+      "updated_at": "2026-02-23T16:30:04Z",
+      "html_url": "https://github.com/triton-lang/triton/pull/9544",
+      "labels": [],
+      "draft": true
+    },
     {
       "number": 9506,
       "title": "[AMD] Fix TensorDescType shared memory size for WS captures",
@@ -106,18 +154,6 @@
       "created_at": "2026-02-18T15:35:29Z",
       "updated_at": "2026-02-19T15:47:23Z",
       "html_url": "https://github.com/triton-lang/triton/pull/9502",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 9418,
-      "title": "[AMD][Membar] Add MemAsyncLocalWriteOpTrait for cleaner async ops filtering.",
-      "author": "jungpark-mlir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-10T16:07:11Z",
-      "updated_at": "2026-02-19T09:07:47Z",
-      "html_url": "https://github.com/triton-lang/triton/pull/9418",
       "labels": [],
       "draft": false
     },
@@ -408,18 +444,6 @@
       "html_url": "https://github.com/triton-lang/triton/pull/9388",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 9382,
-      "title": "[AMD][gluon] Add gfx1250 warp\u2011pipeline f16 GEMM example",
-      "author": "jungpark-mlir",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-05T13:55:26Z",
-      "updated_at": "2026-02-05T18:51:40Z",
-      "html_url": "https://github.com/triton-lang/triton/pull/9382",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 9195,

@@ -1,16 +1,16 @@
 {
-  "collected_at": "2026-02-23T08:17:16Z",
+  "collected_at": "2026-02-24T08:17:26Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
-      "opened": 9,
-      "merged": 9,
+      "opened": 12,
+      "merged": 6,
       "closed": 0
     },
     "last_week": {
       "opened": 7,
-      "merged": 3,
+      "merged": 6,
       "closed": 0
     },
     "median_time_to_merge_hours": 3.1,
@@ -23,13 +23,13 @@
     "top_contributors": [
       {
         "author": "Eetusjo",
-        "prs_submitted": 3,
+        "prs_submitted": 4,
         "prs_merged": 0,
         "commits": 0
       },
       {
         "author": "alekstheod",
-        "prs_submitted": 3,
+        "prs_submitted": 4,
         "prs_merged": 0,
         "commits": 0
       },
@@ -52,7 +52,7 @@
         "commits": 0
       },
       {
-        "author": "mfrancepillois",
+        "author": "draganmladjenovic",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -70,7 +70,7 @@
         "commits": 0
       },
       {
-        "author": "draganmladjenovic",
+        "author": "mfrancepillois",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -93,31 +93,31 @@
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 14,
-      "failed": 2,
-      "success_rate": 70.0
+      "succeeded": 11,
+      "failed": 1,
+      "success_rate": 55.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 12,
-      "failed": 5,
-      "success_rate": 60.0
+      "succeeded": 11,
+      "failed": 6,
+      "success_rate": 55.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 19,
-      "median_minutes": 12.3,
-      "p90_minutes": 41.9,
-      "min_minutes": 0.4,
-      "max_minutes": 71.6
+      "median_minutes": 12.6,
+      "p90_minutes": 45.6,
+      "min_minutes": 5.5,
+      "max_minutes": 67.0
     },
     "cuda": {
       "sample_size": 19,
-      "median_minutes": 9.8,
-      "p90_minutes": 37.4,
-      "min_minutes": 8.4,
-      "max_minutes": 60.7
+      "median_minutes": 11.3,
+      "p90_minutes": 24.3,
+      "min_minutes": 5.8,
+      "max_minutes": 61.2
     }
   },
   "release_cadence": {
