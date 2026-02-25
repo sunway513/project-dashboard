@@ -1,11 +1,11 @@
 {
-  "collected_at": "2026-02-24T08:17:09Z",
+  "collected_at": "2026-02-25T08:17:42Z",
   "source": "automated",
   "rocm": {
     "workflow_name": "CI - Bazel ROCm tests",
-    "run_id": 22341901120,
-    "run_url": "https://github.com/jax-ml/jax/actions/runs/22341901120",
-    "run_date": "2026-02-24T08:07:00Z",
+    "run_id": 22386417030,
+    "run_url": "https://github.com/jax-ml/jax/actions/runs/22386417030",
+    "run_date": "2026-02-25T07:19:17Z",
     "conclusion": "failure",
     "summary": {
       "total_jobs": 2,
@@ -16,7 +16,7 @@
     },
     "suites": [
       {
-        "name": "Bazel single accelerator ROCm tests / linux x86, jaxlib=pypi_latest, ROCM=7, Python=3.11, x64=0, build_jax=true, build_jaxlib=false",
+        "name": "Bazel single accelerator ROCm tests / linux x86, jaxlib=head, ROCM=7, Python=3.14, x64=1, build_jax=true, build_jaxlib=wheel",
         "conclusion": "failure",
         "tests": null,
         "passed": null,
@@ -25,7 +25,7 @@
         "errors": null
       },
       {
-        "name": "Bazel single accelerator ROCm tests / linux x86, jaxlib=head, ROCM=7, Python=3.14, x64=1, build_jax=true, build_jaxlib=wheel",
+        "name": "Bazel single accelerator ROCm tests / linux x86, jaxlib=pypi_latest, ROCM=7, Python=3.11, x64=0, build_jax=true, build_jaxlib=false",
         "conclusion": "failure",
         "tests": null,
         "passed": null,
@@ -37,21 +37,21 @@
   },
   "cuda": {
     "workflow_name": "CI - Bazel H100 and B200 CUDA tests",
-    "run_id": 22341792578,
-    "run_url": "https://github.com/jax-ml/jax/actions/runs/22341792578",
-    "run_date": "2026-02-24T08:10:52Z",
-    "conclusion": "success",
+    "run_id": 22385170842,
+    "run_url": "https://github.com/jax-ml/jax/actions/runs/22385170842",
+    "run_date": "2026-02-25T06:42:19Z",
+    "conclusion": "failure",
     "summary": {
       "total_jobs": 2,
       "passed": 1,
-      "failed": 0,
-      "skipped": 1,
-      "pass_rate": 100.0
+      "failed": 1,
+      "skipped": 0,
+      "pass_rate": 50.0
     },
     "suites": [
       {
         "name": "Bazel multiple H100 CUDA tests",
-        "conclusion": "skipped",
+        "conclusion": "failure",
         "tests": null,
         "passed": null,
         "failed": null,

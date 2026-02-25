@@ -1,29 +1,27 @@
 {
-  "collected_at": "2026-02-24T08:16:15Z",
+  "collected_at": "2026-02-25T08:16:48Z",
   "prs": [
     {
-      "number": 38156,
-      "title": "[ROCm] fix se_gpu_pjrt_client_test target",
-      "author": "Eetusjo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T08:16:21Z",
-      "updated_at": "2026-02-24T08:07:36Z",
-      "html_url": "https://github.com/openxla/xla/pull/38156",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 38208,
-      "title": "PR #38156: [ROCm] fix se_gpu_pjrt_client_test target",
+      "number": 38259,
+      "title": "PR #37074: [ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
       "author": "copybara-service[bot]",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-24T08:06:15Z",
-      "updated_at": "2026-02-24T08:06:15Z",
-      "html_url": "https://github.com/openxla/xla/pull/38208",
+      "created_at": "2026-02-25T08:15:43Z",
+      "updated_at": "2026-02-25T08:15:43Z",
+      "html_url": "https://github.com/openxla/xla/pull/38259",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38258,
+      "title": "[ROCm] Add hipBLASLt GEMM TF32 support",
+      "author": "Eetusjo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T08:14:39Z",
+      "updated_at": "2026-02-25T08:14:39Z",
+      "html_url": "https://github.com/openxla/xla/pull/38258",
       "labels": [],
       "draft": false
     },
@@ -34,12 +32,65 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-30T19:08:57Z",
-      "updated_at": "2026-02-23T19:11:12Z",
+      "updated_at": "2026-02-25T08:04:29Z",
       "html_url": "https://github.com/openxla/xla/pull/37074",
       "labels": [
         "AMD-GPU"
       ],
       "draft": false
+    },
+    {
+      "number": 37430,
+      "title": "Treat warnings as errors by default",
+      "author": "mmakevic-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-06T09:18:07Z",
+      "updated_at": "2026-02-24T18:50:16Z",
+      "html_url": "https://github.com/openxla/xla/pull/37430",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38088,
+      "title": "[ROCm] Support hipblaslt group-gemm",
+      "author": "mfrancepillois",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T12:42:35Z",
+      "updated_at": "2026-02-24T17:04:38Z",
+      "html_url": "https://github.com/openxla/xla/pull/38088",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38224,
+      "title": "[ROCm] Use VLOG(1) for tracer teardown logs",
+      "author": "AratiGanesh",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T15:33:48Z",
+      "updated_at": "2026-02-24T16:53:36Z",
+      "html_url": "https://github.com/openxla/xla/pull/38224",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38219,
+      "title": "PR #38169: [ROCm] Make rocm rbe pool configurable",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-24T14:09:12Z",
+      "updated_at": "2026-02-24T15:26:54Z",
+      "html_url": "https://github.com/openxla/xla/pull/38219",
+      "labels": [],
+      "draft": false,
+      "original_author": "alekstheod"
     },
     {
       "number": 36893,
@@ -48,7 +99,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-27T18:53:48Z",
-      "updated_at": "2026-02-23T17:08:32Z",
+      "updated_at": "2026-02-24T15:05:26Z",
       "html_url": "https://github.com/openxla/xla/pull/36893",
       "labels": [
         "AMD-GPU"
@@ -56,19 +107,17 @@
       "draft": false
     },
     {
-      "number": 38169,
-      "title": "[ROCm] Make rocm rbe pool configurable",
-      "author": "alekstheod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T14:32:17Z",
-      "updated_at": "2026-02-23T16:37:28Z",
-      "html_url": "https://github.com/openxla/xla/pull/38169",
-      "labels": [
-        "AMD-GPU",
-        "ready to pull"
-      ],
-      "draft": false
+      "number": 38208,
+      "title": "PR #38156: [ROCm] fix se_gpu_pjrt_client_test target",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-24T08:06:15Z",
+      "updated_at": "2026-02-24T13:34:04Z",
+      "html_url": "https://github.com/openxla/xla/pull/38208",
+      "labels": [],
+      "draft": false,
+      "original_author": "Eetusjo"
     },
     {
       "number": 38159,
@@ -91,20 +140,6 @@
       "created_at": "2026-02-18T13:00:00Z",
       "updated_at": "2026-02-23T12:40:35Z",
       "html_url": "https://github.com/openxla/xla/pull/37992",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 38088,
-      "title": "[ROCm] Support hipblaslt group-gemm",
-      "author": "mfrancepillois",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T12:42:35Z",
-      "updated_at": "2026-02-21T13:53:22Z",
-      "html_url": "https://github.com/openxla/xla/pull/38088",
       "labels": [
         "AMD-GPU"
       ],
@@ -638,32 +673,6 @@
       "html_url": "https://github.com/openxla/xla/pull/30977",
       "labels": [],
       "draft": false
-    },
-    {
-      "number": 36353,
-      "title": "PR #34215: [ROCm] Fix AMD GPU alloca address space errors (#433)",
-      "author": "copybara-service[bot]",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-13T14:17:16Z",
-      "updated_at": "2026-01-14T16:14:34Z",
-      "html_url": "https://github.com/openxla/xla/pull/36353",
-      "labels": [],
-      "draft": false,
-      "original_author": "phambinhfin"
-    },
-    {
-      "number": 36396,
-      "title": "PR #33531: [ROCm] Introduce rocm_ci github action",
-      "author": "copybara-service[bot]",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-14T08:09:47Z",
-      "updated_at": "2026-01-14T15:00:15Z",
-      "html_url": "https://github.com/openxla/xla/pull/36396",
-      "labels": [],
-      "draft": false,
-      "original_author": "alekstheod"
     },
     {
       "number": 14117,

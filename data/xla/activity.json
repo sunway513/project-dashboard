@@ -1,11 +1,11 @@
 {
-  "collected_at": "2026-02-24T08:17:26Z",
+  "collected_at": "2026-02-25T08:17:59Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
-      "opened": 12,
-      "merged": 6,
+      "opened": 13,
+      "merged": 8,
       "closed": 0
     },
     "last_week": {
@@ -13,13 +13,13 @@
       "merged": 6,
       "closed": 0
     },
-    "median_time_to_merge_hours": 3.1,
+    "median_time_to_merge_hours": 2.5,
     "merge_count": 30,
     "stale_prs": 8
   },
   "contributors": {
-    "active_this_week": 6,
-    "total_contributors": 14,
+    "active_this_week": 7,
+    "total_contributors": 16,
     "top_contributors": [
       {
         "author": "Eetusjo",
@@ -29,7 +29,7 @@
       },
       {
         "author": "alekstheod",
-        "prs_submitted": 4,
+        "prs_submitted": 3,
         "prs_merged": 0,
         "commits": 0
       },
@@ -58,13 +58,7 @@
         "commits": 0
       },
       {
-        "author": "leo-amd",
-        "prs_submitted": 1,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "nurmukhametov",
+        "author": "mmakevic-amd",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -76,7 +70,13 @@
         "commits": 0
       },
       {
-        "author": "pemeliya",
+        "author": "AratiGanesh",
+        "prs_submitted": 1,
+        "prs_merged": 0,
+        "commits": 0
+      },
+      {
+        "author": "leo-amd",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -85,7 +85,7 @@
     "bus_factor": null
   },
   "issue_health": {
-    "total_open": 10,
+    "total_open": 9,
     "opened_this_week": 0,
     "closed_this_week": 2,
     "unanswered": 0
@@ -93,31 +93,31 @@
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 11,
-      "failed": 1,
-      "success_rate": 55.0
+      "succeeded": 12,
+      "failed": 0,
+      "success_rate": 60.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 11,
-      "failed": 6,
-      "success_rate": 55.0
+      "succeeded": 17,
+      "failed": 2,
+      "success_rate": 85.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 19,
-      "median_minutes": 12.6,
-      "p90_minutes": 45.6,
-      "min_minutes": 5.5,
-      "max_minutes": 67.0
+      "median_minutes": 48.2,
+      "p90_minutes": 221.5,
+      "min_minutes": 8.8,
+      "max_minutes": 236.9
     },
     "cuda": {
       "sample_size": 19,
-      "median_minutes": 11.3,
-      "p90_minutes": 24.3,
-      "min_minutes": 5.8,
-      "max_minutes": 61.2
+      "median_minutes": 11.2,
+      "p90_minutes": 21.6,
+      "min_minutes": 8.8,
+      "max_minutes": 22.7
     }
   },
   "release_cadence": {
