@@ -1,16 +1,32 @@
 {
-  "collected_at": "2026-02-25T08:16:48Z",
+  "collected_at": "2026-02-26T08:15:49Z",
   "prs": [
     {
-      "number": 38259,
-      "title": "PR #37074: [ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
-      "author": "copybara-service[bot]",
+      "number": 38269,
+      "title": "[ROCm] Add RCCL FP8 support",
+      "author": "mfrancepillois",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-25T08:15:43Z",
-      "updated_at": "2026-02-25T08:15:43Z",
-      "html_url": "https://github.com/openxla/xla/pull/38259",
-      "labels": [],
+      "created_at": "2026-02-25T14:21:52Z",
+      "updated_at": "2026-02-26T07:21:23Z",
+      "html_url": "https://github.com/openxla/xla/pull/38269",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38224,
+      "title": "[ROCm] Use VLOG(1) for tracer teardown logs",
+      "author": "AratiGanesh",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T15:33:48Z",
+      "updated_at": "2026-02-25T19:11:14Z",
+      "html_url": "https://github.com/openxla/xla/pull/38224",
+      "labels": [
+        "AMD-GPU"
+      ],
       "draft": false
     },
     {
@@ -20,8 +36,34 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-25T08:14:39Z",
-      "updated_at": "2026-02-25T08:14:39Z",
+      "updated_at": "2026-02-25T14:36:44Z",
       "html_url": "https://github.com/openxla/xla/pull/38258",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38159,
+      "title": "Remove CUDA/ROCM Platform dependencies in `xla_compile` binary",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-23T10:24:06Z",
+      "updated_at": "2026-02-25T11:35:33Z",
+      "html_url": "https://github.com/openxla/xla/pull/38159",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38259,
+      "title": "PR #37074: [ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
+      "author": "copybara-service[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T08:15:43Z",
+      "updated_at": "2026-02-25T09:30:05Z",
+      "html_url": "https://github.com/openxla/xla/pull/38259",
       "labels": [],
       "draft": false
     },
@@ -66,20 +108,6 @@
       "draft": false
     },
     {
-      "number": 38224,
-      "title": "[ROCm] Use VLOG(1) for tracer teardown logs",
-      "author": "AratiGanesh",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T15:33:48Z",
-      "updated_at": "2026-02-24T16:53:36Z",
-      "html_url": "https://github.com/openxla/xla/pull/38224",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 38219,
       "title": "PR #38169: [ROCm] Make rocm rbe pool configurable",
       "author": "copybara-service[bot]",
@@ -118,18 +146,6 @@
       "labels": [],
       "draft": false,
       "original_author": "Eetusjo"
-    },
-    {
-      "number": 38159,
-      "title": "Remove CUDA/ROCM Platform dependencies in `xla_compile` binary",
-      "author": "copybara-service[bot]",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T10:24:06Z",
-      "updated_at": "2026-02-23T14:35:48Z",
-      "html_url": "https://github.com/openxla/xla/pull/38159",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 37992,
@@ -648,19 +664,6 @@
       "labels": [],
       "draft": false,
       "original_author": "mfrancepillois"
-    },
-    {
-      "number": 36443,
-      "title": "PR #36413: [ROCm][XLA:GPU] Add ROCm-specific tuning for transpose emitter",
-      "author": "copybara-service[bot]",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-15T11:50:30Z",
-      "updated_at": "2026-01-21T10:38:26Z",
-      "html_url": "https://github.com/openxla/xla/pull/36443",
-      "labels": [],
-      "draft": false,
-      "original_author": "nurmukhametov"
     },
     {
       "number": 30977,

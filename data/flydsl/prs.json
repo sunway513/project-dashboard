@@ -1,42 +1,6 @@
 {
-  "collected_at": "2026-02-25T08:17:18Z",
+  "collected_at": "2026-02-26T08:16:20Z",
   "prs": [
-    {
-      "number": 149,
-      "title": "Update README.md MLIR_PATH path",
-      "author": "jundaf2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T07:32:46Z",
-      "updated_at": "2026-02-25T07:42:02Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/149",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 128,
-      "title": "[FLYDSL]: add recast_layout op",
-      "author": "xudoyuan",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T07:09:34Z",
-      "updated_at": "2026-02-25T07:13:19Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/128",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 145,
-      "title": "Pre v0.1 gemm",
-      "author": "coderfeli",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T14:46:02Z",
-      "updated_at": "2026-02-25T07:08:27Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/145",
-      "labels": [],
-      "draft": true
-    },
     {
       "number": 143,
       "title": "W4a16 bf16 fp8 bf16 moe",
@@ -44,7 +8,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-23T06:47:17Z",
-      "updated_at": "2026-02-25T04:22:18Z",
+      "updated_at": "2026-02-26T06:39:26Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
       "labels": [],
       "draft": false
@@ -56,20 +20,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-25T00:07:59Z",
-      "updated_at": "2026-02-25T00:58:27Z",
+      "updated_at": "2026-02-25T14:14:59Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/148",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 147,
-      "title": "[Pytest] Fix assertion in `test_gpu_with_rocir_coords.py` ",
-      "author": "sammysun0711",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T15:00:51Z",
-      "updated_at": "2026-02-24T15:05:11Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/147",
       "labels": [],
       "draft": false
     },
@@ -85,18 +37,6 @@
       "labels": [
         "enhancement"
       ],
-      "draft": false
-    },
-    {
-      "number": 146,
-      "title": "moe gemm stage2 atomics fp32",
-      "author": "yadaish",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T00:48:54Z",
-      "updated_at": "2026-02-24T02:22:43Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/146",
-      "labels": [],
       "draft": false
     },
     {
@@ -136,30 +76,6 @@
       "draft": false
     },
     {
-      "number": 140,
-      "title": "fix(build): dereference MLIR symlinks in build output",
-      "author": "sunway513",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-21T15:59:15Z",
-      "updated_at": "2026-02-21T16:03:42Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/140",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 121,
-      "title": "Dev/hid symbols",
-      "author": "coderfeli",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-10T14:41:04Z",
-      "updated_at": "2026-02-19T01:48:46Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/121",
-      "labels": [],
-      "draft": true
-    },
-    {
       "number": 133,
       "title": "Add Flash Attention forward kernel with MFMA32 register pipeline",
       "author": "yanguahe",
@@ -168,18 +84,6 @@
       "created_at": "2026-02-13T10:56:29Z",
       "updated_at": "2026-02-19T01:16:32Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/133",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 130,
-      "title": "add blockscale gemm",
-      "author": "coderfeli",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T08:41:26Z",
-      "updated_at": "2026-02-19T01:16:05Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/130",
       "labels": [],
       "draft": true
     },
@@ -196,16 +100,76 @@
       "draft": true
     },
     {
-      "number": 94,
-      "title": "Fix/stream ptr",
-      "author": "Zzz9990",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-05T03:57:52Z",
-      "updated_at": "2026-02-11T01:17:02Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/94",
+      "number": 128,
+      "title": "[FLYDSL]: add recast_layout op",
+      "author": "xudoyuan",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-12T07:09:34Z",
+      "updated_at": "2026-02-26T05:45:22Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/128",
       "labels": [],
-      "draft": true
+      "draft": false
+    },
+    {
+      "number": 149,
+      "title": "Update README.md MLIR_PATH path",
+      "author": "jundaf2",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-25T07:32:46Z",
+      "updated_at": "2026-02-25T11:43:46Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/149",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 146,
+      "title": "moe gemm stage2 atomics fp32",
+      "author": "yadaish",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-24T00:48:54Z",
+      "updated_at": "2026-02-25T11:23:34Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/146",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 147,
+      "title": "[Pytest] Fix assertion in `test_gpu_with_rocir_coords.py` ",
+      "author": "sammysun0711",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-24T15:00:51Z",
+      "updated_at": "2026-02-25T11:21:17Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/147",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 145,
+      "title": "Pre v0.1 gemm",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-23T14:46:02Z",
+      "updated_at": "2026-02-25T11:18:08Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/145",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 140,
+      "title": "fix(build): dereference MLIR symlinks in build output",
+      "author": "sunway513",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-21T15:59:15Z",
+      "updated_at": "2026-02-25T08:21:41Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/140",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 129,
@@ -872,102 +836,6 @@
       "created_at": "2026-01-07T04:03:16Z",
       "updated_at": "2026-01-09T05:10:37Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/37",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 36,
-      "title": "fix unittest on MI355",
-      "author": "zhiding512",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-07T03:37:46Z",
-      "updated_at": "2026-01-07T03:54:14Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/36",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 33,
-      "title": "modify cpu golden data to pytorch golden data, fix v_cvt_pk_bf16_f32 issue and test more case compare to aiter ops",
-      "author": "XingerZhu",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-05T09:35:55Z",
-      "updated_at": "2026-01-06T14:16:59Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/33",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 32,
-      "title": "Dev/gemm refactor",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-04T03:45:48Z",
-      "updated_at": "2026-01-05T01:49:32Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/32",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 31,
-      "title": "Python wrapper refine",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-31T03:33:36Z",
-      "updated_at": "2025-12-31T03:35:47Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/31",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 30,
-      "title": "Python wrapper refine",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-31T03:15:49Z",
-      "updated_at": "2025-12-31T03:17:13Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/30",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 28,
-      "title": "Dev/gemm flir",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-30T05:55:00Z",
-      "updated_at": "2025-12-30T13:46:28Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/28",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 27,
-      "title": "Dev/gemm flir",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-29T01:10:42Z",
-      "updated_at": "2025-12-29T08:23:31Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/27",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 26,
-      "title": "change gemm code style",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-26T09:57:17Z",
-      "updated_at": "2025-12-26T10:05:11Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/26",
       "labels": [],
       "draft": false
     }

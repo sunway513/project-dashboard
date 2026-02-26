@@ -1,15 +1,75 @@
 {
-  "collected_at": "2026-02-25T08:16:56Z",
+  "collected_at": "2026-02-26T08:15:57Z",
   "prs": [
     {
-      "number": 4631,
-      "title": "Use Eigen 3rd party library for ref GEMMs",
-      "author": "kahmed10",
+      "number": 4591,
+      "title": "Support dynamic input values for range op",
+      "author": "klin2024",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-24T23:38:34Z",
-      "updated_at": "2026-02-25T05:34:42Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4631",
+      "created_at": "2026-02-04T06:02:46Z",
+      "updated_at": "2026-02-26T05:58:25Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4591",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4553,
+      "title": "Add resize on the GPU",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-19T17:46:40Z",
+      "updated_at": "2026-02-26T03:07:20Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4553",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4616,
+      "title": "[AIMIGRAPHX-544] Parallel compilation for dynamic graphs",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-17T16:20:19Z",
+      "updated_at": "2026-02-26T02:16:59Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4616",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4635,
+      "title": "Dont fuse concat when its used more than once",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T23:31:10Z",
+      "updated_at": "2026-02-26T02:03:31Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4635",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4634,
+      "title": "Move rotary embedding to op builder",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T14:43:58Z",
+      "updated_at": "2026-02-25T23:07:14Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4634",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4633,
+      "title": "Dont fuse op on attention that are not contained",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T14:09:40Z",
+      "updated_at": "2026-02-25T17:55:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4633",
       "labels": [],
       "draft": false
     },
@@ -20,7 +80,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-24T22:20:19Z",
-      "updated_at": "2026-02-25T03:37:52Z",
+      "updated_at": "2026-02-25T15:52:38Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4630",
       "labels": [],
       "draft": false
@@ -32,11 +92,23 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-20T21:54:12Z",
-      "updated_at": "2026-02-25T02:32:43Z",
+      "updated_at": "2026-02-25T15:51:48Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4626",
       "labels": [
         "enhancement"
       ],
+      "draft": false
+    },
+    {
+      "number": 4631,
+      "title": "Use Eigen 3rd party library for ref GEMMs",
+      "author": "kahmed10",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T23:38:34Z",
+      "updated_at": "2026-02-25T05:34:42Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4631",
+      "labels": [],
       "draft": false
     },
     {
@@ -64,18 +136,6 @@
       "draft": false
     },
     {
-      "number": 4553,
-      "title": "Add resize on the GPU",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-19T17:46:40Z",
-      "updated_at": "2026-02-24T19:34:33Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4553",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4628,
       "title": "Add option to skip benchmarking in compile_ops",
       "author": "kahmed10",
@@ -86,18 +146,6 @@
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4628",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 4591,
-      "title": "Support dynamic input values for range op",
-      "author": "klin2024",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-04T06:02:46Z",
-      "updated_at": "2026-02-24T10:29:02Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4591",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 4470,
@@ -112,18 +160,6 @@
         "Operator Builders"
       ],
       "draft": false
-    },
-    {
-      "number": 4616,
-      "title": "[AIMIGRAPHX-544] Parallel compilation for dynamic graphs",
-      "author": "shivadbhavsar",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-17T16:20:19Z",
-      "updated_at": "2026-02-20T22:29:36Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4616",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 4320,
@@ -2037,18 +2073,6 @@
       "created_at": "2025-10-14T23:59:41Z",
       "updated_at": "2026-01-14T17:00:50Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4383",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4545,
-      "title": "hotfix: missing export specifier messed up build on Windows",
-      "author": "gchinora",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-14T14:44:06Z",
-      "updated_at": "2026-01-14T15:59:06Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4545",
       "labels": [],
       "draft": false
     }

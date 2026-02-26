@@ -1,30 +1,6 @@
 {
-  "collected_at": "2026-02-25T08:15:41Z",
+  "collected_at": "2026-02-26T08:14:42Z",
   "prs": [
-    {
-      "number": 35315,
-      "title": "[ROCm] Fix jax utests with rocm",
-      "author": "alekstheod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T07:55:39Z",
-      "updated_at": "2026-02-25T07:17:11Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35315",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 34722,
-      "title": "[ROCm] ToT ROCm Unit Test Skips",
-      "author": "gulsumgudukbay",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T07:48:47Z",
-      "updated_at": "2026-02-25T02:51:01Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34722",
-      "labels": [],
-      "draft": false
-    },
     {
       "number": 34702,
       "title": "[ROCm] Add script for running bazel tests on ROCm",
@@ -32,8 +8,51 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-29T16:46:55Z",
-      "updated_at": "2026-02-24T22:36:34Z",
+      "updated_at": "2026-02-26T08:00:23Z",
       "html_url": "https://github.com/jax-ml/jax/pull/34702",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35283,
+      "title": "[ROCm] Improve ROCm pytest results handling",
+      "author": "psanal35",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T23:18:56Z",
+      "updated_at": "2026-02-25T23:37:09Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35283",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 34601,
+      "title": "[ROCm] Enable neural network tests on ROCm",
+      "author": "phambinhfin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-23T15:22:12Z",
+      "updated_at": "2026-02-25T20:23:04Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34601",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35111,
+      "title": "[ROCm] Add ROCm support for eigh export backwards compatibility tests",
+      "author": "AratiGanesh",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-16T16:03:02Z",
+      "updated_at": "2026-02-25T19:26:55Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35111",
       "labels": [],
       "draft": false
     },
@@ -44,8 +63,62 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-21T13:03:07Z",
-      "updated_at": "2026-02-24T20:05:29Z",
+      "updated_at": "2026-02-25T18:23:45Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35288",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 35315,
+      "title": "[ROCm] Fix jax utests with rocm",
+      "author": "alekstheod",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T07:55:39Z",
+      "updated_at": "2026-02-25T17:01:53Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35315",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 26604,
+      "title": "[ROCm][pallas:triton] Fix atomic min/max lowering for uint and float types",
+      "author": "draganmladjenovic",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-02-19T12:55:04Z",
+      "updated_at": "2026-02-25T16:59:57Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/26604",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35102,
+      "title": "[ROCm] Set release rpaths to rocm so targets",
+      "author": "alekstheod",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-16T08:05:22Z",
+      "updated_at": "2026-02-25T09:54:14Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35102",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34722,
+      "title": "[ROCm] ToT ROCm Unit Test Skips",
+      "author": "gulsumgudukbay",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-30T07:48:47Z",
+      "updated_at": "2026-02-25T02:51:01Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34722",
       "labels": [],
       "draft": false
     },
@@ -78,34 +151,6 @@
       "draft": false
     },
     {
-      "number": 35283,
-      "title": "[ROCm] Improve ROCm pytest results handling",
-      "author": "psanal35",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T23:18:56Z",
-      "updated_at": "2026-02-23T21:59:44Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35283",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 34601,
-      "title": "[ROCm] Enable neural network tests on ROCm",
-      "author": "phambinhfin",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-23T15:22:12Z",
-      "updated_at": "2026-02-23T11:00:24Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34601",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 34602,
       "title": "[ROCm] Fix and enable Pallas ops tests on ROCm",
       "author": "phambinhfin",
@@ -117,30 +162,6 @@
       "labels": [
         "AMD GPU"
       ],
-      "draft": false
-    },
-    {
-      "number": 35111,
-      "title": "[ROCm] Add ROCm support for eigh export backwards compatibility tests",
-      "author": "AratiGanesh",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-16T16:03:02Z",
-      "updated_at": "2026-02-23T04:46:13Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35111",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 35102,
-      "title": "[ROCm] Set release rpaths to rocm so targets",
-      "author": "alekstheod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-16T08:05:22Z",
-      "updated_at": "2026-02-19T17:38:46Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35102",
-      "labels": [],
       "draft": false
     },
     {
@@ -398,18 +419,6 @@
       "draft": false
     },
     {
-      "number": 25043,
-      "title": "[ROCM] Jax/Pallas unit test, limiting tile to 64 in for pallas kernel in multihead attention test.",
-      "author": "zahiqbal",
-      "state": "open",
-      "merged": false,
-      "created_at": "2024-11-21T20:33:02Z",
-      "updated_at": "2026-02-12T17:56:25Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/25043",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 34474,
       "title": "[ROCm] Added support for GESVDJ on ROCm devices",
       "author": "tsrw2048",
@@ -652,21 +661,6 @@
       "draft": false
     },
     {
-      "number": 34571,
-      "title": "[ROCm] Enable reduce_window tests on ROCm",
-      "author": "magaonka-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-22T21:15:34Z",
-      "updated_at": "2026-02-11T09:16:43Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34571",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
       "number": 34598,
       "title": "[ROCm] Implement approx_tanh for ROCm using OCML tanh function",
       "author": "phambinhfin",
@@ -676,21 +670,6 @@
       "updated_at": "2026-02-05T16:23:01Z",
       "html_url": "https://github.com/jax-ml/jax/pull/34598",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 26604,
-      "title": "[ROCm][pallas:triton] Fix atomic min/max lowering for uint and float types",
-      "author": "draganmladjenovic",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-02-19T12:55:04Z",
-      "updated_at": "2026-01-30T10:07:27Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/26604",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
       "draft": false
     }
   ]
