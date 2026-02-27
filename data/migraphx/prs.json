@@ -1,6 +1,106 @@
 {
-  "collected_at": "2026-02-26T08:15:57Z",
+  "collected_at": "2026-02-27T08:13:40Z",
   "prs": [
+    {
+      "number": 4553,
+      "title": "Add resize on the GPU",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-19T17:46:40Z",
+      "updated_at": "2026-02-27T02:27:37Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4553",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 3972,
+      "title": "Allow ONNX and TF modules optional",
+      "author": "apwojcik",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-04-25T11:32:20Z",
+      "updated_at": "2026-02-27T00:00:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/3972",
+      "labels": [
+        "WCR"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4616,
+      "title": "[AIMIGRAPHX-544] Parallel compilation for dynamic graphs",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-17T16:20:19Z",
+      "updated_at": "2026-02-26T21:26:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4616",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4637,
+      "title": "Adding parse for MatMulBnb4 operator and updating MultiHeadAttention operator",
+      "author": "urpetkov-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T12:20:21Z",
+      "updated_at": "2026-02-26T20:35:46Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4637",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4639,
+      "title": "yolo26 example",
+      "author": "alexsu52",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T15:23:34Z",
+      "updated_at": "2026-02-26T19:03:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4639",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4634,
+      "title": "Move rotary embedding to op builder",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T14:43:58Z",
+      "updated_at": "2026-02-26T18:00:35Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4634",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4470,
+      "title": "Create op. builders (5.) ",
+      "author": "gchinora",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-11-26T13:05:16Z",
+      "updated_at": "2026-02-26T17:54:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4470",
+      "labels": [
+        "Operator Builders"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4638,
+      "title": "Auto padding convTrans",
+      "author": "ivarusic-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T12:40:13Z",
+      "updated_at": "2026-02-26T15:49:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4638",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 4591,
       "title": "Support dynamic input values for range op",
@@ -14,30 +114,6 @@
       "draft": false
     },
     {
-      "number": 4553,
-      "title": "Add resize on the GPU",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-19T17:46:40Z",
-      "updated_at": "2026-02-26T03:07:20Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4553",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4616,
-      "title": "[AIMIGRAPHX-544] Parallel compilation for dynamic graphs",
-      "author": "shivadbhavsar",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-17T16:20:19Z",
-      "updated_at": "2026-02-26T02:16:59Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4616",
-      "labels": [],
-      "draft": true
-    },
-    {
       "number": 4635,
       "title": "Dont fuse concat when its used more than once",
       "author": "pfultz2",
@@ -46,18 +122,6 @@
       "created_at": "2026-02-25T23:31:10Z",
       "updated_at": "2026-02-26T02:03:31Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4635",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4634,
-      "title": "Move rotary embedding to op builder",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T14:43:58Z",
-      "updated_at": "2026-02-25T23:07:14Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4634",
       "labels": [],
       "draft": false
     },
@@ -146,20 +210,6 @@
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4628",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 4470,
-      "title": "Create op. builders (5.) ",
-      "author": "gchinora",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-11-26T13:05:16Z",
-      "updated_at": "2026-02-23T10:22:49Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4470",
-      "labels": [
-        "Operator Builders"
-      ],
-      "draft": false
     },
     {
       "number": 4320,
@@ -427,20 +477,6 @@
         "dependencies",
         "skip bot checks",
         "automated"
-      ],
-      "draft": false
-    },
-    {
-      "number": 3972,
-      "title": "Allow ONNX and TF modules optional",
-      "author": "apwojcik",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-04-25T11:32:20Z",
-      "updated_at": "2026-01-30T17:12:22Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/3972",
-      "labels": [
-        "WCR"
       ],
       "draft": false
     },
@@ -2062,18 +2098,6 @@
         "high priority",
         "Windows"
       ],
-      "draft": false
-    },
-    {
-      "number": 4383,
-      "title": "Create directory before dumping",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-10-14T23:59:41Z",
-      "updated_at": "2026-01-14T17:00:50Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4383",
-      "labels": [],
       "draft": false
     }
   ]

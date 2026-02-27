@@ -1,23 +1,23 @@
 {
-  "collected_at": "2026-02-26T08:16:21Z",
+  "collected_at": "2026-02-27T08:13:57Z",
   "source": "automated",
   "rocm": {
     "workflow_name": "rocm-mi300",
-    "run_id": 22427044276,
-    "run_url": "https://github.com/pytorch/pytorch/actions/runs/22427044276",
-    "run_date": "2026-02-26T07:28:50Z",
+    "run_id": 22471960834,
+    "run_url": "https://github.com/pytorch/pytorch/actions/runs/22471960834",
+    "run_date": "2026-02-27T07:44:50Z",
     "conclusion": "failure",
     "summary": {
       "total_jobs": 8,
-      "total_tests": 276264,
-      "passed": 214881,
-      "failed": 15,
-      "skipped": 61368,
+      "total_tests": 276301,
+      "passed": 214898,
+      "failed": 13,
+      "skipped": 61390,
       "pass_rate": 99.99
     },
     "suites": [
       {
-        "name": "TestDeviceBackendAutoload-20260226070218",
+        "name": "TestDeviceBackendAutoload-20260227070845",
         "tests": 1,
         "passed": 1,
         "failed": 0,
@@ -25,7 +25,7 @@
         "errors": 0
       },
       {
-        "name": "TestDeviceBackendAutoload-20260226071317",
+        "name": "TestDeviceBackendAutoload-20260227073618",
         "tests": 1,
         "passed": 1,
         "failed": 0,
@@ -323,9 +323,9 @@
       {
         "name": "dynamo.test_dynamic_shapes",
         "tests": 2011,
-        "passed": 1957,
+        "passed": 1959,
         "failed": 0,
-        "skipped": 54,
+        "skipped": 52,
         "errors": 0
       },
       {
@@ -418,8 +418,8 @@
       },
       {
         "name": "dynamo.test_fake_distributed",
-        "tests": 3,
-        "passed": 3,
+        "tests": 4,
+        "passed": 4,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -850,8 +850,8 @@
       },
       {
         "name": "dynamo.test_subclasses",
-        "tests": 130,
-        "passed": 125,
+        "tests": 131,
+        "passed": 126,
         "failed": 0,
         "skipped": 5,
         "errors": 0
@@ -1226,8 +1226,8 @@
       },
       {
         "name": "functorch.test_aotdispatch",
-        "tests": 538,
-        "passed": 515,
+        "tests": 541,
+        "passed": 518,
         "failed": 0,
         "skipped": 23,
         "errors": 0
@@ -1562,10 +1562,10 @@
       },
       {
         "name": "inductor.test_compile_worker",
-        "tests": 16,
+        "tests": 19,
         "passed": 16,
         "failed": 0,
-        "skipped": 0,
+        "skipped": 3,
         "errors": 0
       },
       {
@@ -1650,8 +1650,8 @@
       },
       {
         "name": "inductor.test_cuda_repro",
-        "tests": 99,
-        "passed": 92,
+        "tests": 100,
+        "passed": 93,
         "failed": 0,
         "skipped": 7,
         "errors": 0
@@ -2034,10 +2034,10 @@
       },
       {
         "name": "inductor.test_max_autotune",
-        "tests": 471,
-        "passed": 294,
-        "failed": 4,
-        "skipped": 173,
+        "tests": 490,
+        "passed": 296,
+        "failed": 5,
+        "skipped": 189,
         "errors": 0
       },
       {
@@ -2219,9 +2219,9 @@
       {
         "name": "inductor.test_pattern_matcher",
         "tests": 61,
-        "passed": 61,
+        "passed": 58,
         "failed": 0,
-        "skipped": 0,
+        "skipped": 3,
         "errors": 0
       },
       {
@@ -2387,9 +2387,9 @@
       {
         "name": "inductor.test_torchinductor_opinfo",
         "tests": 3674,
-        "passed": 3000,
+        "passed": 2999,
         "failed": 0,
-        "skipped": 674,
+        "skipped": 675,
         "errors": 0
       },
       {
@@ -2410,8 +2410,8 @@
       },
       {
         "name": "inductor.test_triton_helpers",
-        "tests": 2,
-        "passed": 2,
+        "tests": 6,
+        "passed": 6,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -2786,9 +2786,9 @@
       },
       {
         "name": "test_binary_ufuncs",
-        "tests": 13362,
-        "passed": 13012,
-        "failed": 3,
+        "tests": 13360,
+        "passed": 13013,
+        "failed": 0,
         "skipped": 347,
         "errors": 0
       },
@@ -3010,8 +3010,8 @@
       },
       {
         "name": "test_fake_tensor",
-        "tests": 298,
-        "passed": 287,
+        "tests": 300,
+        "passed": 289,
         "failed": 0,
         "skipped": 11,
         "errors": 0
@@ -3090,8 +3090,8 @@
       },
       {
         "name": "test_fx",
-        "tests": 1284,
-        "passed": 482,
+        "tests": 1286,
+        "passed": 484,
         "failed": 0,
         "skipped": 802,
         "errors": 0
@@ -3770,8 +3770,8 @@
       },
       {
         "name": "test_testing",
-        "tests": 2077,
-        "passed": 2052,
+        "tests": 2079,
+        "passed": 2054,
         "failed": 0,
         "skipped": 25,
         "errors": 0
@@ -3802,10 +3802,10 @@
       },
       {
         "name": "test_transformers",
-        "tests": 12414,
+        "tests": 12415,
         "passed": 8819,
         "failed": 0,
-        "skipped": 3595,
+        "skipped": 3596,
         "errors": 0
       },
       {

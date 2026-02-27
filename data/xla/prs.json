@@ -1,6 +1,44 @@
 {
-  "collected_at": "2026-02-26T08:15:49Z",
+  "collected_at": "2026-02-27T08:13:36Z",
   "prs": [
+    {
+      "number": 38364,
+      "title": "PR #38360: [ROCm] Fix triton integration failures",
+      "author": "copybara-service[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T05:39:55Z",
+      "updated_at": "2026-02-27T05:39:55Z",
+      "html_url": "https://github.com/openxla/xla/pull/38364",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38360,
+      "title": "[ROCm] Fix triton integration failures",
+      "author": "amd-jianli12",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T03:56:11Z",
+      "updated_at": "2026-02-27T05:30:37Z",
+      "html_url": "https://github.com/openxla/xla/pull/38360",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 36893,
+      "title": "[ROCm] CI: Add ROCm CI support to GitHub Actions workflow",
+      "author": "leo-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-27T18:53:48Z",
+      "updated_at": "2026-02-26T18:18:17Z",
+      "html_url": "https://github.com/openxla/xla/pull/36893",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
     {
       "number": 38269,
       "title": "[ROCm] Add RCCL FP8 support",
@@ -8,8 +46,74 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-25T14:21:52Z",
-      "updated_at": "2026-02-26T07:21:23Z",
+      "updated_at": "2026-02-26T17:40:10Z",
       "html_url": "https://github.com/openxla/xla/pull/38269",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38259,
+      "title": "PR #37074: [ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
+      "author": "copybara-service[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T08:15:43Z",
+      "updated_at": "2026-02-26T16:00:12Z",
+      "html_url": "https://github.com/openxla/xla/pull/38259",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38333,
+      "title": "dev scaled dot for rocm",
+      "author": "ScXfjiang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T15:17:45Z",
+      "updated_at": "2026-02-26T15:17:45Z",
+      "html_url": "https://github.com/openxla/xla/pull/38333",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 37074,
+      "title": "[ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
+      "author": "draganmladjenovic",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-30T19:08:57Z",
+      "updated_at": "2026-02-26T14:50:01Z",
+      "html_url": "https://github.com/openxla/xla/pull/37074",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38258,
+      "title": "[ROCm] Add hipBLASLt GEMM TF32 support",
+      "author": "Eetusjo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T08:14:39Z",
+      "updated_at": "2026-02-26T11:40:18Z",
+      "html_url": "https://github.com/openxla/xla/pull/38258",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38088,
+      "title": "[ROCm] Support hipblaslt group-gemm",
+      "author": "mfrancepillois",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T12:42:35Z",
+      "updated_at": "2026-02-26T10:35:17Z",
+      "html_url": "https://github.com/openxla/xla/pull/38088",
       "labels": [
         "AMD-GPU"
       ],
@@ -30,20 +134,6 @@
       "draft": false
     },
     {
-      "number": 38258,
-      "title": "[ROCm] Add hipBLASLt GEMM TF32 support",
-      "author": "Eetusjo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T08:14:39Z",
-      "updated_at": "2026-02-25T14:36:44Z",
-      "html_url": "https://github.com/openxla/xla/pull/38258",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 38159,
       "title": "Remove CUDA/ROCM Platform dependencies in `xla_compile` binary",
       "author": "copybara-service[bot]",
@@ -53,32 +143,6 @@
       "updated_at": "2026-02-25T11:35:33Z",
       "html_url": "https://github.com/openxla/xla/pull/38159",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 38259,
-      "title": "PR #37074: [ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
-      "author": "copybara-service[bot]",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T08:15:43Z",
-      "updated_at": "2026-02-25T09:30:05Z",
-      "html_url": "https://github.com/openxla/xla/pull/38259",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 37074,
-      "title": "[ROCm] Reenable miopen autotune when xla_gpu_autotune_level == 0",
-      "author": "draganmladjenovic",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T19:08:57Z",
-      "updated_at": "2026-02-25T08:04:29Z",
-      "html_url": "https://github.com/openxla/xla/pull/37074",
-      "labels": [
-        "AMD-GPU"
-      ],
       "draft": false
     },
     {
@@ -94,20 +158,6 @@
       "draft": false
     },
     {
-      "number": 38088,
-      "title": "[ROCm] Support hipblaslt group-gemm",
-      "author": "mfrancepillois",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T12:42:35Z",
-      "updated_at": "2026-02-24T17:04:38Z",
-      "html_url": "https://github.com/openxla/xla/pull/38088",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 38219,
       "title": "PR #38169: [ROCm] Make rocm rbe pool configurable",
       "author": "copybara-service[bot]",
@@ -119,20 +169,6 @@
       "labels": [],
       "draft": false,
       "original_author": "alekstheod"
-    },
-    {
-      "number": 36893,
-      "title": "[ROCm] CI: Add ROCm CI support to GitHub Actions workflow",
-      "author": "leo-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-27T18:53:48Z",
-      "updated_at": "2026-02-24T15:05:26Z",
-      "html_url": "https://github.com/openxla/xla/pull/36893",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
     },
     {
       "number": 38208,
