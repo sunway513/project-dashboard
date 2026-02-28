@@ -1,23 +1,32 @@
 {
-  "collected_at": "2026-02-27T08:14:07Z",
+  "collected_at": "2026-02-28T08:07:34Z",
   "source": "automated",
   "rocm": {
     "workflow_name": "CI - Bazel ROCm tests",
-    "run_id": 22469012597,
-    "run_url": "https://github.com/jax-ml/jax/actions/runs/22469012597",
-    "run_date": "2026-02-27T01:40:11Z",
-    "conclusion": "success",
+    "run_id": 22513856058,
+    "run_url": "https://github.com/jax-ml/jax/actions/runs/22513856058",
+    "run_date": "2026-02-28T05:05:25Z",
+    "conclusion": "failure",
     "summary": {
-      "total_jobs": 1,
-      "passed": 1,
-      "failed": 0,
+      "total_jobs": 2,
+      "passed": 0,
+      "failed": 2,
       "skipped": 0,
-      "pass_rate": 100.0
+      "pass_rate": 0.0
     },
     "suites": [
       {
         "name": "Bazel single accelerator ROCm tests / linux x86, jaxlib=head, ROCM=7, Python=3.14, x64=1, build_jax=true, build_jaxlib=wheel",
-        "conclusion": "success",
+        "conclusion": "failure",
+        "tests": null,
+        "passed": null,
+        "failed": null,
+        "skipped": null,
+        "errors": null
+      },
+      {
+        "name": "Bazel single accelerator ROCm tests / linux x86, jaxlib=pypi_latest, ROCM=7, Python=3.11, x64=0, build_jax=true, build_jaxlib=false",
+        "conclusion": "failure",
         "tests": null,
         "passed": null,
         "failed": null,
@@ -28,21 +37,21 @@
   },
   "cuda": {
     "workflow_name": "CI - Bazel H100 and B200 CUDA tests",
-    "run_id": 22475409612,
-    "run_url": "https://github.com/jax-ml/jax/actions/runs/22475409612",
-    "run_date": "2026-02-27T06:35:14Z",
+    "run_id": 22515010096,
+    "run_url": "https://github.com/jax-ml/jax/actions/runs/22515010096",
+    "run_date": "2026-02-28T06:25:46Z",
     "conclusion": "failure",
     "summary": {
       "total_jobs": 2,
-      "passed": 1,
-      "failed": 1,
+      "passed": 0,
+      "failed": 2,
       "skipped": 0,
-      "pass_rate": 50.0
+      "pass_rate": 0.0
     },
     "suites": [
       {
         "name": "Bazel single B200 CUDA tests",
-        "conclusion": "success",
+        "conclusion": "failure",
         "tests": null,
         "passed": null,
         "failed": null,

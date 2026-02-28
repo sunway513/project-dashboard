@@ -1,6 +1,110 @@
 {
-  "collected_at": "2026-02-27T08:13:37Z",
+  "collected_at": "2026-02-28T08:06:54Z",
   "issues": [
+    {
+      "number": 32497,
+      "title": "failed: undeclared inclusion(s) in rule '//tensorflow/core/grappler:devices': this rule is missing dependency declarations for the following files included by 'tensorflow/core/grappler/devices.cc'",
+      "author": "0xra0",
+      "state": "open",
+      "created_at": "2025-10-09T18:54:25Z",
+      "updated_at": "2026-02-10T09:43:40Z",
+      "html_url": "https://github.com/openxla/xla/issues/32497",
+      "labels": [
+        "stat:awaiting openxla-eng",
+        "err:Build"
+      ]
+    },
+    {
+      "number": 36692,
+      "title": "`./configure.py --backend=CPU` does not setup all required packages",
+      "author": "samuela",
+      "state": "open",
+      "created_at": "2026-01-22T14:54:27Z",
+      "updated_at": "2026-01-29T04:22:31Z",
+      "html_url": "https://github.com/openxla/xla/issues/36692",
+      "labels": [
+        "stat:awaiting openxla-eng",
+        "err:Build"
+      ]
+    },
+    {
+      "number": 36756,
+      "title": "How to run XLA test suite in OSS builds?",
+      "author": "samuela",
+      "state": "open",
+      "created_at": "2026-01-23T14:24:09Z",
+      "updated_at": "2026-01-29T04:21:41Z",
+      "html_url": "https://github.com/openxla/xla/issues/36756",
+      "labels": [
+        "stat:awaiting openxla-eng",
+        "question",
+        "CPU"
+      ]
+    },
+    {
+      "number": 28005,
+      "title": "Gpu collective performance model bug",
+      "author": "arul-lm",
+      "state": "open",
+      "created_at": "2025-06-18T20:54:07Z",
+      "updated_at": "2025-09-18T03:38:15Z",
+      "html_url": "https://github.com/openxla/xla/issues/28005",
+      "labels": [
+        "bug",
+        "stat:awaiting openxla-eng"
+      ]
+    },
+    {
+      "number": 3552,
+      "title": "crosstool_wrapper_driver_is_not_gcc failed: error executing command ",
+      "author": "llhzm12128",
+      "state": "open",
+      "created_at": "2023-06-13T09:02:08Z",
+      "updated_at": "2025-07-14T07:46:15Z",
+      "html_url": "https://github.com/openxla/xla/issues/3552",
+      "labels": [
+        "stat:awaiting openxla-eng",
+        "GPU",
+        "err:Build"
+      ]
+    },
+    {
+      "number": 20874,
+      "title": "USE_CLANG does not get set in crosstool_wrapper_driver_rocm.tpl",
+      "author": "davidheiss",
+      "state": "open",
+      "created_at": "2024-12-26T17:01:12Z",
+      "updated_at": "2025-05-30T04:16:29Z",
+      "html_url": "https://github.com/openxla/xla/issues/20874",
+      "labels": [
+        "err:Build"
+      ]
+    },
+    {
+      "number": 16777,
+      "title": "CI failed - Assert All tags are documented failed",
+      "author": "apivovarov",
+      "state": "open",
+      "created_at": "2024-09-03T23:20:16Z",
+      "updated_at": "2025-03-27T05:48:25Z",
+      "html_url": "https://github.com/openxla/xla/issues/16777",
+      "labels": [
+        "doc",
+        "err:Build"
+      ]
+    },
+    {
+      "number": 18938,
+      "title": "PJRT build failed with absl on x86",
+      "author": "willhuang1114",
+      "state": "open",
+      "created_at": "2024-11-01T02:33:08Z",
+      "updated_at": "2025-03-25T06:55:10Z",
+      "html_url": "https://github.com/openxla/xla/issues/18938",
+      "labels": [
+        "err:Build"
+      ]
+    },
     {
       "number": 8681,
       "title": "RCCL not recognized",

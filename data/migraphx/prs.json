@@ -1,6 +1,30 @@
 {
-  "collected_at": "2026-02-27T08:13:40Z",
+  "collected_at": "2026-02-28T08:06:58Z",
   "prs": [
+    {
+      "number": 4633,
+      "title": "Dont fuse op on attention that are not contained",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T14:09:40Z",
+      "updated_at": "2026-02-28T04:54:26Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4633",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4630,
+      "title": "[AIMIGRAPHX-568] jit implementation for logsoftmax",
+      "author": "bdevorem",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T22:20:19Z",
+      "updated_at": "2026-02-28T01:48:36Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4630",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 4553,
       "title": "Add resize on the GPU",
@@ -8,8 +32,97 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-19T17:46:40Z",
-      "updated_at": "2026-02-27T02:27:37Z",
+      "updated_at": "2026-02-28T00:40:51Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4553",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4642,
+      "title": "fix jit pooling",
+      "author": "aarushjain29",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T19:54:23Z",
+      "updated_at": "2026-02-27T23:13:57Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4642",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4641,
+      "title": "Dont use double or int64 when using fast_math",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T17:38:38Z",
+      "updated_at": "2026-02-27T20:40:35Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4641",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4635,
+      "title": "Dont fuse concat when its used more than once",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T23:31:10Z",
+      "updated_at": "2026-02-27T19:31:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4635",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4637,
+      "title": "Adding parse for MatMulBnb4 operator and updating MultiHeadAttention operator",
+      "author": "urpetkov-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T12:20:21Z",
+      "updated_at": "2026-02-27T18:06:23Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4637",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4616,
+      "title": "[AIMIGRAPHX-544] Parallel compilation for dynamic graphs",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-17T16:20:19Z",
+      "updated_at": "2026-02-27T17:42:54Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4616",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4640,
+      "title": "Onnxruntime Weekly Sync 2026-02-27",
+      "author": "github-actions[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T17:20:27Z",
+      "updated_at": "2026-02-27T17:20:31Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4640",
+      "labels": [
+        "onnxruntime",
+        "dependencies",
+        "skip bot checks",
+        "automated"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4638,
+      "title": "Auto padding convTrans",
+      "author": "ivarusic-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T12:40:13Z",
+      "updated_at": "2026-02-27T16:58:25Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4638",
       "labels": [],
       "draft": false
     },
@@ -25,30 +138,6 @@
       "labels": [
         "WCR"
       ],
-      "draft": false
-    },
-    {
-      "number": 4616,
-      "title": "[AIMIGRAPHX-544] Parallel compilation for dynamic graphs",
-      "author": "shivadbhavsar",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-17T16:20:19Z",
-      "updated_at": "2026-02-26T21:26:53Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4616",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 4637,
-      "title": "Adding parse for MatMulBnb4 operator and updating MultiHeadAttention operator",
-      "author": "urpetkov-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T12:20:21Z",
-      "updated_at": "2026-02-26T20:35:46Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4637",
-      "labels": [],
       "draft": false
     },
     {
@@ -90,18 +179,6 @@
       "draft": false
     },
     {
-      "number": 4638,
-      "title": "Auto padding convTrans",
-      "author": "ivarusic-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T12:40:13Z",
-      "updated_at": "2026-02-26T15:49:53Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4638",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4591,
       "title": "Support dynamic input values for range op",
       "author": "klin2024",
@@ -110,42 +187,6 @@
       "created_at": "2026-02-04T06:02:46Z",
       "updated_at": "2026-02-26T05:58:25Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4591",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4635,
-      "title": "Dont fuse concat when its used more than once",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T23:31:10Z",
-      "updated_at": "2026-02-26T02:03:31Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4635",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4633,
-      "title": "Dont fuse op on attention that are not contained",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T14:09:40Z",
-      "updated_at": "2026-02-25T17:55:39Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4633",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4630,
-      "title": "[AIMIGRAPHX-568] jit implementation for logsoftmax",
-      "author": "bdevorem",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T22:20:19Z",
-      "updated_at": "2026-02-25T15:52:38Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4630",
       "labels": [],
       "draft": false
     },
@@ -172,18 +213,6 @@
       "created_at": "2026-02-24T23:38:34Z",
       "updated_at": "2026-02-25T05:34:42Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4631",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4611,
-      "title": "Improve the logic for reaches() in find_splits",
-      "author": "aarushjain29",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T19:05:49Z",
-      "updated_at": "2026-02-25T01:03:37Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4611",
       "labels": [],
       "draft": false
     },
@@ -1098,6 +1127,18 @@
       "created_at": "2024-09-22T22:28:36Z",
       "updated_at": "2024-10-21T22:48:16Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/3468",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4611,
+      "title": "Improve the logic for reaches() in find_splits",
+      "author": "aarushjain29",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-12T19:05:49Z",
+      "updated_at": "2026-02-27T15:55:36Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4611",
       "labels": [],
       "draft": false
     },

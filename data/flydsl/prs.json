@@ -1,6 +1,54 @@
 {
-  "collected_at": "2026-02-27T08:13:56Z",
+  "collected_at": "2026-02-28T08:07:16Z",
   "prs": [
+    {
+      "number": 143,
+      "title": "W4a16 bf16 fp8 bf16 moe",
+      "author": "ClementLinCF",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T06:47:17Z",
+      "updated_at": "2026-02-28T05:54:52Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 155,
+      "title": "add AOT pre-compilation example for MOE kernels",
+      "author": "coderfeli",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-28T04:19:45Z",
+      "updated_at": "2026-02-28T05:09:34Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/155",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 148,
+      "title": "update: publish artifacts nightlies",
+      "author": "kiran-thumma",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T00:07:59Z",
+      "updated_at": "2026-02-28T04:25:09Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/148",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 152,
+      "title": "[Tool][fly-opt] Add fly-opt tool and lit-based test suite",
+      "author": "jli-melchior",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T02:19:55Z",
+      "updated_at": "2026-02-28T03:36:24Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/152",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 150,
       "title": "Add TiledCopy and Mma",
@@ -10,30 +58,6 @@
       "created_at": "2026-02-26T08:58:25Z",
       "updated_at": "2026-02-27T07:27:12Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/150",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 153,
-      "title": "Pre v0.1 gemm fix",
-      "author": "coderfeli",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T06:41:53Z",
-      "updated_at": "2026-02-27T06:41:53Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 143,
-      "title": "W4a16 bf16 fp8 bf16 moe",
-      "author": "ClementLinCF",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T06:47:17Z",
-      "updated_at": "2026-02-27T06:14:27Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
       "labels": [],
       "draft": false
     },
@@ -52,18 +76,6 @@
       "draft": false
     },
     {
-      "number": 152,
-      "title": "[Tool][fly-opt] Add fly-opt tool and lit-based test suite",
-      "author": "jli-melchior",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T02:19:55Z",
-      "updated_at": "2026-02-27T02:27:34Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/152",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 151,
       "title": "Add decode-phase Flash Attention kernel",
       "author": "ChuanLi1101",
@@ -72,18 +84,6 @@
       "created_at": "2026-02-27T00:55:50Z",
       "updated_at": "2026-02-27T00:56:59Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/151",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 148,
-      "title": "update: publish artifacts nightlies",
-      "author": "kiran-thumma",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T00:07:59Z",
-      "updated_at": "2026-02-25T14:14:59Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/148",
       "labels": [],
       "draft": false
     },
@@ -146,6 +146,42 @@
       "html_url": "https://github.com/ROCm/FlyDSL/pull/99",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 156,
+      "title": "Add CI on pre_v0.1 branch",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T04:42:40Z",
+      "updated_at": "2026-02-28T04:45:02Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/156",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 154,
+      "title": "add compile only and dumpir",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T03:06:37Z",
+      "updated_at": "2026-02-28T03:30:15Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/154",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 153,
+      "title": "Pre v0.1 gemm fix",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T06:41:53Z",
+      "updated_at": "2026-02-27T09:25:07Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 128,
@@ -848,42 +884,6 @@
       "created_at": "2026-01-09T07:01:09Z",
       "updated_at": "2026-01-09T08:33:46Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/46",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 43,
-      "title": "fix ci",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-08T07:13:58Z",
-      "updated_at": "2026-01-09T05:57:03Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/43",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 38,
-      "title": "CI: Initial FlyDSL CI",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-07T06:29:19Z",
-      "updated_at": "2026-01-09T05:10:46Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/38",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 37,
-      "title": "Dev/int4 moe",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-07T04:03:16Z",
-      "updated_at": "2026-01-09T05:10:37Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/37",
       "labels": [],
       "draft": false
     }

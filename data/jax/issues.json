@@ -1,6 +1,18 @@
 {
-  "collected_at": "2026-02-27T08:12:53Z",
+  "collected_at": "2026-02-28T08:06:00Z",
   "issues": [
+    {
+      "number": 35472,
+      "title": "ROCm tests skipped due to hipSparse Numerical Issue",
+      "author": "AratiGanesh",
+      "state": "open",
+      "created_at": "2026-02-27T17:58:55Z",
+      "updated_at": "2026-02-27T17:59:07Z",
+      "html_url": "https://github.com/jax-ml/jax/issues/35472",
+      "labels": [
+        "bug"
+      ]
+    },
     {
       "number": 35455,
       "title": "[ROCm] Batched Cholesky (potrf) OOM crash due to hipSolver allocating outside XLA memory pool",
@@ -410,19 +422,6 @@
       "created_at": "2026-01-14T19:18:33Z",
       "updated_at": "2026-01-21T04:20:12Z",
       "html_url": "https://github.com/jax-ml/jax/issues/34357",
-      "labels": [
-        "bug",
-        "AMD GPU"
-      ]
-    },
-    {
-      "number": 34386,
-      "title": "Unsupported ROCm Tests `tests/svd_test.py`",
-      "author": "JehandadKhan",
-      "state": "open",
-      "created_at": "2026-01-14T22:57:13Z",
-      "updated_at": "2026-01-21T04:16:51Z",
-      "html_url": "https://github.com/jax-ml/jax/issues/34386",
       "labels": [
         "bug",
         "AMD GPU"
