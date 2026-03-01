@@ -1,29 +1,29 @@
 {
-  "collected_at": "2026-02-28T08:07:43Z",
+  "collected_at": "2026-03-01T08:08:26Z",
   "project": "sglang",
   "repo": "sgl-project/sglang",
   "pr_velocity": {
     "this_week": {
       "opened": 40,
-      "merged": 38,
-      "closed": 0
+      "merged": 41,
+      "closed": 1
     },
     "last_week": {
-      "opened": 16,
-      "merged": 10,
+      "opened": 19,
+      "merged": 8,
       "closed": 0
     },
-    "median_time_to_merge_hours": 99.4,
-    "merge_count": 63,
+    "median_time_to_merge_hours": 79.0,
+    "merge_count": 65,
     "stale_prs": 1
   },
   "contributors": {
-    "active_this_week": 50,
+    "active_this_week": 52,
     "total_contributors": 75,
     "top_contributors": [
       {
         "author": "michaelzhang-ai",
-        "prs_submitted": 8,
+        "prs_submitted": 9,
         "prs_merged": 6,
         "commits": 0
       },
@@ -36,19 +36,19 @@
       {
         "author": "bingxche",
         "prs_submitted": 6,
-        "prs_merged": 1,
-        "commits": 0
-      },
-      {
-        "author": "HaiShaw",
-        "prs_submitted": 6,
-        "prs_merged": 5,
+        "prs_merged": 3,
         "commits": 0
       },
       {
         "author": "hubertlu-tw",
         "prs_submitted": 5,
         "prs_merged": 2,
+        "commits": 0
+      },
+      {
+        "author": "HaiShaw",
+        "prs_submitted": 5,
+        "prs_merged": 5,
         "commits": 0
       },
       {
@@ -70,9 +70,9 @@
         "commits": 0
       },
       {
-        "author": "mqhc2020",
-        "prs_submitted": 4,
-        "prs_merged": 1,
+        "author": "Duyi-Wang",
+        "prs_submitted": 3,
+        "prs_merged": 3,
         "commits": 0
       },
       {
@@ -86,42 +86,42 @@
   },
   "issue_health": {
     "total_open": 40,
-    "opened_this_week": 1,
-    "closed_this_week": 99,
+    "opened_this_week": 0,
+    "closed_this_week": 92,
     "unanswered": 6
   },
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 6,
-      "failed": 8,
-      "success_rate": 30.0
+      "succeeded": 5,
+      "failed": 10,
+      "success_rate": 25.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 1,
-      "failed": 11,
-      "success_rate": 5.0
+      "succeeded": 2,
+      "failed": 14,
+      "success_rate": 10.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 92.3,
-      "p90_minutes": 1240.4,
+      "median_minutes": 112.0,
+      "p90_minutes": 1308.8,
       "min_minutes": 0.7,
-      "max_minutes": 1308.8
+      "max_minutes": 2716.3
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 0.5,
-      "p90_minutes": 5.6,
+      "median_minutes": 0.4,
+      "p90_minutes": 64.3,
       "min_minutes": 0.3,
-      "max_minutes": 8.3
+      "max_minutes": 89.5
     }
   },
   "release_cadence": {
-    "days_since_last": 4.3,
+    "days_since_last": 5.3,
     "avg_interval_days": 15.3,
     "total_releases": 5,
     "latest_tag": "v0.5.9"

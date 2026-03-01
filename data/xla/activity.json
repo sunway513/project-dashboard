@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-02-28T08:07:47Z",
+  "collected_at": "2026-03-01T08:08:29Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
@@ -64,13 +64,13 @@
         "commits": 0
       },
       {
-        "author": "leo-amd",
+        "author": "draganmladjenovic",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
       },
       {
-        "author": "draganmladjenovic",
+        "author": "leo-amd",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -85,7 +85,7 @@
     "bus_factor": null
   },
   "issue_health": {
-    "total_open": 9,
+    "total_open": 1,
     "opened_this_week": 0,
     "closed_this_week": 4,
     "unanswered": 0
@@ -93,31 +93,31 @@
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 19,
+      "succeeded": 17,
       "failed": 1,
-      "success_rate": 95.0
+      "success_rate": 85.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 15,
+      "succeeded": 14,
       "failed": 4,
-      "success_rate": 75.0
+      "success_rate": 70.0
     }
   },
   "ci_signal_time": {
     "rocm": {
-      "sample_size": 20,
-      "median_minutes": 2.8,
-      "p90_minutes": 37.4,
-      "min_minutes": 2.5,
-      "max_minutes": 43.7
+      "sample_size": 19,
+      "median_minutes": 6.6,
+      "p90_minutes": 41.8,
+      "min_minutes": 0.4,
+      "max_minutes": 45.6
     },
     "cuda": {
-      "sample_size": 20,
-      "median_minutes": 10.8,
-      "p90_minutes": 28.3,
-      "min_minutes": 3.1,
-      "max_minutes": 28.7
+      "sample_size": 19,
+      "median_minutes": 13.1,
+      "p90_minutes": 25.8,
+      "min_minutes": 1.7,
+      "max_minutes": 26.0
     }
   },
   "release_cadence": {

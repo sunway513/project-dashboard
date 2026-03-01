@@ -1,13 +1,264 @@
 {
-  "collected_at": "2026-02-28T08:06:11Z",
+  "collected_at": "2026-03-01T08:06:57Z",
   "issues": [
+    {
+      "number": 35624,
+      "title": "[Bug]: Qwen3-Omni Model Fails when try to l",
+      "author": "Blaze-DSP",
+      "state": "open",
+      "created_at": "2026-02-28T19:25:01Z",
+      "updated_at": "2026-03-01T08:01:21Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35624",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35638,
+      "title": "[Question][XPU]: Best practices and optimized arguments for running 30B+ models on Intel Arc B580 (Dual GPU) via vLLM-XPU",
+      "author": "jiekechoo",
+      "state": "open",
+      "created_at": "2026-03-01T05:09:09Z",
+      "updated_at": "2026-03-01T07:42:47Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35638",
+      "labels": [
+        "usage"
+      ]
+    },
+    {
+      "number": 35391,
+      "title": "[Bug]: Value error, Model architectures ['Qwen3_5ForConditionalGeneration'] are not supported for now",
+      "author": "Iam-a-Savage-coder",
+      "state": "open",
+      "created_at": "2026-02-26T10:08:09Z",
+      "updated_at": "2026-03-01T07:31:50Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35391",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35637,
+      "title": "[Bug]: minimax m2.1 arch mxfp4 rocm AITER TP4 error",
+      "author": "functionstackx",
+      "state": "open",
+      "created_at": "2026-03-01T04:32:27Z",
+      "updated_at": "2026-03-01T07:31:39Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35637",
+      "labels": [
+        "bug",
+        "rocm"
+      ]
+    },
+    {
+      "number": 24865,
+      "title": "[Bug]: v0.10.2 Qwen 3 Next 80b FP8 Slow first request and potential format mismatch: seq_len (4) < num_heads (8)",
+      "author": "Syst3m1cAn0maly",
+      "state": "open",
+      "created_at": "2025-09-15T08:42:46Z",
+      "updated_at": "2026-03-01T07:18:53Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/24865",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35644,
+      "title": "[Feature]: AMD MXFP4 MiniMax M2.5 Checkpoint",
+      "author": "functionstackx",
+      "state": "open",
+      "created_at": "2026-03-01T07:13:17Z",
+      "updated_at": "2026-03-01T07:14:39Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35644",
+      "labels": [
+        "feature request",
+        "rocm"
+      ]
+    },
+    {
+      "number": 35642,
+      "title": "[Bug]: HIP build in Docker: offload-arch stderr contaminates compiler flags via cmake/utils.cmake and CMAKE_HIP_FLAGS",
+      "author": "npathak13",
+      "state": "open",
+      "created_at": "2026-03-01T07:01:55Z",
+      "updated_at": "2026-03-01T07:02:04Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35642",
+      "labels": [
+        "bug",
+        "rocm"
+      ]
+    },
+    {
+      "number": 35641,
+      "title": "[Bug]: ROCm MI355X Kimi K2.5 AITER TP8 MLA kernel Error (num_head=8)",
+      "author": "functionstackx",
+      "state": "open",
+      "created_at": "2026-03-01T06:49:47Z",
+      "updated_at": "2026-03-01T06:55:04Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35641",
+      "labels": [
+        "bug",
+        "rocm"
+      ]
+    },
+    {
+      "number": 35633,
+      "title": "[Bug]: parity with cuda: rocm image missing amd quark kimi k2.5 mxfp4",
+      "author": "functionstackx",
+      "state": "open",
+      "created_at": "2026-03-01T01:20:50Z",
+      "updated_at": "2026-03-01T06:20:44Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35633",
+      "labels": [
+        "bug",
+        "rocm"
+      ]
+    },
+    {
+      "number": 35639,
+      "title": "[RFC]: `vllm bench eval` for Unified Accuracy + Performance Evaluation",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-01T05:36:39Z",
+      "updated_at": "2026-03-01T05:54:13Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35639",
+      "labels": [
+        "rocm",
+        "RFC"
+      ]
+    },
+    {
+      "number": 35504,
+      "title": "[Bug]: qwen3-coder-next inference randomly hangs, accuracy degradation in 0.16.0+ with TP > 1 and  fuse_allreduce_rms=False (H100s on PCIe)",
+      "author": "vitush93",
+      "state": "open",
+      "created_at": "2026-02-27T11:05:38Z",
+      "updated_at": "2026-03-01T03:02:34Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35504",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 33638,
+      "title": "[Bug]: DeepSeekV3.1 with fp8 kvcache in v0.15.0 produces garbled output",
+      "author": "lyg95",
+      "state": "open",
+      "created_at": "2026-02-03T03:26:24Z",
+      "updated_at": "2026-03-01T02:41:31Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/33638",
+      "labels": [
+        "bug",
+        "deepseek"
+      ]
+    },
+    {
+      "number": 27604,
+      "title": "[Bug]: Is Flashinfer Attn backend supposed to work with FP8 KV cache on Hopper?",
+      "author": "jmkuebler",
+      "state": "open",
+      "created_at": "2025-10-27T20:22:37Z",
+      "updated_at": "2026-03-01T02:16:14Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/27604",
+      "labels": [
+        "bug",
+        "unstale",
+        "nvidia"
+      ]
+    },
+    {
+      "number": 27890,
+      "title": "\"fatal error: Python.h: No such file or directory\" upon vllm startup after a clean install",
+      "author": "kha84",
+      "state": "open",
+      "created_at": "2025-10-31T16:25:06Z",
+      "updated_at": "2026-03-01T02:16:03Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/27890",
+      "labels": [
+        "bug",
+        "unstale"
+      ]
+    },
+    {
+      "number": 29743,
+      "title": "[Feature]: Turing support in Qwen3-VL backends",
+      "author": "TURX",
+      "state": "open",
+      "created_at": "2025-11-30T08:14:39Z",
+      "updated_at": "2026-03-01T02:14:45Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/29743",
+      "labels": [
+        "feature request",
+        "stale"
+      ]
+    },
+    {
+      "number": 35625,
+      "title": "[Bug]: TTFT latency issue with Qwen3.5-35B-A3B model using vllm",
+      "author": "shahizat",
+      "state": "open",
+      "created_at": "2026-02-28T20:34:01Z",
+      "updated_at": "2026-02-28T20:34:01Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35625",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35519,
+      "title": "[Bug]: Qwen3.5 NVFP4 models crash on ARM64 GB10 DGX Spark (CUDA illegal instruction during generation)",
+      "author": "EmilHaase",
+      "state": "open",
+      "created_at": "2026-02-27T15:11:48Z",
+      "updated_at": "2026-02-28T15:57:06Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35519",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35028,
+      "title": "[Bug]: RuntimeError: CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx",
+      "author": "shahizat",
+      "state": "open",
+      "created_at": "2026-02-21T17:55:04Z",
+      "updated_at": "2026-02-28T15:53:47Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35028",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35608,
+      "title": "[Bug]: vllm 0.16.0+image encountered CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx",
+      "author": "adenzhou1350",
+      "state": "open",
+      "created_at": "2026-02-28T10:40:31Z",
+      "updated_at": "2026-02-28T15:47:35Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35608",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35319,
+      "title": "[Bug]: Multi-Node inference with PP > 1 crashes after processing completions request with non-None `logprobs` parameter.",
+      "author": "JeanPaulShapo",
+      "state": "open",
+      "created_at": "2026-02-25T18:31:26Z",
+      "updated_at": "2026-02-28T15:13:04Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35319",
+      "labels": [
+        "bug"
+      ]
+    },
     {
       "number": 35521,
       "title": "[Bug]: Suffix decoding crashes with assert total_num_scheduled_tokens > 0",
       "author": "rosstang",
       "state": "open",
       "created_at": "2026-02-27T15:35:13Z",
-      "updated_at": "2026-02-28T07:43:02Z",
+      "updated_at": "2026-02-28T14:05:29Z",
       "html_url": "https://github.com/vllm-project/vllm/issues/35521",
       "labels": [
         "bug"
@@ -19,7 +270,7 @@
       "author": "wanghualex1-wq",
       "state": "open",
       "created_at": "2026-02-28T07:40:54Z",
-      "updated_at": "2026-02-28T07:40:54Z",
+      "updated_at": "2026-02-28T10:42:42Z",
       "html_url": "https://github.com/vllm-project/vllm/issues/35599",
       "labels": [
         "bug"
@@ -35,33 +286,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/35344",
       "labels": [
         "bug"
-      ]
-    },
-    {
-      "number": 33638,
-      "title": "[Bug]: DeepSeekV3.1 with fp8 kvcache in v0.15.0 produces garbled output",
-      "author": "lyg95",
-      "state": "open",
-      "created_at": "2026-02-03T03:26:24Z",
-      "updated_at": "2026-02-28T03:34:01Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33638",
-      "labels": [
-        "bug",
-        "deepseek"
-      ]
-    },
-    {
-      "number": 27604,
-      "title": "[Bug]: Is Flashinfer Attn backend supposed to work with FP8 KV cache on Hopper?",
-      "author": "jmkuebler",
-      "state": "open",
-      "created_at": "2025-10-27T20:22:37Z",
-      "updated_at": "2026-02-28T03:31:34Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/27604",
-      "labels": [
-        "bug",
-        "stale",
-        "nvidia"
       ]
     },
     {
@@ -154,30 +378,6 @@
       ]
     },
     {
-      "number": 35028,
-      "title": "[Bug]: RuntimeError: CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx",
-      "author": "shahizat",
-      "state": "open",
-      "created_at": "2026-02-21T17:55:04Z",
-      "updated_at": "2026-02-27T23:21:17Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/35028",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 35391,
-      "title": "[Bug]: Value error, Model architectures ['Qwen3_5ForConditionalGeneration'] are not supported for now",
-      "author": "Iam-a-Savage-coder",
-      "state": "open",
-      "created_at": "2026-02-26T10:08:09Z",
-      "updated_at": "2026-02-27T20:32:32Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/35391",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 35541,
       "title": "[Bug]: vLLM hangs indefinitely with low `num_gpu_blocks_override`",
       "author": "kvcache670",
@@ -213,28 +413,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/35528",
       "labels": [
         "feature request"
-      ]
-    },
-    {
-      "number": 33445,
-      "title": "[RFC] Remove mandatory ray installation",
-      "author": "yewentao256",
-      "state": "open",
-      "created_at": "2026-01-30T20:37:53Z",
-      "updated_at": "2026-02-27T16:53:11Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/33445",
-      "labels": []
-    },
-    {
-      "number": 35504,
-      "title": "[Bug]: qwen3-coder-next inference randomly hangs, accuracy degradation in 0.16.0+ with TP > 1 and  fuse_allreduce_rms=False (H100s on PCIe)",
-      "author": "vitush93",
-      "state": "open",
-      "created_at": "2026-02-27T11:05:38Z",
-      "updated_at": "2026-02-27T16:39:23Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/35504",
-      "labels": [
-        "bug"
       ]
     },
     {
@@ -275,18 +453,6 @@
       ]
     },
     {
-      "number": 35519,
-      "title": "[Bug]: Qwen3.5 NVFP4 models crash on ARM64 GB10 DGX Spark (CUDA illegal instruction during generation)",
-      "author": "EmilHaase",
-      "state": "open",
-      "created_at": "2026-02-27T15:11:48Z",
-      "updated_at": "2026-02-27T15:39:45Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/35519",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 34449,
       "title": "[Bug]: GLM-5-FP8 malformed tool calls",
       "author": "TALLEC-Scott",
@@ -323,43 +489,6 @@
       ]
     },
     {
-      "number": 32730,
-      "title": "[Bug]: CPU tests hit CUDA path when VLLM_TARGET_DEVICE=cpu [CPU Backend]",
-      "author": "wjhrdy",
-      "state": "open",
-      "created_at": "2026-01-20T22:18:02Z",
-      "updated_at": "2026-02-27T09:18:06Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/32730",
-      "labels": [
-        "bug",
-        "cpu"
-      ]
-    },
-    {
-      "number": 35319,
-      "title": "[Bug]: Multi-Node inference with PP > 1 crashes after processing completions request with non-None `logprobs` parameter.",
-      "author": "JeanPaulShapo",
-      "state": "open",
-      "created_at": "2026-02-25T18:31:26Z",
-      "updated_at": "2026-02-27T07:16:21Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/35319",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 31990,
-      "title": "[Bug]: [H200] Qwen3-Next-80B-A3B-Instruct-FP8 TP1 DP4 EP4 CUDA illegal memory error",
-      "author": "jhaotingc",
-      "state": "open",
-      "created_at": "2026-01-08T19:34:00Z",
-      "updated_at": "2026-02-27T06:36:53Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/31990",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 35464,
       "title": "[Bug]: Fix GLM-OCR text_config model_type handling",
       "author": "iron-shaper",
@@ -369,45 +498,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/35464",
       "labels": [
         "bug"
-      ]
-    },
-    {
-      "number": 23816,
-      "title": "[Bug]: multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 8 leaked shared_memory objects to clean up at shutdow",
-      "author": "gkm0120",
-      "state": "open",
-      "created_at": "2025-08-28T09:09:39Z",
-      "updated_at": "2026-02-27T02:21:32Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/23816",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
-      "number": 29670,
-      "title": "[Bug]: single node 8 h20,ebo failed!",
-      "author": "bleedingfight",
-      "state": "open",
-      "created_at": "2025-11-28T11:15:07Z",
-      "updated_at": "2026-02-27T02:18:28Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29670",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
-      "number": 29676,
-      "title": "[Bug]: First call to llama model takes too much time compared to subsequent ones",
-      "author": "ozancaglayan",
-      "state": "open",
-      "created_at": "2025-11-28T13:44:13Z",
-      "updated_at": "2026-02-27T02:18:27Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29676",
-      "labels": [
-        "bug",
-        "stale"
       ]
     },
     {
@@ -549,81 +639,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/34028",
       "labels": [
         "usage"
-      ]
-    },
-    {
-      "number": 35403,
-      "title": "[Bug]: Ray Compiled DAG timeout/deadlock during VLM forward pass with PP>1 and high-res images",
-      "author": "emricksini-h",
-      "state": "open",
-      "created_at": "2026-02-26T14:25:49Z",
-      "updated_at": "2026-02-26T14:25:49Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/35403",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 35266,
-      "title": "[Bug]: Missing opening brace for Qwen3.5 streaming tool calls",
-      "author": "AsterisMono",
-      "state": "open",
-      "created_at": "2026-02-25T06:35:20Z",
-      "updated_at": "2026-02-26T11:22:38Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/35266",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 27641,
-      "title": "[Bug]: Streaming tool call randomly failed when using gpt-oss-120b/20b",
-      "author": "dayeguilaiye",
-      "state": "open",
-      "created_at": "2025-10-28T08:18:34Z",
-      "updated_at": "2026-02-26T10:14:20Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/27641",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 19197,
-      "title": "[Bug]: \u6a21\u578b\u8fd0\u884c\u671f\u95f4\uff0c\u62a5\u9519TimeoutError: RPC call to execute_model timed out.\uff0c\u5bfc\u81f4\u6a21\u578b\u9000\u51fa\u3002",
-      "author": "nvliajia",
-      "state": "open",
-      "created_at": "2025-06-05T09:19:47Z",
-      "updated_at": "2026-02-26T08:05:20Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/19197",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 27699,
-      "title": "[Bug]: Inductor fails to fuse pointwise ops with sequence parallelism + async TP",
-      "author": "ProExpertProg",
-      "state": "open",
-      "created_at": "2025-10-29T00:26:57Z",
-      "updated_at": "2026-02-26T06:49:04Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/27699",
-      "labels": [
-        "bug",
-        "torch.compile",
-        "keep-open"
-      ]
-    },
-    {
-      "number": 34205,
-      "title": "[Bug]: Set env ROCP_TOOL_ATTACH=1 caused vllm server stopped",
-      "author": "BigFaceBoy",
-      "state": "open",
-      "created_at": "2026-02-10T03:50:51Z",
-      "updated_at": "2026-02-26T02:51:42Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34205",
-      "labels": [
-        "bug",
-        "rocm"
       ]
     }
   ]

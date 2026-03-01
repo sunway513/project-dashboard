@@ -1,6 +1,216 @@
 {
-  "collected_at": "2026-02-28T08:06:19Z",
+  "collected_at": "2026-03-01T08:07:05Z",
   "prs": [
+    {
+      "number": 17026,
+      "title": "feat: Priority-based scheduling optimization (including default priority, preemption toggle, priority-based metrics, etc.)",
+      "author": "zhuxinjie-nz",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-13T13:35:13Z",
+      "updated_at": "2026-03-01T07:07:30Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/17026",
+      "labels": [
+        "documentation",
+        "amd",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 18442,
+      "title": "feat: add FA4 SM90 paged KV decode support & update attention docs",
+      "author": "zwang86",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-08T08:53:54Z",
+      "updated_at": "2026-03-01T06:08:38Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/18442",
+      "labels": [
+        "documentation",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19498,
+      "title": "[AMD] Fix MoRI EP warmup hang by restoring deepep_mode=normal default",
+      "author": "bingxche",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T10:58:43Z",
+      "updated_at": "2026-03-01T06:05:24Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19498",
+      "labels": [
+        "amd",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 14105,
+      "title": "[LoRA] Add LoRA support for MoE layers",
+      "author": "Jonahcb",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-11-28T15:49:54Z",
+      "updated_at": "2026-03-01T02:00:22Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/14105",
+      "labels": [
+        "lora",
+        "sgl-kernel",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19578,
+      "title": "[AMD] MORI-EP support for EP4.",
+      "author": "Duyi-Wang",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T12:39:34Z",
+      "updated_at": "2026-02-28T21:13:47Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19578",
+      "labels": [
+        "amd",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19554,
+      "title": "[AMD] Remove Redundant tvm-ffi Installation in amd_ci_install_dependency.sh",
+      "author": "bingxche",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T07:41:14Z",
+      "updated_at": "2026-02-28T20:57:52Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19554",
+      "labels": [
+        "amd"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19591,
+      "title": "[AMD] Port tree speculative sampling kernel to HIP",
+      "author": "brucechanglongxu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-28T20:10:44Z",
+      "updated_at": "2026-02-28T20:32:59Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19591",
+      "labels": [
+        "amd",
+        "speculative-decoding",
+        "sgl-kernel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19592,
+      "title": "[AMD] Fix tilelang NSA crash caused by unpinned tvm-ffi in CI install script",
+      "author": "michaelzhang-ai",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-02-28T20:20:30Z",
+      "updated_at": "2026-02-28T20:26:31Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19592",
+      "labels": [
+        "amd"
+      ],
+      "draft": true
+    },
+    {
+      "number": 17374,
+      "title": " [4/N] (Elastic EP) Back up Expert Weights in DRAM",
+      "author": "ympcMark",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-20T02:06:25Z",
+      "updated_at": "2026-02-28T12:26:29Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/17374",
+      "labels": [
+        "documentation",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19260,
+      "title": "[AMD] Add suffix decoding support for ROCm and fix non-MLA speculative decoding",
+      "author": "amd-pedghazi",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T18:10:56Z",
+      "updated_at": "2026-02-28T12:08:44Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19260",
+      "labels": [
+        "documentation",
+        "amd",
+        "dependencies",
+        "speculative-decoding",
+        "sgl-kernel",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19152,
+      "title": "[Feature] Support offload and wake up of SGLang Diffusion",
+      "author": "klhhhhh",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-22T11:21:53Z",
+      "updated_at": "2026-02-28T10:39:29Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19152",
+      "labels": [
+        "documentation",
+        "run-ci",
+        "diffusion"
+      ],
+      "draft": false
+    },
+    {
+      "number": 18624,
+      "title": "[AMD] DSR1/V3 use fp8 bmm in MLA for MI300X",
+      "author": "zhentaocc",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-11T14:16:38Z",
+      "updated_at": "2026-02-28T10:39:13Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/18624",
+      "labels": [
+        "amd",
+        "deepseek",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 17996,
+      "title": "[Diffusion] [NPU] Wan2.2-T2V-A14B-Diffusers modelslim quantization support",
+      "author": "OrangeRedeng",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-30T13:46:06Z",
+      "updated_at": "2026-02-28T08:48:36Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/17996",
+      "labels": [
+        "documentation",
+        "quant",
+        "amd",
+        "dependencies",
+        "Multi-modal",
+        "deepseek",
+        "blackwell",
+        "npu",
+        "diffusion",
+        "model-gateway"
+      ],
+      "draft": false
+    },
     {
       "number": 19549,
       "title": "[diffusion] macOS support",
@@ -16,20 +226,6 @@
         "diffusion"
       ],
       "draft": true
-    },
-    {
-      "number": 19554,
-      "title": "[AMD] [DO NOT MERGE] Pin tvm-ffi Commit to Prevent Tilelang 0.1.7 Crashing",
-      "author": "bingxche",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-28T07:41:14Z",
-      "updated_at": "2026-02-28T07:53:36Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19554",
-      "labels": [
-        "amd"
-      ],
-      "draft": false
     },
     {
       "number": 19509,
@@ -63,22 +259,6 @@
       "draft": false
     },
     {
-      "number": 14105,
-      "title": "[LoRA] Add LoRA support for MoE layers",
-      "author": "Jonahcb",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-11-28T15:49:54Z",
-      "updated_at": "2026-02-28T05:33:00Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/14105",
-      "labels": [
-        "lora",
-        "sgl-kernel",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 19103,
       "title": "[jit_kernel] Migrate cast (downcast_fp8) from sgl-kernel AOT to JIT",
       "author": "Johnsonms",
@@ -93,21 +273,6 @@
       "draft": false
     },
     {
-      "number": 19498,
-      "title": "[AMD] Fix MoRI EP warmup hang by restoring deepep_mode=normal default",
-      "author": "bingxche",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T10:58:43Z",
-      "updated_at": "2026-02-28T05:11:04Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19498",
-      "labels": [
-        "amd",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 19515,
       "title": "[AMD] Add triggering path for multimodal test in pr-test-amd",
       "author": "yctseng0211",
@@ -118,22 +283,6 @@
       "html_url": "https://github.com/sgl-project/sglang/pull/19515",
       "labels": [
         "amd"
-      ],
-      "draft": false
-    },
-    {
-      "number": 19152,
-      "title": "[Feature] Support offload and wake up of SGLang Diffusion",
-      "author": "klhhhhh",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-22T11:21:53Z",
-      "updated_at": "2026-02-28T04:14:23Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19152",
-      "labels": [
-        "documentation",
-        "run-ci",
-        "diffusion"
       ],
       "draft": false
     },
@@ -179,25 +328,6 @@
         "amd"
       ],
       "draft": true
-    },
-    {
-      "number": 19260,
-      "title": "[AMD] Add suffix decoding support for ROCm and fix non-MLA speculative decoding",
-      "author": "amd-pedghazi",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T18:10:56Z",
-      "updated_at": "2026-02-27T22:18:37Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19260",
-      "labels": [
-        "documentation",
-        "amd",
-        "dependencies",
-        "speculative-decoding",
-        "sgl-kernel",
-        "run-ci"
-      ],
-      "draft": false
     },
     {
       "number": 19122,
@@ -327,29 +457,6 @@
       "draft": false
     },
     {
-      "number": 17996,
-      "title": "[Diffusion] [NPU] Wan2.2-T2V-A14B-Diffusers modelslim quantization support",
-      "author": "OrangeRedeng",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T13:46:06Z",
-      "updated_at": "2026-02-27T11:51:54Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/17996",
-      "labels": [
-        "documentation",
-        "quant",
-        "amd",
-        "dependencies",
-        "Multi-modal",
-        "deepseek",
-        "blackwell",
-        "npu",
-        "diffusion",
-        "model-gateway"
-      ],
-      "draft": false
-    },
-    {
       "number": 13653,
       "title": "[POC] [CI] Setup test suite infrastructure for staged migration",
       "author": "alisonshao",
@@ -438,21 +545,6 @@
       "html_url": "https://github.com/sgl-project/sglang/pull/19203",
       "labels": [
         "amd",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 17374,
-      "title": " [4/N] (Elastic EP) Back up Expert Weights in DRAM",
-      "author": "ympcMark",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-20T02:06:25Z",
-      "updated_at": "2026-02-27T08:06:14Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/17374",
-      "labels": [
-        "documentation",
         "run-ci"
       ],
       "draft": false
@@ -999,37 +1091,6 @@
       "draft": false
     },
     {
-      "number": 18624,
-      "title": "[AMD] DSR1/V3 use fp8 bmm in MLA for MI300X",
-      "author": "zhentaocc",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-11T14:16:38Z",
-      "updated_at": "2026-02-24T23:33:33Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18624",
-      "labels": [
-        "amd",
-        "deepseek",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 18442,
-      "title": "feat: add FA4 SM90 paged KV decode support & update attention docs",
-      "author": "zwang86",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-08T08:53:54Z",
-      "updated_at": "2026-02-24T23:31:07Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18442",
-      "labels": [
-        "documentation",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 19262,
       "title": "Some refactors on nsa_indexer.py",
       "author": "Fridge003",
@@ -1410,20 +1471,6 @@
       "draft": false
     },
     {
-      "number": 18496,
-      "title": "[FIX] Correct JIT kernel compilation on newer GPUs with outdated driver metadata.",
-      "author": "muse-coder",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T16:55:25Z",
-      "updated_at": "2026-02-15T04:14:40Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18496",
-      "labels": [
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 18530,
       "title": "[Diffusion] [AMD] fuse norm & rope for qwen-image",
       "author": "qichu-yun",
@@ -1790,21 +1837,6 @@
       "draft": true
     },
     {
-      "number": 18106,
-      "title": "[AMD] upd aiter: v0.1.10.post1",
-      "author": "HaiShaw",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-02T08:38:59Z",
-      "updated_at": "2026-02-02T08:42:00Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18106",
-      "labels": [
-        "amd",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 18076,
       "title": "[AMD] Fix aiter version in rocm image",
       "author": "yctseng0211",
@@ -1898,20 +1930,6 @@
         "documentation",
         "dependencies",
         "mthreads"
-      ],
-      "draft": false
-    },
-    {
-      "number": 14192,
-      "title": "[ROCm] use flash attention v3 for MHA prefill attention when no soft_cap",
-      "author": "mqhc2020",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-12-01T06:09:56Z",
-      "updated_at": "2026-01-26T05:13:44Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/14192",
-      "labels": [
-        "run-ci"
       ],
       "draft": false
     },

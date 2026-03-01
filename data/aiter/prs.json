@@ -1,6 +1,102 @@
 {
-  "collected_at": "2026-02-28T08:07:05Z",
+  "collected_at": "2026-03-01T08:07:47Z",
   "prs": [
+    {
+      "number": 2139,
+      "title": "[DRAFT]moe lqq test",
+      "author": "feifei14119",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-01T06:33:04Z",
+      "updated_at": "2026-03-01T07:51:53Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2139",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 2121,
+      "title": "[CI] Flash Attention RDNA CI",
+      "author": "micmelesse",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T22:20:21Z",
+      "updated_at": "2026-02-28T20:57:34Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2121",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2138,
+      "title": "Add nhead=8 support for MLA decode via padding to nhead=16",
+      "author": "ClementLinCF",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-28T16:32:07Z",
+      "updated_at": "2026-02-28T16:44:02Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2138",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2027,
+      "title": " Fuse rms rope blk quant kernel",
+      "author": "yzhou103",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-11T08:35:50Z",
+      "updated_at": "2026-02-28T12:18:18Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2027",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2133,
+      "title": "add asm_mla csv",
+      "author": "ljl1302924199",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-28T02:58:53Z",
+      "updated_at": "2026-02-28T12:16:43Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2133",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2137,
+      "title": "[fix]: add ep,pp,dp group interface",
+      "author": "TennyWang1223",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-28T09:07:46Z",
+      "updated_at": "2026-02-28T12:14:22Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2137",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2136,
+      "title": "add mhc_pre hip kernel (mhc_pre_gemm_sqrsum, mhc_pre_big_fuse)",
+      "author": "junhaha666",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-28T08:34:38Z",
+      "updated_at": "2026-02-28T10:22:14Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2136",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 1840,
+      "title": "Fix sliding window mtp",
+      "author": "fsx950223",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-14T10:01:13Z",
+      "updated_at": "2026-02-28T09:47:39Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1840",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 2086,
       "title": "Respect AITER_LOG_LEVEL for C++ stdout prints",
@@ -10,42 +106,6 @@
       "created_at": "2026-02-24T06:55:11Z",
       "updated_at": "2026-02-28T07:49:37Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2086",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2135,
-      "title": "fix(ci): Fix pre-sharded lists issues in Aiter tests",
-      "author": "gyohuangxin",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-28T05:57:25Z",
-      "updated_at": "2026-02-28T07:11:44Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2135",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2104,
-      "title": "fix smoothquant hip kernel exceed int32's maximum.",
-      "author": "rujiacai",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T08:07:33Z",
-      "updated_at": "2026-02-28T07:07:43Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2104",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2128,
-      "title": "fix mla_a8w8_qh64_qseqlen4_gqaratio16_ps kv_len < 4 nan error in MI350",
-      "author": "minmengdie",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T09:10:57Z",
-      "updated_at": "2026-02-28T06:37:38Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2128",
       "labels": [],
       "draft": false
     },
@@ -70,18 +130,6 @@
       "created_at": "2026-02-26T02:50:53Z",
       "updated_at": "2026-02-28T04:28:23Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2113",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2133,
-      "title": "add asm_mla csv",
-      "author": "ljl1302924199",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-28T02:58:53Z",
-      "updated_at": "2026-02-28T02:58:54Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2133",
       "labels": [],
       "draft": false
     },
@@ -118,30 +166,6 @@
       "created_at": "2026-02-24T08:52:11Z",
       "updated_at": "2026-02-28T02:34:21Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2088",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2027,
-      "title": " Fuse rms rope blk quant kernel",
-      "author": "yzhou103",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-11T08:35:50Z",
-      "updated_at": "2026-02-28T02:31:40Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2027",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2105,
-      "title": "mha fwd v3 hdim128 support per tensor fp8 for MI300/MI308",
-      "author": "shay-li77",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T08:16:44Z",
-      "updated_at": "2026-02-28T02:20:14Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2105",
       "labels": [],
       "draft": false
     },
@@ -261,18 +285,6 @@
       "draft": false
     },
     {
-      "number": 1840,
-      "title": "Fix sliding window mtp",
-      "author": "fsx950223",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-14T10:01:13Z",
-      "updated_at": "2026-02-27T09:41:04Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1840",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2085,
       "title": "pa_decode_gluon_aot C++ api",
       "author": "amd-yilizhao",
@@ -305,18 +317,6 @@
       "created_at": "2026-02-26T05:57:57Z",
       "updated_at": "2026-02-27T02:12:55Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2115",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 2121,
-      "title": "[CI] Flash Attention RDNA CI",
-      "author": "micmelesse",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T22:20:21Z",
-      "updated_at": "2026-02-26T22:20:21Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2121",
       "labels": [],
       "draft": true
     },
@@ -1851,6 +1851,66 @@
       "draft": false
     },
     {
+      "number": 2104,
+      "title": "fix smoothquant hip kernel exceed int32's maximum.",
+      "author": "rujiacai",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-25T08:07:33Z",
+      "updated_at": "2026-02-28T14:29:30Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2104",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2024,
+      "title": "[gfx942]Add new GEMM configuration files for DSKR1",
+      "author": "zhentaocc",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-10T18:33:05Z",
+      "updated_at": "2026-02-28T10:39:01Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2024",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2135,
+      "title": "fix(ci): Fix pre-sharded lists issues in Aiter tests",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T05:57:25Z",
+      "updated_at": "2026-02-28T09:41:28Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2135",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2128,
+      "title": "fix mla_a8w8_qh64_qseqlen4_gqaratio16_ps kv_len < 4 nan error in MI350",
+      "author": "minmengdie",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T09:10:57Z",
+      "updated_at": "2026-02-28T09:18:45Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2128",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2105,
+      "title": "mha fwd v3 hdim128 support per tensor fp8 for MI300/MI308",
+      "author": "shay-li77",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-25T08:16:44Z",
+      "updated_at": "2026-02-28T09:18:18Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2105",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 2122,
       "title": "[Triton] Fix triton tests fail due to the API changes from Triton upstream",
       "author": "jwu10003",
@@ -2267,18 +2327,6 @@
       "created_at": "2026-02-24T00:50:10Z",
       "updated_at": "2026-02-24T15:46:30Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2082",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2083,
-      "title": "CI: fix triton commit to c147f098",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-24T03:06:45Z",
-      "updated_at": "2026-02-24T06:40:42Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2083",
       "labels": [],
       "draft": false
     }

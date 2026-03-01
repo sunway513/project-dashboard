@@ -1,6 +1,42 @@
 {
-  "collected_at": "2026-02-28T08:07:10Z",
+  "collected_at": "2026-03-01T08:07:52Z",
   "prs": [
+    {
+      "number": 250,
+      "title": "Fix block allocation for multi-token decode (speculative decoding)",
+      "author": "brucechanglongxu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-01T07:44:20Z",
+      "updated_at": "2026-03-01T07:46:37Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/250",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 249,
+      "title": "Fix typos, dead code, uninitialized variable, and improve error handling",
+      "author": "brucechanglongxu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-01T07:26:41Z",
+      "updated_at": "2026-03-01T07:42:04Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/249",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 248,
+      "title": "[Performance][Qwen3-Next] Fuse causal_conv1d and split_contiguous qkv",
+      "author": "ganyi1996ppo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-01T06:10:20Z",
+      "updated_at": "2026-03-01T06:14:36Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/248",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 126,
       "title": "[1/N][feat] Make ATOM work with vLLM and SGLang",
@@ -8,20 +44,20 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-12T08:50:35Z",
-      "updated_at": "2026-02-28T08:06:59Z",
+      "updated_at": "2026-02-28T13:19:45Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/126",
       "labels": [],
       "draft": false
     },
     {
-      "number": 235,
-      "title": "[Qwen-Next](ci): add qwen next to ci",
-      "author": "PerryZhang01",
+      "number": 244,
+      "title": "[Perf][Qwen3-Next] merge qkvz and ba into qkvzba and add triton sharding kernel",
+      "author": "ganyi1996ppo",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-25T11:52:17Z",
-      "updated_at": "2026-02-28T03:24:30Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/235",
+      "created_at": "2026-02-27T20:56:56Z",
+      "updated_at": "2026-02-28T10:29:52Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/244",
       "labels": [],
       "draft": false
     },
@@ -34,42 +70,6 @@
       "created_at": "2026-02-18T22:01:13Z",
       "updated_at": "2026-02-28T02:40:40Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/223",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 245,
-      "title": "Fix Kimi-K2-Instruct Quark MXFP4",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T22:56:47Z",
-      "updated_at": "2026-02-27T22:56:47Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/245",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 244,
-      "title": "[Perf][Qwen3-Next] merge qkvz and ba into qkvzba and add triton sharding kernel",
-      "author": "ganyi1996ppo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T20:56:56Z",
-      "updated_at": "2026-02-27T21:01:06Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/244",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 242,
-      "title": "[Perf][Qwen3-Next] Fused shared experts for qwen3_next",
-      "author": "ganyi1996ppo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T03:39:00Z",
-      "updated_at": "2026-02-27T11:24:07Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/242",
       "labels": [],
       "draft": false
     },
@@ -406,6 +406,42 @@
       "created_at": "2025-12-09T04:53:20Z",
       "updated_at": "2025-12-09T05:11:55Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/32",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 242,
+      "title": "[Perf][Qwen3-Next] Fused shared experts for qwen3_next",
+      "author": "ganyi1996ppo",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T03:39:00Z",
+      "updated_at": "2026-03-01T07:16:37Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/242",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 245,
+      "title": "Fix Kimi-K2-Instruct Quark MXFP4",
+      "author": "thpereir",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T22:56:47Z",
+      "updated_at": "2026-02-28T14:56:44Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/245",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 235,
+      "title": "[Qwen-Next](ci): add qwen next to ci",
+      "author": "PerryZhang01",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-25T11:52:17Z",
+      "updated_at": "2026-02-28T12:09:59Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/235",
       "labels": [],
       "draft": false
     },
@@ -1452,54 +1488,6 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/75",
       "labels": [],
       "draft": false
-    },
-    {
-      "number": 128,
-      "title": "Ps gluon update",
-      "author": "gbyu-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T15:07:31Z",
-      "updated_at": "2026-01-12T15:25:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/128",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 125,
-      "title": "CI: Enhance the docker release pipeline",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T06:50:27Z",
-      "updated_at": "2026-01-12T07:03:06Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/125",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 122,
-      "title": "Update atom_test.sh",
-      "author": "valarLip",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-10T08:22:20Z",
-      "updated_at": "2026-01-10T15:36:00Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/122",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 224,
-      "title": "Add Dockerfile.clean + fix linear.py shard_offset bug",
-      "author": "sunway513",
-      "state": "closed",
-      "merged": false,
-      "created_at": "2026-02-19T06:24:19Z",
-      "updated_at": "2026-02-20T16:46:17Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/224",
-      "labels": [],
-      "draft": true
     }
   ]
 }

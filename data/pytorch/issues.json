@@ -1,6 +1,90 @@
 {
-  "collected_at": "2026-02-28T08:05:55Z",
+  "collected_at": "2026-03-01T08:06:42Z",
   "issues": [
+    {
+      "number": 176078,
+      "title": "custom_op with mutable optional arguments",
+      "author": "ngc92",
+      "state": "open",
+      "created_at": "2026-03-01T00:01:52Z",
+      "updated_at": "2026-03-01T00:06:22Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/176078",
+      "labels": [
+        "triaged",
+        "module: python frontend",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 176077,
+      "title": "`torch.vmap(torch.compile(jvp_fn, fullgraph=True))` fails with `Unsupported functorch tracing attempt`",
+      "author": "tristancinquin",
+      "state": "open",
+      "created_at": "2026-02-28T20:47:57Z",
+      "updated_at": "2026-02-28T20:48:01Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/176077",
+      "labels": [
+        "oncall: pt2"
+      ]
+    },
+    {
+      "number": 176076,
+      "title": "A portion of shared parameter is not being update when sharding is uneven over FSDP2",
+      "author": "f14-bertolotti",
+      "state": "open",
+      "created_at": "2026-02-28T18:40:36Z",
+      "updated_at": "2026-02-28T18:42:01Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/176076",
+      "labels": [
+        "oncall: distributed",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 173125,
+      "title": "Seq Faults after update [gfx1151]",
+      "author": "richardlayman",
+      "state": "open",
+      "created_at": "2026-01-23T00:48:04Z",
+      "updated_at": "2026-02-28T17:20:36Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/173125",
+      "labels": [
+        "module: rocm",
+        "triaged"
+      ]
+    },
+    {
+      "number": 174949,
+      "title": "[vllm] CUBLAS_STATUS_INVALID_VALUE in cublasGemmEx after upgrading to PyTorch 2.10",
+      "author": "ZJY0516",
+      "state": "open",
+      "created_at": "2026-02-13T07:20:37Z",
+      "updated_at": "2026-02-28T16:11:28Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/174949",
+      "labels": [
+        "module: cuda",
+        "triaged",
+        "module: cublas",
+        "module: vllm"
+      ]
+    },
+    {
+      "number": 176074,
+      "title": "DISABLED test_index_reduce_reduce_prod_mps_int32 (__main__.TestIndexingMPS)",
+      "author": "malfet",
+      "state": "open",
+      "created_at": "2026-02-28T15:47:07Z",
+      "updated_at": "2026-02-28T15:48:27Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/176074",
+      "labels": [
+        "module: tests",
+        "triaged",
+        "module: macos",
+        "skipped",
+        "module: mps",
+        "bot-triaged"
+      ]
+    },
     {
       "number": 173315,
       "title": "[cuda] Numerical Inconsistency: NaN in Eager CUDA vs Valid Output in Compiled CPU for nn.LSTM",
@@ -374,56 +458,6 @@
       ]
     },
     {
-      "number": 175866,
-      "title": "Padding for Nested Long Tensor loses precision",
-      "author": "sumitbinnani",
-      "state": "open",
-      "created_at": "2026-02-26T16:24:49Z",
-      "updated_at": "2026-02-27T14:22:51Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175866",
-      "labels": [
-        "triage review",
-        "module: nestedtensor",
-        "module: correctness (silent)",
-        "module: padding",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 139500,
-      "title": "Custom operators registered via decorator slower than ops registered via `torch.Library.{define, impl}`",
-      "author": "bnellnm",
-      "state": "open",
-      "created_at": "2024-11-01T18:18:19Z",
-      "updated_at": "2026-02-27T12:50:04Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/139500",
-      "labels": [
-        "high priority",
-        "triaged",
-        "module: custom-operators",
-        "actionable",
-        "oncall: pt2",
-        "module: pt2-dispatcher",
-        "vllm-compile",
-        "dynamo-triage-jan2025",
-        "module: vllm"
-      ]
-    },
-    {
-      "number": 174272,
-      "title": "BiLSTM is unexportable to ONNX with dynamic shapes",
-      "author": "DLumi",
-      "state": "open",
-      "created_at": "2026-02-04T10:43:42Z",
-      "updated_at": "2026-02-27T12:38:49Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/174272",
-      "labels": [
-        "oncall: pt2",
-        "oncall: export",
-        "bot-triaged"
-      ]
-    },
-    {
       "number": 170398,
       "title": "torch.compile regression 2.9.1: Triton kernel name '_Runner__kernel_name_0' is not defined",
       "author": "dxqb",
@@ -466,22 +500,6 @@
         "oncall: distributed",
         "module: c10d",
         "module: cuda graphs"
-      ]
-    },
-    {
-      "number": 175950,
-      "title": "DISABLED test_fake_device (__main__.FakeTensorTest)",
-      "author": "etaf",
-      "state": "open",
-      "created_at": "2026-02-27T06:34:16Z",
-      "updated_at": "2026-02-27T06:35:44Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/175950",
-      "labels": [
-        "module: tests",
-        "triaged",
-        "skipped",
-        "module: xpu",
-        "bot-triaged"
       ]
     },
     {
@@ -691,19 +709,6 @@
         "upstream triton",
         "module: floatx (formerly float8)",
         "bot-triaged"
-      ]
-    },
-    {
-      "number": 173125,
-      "title": "Seq Faults after update [gfx1151]",
-      "author": "richardlayman",
-      "state": "open",
-      "created_at": "2026-01-23T00:48:04Z",
-      "updated_at": "2026-02-24T23:49:42Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/173125",
-      "labels": [
-        "module: rocm",
-        "triaged"
       ]
     },
     {
