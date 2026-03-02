@@ -1,6 +1,18 @@
 {
-  "collected_at": "2026-03-01T08:07:52Z",
+  "collected_at": "2026-03-02T08:14:49Z",
   "prs": [
+    {
+      "number": 244,
+      "title": "[Perf][Qwen3-Next] merge qkvz and ba into qkvzba and add triton sharding kernel",
+      "author": "ganyi1996ppo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T20:56:56Z",
+      "updated_at": "2026-03-02T06:54:20Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/244",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 250,
       "title": "Fix block allocation for multi-token decode (speculative decoding)",
@@ -8,8 +20,32 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-01T07:44:20Z",
-      "updated_at": "2026-03-01T07:46:37Z",
+      "updated_at": "2026-03-02T03:24:17Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/250",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 248,
+      "title": "[Performance][Qwen3-Next] Fuse causal_conv1d and split_contiguous qkv",
+      "author": "ganyi1996ppo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-01T06:10:20Z",
+      "updated_at": "2026-03-02T01:50:43Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/248",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 126,
+      "title": "[1/N][feat] Make ATOM work with vLLM and SGLang",
+      "author": "zejunchen-zejun",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-12T08:50:35Z",
+      "updated_at": "2026-03-01T14:53:31Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/126",
       "labels": [],
       "draft": false
     },
@@ -22,42 +58,6 @@
       "created_at": "2026-03-01T07:26:41Z",
       "updated_at": "2026-03-01T07:42:04Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/249",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 248,
-      "title": "[Performance][Qwen3-Next] Fuse causal_conv1d and split_contiguous qkv",
-      "author": "ganyi1996ppo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-01T06:10:20Z",
-      "updated_at": "2026-03-01T06:14:36Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/248",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 126,
-      "title": "[1/N][feat] Make ATOM work with vLLM and SGLang",
-      "author": "zejunchen-zejun",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-12T08:50:35Z",
-      "updated_at": "2026-02-28T13:19:45Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/126",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 244,
-      "title": "[Perf][Qwen3-Next] merge qkvz and ba into qkvzba and add triton sharding kernel",
-      "author": "ganyi1996ppo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T20:56:56Z",
-      "updated_at": "2026-02-28T10:29:52Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/244",
       "labels": [],
       "draft": false
     },
@@ -192,18 +192,6 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/226",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 222,
-      "title": "Fix prefix caching crash: recalculate num_new_tokens after block allocation",
-      "author": "ChuanLi1101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-17T05:25:39Z",
-      "updated_at": "2026-02-18T05:16:38Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/222",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 218,
@@ -406,6 +394,30 @@
       "created_at": "2025-12-09T04:53:20Z",
       "updated_at": "2025-12-09T05:11:55Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/32",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 251,
+      "title": "CI: Fix issues in ATOM nightly benchmark",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T02:53:07Z",
+      "updated_at": "2026-03-02T06:05:55Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/251",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 222,
+      "title": "Fix prefix caching crash: recalculate num_new_tokens after block allocation",
+      "author": "ChuanLi1101",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-17T05:25:39Z",
+      "updated_at": "2026-03-01T17:23:38Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/222",
       "labels": [],
       "draft": false
     },
@@ -1462,30 +1474,6 @@
       "created_at": "2026-01-07T01:50:54Z",
       "updated_at": "2026-01-13T09:48:38Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/114",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 131,
-      "title": "CI: Fix the docker relase pipeline",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-13T02:30:57Z",
-      "updated_at": "2026-01-13T02:33:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/131",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 75,
-      "title": "llfp4 fail temporary workaround",
-      "author": "amirumoAMD",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-18T16:39:17Z",
-      "updated_at": "2026-01-12T17:43:04Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/75",
       "labels": [],
       "draft": false
     }

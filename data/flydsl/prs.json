@@ -1,41 +1,29 @@
 {
-  "collected_at": "2026-03-01T08:07:57Z",
+  "collected_at": "2026-03-02T08:14:54Z",
   "prs": [
     {
-      "number": 160,
-      "title": "Pr/v0.1",
-      "author": "coderfeli",
+      "number": 165,
+      "title": "Add fused GDR decode",
+      "author": "huizzhan",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-28T08:51:15Z",
-      "updated_at": "2026-03-01T06:45:50Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/160",
+      "created_at": "2026-03-02T07:07:34Z",
+      "updated_at": "2026-03-02T07:52:57Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/165",
       "labels": [],
-      "draft": false
+      "draft": true
     },
     {
-      "number": 143,
-      "title": "W4a16 bf16 fp8 bf16 moe",
-      "author": "ClementLinCF",
+      "number": 163,
+      "title": "Dev/yadai uint4 moe refactor",
+      "author": "yadaish",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-23T06:47:17Z",
-      "updated_at": "2026-02-28T11:07:54Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
+      "created_at": "2026-03-02T05:35:54Z",
+      "updated_at": "2026-03-02T07:26:16Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/163",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 161,
-      "title": "[Pass][gpu-stream-inject] Add fly-gpu-stream-inject pass",
-      "author": "jli-melchior",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-28T09:20:26Z",
-      "updated_at": "2026-02-28T10:54:27Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/161",
-      "labels": [],
-      "draft": false
+      "draft": true
     },
     {
       "number": 148,
@@ -44,10 +32,34 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-25T00:07:59Z",
-      "updated_at": "2026-02-28T04:25:09Z",
+      "updated_at": "2026-03-02T07:25:54Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/148",
       "labels": [],
       "draft": false
+    },
+    {
+      "number": 164,
+      "title": "Pr/v0.1",
+      "author": "coderfeli",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T06:25:52Z",
+      "updated_at": "2026-03-02T07:02:34Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/164",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 99,
+      "title": "[GEMM MOE] reconstruction for mxfp4 pipeline merge",
+      "author": "Zzz9990",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-06T07:02:20Z",
+      "updated_at": "2026-03-02T00:33:44Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/99",
+      "labels": [],
+      "draft": true
     },
     {
       "number": 151,
@@ -56,20 +68,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-27T00:55:50Z",
-      "updated_at": "2026-02-27T00:56:59Z",
+      "updated_at": "2026-03-02T00:32:10Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/151",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 144,
-      "title": "fix all copyright & license headers & add lint",
-      "author": "JackWolfard",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T10:03:04Z",
-      "updated_at": "2026-02-23T10:05:37Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/144",
       "labels": [],
       "draft": false
     },
@@ -86,16 +86,28 @@
       "draft": true
     },
     {
-      "number": 99,
-      "title": "[GEMM MOE] reconstruction for mxfp4 pipeline merge",
-      "author": "Zzz9990",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-06T07:02:20Z",
-      "updated_at": "2026-02-11T14:49:09Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/99",
+      "number": 143,
+      "title": "W4a16 bf16 fp8 bf16 moe",
+      "author": "ClementLinCF",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-23T06:47:17Z",
+      "updated_at": "2026-03-02T06:31:45Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
       "labels": [],
-      "draft": true
+      "draft": false
+    },
+    {
+      "number": 161,
+      "title": "[Pass][fly-gpu-to-llvm]  Add fly-gpu-to-llvm pass to preserve asyncObject for graph capture",
+      "author": "jli-melchior",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T09:20:26Z",
+      "updated_at": "2026-03-02T06:08:08Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/161",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 139,
@@ -824,54 +836,6 @@
       "created_at": "2026-01-14T03:12:02Z",
       "updated_at": "2026-01-14T10:00:28Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/57",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 53,
-      "title": "fix unknow/zero rank error",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T07:38:20Z",
-      "updated_at": "2026-01-12T14:43:06Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/53",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 55,
-      "title": "Hot fix ci2",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T08:51:05Z",
-      "updated_at": "2026-01-12T14:43:04Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/55",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 56,
-      "title": "change bench config",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T11:38:09Z",
-      "updated_at": "2026-01-12T14:43:02Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/56",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 52,
-      "title": "add mfma_scale instruction and cshuffle opt for MI355",
-      "author": "zhiding512",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T07:18:54Z",
-      "updated_at": "2026-01-12T14:41:33Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/52",
       "labels": [],
       "draft": false
     }
