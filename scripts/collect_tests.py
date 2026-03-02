@@ -85,6 +85,13 @@ WORKFLOWS = {
             "job_filter": "GPU L4",
         },
     },
+    "transformer_engine": {
+        "rocm": {
+            "workflow_id": 199915540,
+            "name": "TransformerEngine CI",
+        },
+        # No CUDA workflow available - ROCm-only project
+    },
 }
 
 
@@ -470,7 +477,10 @@ def collect_job_level(project_name, cfg):
     result = {"collected_at": now_iso(), "source": "automated"}
 
     for platform in ("rocm", "cuda"):
-        wf_cfg = WORKFLOWS[project_name][platform]
+        wf_cfg = WORKFLOWS[project_name].get(platform)
+        if not wf_cfg:
+            result[platform] = None
+            continue
         wf_id = wf_cfg["workflow_id"]
         wf_name = wf_cfg["name"]
         job_filter = wf_cfg.get("job_filter")
@@ -617,6 +627,7 @@ AUTOMATED_PROJECTS = {
     "triton": lambda cfg: collect_job_level("triton", cfg),
     "jax": lambda cfg: collect_job_level("jax", cfg),
     "xla": lambda cfg: collect_job_level("xla", cfg),
+    "transformer_engine": lambda cfg: collect_job_level("transformer_engine", cfg),
 }
 
 MANUAL_PROJECTS = ["vllm"]
