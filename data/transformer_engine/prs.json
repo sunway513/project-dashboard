@@ -1,6 +1,54 @@
 {
-  "collected_at": "2026-03-02T12:06:40Z",
+  "collected_at": "2026-03-03T08:13:06Z",
   "prs": [
+    {
+      "number": 460,
+      "title": "IFU v2.10",
+      "author": "alextmagro",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T15:49:12Z",
+      "updated_at": "2026-03-03T06:19:18Z",
+      "html_url": "https://github.com/ROCm/TransformerEngine/pull/460",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 468,
+      "title": "Use static libraries for AITER build",
+      "author": "Micky774",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T21:50:32Z",
+      "updated_at": "2026-03-02T22:27:45Z",
+      "html_url": "https://github.com/ROCm/TransformerEngine/pull/468",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 434,
+      "title": "Grouped GEMM with ck_tile",
+      "author": "matthiasdiener",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-28T15:49:27Z",
+      "updated_at": "2026-03-02T20:22:18Z",
+      "html_url": "https://github.com/ROCm/TransformerEngine/pull/434",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 467,
+      "title": "Check only major ROCm version on load",
+      "author": "ipanfilo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T17:29:59Z",
+      "updated_at": "2026-03-02T17:31:00Z",
+      "html_url": "https://github.com/ROCm/TransformerEngine/pull/467",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 461,
       "title": "[NO MERGE] Integrate CK varlen cross attention for small-seq (s_q=1, s_kv<=16)",
@@ -8,20 +56,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-24T20:34:49Z",
-      "updated_at": "2026-03-02T02:13:11Z",
+      "updated_at": "2026-03-02T15:08:36Z",
       "html_url": "https://github.com/ROCm/TransformerEngine/pull/461",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 466,
-      "title": "Add ROCm mismatch bypass env flag",
-      "author": "jiagaoxiang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-28T00:06:25Z",
-      "updated_at": "2026-02-28T09:27:57Z",
-      "html_url": "https://github.com/ROCm/TransformerEngine/pull/466",
       "labels": [],
       "draft": false
     },
@@ -62,30 +98,6 @@
       "draft": false
     },
     {
-      "number": 434,
-      "title": "Grouped GEMM with ck_tile",
-      "author": "matthiasdiener",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-28T15:49:27Z",
-      "updated_at": "2026-02-27T20:46:45Z",
-      "html_url": "https://github.com/ROCm/TransformerEngine/pull/434",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 463,
-      "title": "Release 2.6 fix: cuda graph dropout accuracy ",
-      "author": "Micky774",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T21:16:52Z",
-      "updated_at": "2026-02-27T17:51:38Z",
-      "html_url": "https://github.com/ROCm/TransformerEngine/pull/463",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 459,
       "title": "Always use V2 hipify. Make all hipify results consistent",
       "author": "ipanfilo",
@@ -94,18 +106,6 @@
       "created_at": "2026-02-24T04:21:54Z",
       "updated_at": "2026-02-27T02:27:36Z",
       "html_url": "https://github.com/ROCm/TransformerEngine/pull/459",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 460,
-      "title": "IFU v2.10",
-      "author": "alextmagro",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T15:49:12Z",
-      "updated_at": "2026-02-27T02:19:52Z",
-      "html_url": "https://github.com/ROCm/TransformerEngine/pull/460",
       "labels": [],
       "draft": false
     },
@@ -274,6 +274,18 @@
       "created_at": "2025-03-19T09:19:05Z",
       "updated_at": "2025-08-27T14:47:57Z",
       "html_url": "https://github.com/ROCm/TransformerEngine/pull/152",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 463,
+      "title": "Release 2.6 fix: cuda graph dropout accuracy ",
+      "author": "Micky774",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-25T21:16:52Z",
+      "updated_at": "2026-03-02T15:20:33Z",
+      "html_url": "https://github.com/ROCm/TransformerEngine/pull/463",
       "labels": [],
       "draft": false
     },
@@ -1234,30 +1246,6 @@
       "created_at": "2025-11-05T16:44:02Z",
       "updated_at": "2025-11-10T16:37:22Z",
       "html_url": "https://github.com/ROCm/TransformerEngine/pull/362",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 365,
-      "title": "Relax tolerance to pass 29x29x17389NT GEMM on MI350",
-      "author": "ipanfilo",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-07T04:48:50Z",
-      "updated_at": "2025-11-08T00:48:12Z",
-      "html_url": "https://github.com/ROCm/TransformerEngine/pull/365",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 366,
-      "title": "CI: allow numpy 2.0",
-      "author": "ipanfilo",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-07T05:09:39Z",
-      "updated_at": "2025-11-07T17:52:27Z",
-      "html_url": "https://github.com/ROCm/TransformerEngine/pull/366",
       "labels": [],
       "draft": false
     }

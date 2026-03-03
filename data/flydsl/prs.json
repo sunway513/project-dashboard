@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-02T12:06:34Z",
+  "collected_at": "2026-03-03T08:13:04Z",
   "prs": [
     {
       "number": 164,
@@ -8,8 +8,20 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-02T06:25:52Z",
-      "updated_at": "2026-03-02T11:58:06Z",
+      "updated_at": "2026-03-03T07:54:59Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/164",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 151,
+      "title": "Add decode-phase Flash Attention kernel",
+      "author": "ChuanLi1101",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-27T00:55:50Z",
+      "updated_at": "2026-03-03T06:36:50Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/151",
       "labels": [],
       "draft": false
     },
@@ -38,18 +50,6 @@
       "draft": true
     },
     {
-      "number": 151,
-      "title": "Add decode-phase Flash Attention kernel",
-      "author": "ChuanLi1101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T00:55:50Z",
-      "updated_at": "2026-03-02T00:32:10Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/151",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 133,
       "title": "Add Flash Attention forward kernel with MFMA32 register pipeline",
       "author": "yanguahe",
@@ -62,14 +62,146 @@
       "draft": true
     },
     {
-      "number": 143,
-      "title": "W4a16 bf16 fp8 bf16 moe",
-      "author": "ClementLinCF",
+      "number": 168,
+      "title": "[Compiler][CacheKey] improve JIT cache key to hash entire compiler to\u2026",
+      "author": "jli-melchior",
       "state": "closed",
       "merged": true,
-      "created_at": "2026-02-23T06:47:17Z",
-      "updated_at": "2026-03-02T06:31:45Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
+      "created_at": "2026-03-03T07:18:46Z",
+      "updated_at": "2026-03-03T07:54:57Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/168",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 167,
+      "title": "So/a8w8 bpreshuffle",
+      "author": "solinzby1",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-03T05:33:18Z",
+      "updated_at": "2026-03-03T07:52:58Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/167",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 154,
+      "title": "add compile only and dumpir",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T03:06:37Z",
+      "updated_at": "2026-03-03T06:16:05Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/154",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 111,
+      "title": "CI: Use new label of FlyDSL runners",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-09T02:40:43Z",
+      "updated_at": "2026-03-03T06:15:43Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/111",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 140,
+      "title": "fix(build): dereference MLIR symlinks in build output",
+      "author": "sunway513",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-21T15:59:15Z",
+      "updated_at": "2026-03-03T06:15:34Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/140",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 146,
+      "title": "moe gemm stage2 atomics fp32",
+      "author": "yadaish",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-24T00:48:54Z",
+      "updated_at": "2026-03-03T06:15:34Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/146",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 145,
+      "title": "Pre v0.1 gemm",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-23T14:46:02Z",
+      "updated_at": "2026-03-03T06:15:32Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/145",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 153,
+      "title": "Pre v0.1 gemm fix",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T06:41:53Z",
+      "updated_at": "2026-03-03T06:15:31Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 128,
+      "title": "[FLYDSL]: add recast_layout op",
+      "author": "xudoyuan",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-12T07:09:34Z",
+      "updated_at": "2026-03-03T06:15:31Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/128",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 158,
+      "title": "use abs import for correct importing kernels from wheel",
+      "author": "lalala-sh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T08:12:04Z",
+      "updated_at": "2026-03-03T06:15:22Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/158",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 159,
+      "title": "change comments",
+      "author": "lalala-sh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T08:14:32Z",
+      "updated_at": "2026-03-03T06:15:21Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/159",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 152,
+      "title": "[Tool][fly-opt] Add fly-opt tool and lit-based test suite",
+      "author": "jli-melchior",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T02:19:55Z",
+      "updated_at": "2026-03-03T06:15:19Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/152",
       "labels": [],
       "draft": false
     },
@@ -80,8 +212,32 @@
       "state": "closed",
       "merged": true,
       "created_at": "2026-02-28T09:20:26Z",
-      "updated_at": "2026-03-02T06:08:08Z",
+      "updated_at": "2026-03-03T06:15:16Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/161",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 118,
+      "title": "rebase smooth_quant int8 to main branch",
+      "author": "yadaish",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-10T04:43:19Z",
+      "updated_at": "2026-03-03T06:14:52Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/118",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 155,
+      "title": "add AOT pre-compilation example for MOE kernels",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-28T04:19:45Z",
+      "updated_at": "2026-03-03T06:14:47Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/155",
       "labels": [],
       "draft": false
     },
@@ -92,8 +248,20 @@
       "state": "closed",
       "merged": true,
       "created_at": "2026-02-20T06:34:18Z",
-      "updated_at": "2026-03-01T07:17:55Z",
+      "updated_at": "2026-03-03T06:14:46Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/139",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 143,
+      "title": "W4a16 bf16 fp8 bf16 moe",
+      "author": "ClementLinCF",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-23T06:47:17Z",
+      "updated_at": "2026-03-03T06:14:44Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
       "labels": [],
       "draft": false
     },
@@ -124,30 +292,6 @@
       "draft": false
     },
     {
-      "number": 152,
-      "title": "[Tool][fly-opt] Add fly-opt tool and lit-based test suite",
-      "author": "jli-melchior",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-27T02:19:55Z",
-      "updated_at": "2026-03-01T06:45:50Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/152",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 158,
-      "title": "use abs import for correct importing kernels from wheel",
-      "author": "lalala-sh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-28T08:12:04Z",
-      "updated_at": "2026-03-01T06:27:38Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/158",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 150,
       "title": "Add TiledCopy and Mma",
       "author": "sjfeng1999",
@@ -156,30 +300,6 @@
       "created_at": "2026-02-26T08:58:25Z",
       "updated_at": "2026-02-28T09:50:44Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/150",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 155,
-      "title": "add AOT pre-compilation example for MOE kernels",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-28T04:19:45Z",
-      "updated_at": "2026-02-28T09:15:22Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/155",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 159,
-      "title": "change comments",
-      "author": "lalala-sh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-28T08:14:32Z",
-      "updated_at": "2026-02-28T09:14:11Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/159",
       "labels": [],
       "draft": false
     },
@@ -196,42 +316,6 @@
       "draft": false
     },
     {
-      "number": 154,
-      "title": "add compile only and dumpir",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-28T03:06:37Z",
-      "updated_at": "2026-02-28T03:30:15Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/154",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 153,
-      "title": "Pre v0.1 gemm fix",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-27T06:41:53Z",
-      "updated_at": "2026-02-27T09:25:07Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 128,
-      "title": "[FLYDSL]: add recast_layout op",
-      "author": "xudoyuan",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-12T07:09:34Z",
-      "updated_at": "2026-02-26T05:45:22Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/128",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 149,
       "title": "Update README.md MLIR_PATH path",
       "author": "jundaf2",
@@ -244,18 +328,6 @@
       "draft": false
     },
     {
-      "number": 146,
-      "title": "moe gemm stage2 atomics fp32",
-      "author": "yadaish",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-24T00:48:54Z",
-      "updated_at": "2026-02-25T11:23:34Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/146",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 147,
       "title": "[Pytest] Fix assertion in `test_gpu_with_rocir_coords.py` ",
       "author": "sammysun0711",
@@ -264,30 +336,6 @@
       "created_at": "2026-02-24T15:00:51Z",
       "updated_at": "2026-02-25T11:21:17Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/147",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 145,
-      "title": "Pre v0.1 gemm",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-23T14:46:02Z",
-      "updated_at": "2026-02-25T11:18:08Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/145",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 140,
-      "title": "fix(build): dereference MLIR symlinks in build output",
-      "author": "sunway513",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-21T15:59:15Z",
-      "updated_at": "2026-02-25T08:21:41Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/140",
       "labels": [],
       "draft": false
     },
@@ -390,18 +438,6 @@
       "draft": false
     },
     {
-      "number": 118,
-      "title": "rebase smooth_quant int8 to main branch",
-      "author": "yadaish",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-10T04:43:19Z",
-      "updated_at": "2026-02-12T01:44:34Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/118",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 123,
       "title": "support mi308 async load and fix bug",
       "author": "yadaish",
@@ -482,18 +518,6 @@
       "created_at": "2026-02-09T11:36:17Z",
       "updated_at": "2026-02-10T02:28:33Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/115",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 111,
-      "title": "CI: Use new label of FlyDSL runners",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T02:40:43Z",
-      "updated_at": "2026-02-09T14:18:32Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/111",
       "labels": [],
       "draft": false
     },

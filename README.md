@@ -1,21 +1,21 @@
 # Project Dashboard
 
-Auto-updated tracking of AMD GPU ecosystem projects. Last updated: **2026-03-02 12:08 UTC**
+Auto-updated tracking of AMD GPU ecosystem projects. Last updated: **2026-03-03 08:14 UTC**
 
 ## Overview
 
 | Project | Role | Latest Release | Open PRs | Open Issues | Links |
 |---------|------|----------------|----------|-------------|-------|
-| **pytorch** | watch | v2.10.0 | 54 | 58 | [repo](https://github.com/pytorch/pytorch) |
-| **jax** | watch | jax-v0.9.1 | 15 | 33 | [repo](https://github.com/jax-ml/jax) |
-| **vllm** | watch | v0.16.0 | 72 | 50 | [repo](https://github.com/vllm-project/vllm) / [fork](https://github.com/sunway513/vllm) |
-| **sglang** | watch | v0.5.9 | 61 | 40 | [repo](https://github.com/sgl-project/sglang) |
-| **xla** | watch | - | 32 | 9 | [repo](https://github.com/openxla/xla) |
-| **triton** | watch | v3.6.0 | 30 | 13 | [repo](https://github.com/triton-lang/triton) |
-| **migraphx** | dev | rocm-7.2.0 | 89 | 236 | [repo](https://github.com/ROCm/AMDMIGraphX) |
-| **aiter** | dev | v0.1.9 | 153 | 99 | [repo](https://github.com/ROCm/aiter) / [fork](https://github.com/sunway513/aiter) |
-| **atom** | dev | - | 35 | 12 | [repo](https://github.com/ROCm/ATOM) / [fork](https://github.com/sunway513/ATOM) |
-| **mori** | dev | - | 10 | 10 | [repo](https://github.com/ROCm/mori) / [fork](https://github.com/sunway513/mori) |
+| **pytorch** | watch | v2.10.0 | 55 | 53 | [repo](https://github.com/pytorch/pytorch) |
+| **jax** | watch | jax-v0.9.1 | 16 | 33 | [repo](https://github.com/jax-ml/jax) |
+| **vllm** | watch | v0.16.0 | 72 | 46 | [repo](https://github.com/vllm-project/vllm) / [fork](https://github.com/sunway513/vllm) |
+| **sglang** | watch | v0.5.9 | 60 | 41 | [repo](https://github.com/sgl-project/sglang) |
+| **xla** | watch | - | 30 | 1 | [repo](https://github.com/openxla/xla) |
+| **triton** | watch | v3.6.0 | - | - | [repo](https://github.com/triton-lang/triton) |
+| **migraphx** | dev | rocm-7.2.0 | 88 | 236 | [repo](https://github.com/ROCm/AMDMIGraphX) |
+| **aiter** | dev | v0.1.9 | 150 | 100 | [repo](https://github.com/ROCm/aiter) / [fork](https://github.com/sunway513/aiter) |
+| **atom** | dev | - | 34 | 13 | [repo](https://github.com/ROCm/ATOM) / [fork](https://github.com/sunway513/ATOM) |
+| **mori** | dev | - | 9 | 10 | [repo](https://github.com/ROCm/mori) / [fork](https://github.com/sunway513/mori) |
 | **flydsl** | dev | exp_i8smooth_v0.1 | 5 | 10 | [repo](https://github.com/ROCm/FlyDSL) / [fork](https://github.com/sunway513/FlyDSL) |
 | **transformer_engine** | dev | v2.4_rocm | 23 | 7 | [repo](https://github.com/ROCm/TransformerEngine) |
 

@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-02T12:06:18Z",
+  "collected_at": "2026-03-03T08:12:59Z",
   "prs": [
     {
       "number": 253,
@@ -8,32 +8,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-02T11:38:33Z",
-      "updated_at": "2026-03-02T11:47:05Z",
+      "updated_at": "2026-03-03T08:11:20Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/253",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 244,
-      "title": "[Perf][Qwen3-Next] merge qkvz and ba into qkvzba and add triton sharding kernel",
-      "author": "ganyi1996ppo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T20:56:56Z",
-      "updated_at": "2026-03-02T11:22:22Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/244",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 252,
-      "title": "CI: Add more tests in nigthly benchmark",
-      "author": "gyohuangxin",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T09:42:02Z",
-      "updated_at": "2026-03-02T10:07:14Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/252",
       "labels": [],
       "draft": false
     },
@@ -44,8 +20,32 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-12T08:50:35Z",
-      "updated_at": "2026-03-02T09:37:24Z",
+      "updated_at": "2026-03-03T07:06:03Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/126",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 254,
+      "title": "Mtp draft fix",
+      "author": "valarLip",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T16:41:07Z",
+      "updated_at": "2026-03-03T04:01:41Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/254",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 248,
+      "title": "[Performance][Qwen3-Next] Fuse causal_conv1d and split_contiguous qkv",
+      "author": "ganyi1996ppo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-01T06:10:20Z",
+      "updated_at": "2026-03-02T13:36:38Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/248",
       "labels": [],
       "draft": false
     },
@@ -58,18 +58,6 @@
       "created_at": "2026-03-01T07:44:20Z",
       "updated_at": "2026-03-02T03:24:17Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/250",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 248,
-      "title": "[Performance][Qwen3-Next] Fuse causal_conv1d and split_contiguous qkv",
-      "author": "ganyi1996ppo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-01T06:10:20Z",
-      "updated_at": "2026-03-02T01:50:43Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/248",
       "labels": [],
       "draft": false
     },
@@ -418,6 +406,42 @@
       "created_at": "2025-12-09T04:53:20Z",
       "updated_at": "2025-12-09T05:11:55Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/32",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 256,
+      "title": "CI: Fix parameters issues in ATOM nightly benchmark",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-03T02:39:21Z",
+      "updated_at": "2026-03-03T03:29:57Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/256",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 252,
+      "title": "CI: Add more tests in nigthly benchmark",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T09:42:02Z",
+      "updated_at": "2026-03-02T15:21:31Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/252",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 244,
+      "title": "[Perf][Qwen3-Next] merge qkvz and ba into qkvzba and add triton sharding kernel",
+      "author": "ganyi1996ppo",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T20:56:56Z",
+      "updated_at": "2026-03-02T12:58:02Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/244",
       "labels": [],
       "draft": false
     },
@@ -1462,42 +1486,6 @@
       "created_at": "2026-01-12T02:29:16Z",
       "updated_at": "2026-01-14T05:14:53Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/124",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 137,
-      "title": "adapt for upstream gluon pa",
-      "author": "Bernard-Liu",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-14T04:08:02Z",
-      "updated_at": "2026-01-14T05:11:28Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/137",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 135,
-      "title": "CI: Fix CI issues",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-13T17:45:57Z",
-      "updated_at": "2026-01-13T17:48:21Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/135",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 114,
-      "title": "Fix torch 2.9 rlock error in torch compile",
-      "author": "ZhangLirong-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-07T01:50:54Z",
-      "updated_at": "2026-01-13T09:48:38Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/114",
       "labels": [],
       "draft": false
     }
