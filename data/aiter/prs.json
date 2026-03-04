@@ -1,18 +1,6 @@
 {
-  "collected_at": "2026-03-03T08:12:55Z",
+  "collected_at": "2026-03-04T08:11:20Z",
   "prs": [
-    {
-      "number": 2039,
-      "title": "Introduce HipKittens based nhead=128 MLA Kernel",
-      "author": "ruanjm",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T04:14:56Z",
-      "updated_at": "2026-03-03T07:16:12Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2039",
-      "labels": [],
-      "draft": false
-    },
     {
       "number": 2027,
       "title": " Fuse rms rope blk quant kernel",
@@ -20,20 +8,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-11T08:35:50Z",
-      "updated_at": "2026-03-03T07:13:37Z",
+      "updated_at": "2026-03-04T08:08:05Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2027",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2018,
-      "title": "feat(ck_tile): add a8w8 blockscale gemm with preshuffleQuant support",
-      "author": "amd-khushbu",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-10T07:24:56Z",
-      "updated_at": "2026-03-03T06:40:30Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2018",
       "labels": [],
       "draft": false
     },
@@ -44,10 +20,58 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-14T10:01:13Z",
-      "updated_at": "2026-03-03T06:06:20Z",
+      "updated_at": "2026-03-04T07:51:29Z",
       "html_url": "https://github.com/ROCm/aiter/pull/1840",
       "labels": [],
       "draft": false
+    },
+    {
+      "number": 2169,
+      "title": "Walk around \"BLOCK_SIZE_S3\" error",
+      "author": "Duyi-Wang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T07:42:44Z",
+      "updated_at": "2026-03-04T07:48:01Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2169",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2170,
+      "title": "Fix batch_prefill dispatch mismatch for sliding window attention models",
+      "author": "bingxche",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T07:44:22Z",
+      "updated_at": "2026-03-04T07:45:04Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2170",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2163,
+      "title": "Corrects `arg_size` type from `int` to `size_t` for hip graph compatability",
+      "author": "Micky774",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T21:18:34Z",
+      "updated_at": "2026-03-04T07:44:43Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2163",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2168,
+      "title": "fix  mhc build",
+      "author": "junhaha666",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T07:08:10Z",
+      "updated_at": "2026-03-04T07:09:49Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2168",
+      "labels": [],
+      "draft": true
     },
     {
       "number": 2106,
@@ -56,10 +80,193 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-25T08:44:32Z",
-      "updated_at": "2026-03-03T04:52:33Z",
+      "updated_at": "2026-03-04T05:58:07Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2106",
       "labels": [],
       "draft": false
+    },
+    {
+      "number": 2167,
+      "title": "[Docs] Add Sphinx documentation website with GitHub Actions deployment",
+      "author": "sunway513",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T05:44:54Z",
+      "updated_at": "2026-03-04T05:56:53Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2167",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2154,
+      "title": "Adding benchmark for MoeFlatmmKernel",
+      "author": "amd-wsung102",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T21:59:23Z",
+      "updated_at": "2026-03-04T05:52:41Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2154",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2039,
+      "title": "Introduce HipKittens based nhead=128 MLA Kernel",
+      "author": "ruanjm",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-12T04:14:56Z",
+      "updated_at": "2026-03-04T03:13:10Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2039",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2162,
+      "title": "[fix]: support dim(-1) allgather",
+      "author": "TennyWang1223",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T15:56:22Z",
+      "updated_at": "2026-03-04T02:59:45Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2162",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2164,
+      "title": "[mla] mtp mock fix",
+      "author": "Zzz9990",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T02:42:21Z",
+      "updated_at": "2026-03-04T02:45:58Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2164",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2116,
+      "title": "[CK_TILE] Update fmha_bwd_traits",
+      "author": "DDEle",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T07:28:34Z",
+      "updated_at": "2026-03-04T02:22:39Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2116",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2074,
+      "title": "Add ENABLE_CK build option for CK-free builds",
+      "author": "sunway513",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-23T05:19:50Z",
+      "updated_at": "2026-03-04T01:24:19Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2074",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2018,
+      "title": "feat(ck_tile): add a8w8 blockscale gemm with preshuffleQuant support",
+      "author": "amd-khushbu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-10T07:24:56Z",
+      "updated_at": "2026-03-03T22:34:30Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2018",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 1859,
+      "title": "[TRITON] mHC/mHC-lite: Manifold-constrained Hyper Connection",
+      "author": "anhminhnguyenhoang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-16T15:15:28Z",
+      "updated_at": "2026-03-03T22:00:55Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1859",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2038,
+      "title": "gfx1250 gluon initial gemm for a8w8 MoE blockscale kernel",
+      "author": "nsusanto",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-11T21:54:47Z",
+      "updated_at": "2026-03-03T19:46:57Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2038",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 1900,
+      "title": "Remove uses of AITER_ASM_DIR",
+      "author": "draganmladjenovic",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-23T23:21:45Z",
+      "updated_at": "2026-03-03T14:52:58Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1900",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2161,
+      "title": "Small refactor for compile_ops control flow for better performance and readability",
+      "author": "SampoAMD",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T13:00:47Z",
+      "updated_at": "2026-03-03T13:29:12Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2161",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2050,
+      "title": "[TRITON] Add Model Benchmarking Tool",
+      "author": "lucas-santos-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-13T18:03:47Z",
+      "updated_at": "2026-03-03T12:26:56Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2050",
+      "labels": [
+        "enhancement",
+        "triton"
+      ],
+      "draft": false
+    },
+    {
+      "number": 2160,
+      "title": "[PERF] Tune moe_gemm_a8w4 Triton kernel for gfx950 (MI355X)",
+      "author": "maeehart",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T12:14:13Z",
+      "updated_at": "2026-03-03T12:25:32Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2160",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 2159,
+      "title": "Jim/dev/fix demo",
+      "author": "slippedJim",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T12:13:48Z",
+      "updated_at": "2026-03-03T12:19:41Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2159",
+      "labels": [],
+      "draft": true
     },
     {
       "number": 2144,
@@ -70,18 +277,6 @@
       "created_at": "2026-03-02T02:12:30Z",
       "updated_at": "2026-03-03T03:56:46Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2144",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2156,
-      "title": "update_test",
-      "author": "amd-ruitang3",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T03:33:40Z",
-      "updated_at": "2026-03-03T03:48:28Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2156",
       "labels": [],
       "draft": false
     },
@@ -122,30 +317,6 @@
       "draft": false
     },
     {
-      "number": 2074,
-      "title": "Add ENABLE_CK build option for CK-free builds",
-      "author": "sunway513",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T05:19:50Z",
-      "updated_at": "2026-03-03T02:51:40Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2074",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2154,
-      "title": "Adding benchmark for MoeFlatmmKernel",
-      "author": "amd-wsung102",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T21:59:23Z",
-      "updated_at": "2026-03-02T22:09:11Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2154",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2111,
       "title": "[TRITON] Create script to benchmark attention kernels with shapes of LLM models",
       "author": "brunomazzottiamd",
@@ -162,18 +333,6 @@
       "draft": false
     },
     {
-      "number": 1900,
-      "title": "Remove uses of AITER_ASM_DIR",
-      "author": "draganmladjenovic",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-23T23:21:45Z",
-      "updated_at": "2026-03-02T21:39:15Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1900",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2067,
       "title": "Amd/satya/gluon/gemm mxfp4",
       "author": "Boss2002n",
@@ -184,21 +343,6 @@
       "html_url": "https://github.com/ROCm/aiter/pull/2067",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 2050,
-      "title": "[TRITON] Add Model Benchmarking Tool",
-      "author": "lucas-santos-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-13T18:03:47Z",
-      "updated_at": "2026-03-02T20:29:03Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2050",
-      "labels": [
-        "enhancement",
-        "triton"
-      ],
-      "draft": false
     },
     {
       "number": 2121,
@@ -237,18 +381,6 @@
       "draft": false
     },
     {
-      "number": 2151,
-      "title": "[FIX] address overflow fix on gfx942 for hd128 fmha bwd case",
-      "author": "JaxChen29",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T13:00:44Z",
-      "updated_at": "2026-03-02T13:04:57Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2151",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2150,
       "title": "Debug large address draft",
       "author": "JaxChen29",
@@ -259,18 +391,6 @@
       "html_url": "https://github.com/ROCm/aiter/pull/2150",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 1859,
-      "title": "[TRITON] mHC/mHC-lite: Manifold-constrained Hyper Connection",
-      "author": "anhminhnguyenhoang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-16T15:15:28Z",
-      "updated_at": "2026-03-02T08:58:33Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1859",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 2132,
@@ -357,18 +477,6 @@
       "draft": false
     },
     {
-      "number": 2038,
-      "title": "gfx1250 gluon initial gemm for a8w8 MoE blockscale kernel",
-      "author": "nsusanto",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-11T21:54:47Z",
-      "updated_at": "2026-02-27T17:55:02Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2038",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2120,
       "title": "Gluon gfx12 a8w8blockscale basic kernel",
       "author": "amirumoAMD",
@@ -389,30 +497,6 @@
       "created_at": "2026-02-26T05:57:57Z",
       "updated_at": "2026-02-27T02:12:55Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2115",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 2119,
-      "title": "[mi450] [gluon] UA3D updates",
-      "author": "k50112113",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T17:21:08Z",
-      "updated_at": "2026-02-26T18:31:08Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2119",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2116,
-      "title": "[CK_TILE] Update fmha_bwd_traits",
-      "author": "DDEle",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T07:28:34Z",
-      "updated_at": "2026-02-26T08:17:09Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2116",
       "labels": [],
       "draft": true
     },
@@ -955,18 +1039,6 @@
       "html_url": "https://github.com/ROCm/aiter/pull/998",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 1336,
-      "title": "added bench for unified attention",
-      "author": "sunxxuns",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-11-05T04:26:27Z",
-      "updated_at": "2026-02-06T09:45:34Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1336",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 1532,
@@ -1815,6 +1887,93 @@
       "draft": false
     },
     {
+      "number": 2151,
+      "title": "[FIX] address overflow fix on gfx942 for hd128 fmha bwd case",
+      "author": "JaxChen29",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T13:00:44Z",
+      "updated_at": "2026-03-04T07:59:40Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2151",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2165,
+      "title": "CI: Update vllm_benchmark.yaml to use latest nightly image",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T04:04:18Z",
+      "updated_at": "2026-03-04T05:30:18Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2165",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2166,
+      "title": "Revert gemm blockscale kernel config changes causing dpsk-r1 prefill regression",
+      "author": "1am9trash",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T04:48:11Z",
+      "updated_at": "2026-03-04T05:00:31Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2166",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2156,
+      "title": "update_test",
+      "author": "amd-ruitang3",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-03T03:33:40Z",
+      "updated_at": "2026-03-04T02:46:04Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2156",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2119,
+      "title": "[mi450] [gluon] UA3D updates",
+      "author": "k50112113",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-26T17:21:08Z",
+      "updated_at": "2026-03-03T21:03:36Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2119",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2158,
+      "title": "[Triton] Fav3 sage attention mask fix",
+      "author": "Chi-Chu319",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-03T09:23:51Z",
+      "updated_at": "2026-03-03T15:13:59Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2158",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2152,
+      "title": " fixes around MoE kernel selection",
+      "author": "amd-yashagar",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T13:27:13Z",
+      "updated_at": "2026-03-03T08:16:34Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2152",
+      "labels": [
+        "bug",
+        "enhancement"
+      ],
+      "draft": false
+    },
+    {
       "number": 2086,
       "title": "Respect AITER_LOG_LEVEL for C++ stdout prints",
       "author": "Copilot",
@@ -1848,21 +2007,6 @@
       "updated_at": "2026-03-03T02:48:48Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2149",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2152,
-      "title": " fixes around MoE kernel selection",
-      "author": "amd-yashagar",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-02T13:27:13Z",
-      "updated_at": "2026-03-03T02:48:01Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2152",
-      "labels": [
-        "bug",
-        "enhancement"
-      ],
       "draft": false
     },
     {
@@ -2498,18 +2642,6 @@
       "created_at": "2026-02-24T00:50:10Z",
       "updated_at": "2026-02-24T15:46:30Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2082",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2062,
-      "title": "Add ENABLE_CK=0 build option for Triton-only builds",
-      "author": "sunway513",
-      "state": "closed",
-      "merged": false,
-      "created_at": "2026-02-19T02:25:12Z",
-      "updated_at": "2026-03-03T01:06:34Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2062",
       "labels": [],
       "draft": false
     }

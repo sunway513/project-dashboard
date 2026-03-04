@@ -1,27 +1,15 @@
 {
-  "collected_at": "2026-03-03T08:12:43Z",
+  "collected_at": "2026-03-04T08:11:08Z",
   "prs": [
     {
-      "number": 38525,
-      "title": "PR #38269: [ROCm] Add RCCL FP8 support",
-      "author": "copybara-service[bot]",
+      "number": 34572,
+      "title": "[ROCM] Added command buffers support for convolutions 2nd attempt",
+      "author": "pemeliya",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-02T13:37:15Z",
-      "updated_at": "2026-03-03T08:03:34Z",
-      "html_url": "https://github.com/openxla/xla/pull/38525",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 38088,
-      "title": "[ROCm] Support hipblaslt group-gemm",
-      "author": "mfrancepillois",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T12:42:35Z",
-      "updated_at": "2026-03-02T22:52:18Z",
-      "html_url": "https://github.com/openxla/xla/pull/38088",
+      "created_at": "2025-11-28T16:48:47Z",
+      "updated_at": "2026-03-04T01:10:01Z",
+      "html_url": "https://github.com/openxla/xla/pull/34572",
       "labels": [
         "AMD-GPU"
       ],
@@ -34,8 +22,20 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-26T15:17:45Z",
-      "updated_at": "2026-03-02T17:32:38Z",
+      "updated_at": "2026-03-04T00:06:28Z",
       "html_url": "https://github.com/openxla/xla/pull/38333",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 38613,
+      "title": "amdgpu_backend refactoring and new HSACO cache",
+      "author": "pemeliya",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T18:00:11Z",
+      "updated_at": "2026-03-03T18:22:34Z",
+      "html_url": "https://github.com/openxla/xla/pull/38613",
       "labels": [],
       "draft": true
     },
@@ -46,12 +46,53 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-01-27T18:53:48Z",
-      "updated_at": "2026-03-02T16:08:31Z",
+      "updated_at": "2026-03-03T17:24:27Z",
       "html_url": "https://github.com/openxla/xla/pull/36893",
       "labels": [
         "AMD-GPU"
       ],
       "draft": false
+    },
+    {
+      "number": 37992,
+      "title": "[ROCm] Fix invalid split_k/block_k configs in autotune search space",
+      "author": "nurmukhametov",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-18T13:00:00Z",
+      "updated_at": "2026-03-03T15:11:24Z",
+      "html_url": "https://github.com/openxla/xla/pull/37992",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 37430,
+      "title": "[ROCm] Treat warnings as errors by default",
+      "author": "mmakevic-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-06T09:18:07Z",
+      "updated_at": "2026-03-03T14:26:19Z",
+      "html_url": "https://github.com/openxla/xla/pull/37430",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38521,
+      "title": "PR #38507: [ROCM] Fixed triton_support_test on rocm.",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T13:08:27Z",
+      "updated_at": "2026-03-03T13:53:52Z",
+      "html_url": "https://github.com/openxla/xla/pull/38521",
+      "labels": [],
+      "draft": false,
+      "original_author": "zoranjovanovic-ns"
     },
     {
       "number": 38512,
@@ -60,9 +101,64 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-02T11:07:30Z",
-      "updated_at": "2026-03-02T15:58:49Z",
+      "updated_at": "2026-03-03T12:50:56Z",
       "html_url": "https://github.com/openxla/xla/pull/38512",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38525,
+      "title": "PR #38269: [ROCm] Add RCCL FP8 support",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T13:37:15Z",
+      "updated_at": "2026-03-03T11:10:26Z",
+      "html_url": "https://github.com/openxla/xla/pull/38525",
+      "labels": [],
+      "draft": false,
+      "original_author": "mfrancepillois"
+    },
+    {
+      "number": 38088,
+      "title": "[ROCm] Support hipblaslt group-gemm",
+      "author": "mfrancepillois",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T12:42:35Z",
+      "updated_at": "2026-03-03T09:16:22Z",
+      "html_url": "https://github.com/openxla/xla/pull/38088",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 37511,
+      "title": "[ROCm] Explicitly skip failing test cases ",
+      "author": "Eetusjo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-09T08:18:02Z",
+      "updated_at": "2026-03-03T09:07:31Z",
+      "html_url": "https://github.com/openxla/xla/pull/37511",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38258,
+      "title": "[ROCm] Add hipBLASLt GEMM TF32 support",
+      "author": "Eetusjo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T08:14:39Z",
+      "updated_at": "2026-03-03T08:36:07Z",
+      "html_url": "https://github.com/openxla/xla/pull/38258",
+      "labels": [
+        "AMD-GPU"
+      ],
       "draft": false
     },
     {
@@ -78,20 +174,6 @@
       "draft": false
     },
     {
-      "number": 38269,
-      "title": "[ROCm] Add RCCL FP8 support",
-      "author": "mfrancepillois",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T14:21:52Z",
-      "updated_at": "2026-03-02T15:24:56Z",
-      "html_url": "https://github.com/openxla/xla/pull/38269",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 38508,
       "title": "PR #38224: [ROCm] Use VLOG(1) for tracer teardown logs",
       "author": "copybara-service[bot]",
@@ -103,20 +185,6 @@
       "labels": [],
       "draft": false,
       "original_author": "AratiGanesh"
-    },
-    {
-      "number": 38507,
-      "title": "[ROCM] Fixed triton_support_test on rocm.",
-      "author": "zoranjovanovic-ns",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T09:02:47Z",
-      "updated_at": "2026-03-02T14:55:57Z",
-      "html_url": "https://github.com/openxla/xla/pull/38507",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
     },
     {
       "number": 38259,
@@ -144,18 +212,6 @@
       "draft": false
     },
     {
-      "number": 37430,
-      "title": "Treat warnings as errors by default",
-      "author": "mmakevic-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-06T09:18:07Z",
-      "updated_at": "2026-03-02T13:56:36Z",
-      "html_url": "https://github.com/openxla/xla/pull/37430",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 34957,
       "title": "[ROCm] Enable matmul perf table implementation for ROCm",
       "author": "Eetusjo",
@@ -164,32 +220,6 @@
       "created_at": "2025-12-08T08:24:40Z",
       "updated_at": "2026-03-02T13:29:34Z",
       "html_url": "https://github.com/openxla/xla/pull/34957",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 38521,
-      "title": "PR #38507: [ROCM] Fixed triton_support_test on rocm.",
-      "author": "copybara-service[bot]",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T13:08:27Z",
-      "updated_at": "2026-03-02T13:19:06Z",
-      "html_url": "https://github.com/openxla/xla/pull/38521",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 37992,
-      "title": "[ROCm] Fix invalid split_k/block_k configs in autotune search space",
-      "author": "nurmukhametov",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-18T13:00:00Z",
-      "updated_at": "2026-03-02T10:09:21Z",
-      "html_url": "https://github.com/openxla/xla/pull/37992",
       "labels": [
         "AMD-GPU"
       ],
@@ -221,20 +251,6 @@
       "labels": [],
       "draft": false,
       "original_author": "amd-jianli12"
-    },
-    {
-      "number": 38258,
-      "title": "[ROCm] Add hipBLASLt GEMM TF32 support",
-      "author": "Eetusjo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T08:14:39Z",
-      "updated_at": "2026-02-26T11:40:18Z",
-      "html_url": "https://github.com/openxla/xla/pull/38258",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
     },
     {
       "number": 38159,
@@ -273,20 +289,6 @@
       "labels": [],
       "draft": false,
       "original_author": "Eetusjo"
-    },
-    {
-      "number": 37511,
-      "title": "[ROCm] Explicitly skip failing test cases ",
-      "author": "Eetusjo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-09T08:18:02Z",
-      "updated_at": "2026-02-20T10:19:09Z",
-      "html_url": "https://github.com/openxla/xla/pull/37511",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
     },
     {
       "number": 38019,
@@ -379,20 +381,6 @@
       "labels": [],
       "draft": false,
       "original_author": "nurmukhametov"
-    },
-    {
-      "number": 34572,
-      "title": "[ROCM] Added command buffers support for convolutions 2nd attempt",
-      "author": "pemeliya",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-11-28T16:48:47Z",
-      "updated_at": "2026-02-16T15:05:36Z",
-      "html_url": "https://github.com/openxla/xla/pull/34572",
-      "labels": [
-        "AMD-GPU"
-      ],
-      "draft": false
     },
     {
       "number": 37641,
@@ -658,32 +646,6 @@
       "labels": [],
       "draft": false,
       "original_author": "amd-jianli12"
-    },
-    {
-      "number": 36272,
-      "title": "PR #31284: [ROCm] Add PJRT_Triton_Extension support",
-      "author": "copybara-service[bot]",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T13:35:50Z",
-      "updated_at": "2026-02-02T14:11:36Z",
-      "html_url": "https://github.com/openxla/xla/pull/36272",
-      "labels": [],
-      "draft": false,
-      "original_author": "amd-jianli12"
-    },
-    {
-      "number": 37149,
-      "title": "PR #36963: [ROCm] Use shared AsBlasLtEpilogue in GemmWorkspaceRewriter",
-      "author": "copybara-service[bot]",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-02T13:40:35Z",
-      "updated_at": "2026-02-02T14:04:42Z",
-      "html_url": "https://github.com/openxla/xla/pull/37149",
-      "labels": [],
-      "draft": false,
-      "original_author": "nurmukhametov"
     },
     {
       "number": 30977,
