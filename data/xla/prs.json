@@ -1,6 +1,98 @@
 {
-  "collected_at": "2026-03-04T08:11:08Z",
+  "collected_at": "2026-03-05T08:12:26Z",
   "prs": [
+    {
+      "number": 38675,
+      "title": "[ROCm] RCCL fp8 support : Add missing ROCm version check for backward compatibility.",
+      "author": "mfrancepillois",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T17:40:12Z",
+      "updated_at": "2026-03-05T08:04:18Z",
+      "html_url": "https://github.com/openxla/xla/pull/38675",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38714,
+      "title": "Clang has deprecated the __builtin_elementwise_max and __builtin_elementwise_min builtins when used with floating-point types. Bump to rocm version which uses the updated explicit __builtin_elementwise_maximum/__builtin_elementwise_minimum",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-05T00:51:28Z",
+      "updated_at": "2026-03-05T01:42:39Z",
+      "html_url": "https://github.com/openxla/xla/pull/38714",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38683,
+      "title": "[ROCm] update with VLOG(1) for LOG(INFO) --- rocprofiler-sdk",
+      "author": "cj401-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T18:09:13Z",
+      "updated_at": "2026-03-04T18:12:57Z",
+      "html_url": "https://github.com/openxla/xla/pull/38683",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38681,
+      "title": "[ROCm] Use f16 versions of functions from libdevice.",
+      "author": "zoranjovanovic-ns",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T17:56:13Z",
+      "updated_at": "2026-03-04T17:56:38Z",
+      "html_url": "https://github.com/openxla/xla/pull/38681",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38657,
+      "title": "Add RuntimeAbiVersion facilities to StreamExecutor",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T11:02:37Z",
+      "updated_at": "2026-03-04T16:00:57Z",
+      "html_url": "https://github.com/openxla/xla/pull/38657",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 38333,
+      "title": "[ROCm] dev scaled dot for rocm",
+      "author": "ScXfjiang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T15:17:45Z",
+      "updated_at": "2026-03-04T14:13:59Z",
+      "html_url": "https://github.com/openxla/xla/pull/38333",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 38613,
+      "title": "amdgpu_backend refactoring and new HSACO cache",
+      "author": "pemeliya",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T18:00:11Z",
+      "updated_at": "2026-03-04T11:42:43Z",
+      "html_url": "https://github.com/openxla/xla/pull/38613",
+      "labels": [
+        "AMD-GPU"
+      ],
+      "draft": true
+    },
     {
       "number": 34572,
       "title": "[ROCM] Added command buffers support for convolutions 2nd attempt",
@@ -14,30 +106,6 @@
         "AMD-GPU"
       ],
       "draft": false
-    },
-    {
-      "number": 38333,
-      "title": "dev scaled dot for rocm",
-      "author": "ScXfjiang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T15:17:45Z",
-      "updated_at": "2026-03-04T00:06:28Z",
-      "html_url": "https://github.com/openxla/xla/pull/38333",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 38613,
-      "title": "amdgpu_backend refactoring and new HSACO cache",
-      "author": "pemeliya",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T18:00:11Z",
-      "updated_at": "2026-03-03T18:22:34Z",
-      "html_url": "https://github.com/openxla/xla/pull/38613",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 36893,
@@ -620,32 +688,6 @@
       "labels": [],
       "draft": false,
       "original_author": "Eetusjo"
-    },
-    {
-      "number": 37208,
-      "title": "PR #37160: [ROCm] Support autotuning all fusions with Triton via experimental flag",
-      "author": "copybara-service[bot]",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-03T10:10:10Z",
-      "updated_at": "2026-02-03T10:43:29Z",
-      "html_url": "https://github.com/openxla/xla/pull/37208",
-      "labels": [],
-      "draft": false,
-      "original_author": "nurmukhametov"
-    },
-    {
-      "number": 37150,
-      "title": "PR #37010: [ROCm] Changed error value for SplitK test in triton_gemm_fusion_test.cc",
-      "author": "copybara-service[bot]",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-02T13:44:09Z",
-      "updated_at": "2026-02-02T14:54:24Z",
-      "html_url": "https://github.com/openxla/xla/pull/37150",
-      "labels": [],
-      "draft": false,
-      "original_author": "amd-jianli12"
     },
     {
       "number": 30977,

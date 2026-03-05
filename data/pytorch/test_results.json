@@ -1,19 +1,19 @@
 {
-  "collected_at": "2026-03-04T08:11:32Z",
+  "collected_at": "2026-03-05T08:12:59Z",
   "source": "automated",
   "rocm": {
     "workflow_name": "rocm-mi300",
-    "run_id": 22658754714,
-    "run_url": "https://github.com/pytorch/pytorch/actions/runs/22658754714",
-    "run_date": "2026-03-04T07:58:47Z",
-    "conclusion": "failure",
+    "run_id": 22704464547,
+    "run_url": "https://github.com/pytorch/pytorch/actions/runs/22704464547",
+    "run_date": "2026-03-05T06:54:40Z",
+    "conclusion": "success",
     "summary": {
       "total_jobs": 8,
-      "total_tests": 14197,
-      "passed": 13697,
-      "failed": 3,
-      "skipped": 497,
-      "pass_rate": 99.98
+      "total_tests": 14094,
+      "passed": 13593,
+      "failed": 0,
+      "skipped": 501,
+      "pass_rate": 100.0
     },
     "suites": [
       {
@@ -98,8 +98,8 @@
       },
       {
         "name": "dynamo.test_after_aot",
-        "tests": 2,
-        "passed": 2,
+        "tests": 3,
+        "passed": 3,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -172,6 +172,14 @@
         "name": "dynamo.test_buffers_override",
         "tests": 2,
         "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_bytecode_debugger",
+        "tests": 40,
+        "passed": 40,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -274,8 +282,8 @@
       },
       {
         "name": "dynamo.test_decorators",
-        "tests": 141,
-        "passed": 139,
+        "tests": 142,
+        "passed": 140,
         "failed": 0,
         "skipped": 2,
         "errors": 0
@@ -298,18 +306,18 @@
       },
       {
         "name": "dynamo.test_dicts",
-        "tests": 165,
-        "passed": 161,
+        "tests": 171,
+        "passed": 167,
         "failed": 0,
         "skipped": 4,
         "errors": 0
       },
       {
         "name": "dynamo.test_dynamic_shapes",
-        "tests": 2011,
-        "passed": 1959,
+        "tests": 2030,
+        "passed": 1977,
         "failed": 0,
-        "skipped": 52,
+        "skipped": 53,
         "errors": 0
       },
       {
@@ -332,6 +340,14 @@
         "name": "dynamo.test_dynamo_profiler",
         "tests": 2,
         "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_dynamo_runtime_assert",
+        "tests": 1,
+        "passed": 1,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -362,16 +378,16 @@
       },
       {
         "name": "dynamo.test_exc",
-        "tests": 10,
-        "passed": 10,
+        "tests": 12,
+        "passed": 12,
         "failed": 0,
         "skipped": 0,
         "errors": 0
       },
       {
         "name": "dynamo.test_exceptions",
-        "tests": 52,
-        "passed": 52,
+        "tests": 53,
+        "passed": 53,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -386,8 +402,8 @@
       },
       {
         "name": "dynamo.test_export",
-        "tests": 186,
-        "passed": 182,
+        "tests": 187,
+        "passed": 183,
         "failed": 0,
         "skipped": 4,
         "errors": 0
@@ -426,10 +442,10 @@
       },
       {
         "name": "dynamo.test_functions",
-        "tests": 487,
-        "passed": 481,
+        "tests": 489,
+        "passed": 482,
         "failed": 0,
-        "skipped": 6,
+        "skipped": 7,
         "errors": 0
       },
       {
@@ -442,8 +458,8 @@
       },
       {
         "name": "dynamo.test_fx_annotate",
-        "tests": 6,
-        "passed": 6,
+        "tests": 7,
+        "passed": 7,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -498,8 +514,8 @@
       },
       {
         "name": "dynamo.test_guard_manager",
-        "tests": 40,
-        "passed": 40,
+        "tests": 47,
+        "passed": 47,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -602,8 +618,8 @@
       },
       {
         "name": "dynamo.test_misc",
-        "tests": 686,
-        "passed": 673,
+        "tests": 701,
+        "passed": 688,
         "failed": 0,
         "skipped": 13,
         "errors": 0
@@ -666,8 +682,8 @@
       },
       {
         "name": "dynamo.test_pgo",
-        "tests": 11,
-        "passed": 11,
+        "tests": 12,
+        "passed": 12,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -762,8 +778,8 @@
       },
       {
         "name": "dynamo.test_repros",
-        "tests": 363,
-        "passed": 349,
+        "tests": 365,
+        "passed": 351,
         "failed": 0,
         "skipped": 14,
         "errors": 0
@@ -826,10 +842,10 @@
       },
       {
         "name": "dynamo.test_structured_trace",
-        "tests": 31,
-        "passed": 28,
-        "failed": 3,
-        "skipped": 0,
+        "tests": 29,
+        "passed": 27,
+        "failed": 0,
+        "skipped": 2,
         "errors": 0
       },
       {
@@ -946,8 +962,8 @@
       },
       {
         "name": "export.test_draft_export",
-        "tests": 21,
-        "passed": 21,
+        "tests": 22,
+        "passed": 22,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1082,18 +1098,10 @@
       },
       {
         "name": "export.test_serialize",
-        "tests": 118,
-        "passed": 117,
+        "tests": 119,
+        "passed": 118,
         "failed": 0,
         "skipped": 1,
-        "errors": 0
-      },
-      {
-        "name": "export.test_sparse",
-        "tests": 203,
-        "passed": 203,
-        "failed": 0,
-        "skipped": 0,
         "errors": 0
       },
       {
@@ -1108,27 +1116,19 @@
   },
   "cuda": {
     "workflow_name": "trunk",
-    "run_id": 22656451990,
-    "run_url": "https://github.com/pytorch/pytorch/actions/runs/22656451990",
-    "run_date": "2026-03-04T07:33:34Z",
+    "run_id": 22702847321,
+    "run_url": "https://github.com/pytorch/pytorch/actions/runs/22702847321",
+    "run_date": "2026-03-05T06:46:33Z",
     "conclusion": "success",
     "summary": {
       "total_jobs": 35,
-      "total_tests": 28906,
-      "passed": 22979,
-      "failed": 0,
-      "skipped": 5927,
+      "total_tests": 25515,
+      "passed": 20192,
+      "failed": 1,
+      "skipped": 5322,
       "pass_rate": 100.0
     },
     "suites": [
-      {
-        "name": "distributed._composable.test_checkpoint",
-        "tests": 6,
-        "passed": 6,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
       {
         "name": "distributed._composable.test_composability.test_pp_composability",
         "tests": 26,
@@ -1159,6 +1159,14 @@
         "passed": 1,
         "failed": 0,
         "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "distributed._tools.test_fsdp2_mem_tracker",
+        "tests": 3,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 1,
         "errors": 0
       },
       {
@@ -1227,9 +1235,9 @@
       },
       {
         "name": "distributed.checkpoint._experimental.test_checkpointer",
-        "tests": 11,
+        "tests": 12,
         "passed": 11,
-        "failed": 0,
+        "failed": 1,
         "skipped": 0,
         "errors": 0
       },
@@ -1283,6 +1291,14 @@
       },
       {
         "name": "distributed.checkpoint.test_format_utils",
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "distributed.checkpoint.test_fsspec",
         "tests": 3,
         "passed": 3,
         "failed": 0,
@@ -1442,14 +1458,6 @@
         "errors": 0
       },
       {
-        "name": "distributed.tensor.test_api",
-        "tests": 20,
-        "passed": 19,
-        "failed": 0,
-        "skipped": 1,
-        "errors": 0
-      },
-      {
         "name": "distributed.tensor.test_attention",
         "tests": 24,
         "passed": 19,
@@ -1483,8 +1491,8 @@
       },
       {
         "name": "distributed.tensor.test_dtensor_compile",
-        "tests": 60,
-        "passed": 60,
+        "tests": 59,
+        "passed": 59,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1493,6 +1501,14 @@
         "name": "distributed.tensor.test_dtensor_dispatch_overhead",
         "tests": 1,
         "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "distributed.tensor.test_dtensor_export",
+        "tests": 10,
+        "passed": 10,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1540,9 +1556,9 @@
       {
         "name": "distributed.tensor.test_redistribute",
         "tests": 106,
-        "passed": 101,
+        "passed": 87,
         "failed": 0,
-        "skipped": 5,
+        "skipped": 19,
         "errors": 0
       },
       {
@@ -1594,14 +1610,6 @@
         "errors": 0
       },
       {
-        "name": "distributed.test_device_mesh",
-        "tests": 70,
-        "passed": 67,
-        "failed": 0,
-        "skipped": 3,
-        "errors": 0
-      },
-      {
         "name": "distributed.test_local_tensor",
         "tests": 29,
         "passed": 29,
@@ -1610,9 +1618,25 @@
         "errors": 0
       },
       {
+        "name": "distributed.test_nvshmem",
+        "tests": 48,
+        "passed": 0,
+        "failed": 0,
+        "skipped": 48,
+        "errors": 0
+      },
+      {
         "name": "distributed.test_overlap_bucketing_unit",
         "tests": 18,
         "passed": 18,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_after_aot",
+        "tests": 3,
+        "passed": 3,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1634,11 +1658,27 @@
         "errors": 0
       },
       {
+        "name": "dynamo.test_config",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
         "name": "dynamo.test_deque_reconstruct",
         "tests": 3,
         "passed": 3,
         "failed": 0,
         "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_dynamic_shapes",
+        "tests": 1678,
+        "passed": 1625,
+        "failed": 0,
+        "skipped": 53,
         "errors": 0
       },
       {
@@ -1666,6 +1706,14 @@
         "errors": 0
       },
       {
+        "name": "dynamo.test_export_mutations",
+        "tests": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
         "name": "dynamo.test_frame_init",
         "tests": 1,
         "passed": 1,
@@ -1674,9 +1722,25 @@
         "errors": 0
       },
       {
+        "name": "dynamo.test_fx_annotate",
+        "tests": 7,
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
         "name": "dynamo.test_fx_passes_pre_grad",
         "tests": 1,
         "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_graph_region_tracker",
+        "tests": 13,
+        "passed": 13,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1693,6 +1757,30 @@
         "name": "dynamo.test_interop",
         "tests": 5,
         "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_lazy_constant",
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_metrics_context",
+        "tests": 9,
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "dynamo.test_nops",
+        "tests": 4,
+        "passed": 4,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1722,6 +1810,14 @@
         "errors": 0
       },
       {
+        "name": "dynamo.test_regional_inductor",
+        "tests": 34,
+        "passed": 34,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
         "name": "dynamo.test_sdpa",
         "tests": 6,
         "passed": 6,
@@ -1746,6 +1842,14 @@
         "errors": 0
       },
       {
+        "name": "dynamo.test_subgraphs",
+        "tests": 44,
+        "passed": 44,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
         "name": "dynamo.test_utils",
         "tests": 19,
         "passed": 19,
@@ -1757,6 +1861,22 @@
         "name": "dynamo.test_view",
         "tests": 6,
         "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "export.test_cpp_serdes",
+        "tests": 441,
+        "passed": 434,
+        "failed": 0,
+        "skipped": 7,
+        "errors": 0
+      },
+      {
+        "name": "export.test_db",
+        "tests": 36,
+        "passed": 36,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1789,6 +1909,14 @@
         "name": "export.test_functionalized_assertions",
         "tests": 2,
         "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      {
+        "name": "export.test_package",
+        "tests": 4,
+        "passed": 4,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -1875,10 +2003,10 @@
       },
       {
         "name": "inductor.test_aot_inductor_arrayref",
-        "tests": 315,
+        "tests": 316,
         "passed": 128,
         "failed": 0,
-        "skipped": 187,
+        "skipped": 188,
         "errors": 0
       },
       {
@@ -1930,30 +2058,6 @@
         "errors": 0
       },
       {
-        "name": "inductor.test_best_config",
-        "tests": 1,
-        "passed": 1,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_block_analysis",
-        "tests": 10,
-        "passed": 10,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_cache",
-        "tests": 725,
-        "passed": 725,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
         "name": "inductor.test_ck_backend",
         "tests": 34,
         "passed": 20,
@@ -1978,19 +2082,11 @@
         "errors": 0
       },
       {
-        "name": "inductor.test_compiled_optimizers",
-        "tests": 686,
-        "passed": 677,
+        "name": "inductor.test_control_flow",
+        "tests": 741,
+        "passed": 739,
         "failed": 0,
-        "skipped": 9,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_control_deps",
-        "tests": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
+        "skipped": 2,
         "errors": 0
       },
       {
@@ -2043,10 +2139,10 @@
       },
       {
         "name": "inductor.test_cutlass_backend",
-        "tests": 181,
+        "tests": 182,
         "passed": 0,
         "failed": 0,
-        "skipped": 181,
+        "skipped": 182,
         "errors": 0
       },
       {
@@ -2063,14 +2159,6 @@
         "passed": 35,
         "failed": 0,
         "skipped": 2,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_deterministic",
-        "tests": 32,
-        "passed": 18,
-        "failed": 0,
-        "skipped": 14,
         "errors": 0
       },
       {
@@ -2115,10 +2203,10 @@
       },
       {
         "name": "inductor.test_flex_flash",
-        "tests": 210,
+        "tests": 214,
         "passed": 6,
         "failed": 0,
-        "skipped": 204,
+        "skipped": 208,
         "errors": 0
       },
       {
@@ -2154,14 +2242,6 @@
         "errors": 0
       },
       {
-        "name": "inductor.test_helion_kernels",
-        "tests": 2,
-        "passed": 0,
-        "failed": 0,
-        "skipped": 2,
-        "errors": 0
-      },
-      {
         "name": "inductor.test_indexing",
         "tests": 27,
         "passed": 27,
@@ -2173,14 +2253,6 @@
         "name": "inductor.test_inductor_annotations",
         "tests": 2,
         "passed": 2,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_inductor_scheduler",
-        "tests": 10,
-        "passed": 10,
         "failed": 0,
         "skipped": 0,
         "errors": 0
@@ -2234,14 +2306,6 @@
         "errors": 0
       },
       {
-        "name": "inductor.test_mem_estimation",
-        "tests": 4,
-        "passed": 4,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
         "name": "inductor.test_metrics",
         "tests": 6,
         "passed": 6,
@@ -2259,10 +2323,10 @@
       },
       {
         "name": "inductor.test_mix_order_reduction",
-        "tests": 485,
-        "passed": 266,
+        "tests": 487,
+        "passed": 267,
         "failed": 0,
-        "skipped": 219,
+        "skipped": 220,
         "errors": 0
       },
       {
@@ -2290,27 +2354,11 @@
         "errors": 0
       },
       {
-        "name": "inductor.test_online_softmax",
-        "tests": 31,
-        "passed": 31,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
         "name": "inductor.test_op_completeness",
         "tests": 5,
         "passed": 4,
         "failed": 0,
         "skipped": 1,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_op_dtype_prop",
-        "tests": 619,
-        "passed": 619,
-        "failed": 0,
-        "skipped": 0,
         "errors": 0
       },
       {
@@ -2338,14 +2386,6 @@
         "errors": 0
       },
       {
-        "name": "inductor.test_quantization",
-        "tests": 2,
-        "passed": 2,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
         "name": "inductor.test_remote_cache",
         "tests": 3,
         "passed": 3,
@@ -2359,14 +2399,6 @@
         "passed": 12,
         "failed": 0,
         "skipped": 0,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_select_algorithm",
-        "tests": 29,
-        "passed": 28,
-        "failed": 0,
-        "skipped": 1,
         "errors": 0
       },
       {
@@ -2402,14 +2434,6 @@
         "errors": 0
       },
       {
-        "name": "inductor.test_torchinductor_opinfo",
-        "tests": 3674,
-        "passed": 2999,
-        "failed": 0,
-        "skipped": 675,
-        "errors": 0
-      },
-      {
         "name": "inductor.test_triton_extension_backend",
         "tests": 3,
         "passed": 3,
@@ -2419,18 +2443,10 @@
       },
       {
         "name": "inductor.test_triton_heuristics",
-        "tests": 17,
-        "passed": 16,
+        "tests": 19,
+        "passed": 18,
         "failed": 0,
         "skipped": 1,
-        "errors": 0
-      },
-      {
-        "name": "inductor.test_triton_kernels",
-        "tests": 369,
-        "passed": 325,
-        "failed": 0,
-        "skipped": 44,
         "errors": 0
       },
       {
@@ -2562,6 +2578,14 @@
         "errors": 0
       },
       {
+        "name": "test_functionalization",
+        "tests": 112,
+        "passed": 100,
+        "failed": 0,
+        "skipped": 12,
+        "errors": 0
+      },
+      {
         "name": "test_fx_graph_print",
         "tests": 9,
         "passed": 9,
@@ -2690,14 +2714,6 @@
         "errors": 0
       },
       {
-        "name": "typing.test_python_operators",
-        "tests": 318,
-        "passed": 318,
-        "failed": 0,
-        "skipped": 0,
-        "errors": 0
-      },
-      {
         "name": "xpu.test_fusion",
         "tests": 0,
         "passed": 0,
@@ -2708,9 +2724,9 @@
     ]
   },
   "cuda_parity": {
-    "ratio": 59.6,
-    "rocm_count": 13700,
-    "cuda_count": 22979,
+    "ratio": 67.3,
+    "rocm_count": 13593,
+    "cuda_count": 20193,
     "level": "test"
   }
 }

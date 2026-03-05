@@ -1,29 +1,35 @@
 {
-  "collected_at": "2026-03-04T08:11:56Z",
+  "collected_at": "2026-03-05T08:13:40Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
-      "opened": 12,
-      "merged": 8,
+      "opened": 15,
+      "merged": 9,
       "closed": 0
     },
     "last_week": {
-      "opened": 11,
+      "opened": 10,
       "merged": 8,
       "closed": 0
     },
-    "median_time_to_merge_hours": 5.1,
+    "median_time_to_merge_hours": 5.2,
     "merge_count": 30,
     "stale_prs": 8
   },
   "contributors": {
-    "active_this_week": 7,
-    "total_contributors": 14,
+    "active_this_week": 9,
+    "total_contributors": 15,
     "top_contributors": [
       {
         "author": "Eetusjo",
         "prs_submitted": 4,
+        "prs_merged": 0,
+        "commits": 0
+      },
+      {
+        "author": "mfrancepillois",
+        "prs_submitted": 3,
         "prs_merged": 0,
         "commits": 0
       },
@@ -40,7 +46,7 @@
         "commits": 0
       },
       {
-        "author": "pemeliya",
+        "author": "zoranjovanovic-ns",
         "prs_submitted": 2,
         "prs_merged": 0,
         "commits": 0
@@ -52,7 +58,7 @@
         "commits": 0
       },
       {
-        "author": "mfrancepillois",
+        "author": "pemeliya",
         "prs_submitted": 2,
         "prs_merged": 0,
         "commits": 0
@@ -64,19 +70,13 @@
         "commits": 0
       },
       {
+        "author": "cj401-amd",
+        "prs_submitted": 1,
+        "prs_merged": 0,
+        "commits": 0
+      },
+      {
         "author": "leo-amd",
-        "prs_submitted": 1,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "nurmukhametov",
-        "prs_submitted": 1,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "mmakevic-amd",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -85,7 +85,7 @@
     "bus_factor": null
   },
   "issue_health": {
-    "total_open": 1,
+    "total_open": 9,
     "opened_this_week": 0,
     "closed_this_week": 3,
     "unanswered": 0
@@ -93,31 +93,31 @@
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 10,
-      "failed": 8,
-      "success_rate": 50.0
+      "succeeded": 6,
+      "failed": 7,
+      "success_rate": 30.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 8,
-      "failed": 10,
-      "success_rate": 40.0
+      "succeeded": 11,
+      "failed": 4,
+      "success_rate": 55.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 3.0,
-      "p90_minutes": 29.0,
-      "min_minutes": 2.5,
-      "max_minutes": 36.1
+      "median_minutes": 10.8,
+      "p90_minutes": 45.9,
+      "min_minutes": 1.1,
+      "max_minutes": 72.1
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 9.4,
-      "p90_minutes": 20.7,
-      "min_minutes": 6.0,
-      "max_minutes": 21.6
+      "median_minutes": 9.8,
+      "p90_minutes": 28.1,
+      "min_minutes": 1.2,
+      "max_minutes": 60.5
     }
   },
   "release_cadence": {

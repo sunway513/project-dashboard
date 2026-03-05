@@ -1,6 +1,30 @@
 {
-  "collected_at": "2026-03-04T08:11:27Z",
+  "collected_at": "2026-03-05T08:12:52Z",
   "prs": [
+    {
+      "number": 182,
+      "title": "Refactor: decouple torch, separate host/device compilation, add JIT with hardware auto-detection",
+      "author": "jhchouuu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T08:39:21Z",
+      "updated_at": "2026-03-05T08:06:05Z",
+      "html_url": "https://github.com/ROCm/mori/pull/182",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 180,
+      "title": "[UMP] Feat: add control plane implementation for unified memory pool",
+      "author": "TianDi101",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T15:01:19Z",
+      "updated_at": "2026-03-05T04:57:07Z",
+      "html_url": "https://github.com/ROCm/mori/pull/180",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 181,
       "title": "[Docs] Add Sphinx documentation website with GitHub Actions deployment",
@@ -26,18 +50,6 @@
       "draft": false
     },
     {
-      "number": 180,
-      "title": "[UMP] Feat: add control plane implementation for unified memory pool",
-      "author": "TianDi101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T15:01:19Z",
-      "updated_at": "2026-03-04T04:38:27Z",
-      "html_url": "https://github.com/ROCm/mori/pull/180",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 173,
       "title": "Feature: make MORI framework agnostic and compatible with JAX-XLA",
       "author": "TianDi101",
@@ -46,18 +58,6 @@
       "created_at": "2026-02-24T02:45:30Z",
       "updated_at": "2026-03-03T09:11:00Z",
       "html_url": "https://github.com/ROCm/mori/pull/173",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 179,
-      "title": "Feat: add mori.ir device bitcode layer with Triton integration examples",
-      "author": "jhchouuu",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T08:17:37Z",
-      "updated_at": "2026-03-02T09:23:05Z",
-      "html_url": "https://github.com/ROCm/mori/pull/179",
       "labels": [],
       "draft": false
     },
@@ -106,6 +106,42 @@
       "created_at": "2025-10-28T06:17:21Z",
       "updated_at": "2026-01-08T09:18:21Z",
       "html_url": "https://github.com/ROCm/mori/pull/99",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 184,
+      "title": "fixup(io)!: restore HIP device after auto-XGMI setup",
+      "author": "maning00",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T15:18:22Z",
+      "updated_at": "2026-03-05T02:38:29Z",
+      "html_url": "https://github.com/ROCm/mori/pull/184",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 183,
+      "title": "[IO] Add QP param options/env",
+      "author": "maning00",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T09:27:28Z",
+      "updated_at": "2026-03-04T09:58:12Z",
+      "html_url": "https://github.com/ROCm/mori/pull/183",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 179,
+      "title": "Feat: add mori.ir device bitcode layer with Triton integration examples",
+      "author": "jhchouuu",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T08:17:37Z",
+      "updated_at": "2026-03-04T08:26:23Z",
+      "html_url": "https://github.com/ROCm/mori/pull/179",
       "labels": [],
       "draft": false
     },
@@ -1114,42 +1150,6 @@
       "created_at": "2025-09-05T12:19:47Z",
       "updated_at": "2025-09-16T03:46:38Z",
       "html_url": "https://github.com/ROCm/mori/pull/64",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 68,
-      "title": "Feature: Stress test tool for MORI-IO",
-      "author": "maning00",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-09-12T07:54:49Z",
-      "updated_at": "2025-09-13T03:06:35Z",
-      "html_url": "https://github.com/ROCm/mori/pull/68",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 67,
-      "title": "Optim: MORI-IO performance for small message size",
-      "author": "TianDi101",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-09-11T07:16:38Z",
-      "updated_at": "2025-09-12T09:39:53Z",
-      "html_url": "https://github.com/ROCm/mori/pull/67",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 66,
-      "title": "Fix: fix training hang",
-      "author": "isytwu",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-09-10T02:14:25Z",
-      "updated_at": "2025-09-10T02:25:42Z",
-      "html_url": "https://github.com/ROCm/mori/pull/66",
       "labels": [],
       "draft": false
     }

@@ -1,6 +1,60 @@
 {
-  "collected_at": "2026-03-04T08:11:22Z",
+  "collected_at": "2026-03-05T08:12:46Z",
   "issues": [
+    {
+      "number": 2187,
+      "title": "[Issue]: GPU memory access fault with AITER FP8 MoE (Qwen3-VL-235B, TP=8, EP)",
+      "author": "sshlyapn",
+      "state": "open",
+      "created_at": "2026-03-05T06:50:40Z",
+      "updated_at": "2026-03-05T06:51:22Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2187",
+      "labels": []
+    },
+    {
+      "number": 2157,
+      "title": "Support TheRock ROCm \u201cPython-managed\u201d install paths (non-/opt/rocm)",
+      "author": "akao-amd",
+      "state": "open",
+      "created_at": "2026-03-03T04:01:19Z",
+      "updated_at": "2026-03-05T05:10:13Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2157",
+      "labels": []
+    },
+    {
+      "number": 2176,
+      "title": "[Issue]: Workspace Buffer Pointer Arithmetic in pa_v1 Ignores MTP",
+      "author": "gronsti-amd",
+      "state": "open",
+      "created_at": "2026-03-04T10:42:15Z",
+      "updated_at": "2026-03-04T10:42:15Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2176",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 2175,
+      "title": "[Issue]: Potential Division by Zero in _paged_attention_kernel",
+      "author": "gronsti-amd",
+      "state": "open",
+      "created_at": "2026-03-04T10:31:59Z",
+      "updated_at": "2026-03-04T10:31:59Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2175",
+      "labels": []
+    },
+    {
+      "number": 2174,
+      "title": "[Issue]: Index Mismatch Between Main PA Kernel _paged_attention_kernel and Reduce Kernel _paged_attention_ll4mi_reduce_kernel",
+      "author": "gronsti-amd",
+      "state": "open",
+      "created_at": "2026-03-04T10:23:57Z",
+      "updated_at": "2026-03-04T10:23:57Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2174",
+      "labels": [
+        "bug"
+      ]
+    },
     {
       "number": 1468,
       "title": "[Issue]: \"AssertionError: Aiter MLA only supports 16 or 128 number of heads. Provided 32 number of heads\" in DeepSeek R1 + TP4 + MXFP4 +MI355 test",
@@ -19,16 +73,6 @@
       "created_at": "2026-02-27T13:12:48Z",
       "updated_at": "2026-03-03T08:01:34Z",
       "html_url": "https://github.com/ROCm/aiter/issues/2129",
-      "labels": []
-    },
-    {
-      "number": 2157,
-      "title": "Support TheRock ROCm \u201cPython-managed\u201d install paths (non-/opt/rocm)",
-      "author": "akao-amd",
-      "state": "open",
-      "created_at": "2026-03-03T04:01:19Z",
-      "updated_at": "2026-03-03T04:01:19Z",
-      "html_url": "https://github.com/ROCm/aiter/issues/2157",
       "labels": []
     },
     {

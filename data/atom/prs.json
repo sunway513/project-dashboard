@@ -1,6 +1,30 @@
 {
-  "collected_at": "2026-03-04T08:11:24Z",
+  "collected_at": "2026-03-05T08:12:48Z",
   "prs": [
+    {
+      "number": 265,
+      "title": "[feat][plugin] make ATOM mla attention works for vllm",
+      "author": "XiaobingSuper",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T11:49:42Z",
+      "updated_at": "2026-03-05T07:57:21Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/265",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 264,
+      "title": "Add tool for automatic analyzing profiling trace",
+      "author": "HaonanWang98",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T10:38:36Z",
+      "updated_at": "2026-03-05T05:55:56Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/264",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 263,
       "title": "[OOT Plugin][Performance] Optimize metadata prepare",
@@ -8,7 +32,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-04T07:29:06Z",
-      "updated_at": "2026-03-04T07:33:34Z",
+      "updated_at": "2026-03-05T03:07:26Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/263",
       "labels": [],
       "draft": false
@@ -20,20 +44,32 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-04T07:19:12Z",
-      "updated_at": "2026-03-04T07:19:12Z",
+      "updated_at": "2026-03-05T01:50:26Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/262",
       "labels": [],
       "draft": false
     },
     {
-      "number": 212,
-      "title": "Fix CI container name collision for parallel matrix jobs",
-      "author": "sunway513",
+      "number": 268,
+      "title": "[QUARK-479] Fix per-layer quant dtype in DeepSeek attention init",
+      "author": "thpereir",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-13T05:41:56Z",
-      "updated_at": "2026-03-04T06:37:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/212",
+      "created_at": "2026-03-04T23:44:38Z",
+      "updated_at": "2026-03-04T23:49:33Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/268",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 236,
+      "title": "[QUARK-480] Per-layer quantization config support",
+      "author": "thpereir",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T19:17:35Z",
+      "updated_at": "2026-03-04T23:47:21Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/236",
       "labels": [],
       "draft": false
     },
@@ -60,18 +96,6 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/259",
       "labels": [],
       "draft": false
-    },
-    {
-      "number": 236,
-      "title": "Not yet ready for review- Per-layer quantization config with parser registry",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T19:17:35Z",
-      "updated_at": "2026-03-04T02:03:34Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/236",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 249,
@@ -168,18 +192,6 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/208",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 220,
-      "title": "Enable Triton MXFP4 MoE on gfx950 for GPT-OSS",
-      "author": "ChuanLi1101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-16T08:48:28Z",
-      "updated_at": "2026-02-23T06:30:27Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/220",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 225,
@@ -394,6 +406,54 @@
       "created_at": "2025-12-09T04:53:20Z",
       "updated_at": "2025-12-09T05:11:55Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/32",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 212,
+      "title": "Fix CI container name collision for parallel matrix jobs",
+      "author": "sunway513",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-13T05:41:56Z",
+      "updated_at": "2026-03-05T06:42:28Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/212",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 220,
+      "title": "Enable Triton MXFP4 MoE on gfx950 for GPT-OSS",
+      "author": "ChuanLi1101",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-16T08:48:28Z",
+      "updated_at": "2026-03-05T04:21:07Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/220",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 267,
+      "title": "enable custom all_gather",
+      "author": "valarLip",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T16:12:28Z",
+      "updated_at": "2026-03-05T03:29:58Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/267",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 266,
+      "title": "Fix MTP>1 torch compile accuracy issue and add triton kernel opt",
+      "author": "ZhangLirong-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T13:36:40Z",
+      "updated_at": "2026-03-04T15:43:01Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/266",
       "labels": [],
       "draft": false
     },
@@ -1414,54 +1474,6 @@
       "created_at": "2026-01-16T03:10:30Z",
       "updated_at": "2026-01-16T09:37:30Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/143",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 141,
-      "title": "Fix attention mha logic error",
-      "author": "ZhangLirong-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-15T15:10:46Z",
-      "updated_at": "2026-01-16T06:29:24Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/141",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 118,
-      "title": "use ck mha instead of triton unified_attention for sink and window",
-      "author": "junhaha666",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-08T08:59:14Z",
-      "updated_at": "2026-01-15T08:52:01Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/118",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 129,
-      "title": "fuse rmsnorm/quant and  act_mul/quant for mxfp4 llama70B",
-      "author": "scxiao",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T15:45:52Z",
-      "updated_at": "2026-01-15T08:39:45Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/129",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 139,
-      "title": "re-enable ATOM_ENABLE_DS_QKNORM_QUANT_FUSION regardless of ATOM_USE_T\u2026",
-      "author": "k50112113",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-15T01:46:06Z",
-      "updated_at": "2026-01-15T04:50:21Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/139",
       "labels": [],
       "draft": false
     }
