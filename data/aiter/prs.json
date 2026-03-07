@@ -1,6 +1,212 @@
 {
-  "collected_at": "2026-03-06T08:10:57Z",
+  "collected_at": "2026-03-07T08:07:00Z",
   "prs": [
+    {
+      "number": 2206,
+      "title": "opt fuse_qk_norm_rope_blkquant kernel ",
+      "author": "yzhou103",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T14:57:10Z",
+      "updated_at": "2026-03-07T08:06:11Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2206",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 1840,
+      "title": "Fix sliding window mtp",
+      "author": "fsx950223",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-14T10:01:13Z",
+      "updated_at": "2026-03-07T07:28:41Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1840",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2201,
+      "title": "mha: make impl_ptr_map caceh in fmha_v3_bwd and fmha_fwd_v3 thread-safe.",
+      "author": "xinyazhang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T08:41:08Z",
+      "updated_at": "2026-03-06T21:35:13Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2201",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2121,
+      "title": "[CI] Flash Attention RDNA CI",
+      "author": "micmelesse",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T22:20:21Z",
+      "updated_at": "2026-03-06T19:44:10Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2121",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2203,
+      "title": "CI: Enable multi-GPU tests via label on PRs",
+      "author": "gyohuangxin",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T09:35:59Z",
+      "updated_at": "2026-03-06T17:39:33Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2203",
+      "labels": [
+        "ci:multi-gpu"
+      ],
+      "draft": false
+    },
+    {
+      "number": 2199,
+      "title": "Enhance fused_qk_norm_rope_cache_quant functions by adding rotary_dim",
+      "author": "zhentaocc",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T03:19:44Z",
+      "updated_at": "2026-03-06T17:35:51Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2199",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 2205,
+      "title": "add logic to select 64 tokens kernel for large sequence sizes",
+      "author": "antsaukk",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T14:14:55Z",
+      "updated_at": "2026-03-06T15:48:34Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2205",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 2181,
+      "title": "Add option to skip kernel build in op_test build_mha.sh",
+      "author": "Micky774",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T22:18:51Z",
+      "updated_at": "2026-03-06T14:53:21Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2181",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2064,
+      "title": "Adding double buffer option to cross_device_reduce_1stage",
+      "author": "RichardChamberlain1",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-19T12:39:19Z",
+      "updated_at": "2026-03-06T14:19:00Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2064",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2171,
+      "title": "Qkv norm rope fusion",
+      "author": "Chi-Chu319",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T09:51:51Z",
+      "updated_at": "2026-03-06T14:14:26Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2171",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 2190,
+      "title": "[TRITON] Qwen3 next unified attention fix",
+      "author": "juuso-oskari",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-05T14:30:04Z",
+      "updated_at": "2026-03-06T13:58:16Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2190",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 1859,
+      "title": "[TRITON] mHC/mHC-lite: Manifold-constrained Hyper Connection",
+      "author": "anhminhnguyenhoang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-16T15:15:28Z",
+      "updated_at": "2026-03-06T13:48:28Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1859",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2172,
+      "title": "Tune a8w8_blockscale_bpreshuffle_tuned_gemm for gfx942(MI308X)",
+      "author": "chuanbowang2026",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T10:06:40Z",
+      "updated_at": "2026-03-06T12:36:53Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2172",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2188,
+      "title": "support FP8/MXFP4-quantized activation dtype",
+      "author": "AMD-yanfeiwang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-05T09:22:54Z",
+      "updated_at": "2026-03-06T10:44:58Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2188",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2204,
+      "title": "Fold qh128 to qh16 in gfx950",
+      "author": "slippedJim",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T10:18:59Z",
+      "updated_at": "2026-03-06T10:27:23Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2204",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 1888,
+      "title": "[TRITON] support.conv3d.triton.kernel",
+      "author": "kxyk99",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-22T08:39:09Z",
+      "updated_at": "2026-03-06T09:12:03Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/1888",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2197,
+      "title": "Add Gluon GEMM tutorial",
+      "author": "mengfei-jiang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T02:53:33Z",
+      "updated_at": "2026-03-06T08:45:53Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2197",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 2200,
       "title": "[DO NOT MERGE] CI Tests",
@@ -8,10 +214,12 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-06T07:56:08Z",
-      "updated_at": "2026-03-06T08:10:20Z",
+      "updated_at": "2026-03-06T08:12:12Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2200",
       "labels": [
-        "ci:sglang"
+        "ci:sglang",
+        "ci:atom",
+        "ci:vllm"
       ],
       "draft": false
     },
@@ -52,42 +260,6 @@
       "draft": false
     },
     {
-      "number": 2193,
-      "title": "Fix to default kernel selection for inter_dim % 128",
-      "author": "amd-yashagar",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T14:58:06Z",
-      "updated_at": "2026-03-06T05:36:20Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2193",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2199,
-      "title": "Enhance fused_qk_norm_rope_cache_quant functions by adding rotary_dim",
-      "author": "zhentaocc",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-06T03:19:44Z",
-      "updated_at": "2026-03-06T04:01:34Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2199",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 2188,
-      "title": "support FP8/MXFP4-quantized activation dtype",
-      "author": "AMD-yanfeiwang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T09:22:54Z",
-      "updated_at": "2026-03-06T03:47:29Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2188",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2169,
       "title": "Fix LRU cache pollution causing BLOCK_SIZE_S3 KeyError in gemm_afp4wfp4",
       "author": "Duyi-Wang",
@@ -96,42 +268,6 @@
       "created_at": "2026-03-04T07:42:44Z",
       "updated_at": "2026-03-06T03:19:53Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2169",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2197,
-      "title": "Add Gluon GEMM tutorial",
-      "author": "mengfei-jiang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-06T02:53:33Z",
-      "updated_at": "2026-03-06T03:12:52Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2197",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 1840,
-      "title": "Fix sliding window mtp",
-      "author": "fsx950223",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-14T10:01:13Z",
-      "updated_at": "2026-03-06T03:10:08Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1840",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2172,
-      "title": "Tune a8w8_blockscale_bpreshuffle_tuned_gemm for gfx942(MI308X)",
-      "author": "chuanbowang2026",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-04T10:06:40Z",
-      "updated_at": "2026-03-06T02:34:28Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2172",
       "labels": [],
       "draft": false
     },
@@ -160,18 +296,6 @@
       "draft": false
     },
     {
-      "number": 2121,
-      "title": "[CI] Flash Attention RDNA CI",
-      "author": "micmelesse",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T22:20:21Z",
-      "updated_at": "2026-03-05T23:50:46Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2121",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2179,
       "title": "Adds the ability to build static archives in addition to shared objects ",
       "author": "Micky774",
@@ -196,30 +320,6 @@
       "draft": false
     },
     {
-      "number": 2064,
-      "title": "Adding double buffer option to cross_device_reduce_1stage",
-      "author": "RichardChamberlain1",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-19T12:39:19Z",
-      "updated_at": "2026-03-05T18:04:21Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2064",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2190,
-      "title": "[TRITON] Qwen3 next unified attention fix",
-      "author": "juuso-oskari",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T14:30:04Z",
-      "updated_at": "2026-03-05T17:02:36Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2190",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2036,
       "title": "gfx12 gemm a8w8",
       "author": "ahmed-bsod",
@@ -232,18 +332,6 @@
       "draft": true
     },
     {
-      "number": 1859,
-      "title": "[TRITON] mHC/mHC-lite: Manifold-constrained Hyper Connection",
-      "author": "anhminhnguyenhoang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-16T15:15:28Z",
-      "updated_at": "2026-03-05T13:17:00Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1859",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2182,
       "title": "[OPUS] add mfma_adaptor_swap_ab_swizzle_b and unit tests",
       "author": "kaiyang-1",
@@ -254,18 +342,6 @@
       "html_url": "https://github.com/ROCm/aiter/pull/2182",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 2181,
-      "title": "Add option to skip kernel build in op_test build_mha.sh",
-      "author": "Micky774",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-04T22:18:51Z",
-      "updated_at": "2026-03-04T22:22:39Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2181",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 2178,
@@ -288,18 +364,6 @@
       "created_at": "2026-02-19T17:51:10Z",
       "updated_at": "2026-03-04T16:24:16Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2067",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 2171,
-      "title": "Qkv norm rope fusion",
-      "author": "Chi-Chu319",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-04T09:51:51Z",
-      "updated_at": "2026-03-04T09:51:51Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2171",
       "labels": [],
       "draft": true
     },
@@ -722,18 +786,6 @@
       "html_url": "https://github.com/ROCm/aiter/pull/2012",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 1888,
-      "title": "[TRITON] support.conv3d.triton.kernel",
-      "author": "kxyk99",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-22T08:39:09Z",
-      "updated_at": "2026-02-11T09:15:17Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/1888",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 1940,
@@ -1894,6 +1946,54 @@
       "draft": false
     },
     {
+      "number": 2207,
+      "title": "Fix resolve eightwarp functional failure in fp8 blockscale",
+      "author": "kensclin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-06T15:37:05Z",
+      "updated_at": "2026-03-07T05:30:39Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2207",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2208,
+      "title": "[CI] Flash Attention use submodules",
+      "author": "micmelesse",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-06T15:41:27Z",
+      "updated_at": "2026-03-06T19:11:29Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2208",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2193,
+      "title": "Fix to default kernel selection for inter_dim % 128",
+      "author": "amd-yashagar",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-05T14:58:06Z",
+      "updated_at": "2026-03-06T12:55:21Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2193",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2202,
+      "title": "CI: Fix welcome comment permission error",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-06T09:22:06Z",
+      "updated_at": "2026-03-06T09:35:04Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2202",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 2192,
       "title": "CI: Make extended tests label-triggered on PRs",
       "author": "gyohuangxin",
@@ -2828,54 +2928,6 @@
       "created_at": "2026-02-25T03:42:59Z",
       "updated_at": "2026-02-25T05:09:49Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2103",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2029,
-      "title": "[FIX] fix a16 causal mha bwd case for python api",
-      "author": "JaxChen29",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-11T09:53:20Z",
-      "updated_at": "2026-02-25T03:29:43Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2029",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2095,
-      "title": "[Triton] fix config selection bug for FP4 preshuffled GEMM",
-      "author": "k50112113",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-24T16:47:46Z",
-      "updated_at": "2026-02-24T21:58:40Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2095",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2066,
-      "title": "[TRITON] Sage attention v2: Q*K in mxfp4",
-      "author": "juuso-oskari",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-19T16:53:02Z",
-      "updated_at": "2026-02-24T20:00:56Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2066",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2082,
-      "title": "use regex to extract arch from rocminfo string",
-      "author": "ahmed-bsod",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-24T00:50:10Z",
-      "updated_at": "2026-02-24T15:46:30Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2082",
       "labels": [],
       "draft": false
     }

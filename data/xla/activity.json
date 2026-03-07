@@ -1,16 +1,16 @@
 {
-  "collected_at": "2026-03-06T08:11:44Z",
+  "collected_at": "2026-03-07T08:07:43Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
-      "opened": 26,
+      "opened": 31,
       "merged": 9,
-      "closed": 1
+      "closed": 0
     },
     "last_week": {
-      "opened": 8,
-      "merged": 7,
+      "opened": 7,
+      "merged": 4,
       "closed": 0
     },
     "median_time_to_merge_hours": 5.2,
@@ -23,19 +23,13 @@
     "top_contributors": [
       {
         "author": "mfrancepillois",
-        "prs_submitted": 7,
+        "prs_submitted": 6,
         "prs_merged": 0,
         "commits": 0
       },
       {
         "author": "zoranjovanovic-ns",
-        "prs_submitted": 4,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "Eetusjo",
-        "prs_submitted": 4,
+        "prs_submitted": 5,
         "prs_merged": 0,
         "commits": 0
       },
@@ -47,12 +41,12 @@
       },
       {
         "author": "pemeliya",
-        "prs_submitted": 2,
+        "prs_submitted": 3,
         "prs_merged": 0,
         "commits": 0
       },
       {
-        "author": "ScXfjiang",
+        "author": "Eetusjo",
         "prs_submitted": 2,
         "prs_merged": 0,
         "commits": 0
@@ -65,6 +59,12 @@
       },
       {
         "author": "mmakevic-amd",
+        "prs_submitted": 1,
+        "prs_merged": 0,
+        "commits": 0
+      },
+      {
+        "author": "ScXfjiang",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -85,7 +85,7 @@
     "bus_factor": null
   },
   "issue_health": {
-    "total_open": 9,
+    "total_open": 0,
     "opened_this_week": 0,
     "closed_this_week": 4,
     "unanswered": 0
@@ -94,30 +94,30 @@
     "rocm": {
       "total_runs": 20,
       "succeeded": 0,
-      "failed": 18,
+      "failed": 6,
       "success_rate": 0.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 16,
-      "failed": 2,
-      "success_rate": 80.0
+      "succeeded": 15,
+      "failed": 4,
+      "success_rate": 75.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 9.4,
-      "p90_minutes": 22.6,
-      "min_minutes": 0.4,
-      "max_minutes": 30.6
+      "median_minutes": 67.2,
+      "p90_minutes": 147.9,
+      "min_minutes": 13.5,
+      "max_minutes": 202.8
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 10.3,
-      "p90_minutes": 21.8,
-      "min_minutes": 8.7,
-      "max_minutes": 36.0
+      "median_minutes": 11.0,
+      "p90_minutes": 21.2,
+      "min_minutes": 8.5,
+      "max_minutes": 26.5
     }
   },
   "release_cadence": {

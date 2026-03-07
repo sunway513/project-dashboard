@@ -1,6 +1,38 @@
 {
-  "collected_at": "2026-03-06T08:09:41Z",
+  "collected_at": "2026-03-07T08:06:10Z",
   "prs": [
+    {
+      "number": 35111,
+      "title": "[ROCm] Add ROCm support for eigh export backwards compatibility tests",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-16T16:03:02Z",
+      "updated_at": "2026-03-07T00:21:46Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35111",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35550,
+      "title": "[ROCm] Add ROCm wheel build and test pipeline to continuous CI",
+      "author": "alekstheod",
+      "state": "closed",
+      "merged": false,
+      "created_at": "2026-03-03T11:01:34Z",
+      "updated_at": "2026-03-06T21:36:04Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35550",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "CI",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
     {
       "number": 35283,
       "title": "[ROCm] Add ROCm pytest results collection",
@@ -8,25 +40,71 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-20T23:18:56Z",
-      "updated_at": "2026-03-05T22:44:19Z",
+      "updated_at": "2026-03-06T21:33:24Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35283",
       "labels": [],
       "draft": false
     },
     {
-      "number": 35550,
-      "title": "[ROCm] Add ROCm wheel build and test pipeline to continuous CI",
+      "number": 35668,
+      "title": "[ROCm] Fix plugin init script",
       "author": "alekstheod",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-03T11:01:34Z",
-      "updated_at": "2026-03-05T20:44:23Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35550",
+      "created_at": "2026-03-06T09:22:08Z",
+      "updated_at": "2026-03-06T19:06:59Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35668",
       "labels": [
-        "CI",
         "AMD GPU"
       ],
       "draft": true
+    },
+    {
+      "number": 34768,
+      "title": "[ROCm] Add ROCm encoding for test_struct_encoding_determinism",
+      "author": "AratiGanesh",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-02T16:27:00Z",
+      "updated_at": "2026-03-06T12:34:40Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34768",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35516,
+      "title": "[ROCm] Include prebuilt rocm plugin pkgs as deps to tests",
+      "author": "alekstheod",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T18:02:31Z",
+      "updated_at": "2026-03-06T11:47:54Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35516",
+      "labels": [
+        "CI",
+        "AMD GPU",
+        "GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34135,
+      "title": "[ROCm] update to test if there are GPU events when doing profiling on\u2026",
+      "author": "cj401-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-02T18:02:18Z",
+      "updated_at": "2026-03-06T09:30:56Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34135",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
     },
     {
       "number": 35288,
@@ -37,18 +115,6 @@
       "created_at": "2026-02-21T13:03:07Z",
       "updated_at": "2026-03-05T20:31:37Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35288",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 34768,
-      "title": "[ROCm] Add ROCm encoding for test_struct_encoding_determinism",
-      "author": "AratiGanesh",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-02T16:27:00Z",
-      "updated_at": "2026-03-05T20:30:33Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34768",
       "labels": [],
       "draft": false
     },
@@ -104,22 +170,6 @@
         "kokoro:force-run",
         "pull ready",
         "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 35516,
-      "title": "[ROCm] Include prebuilt rocm plugin pkgs as deps to tests",
-      "author": "alekstheod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T18:02:31Z",
-      "updated_at": "2026-03-05T08:25:48Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35516",
-      "labels": [
-        "CI",
-        "AMD GPU",
-        "GPU"
       ],
       "draft": false
     },
@@ -207,22 +257,6 @@
       "draft": false
     },
     {
-      "number": 34135,
-      "title": "[ROCm] update to test if there are GPU events when doing profiling on\u2026",
-      "author": "cj401-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-02T18:02:18Z",
-      "updated_at": "2026-03-02T21:23:59Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34135",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 34702,
       "title": "[ROCm] Add script for running bazel tests on ROCm",
       "author": "charleshofer",
@@ -267,30 +301,6 @@
         "AMD GPU"
       ],
       "draft": false
-    },
-    {
-      "number": 35111,
-      "title": "[ROCm] Add ROCm support for eigh export backwards compatibility tests",
-      "author": "AratiGanesh",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-16T16:03:02Z",
-      "updated_at": "2026-02-25T19:26:55Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35111",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 35373,
-      "title": "[ROCm] Replace abseiltest with py test in rocm bazel",
-      "author": "alekstheod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T16:04:08Z",
-      "updated_at": "2026-02-24T16:13:52Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35373",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 31768,
@@ -649,36 +659,6 @@
       "created_at": "2026-02-05T21:37:49Z",
       "updated_at": "2026-02-12T08:56:59Z",
       "html_url": "https://github.com/jax-ml/jax/pull/34875",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34832,
-      "title": "[ROCm] Add ROCm support to annotate_device_placement backward compatibility \u2026",
-      "author": "AratiGanesh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-04T20:27:17Z",
-      "updated_at": "2026-02-12T07:29:35Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34832",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34869,
-      "title": "[ROCm] Added back compatibility test for hipsolver_gesvd",
-      "author": "tsrw2048",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-05T19:10:57Z",
-      "updated_at": "2026-02-12T06:47:27Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34869",
       "labels": [
         "kokoro:force-run",
         "pull ready"

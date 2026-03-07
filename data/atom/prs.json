@@ -1,17 +1,17 @@
 {
-  "collected_at": "2026-03-06T08:11:02Z",
+  "collected_at": "2026-03-07T08:07:04Z",
   "prs": [
     {
-      "number": 265,
-      "title": "[feat][plugin] make ATOM mla attention works for vllm",
-      "author": "XiaobingSuper",
+      "number": 274,
+      "title": "Phase 2: replace dict-style quant_config access with LayerQuantSpec a\u2026",
+      "author": "thpereir",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-04T11:49:42Z",
-      "updated_at": "2026-03-06T08:06:29Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/265",
+      "created_at": "2026-03-06T20:02:16Z",
+      "updated_at": "2026-03-06T20:02:16Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/274",
       "labels": [],
-      "draft": false
+      "draft": true
     },
     {
       "number": 227,
@@ -20,22 +20,82 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-20T16:54:40Z",
-      "updated_at": "2026-03-06T08:04:20Z",
+      "updated_at": "2026-03-06T17:30:32Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/227",
       "labels": [],
       "draft": false
     },
     {
+      "number": 265,
+      "title": "[feat][plugin] make ATOM mla attention works for vllm",
+      "author": "XiaobingSuper",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T11:49:42Z",
+      "updated_at": "2026-03-06T16:41:34Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/265",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 268,
+      "title": "[QUARK-479] Fix per-layer quant dtype in DeepSeek attention init",
+      "author": "thpereir",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-04T23:44:38Z",
+      "updated_at": "2026-03-06T16:05:20Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/268",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 236,
+      "title": "[QUARK-480] Per-layer quantization config support",
+      "author": "thpereir",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-25T19:17:35Z",
+      "updated_at": "2026-03-06T16:04:06Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/236",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 272,
-      "title": "[Refactor] refactor quantconfig for layer-wise quantization",
+      "title": "[Enhancement] support layer-wise quant_config for deepseek-r1-0528",
       "author": "haoyangli0109",
       "state": "open",
       "merged": false,
       "created_at": "2026-03-06T07:57:41Z",
-      "updated_at": "2026-03-06T08:04:02Z",
+      "updated_at": "2026-03-06T12:46:39Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/272",
       "labels": [],
-      "draft": true
+      "draft": false
+    },
+    {
+      "number": 253,
+      "title": "feat: PD disaggregation",
+      "author": "inkcherry",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T11:38:33Z",
+      "updated_at": "2026-03-06T10:27:28Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/253",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 273,
+      "title": "[Feat][Plugin] Enable Glm4Moe for vLLM plugin",
+      "author": "kliuae-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T09:27:23Z",
+      "updated_at": "2026-03-06T09:51:28Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/273",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 271,
@@ -86,18 +146,6 @@
       "draft": false
     },
     {
-      "number": 236,
-      "title": "[QUARK-480] Per-layer quantization config support",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T19:17:35Z",
-      "updated_at": "2026-03-06T01:42:31Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/236",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 269,
       "title": "[draft][OOT] Dockerfile for build ATOM+vLLM OOT image",
       "author": "zejunchen-zejun",
@@ -108,30 +156,6 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/269",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 268,
-      "title": "[QUARK-479] Fix per-layer quant dtype in DeepSeek attention init",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-04T23:44:38Z",
-      "updated_at": "2026-03-04T23:49:33Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/268",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 253,
-      "title": "feat: PD disaggregation",
-      "author": "inkcherry",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T11:38:33Z",
-      "updated_at": "2026-03-04T06:35:17Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/253",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 259,

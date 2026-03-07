@@ -1,32 +1,18 @@
 {
-  "collected_at": "2026-03-06T08:10:48Z",
+  "collected_at": "2026-03-07T08:06:54Z",
   "prs": [
     {
-      "number": 4645,
-      "title": "[AIMIGRAPHX-581] jit implementation for reverse",
-      "author": "bdevorem",
+      "number": 4652,
+      "title": "Add Cubic resize jit kernel",
+      "author": "TedThemistokleous",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-02T18:23:38Z",
-      "updated_at": "2026-03-06T07:36:35Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4645",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4640,
-      "title": "Onnxruntime Weekly Sync 2026-02-27",
-      "author": "github-actions[bot]",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-27T17:20:27Z",
-      "updated_at": "2026-03-06T07:20:58Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4640",
+      "created_at": "2026-03-05T21:40:43Z",
+      "updated_at": "2026-03-06T23:55:07Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
       "labels": [
-        "onnxruntime",
-        "dependencies",
-        "skip bot checks",
-        "automated"
+        "onnx",
+        "Onnx Operators"
       ],
       "draft": false
     },
@@ -37,12 +23,77 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-20T21:54:12Z",
-      "updated_at": "2026-03-06T06:29:59Z",
+      "updated_at": "2026-03-06T22:25:13Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4626",
       "labels": [
         "enhancement",
         "high priority"
       ],
+      "draft": false
+    },
+    {
+      "number": 4631,
+      "title": "[AIMIGRAPHX-578] Use Eigen 3rd party library for ref GEMMs",
+      "author": "kahmed10",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T23:38:34Z",
+      "updated_at": "2026-03-06T17:40:30Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4631",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4639,
+      "title": "yolo26 example",
+      "author": "alexsu52",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T15:23:34Z",
+      "updated_at": "2026-03-06T17:27:48Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4639",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4653,
+      "title": "[AIMIGRAPHX-580] [AIMIGRAPHX-623] jit implementation for nonzero and scan lib",
+      "author": "bdevorem",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T17:20:59Z",
+      "updated_at": "2026-03-06T22:03:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4653",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4654,
+      "title": "Onnxruntime Weekly Sync 2026-03-06",
+      "author": "github-actions[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T17:21:36Z",
+      "updated_at": "2026-03-06T17:21:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4654",
+      "labels": [
+        "onnxruntime",
+        "dependencies",
+        "skip bot checks",
+        "automated"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4638,
+      "title": "Auto padding convTrans",
+      "author": "ivarusic-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T12:40:13Z",
+      "updated_at": "2026-03-06T12:37:28Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4638",
+      "labels": [],
       "draft": false
     },
     {
@@ -58,18 +109,6 @@
         "Matchers",
         "Perf Improve"
       ],
-      "draft": true
-    },
-    {
-      "number": 4652,
-      "title": "Add Cubic resize jit kernel",
-      "author": "TedThemistokleous",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T21:40:43Z",
-      "updated_at": "2026-03-06T00:22:18Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
-      "labels": [],
       "draft": true
     },
     {
@@ -124,18 +163,6 @@
       "draft": false
     },
     {
-      "number": 4631,
-      "title": "Use Eigen 3rd party library for ref GEMMs",
-      "author": "kahmed10",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T23:38:34Z",
-      "updated_at": "2026-03-05T05:32:43Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4631",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4521,
       "title": "Correct QLinearMatMul broadcasting and QLinearConv bias quantization",
       "author": "klin2024",
@@ -148,18 +175,6 @@
       "draft": false
     },
     {
-      "number": 4638,
-      "title": "Auto padding convTrans",
-      "author": "ivarusic-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T12:40:13Z",
-      "updated_at": "2026-03-04T23:07:37Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4638",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4581,
       "title": "[AIMIGRAPHX-408] Update intermediate ops to support dynamic shapes",
       "author": "shivadbhavsar",
@@ -168,18 +183,6 @@
       "created_at": "2026-01-29T20:48:55Z",
       "updated_at": "2026-03-04T20:05:56Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4581",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4599,
-      "title": "Horizontally fuse cross-embedding gather operators",
-      "author": "kahmed10",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-09T22:57:59Z",
-      "updated_at": "2026-03-04T19:36:07Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4599",
       "labels": [],
       "draft": false
     },
@@ -366,18 +369,6 @@
         "WCR"
       ],
       "draft": false
-    },
-    {
-      "number": 4639,
-      "title": "yolo26 example",
-      "author": "alexsu52",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T15:23:34Z",
-      "updated_at": "2026-02-26T19:03:53Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4639",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 4628,
@@ -1047,6 +1038,47 @@
       "updated_at": "2024-10-21T22:48:16Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/3468",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4599,
+      "title": "Horizontally fuse cross-embedding gather operators",
+      "author": "kahmed10",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-09T22:57:59Z",
+      "updated_at": "2026-03-07T05:08:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4599",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4645,
+      "title": "[AIMIGRAPHX-581] jit implementation for reverse",
+      "author": "bdevorem",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-02T18:23:38Z",
+      "updated_at": "2026-03-06T16:00:17Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4645",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4640,
+      "title": "Onnxruntime Weekly Sync 2026-02-27",
+      "author": "github-actions[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T17:20:27Z",
+      "updated_at": "2026-03-06T15:59:30Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4640",
+      "labels": [
+        "onnxruntime",
+        "dependencies",
+        "skip bot checks",
+        "automated"
+      ],
       "draft": false
     },
     {
@@ -1966,45 +1998,6 @@
       "created_at": "2025-12-10T17:56:59Z",
       "updated_at": "2026-01-26T16:52:19Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4494",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4572,
-      "title": "Fix compilation with MIOpen off after PR #4539",
-      "author": "apwojcik",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-26T09:16:59Z",
-      "updated_at": "2026-01-26T14:35:56Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4572",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4398,
-      "title": "Fix wrong number of arguments for pointwise",
-      "author": "eddieliao",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-10-17T22:49:24Z",
-      "updated_at": "2026-01-25T19:30:09Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4398",
-      "labels": [
-        "bugfix",
-        "Changelog: Resolved Issues"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4319,
-      "title": "Error check to avoid null config dereference",
-      "author": "harakas",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-09-25T10:47:06Z",
-      "updated_at": "2026-01-23T22:19:12Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4319",
       "labels": [],
       "draft": false
     }
