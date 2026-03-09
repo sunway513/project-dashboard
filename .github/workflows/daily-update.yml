@@ -36,6 +36,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Collect build times
+        run: python scripts/collect_build_times.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Take weekly snapshot
         run: python scripts/snapshot.py
 

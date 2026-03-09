@@ -90,6 +90,15 @@ def snapshot_project(name):
         snap["parity_pct"] = ps.get("parity_pct")
         snap["parity_gap"] = ps.get("gap")
 
+    # Build times (from collect_build_times.py)
+    build_times = load_json(project_dir / "build_times.json")
+    if build_times:
+        for wf_name, wf_data in build_times.get("workflows", {}).items():
+            stats = wf_data.get("stats", {})
+            key = wf_name.lower().replace(" ", "_").replace("-", "_")
+            snap[f"build_{key}_median_min"] = stats.get("median_minutes")
+            snap[f"build_{key}_p90_min"] = stats.get("p90_minutes")
+
     return snap
 
 

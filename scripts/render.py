@@ -294,6 +294,10 @@ def render_site_data(config):
         }
         if cfg.get("fork"):
             out["projects"][name]["fork"] = cfg["fork"]
+        if "depends_on" in cfg:
+            out["projects"][name]["depends_on"] = cfg["depends_on"]
+        if "build_workflows" in cfg:
+            out["projects"][name]["build_workflows"] = cfg["build_workflows"]
     path = SITE_DATA / "projects.json"
     path.write_text(json.dumps(out, indent=2) + "\n")
     print(f"Generated {path}")

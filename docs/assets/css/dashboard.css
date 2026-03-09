@@ -834,6 +834,217 @@ footer {
 .parity-trend h4 { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
 .parity-meta { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
 
+/* ---------------------------------------------------------------------------
+   Builds View (Tab 5)
+   --------------------------------------------------------------------------- */
+
+#builds-view h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+/* Dependency Graph */
+.dep-graph {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.dep-graph h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.dep-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dep-layer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dep-layer-label {
+  width: 80px;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.dep-layer-nodes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.dep-node {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  min-width: 100px;
+  text-align: center;
+}
+
+.dep-node-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dep-node-name a {
+  color: var(--text);
+}
+
+.dep-node-badge {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.dep-node-good { border-color: var(--accent-green); }
+.dep-node-good .dep-node-badge { background: var(--accent-green); }
+.dep-node-warn { border-color: var(--accent-orange); }
+.dep-node-warn .dep-node-badge { background: var(--accent-orange); }
+.dep-node-bad { border-color: var(--badge-closed); }
+.dep-node-bad .dep-node-badge { background: var(--badge-closed); }
+.dep-node-none .dep-node-badge { background: var(--badge-draft); }
+
+/* Build summary boxes */
+.build-summary-boxes {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.build-summary-box {
+  flex: 1;
+  min-width: 140px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.build-summary-box-total { border-top-color: var(--accent-blue); }
+.build-summary-box-met { border-top-color: var(--accent-green); }
+.build-summary-box-missed { border-top-color: var(--badge-closed); }
+.build-summary-box-avg { border-top-color: var(--accent-orange); }
+
+.build-summary-num {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.build-summary-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Build time details */
+.build-details {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.build-details h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.build-target-met {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.build-target-warn {
+  color: var(--accent-orange);
+  font-weight: 600;
+}
+
+.build-target-missed {
+  color: var(--badge-closed);
+  font-weight: 600;
+}
+
+.build-bar-cell {
+  width: 100px;
+}
+
+.build-bar-bg {
+  height: 14px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.build-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+/* Dependency arrows */
+.dep-arrows {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.dep-arrow-item {
+  display: inline-block;
+  margin-right: 16px;
+  margin-bottom: 4px;
+}
+
+.dep-arrow-item .arrow {
+  color: var(--accent-orange);
+}
+
+@media (max-width: 768px) {
+  .build-summary-boxes {
+    flex-wrap: wrap;
+  }
+  .build-summary-box {
+    flex: 1 1 45%;
+  }
+  .dep-layer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dep-layer-label {
+    width: auto;
+  }
+}
+
 /* Empty state */
 .empty {
   color: var(--text-muted);
