@@ -26,7 +26,7 @@ projects:
     track_labels: ["AMD GPU"]
     track_keywords: [ROCm]
     keyword_scope: title
-    depends_on: [xla, triton, mori, aiter]
+    depends_on: [xla, mori, aiter]
     build_workflows:
       - name: "CI"
 
@@ -58,7 +58,7 @@ projects:
     track_labels: [AMD-GPU]
     track_keywords: [ROCm, AMD]
     track_email_domains: ["amd.com"]
-    depends_on: [llvm]
+    depends_on: [llvm, triton]
     build_workflows: []
 
   triton:
