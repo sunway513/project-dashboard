@@ -3,7 +3,9 @@
     "pytorch": {
       "repo": "pytorch/pytorch",
       "role": "upstream_watch",
-      "depends_on": [],
+      "depends_on": [
+        "triton"
+      ],
       "build_workflows": [
         {
           "name": "pull"
@@ -13,7 +15,9 @@
     "jax": {
       "repo": "jax-ml/jax",
       "role": "upstream_watch",
-      "depends_on": [],
+      "depends_on": [
+        "xla"
+      ],
       "build_workflows": [
         {
           "name": "CI"
@@ -25,7 +29,10 @@
       "role": "upstream_watch",
       "fork": "sunway513/vllm",
       "depends_on": [
-        "aiter"
+        "pytorch",
+        "aiter",
+        "mori",
+        "triton"
       ],
       "build_workflows": [
         {
@@ -37,7 +44,12 @@
     "sglang": {
       "repo": "sgl-project/sglang",
       "role": "upstream_watch",
-      "depends_on": [],
+      "depends_on": [
+        "pytorch",
+        "aiter",
+        "mori",
+        "triton"
+      ],
       "build_workflows": []
     },
     "xla": {
@@ -62,7 +74,11 @@
       "repo": "ROCm/aiter",
       "role": "active_dev",
       "fork": "sunway513/aiter",
-      "depends_on": [],
+      "depends_on": [
+        "pytorch",
+        "triton",
+        "flydsl"
+      ],
       "build_workflows": [
         {
           "name": "Aiter Test",
@@ -76,7 +92,10 @@
       "role": "active_dev",
       "fork": "sunway513/ATOM",
       "depends_on": [
-        "aiter"
+        "aiter",
+        "mori",
+        "vllm",
+        "triton"
       ],
       "build_workflows": [
         {
@@ -88,7 +107,9 @@
       "repo": "ROCm/mori",
       "role": "active_dev",
       "fork": "sunway513/mori",
-      "depends_on": [],
+      "depends_on": [
+        "pytorch"
+      ],
       "build_workflows": []
     },
     "flydsl": {

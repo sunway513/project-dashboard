@@ -1026,31 +1026,38 @@ function renderBuildsView(projectsCfg, dataMap, historyData) {
 }
 
 function buildDependencyGraph(projectsCfg, dataMap) {
-  // Classify projects into layers based on depends_on
-  var layer0 = []; // upstream_watch with no dependents pointing to them
-  var layer1 = []; // core: active_dev with no depends_on, or upstream_watch depended upon
-  var layer2 = []; // apps: projects that depend on others
+  // Topological layering: assign each project to the deepest layer
+  // based on its longest dependency chain depth
+  var depthOf = {};
+  var names = Object.keys(projectsCfg);
 
-  // First pass: find which projects are depended upon
-  var depended = {};
-  for (var name in projectsCfg) {
-    var deps = projectsCfg[name].depends_on || [];
+  function getDepth(name) {
+    if (depthOf[name] !== undefined) return depthOf[name];
+    depthOf[name] = -1; // cycle guard
+    var deps = (projectsCfg[name] || {}).depends_on || [];
+    var maxChildDepth = -1;
     for (var i = 0; i < deps.length; i++) {
-      depended[deps[i]] = true;
+      if (projectsCfg[deps[i]]) {
+        maxChildDepth = Math.max(maxChildDepth, getDepth(deps[i]));
+      }
     }
+    depthOf[name] = maxChildDepth + 1;
+    return depthOf[name];
+  }
+  for (var ni = 0; ni < names.length; ni++) getDepth(names[ni]);
+
+  // Group by depth, then map to labeled layers
+  var maxDepth = 0;
+  for (var ni = 0; ni < names.length; ni++) {
+    if (depthOf[names[ni]] > maxDepth) maxDepth = depthOf[names[ni]];
   }
 
-  // Classify
-  for (var name in projectsCfg) {
-    var cfg = projectsCfg[name];
-    var deps = cfg.depends_on || [];
-    if (deps.length > 0) {
-      layer2.push(name);
-    } else if (cfg.role === "active_dev" || depended[name]) {
-      layer1.push(name);
-    } else {
-      layer0.push(name);
-    }
+  var layerLabels = ["Foundations", "Libraries", "Frameworks", "Serving", "Engines"];
+  var layerMap = {}; // depth -> [names]
+  for (var ni = 0; ni < names.length; ni++) {
+    var d = depthOf[names[ni]];
+    if (!layerMap[d]) layerMap[d] = [];
+    layerMap[d].push(names[ni]);
   }
 
   // Collect edges
@@ -1094,11 +1101,13 @@ function buildDependencyGraph(projectsCfg, dataMap) {
   html += '<h3>Project Dependencies</h3>';
   html += '<div class="dep-layers">';
 
-  var layers = [
-    { label: "Upstream", projects: layer0 },
-    { label: "Core", projects: layer1 },
-    { label: "Apps", projects: layer2 },
-  ];
+  // Build layers array from bottom (depth 0) to top (max depth), reversed for display
+  var layers = [];
+  for (var d = maxDepth; d >= 0; d--) {
+    if (layerMap[d]) {
+      layers.push({ label: layerLabels[d] || ("Layer " + d), projects: layerMap[d] });
+    }
+  }
 
   for (var li = 0; li < layers.length; li++) {
     var layer = layers[li];
