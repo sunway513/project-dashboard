@@ -67,7 +67,9 @@
     "migraphx": {
       "repo": "ROCm/AMDMIGraphX",
       "role": "active_dev",
-      "depends_on": [],
+      "depends_on": [
+        "triton"
+      ],
       "build_workflows": []
     },
     "aiter": {
