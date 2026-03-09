@@ -1,5 +1,11 @@
 {
   "projects": {
+    "llvm": {
+      "repo": "llvm/llvm-project",
+      "role": "upstream_watch",
+      "depends_on": [],
+      "build_workflows": []
+    },
     "pytorch": {
       "repo": "pytorch/pytorch",
       "role": "upstream_watch",
@@ -16,7 +22,10 @@
       "repo": "jax-ml/jax",
       "role": "upstream_watch",
       "depends_on": [
-        "xla"
+        "xla",
+        "triton",
+        "mori",
+        "aiter"
       ],
       "build_workflows": [
         {
@@ -32,7 +41,8 @@
         "pytorch",
         "aiter",
         "mori",
-        "triton"
+        "triton",
+        "atom"
       ],
       "build_workflows": [
         {
@@ -48,20 +58,25 @@
         "pytorch",
         "aiter",
         "mori",
-        "triton"
+        "triton",
+        "atom"
       ],
       "build_workflows": []
     },
     "xla": {
       "repo": "openxla/xla",
       "role": "upstream_watch",
-      "depends_on": [],
+      "depends_on": [
+        "llvm"
+      ],
       "build_workflows": []
     },
     "triton": {
       "repo": "triton-lang/triton",
       "role": "upstream_watch",
-      "depends_on": [],
+      "depends_on": [
+        "llvm"
+      ],
       "build_workflows": []
     },
     "migraphx": {
@@ -118,7 +133,9 @@
       "repo": "ROCm/FlyDSL",
       "role": "active_dev",
       "fork": "sunway513/FlyDSL",
-      "depends_on": [],
+      "depends_on": [
+        "llvm"
+      ],
       "build_workflows": [
         {
           "name": "FlyDSL CI",
