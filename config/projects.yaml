@@ -1,4 +1,14 @@
 projects:
+  llvm:
+    repo: llvm/llvm-project
+    role: upstream_watch
+    track_authors: []
+    track_labels: [AMDGPU]
+    track_keywords: [AMDGPU, GFX]
+    keyword_scope: title
+    depends_on: []
+    build_workflows: []
+
   pytorch:
     repo: pytorch/pytorch
     role: upstream_watch
@@ -16,7 +26,7 @@ projects:
     track_labels: ["AMD GPU"]
     track_keywords: [ROCm]
     keyword_scope: title
-    depends_on: [xla]
+    depends_on: [xla, triton, mori, aiter]
     build_workflows:
       - name: "CI"
 
@@ -27,7 +37,7 @@ projects:
     track_authors: []
     track_labels: [rocm, amd]
     track_keywords: [ROCm, AMD, HIP]
-    depends_on: [pytorch, aiter, mori, triton]
+    depends_on: [pytorch, aiter, mori, triton, atom]
     build_workflows:
       - name: "Docker Image CI"
         id: 141341664
@@ -38,7 +48,7 @@ projects:
     track_authors: []
     track_labels: [rocm, amd]
     track_keywords: [ROCm, AMD, HIP]
-    depends_on: [pytorch, aiter, mori, triton]
+    depends_on: [pytorch, aiter, mori, triton, atom]
     build_workflows: []
 
   xla:
@@ -48,7 +58,7 @@ projects:
     track_labels: [AMD-GPU]
     track_keywords: [ROCm, AMD]
     track_email_domains: ["amd.com"]
-    depends_on: []
+    depends_on: [llvm]
     build_workflows: []
 
   triton:
@@ -58,7 +68,7 @@ projects:
     track_labels: []
     track_keywords: ["[AMD]"]
     keyword_scope: title
-    depends_on: []
+    depends_on: [llvm]
     build_workflows: []
 
   migraphx:
@@ -111,7 +121,7 @@ projects:
     track_authors: [sunway513]
     track_labels: []
     track_keywords: []
-    depends_on: []
+    depends_on: [llvm]
     build_workflows:
       - name: "FlyDSL CI"
         id: 241508578
