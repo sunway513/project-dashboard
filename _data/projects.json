@@ -2,56 +2,106 @@
   "projects": {
     "pytorch": {
       "repo": "pytorch/pytorch",
-      "role": "upstream_watch"
+      "role": "upstream_watch",
+      "depends_on": [],
+      "build_workflows": [
+        {
+          "name": "pull"
+        }
+      ]
     },
     "jax": {
       "repo": "jax-ml/jax",
-      "role": "upstream_watch"
+      "role": "upstream_watch",
+      "depends_on": [],
+      "build_workflows": [
+        {
+          "name": "CI"
+        }
+      ]
     },
     "vllm": {
       "repo": "vllm-project/vllm",
       "role": "upstream_watch",
-      "fork": "sunway513/vllm"
+      "fork": "sunway513/vllm",
+      "depends_on": [
+        "aiter"
+      ],
+      "build_workflows": [
+        {
+          "name": "Docker Image CI",
+          "id": 141341664
+        }
+      ]
     },
     "sglang": {
       "repo": "sgl-project/sglang",
-      "role": "upstream_watch"
+      "role": "upstream_watch",
+      "depends_on": [],
+      "build_workflows": []
     },
     "xla": {
       "repo": "openxla/xla",
-      "role": "upstream_watch"
+      "role": "upstream_watch",
+      "depends_on": [],
+      "build_workflows": []
     },
     "triton": {
       "repo": "triton-lang/triton",
-      "role": "upstream_watch"
+      "role": "upstream_watch",
+      "depends_on": [],
+      "build_workflows": []
     },
     "migraphx": {
       "repo": "ROCm/AMDMIGraphX",
-      "role": "active_dev"
+      "role": "active_dev",
+      "depends_on": [],
+      "build_workflows": []
     },
     "aiter": {
       "repo": "ROCm/aiter",
       "role": "active_dev",
-      "fork": "sunway513/aiter"
+      "fork": "sunway513/aiter",
+      "depends_on": [],
+      "build_workflows": [
+        {
+          "name": "Aiter Test",
+          "id": 179476100,
+          "target_minutes": 15
+        }
+      ]
     },
     "atom": {
       "repo": "ROCm/ATOM",
       "role": "active_dev",
-      "fork": "sunway513/ATOM"
+      "fork": "sunway513/ATOM",
+      "depends_on": [
+        "aiter"
+      ],
+      "build_workflows": [
+        {
+          "name": "ATOM CI"
+        }
+      ]
     },
     "mori": {
       "repo": "ROCm/mori",
       "role": "active_dev",
-      "fork": "sunway513/mori"
+      "fork": "sunway513/mori",
+      "depends_on": [],
+      "build_workflows": []
     },
     "flydsl": {
       "repo": "ROCm/FlyDSL",
       "role": "active_dev",
-      "fork": "sunway513/FlyDSL"
-    },
-    "transformer_engine": {
-      "repo": "ROCm/TransformerEngine",
-      "role": "active_dev"
+      "fork": "sunway513/FlyDSL",
+      "depends_on": [],
+      "build_workflows": [
+        {
+          "name": "FlyDSL CI",
+          "id": 241508578
+        }
+      ]
     }
   }
 }
