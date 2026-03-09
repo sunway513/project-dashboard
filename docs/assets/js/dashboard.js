@@ -85,6 +85,11 @@
       document.querySelectorAll(".tab-panel").forEach(function (p) { p.classList.remove("active"); });
       this.classList.add("active");
       document.getElementById("tab-" + target).classList.add("active");
+      // Draw dependency edges when Builds tab becomes visible
+      if (target === "builds" && window._depGraphPending) {
+        var dg = window._depGraphPending;
+        setTimeout(function() { drawDepEdges(dg.graphId, dg.edges); }, 50);
+      }
     });
   }
 })();
@@ -1123,9 +1128,9 @@ function buildDependencyGraph(projectsCfg, dataMap) {
   html += '<svg class="dep-svg-overlay"></svg>';
   html += '</div>'; // dep-graph
 
-  // Schedule SVG edge drawing after DOM render
+  // Store graph info for deferred edge drawing (tab may be hidden)
   if (edges.length > 0) {
-    setTimeout(function() { drawDepEdges(graphId, edges); }, 100);
+    window._depGraphPending = { graphId: graphId, edges: edges };
   }
 
   return html;

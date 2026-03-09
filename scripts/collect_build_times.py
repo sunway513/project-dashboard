@@ -127,6 +127,10 @@ def collect_workflow_build_times(repo, wf_id, wf_name, target_minutes=None):
         updated = run.get("updated_at")
         dur = minutes_between(started, updated)
         conclusion = run.get("conclusion")
+        # For failed/cancelled runs, updated_at can be far after start
+        # (GitHub updates it on re-checks, etc.), producing bogus durations
+        if conclusion != "success" and dur is not None and dur > 1440:
+            dur = None
         if dur is not None and dur > 0:
             recent_runs.append(
                 {
@@ -143,13 +147,15 @@ def collect_workflow_build_times(repo, wf_id, wf_name, target_minutes=None):
             if conclusion == "success":
                 durations.append(dur)
 
-    if not durations:
-        return None
-
     # Latest run details
     latest = runs[0]
     latest_started = latest.get("run_started_at") or latest.get("created_at")
     latest_dur = minutes_between(latest_started, latest.get("updated_at"))
+
+    # For failed/cancelled runs, duration from updated_at is unreliable
+    # (can be days/months after start). Cap or nullify it.
+    if latest.get("conclusion") != "success" and latest_dur is not None and latest_dur > 1440:
+        latest_dur = None
 
     result = {
         "workflow_id": wf_id,
@@ -160,7 +166,7 @@ def collect_workflow_build_times(repo, wf_id, wf_name, target_minutes=None):
             "started_at": latest_started,
             "html_url": latest.get("html_url", ""),
         },
-        "stats": compute_stats(durations),
+        "stats": compute_stats(durations) if durations else None,
         "recent_runs": recent_runs[:20],
     }
 
@@ -209,11 +215,14 @@ def collect_project_build_times(name, cfg):
             result = collect_workflow_build_times(repo, wf_id, wf_name, target)
             if result:
                 workflows_result[wf_name] = result
-                stats = result.get("stats", {})
-                print(
-                    f"    Median: {stats.get('median_minutes')}m, "
-                    f"P90: {stats.get('p90_minutes')}m"
-                )
+                stats = result.get("stats") or {}
+                if stats:
+                    print(
+                        f"    Median: {stats.get('median_minutes')}m, "
+                        f"P90: {stats.get('p90_minutes')}m"
+                    )
+                else:
+                    print(f"    No successful runs (stats: N/A)")
     else:
         # Auto-discover: find workflows and pick the longest-running one
         discovered = discover_workflows(repo)
