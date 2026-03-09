@@ -23,7 +23,6 @@
       "role": "upstream_watch",
       "depends_on": [
         "xla",
-        "triton",
         "mori",
         "aiter"
       ],
@@ -67,7 +66,8 @@
       "repo": "openxla/xla",
       "role": "upstream_watch",
       "depends_on": [
-        "llvm"
+        "llvm",
+        "triton"
       ],
       "build_workflows": []
     },
