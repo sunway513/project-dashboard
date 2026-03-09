@@ -1171,6 +1171,41 @@ function renderDagreGraph(graphId, graphNodes, projectsCfg, nodeInfo) {
   merge.append("feMergeNode").attr("in", "blur");
   merge.append("feMergeNode").attr("in", "SourceGraphic");
 
+  // Assign colors to source nodes (nodes that have outgoing edges)
+  var edgeColors = [
+    "#58a6ff", // blue
+    "#f0883e", // orange
+    "#8957e5", // purple
+    "#238636", // green
+    "#da3633", // red
+    "#d29922", // yellow
+    "#3fb950", // bright green
+    "#bc8cff", // lavender
+    "#f778ba", // pink
+    "#79c0ff", // light blue
+  ];
+  var sourceNodes = {};
+  g.edges().forEach(function(e) { sourceNodes[e.v] = true; });
+  var sourceList = Object.keys(sourceNodes).sort();
+  var sourceColorMap = {};
+  for (var si = 0; si < sourceList.length; si++) {
+    sourceColorMap[sourceList[si]] = edgeColors[si % edgeColors.length];
+  }
+
+  // Create per-source arrowhead markers
+  for (var si = 0; si < sourceList.length; si++) {
+    var color = sourceColorMap[sourceList[si]];
+    defs.append("marker")
+      .attr("id", "dep-arrow-" + sourceList[si])
+      .attr("viewBox", "0 0 12 12")
+      .attr("refX", 10).attr("refY", 6)
+      .attr("markerWidth", 10).attr("markerHeight", 10)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M2,2 L10,6 L2,10 L4,6 Z")
+      .attr("fill", color);
+  }
+
   var container = svg.append("g").attr("transform", "translate(20,20)");
 
   // Render edges first (behind nodes)
@@ -1178,6 +1213,7 @@ function renderDagreGraph(graphId, graphNodes, projectsCfg, nodeInfo) {
   g.edges().forEach(function(e) {
     var edge = g.edge(e);
     var points = edge.points;
+    var color = sourceColorMap[e.v] || "#30363d";
     var line = d3.line()
       .x(function(p) { return p.x; })
       .y(function(p) { return p.y; })
@@ -1187,10 +1223,12 @@ function renderDagreGraph(graphId, graphNodes, projectsCfg, nodeInfo) {
       .attr("class", "dep-edge-path")
       .attr("data-from", e.v)
       .attr("data-to", e.w)
-      .attr("stroke", "#30363d")
+      .attr("data-color", color)
+      .attr("stroke", color)
       .attr("stroke-width", 1.5)
+      .attr("stroke-opacity", 0.6)
       .attr("fill", "none")
-      .attr("marker-end", "url(#dep-arrow)");
+      .attr("marker-end", "url(#dep-arrow-" + e.v + ")");
   });
 
   // Render nodes
@@ -1249,23 +1287,25 @@ function renderDagreGraph(graphId, graphNodes, projectsCfg, nodeInfo) {
       window.open("https://github.com/" + projectsCfg[n].repo, "_blank");
     });
 
-    // Hover: highlight connected edges
+    // Hover: highlight connected edges, dim others
     ng.on("mouseenter", function() {
       var n = d3.select(this).attr("data-node");
       d3.select(this).select(".dep-svg-rect").attr("filter", "url(#dep-glow)");
       edgeGroup.selectAll(".dep-edge-path").each(function() {
         var el = d3.select(this);
         if (el.attr("data-from") === n || el.attr("data-to") === n) {
-          el.attr("stroke", "#58a6ff").attr("stroke-width", 2.5);
+          el.attr("stroke-width", 2.5).attr("stroke-opacity", 1);
         } else {
-          el.attr("opacity", 0.2);
+          el.attr("stroke-opacity", 0.1);
         }
       });
     });
     ng.on("mouseleave", function() {
       d3.select(this).select(".dep-svg-rect").attr("filter", null);
-      edgeGroup.selectAll(".dep-edge-path")
-        .attr("stroke", "#30363d").attr("stroke-width", 1.5).attr("opacity", 1);
+      edgeGroup.selectAll(".dep-edge-path").each(function() {
+        var el = d3.select(this);
+        el.attr("stroke-width", 1.5).attr("stroke-opacity", 0.6);
+      });
     });
   });
 }
