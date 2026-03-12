@@ -1,0 +1,209 @@
+{
+  "lastUpdated": "2026-03-12",
+  "categories": [
+    {
+      "id": "attention",
+      "name": "Attention",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer", "FlashMLA"],
+      "operators": [
+        { "name": "MHA Prefill (FP16/BF16)", "coverage": { "Aiter": true, "FlashInfer": true, "FlashMLA": false } },
+        { "name": "MHA Prefill (FP8)", "coverage": { "Aiter": true, "FlashInfer": true, "FlashMLA": false } },
+        { "name": "MHA Decode", "coverage": { "Aiter": true, "FlashInfer": true, "FlashMLA": false } },
+        { "name": "MHA Varlen", "coverage": { "Aiter": true, "FlashInfer": true, "FlashMLA": false } },
+        { "name": "MLA Decode", "coverage": { "Aiter": true, "FlashInfer": true, "FlashMLA": true } },
+        { "name": "MLA Prefill", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } },
+        { "name": "Paged Attention Decode", "coverage": { "Aiter": true, "FlashInfer": true, "FlashMLA": false } },
+        { "name": "Paged Attention Prefill", "coverage": { "Aiter": true, "FlashInfer": true, "FlashMLA": false } },
+        { "name": "Paged Attention Ragged", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } },
+        { "name": "Cascade Attention", "coverage": { "Aiter": false, "FlashInfer": true, "FlashMLA": false } },
+        { "name": "Sparse MLA", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } },
+        { "name": "SAGE Attention (MXFP4)", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } },
+        { "name": "HSTU Attention", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } },
+        { "name": "POD Attention", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } },
+        { "name": "Lean Attention", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } },
+        { "name": "Unified Attention", "coverage": { "Aiter": true, "FlashInfer": false, "FlashMLA": false } }
+      ]
+    },
+    {
+      "id": "gemm",
+      "name": "GEMM",
+      "amd_projects": ["Aiter", "hipBLASLt"],
+      "nv_projects": ["cuBLASLt"],
+      "operators": [
+        { "name": "GEMM FP16/BF16", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "GEMM FP8 (per-tensor)", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "GEMM FP8 blockscale", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "GEMM INT8", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "GEMM FP4/MXFP4", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "GEMM A16W8 blockscale", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } },
+        { "name": "GEMM A16WFP4", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } },
+        { "name": "GEMM A8WFP4", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } },
+        { "name": "Batched GEMM BF16", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "Batched GEMM FP8", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "Batched GEMM FP4", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } },
+        { "name": "Grouped GEMM (MoE)", "coverage": { "Aiter": true, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "GEMM + Bias fusion", "coverage": { "Aiter": false, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "GEMM + ReLU/GELU/SiLU fusion", "coverage": { "Aiter": false, "hipBLASLt": true, "cuBLASLt": true } },
+        { "name": "DeepGEMM", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } },
+        { "name": "Fused GEMM (multi-stage)", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } },
+        { "name": "Feed-Forward Fused", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } },
+        { "name": "B-preshuffle GEMM", "coverage": { "Aiter": true, "hipBLASLt": false, "cuBLASLt": false } }
+      ]
+    },
+    {
+      "id": "moe",
+      "name": "MoE",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "Fused MoE BF16", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Fused MoE FP8", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Fused MoE FP8 blockscale", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Fused MoE MXFP4", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Fused MoE INT8 SmoothQuant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Fused MoE A8W4", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Fused MoE A4W4", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "MoE + SiLU fused", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "MoE + GELU fused", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "MoE 2-stage (CK/CKTile)", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "TopK Softmax", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "TopK Sigmoid", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Biased Grouped TopK", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "MoE Sorting", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "MoE Align Block Size", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "MoE Routing (bitmatrix)", "coverage": { "Aiter": true, "FlashInfer": false } }
+      ]
+    },
+    {
+      "id": "normalization",
+      "name": "Normalization",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "RMSNorm", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "RMSNorm + Add (fused)", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "RMSNorm + Quant (fused)", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "RMSNorm + Add + Quant (fused)", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "RMSNorm + SmoothQuant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "LayerNorm", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "LayerNorm + Add", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "LayerNorm + SmoothQuant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "GroupNorm", "coverage": { "Aiter": true, "FlashInfer": false } }
+      ]
+    },
+    {
+      "id": "quantization",
+      "name": "Quantization",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "Static per-tensor quant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Dynamic per-tensor quant", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Dynamic per-token quant", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Per-group FP4 quant", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "SmoothQuant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "MXFP4 quant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Fused FP8 quant", "coverage": { "Aiter": true, "FlashInfer": false } }
+      ]
+    },
+    {
+      "id": "positional-encoding",
+      "name": "Positional Encoding",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "RoPE (NEOX/GPT-J)", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "RoPE cached (cos/sin)", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "RoPE 2-channel (Q+K)", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "RoPE THD (varlen)", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "RoPE 2D (vision)", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "RoPE + positions + offsets", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Batched RoPE", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "LLaMA 3.1 RoPE", "coverage": { "Aiter": false, "FlashInfer": true } }
+      ]
+    },
+    {
+      "id": "sampling",
+      "name": "Sampling",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "Greedy sampling", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Random sampling", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Top-K sampling", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Top-P sampling", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Top-K + Top-P joint", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "Min-P sampling", "coverage": { "Aiter": false, "FlashInfer": true } },
+        { "name": "Speculative sampling", "coverage": { "Aiter": false, "FlashInfer": true } }
+      ]
+    },
+    {
+      "id": "elementwise",
+      "name": "Elementwise / Activation",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "SiLU and mul", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "GELU and mul", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "GELU-Tanh and mul", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Scaled SiLU and mul", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "add / sub / mul / div", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "sigmoid / tanh", "coverage": { "Aiter": true, "FlashInfer": false } }
+      ]
+    },
+    {
+      "id": "kv-cache",
+      "name": "KV Cache Management",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "reshape_and_cache", "coverage": { "Aiter": true, "FlashInfer": true } },
+        { "name": "reshape_and_cache FP8/INT8", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "reshape_and_cache block quant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "swap_blocks", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "copy_blocks", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "concat_and_cache MLA", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Fused QK+RoPE+Cache+Quant", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Paged KV append", "coverage": { "Aiter": false, "FlashInfer": true } }
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "amd_projects": ["Aiter", "Mori", "RCCL"],
+      "nv_projects": ["DeepEP", "NCCL"],
+      "operators": [
+        { "name": "AllReduce", "coverage": { "Aiter": true, "Mori": false, "RCCL": true, "DeepEP": false, "NCCL": true } },
+        { "name": "AllReduce + RMSNorm (fused)", "coverage": { "Aiter": true, "Mori": false, "RCCL": false, "DeepEP": false, "NCCL": false } },
+        { "name": "ReduceScatter", "coverage": { "Aiter": true, "Mori": false, "RCCL": true, "DeepEP": false, "NCCL": true } },
+        { "name": "AllGather", "coverage": { "Aiter": true, "Mori": false, "RCCL": true, "DeepEP": false, "NCCL": true } },
+        { "name": "AllToAll", "coverage": { "Aiter": false, "Mori": false, "RCCL": true, "DeepEP": false, "NCCL": true } },
+        { "name": "Broadcast", "coverage": { "Aiter": false, "Mori": false, "RCCL": true, "DeepEP": false, "NCCL": true } },
+        { "name": "Send / Recv", "coverage": { "Aiter": false, "Mori": false, "RCCL": true, "DeepEP": false, "NCCL": true } },
+        { "name": "EP Dispatch (IntraNode)", "coverage": { "Aiter": true, "Mori": true, "RCCL": false, "DeepEP": true, "NCCL": false } },
+        { "name": "EP Dispatch (InterNode)", "coverage": { "Aiter": true, "Mori": true, "RCCL": false, "DeepEP": true, "NCCL": false } },
+        { "name": "EP Combine (IntraNode)", "coverage": { "Aiter": true, "Mori": true, "RCCL": false, "DeepEP": true, "NCCL": false } },
+        { "name": "EP Combine (InterNode)", "coverage": { "Aiter": true, "Mori": true, "RCCL": false, "DeepEP": true, "NCCL": false } },
+        { "name": "EP Low-Latency (LL)", "coverage": { "Aiter": false, "Mori": true, "RCCL": false, "DeepEP": true, "NCCL": false } },
+        { "name": "RDMA Read/Write (P2P)", "coverage": { "Aiter": false, "Mori": true, "RCCL": false, "DeepEP": false, "NCCL": false } },
+        { "name": "RDMA Batch IO", "coverage": { "Aiter": false, "Mori": true, "RCCL": false, "DeepEP": false, "NCCL": false } },
+        { "name": "Shmem (symmetric memory)", "coverage": { "Aiter": false, "Mori": true, "RCCL": false, "DeepEP": false, "NCCL": false } },
+        { "name": "ReduceScatter+RMSNorm+Quant+AllGather (fused)", "coverage": { "Aiter": true, "Mori": false, "RCCL": false, "DeepEP": false, "NCCL": false } }
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "amd_projects": ["Aiter"],
+      "nv_projects": ["FlashInfer"],
+      "operators": [
+        { "name": "Causal Conv1D", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Gated Delta Net (SSM)", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Weight Shuffle/Preshuffle", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Ragged Layout Transform", "coverage": { "Aiter": true, "FlashInfer": false } },
+        { "name": "Softmax", "coverage": { "Aiter": true, "FlashInfer": false } }
+      ]
+    }
+  ]
+}

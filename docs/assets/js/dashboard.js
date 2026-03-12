@@ -30,6 +30,7 @@
   // Also load trend history + parity history
   const historyIndex = fetchJSON("data/history/index.json");
   const parityHistPromise = fetchJSON("data/pytorch/parity_history.json");
+  const opCoveragePromise = fetchJSON("_data/op-coverage.json");
 
   await Promise.all(fetches);
   const histIdx = await historyIndex;
@@ -61,6 +62,7 @@
     : "Last updated: unknown";
 
   const parityHistData = await parityHistPromise;
+  const opCoverageData = await opCoveragePromise;
 
   // Render all views
   renderWeeklySummary(dataMap);
@@ -68,6 +70,7 @@
   renderParityView(projects.projects, dataMap, parityHistData);
   renderActivityView(projects.projects, dataMap);
   renderTrendsView(projects.projects, dataMap, historyData);
+  renderOpCoverage(opCoverageData);
 
   // Tab switching
   var tabBtns = document.querySelectorAll(".tab-btn");
