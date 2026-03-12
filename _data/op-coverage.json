@@ -25,7 +25,11 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM"
+          "backend": "CK / ASM",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_fwd_kernels.cu",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_fwd.cu"
+          }
         },
         {
           "name": "MHA Prefill (FP8)",
@@ -40,7 +44,11 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM"
+          "backend": "CK / ASM",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_fwd_kernels.cu",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_fwd.cu"
+          }
         },
         {
           "name": "MHA Decode",
@@ -55,7 +63,11 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM"
+          "backend": "CK / ASM",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_fwd_kernels.cu",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_fwd.cu"
+          }
         },
         {
           "name": "MHA Varlen",
@@ -70,7 +82,11 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM"
+          "backend": "CK / ASM",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_varlen_fwd_kernels.cu",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_varlen_fwd.cu"
+          }
         },
         {
           "name": "MLA Decode",
@@ -88,7 +104,12 @@
               "url": "https://github.com/deepseek-ai/FlashMLA"
             }
           },
-          "backend": "ASM / Triton / HipKittens"
+          "backend": "ASM / Triton / HipKittens",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mla.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/mla.py",
+            "HipKittens": "https://github.com/ROCm/aiter/blob/main/aiter/ops/attention.py"
+          }
         },
         {
           "name": "MLA Prefill",
@@ -100,7 +121,11 @@
             "FlashInfer": "partial",
             "FlashMLA": false
           },
-          "backend": "ASM / Triton"
+          "backend": "ASM / Triton",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mla.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/mla.py"
+          }
         },
         {
           "name": "Paged Attention Decode",
@@ -115,7 +140,12 @@
             },
             "FlashMLA": false
           },
-          "backend": "ASM / HIP / Gluon"
+          "backend": "ASM / HIP / Gluon",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_pa.cu",
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/pa/pa.py",
+            "Gluon": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gluon/pa_decode_gluon.py"
+          }
         },
         {
           "name": "Paged Attention Prefill",
@@ -130,7 +160,11 @@
             },
             "FlashMLA": false
           },
-          "backend": "ASM / HIP"
+          "backend": "ASM / HIP",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_pa.cu",
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/pa/pa.py"
+          }
         },
         {
           "name": "Paged Attention Ragged",
@@ -145,7 +179,10 @@
             },
             "FlashMLA": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/pa/pa_ragged.py"
+          }
         },
         {
           "name": "Cascade Attention",
@@ -172,7 +209,10 @@
             },
             "FlashMLA": false
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/attention/unified_attention_sparse_mla.py"
+          }
         },
         {
           "name": "SAGE Attention (MXFP4)",
@@ -184,7 +224,10 @@
             "FlashInfer": false,
             "FlashMLA": false
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/attention/fav3_sage.py"
+          }
         },
         {
           "name": "HSTU Attention",
@@ -196,7 +239,10 @@
             "FlashInfer": false,
             "FlashMLA": false
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/attention/hstu_attention.py"
+          }
         },
         {
           "name": "POD Attention",
@@ -211,7 +257,10 @@
             },
             "FlashMLA": false
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/attention/pod_attention.py"
+          }
         },
         {
           "name": "Lean Attention",
@@ -223,7 +272,10 @@
             "FlashInfer": false,
             "FlashMLA": false
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/attention/lean_atten.py"
+          }
         },
         {
           "name": "Unified Attention",
@@ -235,7 +287,10 @@
             "FlashInfer": "partial",
             "FlashMLA": false
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/attention/unified_attention.py"
+          }
         }
       ]
     },
@@ -266,7 +321,11 @@
               "url": "https://docs.nvidia.com/cuda/cublas/"
             }
           },
-          "backend": "ASM / CK"
+          "backend": "ASM / CK",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a16w16.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/aiter/ops/gemm_op_a16w16.py"
+          }
         },
         {
           "name": "GEMM FP8 (per-tensor)",
@@ -284,7 +343,11 @@
               "url": "https://developer.nvidia.com/blog/new-cublas-12-0-features-and-matrix-multiplication-performance-on-nvidia-hopper-gpus/"
             }
           },
-          "backend": "CK / ASM"
+          "backend": "CK / ASM",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a8w8/",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a8w8.cu"
+          }
         },
         {
           "name": "GEMM FP8 blockscale",
@@ -302,7 +365,12 @@
               "url": "https://developer.nvidia.com/blog/boosting-matrix-multiplication-speed-and-flexibility-with-nvidia-cublas-12-9"
             }
           },
-          "backend": "CK / ASM / Triton"
+          "backend": "CK / ASM / Triton",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a8w8_blockscale/",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_flatmm_a8w8_blockscale.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gemm/basic/gemm_a8w8_blockscale.py"
+          }
         },
         {
           "name": "GEMM INT8",
@@ -320,7 +388,11 @@
               "url": "https://docs.nvidia.com/cuda/cublas/"
             }
           },
-          "backend": "CK / ASM"
+          "backend": "CK / ASM",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a8w8/",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a8w8.cu"
+          }
         },
         {
           "name": "GEMM FP4/MXFP4",
@@ -338,7 +410,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.gemm.mm_fp4.html"
             }
           },
-          "backend": "ASM / CK"
+          "backend": "ASM / CK",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a4w4.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a4w4_blockscale/"
+          }
         },
         {
           "name": "GEMM A16W8 blockscale",
@@ -350,7 +426,10 @@
             "hipBLASLt": false,
             "cuBLASLt": "partial"
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gemm/basic/gemm_a16w8_blockscale.py"
+          }
         },
         {
           "name": "GEMM A16WFP4",
@@ -362,7 +441,10 @@
             "hipBLASLt": false,
             "cuBLASLt": "partial"
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gemm/basic/gemm_a16wfp4.py"
+          }
         },
         {
           "name": "GEMM A8WFP4",
@@ -374,7 +456,10 @@
             "hipBLASLt": false,
             "cuBLASLt": "partial"
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gemm/basic/gemm_a8wfp4.py"
+          }
         },
         {
           "name": "Batched GEMM BF16",
@@ -392,7 +477,10 @@
               "url": "https://developer.nvidia.com/blog/introducing-grouped-gemm-apis-in-cublas-and-more-performance-updates/"
             }
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_batched_gemm_bf16/"
+          }
         },
         {
           "name": "Batched GEMM FP8",
@@ -410,7 +498,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.gemm.bmm_fp8.html"
             }
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_batched_gemm_a8w8/"
+          }
         },
         {
           "name": "Batched GEMM FP4",
@@ -425,7 +516,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.gemm.mm_fp4.html"
             }
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gemm/batched/batched_gemm_afp4wfp4.py"
+          }
         },
         {
           "name": "Grouped GEMM (MoE)",
@@ -443,7 +537,12 @@
               "url": "https://developer.nvidia.com/blog/introducing-grouped-gemm-apis-in-cublas-and-more-performance-updates/"
             }
           },
-          "backend": "ASM / CK / FlyDSL"
+          "backend": "ASM / CK / FlyDSL",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
+            "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/moe_kernels.py"
+          }
         },
         {
           "name": "GEMM + Bias fusion",
@@ -488,7 +587,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.gemm.batch_deepgemm_fp8_nt_groupwise.html"
             }
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_deepgemm/"
+          }
         },
         {
           "name": "Fused GEMM (multi-stage)",
@@ -500,7 +602,10 @@
             "hipBLASLt": false,
             "cuBLASLt": "partial"
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gemm/fused/fused_gemm_a8w8_blockscale_a16w16.py"
+          }
         },
         {
           "name": "Feed-Forward Fused",
@@ -515,7 +620,10 @@
               "url": "https://nvidia.github.io/TensorRT-LLM/release-notes.html"
             }
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gemm/feed_forward/ff_a16w16.py"
+          }
         },
         {
           "name": "B-preshuffle GEMM",
@@ -527,7 +635,11 @@
             "hipBLASLt": false,
             "cuBLASLt": "partial"
           },
-          "backend": "CK / ASM"
+          "backend": "CK / ASM",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a8w8_bpreshuffle/",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_a8w8_blockscale_bpreshuffle.cu"
+          }
         }
       ]
     },
@@ -553,7 +665,12 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "ASM / CK / FlyDSL"
+          "backend": "ASM / CK / FlyDSL",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
+            "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/kernels/moe_gemm_2stage.py"
+          }
         },
         {
           "name": "Fused MoE FP8",
@@ -567,7 +684,12 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.fused_moe.trtllm_fp8_per_tensor_scale_moe.html"
             }
           },
-          "backend": "ASM / CK / FlyDSL"
+          "backend": "ASM / CK / FlyDSL",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
+            "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/kernels/moe_gemm_2stage.py"
+          }
         },
         {
           "name": "Fused MoE FP8 blockscale",
@@ -581,7 +703,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.fused_moe.trtllm_fp8_block_scale_moe.html"
             }
           },
-          "backend": "Triton / ASM"
+          "backend": "Triton / ASM",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/moe/moe_op_gemm_a8w8_blockscale.py",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu"
+          }
         },
         {
           "name": "Fused MoE MXFP4",
@@ -595,7 +721,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.fused_moe.trtllm_fp4_block_scale_moe.html"
             }
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/moe/moe_op_mxfp4.py"
+          }
         },
         {
           "name": "Fused MoE INT8 SmoothQuant",
@@ -606,7 +735,12 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM / CK / Triton"
+          "backend": "ASM / CK / Triton",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/moe/moe_op_gemm_int8_smoothquant.py"
+          }
         },
         {
           "name": "Fused MoE A8W4",
@@ -617,7 +751,11 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM / CK"
+          "backend": "ASM / CK",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/"
+          }
         },
         {
           "name": "Fused MoE A4W4",
@@ -628,7 +766,12 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM / CK / FlyDSL"
+          "backend": "ASM / CK / FlyDSL",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
+            "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/kernels/mixed_moe_gemm_2stage.py"
+          }
         },
         {
           "name": "MoE + SiLU fused",
@@ -642,7 +785,12 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.fused_moe.cutlass_fused_moe.html"
             }
           },
-          "backend": "ASM / CK / FlyDSL"
+          "backend": "ASM / CK / FlyDSL",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
+            "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/kernels/moe_gemm_2stage.py"
+          }
         },
         {
           "name": "MoE + GELU fused",
@@ -653,7 +801,12 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "ASM / CK / FlyDSL"
+          "backend": "ASM / CK / FlyDSL",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
+            "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/kernels/moe_gemm_2stage.py"
+          }
         },
         {
           "name": "MoE 2-stage (CK/CKTile)",
@@ -664,7 +817,11 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK / FlyDSL"
+          "backend": "CK / FlyDSL",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_tile_gemm_moe_2stages/",
+            "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/kernels/moe_gemm_2stage.py"
+          }
         },
         {
           "name": "TopK Softmax",
@@ -678,7 +835,11 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "ASM / CK"
+          "backend": "ASM / CK",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_topksoftmax.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/aiter/ops/topk.py"
+          }
         },
         {
           "name": "TopK Sigmoid",
@@ -692,7 +853,10 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/topk_sigmoid_kernels.cu"
+          }
         },
         {
           "name": "Biased Grouped TopK",
@@ -706,7 +870,10 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/moe_fused_gate.cu"
+          }
         },
         {
           "name": "MoE Sorting",
@@ -717,7 +884,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/moe_sorting_kernels.cu"
+          }
         },
         {
           "name": "MoE Align Block Size",
@@ -728,7 +898,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "ASM"
+          "backend": "ASM",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/moe_align_block_size_kernels.cu"
+          }
         },
         {
           "name": "MoE Routing (bitmatrix)",
@@ -739,7 +912,10 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM"
+          "backend": "ASM",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/aiter/fused_moe.py"
+          }
         }
       ]
     },
@@ -765,7 +941,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.norm.rmsnorm.html"
             }
           },
-          "backend": "CK / HIP"
+          "backend": "CK / HIP",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu",
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_kernels.cu"
+          }
         },
         {
           "name": "RMSNorm + Add (fused)",
@@ -779,7 +959,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.norm.fused_add_rmsnorm.html"
             }
           },
-          "backend": "CK / HIP"
+          "backend": "CK / HIP",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu",
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_kernels.cu"
+          }
         },
         {
           "name": "RMSNorm + Quant (fused)",
@@ -790,7 +974,11 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP / CK"
+          "backend": "HIP / CK",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_quant_kernels.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu"
+          }
         },
         {
           "name": "RMSNorm + Add + Quant (fused)",
@@ -804,7 +992,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.comm.trtllm_allreduce_fusion.html"
             }
           },
-          "backend": "HIP / CK"
+          "backend": "HIP / CK",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_quant_kernels.cu",
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu"
+          }
         },
         {
           "name": "RMSNorm + SmoothQuant",
@@ -815,7 +1007,10 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu"
+          }
         },
         {
           "name": "LayerNorm",
@@ -829,7 +1024,12 @@
               "url": "https://docs.flashinfer.ai/api/norm.html"
             }
           },
-          "backend": "CK / ASM / Triton"
+          "backend": "CK / ASM / Triton",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/norm_kernels.cu",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_layernorm.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/normalization/norm.py"
+          }
         },
         {
           "name": "LayerNorm + Add",
@@ -840,7 +1040,12 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK / ASM / Triton"
+          "backend": "CK / ASM / Triton",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/norm_kernels.cu",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_layernorm.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/normalization/norm.py"
+          }
         },
         {
           "name": "LayerNorm + SmoothQuant",
@@ -851,7 +1056,10 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/norm_kernels.cu"
+          }
         },
         {
           "name": "GroupNorm",
@@ -862,7 +1070,10 @@
             },
             "FlashInfer": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/groupnorm.cu"
+          }
         }
       ]
     },
@@ -888,7 +1099,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.fused_moe.trtllm_fp8_per_tensor_scale_moe.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/quant_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/quant/quant.py"
+          }
         },
         {
           "name": "Dynamic per-tensor quant",
@@ -899,7 +1114,11 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/quant_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/quant/quant.py"
+          }
         },
         {
           "name": "Dynamic per-token quant",
@@ -913,7 +1132,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.comm.trtllm_allreduce_fusion.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/quant_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/quant/quant.py"
+          }
         },
         {
           "name": "Per-group FP4 quant",
@@ -927,7 +1150,11 @@
               "url": "https://docs.flashinfer.ai/api/fp4_quantization.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/quant_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/quant/quant.py"
+          }
         },
         {
           "name": "SmoothQuant",
@@ -938,7 +1165,10 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK"
+          "backend": "CK",
+          "backend_urls": {
+            "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/smoothquant_kernels.cu"
+          }
         },
         {
           "name": "MXFP4 quant",
@@ -952,7 +1182,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.gemm.mm_fp4.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/quant_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/quant/fused_mxfp4_quant.py"
+          }
         },
         {
           "name": "Fused FP8 quant",
@@ -966,7 +1200,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.comm.trtllm_allreduce_fusion.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/quant_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/quant/fused_fp8_quant.py"
+          }
         }
       ]
     },
@@ -992,7 +1230,11 @@
               "url": "https://docs.flashinfer.ai/api/rope.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rope/general_fwd_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/rope/rope.py"
+          }
         },
         {
           "name": "RoPE cached (cos/sin)",
@@ -1006,7 +1248,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.rope.apply_rope_with_cos_sin_cache.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rope/general_fwd_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/rope/rope.py"
+          }
         },
         {
           "name": "RoPE 2-channel (Q+K)",
@@ -1020,7 +1266,11 @@
               "url": "https://docs.flashinfer.ai/api/rope.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rope/general_fwd_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/rope/rope.py"
+          }
         },
         {
           "name": "RoPE THD (varlen)",
@@ -1034,7 +1284,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.rope.apply_rope.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rope/general_fwd_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/rope/rope.py"
+          }
         },
         {
           "name": "RoPE 2D (vision)",
@@ -1048,7 +1302,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.rope.apply_rope_pos_ids.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rope/pos_fwd_kernels.cu"
+          }
         },
         {
           "name": "RoPE + positions + offsets",
@@ -1062,7 +1319,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.rope.apply_rope_pos_ids.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rope/pos_fwd_kernels.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/rope/rope.py"
+          }
         },
         {
           "name": "Batched RoPE",
@@ -1076,7 +1337,10 @@
               "url": "https://docs.flashinfer.ai/api/rope.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rope/general_fwd_kernels.cu"
+          }
         },
         {
           "name": "LLaMA 3.1 RoPE",
@@ -1110,7 +1374,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/sampling/"
+          }
         },
         {
           "name": "Random sampling",
@@ -1124,7 +1391,10 @@
               "url": "https://docs.flashinfer.ai/api/sampling.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/sampling/"
+          }
         },
         {
           "name": "Top-K sampling",
@@ -1138,7 +1408,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.sampling.top_k_sampling_from_probs.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/sampling/"
+          }
         },
         {
           "name": "Top-P sampling",
@@ -1152,7 +1425,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.sampling.top_p_sampling_from_probs.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/sampling/"
+          }
         },
         {
           "name": "Top-K + Top-P joint",
@@ -1166,7 +1442,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.sampling.top_k_top_p_sampling_from_probs.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/sampling/"
+          }
         },
         {
           "name": "Min-P sampling",
@@ -1203,7 +1482,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.activation.silu_and_mul.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
+          }
         },
         {
           "name": "GELU and mul",
@@ -1217,7 +1499,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.activation.gelu_and_mul.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
+          }
         },
         {
           "name": "GELU-Tanh and mul",
@@ -1231,7 +1516,10 @@
               "url": "https://docs.flashinfer.ai/api/activation.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
+          }
         },
         {
           "name": "Scaled SiLU and mul",
@@ -1245,7 +1533,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.activation.silu_and_mul.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
+          }
         },
         {
           "name": "add / sub / mul / div",
@@ -1256,7 +1547,10 @@
             },
             "FlashInfer": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
+          }
         },
         {
           "name": "sigmoid / tanh",
@@ -1267,7 +1561,10 @@
             },
             "FlashInfer": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
+          }
         }
       ]
     },
@@ -1293,7 +1590,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.page.append_paged_kv_cache.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/cache_kernels.cu"
+          }
         },
         {
           "name": "reshape_and_cache FP8/INT8",
@@ -1304,7 +1604,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/cache_kernels.cu"
+          }
         },
         {
           "name": "reshape_and_cache block quant",
@@ -1315,7 +1618,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/cache_kernels.cu"
+          }
         },
         {
           "name": "swap_blocks",
@@ -1329,7 +1635,10 @@
               "url": "https://github.com/vllm-project/vllm/pull/15603"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/cache_kernels.cu"
+          }
         },
         {
           "name": "copy_blocks",
@@ -1343,7 +1652,10 @@
               "url": "https://github.com/vllm-project/vllm/pull/15603"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/cache_kernels.cu"
+          }
         },
         {
           "name": "concat_and_cache MLA",
@@ -1357,7 +1669,10 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.page.append_paged_kv_cache.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/cache_kernels.cu"
+          }
         },
         {
           "name": "Fused QK+RoPE+Cache+Quant",
@@ -1368,7 +1683,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/fused_qk_norm_rope_cache_quant.cu"
+          }
         },
         {
           "name": "Paged KV append",
@@ -1414,7 +1732,11 @@
               "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/collectives.html"
             }
           },
-          "backend": "HIP / ASM"
+          "backend": "HIP / ASM",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/custom_all_reduce.cu",
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_communication.cu"
+          }
         },
         {
           "name": "AllReduce + RMSNorm (fused)",
@@ -1431,7 +1753,11 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.comm.trtllm_allreduce_fusion.html"
             }
           },
-          "backend": "ASM / HIP"
+          "backend": "ASM / HIP",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_communication.cu",
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/custom_all_reduce.cu"
+          }
         },
         {
           "name": "ReduceScatter",
@@ -1451,7 +1777,10 @@
               "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/collectives.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/aiter/ops/communication.py"
+          }
         },
         {
           "name": "AllGather",
@@ -1471,7 +1800,10 @@
               "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/collectives.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/aiter/ops/communication.py"
+          }
         },
         {
           "name": "AllToAll",
@@ -1542,7 +1874,10 @@
             },
             "NCCL": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/aiter/ops/communication.py"
+          }
         },
         {
           "name": "EP Dispatch (InterNode)",
@@ -1562,7 +1897,10 @@
             },
             "NCCL": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/aiter/ops/communication.py"
+          }
         },
         {
           "name": "EP Combine (IntraNode)",
@@ -1582,7 +1920,10 @@
             },
             "NCCL": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/aiter/ops/communication.py"
+          }
         },
         {
           "name": "EP Combine (InterNode)",
@@ -1602,7 +1943,10 @@
             },
             "NCCL": false
           },
-          "backend": "HIP"
+          "backend": "HIP",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/aiter/ops/communication.py"
+          }
         },
         {
           "name": "EP Low-Latency (LL)",
@@ -1684,7 +2028,11 @@
             "DeepEP": false,
             "NCCL": "partial"
           },
-          "backend": "ASM / HIP"
+          "backend": "ASM / HIP",
+          "backend_urls": {
+            "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_communication.cu",
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/custom_all_reduce.cu"
+          }
         }
       ]
     },
@@ -1710,7 +2058,11 @@
               "url": "https://nvidia.github.io/TensorRT-LLM/release-notes.html"
             }
           },
-          "backend": "HIP / Triton"
+          "backend": "HIP / Triton",
+          "backend_urls": {
+            "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/causal_conv1d_update.cu",
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/causal_conv1d.py"
+          }
         },
         {
           "name": "Gated Delta Net (SSM)",
@@ -1721,7 +2073,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/gated_delta_net/gated_delta_rule.py"
+          }
         },
         {
           "name": "Weight Shuffle/Preshuffle",
@@ -1735,7 +2090,10 @@
               "url": "https://docs.flashinfer.ai/api/fp4_quantization.html"
             }
           },
-          "backend": "PyTorch"
+          "backend": "PyTorch",
+          "backend_urls": {
+            "PyTorch": "https://github.com/ROCm/aiter/blob/main/aiter/ops/shuffle.py"
+          }
         },
         {
           "name": "Ragged Layout Transform",
@@ -1749,7 +2107,10 @@
               "url": "https://docs.flashinfer.ai/api/attention.html"
             }
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/trans_ragged_layout.py"
+          }
         },
         {
           "name": "Softmax",
@@ -1760,7 +2121,10 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "Triton"
+          "backend": "Triton",
+          "backend_urls": {
+            "Triton": "https://github.com/ROCm/aiter/blob/main/aiter/ops/triton/softmax.py"
+          }
         }
       ]
     }

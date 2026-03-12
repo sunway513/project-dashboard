@@ -99,7 +99,7 @@ function buildOcCategory(cat) {
     var op = ops[i];
     html += '<tr>';
     html += '<td>' + escapeHtml(op.name) + '</td>';
-    html += '<td>' + backendBadges(op.backend) + '</td>';
+    html += '<td>' + backendBadges(op.backend, op.backend_urls) + '</td>';
     for (var a = 0; a < amdProjects.length; a++) {
       html += '<td>' + coverageIcon(op.coverage[amdProjects[a]]) + '</td>';
     }
@@ -139,7 +139,7 @@ function coverageIconSimple(val) {
   return '<span class="oc-no">&mdash;</span>';
 }
 
-function backendBadges(val) {
+function backendBadges(val, urls) {
   if (!val) return '<span class="oc-no">&mdash;</span>';
   var parts = val.split(/\s*[\/+]\s*/);
   var html = '';
@@ -154,10 +154,12 @@ function backendBadges(val) {
     else if (p === 'HIP') cls = 'oc-be-hip';
     else if (p === 'FlyDSL') cls = 'oc-be-flydsl';
     else if (p === 'PyTorch') cls = 'oc-be-hip';
-    if (i === 0) {
-      html += '<span class="oc-be ' + cls + '">' + escapeHtml(label) + '</span>';
+    var altCls = i === 0 ? '' : ' oc-be-alt';
+    var badge = '<span class="oc-be' + altCls + ' ' + cls + '">' + escapeHtml(label) + '</span>';
+    if (urls && urls[p]) {
+      html += '<a href="' + urls[p] + '" target="_blank" class="oc-be-link">' + badge + '</a>';
     } else {
-      html += '<span class="oc-be oc-be-alt ' + cls + '">' + escapeHtml(label) + '</span>';
+      html += badge;
     }
   }
   return html;
