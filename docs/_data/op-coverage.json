@@ -88,7 +88,7 @@
               "url": "https://github.com/deepseek-ai/FlashMLA"
             }
           },
-          "backend": "ASM + Triton"
+          "backend": "ASM / Triton / HipKittens"
         },
         {
           "name": "MLA Prefill",
@@ -100,7 +100,7 @@
             "FlashInfer": "partial",
             "FlashMLA": false
           },
-          "backend": "ASM"
+          "backend": "ASM / Triton"
         },
         {
           "name": "Paged Attention Decode",
@@ -115,7 +115,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "ASM / HIP"
+          "backend": "ASM / HIP / Gluon"
         },
         {
           "name": "Paged Attention Prefill",
@@ -606,7 +606,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM / CK"
+          "backend": "ASM / CK / Triton"
         },
         {
           "name": "Fused MoE A8W4",
@@ -765,7 +765,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.norm.rmsnorm.html"
             }
           },
-          "backend": "CK / HIP / Triton"
+          "backend": "CK / HIP"
         },
         {
           "name": "RMSNorm + Add (fused)",
@@ -779,7 +779,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.norm.fused_add_rmsnorm.html"
             }
           },
-          "backend": "CK / HIP / Triton"
+          "backend": "CK / HIP"
         },
         {
           "name": "RMSNorm + Quant (fused)",
@@ -790,7 +790,7 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP / CK / Triton"
+          "backend": "HIP / CK"
         },
         {
           "name": "RMSNorm + Add + Quant (fused)",
@@ -804,7 +804,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.comm.trtllm_allreduce_fusion.html"
             }
           },
-          "backend": "HIP / CK / Triton"
+          "backend": "HIP / CK"
         },
         {
           "name": "RMSNorm + SmoothQuant",
@@ -1710,7 +1710,7 @@
               "url": "https://nvidia.github.io/TensorRT-LLM/release-notes.html"
             }
           },
-          "backend": "HIP"
+          "backend": "HIP / Triton"
         },
         {
           "name": "Gated Delta Net (SSM)",
@@ -1760,7 +1760,7 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP"
+          "backend": "Triton"
         }
       ]
     }
