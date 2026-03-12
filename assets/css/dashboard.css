@@ -1227,10 +1227,34 @@ footer {
 
 .oc-link {
   text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.oc-link .oc-yes {
+  color: #58a6ff;
+}
+
+.oc-link::after {
+  content: "\2197";
+  font-size: 9px;
+  position: absolute;
+  top: -2px;
+  right: -8px;
+  color: var(--text-muted);
+  opacity: 0.7;
 }
 
 .oc-link:hover {
   text-decoration: underline;
+}
+
+.oc-link:hover .oc-yes {
+  color: #79c0ff;
+}
+
+.oc-link:hover::after {
+  opacity: 1;
 }
 
 .oc-updated {
