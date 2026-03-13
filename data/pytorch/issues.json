@@ -1,6 +1,100 @@
 {
-  "collected_at": "2026-03-13T04:31:12Z",
+  "collected_at": "2026-03-13T08:12:43Z",
   "issues": [
+    {
+      "number": 177377,
+      "title": "`torch.compile(flex_attention)` fails on `torch.jagged` nested inputs with `nested_tensor_from_jagged does not support tracing`",
+      "author": "ZhiyuanChen",
+      "state": "open",
+      "created_at": "2026-03-13T06:53:50Z",
+      "updated_at": "2026-03-13T06:57:07Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177377",
+      "labels": [
+        "triaged",
+        "module: nestedtensor",
+        "oncall: pt2",
+        "module: inductor",
+        "module: flex attention",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 177378,
+      "title": "`flex_attention` on `torch.jagged` nested inputs appears to allow cross-sequence attention unless an explicit nested block mask is provided",
+      "author": "ZhiyuanChen",
+      "state": "open",
+      "created_at": "2026-03-13T06:54:23Z",
+      "updated_at": "2026-03-13T06:56:47Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177378",
+      "labels": [
+        "triage review",
+        "module: nestedtensor",
+        "module: correctness (silent)",
+        "oncall: pt2",
+        "module: flex attention",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 177146,
+      "title": "Divisibility constraints are not propagated through symbolic expressions in Inductor",
+      "author": "liqiangxl",
+      "state": "open",
+      "created_at": "2026-03-11T17:04:29Z",
+      "updated_at": "2026-03-13T06:11:34Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177146",
+      "labels": [
+        "oncall: pt2"
+      ]
+    },
+    {
+      "number": 169253,
+      "title": "torch.compile bug: class-level list mutations are dropped",
+      "author": "ad8e",
+      "state": "open",
+      "created_at": "2025-11-30T07:04:00Z",
+      "updated_at": "2026-03-13T05:22:46Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/169253",
+      "labels": [
+        "high priority",
+        "triaged",
+        "module: correctness (silent)",
+        "oncall: pt2",
+        "module: dynamo",
+        "dynamo-side-effects",
+        "dynamo-triage-dec2025",
+        "PT2-Bug-Bash"
+      ]
+    },
+    {
+      "number": 177371,
+      "title": "LocalTensorMode: all_to_all_single crashes with uneven split sizes",
+      "author": "vishal9-team",
+      "state": "open",
+      "created_at": "2026-03-13T05:05:45Z",
+      "updated_at": "2026-03-13T05:07:05Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177371",
+      "labels": [
+        "oncall: distributed",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 165506,
+      "title": "[torch.compile] dynamic shape kernel mismatch",
+      "author": "dxqb",
+      "state": "open",
+      "created_at": "2025-10-15T02:30:20Z",
+      "updated_at": "2026-03-13T04:34:48Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/165506",
+      "labels": [
+        "triaged",
+        "oncall: pt2",
+        "module: dynamic shapes",
+        "module: inductor",
+        "PT2-Bug-Bash"
+      ]
+    },
     {
       "number": 175093,
       "title": "[v.2.11.0] Release Tracker",
@@ -45,22 +139,6 @@
         "oncall: pt2",
         "module: dynamo",
         "module: guards",
-        "PT2-Bug-Bash"
-      ]
-    },
-    {
-      "number": 165506,
-      "title": "[torch.compile] dynamic shape kernel mismatch",
-      "author": "dxqb",
-      "state": "open",
-      "created_at": "2025-10-15T02:30:20Z",
-      "updated_at": "2026-03-12T21:32:47Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/165506",
-      "labels": [
-        "triaged",
-        "oncall: pt2",
-        "module: dynamic shapes",
-        "module: inductor",
         "PT2-Bug-Bash"
       ]
     },
@@ -495,32 +573,6 @@
       ]
     },
     {
-      "number": 177218,
-      "title": "DISABLED test_additive_rnumel (__main__.MixOrderReductionTest)",
-      "author": "etaf",
-      "state": "open",
-      "created_at": "2026-03-12T01:04:53Z",
-      "updated_at": "2026-03-12T01:04:57Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177218",
-      "labels": [
-        "triaged",
-        "skipped",
-        "module: xpu"
-      ]
-    },
-    {
-      "number": 177146,
-      "title": "Divisibility constraints are not propagated through symbolic expressions in Inductor",
-      "author": "liqiangxl",
-      "state": "open",
-      "created_at": "2026-03-11T17:04:29Z",
-      "updated_at": "2026-03-11T23:59:17Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177146",
-      "labels": [
-        "oncall: pt2"
-      ]
-    },
-    {
       "number": 118492,
       "title": "`torch.compile(dynamic=True)` compiles forever",
       "author": "awaelchli",
@@ -740,21 +792,6 @@
         "module: linear algebra",
         "module: floatx (formerly float8)",
         "rocm-skipped-tests"
-      ]
-    },
-    {
-      "number": 137223,
-      "title": "DISABLED test_memory_plots_free_segment_stack (__main__.TestCudaMallocAsync)",
-      "author": "pytorch-bot[bot]",
-      "state": "open",
-      "created_at": "2024-10-02T21:41:17Z",
-      "updated_at": "2026-03-10T07:00:26Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/137223",
-      "labels": [
-        "module: rocm",
-        "triaged",
-        "module: flaky-tests",
-        "skipped"
       ]
     }
   ]

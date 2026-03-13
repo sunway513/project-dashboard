@@ -1,6 +1,277 @@
 {
-  "collected_at": "2026-03-13T04:31:45Z",
+  "collected_at": "2026-03-13T08:13:19Z",
   "prs": [
+    {
+      "number": 18233,
+      "title": "Support Qwen3 MoE context parallel",
+      "author": "Shunkangz",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-04T07:28:28Z",
+      "updated_at": "2026-03-13T08:09:05Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/18233",
+      "labels": [
+        "documentation",
+        "deepseek",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20477,
+      "title": "Add NCCL/RCCL pre-warming to reduce P99 TTFT cold-start latency",
+      "author": "hubertlu-tw",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-12T23:30:42Z",
+      "updated_at": "2026-03-13T07:52:27Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20477",
+      "labels": [
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20242,
+      "title": "[AMD] Add aiter backend for GemmaRMSNorm, causal_conv1d and topk_softmax",
+      "author": "zhentaocc",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-10T06:08:51Z",
+      "updated_at": "2026-03-13T07:46:06Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20242",
+      "labels": [
+        "amd",
+        "aiter"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20392,
+      "title": "Gpt oss aiter decode",
+      "author": "kkHuang-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-12T00:07:01Z",
+      "updated_at": "2026-03-13T07:36:34Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20392",
+      "labels": [
+        "quant",
+        "amd",
+        "run-ci"
+      ],
+      "draft": true
+    },
+    {
+      "number": 20360,
+      "title": "[AMD][Bug fix] Add missing tensor_model_parallel_all_reduce in NSACPLayerCommunicato",
+      "author": "pbkowalski",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-11T12:49:47Z",
+      "updated_at": "2026-03-13T07:32:52Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20360",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 20479,
+      "title": "Support Triton MLA FP8 KV cache",
+      "author": "b8zhong",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-13T00:17:56Z",
+      "updated_at": "2026-03-13T07:25:12Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20479",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 20118,
+      "title": "[1/N] fix CP for Helios",
+      "author": "SHYuanBest",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-08T08:16:25Z",
+      "updated_at": "2026-03-13T07:17:49Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20118",
+      "labels": [
+        "run-ci",
+        "diffusion"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20342,
+      "title": "Add native MLX execution backend for Apple Silicon Mac",
+      "author": "yeahdongcn",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-11T08:30:22Z",
+      "updated_at": "2026-03-13T07:15:48Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20342",
+      "labels": [
+        "macos",
+        "jit-kernel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20255,
+      "title": "add Eagle3 speculative decoding support for Qwen3.5",
+      "author": "NikitosKh",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-10T08:45:27Z",
+      "updated_at": "2026-03-13T06:56:01Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20255",
+      "labels": [
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19103,
+      "title": "[jit_kernel] Migrate cast (downcast_fp8) from sgl-kernel AOT to JIT",
+      "author": "Johnsonms",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-21T03:34:26Z",
+      "updated_at": "2026-03-13T06:55:56Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19103",
+      "labels": [
+        "sgl-kernel",
+        "run-ci",
+        "jit-kernel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19826,
+      "title": "[AMD][Qwen3.5] aiter a8w8 gemm configuration",
+      "author": "seungrokj",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T04:10:32Z",
+      "updated_at": "2026-03-13T06:23:59Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19826",
+      "labels": [
+        "amd",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20453,
+      "title": "[AMD][MORI] Fix MTP crash with FP4/FP8 dispatch and add NEXTN dispatch env vars.",
+      "author": "Duyi-Wang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-12T12:37:13Z",
+      "updated_at": "2026-03-13T05:59:32Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20453",
+      "labels": [
+        "documentation",
+        "deepseek",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20294,
+      "title": "[AMD CI] Add 4-GPU test suite for MI325 runners",
+      "author": "michaelzhang-ai",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-10T20:03:39Z",
+      "updated_at": "2026-03-13T05:56:37Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20294",
+      "labels": [
+        "amd",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20440,
+      "title": "Release sglang kernel 0.4.0",
+      "author": "BBuf",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-12T09:52:21Z",
+      "updated_at": "2026-03-13T05:24:16Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20440",
+      "labels": [
+        "documentation",
+        "amd",
+        "dependencies",
+        "sgl-kernel",
+        "npu",
+        "mthreads"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20496,
+      "title": "[AMD] diffusion refactor: move ROCM VAE optimization to Platform abstraction",
+      "author": "yctseng0211",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-13T04:02:37Z",
+      "updated_at": "2026-03-13T05:16:33Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20496",
+      "labels": [
+        "amd",
+        "run-ci",
+        "diffusion"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19395,
+      "title": "MFU metrics in Prometheus ",
+      "author": "aramasethu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T05:15:24Z",
+      "updated_at": "2026-03-13T05:14:25Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19395",
+      "labels": [
+        "documentation",
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19749,
+      "title": "[Feature] Optimizations for JPEG input on NVIDIA GPU",
+      "author": "wili-65535",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T06:41:15Z",
+      "updated_at": "2026-03-13T04:59:15Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19749",
+      "labels": [
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20170,
+      "title": "[AMD] [diffusion] feat: enable AITer GroupNorm for VAE decode on ROCm",
+      "author": "yctseng0211",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-09T07:57:48Z",
+      "updated_at": "2026-03-13T04:56:48Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20170",
+      "labels": [
+        "amd",
+        "run-ci",
+        "diffusion"
+      ],
+      "draft": false
+    },
     {
       "number": 20402,
       "title": "Fix CI failures from driver 570\u2192575 upgrade on SCI H200",
@@ -8,7 +279,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-12T03:45:28Z",
-      "updated_at": "2026-03-13T04:26:26Z",
+      "updated_at": "2026-03-13T04:56:25Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/20402",
       "labels": [
         "high priority",
@@ -28,38 +299,6 @@
       "html_url": "https://github.com/sgl-project/sglang/pull/20419",
       "labels": [
         "documentation"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20496,
-      "title": "[AMD] diffusion refactor: move ROCM VAE optimization to Platform abstraction",
-      "author": "yctseng0211",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-13T04:02:37Z",
-      "updated_at": "2026-03-13T04:19:00Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20496",
-      "labels": [
-        "amd",
-        "run-ci",
-        "diffusion"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20453,
-      "title": "[AMD][MORI] Fix MTP crash with FP4/FP8 dispatch and add NEXTN dispatch env vars.",
-      "author": "Duyi-Wang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-12T12:37:13Z",
-      "updated_at": "2026-03-13T04:13:34Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20453",
-      "labels": [
-        "documentation",
-        "deepseek",
-        "run-ci"
       ],
       "draft": false
     },
@@ -94,81 +333,6 @@
       "draft": false
     },
     {
-      "number": 20342,
-      "title": "Add native MLX execution backend for Apple Silicon Mac",
-      "author": "yeahdongcn",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-11T08:30:22Z",
-      "updated_at": "2026-03-13T03:34:33Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20342",
-      "labels": [
-        "macos",
-        "jit-kernel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20170,
-      "title": "[AMD] [diffusion] feat: enable AITer GroupNorm for VAE decode on ROCm",
-      "author": "yctseng0211",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-09T07:57:48Z",
-      "updated_at": "2026-03-13T03:28:55Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20170",
-      "labels": [
-        "amd",
-        "run-ci",
-        "diffusion"
-      ],
-      "draft": false
-    },
-    {
-      "number": 19826,
-      "title": "[AMD][Qwen3.5] aiter a8w8 gemm configuration",
-      "author": "seungrokj",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-04T04:10:32Z",
-      "updated_at": "2026-03-13T03:23:31Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19826",
-      "labels": [
-        "amd",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 19749,
-      "title": "[Feature] Optimizations for JPEG input on NVIDIA GPU",
-      "author": "wili-65535",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T06:41:15Z",
-      "updated_at": "2026-03-13T03:07:11Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19749",
-      "labels": [
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20294,
-      "title": "[AMD CI] Add 4-GPU test suite for MI325 runners",
-      "author": "michaelzhang-ai",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-10T20:03:39Z",
-      "updated_at": "2026-03-13T03:00:22Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20294",
-      "labels": [
-        "amd",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 20410,
       "title": "[AMD] Add SGLANG_DISAGGREGATION_NUM_PRE_ALLOCATE_REQS env var for configurable KV transfer overlap",
       "author": "ZhaiFeiyue",
@@ -178,21 +342,6 @@
       "updated_at": "2026-03-13T02:39:11Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/20410",
       "labels": [
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 19395,
-      "title": "MFU metrics in Prometheus ",
-      "author": "aramasethu",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T05:15:24Z",
-      "updated_at": "2026-03-13T01:50:13Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19395",
-      "labels": [
-        "documentation",
         "run-ci"
       ],
       "draft": false
@@ -248,20 +397,6 @@
       "draft": false
     },
     {
-      "number": 20477,
-      "title": "Add NCCL/RCCL pre-warming to reduce P99 TTFT cold-start latency",
-      "author": "hubertlu-tw",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-12T23:30:42Z",
-      "updated_at": "2026-03-13T00:37:35Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20477",
-      "labels": [
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 19997,
       "title": "Fix InternVL and vision attention for non-CUDA backends (e.g. XPU)",
       "author": "jmunetong",
@@ -287,35 +422,6 @@
       "html_url": "https://github.com/sgl-project/sglang/pull/20376",
       "labels": [
         "npu",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20242,
-      "title": "[AMD] Add aiter backend for GemmaRMSNorm, causal_conv1d and topk_softmax",
-      "author": "zhentaocc",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-10T06:08:52Z",
-      "updated_at": "2026-03-12T20:07:14Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20242",
-      "labels": [
-        "amd",
-        "aiter"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20255,
-      "title": "add Eagle3 speculative decoding support for Qwen3.5",
-      "author": "NikitosKh",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-10T08:45:27Z",
-      "updated_at": "2026-03-12T17:27:36Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20255",
-      "labels": [
         "run-ci"
       ],
       "draft": false
@@ -347,22 +453,6 @@
       "draft": false
     },
     {
-      "number": 17390,
-      "title": "[AMD] Fix deepseek v3.2 ci test timeout",
-      "author": "yctseng0211",
-      "state": "closed",
-      "merged": false,
-      "created_at": "2026-01-20T05:45:27Z",
-      "updated_at": "2026-03-12T15:17:26Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/17390",
-      "labels": [
-        "amd",
-        "deepseek",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 17450,
       "title": "[AMD] Support speculative decoding v2 for aiter backend on ROCm/HIP",
       "author": "hubertlu-tw",
@@ -379,18 +469,6 @@
       "draft": false
     },
     {
-      "number": 20360,
-      "title": "[AMD][Bug fix] Add missing tensor_model_parallel_all_reduce in NSACPLayerCommunicato",
-      "author": "pbkowalski",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-11T12:49:47Z",
-      "updated_at": "2026-03-12T15:07:02Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20360",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 20015,
       "title": "add support for cfg combine formular based on pred_cond",
       "author": "JohnHerry",
@@ -402,25 +480,6 @@
       "labels": [
         "run-ci",
         "diffusion"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20440,
-      "title": "Release sglang kernel 0.4.0",
-      "author": "BBuf",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-12T09:52:21Z",
-      "updated_at": "2026-03-12T09:55:05Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20440",
-      "labels": [
-        "documentation",
-        "amd",
-        "dependencies",
-        "sgl-kernel",
-        "npu",
-        "mthreads"
       ],
       "draft": false
     },
@@ -483,22 +542,6 @@
       "draft": false
     },
     {
-      "number": 18233,
-      "title": "Support Qwen3 MoE context parallel",
-      "author": "Shunkangz",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-04T07:28:28Z",
-      "updated_at": "2026-03-12T08:49:31Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/18233",
-      "labels": [
-        "documentation",
-        "deepseek",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 19935,
       "title": "[AMD] Fix FP8 assertion failure in aiter MLA decode by falling back to self.k_scale",
       "author": "yichiche",
@@ -523,21 +566,6 @@
       "updated_at": "2026-03-12T08:27:28Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/19941",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 20118,
-      "title": "[1/N] fix CP for Helios",
-      "author": "SHYuanBest",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-08T08:16:25Z",
-      "updated_at": "2026-03-12T08:06:38Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20118",
-      "labels": [
-        "run-ci",
-        "diffusion"
-      ],
       "draft": false
     },
     {
@@ -629,21 +657,6 @@
       "html_url": "https://github.com/sgl-project/sglang/pull/7302",
       "labels": [
         "high priority"
-      ],
-      "draft": false
-    },
-    {
-      "number": 19103,
-      "title": "[jit_kernel] Migrate cast (downcast_fp8) from sgl-kernel AOT to JIT",
-      "author": "Johnsonms",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-21T03:34:26Z",
-      "updated_at": "2026-03-12T03:57:30Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19103",
-      "labels": [
-        "sgl-kernel",
-        "run-ci"
       ],
       "draft": false
     },
@@ -1419,21 +1432,6 @@
       "draft": false
     },
     {
-      "number": 17228,
-      "title": "[NPU] make torch_native lora backend a little bit faster",
-      "author": "VDV1985",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-16T19:10:39Z",
-      "updated_at": "2026-03-07T17:14:47Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/17228",
-      "labels": [
-        "lora",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 19928,
       "title": "[AMD] Fix Tensor Memory Aliasing ",
       "author": "bingxche",
@@ -1849,20 +1847,6 @@
       "labels": [
         "amd",
         "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 19515,
-      "title": "[AMD] Add triggering path for multimodal test in pr-test-amd",
-      "author": "yctseng0211",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-27T17:21:25Z",
-      "updated_at": "2026-02-28T04:46:37Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19515",
-      "labels": [
-        "amd"
       ],
       "draft": false
     },

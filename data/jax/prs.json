@@ -1,6 +1,21 @@
 {
-  "collected_at": "2026-03-13T04:31:15Z",
+  "collected_at": "2026-03-13T08:12:46Z",
   "prs": [
+    {
+      "number": 35741,
+      "title": "[ROCm] Add individual skips to Mosaic tests",
+      "author": "gulsumgudukbay",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-09T19:08:26Z",
+      "updated_at": "2026-03-13T08:08:43Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35741",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready"
+      ],
+      "draft": false
+    },
     {
       "number": 35852,
       "title": "[ROCm] Add jax[rocm-local] extra and relax plugin version check for post releases",
@@ -12,21 +27,6 @@
       "html_url": "https://github.com/jax-ml/jax/pull/35852",
       "labels": [
         "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 35741,
-      "title": "[ROCm] Add individual skips to Mosaic tests",
-      "author": "gulsumgudukbay",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-09T19:08:26Z",
-      "updated_at": "2026-03-13T03:56:08Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35741",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
       ],
       "draft": false
     },
@@ -627,21 +627,6 @@
       "created_at": "2026-01-19T18:42:29Z",
       "updated_at": "2026-02-12T16:29:30Z",
       "html_url": "https://github.com/jax-ml/jax/pull/34474",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34802,
-      "title": "[ROCm] Enable lax backend scipy tests on ROCm GPUs",
-      "author": "magaonka-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-03T20:49:54Z",
-      "updated_at": "2026-02-12T15:15:46Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34802",
       "labels": [
         "kokoro:force-run",
         "pull ready"

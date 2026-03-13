@@ -1,6 +1,106 @@
 {
-  "collected_at": "2026-03-13T04:31:02Z",
+  "collected_at": "2026-03-13T08:12:32Z",
   "prs": [
+    {
+      "number": 186170,
+      "title": "[AMDGPU] Use AMDGPULaneMaskUtils in SILowerI1Copies",
+      "author": "idubinov",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-12T16:30:59Z",
+      "updated_at": "2026-03-13T07:37:21Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186170",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 186321,
+      "title": "[AMDGPU][NFC] Add missing isFLAT check to isVMEM.",
+      "author": "sstipano",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-13T06:13:38Z",
+      "updated_at": "2026-03-13T07:34:44Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186321",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 185916,
+      "title": "[AMDGPU][SIInsertWaitcnts] Create a WCG instance per MF",
+      "author": "vporpo",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-11T16:38:20Z",
+      "updated_at": "2026-03-13T07:27:33Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/185916",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 185942,
+      "title": "[NFC] Add default code reviewers for some AMDGPU-related files",
+      "author": "lamb-j",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-11T17:46:17Z",
+      "updated_at": "2026-03-13T06:30:46Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/185942",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 185632,
+      "title": "[AMDGPU][Doc] GFX12.5 Barrier Execution Model",
+      "author": "Pierre-vh",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-10T12:18:06Z",
+      "updated_at": "2026-03-13T05:49:01Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/185632",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 186073,
+      "title": "[CIR][AMDGPU] Add module flags for AMDGPU target using amendOperation of CIRDialectLLVMIRTranslationInterface",
+      "author": "skc7",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-12T10:03:30Z",
+      "updated_at": "2026-03-13T04:49:09Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186073",
+      "labels": [
+        "clang",
+        "backend:AMDGPU",
+        "ClangIR"
+      ],
+      "draft": false
+    },
+    {
+      "number": 186081,
+      "title": "[CIR][AMDGPU] Add module flags for AMDGPU target",
+      "author": "skc7",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-12T10:25:21Z",
+      "updated_at": "2026-03-13T04:44:55Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186081",
+      "labels": [
+        "clang",
+        "backend:AMDGPU",
+        "ClangIR"
+      ],
+      "draft": false
+    },
     {
       "number": 186269,
       "title": "[AMDGPU] Include TRANS instructions in WMMA coexecution hazard checking",
@@ -75,20 +175,6 @@
       "labels": [
         "backend:AMDGPU",
         "floating-point"
-      ],
-      "draft": false
-    },
-    {
-      "number": 185916,
-      "title": "[AMDGPU][SIInsertWaitcnts] Create a WCG instance per MF",
-      "author": "vporpo",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-11T16:38:20Z",
-      "updated_at": "2026-03-12T23:34:18Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/185916",
-      "labels": [
-        "backend:AMDGPU"
       ],
       "draft": false
     },
@@ -379,20 +465,6 @@
       "draft": false
     },
     {
-      "number": 186170,
-      "title": "[AMDGPU] Use AMDGPULaneMaskUtils in SILowerI1Copies",
-      "author": "idubinov",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-12T16:30:59Z",
-      "updated_at": "2026-03-12T18:07:30Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/186170",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 186195,
       "title": "[AMDGPU] Mark VOPC_e64 instructions rematerializable",
       "author": "romanovvlad",
@@ -490,51 +562,6 @@
       "labels": [
         "backend:AMDGPU",
         "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 184275,
-      "title": "[AMDGPU] Physical register tracking in GCN trackers.",
-      "author": "dhruvachak",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T01:03:42Z",
-      "updated_at": "2026-03-12T16:18:46Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/184275",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:regalloc"
-      ],
-      "draft": false
-    },
-    {
-      "number": 160922,
-      "title": "[AMDGPU] Replace relaxed-buffer-oob-mode feature with module flag",
-      "author": "piotrAMD",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-09-26T16:38:03Z",
-      "updated_at": "2026-03-12T15:52:56Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/160922",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:ir",
-        "llvm:transforms"
-      ],
-      "draft": false
-    },
-    {
-      "number": 186107,
-      "title": "[AMDGPU] Update features for gfx1170",
-      "author": "mbrkusanin",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-12T12:29:52Z",
-      "updated_at": "2026-03-12T13:56:41Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/186107",
-      "labels": [
-        "backend:AMDGPU"
       ],
       "draft": false
     },
@@ -866,35 +893,6 @@
         "backend:AMDGPU",
         "clang:driver",
         "clang:frontend"
-      ],
-      "draft": false
-    },
-    {
-      "number": 145858,
-      "title": "[AMDGPU] ISel & PEI for whole wave functions",
-      "author": "rovka",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-06-26T08:59:07Z",
-      "updated_at": "2026-03-11T10:59:55Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/145858",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 185637,
-      "title": "libclc: Use frexp builtins to implement frexp for amdgpu",
-      "author": "arsenm",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-10T12:37:55Z",
-      "updated_at": "2026-03-11T10:17:42Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/185637",
-      "labels": [
-        "backend:AMDGPU",
-        "libclc"
       ],
       "draft": false
     },

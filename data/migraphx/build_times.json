@@ -1,23 +1,29 @@
 {
-  "collected_at": "2026-03-13T04:34:47Z",
+  "collected_at": "2026-03-13T08:16:32Z",
   "workflows": {
     "migraphx": {
       "workflow_id": 3843465,
       "latest_run": {
-        "id": 23029374509,
+        "id": 23034735614,
         "conclusion": "success",
-        "duration_minutes": 105.1,
-        "started_at": "2026-03-12T23:49:59Z",
-        "html_url": "https://github.com/ROCm/AMDMIGraphX/actions/runs/23029374509"
+        "duration_minutes": 218.1,
+        "started_at": "2026-03-13T03:22:52Z",
+        "html_url": "https://github.com/ROCm/AMDMIGraphX/actions/runs/23034735614"
       },
       "stats": {
         "sample_size": 11,
-        "median_minutes": 105.1,
-        "p90_minutes": 213.8,
+        "median_minutes": 210.9,
+        "p90_minutes": 213.9,
         "min_minutes": 102.1,
-        "max_minutes": 213.9
+        "max_minutes": 218.1
       },
       "recent_runs": [
+        {
+          "id": 23034735614,
+          "conclusion": "success",
+          "duration_minutes": 218.1,
+          "date": "2026-03-13"
+        },
         {
           "id": 23029374509,
           "conclusion": "success",
@@ -131,36 +137,36 @@
           "conclusion": "success",
           "duration_minutes": 102.1,
           "date": "2026-03-12"
-        },
-        {
-          "id": 23009980090,
-          "conclusion": "success",
-          "duration_minutes": 103.5,
-          "date": "2026-03-12"
         }
       ],
       "bottleneck_job": {
         "name": "linux (ubuntu-24.04, debug)",
-        "duration_minutes": 104.7
+        "duration_minutes": 217.8
       }
     },
     "MIGraphX Performance Tests": {
       "workflow_id": 30809142,
       "latest_run": {
-        "id": 23029374425,
-        "conclusion": "cancelled",
-        "duration_minutes": 212.9,
-        "started_at": "2026-03-12T23:49:59Z",
-        "html_url": "https://github.com/ROCm/AMDMIGraphX/actions/runs/23029374425"
+        "id": 23034735776,
+        "conclusion": "success",
+        "duration_minutes": 122.5,
+        "started_at": "2026-03-13T03:22:52Z",
+        "html_url": "https://github.com/ROCm/AMDMIGraphX/actions/runs/23034735776"
       },
       "stats": {
-        "sample_size": 9,
-        "median_minutes": 233.0,
-        "p90_minutes": 393.8,
+        "sample_size": 10,
+        "median_minutes": 278.6,
+        "p90_minutes": 405.8,
         "min_minutes": 45.2,
-        "max_minutes": 393.8
+        "max_minutes": 405.8
       },
       "recent_runs": [
+        {
+          "id": 23034735776,
+          "conclusion": "success",
+          "duration_minutes": 122.5,
+          "date": "2026-03-13"
+        },
         {
           "id": 23029374425,
           "conclusion": "cancelled",
@@ -174,9 +180,21 @@
           "date": "2026-03-12"
         },
         {
+          "id": 23029035625,
+          "conclusion": "success",
+          "duration_minutes": 405.8,
+          "date": "2026-03-12"
+        },
+        {
           "id": 23029021112,
           "conclusion": "success",
           "duration_minutes": 202.5,
+          "date": "2026-03-12"
+        },
+        {
+          "id": 23027658745,
+          "conclusion": "success",
+          "duration_minutes": 393.2,
           "date": "2026-03-12"
         },
         {
@@ -262,29 +280,11 @@
           "conclusion": "cancelled",
           "duration_minutes": 106.1,
           "date": "2026-03-12"
-        },
-        {
-          "id": 23009980001,
-          "conclusion": "success",
-          "duration_minutes": 172.6,
-          "date": "2026-03-12"
-        },
-        {
-          "id": 23005445648,
-          "conclusion": "cancelled",
-          "duration_minutes": 161.6,
-          "date": "2026-03-12"
-        },
-        {
-          "id": 22994391756,
-          "conclusion": "success",
-          "duration_minutes": 168.7,
-          "date": "2026-03-12"
         }
       ],
       "bottleneck_job": {
-        "name": "get_config",
-        "duration_minutes": 0.1
+        "name": "call_reusable / MIGraphX Performance",
+        "duration_minutes": 0.2
       }
     }
   }

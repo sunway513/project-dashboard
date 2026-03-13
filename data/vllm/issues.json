@@ -1,14 +1,74 @@
 {
-  "collected_at": "2026-03-13T04:31:35Z",
+  "collected_at": "2026-03-13T08:13:10Z",
   "issues": [
     {
-      "number": 36235,
-      "title": "[Bug]: When using VLLM version 0.16.0, there will be an error when loading the qwen3-14b-awq model, such as: ERROR _wrapper.py:141: Error in wrapped target: CUDA error: the provided PTX was compiled with an unsupported toolchain.",
-      "author": "uOnePiece",
+      "number": 34591,
+      "title": "[Bug]: Ministral-3 LoRA adapter fails silently",
+      "author": "sbischl",
       "state": "open",
-      "created_at": "2026-03-06T08:43:59Z",
-      "updated_at": "2026-03-13T02:58:51Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/36235",
+      "created_at": "2026-02-15T23:25:28Z",
+      "updated_at": "2026-03-13T07:54:53Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/34591",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 35133,
+      "title": "[CI Failure]:  mi355_4: LoRA TP Test (Distributed)",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-02-23T18:34:13Z",
+      "updated_at": "2026-03-13T07:45:21Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35133",
+      "labels": [
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 36773,
+      "title": "[Bug]: Qwen3.5-35B-A3B on B200 with vllm v0.17.0 output random result",
+      "author": "elepherai",
+      "state": "open",
+      "created_at": "2026-03-11T10:05:15Z",
+      "updated_at": "2026-03-13T07:39:22Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36773",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 36954,
+      "title": "[Bug]: KeyError 'layers.0.mlp.experts.w2_weight' when using speculative_config method='mtp' with Qwen3.5-122B-GPTQ-Int4 (moe_wna16) ",
+      "author": "sunyong01",
+      "state": "open",
+      "created_at": "2026-03-13T05:55:29Z",
+      "updated_at": "2026-03-13T05:56:33Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36954",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 36010,
+      "title": "[Bug]: Qwen/Qwen3.5-27B Batch Inference very slow / not working",
+      "author": "NilsHellwig",
+      "state": "open",
+      "created_at": "2026-03-04T13:41:38Z",
+      "updated_at": "2026-03-13T05:35:08Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36010",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 36643,
+      "title": "[Bug]: Qwen3.5 does not work with pipeline parallelism",
+      "author": "VirgilG72",
+      "state": "open",
+      "created_at": "2026-03-10T11:23:42Z",
+      "updated_at": "2026-03-13T05:17:57Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36643",
       "labels": [
         "bug"
       ]
@@ -19,11 +79,36 @@
       "author": "DifferentialityDevelopment",
       "state": "open",
       "created_at": "2026-03-11T09:51:48Z",
-      "updated_at": "2026-03-13T02:30:24Z",
+      "updated_at": "2026-03-13T05:11:55Z",
       "html_url": "https://github.com/vllm-project/vllm/issues/36769",
       "labels": [
         "bug",
         "rocm"
+      ]
+    },
+    {
+      "number": 36193,
+      "title": "[Bug]: Unsupported Activation Function for Step-3.5-Flash",
+      "author": "ColinZ22",
+      "state": "open",
+      "created_at": "2026-03-06T00:39:03Z",
+      "updated_at": "2026-03-13T05:02:00Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36193",
+      "labels": [
+        "bug",
+        "rocm"
+      ]
+    },
+    {
+      "number": 36235,
+      "title": "[Bug]: When using VLLM version 0.16.0, there will be an error when loading the qwen3-14b-awq model, such as: ERROR _wrapper.py:141: Error in wrapped target: CUDA error: the provided PTX was compiled with an unsupported toolchain.",
+      "author": "uOnePiece",
+      "state": "open",
+      "created_at": "2026-03-06T08:43:59Z",
+      "updated_at": "2026-03-13T02:58:51Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36235",
+      "labels": [
+        "bug"
       ]
     },
     {
@@ -127,18 +212,6 @@
       "labels": [
         "bug",
         "rocm"
-      ]
-    },
-    {
-      "number": 36773,
-      "title": "[Bug]: Qwen3.5-35B-A3B on B200 with vllm v0.17.0 output random result",
-      "author": "elepherai",
-      "state": "open",
-      "created_at": "2026-03-11T10:05:15Z",
-      "updated_at": "2026-03-13T01:06:28Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/36773",
-      "labels": [
-        "bug"
       ]
     },
     {
@@ -452,18 +525,6 @@
       ]
     },
     {
-      "number": 36492,
-      "title": "[Bug]: Abnormal Output When Using FP8 KVCache for Kimi-K2.5 Inference under vLLM v0.17.0",
-      "author": "makabaka6338",
-      "state": "open",
-      "created_at": "2026-03-09T12:26:34Z",
-      "updated_at": "2026-03-12T06:54:21Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/36492",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 27007,
       "title": "[Bug] [ROCm] [Flex Attention]: Unable to run",
       "author": "vllmellm",
@@ -586,34 +647,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/36337",
       "labels": [
         "rocm"
-      ]
-    },
-    {
-      "number": 17652,
-      "title": "[Bug]: Degradation of Qwen/Qwen3-30B-A3B performance depending on batch size",
-      "author": "Alina9",
-      "state": "open",
-      "created_at": "2025-05-05T12:53:49Z",
-      "updated_at": "2026-03-11T02:17:08Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/17652",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
-      "number": 28320,
-      "title": "[AMD CI][Feature]: Add more E2E tests to indicate AMD trunk health",
-      "author": "zhewenl",
-      "state": "open",
-      "created_at": "2025-11-07T19:29:29Z",
-      "updated_at": "2026-03-11T02:15:44Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/28320",
-      "labels": [
-        "feature request",
-        "rocm",
-        "ci/build",
-        "stale"
       ]
     }
   ]
