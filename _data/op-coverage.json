@@ -25,7 +25,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM",
+          "backend": "CK / ASM / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_fwd_kernels.cu",
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_fwd.cu"
@@ -44,7 +44,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM",
+          "backend": "CK / ASM / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_fwd_kernels.cu",
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_fwd.cu"
@@ -63,7 +63,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM",
+          "backend": "CK / ASM / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_fwd_kernels.cu",
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_fwd.cu"
@@ -82,7 +82,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "CK / ASM",
+          "backend": "CK / ASM / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/mha_varlen_fwd_kernels.cu",
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_mha_varlen_fwd.cu"
@@ -140,7 +140,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "ASM / HIP / Gluon",
+          "backend": "ASM / HIP / Gluon / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_pa.cu",
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/pa/pa.py",
@@ -160,7 +160,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "ASM / HIP",
+          "backend": "ASM / HIP / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_pa.cu",
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/pa/pa.py"
@@ -179,7 +179,7 @@
             },
             "FlashMLA": false
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/cpp_itfs/pa/pa_ragged.py"
           }
@@ -321,7 +321,7 @@
               "url": "https://docs.nvidia.com/cuda/cublas/"
             }
           },
-          "backend": "ASM / CK",
+          "backend": "ASM / CK / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a16w16.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/aiter/ops/gemm_op_a16w16.py"
@@ -343,7 +343,7 @@
               "url": "https://developer.nvidia.com/blog/new-cublas-12-0-features-and-matrix-multiplication-performance-on-nvidia-hopper-gpus/"
             }
           },
-          "backend": "CK / ASM",
+          "backend": "CK / ASM / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a8w8/",
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a8w8.cu"
@@ -388,7 +388,7 @@
               "url": "https://docs.nvidia.com/cuda/cublas/"
             }
           },
-          "backend": "CK / ASM",
+          "backend": "CK / ASM / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a8w8/",
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a8w8.cu"
@@ -410,7 +410,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.gemm.mm_fp4.html"
             }
           },
-          "backend": "ASM / CK",
+          "backend": "ASM / CK / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_gemm_a4w4.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_a4w4_blockscale/"
@@ -477,7 +477,7 @@
               "url": "https://developer.nvidia.com/blog/introducing-grouped-gemm-apis-in-cublas-and-more-performance-updates/"
             }
           },
-          "backend": "CK",
+          "backend": "CK / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_batched_gemm_bf16/"
           }
@@ -498,7 +498,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.gemm.bmm_fp8.html"
             }
           },
-          "backend": "CK",
+          "backend": "CK / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_batched_gemm_a8w8/"
           }
@@ -537,7 +537,7 @@
               "url": "https://developer.nvidia.com/blog/introducing-grouped-gemm-apis-in-cublas-and-more-performance-updates/"
             }
           },
-          "backend": "ASM / CK / FlyDSL",
+          "backend": "ASM / CK / FlyDSL / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
@@ -557,7 +557,7 @@
               "url": "https://developer.nvidia.com/blog/new-cublas-12-0-features-and-matrix-multiplication-performance-on-nvidia-hopper-gpus/"
             }
           },
-          "backend": null
+          "backend": "Triton"
         },
         {
           "name": "GEMM + ReLU/GELU/SiLU fusion",
@@ -572,7 +572,7 @@
               "url": "https://docs.nvidia.com/cuda/cublas/"
             }
           },
-          "backend": null
+          "backend": "Triton"
         },
         {
           "name": "DeepGEMM",
@@ -665,7 +665,7 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "ASM / CK / FlyDSL",
+          "backend": "ASM / CK / FlyDSL / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
@@ -684,7 +684,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.fused_moe.trtllm_fp8_per_tensor_scale_moe.html"
             }
           },
-          "backend": "ASM / CK / FlyDSL",
+          "backend": "ASM / CK / FlyDSL / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
@@ -751,7 +751,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM / CK",
+          "backend": "ASM / CK / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/"
@@ -766,7 +766,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM / CK / FlyDSL",
+          "backend": "ASM / CK / FlyDSL / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
@@ -785,7 +785,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.fused_moe.cutlass_fused_moe.html"
             }
           },
-          "backend": "ASM / CK / FlyDSL",
+          "backend": "ASM / CK / FlyDSL / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
@@ -801,7 +801,7 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "ASM / CK / FlyDSL",
+          "backend": "ASM / CK / FlyDSL / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_fmoe.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_gemm_moe_2stages_codegen/",
@@ -817,7 +817,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK / FlyDSL",
+          "backend": "CK / FlyDSL / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/ck_tile_gemm_moe_2stages/",
             "FlyDSL": "https://github.com/ROCm/aiter/blob/main/aiter/ops/flydsl/kernels/moe_gemm_2stage.py"
@@ -835,7 +835,7 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "ASM / CK",
+          "backend": "ASM / CK / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_cu/asm_topksoftmax.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/aiter/ops/topk.py"
@@ -853,7 +853,7 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "CK",
+          "backend": "CK / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/topk_sigmoid_kernels.cu"
           }
@@ -870,7 +870,7 @@
               "url": "https://docs.flashinfer.ai/api/fused_moe.html"
             }
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/moe_fused_gate.cu"
           }
@@ -884,7 +884,7 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "CK",
+          "backend": "CK / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/moe_sorting_kernels.cu"
           }
@@ -898,7 +898,7 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "ASM",
+          "backend": "ASM / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/moe_align_block_size_kernels.cu"
           }
@@ -912,7 +912,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "ASM",
+          "backend": "ASM / Triton",
           "backend_urls": {
             "ASM": "https://github.com/ROCm/aiter/blob/main/aiter/fused_moe.py"
           }
@@ -941,7 +941,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.norm.rmsnorm.html"
             }
           },
-          "backend": "CK / HIP",
+          "backend": "CK / HIP / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu",
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_kernels.cu"
@@ -959,7 +959,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.norm.fused_add_rmsnorm.html"
             }
           },
-          "backend": "CK / HIP",
+          "backend": "CK / HIP / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu",
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_kernels.cu"
@@ -974,7 +974,7 @@
             },
             "FlashInfer": "partial"
           },
-          "backend": "HIP / CK",
+          "backend": "HIP / CK / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_quant_kernels.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu"
@@ -992,7 +992,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.comm.trtllm_allreduce_fusion.html"
             }
           },
-          "backend": "HIP / CK",
+          "backend": "HIP / CK / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/rmsnorm_quant_kernels.cu",
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu"
@@ -1007,7 +1007,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK",
+          "backend": "CK / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/rmsnorm_ck_kernels.cu"
           }
@@ -1056,7 +1056,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "CK",
+          "backend": "CK / Triton",
           "backend_urls": {
             "CK": "https://github.com/ROCm/aiter/blob/main/csrc/py_itfs_ck/norm_kernels.cu"
           }
@@ -1070,7 +1070,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/groupnorm.cu"
           }
@@ -1482,7 +1482,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.activation.silu_and_mul.html"
             }
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
           }
@@ -1499,7 +1499,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.activation.gelu_and_mul.html"
             }
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
           }
@@ -1516,7 +1516,7 @@
               "url": "https://docs.flashinfer.ai/api/activation.html"
             }
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
           }
@@ -1533,7 +1533,7 @@
               "url": "https://docs.flashinfer.ai/generated/flashinfer.activation.silu_and_mul.html"
             }
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
           }
@@ -1547,7 +1547,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
           }
@@ -1561,7 +1561,7 @@
             },
             "FlashInfer": false
           },
-          "backend": "HIP",
+          "backend": "HIP / Triton",
           "backend_urls": {
             "HIP": "https://github.com/ROCm/aiter/blob/main/csrc/kernels/activation_kernels.cu"
           }
