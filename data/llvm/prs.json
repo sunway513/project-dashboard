@@ -1,6 +1,46 @@
 {
-  "collected_at": "2026-03-14T08:08:18Z",
+  "collected_at": "2026-03-15T08:11:00Z",
   "prs": [
+    {
+      "number": 186575,
+      "title": "[AMDGPU] Split OPERAND_REG_IMM_INT64 into signed and   unsigned variants",
+      "author": "addmisol",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-14T08:43:54Z",
+      "updated_at": "2026-03-15T08:10:00Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186575",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 181966,
+      "title": "[AMDGPU] Fold v_perm pair into v_swap",
+      "author": "FrederickVu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-18T06:28:48Z",
+      "updated_at": "2026-03-14T21:48:22Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/181966",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 186491,
+      "title": "[AMDGPU] Fix setreg handling in the VGPR MSB lowering",
+      "author": "rampitec",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-13T19:21:39Z",
+      "updated_at": "2026-03-14T08:14:14Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186491",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
     {
       "number": 174539,
       "title": "[AMDGPU] using divergent/uniform information in ISel of zext",
@@ -29,20 +69,6 @@
         "clang",
         "backend:AMDGPU",
         "ClangIR"
-      ],
-      "draft": false
-    },
-    {
-      "number": 186491,
-      "title": "[AMDGPU] Fix setreg handling in the VGPR MSB lowering",
-      "author": "rampitec",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-13T19:21:39Z",
-      "updated_at": "2026-03-14T02:51:33Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/186491",
-      "labels": [
-        "backend:AMDGPU"
       ],
       "draft": false
     },
@@ -593,35 +619,6 @@
       "labels": [
         "backend:AMDGPU",
         "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 182824,
-      "title": "[AMDGPU] Add regbank legalization rules for G_ATOMICRMW_FMIN and G_ATOMICRMW_FMAX",
-      "author": "gandhi56",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-23T09:38:16Z",
-      "updated_at": "2026-03-13T15:24:02Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/182824",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 184908,
-      "title": "[AMDGPU] Remove blocks that only branch to other blocks",
-      "author": "LU-JOHN",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T22:43:18Z",
-      "updated_at": "2026-03-13T15:20:12Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/184908",
-      "labels": [
-        "backend:AMDGPU"
       ],
       "draft": false
     },

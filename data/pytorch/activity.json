@@ -1,12 +1,12 @@
 {
-  "collected_at": "2026-03-14T08:09:33Z",
+  "collected_at": "2026-03-15T08:12:44Z",
   "project": "pytorch",
   "repo": "pytorch/pytorch",
   "pr_velocity": {
     "this_week": {
-      "opened": 20,
+      "opened": 18,
       "merged": 0,
-      "closed": 1
+      "closed": 2
     },
     "last_week": {
       "opened": 9,
@@ -18,8 +18,8 @@
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 41,
-    "total_contributors": 51,
+    "active_this_week": 46,
+    "total_contributors": 54,
     "top_contributors": [
       {
         "author": "atalman",
@@ -31,6 +31,12 @@
         "author": "Lucaskabela",
         "prs_submitted": 4,
         "prs_merged": 4,
+        "commits": 0
+      },
+      {
+        "author": "anijain2305",
+        "prs_submitted": 2,
+        "prs_merged": 1,
         "commits": 0
       },
       {
@@ -46,9 +52,9 @@
         "commits": 0
       },
       {
-        "author": "pianpwk",
+        "author": "fadara01",
         "prs_submitted": 2,
-        "prs_merged": 0,
+        "prs_merged": 1,
         "commits": 0
       },
       {
@@ -74,54 +80,48 @@
         "prs_submitted": 2,
         "prs_merged": 0,
         "commits": 0
-      },
-      {
-        "author": "pragupta",
-        "prs_submitted": 2,
-        "prs_merged": 0,
-        "commits": 0
       }
     ],
     "bus_factor": 3
   },
   "issue_health": {
     "total_open": 51,
-    "opened_this_week": 27,
-    "closed_this_week": 191,
+    "opened_this_week": 25,
+    "closed_this_week": 172,
     "unanswered": 0
   },
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 16,
+      "succeeded": 15,
       "failed": 1,
-      "success_rate": 80.0
+      "success_rate": 75.0
     },
     "cuda": {
       "total_runs": 20,
       "succeeded": 9,
-      "failed": 9,
+      "failed": 4,
       "success_rate": 45.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 94.1,
-      "p90_minutes": 218.6,
+      "median_minutes": 169.8,
+      "p90_minutes": 200.3,
       "min_minutes": 5.2,
-      "max_minutes": 356.0
+      "max_minutes": 206.8
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 282.9,
-      "p90_minutes": 316.8,
-      "min_minutes": 73.8,
-      "max_minutes": 334.4
+      "median_minutes": 71.4,
+      "p90_minutes": 256.2,
+      "min_minutes": 5.5,
+      "max_minutes": 262.5
     }
   },
   "release_cadence": {
-    "days_since_last": 51.6,
+    "days_since_last": 52.6,
     "avg_interval_days": 57.7,
     "total_releases": 5,
     "latest_tag": "v2.10.0"

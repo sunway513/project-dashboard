@@ -1,6 +1,66 @@
 {
-  "collected_at": "2026-03-14T08:08:26Z",
+  "collected_at": "2026-03-15T08:11:10Z",
   "issues": [
+    {
+      "number": 177028,
+      "title": "tensor cuda memory cannot be release by gc when a tensor hold ref of another",
+      "author": "yiwangchunyu",
+      "state": "open",
+      "created_at": "2026-03-10T14:31:47Z",
+      "updated_at": "2026-03-15T06:08:27Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177028",
+      "labels": [
+        "module: cuda",
+        "module: memory usage",
+        "triaged",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 177422,
+      "title": "Release 2.11 validations checklist and cherry-picks",
+      "author": "atalman",
+      "state": "open",
+      "created_at": "2026-03-13T21:16:17Z",
+      "updated_at": "2026-03-15T01:05:53Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177422",
+      "labels": [
+        "triage review",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 177451,
+      "title": "torch.compile fails on conv2d with kernel size larger than input size, while meta device succeeds",
+      "author": "MilkFiish",
+      "state": "open",
+      "created_at": "2026-03-14T14:38:16Z",
+      "updated_at": "2026-03-14T14:40:42Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177451",
+      "labels": [
+        "triage review",
+        "module: error checking",
+        "module: convolution",
+        "module: meta tensors",
+        "oncall: pt2",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 142048,
+      "title": "Device check missing in torch.linalg.solve_triangular leading to hard crash",
+      "author": "LukasSalchow",
+      "state": "open",
+      "created_at": "2024-12-04T14:47:44Z",
+      "updated_at": "2026-03-14T10:13:35Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/142048",
+      "labels": [
+        "module: crash",
+        "triaged",
+        "module: linear algebra",
+        "module: mps"
+      ]
+    },
     {
       "number": 177442,
       "title": "Nondeterministic Segmentation fault with flash attention 3 and torch.compile",
@@ -18,21 +78,6 @@
         "module: pt2-dispatcher",
         "bot-triaged",
         "bot-mislabeled"
-      ]
-    },
-    {
-      "number": 177028,
-      "title": "tensor cuda memory cannot be release by gc when a tensor hold ref of another",
-      "author": "yiwangchunyu",
-      "state": "open",
-      "created_at": "2026-03-10T14:31:47Z",
-      "updated_at": "2026-03-14T01:43:27Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177028",
-      "labels": [
-        "module: cuda",
-        "module: memory usage",
-        "triaged",
-        "bot-triaged"
       ]
     },
     {
@@ -85,19 +130,6 @@
       "labels": [
         "module: ci",
         "triaged",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 177422,
-      "title": "Release 2.11 validations checklist and cherry-picks",
-      "author": "atalman",
-      "state": "open",
-      "created_at": "2026-03-13T21:16:17Z",
-      "updated_at": "2026-03-13T21:45:32Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177422",
-      "labels": [
-        "triage review",
         "bot-triaged"
       ]
     },
@@ -464,44 +496,6 @@
         "triaged",
         "oncall: pt2",
         "module: dynamic shapes"
-      ]
-    },
-    {
-      "number": 176854,
-      "title": "torch.compile does not correctly propagate detach_() in-place autograd semantics",
-      "author": "sssssh1228",
-      "state": "open",
-      "created_at": "2026-03-09T03:59:02Z",
-      "updated_at": "2026-03-12T17:36:23Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/176854",
-      "labels": [
-        "high priority",
-        "triaged",
-        "oncall: pt2",
-        "module: dynamo",
-        "dynamo-triage-dec2025",
-        "bot-triaged",
-        "bot-mislabeled",
-        "PT2-Bug-Bash"
-      ]
-    },
-    {
-      "number": 176851,
-      "title": "[regression] torch.compile does not recompile when class attribute is mutated between calls",
-      "author": "Shawn0v0",
-      "state": "open",
-      "created_at": "2026-03-09T02:52:14Z",
-      "updated_at": "2026-03-12T17:35:58Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/176851",
-      "labels": [
-        "high priority",
-        "triaged",
-        "module: regression",
-        "oncall: pt2",
-        "module: dynamo",
-        "dynamo-triage-dec2025",
-        "bot-triaged",
-        "PT2-Bug-Bash"
       ]
     },
     {
