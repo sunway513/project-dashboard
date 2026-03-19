@@ -1,27 +1,39 @@
 {
-  "collected_at": "2026-03-18T08:16:32Z",
+  "collected_at": "2026-03-19T08:15:02Z",
   "prs": [
     {
-      "number": 234,
-      "title": "improve mxfp4 preshuffled gemm",
-      "author": "yadaish",
+      "number": 236,
+      "title": "[WIP][Feat] Rebase gfx1250 WMMA/MXFP4 GEMM branch onto latest main",
+      "author": "jli-melchior",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-18T03:09:22Z",
-      "updated_at": "2026-03-18T03:34:27Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/234",
+      "created_at": "2026-03-18T10:26:27Z",
+      "updated_at": "2026-03-19T07:59:50Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/236",
       "labels": [],
       "draft": false
     },
     {
-      "number": 220,
-      "title": "Tune launch overhead",
-      "author": "coderfeli",
+      "number": 238,
+      "title": "Feat/if else values v2",
+      "author": "fsx950223",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-16T03:47:28Z",
-      "updated_at": "2026-03-17T13:08:55Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/220",
+      "created_at": "2026-03-19T03:46:23Z",
+      "updated_at": "2026-03-19T07:53:49Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/238",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 241,
+      "title": "Feat/autotune compile hints",
+      "author": "fsx950223",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-19T07:11:33Z",
+      "updated_at": "2026-03-19T07:16:31Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/241",
       "labels": [],
       "draft": false
     },
@@ -34,18 +46,6 @@
       "created_at": "2026-03-17T08:34:04Z",
       "updated_at": "2026-03-17T10:43:32Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/228",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 227,
-      "title": "[FEAT][FLY] Update MemRef and Pointer related ops inferReturnType",
-      "author": "sjfeng1999",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-17T08:24:07Z",
-      "updated_at": "2026-03-17T10:28:27Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/227",
       "labels": [],
       "draft": false
     },
@@ -98,14 +98,74 @@
       "draft": true
     },
     {
+      "number": 237,
+      "title": "fix local run with aiter",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T03:31:57Z",
+      "updated_at": "2026-03-19T03:32:28Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/237",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 227,
+      "title": "[FEAT][FLY] Update MemRef and Pointer related ops inferReturnType",
+      "author": "sjfeng1999",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-17T08:24:07Z",
+      "updated_at": "2026-03-18T15:25:40Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/227",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 220,
+      "title": "Tune launch overhead",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-16T03:47:28Z",
+      "updated_at": "2026-03-18T15:17:16Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/220",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 139,
       "title": "optimize buffer_load lds pipeline. Now it can interleave with mfma.",
       "author": "yadaish",
       "state": "closed",
       "merged": true,
       "created_at": "2026-02-20T06:34:18Z",
-      "updated_at": "2026-03-18T07:45:40Z",
+      "updated_at": "2026-03-18T09:43:58Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/139",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 235,
+      "title": "CI: add network speed test workflow",
+      "author": "gyohuangxin",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-18T08:55:57Z",
+      "updated_at": "2026-03-18T09:43:50Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/235",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 234,
+      "title": "improve mxfp4 preshuffled gemm",
+      "author": "yadaish",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-18T03:09:22Z",
+      "updated_at": "2026-03-18T09:43:39Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/234",
       "labels": [],
       "draft": false
     },
@@ -508,18 +568,6 @@
       "draft": false
     },
     {
-      "number": 115,
-      "title": "Yxd/right inverse rebased",
-      "author": "xudoyuan",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T11:36:17Z",
-      "updated_at": "2026-03-09T14:20:08Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/115",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 116,
       "title": "[MLIR][python]Migrate Python bindings to PyConcreteType<> and fix TypeID ODR violation",
       "author": "jli-melchior",
@@ -528,6 +576,18 @@
       "created_at": "2026-02-09T11:57:26Z",
       "updated_at": "2026-03-09T14:20:08Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/116",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 115,
+      "title": "Yxd/right inverse rebased",
+      "author": "xudoyuan",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-09T11:36:17Z",
+      "updated_at": "2026-03-09T14:20:08Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/115",
       "labels": [],
       "draft": false
     },
@@ -640,18 +700,6 @@
       "draft": false
     },
     {
-      "number": 153,
-      "title": "Pre v0.1 gemm fix",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-27T06:41:53Z",
-      "updated_at": "2026-03-03T06:15:31Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 128,
       "title": "[FLYDSL]: add recast_layout op",
       "author": "xudoyuan",
@@ -660,6 +708,18 @@
       "created_at": "2026-02-12T07:09:34Z",
       "updated_at": "2026-03-03T06:15:31Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/128",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 153,
+      "title": "Pre v0.1 gemm fix",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T06:41:53Z",
+      "updated_at": "2026-03-03T06:15:31Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
       "labels": [],
       "draft": false
     },
@@ -818,18 +878,6 @@
       "created_at": "2026-02-12T07:31:27Z",
       "updated_at": "2026-02-19T01:44:27Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/129",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 98,
-      "title": "fix a4w4 gemm precision",
-      "author": "zhiding512",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-06T06:58:26Z",
-      "updated_at": "2026-02-19T01:19:49Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/98",
       "labels": [],
       "draft": false
     }

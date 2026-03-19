@@ -1,14 +1,14 @@
 {
-  "collected_at": "2026-03-18T08:18:45Z",
+  "collected_at": "2026-03-19T08:17:15Z",
   "workflows": {
     "Documentation": {
       "workflow_id": 11689091,
       "latest_run": {
-        "id": 23223968212,
+        "id": 23274694545,
         "conclusion": "cancelled",
-        "duration_minutes": 48.3,
-        "started_at": "2026-03-18T01:02:15Z",
-        "html_url": "https://github.com/triton-lang/triton/actions/runs/23223968212"
+        "duration_minutes": 46.1,
+        "started_at": "2026-03-19T01:01:46Z",
+        "html_url": "https://github.com/triton-lang/triton/actions/runs/23274694545"
       },
       "stats": {
         "sample_size": 12,
@@ -18,6 +18,12 @@
         "max_minutes": 53.0
       },
       "recent_runs": [
+        {
+          "id": 23274694545,
+          "conclusion": "cancelled",
+          "duration_minutes": 46.1,
+          "date": "2026-03-19"
+        },
         {
           "id": 23223968212,
           "conclusion": "cancelled",
@@ -131,36 +137,36 @@
           "conclusion": "cancelled",
           "duration_minutes": 40.5,
           "date": "2026-02-28"
-        },
-        {
-          "id": 22468031812,
-          "conclusion": "cancelled",
-          "duration_minutes": 69.8,
-          "date": "2026-02-27"
         }
       ],
       "bottleneck_job": {
         "name": "Build-Documentation",
-        "duration_minutes": 30.2
+        "duration_minutes": 30.1
       }
     },
     "Wheels": {
       "workflow_id": 11689092,
       "latest_run": {
-        "id": 23185450898,
-        "conclusion": "success",
-        "duration_minutes": 134.3,
-        "started_at": "2026-03-17T08:35:57Z",
-        "html_url": "https://github.com/triton-lang/triton/actions/runs/23185450898"
+        "id": 23235896950,
+        "conclusion": "failure",
+        "duration_minutes": 136.8,
+        "started_at": "2026-03-18T08:32:53Z",
+        "html_url": "https://github.com/triton-lang/triton/actions/runs/23235896950"
       },
       "stats": {
-        "sample_size": 7,
-        "median_minutes": 133.9,
-        "p90_minutes": 233.5,
+        "sample_size": 6,
+        "median_minutes": 131.2,
+        "p90_minutes": 137.5,
         "min_minutes": 125.6,
-        "max_minutes": 233.5
+        "max_minutes": 137.5
       },
       "recent_runs": [
+        {
+          "id": 23235896950,
+          "conclusion": "failure",
+          "duration_minutes": 136.8,
+          "date": "2026-03-18"
+        },
         {
           "id": 23185450898,
           "conclusion": "success",
@@ -274,17 +280,11 @@
           "conclusion": "failure",
           "duration_minutes": 127.2,
           "date": "2026-02-28"
-        },
-        {
-          "id": 22489844533,
-          "conclusion": "success",
-          "duration_minutes": 233.5,
-          "date": "2026-02-27"
         }
       ],
       "bottleneck_job": {
         "name": "Build-Wheels (ubuntu-22.04-arm, aarch64)",
-        "duration_minutes": 134.2
+        "duration_minutes": 136.7
       }
     },
     "pages-build-deployment": {

@@ -1,15 +1,15 @@
 {
-  "collected_at": "2026-03-18T08:17:00Z",
+  "collected_at": "2026-03-19T08:15:36Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
       "opened": 0,
       "merged": 0,
-      "closed": 1
+      "closed": 0
     },
     "last_week": {
-      "opened": 1,
+      "opened": 0,
       "merged": 0,
       "closed": 0
     },
@@ -18,26 +18,13 @@
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 2,
-    "total_contributors": 2,
-    "top_contributors": [
-      {
-        "author": "zoranjovanovic-ns",
-        "prs_submitted": 1,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "phambinhfin",
-        "prs_submitted": 1,
-        "prs_merged": 0,
-        "commits": 0
-      }
-    ],
+    "active_this_week": 0,
+    "total_contributors": 0,
+    "top_contributors": [],
     "bus_factor": null
   },
   "issue_health": {
-    "total_open": 0,
+    "total_open": 8,
     "opened_this_week": 0,
     "closed_this_week": 4,
     "unanswered": 0
@@ -45,31 +32,31 @@
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 14,
-      "failed": 6,
-      "success_rate": 70.0
+      "succeeded": 0,
+      "failed": 20,
+      "success_rate": 0.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 16,
-      "failed": 1,
-      "success_rate": 80.0
+      "succeeded": 14,
+      "failed": 4,
+      "success_rate": 70.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 2.7,
-      "p90_minutes": 18.8,
-      "min_minutes": 1.6,
-      "max_minutes": 29.1
+      "median_minutes": 0.1,
+      "p90_minutes": 48.4,
+      "min_minutes": 0.1,
+      "max_minutes": 54.0
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 9.9,
-      "p90_minutes": 25.4,
-      "min_minutes": 7.3,
-      "max_minutes": 27.1
+      "median_minutes": 19.1,
+      "p90_minutes": 28.9,
+      "min_minutes": 9.0,
+      "max_minutes": 39.4
     }
   },
   "release_cadence": {

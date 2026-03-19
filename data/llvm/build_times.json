@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-18T08:18:30Z",
+  "collected_at": "2026-03-19T08:16:59Z",
   "workflows": {
     "Clang Tests": {
       "workflow_id": 1013963,
@@ -218,20 +218,56 @@
     "libclang ABI Tests": {
       "workflow_id": 5540927,
       "latest_run": {
-        "id": 23174771655,
+        "id": 23267590429,
         "conclusion": "success",
-        "duration_minutes": 83.4,
-        "started_at": "2026-03-17T01:55:38Z",
-        "html_url": "https://github.com/llvm/llvm-project/actions/runs/23174771655"
+        "duration_minutes": 160.1,
+        "started_at": "2026-03-18T21:19:20Z",
+        "html_url": "https://github.com/llvm/llvm-project/actions/runs/23267590429"
       },
       "stats": {
-        "sample_size": 17,
-        "median_minutes": 81.9,
-        "p90_minutes": 151.1,
+        "sample_size": 16,
+        "median_minutes": 81.8,
+        "p90_minutes": 160.1,
         "min_minutes": 73.8,
         "max_minutes": 163.7
       },
       "recent_runs": [
+        {
+          "id": 23267590429,
+          "conclusion": "success",
+          "duration_minutes": 160.1,
+          "date": "2026-03-18"
+        },
+        {
+          "id": 23267588631,
+          "conclusion": "success",
+          "duration_minutes": 82.0,
+          "date": "2026-03-18"
+        },
+        {
+          "id": 23267397046,
+          "conclusion": "cancelled",
+          "duration_minutes": 4.5,
+          "date": "2026-03-18"
+        },
+        {
+          "id": 23267396658,
+          "conclusion": "success",
+          "duration_minutes": 80.8,
+          "date": "2026-03-18"
+        },
+        {
+          "id": 23239056713,
+          "conclusion": "success",
+          "duration_minutes": 81.8,
+          "date": "2026-03-18"
+        },
+        {
+          "id": 23238903920,
+          "conclusion": "cancelled",
+          "duration_minutes": 4.0,
+          "date": "2026-03-18"
+        },
         {
           "id": 23174771655,
           "conclusion": "success",
@@ -315,47 +351,11 @@
           "conclusion": "success",
           "duration_minutes": 80.1,
           "date": "2026-03-06"
-        },
-        {
-          "id": 22773634905,
-          "conclusion": "success",
-          "duration_minutes": 83.4,
-          "date": "2026-03-06"
-        },
-        {
-          "id": 22768435548,
-          "conclusion": "success",
-          "duration_minutes": 80.2,
-          "date": "2026-03-06"
-        },
-        {
-          "id": 22753620684,
-          "conclusion": "success",
-          "duration_minutes": 82.6,
-          "date": "2026-03-06"
-        },
-        {
-          "id": 22731403757,
-          "conclusion": "success",
-          "duration_minutes": 80.7,
-          "date": "2026-03-05"
-        },
-        {
-          "id": 22724263546,
-          "conclusion": "failure",
-          "duration_minutes": 97.8,
-          "date": "2026-03-05"
-        },
-        {
-          "id": 22721127028,
-          "conclusion": "success",
-          "duration_minutes": 84.8,
-          "date": "2026-03-05"
         }
       ],
       "bottleneck_job": {
         "name": "abi-dump (build-latest)",
-        "duration_minutes": 79.7
+        "duration_minutes": 77.6
       }
     }
   }

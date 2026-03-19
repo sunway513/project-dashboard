@@ -1,6 +1,19 @@
 {
-  "collected_at": "2026-03-18T08:15:21Z",
+  "collected_at": "2026-03-19T08:13:40Z",
   "issues": [
+    {
+      "number": 187335,
+      "title": "AMDGPU SILoadStoreOptimizer: Asymmetric TFE/LWE check silently drops TFE on merged MIMG",
+      "author": "yijan4845",
+      "state": "open",
+      "created_at": "2026-03-18T17:47:03Z",
+      "updated_at": "2026-03-18T17:47:23Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/187335",
+      "labels": [
+        "backend:AMDGPU",
+        "miscompilation"
+      ]
+    },
     {
       "number": 187053,
       "title": "[AMDGPU][GlobalISel] Unpack and pack instance should be combined away",
@@ -367,19 +380,6 @@
       "created_at": "2025-12-12T16:46:20Z",
       "updated_at": "2025-12-12T16:46:37Z",
       "html_url": "https://github.com/llvm/llvm-project/issues/172045",
-      "labels": [
-        "backend:AMDGPU",
-        "missed-optimization"
-      ]
-    },
-    {
-      "number": 171724,
-      "title": "AMDGPU: Select of double with fneg inputs does not use source modifiers with v_cndmask_b32",
-      "author": "arsenm",
-      "state": "open",
-      "created_at": "2025-12-10T22:58:19Z",
-      "updated_at": "2025-12-10T22:58:38Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/171724",
       "labels": [
         "backend:AMDGPU",
         "missed-optimization"

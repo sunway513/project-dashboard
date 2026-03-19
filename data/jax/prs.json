@@ -1,6 +1,61 @@
 {
-  "collected_at": "2026-03-18T08:15:33Z",
+  "collected_at": "2026-03-19T08:13:51Z",
   "prs": [
+    {
+      "number": 34971,
+      "title": "[ROCm] fix the performance issue when n=1 or 2",
+      "author": "cj401-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-10T21:50:42Z",
+      "updated_at": "2026-03-18T22:55:31Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34971",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU",
+        "GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35902,
+      "title": "[ROCm] Enable hipBLASLt in ROCm pytest CI",
+      "author": "magaonka-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-14T00:42:57Z",
+      "updated_at": "2026-03-18T22:15:31Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35902",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 35785,
+      "title": "[ROCm] Fix and simplify jax rocm plugin init script",
+      "author": "alekstheod",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-10T21:06:53Z",
+      "updated_at": "2026-03-18T18:30:11Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35785",
+      "labels": [
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35995,
+      "title": "[ROCm] Add lowering for ScaledMatmul, ScaledDot",
+      "author": "shurale-nkn",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T13:41:17Z",
+      "updated_at": "2026-03-18T14:26:21Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35995",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 35534,
       "title": "[ROCm] bring gesdd for computing SVD on ROCm",
@@ -8,7 +63,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-02T21:16:00Z",
-      "updated_at": "2026-03-18T08:03:00Z",
+      "updated_at": "2026-03-18T11:41:38Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35534",
       "labels": [
         "enhancement",
@@ -25,7 +80,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-17T21:31:00Z",
-      "updated_at": "2026-03-17T21:39:48Z",
+      "updated_at": "2026-03-18T10:26:33Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35978",
       "labels": [
         "AMD GPU"
@@ -68,7 +123,7 @@
       "author": "mminutoli",
       "state": "closed",
       "merged": true,
-      "created_at": "2026-03-16T15:52:53Z",
+      "created_at": "2026-03-16T15:52:54Z",
       "updated_at": "2026-03-17T14:24:59Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35932",
       "labels": [
@@ -76,41 +131,6 @@
         "pull ready",
         "CI",
         "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 35516,
-      "title": "[ROCm] Include prebuilt rocm plugin pkgs as deps to tests",
-      "author": "alekstheod",
-      "state": "closed",
-      "merged": false,
-      "created_at": "2026-03-02T18:02:31Z",
-      "updated_at": "2026-03-17T08:15:08Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35516",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "CI",
-        "AMD GPU",
-        "GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34971,
-      "title": "[ROCm] fix the performance issue when n=1 or 2",
-      "author": "cj401-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-10T21:50:42Z",
-      "updated_at": "2026-03-17T07:51:09Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34971",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU",
-        "GPU"
       ],
       "draft": false
     },
@@ -143,18 +163,6 @@
       "draft": false
     },
     {
-      "number": 35902,
-      "title": "[ROCm] Enable hipBLASLt in ROCm pytest CI",
-      "author": "magaonka-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-14T00:42:57Z",
-      "updated_at": "2026-03-14T00:46:53Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35902",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 35741,
       "title": "[ROCm] Add individual skips to Mosaic tests",
       "author": "gulsumgudukbay",
@@ -181,20 +189,6 @@
       "labels": [
         "kokoro:force-run",
         "pull ready",
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 35785,
-      "title": "[ROCm] Fix and simplify jax rocm plugin init script",
-      "author": "alekstheod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-10T21:06:53Z",
-      "updated_at": "2026-03-13T09:29:49Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35785",
-      "labels": [
         "AMD GPU"
       ],
       "draft": false

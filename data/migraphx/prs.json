@@ -1,16 +1,149 @@
 {
-  "collected_at": "2026-03-18T08:16:13Z",
+  "collected_at": "2026-03-19T08:14:44Z",
   "prs": [
     {
-      "number": 4607,
-      "title": "Optimize 1x1 and Depthwise Convolution for Small Shapes",
+      "number": 4521,
+      "title": "Correct QLinearMatMul broadcasting and QLinearConv bias quantization",
       "author": "klin2024",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-12T07:05:25Z",
-      "updated_at": "2026-03-18T07:43:23Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4607",
+      "created_at": "2026-01-02T08:08:20Z",
+      "updated_at": "2026-03-19T06:53:33Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4521",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4684,
+      "title": "Update to cppcheck 2.20",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T19:40:01Z",
+      "updated_at": "2026-03-19T03:48:56Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4684",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4687,
+      "title": "Use ROCmCMakeBuildTools for the docs",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-19T02:46:37Z",
+      "updated_at": "2026-03-19T02:51:05Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4687",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4657,
+      "title": "[AIMIGRAPHX-604] Add small convolution path for non-zero padding cases",
+      "author": "eddieliao",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-09T19:28:21Z",
+      "updated_at": "2026-03-19T00:30:08Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4657",
+      "labels": [
+        "bugfix",
+        "Matchers",
+        "Changelog: Not Applicable"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4686,
+      "title": "add symengine dep",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T22:31:33Z",
+      "updated_at": "2026-03-18T23:18:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4686",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4685,
+      "title": "Check if rocBLAS is enabled when including headers in gemm_impl.cpp",
+      "author": "kahmed10",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T21:14:09Z",
+      "updated_at": "2026-03-18T22:26:12Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4685",
+      "labels": [
+        "bugfix",
+        "simple"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4682,
+      "title": "Add caching mechanism for CI tests in Jenkinsfile",
+      "author": "causten",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T14:13:51Z",
+      "updated_at": "2026-03-18T21:54:34Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4682",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4628,
+      "title": "Add option to skip benchmarking in compile_ops",
+      "author": "kahmed10",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T01:50:46Z",
+      "updated_at": "2026-03-18T21:42:38Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4628",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4652,
+      "title": "Add Cubic resize jit kernel",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-05T21:40:43Z",
+      "updated_at": "2026-03-18T21:29:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
+      "labels": [
+        "onnx",
+        "Onnx Operators"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4666,
+      "title": " jit implementation for fill",
+      "author": "bdevorem",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-13T16:29:50Z",
+      "updated_at": "2026-03-18T19:03:34Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4666",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4626,
+      "title": "Add debug symbols for parsed and compiler pass replaced instructions ",
+      "author": "CharlieL7",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T21:54:12Z",
+      "updated_at": "2026-03-18T17:05:38Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4626",
+      "labels": [
+        "enhancement",
+        "high priority"
+      ],
       "draft": true
     },
     {
@@ -20,22 +153,58 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-13T11:19:09Z",
-      "updated_at": "2026-03-18T07:42:11Z",
+      "updated_at": "2026-03-18T16:17:43Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4665",
       "labels": [],
       "draft": false
     },
     {
-      "number": 4521,
-      "title": "Correct QLinearMatMul broadcasting and QLinearConv bias quantization",
+      "number": 4673,
+      "title": "Adding parser support for MatMulBnb4 operator",
+      "author": "urpetkov-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-16T14:23:59Z",
+      "updated_at": "2026-03-18T16:14:34Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4673",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4638,
+      "title": "Auto padding convTrans",
+      "author": "ivarusic-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-26T12:40:13Z",
+      "updated_at": "2026-03-18T16:02:12Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4638",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4680,
+      "title": "Adding attention bias input to Multi Head Attention parser",
+      "author": "urpetkov-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-17T15:52:18Z",
+      "updated_at": "2026-03-18T15:49:33Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4680",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4607,
+      "title": "Optimize 1x1 and Depthwise Convolution for Small Shapes",
       "author": "klin2024",
       "state": "open",
       "merged": false,
-      "created_at": "2026-01-02T08:08:20Z",
-      "updated_at": "2026-03-18T07:40:41Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4521",
+      "created_at": "2026-02-12T07:05:25Z",
+      "updated_at": "2026-03-18T09:10:17Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4607",
       "labels": [],
-      "draft": false
+      "draft": true
     },
     {
       "number": 4591,
@@ -46,18 +215,6 @@
       "created_at": "2026-02-04T06:02:46Z",
       "updated_at": "2026-03-18T06:09:34Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4591",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4681,
-      "title": "Replace pow(x, 2) with mul(x, x)",
-      "author": "turneram",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-17T23:16:39Z",
-      "updated_at": "2026-03-18T04:08:00Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4681",
       "labels": [],
       "draft": false
     },
@@ -90,61 +247,6 @@
       "draft": false
     },
     {
-      "number": 4633,
-      "title": "Dont fuse op on attention that are not contained",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T14:09:40Z",
-      "updated_at": "2026-03-18T03:05:33Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4633",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4626,
-      "title": "Add debug symbols for parsed and compiler pass replaced instructions ",
-      "author": "CharlieL7",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T21:54:12Z",
-      "updated_at": "2026-03-18T03:02:40Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4626",
-      "labels": [
-        "enhancement",
-        "high priority"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4657,
-      "title": "[AIMIGRAPHX-604] Add small convolution path for non-zero padding cases",
-      "author": "eddieliao",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-09T19:28:21Z",
-      "updated_at": "2026-03-18T01:06:10Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4657",
-      "labels": [
-        "bugfix",
-        "Matchers",
-        "Changelog: Not Applicable"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4628,
-      "title": "Add option to skip benchmarking in compile_ops",
-      "author": "kahmed10",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T01:50:46Z",
-      "updated_at": "2026-03-18T00:03:02Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4628",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4646,
       "title": "Use JIT Pooling by default and add tuning",
       "author": "pfultz2",
@@ -157,30 +259,6 @@
       "draft": false
     },
     {
-      "number": 4678,
-      "title": "Free parse literal data in instruction::replace()",
-      "author": "aditya-dl",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-16T19:33:43Z",
-      "updated_at": "2026-03-17T23:56:09Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4678",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4320,
-      "title": "Refactor eliminate_concat",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-09-25T17:43:23Z",
-      "updated_at": "2026-03-17T23:42:47Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4320",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4670,
       "title": "Fix issues with dangling references in the test framework",
       "author": "pfultz2",
@@ -189,57 +267,6 @@
       "created_at": "2026-03-14T00:14:26Z",
       "updated_at": "2026-03-17T22:30:35Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4670",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4652,
-      "title": "Add Cubic resize jit kernel",
-      "author": "TedThemistokleous",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T21:40:43Z",
-      "updated_at": "2026-03-17T22:00:54Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
-      "labels": [
-        "onnx",
-        "Onnx Operators"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4680,
-      "title": "Adding attention bias input to Multi Head Attention parser",
-      "author": "urpetkov-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-17T15:52:18Z",
-      "updated_at": "2026-03-17T20:25:19Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4680",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4638,
-      "title": "Auto padding convTrans",
-      "author": "ivarusic-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-26T12:40:13Z",
-      "updated_at": "2026-03-17T18:17:33Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4638",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4673,
-      "title": "Adding parser support for MatMulBnb4 operator",
-      "author": "urpetkov-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-16T14:23:59Z",
-      "updated_at": "2026-03-17T17:07:48Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4673",
       "labels": [],
       "draft": false
     },
@@ -268,18 +295,6 @@
       "draft": true
     },
     {
-      "number": 4666,
-      "title": " jit implementation for fill",
-      "author": "bdevorem",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-13T16:29:50Z",
-      "updated_at": "2026-03-16T20:36:39Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4666",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4672,
       "title": "[rocMLIR] Fix for inception v3 crash on Navi3x",
       "author": "umangyadav",
@@ -289,22 +304,6 @@
       "updated_at": "2026-03-16T15:50:13Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4672",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4671,
-      "title": "rocMLIR Weekly Sync 2026-03-15",
-      "author": "github-actions[bot]",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-15T07:22:22Z",
-      "updated_at": "2026-03-16T15:37:46Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4671",
-      "labels": [
-        "dependencies",
-        "automated",
-        "rocMLIR"
-      ],
       "draft": false
     },
     {
@@ -1116,6 +1115,84 @@
       "draft": false
     },
     {
+      "number": 4671,
+      "title": "rocMLIR Weekly Sync 2026-03-15",
+      "author": "github-actions[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-15T07:22:22Z",
+      "updated_at": "2026-03-18T22:09:06Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4671",
+      "labels": [
+        "dependencies",
+        "automated",
+        "rocMLIR"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4320,
+      "title": "Refactor eliminate_concat",
+      "author": "pfultz2",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-09-25T17:43:23Z",
+      "updated_at": "2026-03-18T21:58:31Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4320",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4251,
+      "title": "[AIMIGRAPHX-802] Add the heuristic of AddN op using reduce_sum op for parsing pb file (TF)",
+      "author": "kentqian",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2025-08-20T19:38:04Z",
+      "updated_at": "2026-03-18T19:19:07Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4251",
+      "labels": [
+        "enhancement"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4678,
+      "title": "Free parse literal data in instruction::replace()",
+      "author": "aditya-dl",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-16T19:33:43Z",
+      "updated_at": "2026-03-18T14:38:04Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4678",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4681,
+      "title": "Replace pow(x, 2) with mul(x, x)",
+      "author": "turneram",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-17T23:16:39Z",
+      "updated_at": "2026-03-18T14:36:28Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4681",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4633,
+      "title": "Dont fuse op on attention that are not contained",
+      "author": "pfultz2",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-25T14:09:40Z",
+      "updated_at": "2026-03-18T14:35:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4633",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 4669,
       "title": "[AIMIGRAPHX-814] Fix convert overflow",
       "author": "eddieliao",
@@ -1127,20 +1204,6 @@
       "labels": [
         "bugfix",
         "Changelog: Resolved Issues"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4251,
-      "title": "[AIMIGRAPHX-802] Add the heuristic of AddN op using reduce_sum op for parsing pb file (TF)",
-      "author": "kentqian",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-08-20T19:38:04Z",
-      "updated_at": "2026-03-17T15:27:54Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4251",
-      "labels": [
-        "enhancement"
       ],
       "draft": false
     },
@@ -2049,70 +2112,6 @@
       "created_at": "2025-12-05T21:58:47Z",
       "updated_at": "2026-02-05T19:09:31Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4485",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4428,
-      "title": "Dont fuse pointwise when its used across submodules",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-07T01:03:08Z",
-      "updated_at": "2026-02-05T14:30:13Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4428",
-      "labels": [
-        "bugfix"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4587,
-      "title": "Add debug print to shape class",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-03T21:55:27Z",
-      "updated_at": "2026-02-04T20:39:01Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4587",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4586,
-      "title": "Set larger timeout for debug builds",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-03T21:47:09Z",
-      "updated_at": "2026-02-04T14:49:47Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4586",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4420,
-      "title": "Fixing invalid characters inside path name on Windows",
-      "author": "ivarusic-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-03T15:54:18Z",
-      "updated_at": "2026-02-03T20:00:20Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4420",
-      "labels": [
-        "Windows"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4574,
-      "title": "fix compute_shapes lens check",
-      "author": "shivadbhavsar",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-27T19:52:36Z",
-      "updated_at": "2026-02-03T19:17:56Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4574",
       "labels": [],
       "draft": false
     }

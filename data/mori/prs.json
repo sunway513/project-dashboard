@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-18T08:16:29Z",
+  "collected_at": "2026-03-19T08:14:59Z",
   "prs": [
     {
       "number": 180,
@@ -8,8 +8,44 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-03T15:01:19Z",
-      "updated_at": "2026-03-17T03:10:47Z",
+      "updated_at": "2026-03-19T08:00:15Z",
       "html_url": "https://github.com/ROCm/mori/pull/180",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 203,
+      "title": "Refactor: CMake C++ integration & lazy imports for torch-free usage",
+      "author": "jhchouuu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-19T06:52:34Z",
+      "updated_at": "2026-03-19T06:52:34Z",
+      "html_url": "https://github.com/ROCm/mori/pull/203",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 202,
+      "title": "Update Docker environment for MI355X benchmark reproducibility",
+      "author": "amd-andycha",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-19T03:59:06Z",
+      "updated_at": "2026-03-19T03:59:06Z",
+      "html_url": "https://github.com/ROCm/mori/pull/202",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 200,
+      "title": "Add ReduceScatter SDMA implementation and AG/RS benchmarks",
+      "author": "amd-andycha",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T09:54:13Z",
+      "updated_at": "2026-03-18T12:33:20Z",
+      "html_url": "https://github.com/ROCm/mori/pull/200",
       "labels": [],
       "draft": false
     },
@@ -46,18 +82,6 @@
       "created_at": "2026-03-09T07:25:41Z",
       "updated_at": "2026-03-09T07:47:30Z",
       "html_url": "https://github.com/ROCm/mori/pull/190",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 185,
-      "title": "Optimization: ep async kernel",
-      "author": "TianDi101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T15:41:33Z",
-      "updated_at": "2026-03-07T15:51:05Z",
-      "html_url": "https://github.com/ROCm/mori/pull/185",
       "labels": [],
       "draft": false
     },
@@ -106,6 +130,30 @@
       "created_at": "2025-10-28T06:17:21Z",
       "updated_at": "2026-01-08T09:18:21Z",
       "html_url": "https://github.com/ROCm/mori/pull/99",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 201,
+      "title": "Fix: clear stale pointers in recv-only PrepareAndBuildArgs",
+      "author": "maning00",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T03:20:44Z",
+      "updated_at": "2026-03-19T04:07:05Z",
+      "html_url": "https://github.com/ROCm/mori/pull/201",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 185,
+      "title": "Optimization: ep async kernel",
+      "author": "TianDi101",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-05T15:41:33Z",
+      "updated_at": "2026-03-18T11:21:26Z",
+      "html_url": "https://github.com/ROCm/mori/pull/185",
       "labels": [],
       "draft": false
     },
@@ -1114,30 +1162,6 @@
       "created_at": "2025-10-28T02:41:45Z",
       "updated_at": "2025-10-28T02:42:42Z",
       "html_url": "https://github.com/ROCm/mori/pull/98",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 93,
-      "title": "Fix: fix output buffer overwrite issue in intranode EP.",
-      "author": "dongmin-ra",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-10-23T08:06:35Z",
-      "updated_at": "2025-10-27T15:18:12Z",
-      "html_url": "https://github.com/ROCm/mori/pull/93",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 87,
-      "title": "Fix: fix possible result value error in internode and intranode EP",
-      "author": "dongmin-ra",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-10-15T08:51:33Z",
-      "updated_at": "2025-10-27T15:17:09Z",
-      "html_url": "https://github.com/ROCm/mori/pull/87",
       "labels": [],
       "draft": false
     },
