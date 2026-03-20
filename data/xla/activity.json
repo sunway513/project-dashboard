@@ -1,15 +1,15 @@
 {
-  "collected_at": "2026-03-20T08:14:08Z",
+  "collected_at": "2026-03-20T22:06:33Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
-      "opened": 2,
+      "opened": 1,
       "merged": 0,
       "closed": 0
     },
     "last_week": {
-      "opened": 0,
+      "opened": 1,
       "merged": 0,
       "closed": 0
     },
@@ -18,12 +18,18 @@
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 1,
-    "total_contributors": 1,
+    "active_this_week": 2,
+    "total_contributors": 2,
     "top_contributors": [
       {
-        "author": "alekstheod",
+        "author": "magaonka-amd",
         "prs_submitted": 2,
+        "prs_merged": 0,
+        "commits": 0
+      },
+      {
+        "author": "mfrancepillois",
+        "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
       }
@@ -46,24 +52,24 @@
     "cuda": {
       "total_runs": 20,
       "succeeded": 0,
-      "failed": 18,
+      "failed": 19,
       "success_rate": 0.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 34.2,
-      "p90_minutes": 127.8,
-      "min_minutes": 6.5,
-      "max_minutes": 130.9
+      "median_minutes": 24.6,
+      "p90_minutes": 82.4,
+      "min_minutes": 7.8,
+      "max_minutes": 84.4
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 9.3,
-      "p90_minutes": 12.6,
-      "min_minutes": 6.8,
-      "max_minutes": 19.1
+      "median_minutes": 13.5,
+      "p90_minutes": 25.5,
+      "min_minutes": 8.2,
+      "max_minutes": 27.6
     }
   },
   "release_cadence": {

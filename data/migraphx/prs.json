@@ -1,19 +1,57 @@
 {
-  "collected_at": "2026-03-20T08:13:21Z",
+  "collected_at": "2026-03-20T22:05:54Z",
   "prs": [
     {
-      "number": 4652,
-      "title": "Add Cubic resize jit kernel",
-      "author": "TedThemistokleous",
+      "number": 4680,
+      "title": "Adding attention bias input to Multi Head Attention parser",
+      "author": "urpetkov-amd",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-05T21:40:43Z",
-      "updated_at": "2026-03-20T06:48:42Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
+      "created_at": "2026-03-17T15:52:18Z",
+      "updated_at": "2026-03-20T21:18:11Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4680",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4690,
+      "title": "Onnxruntime Weekly Sync 2026-03-20",
+      "author": "github-actions[bot]",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T17:22:34Z",
+      "updated_at": "2026-03-20T17:22:37Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4690",
       "labels": [
-        "onnx",
-        "Onnx Operators"
+        "onnxruntime",
+        "dependencies",
+        "skip bot checks",
+        "automated"
       ],
+      "draft": false
+    },
+    {
+      "number": 4673,
+      "title": "Adding parser support for MatMulBnb4 operator",
+      "author": "urpetkov-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-16T14:23:59Z",
+      "updated_at": "2026-03-20T16:20:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4673",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4646,
+      "title": "Use JIT Pooling by default and add tuning",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T19:30:33Z",
+      "updated_at": "2026-03-20T16:05:53Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4646",
+      "labels": [],
       "draft": false
     },
     {
@@ -25,18 +63,6 @@
       "created_at": "2026-01-26T07:35:47Z",
       "updated_at": "2026-03-20T04:47:30Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4571",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4684,
-      "title": "Update to cppcheck 2.20",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-18T19:40:01Z",
-      "updated_at": "2026-03-20T02:57:49Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4684",
       "labels": [],
       "draft": false
     },
@@ -53,18 +79,6 @@
       "draft": false
     },
     {
-      "number": 4680,
-      "title": "Adding attention bias input to Multi Head Attention parser",
-      "author": "urpetkov-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-17T15:52:18Z",
-      "updated_at": "2026-03-20T00:51:24Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4680",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4672,
       "title": "[rocMLIR] Fix for inception v3 crash on Navi3x",
       "author": "umangyadav",
@@ -73,18 +87,6 @@
       "created_at": "2026-03-15T22:46:19Z",
       "updated_at": "2026-03-19T19:45:40Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4672",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4646,
-      "title": "Use JIT Pooling by default and add tuning",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T19:30:33Z",
-      "updated_at": "2026-03-19T19:18:42Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4646",
       "labels": [],
       "draft": false
     },
@@ -201,18 +203,6 @@
         "high priority"
       ],
       "draft": true
-    },
-    {
-      "number": 4673,
-      "title": "Adding parser support for MatMulBnb4 operator",
-      "author": "urpetkov-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-16T14:23:59Z",
-      "updated_at": "2026-03-18T16:14:34Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4673",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 4607,
@@ -1027,6 +1017,33 @@
       "updated_at": "2024-10-21T22:48:16Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/3468",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4684,
+      "title": "Update to cppcheck 2.20",
+      "author": "pfultz2",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-18T19:40:01Z",
+      "updated_at": "2026-03-20T14:07:13Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4684",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4652,
+      "title": "Add Cubic resize jit kernel",
+      "author": "TedThemistokleous",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-05T21:40:43Z",
+      "updated_at": "2026-03-20T12:59:19Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
+      "labels": [
+        "onnx",
+        "Onnx Operators"
+      ],
       "draft": false
     },
     {
@@ -2023,47 +2040,6 @@
       "updated_at": "2026-02-07T02:55:28Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4597",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4518,
-      "title": "AIMIGRAPHX-549 Update clip operator to opset 13",
-      "author": "TedThemistokleous",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-12-22T17:36:13Z",
-      "updated_at": "2026-02-06T23:55:53Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4518",
-      "labels": [
-        "bugfix",
-        "Onnx Operators"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4550,
-      "title": "Rewrite gather to transpose/reshape/broadcast/slice",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-16T00:46:33Z",
-      "updated_at": "2026-02-06T22:46:02Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4550",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4343,
-      "title": "MXFP4 - rocMLIR integration",
-      "author": "CharlieL7",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-10-01T15:08:34Z",
-      "updated_at": "2026-02-06T05:00:06Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4343",
-      "labels": [
-        "roadmap"
-      ],
       "draft": false
     }
   ]

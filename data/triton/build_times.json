@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-20T08:16:07Z",
+  "collected_at": "2026-03-20T22:08:00Z",
   "workflows": {
     "Documentation": {
       "workflow_id": 11689091,
@@ -147,20 +147,26 @@
     "Wheels": {
       "workflow_id": 11689092,
       "latest_run": {
-        "id": 23286215862,
+        "id": 23334862313,
         "conclusion": "failure",
-        "duration_minutes": 129.1,
-        "started_at": "2026-03-19T08:26:47Z",
-        "html_url": "https://github.com/triton-lang/triton/actions/runs/23286215862"
+        "duration_minutes": 2.7,
+        "started_at": "2026-03-20T08:25:57Z",
+        "html_url": "https://github.com/triton-lang/triton/actions/runs/23334862313"
       },
       "stats": {
-        "sample_size": 6,
-        "median_minutes": 131.2,
+        "sample_size": 5,
+        "median_minutes": 128.6,
         "p90_minutes": 137.5,
         "min_minutes": 125.6,
         "max_minutes": 137.5
       },
       "recent_runs": [
+        {
+          "id": 23334862313,
+          "conclusion": "failure",
+          "duration_minutes": 2.7,
+          "date": "2026-03-20"
+        },
         {
           "id": 23286215862,
           "conclusion": "failure",
@@ -274,17 +280,11 @@
           "conclusion": "failure",
           "duration_minutes": 126.7,
           "date": "2026-03-02"
-        },
-        {
-          "id": 22539295404,
-          "conclusion": "success",
-          "duration_minutes": 133.9,
-          "date": "2026-03-01"
         }
       ],
       "bottleneck_job": {
         "name": "Build-Wheels (ubuntu-22.04-arm, aarch64)",
-        "duration_minutes": 129.1
+        "duration_minutes": 2.6
       }
     },
     "pages-build-deployment": {

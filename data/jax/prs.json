@@ -1,44 +1,15 @@
 {
-  "collected_at": "2026-03-20T08:12:46Z",
+  "collected_at": "2026-03-20T22:05:14Z",
   "prs": [
     {
-      "number": 36061,
-      "title": "Limit the number of jobs to 30 for ROCm bazel tests",
-      "author": "charleshofer",
+      "number": 35995,
+      "title": "[ROCm] Add lowering for ScaledMatmul, ScaledDot",
+      "author": "shurale-nkn",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-19T22:17:00Z",
-      "updated_at": "2026-03-20T07:17:42Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/36061",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 35534,
-      "title": "[ROCm] bring gesdd for computing SVD on ROCm",
-      "author": "cj401-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T21:16:00Z",
-      "updated_at": "2026-03-19T23:44:50Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35534",
-      "labels": [
-        "enhancement",
-        "performance",
-        "jax.numpy",
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 36056,
-      "title": "[ROCm] Add wheel version suffix support for ROCm post-release builds",
-      "author": "gulsumgudukbay",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T19:07:46Z",
-      "updated_at": "2026-03-19T19:08:47Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/36056",
+      "created_at": "2026-03-18T13:41:17Z",
+      "updated_at": "2026-03-20T20:36:51Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35995",
       "labels": [
         "AMD GPU"
       ],
@@ -51,8 +22,71 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-19T19:02:57Z",
-      "updated_at": "2026-03-19T19:08:16Z",
+      "updated_at": "2026-03-20T19:48:37Z",
       "html_url": "https://github.com/jax-ml/jax/pull/36055",
+      "labels": [
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 36056,
+      "title": "[ROCm] Add wheel version suffix support for ROCm post-release builds",
+      "author": "gulsumgudukbay",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T19:07:46Z",
+      "updated_at": "2026-03-20T17:37:17Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/36056",
+      "labels": [
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34971,
+      "title": "[ROCm] fix the performance issue when n=1 or 2",
+      "author": "cj401-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-10T21:50:42Z",
+      "updated_at": "2026-03-20T16:10:34Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34971",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU",
+        "GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35534,
+      "title": "[ROCm] bring gesdd for computing SVD on ROCm",
+      "author": "cj401-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T21:16:00Z",
+      "updated_at": "2026-03-20T14:42:28Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35534",
+      "labels": [
+        "enhancement",
+        "performance",
+        "jax.numpy",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 36061,
+      "title": "Limit the number of jobs to 30 for ROCm bazel tests",
+      "author": "charleshofer",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-19T22:17:00Z",
+      "updated_at": "2026-03-20T11:05:31Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/36061",
       "labels": [
         "AMD GPU"
       ],
@@ -69,20 +103,6 @@
       "html_url": "https://github.com/jax-ml/jax/pull/36044",
       "labels": [
         "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 35995,
-      "title": "[ROCm] Add lowering for ScaledMatmul, ScaledDot",
-      "author": "shurale-nkn",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-18T13:41:17Z",
-      "updated_at": "2026-03-19T16:14:42Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35995",
-      "labels": [
-        "AMD GPU"
       ],
       "draft": false
     },
@@ -127,23 +147,6 @@
       "html_url": "https://github.com/jax-ml/jax/pull/35785",
       "labels": [
         "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34971,
-      "title": "[ROCm] fix the performance issue when n=1 or 2",
-      "author": "cj401-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-10T21:50:42Z",
-      "updated_at": "2026-03-19T13:45:24Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34971",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU",
-        "GPU"
       ],
       "draft": false
     },
@@ -605,21 +608,6 @@
       "created_at": "2026-01-21T00:02:17Z",
       "updated_at": "2026-02-13T06:53:20Z",
       "html_url": "https://github.com/jax-ml/jax/pull/34501",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34894,
-      "title": "Add ROCm backward compatibility test for cholesky solver",
-      "author": "AratiGanesh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-06T20:53:55Z",
-      "updated_at": "2026-02-13T06:40:18Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34894",
       "labels": [
         "kokoro:force-run",
         "pull ready"

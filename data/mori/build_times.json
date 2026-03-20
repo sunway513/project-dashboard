@@ -1,17 +1,65 @@
 {
-  "collected_at": "2026-03-20T08:16:16Z",
+  "collected_at": "2026-03-20T22:08:09Z",
   "workflows": {
     "mori": {
       "workflow_id": 196573763,
       "latest_run": {
-        "id": 23285353978,
+        "id": 23296558500,
         "conclusion": "cancelled",
         "duration_minutes": 1440.0,
-        "started_at": "2026-03-19T08:00:19Z",
-        "html_url": "https://github.com/ROCm/mori/actions/runs/23285353978"
+        "started_at": "2026-03-19T13:12:17Z",
+        "html_url": "https://github.com/ROCm/mori/actions/runs/23296558500"
       },
       "stats": null,
       "recent_runs": [
+        {
+          "id": 23296558500,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
+        {
+          "id": 23295981784,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
+        {
+          "id": 23295474525,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
+        {
+          "id": 23291178771,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
+        {
+          "id": 23289836436,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
+        {
+          "id": 23289828074,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
+        {
+          "id": 23286502345,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
+        {
+          "id": 23286289110,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-19"
+        },
         {
           "id": 23285353978,
           "conclusion": "cancelled",
@@ -83,65 +131,21 @@
           "conclusion": "cancelled",
           "duration_minutes": 1440.0,
           "date": "2026-03-18"
-        },
-        {
-          "id": 23233121878,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-18"
-        },
-        {
-          "id": 23176985558,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-17"
-        },
-        {
-          "id": 23176966146,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-17"
-        },
-        {
-          "id": 23176622560,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-17"
-        },
-        {
-          "id": 23144958389,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-16"
-        },
-        {
-          "id": 23143435404,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-16"
-        },
-        {
-          "id": 23142459607,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-16"
-        },
-        {
-          "id": 23138819861,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-16"
         }
-      ]
+      ],
+      "bottleneck_job": {
+        "name": "mori build",
+        "duration_minutes": 1440.0
+      }
     },
     "Build and Deploy Documentation": {
       "workflow_id": 243910332,
       "latest_run": {
-        "id": 23334003408,
+        "id": 23339128529,
         "conclusion": "success",
         "duration_minutes": 1.4,
-        "started_at": "2026-03-20T07:56:33Z",
-        "html_url": "https://github.com/ROCm/mori/actions/runs/23334003408"
+        "started_at": "2026-03-20T10:36:57Z",
+        "html_url": "https://github.com/ROCm/mori/actions/runs/23339128529"
       },
       "stats": {
         "sample_size": 20,
@@ -151,6 +155,12 @@
         "max_minutes": 2.7
       },
       "recent_runs": [
+        {
+          "id": 23339128529,
+          "conclusion": "success",
+          "duration_minutes": 1.4,
+          "date": "2026-03-20"
+        },
         {
           "id": 23334003408,
           "conclusion": "success",
@@ -264,17 +274,11 @@
           "conclusion": "success",
           "duration_minutes": 1.6,
           "date": "2026-03-18"
-        },
-        {
-          "id": 23242090910,
-          "conclusion": "success",
-          "duration_minutes": 1.2,
-          "date": "2026-03-18"
         }
       ],
       "bottleneck_job": {
         "name": "build-docs",
-        "duration_minutes": 0.9
+        "duration_minutes": 0.7
       }
     },
     "Copilot code review": {

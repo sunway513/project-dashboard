@@ -1,6 +1,31 @@
 {
-  "collected_at": "2026-03-20T08:12:34Z",
+  "collected_at": "2026-03-20T22:05:04Z",
   "issues": [
+    {
+      "number": 186878,
+      "title": "[AMDGPU] asyncmark/wait.asyncmark intrinsics produce incorrect code for 3-stage software-pipelined loops",
+      "author": "jerryyin",
+      "state": "open",
+      "created_at": "2026-03-16T20:17:13Z",
+      "updated_at": "2026-03-20T20:07:14Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/186878",
+      "labels": [
+        "backend:AMDGPU"
+      ]
+    },
+    {
+      "number": 187697,
+      "title": "Unable to load __amdgpu_texture_t values for use with clang builtins",
+      "author": "arsenm",
+      "state": "open",
+      "created_at": "2026-03-20T13:28:08Z",
+      "updated_at": "2026-03-20T14:10:18Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/187697",
+      "labels": [
+        "clang",
+        "backend:AMDGPU"
+      ]
+    },
     {
       "number": 187482,
       "title": "AMDGPU code size regression when using fdiv instead of rcp intrinsic",
@@ -51,18 +76,6 @@
       "labels": [
         "backend:AMDGPU",
         "llvm:globalisel"
-      ]
-    },
-    {
-      "number": 186878,
-      "title": "[AMDGPU] asyncmark/wait.asyncmark intrinsics produce incorrect code for 3-stage software-pipelined loops",
-      "author": "jerryyin",
-      "state": "open",
-      "created_at": "2026-03-16T20:17:13Z",
-      "updated_at": "2026-03-17T13:16:54Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/186878",
-      "labels": [
-        "backend:AMDGPU"
       ]
     },
     {
@@ -369,20 +382,6 @@
       "labels": [
         "question",
         "backend:AMDGPU"
-      ]
-    },
-    {
-      "number": 174009,
-      "title": "Improve AMDGPU codegen for copysign(x, fneg(y))",
-      "author": "arsenm",
-      "state": "open",
-      "created_at": "2025-12-30T18:00:10Z",
-      "updated_at": "2025-12-30T19:06:43Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/174009",
-      "labels": [
-        "backend:AMDGPU",
-        "missed-optimization",
-        "floating-point"
       ]
     }
   ]

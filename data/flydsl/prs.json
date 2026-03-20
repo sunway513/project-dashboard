@@ -1,6 +1,18 @@
 {
-  "collected_at": "2026-03-20T08:13:39Z",
+  "collected_at": "2026-03-20T22:06:11Z",
   "prs": [
+    {
+      "number": 228,
+      "title": "[Refactor] Extract static args elimination and DslTypes reconstruct to a separate pass",
+      "author": "sjfeng1999",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-17T08:34:04Z",
+      "updated_at": "2026-03-20T19:36:59Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/228",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 252,
       "title": "Dev bs fp8 moe",
@@ -8,20 +20,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-20T06:32:04Z",
-      "updated_at": "2026-03-20T07:58:46Z",
+      "updated_at": "2026-03-20T15:04:16Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/252",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 248,
-      "title": "improved preshuffed gemm with asyn copy",
-      "author": "yadaish",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T01:31:16Z",
-      "updated_at": "2026-03-20T06:48:45Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/248",
       "labels": [],
       "draft": false
     },
@@ -32,20 +32,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-20T03:34:05Z",
-      "updated_at": "2026-03-20T06:35:50Z",
+      "updated_at": "2026-03-20T14:58:05Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/251",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 228,
-      "title": "[Refactor] Extract static args elimination and DslTypes reconstruct to a separate pass",
-      "author": "sjfeng1999",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-17T08:34:04Z",
-      "updated_at": "2026-03-20T05:55:18Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/228",
       "labels": [],
       "draft": false
     },
@@ -58,30 +46,6 @@
       "created_at": "2026-03-20T03:25:04Z",
       "updated_at": "2026-03-20T04:57:25Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/250",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 241,
-      "title": "Feat/autotune compile hints",
-      "author": "fsx950223",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T07:11:33Z",
-      "updated_at": "2026-03-20T03:16:14Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/241",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 249,
-      "title": "Update version tag",
-      "author": "coderfeli",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T01:31:31Z",
-      "updated_at": "2026-03-20T01:32:05Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/249",
       "labels": [],
       "draft": false
     },
@@ -168,6 +132,54 @@
       "html_url": "https://github.com/ROCm/FlyDSL/pull/192",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 248,
+      "title": "improved preshuffed gemm with async copy",
+      "author": "yadaish",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T01:31:16Z",
+      "updated_at": "2026-03-20T15:01:04Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/248",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 241,
+      "title": "Feat/autotune compile hints",
+      "author": "fsx950223",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T07:11:33Z",
+      "updated_at": "2026-03-20T14:59:55Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/241",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 249,
+      "title": "Update version tag",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T01:31:31Z",
+      "updated_at": "2026-03-20T14:46:46Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/249",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 254,
+      "title": "[FLYDSL]: refactor tests",
+      "author": "xudoyuan",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T10:04:32Z",
+      "updated_at": "2026-03-20T14:46:02Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/254",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 231,
@@ -948,56 +960,6 @@
       "created_at": "2026-02-22T09:16:02Z",
       "updated_at": "2026-03-01T06:59:05Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/141",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 113,
-      "title": "[MoE] Refactor: extract MoE reduction kernel into standalone module with dedicated test",
-      "author": "aoli26",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T08:06:04Z",
-      "updated_at": "2026-03-01T06:57:21Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/113",
-      "labels": [
-        "enhancement"
-      ],
-      "draft": false
-    },
-    {
-      "number": 150,
-      "title": "Add TiledCopy and Mma",
-      "author": "sjfeng1999",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-26T08:58:25Z",
-      "updated_at": "2026-02-28T09:50:44Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/150",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 149,
-      "title": "Update README.md MLIR_PATH path",
-      "author": "jundaf2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-25T07:32:46Z",
-      "updated_at": "2026-02-25T11:43:46Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/149",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 147,
-      "title": "[Pytest] Fix assertion in `test_gpu_with_rocir_coords.py` ",
-      "author": "sammysun0711",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-24T15:00:51Z",
-      "updated_at": "2026-02-25T11:21:17Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/147",
       "labels": [],
       "draft": false
     }
