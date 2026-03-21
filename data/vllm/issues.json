@@ -1,6 +1,209 @@
 {
-  "collected_at": "2026-03-20T22:05:33Z",
+  "collected_at": "2026-03-21T08:07:25Z",
   "issues": [
+    {
+      "number": 37075,
+      "title": "[RFC]: Opt-in Media URL Cache for `MediaConnector`",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-14T21:41:03Z",
+      "updated_at": "2026-03-21T07:49:09Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/37075",
+      "labels": [
+        "RFC"
+      ]
+    },
+    {
+      "number": 35286,
+      "title": "[Bug]: Qwen3.5-MoE failed with enable_lora",
+      "author": "hjh0119",
+      "state": "open",
+      "created_at": "2026-02-25T11:42:35Z",
+      "updated_at": "2026-03-21T06:38:52Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35286",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 37736,
+      "title": "[CI Failure]:  Gemma3 OOMs with transformers backend",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-21T05:32:29Z",
+      "updated_at": "2026-03-21T05:35:13Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/37736",
+      "labels": [
+        "rocm",
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 35639,
+      "title": "[RFC]: `vllm bench eval` for Unified Accuracy + Performance Evaluation",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-01T05:36:39Z",
+      "updated_at": "2026-03-21T05:00:07Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/35639",
+      "labels": [
+        "rocm",
+        "RFC"
+      ]
+    },
+    {
+      "number": 36796,
+      "title": "[Bug]: CPU offload errors on nightly with NVIDIA GH200 Unified Memory (UMA)",
+      "author": "ehfd",
+      "state": "open",
+      "created_at": "2026-03-11T14:53:36Z",
+      "updated_at": "2026-03-21T04:53:43Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36796",
+      "labels": [
+        "bug",
+        "torch.compile"
+      ]
+    },
+    {
+      "number": 36530,
+      "title": "[Bug]: pip install 0.17 fails with CXXABI_1.3.15 not found",
+      "author": "jlqibm",
+      "state": "open",
+      "created_at": "2026-03-09T18:44:05Z",
+      "updated_at": "2026-03-21T04:16:32Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36530",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 27178,
+      "title": "[Bug]: torch._dynamo hit recompile_limit using FlexAttention backend",
+      "author": "tlrmchlsmth",
+      "state": "open",
+      "created_at": "2025-10-20T00:16:56Z",
+      "updated_at": "2026-03-21T02:29:02Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/27178",
+      "labels": [
+        "bug",
+        "torch.compile",
+        "unstale"
+      ]
+    },
+    {
+      "number": 28052,
+      "title": "[Bug]: rocm/vllm:rocm7.0.0_vllm_0.11.1_20251103 has an error with flash attention",
+      "author": "capteen-hook",
+      "state": "open",
+      "created_at": "2025-11-04T16:41:42Z",
+      "updated_at": "2026-03-21T02:28:44Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/28052",
+      "labels": [
+        "bug",
+        "rocm",
+        "stale"
+      ]
+    },
+    {
+      "number": 28137,
+      "title": "[Feature]: Refactor `aiter_shared_expert_fusion`",
+      "author": "robertgshaw2-redhat",
+      "state": "open",
+      "created_at": "2025-11-05T15:54:09Z",
+      "updated_at": "2026-03-21T02:28:41Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/28137",
+      "labels": [
+        "help wanted",
+        "stale"
+      ]
+    },
+    {
+      "number": 31056,
+      "title": "[Bug]: GLM4-MoE AssertionError with --all2all-backend pplx (dtype mismatch)",
+      "author": "ReinforcedKnowledge",
+      "state": "open",
+      "created_at": "2025-12-20T02:33:28Z",
+      "updated_at": "2026-03-21T02:25:50Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/31056",
+      "labels": [
+        "bug",
+        "stale"
+      ]
+    },
+    {
+      "number": 37441,
+      "title": "[Bug]: GPT OSS 120B performance regression with Triton 3.6",
+      "author": "Dymasik",
+      "state": "open",
+      "created_at": "2026-03-18T14:13:31Z",
+      "updated_at": "2026-03-21T02:21:31Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/37441",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 37295,
+      "title": "[Bug] gpt-oss-120b + P-EAGLE speculative decoding causes openai_harmony parse errors and severe chat latency regression",
+      "author": "fishingpvalues",
+      "state": "open",
+      "created_at": "2026-03-17T12:25:20Z",
+      "updated_at": "2026-03-21T02:13:43Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/37295",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 37729,
+      "title": "[Bug]: V1 engine core deadlocks under concurrent load (fp8 + prefix caching + Qwen3.5)",
+      "author": "rahul003",
+      "state": "open",
+      "created_at": "2026-03-21T01:35:36Z",
+      "updated_at": "2026-03-21T01:36:12Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/37729",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 36004,
+      "title": "[Bug]: Failed to import Triton kernels. Please make sure your triton version is compatible. Error: cannot import name 'SparseMatrix' from 'triton_kernels.tensor'",
+      "author": "edc3000",
+      "state": "open",
+      "created_at": "2026-03-04T12:24:23Z",
+      "updated_at": "2026-03-21T00:28:44Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/36004",
+      "labels": [
+        "bug"
+      ]
+    },
+    {
+      "number": 37710,
+      "title": "[CI Failure]:  mi355_1: Entrypoints Integration (API Server 1)",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-20T17:50:55Z",
+      "updated_at": "2026-03-20T23:39:08Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/37710",
+      "labels": [
+        "rocm",
+        "ci-failure"
+      ]
+    },
+    {
+      "number": 37724,
+      "title": "[CI Failure]:  mi355_1: Quantization",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-20T23:38:39Z",
+      "updated_at": "2026-03-20T23:38:48Z",
+      "html_url": "https://github.com/vllm-project/vllm/issues/37724",
+      "labels": [
+        "rocm",
+        "ci-failure"
+      ]
+    },
     {
       "number": 37714,
       "title": "[Installation]: Blackwell SM120 + CUDA 13 pip install: 5 sequential failures before Qwen3.5 27B+ runs",
@@ -11,20 +214,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/37714",
       "labels": [
         "installation"
-      ]
-    },
-    {
-      "number": 27178,
-      "title": "[Bug]: torch._dynamo hit recompile_limit using FlexAttention backend",
-      "author": "tlrmchlsmth",
-      "state": "open",
-      "created_at": "2025-10-20T00:16:56Z",
-      "updated_at": "2026-03-20T18:59:30Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/27178",
-      "labels": [
-        "bug",
-        "torch.compile",
-        "stale"
       ]
     },
     {
@@ -96,19 +285,6 @@
       "updated_at": "2026-03-20T17:56:23Z",
       "html_url": "https://github.com/vllm-project/vllm/issues/29525",
       "labels": [
-        "ci-failure"
-      ]
-    },
-    {
-      "number": 37710,
-      "title": "[CI Failure]:  mi355_1: Entrypoints Integration (API Server 1)",
-      "author": "AndreasKaratzas",
-      "state": "open",
-      "created_at": "2026-03-20T17:50:55Z",
-      "updated_at": "2026-03-20T17:54:14Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/37710",
-      "labels": [
-        "rocm",
         "ci-failure"
       ]
     },
@@ -223,19 +399,6 @@
       "html_url": "https://github.com/vllm-project/vllm/issues/36811",
       "labels": [
         "bug"
-      ]
-    },
-    {
-      "number": 36796,
-      "title": "[Bug]: CPU offload errors on nightly with NVIDIA GH200 Unified Memory (UMA)",
-      "author": "ehfd",
-      "state": "open",
-      "created_at": "2026-03-11T14:53:36Z",
-      "updated_at": "2026-03-20T14:16:26Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/36796",
-      "labels": [
-        "bug",
-        "torch.compile"
       ]
     },
     {
@@ -371,18 +534,6 @@
       ]
     },
     {
-      "number": 37392,
-      "title": "[Bug]:\u63a8\u7406\u65f6\u62a5\u9519\uff0c\u6a21\u578b\u5173\u95ed\u4e86\u3002\u90e8\u7f72\u7684Qwen3.5-122B-A10B-FP8\u6a21\u578b",
-      "author": "watch-Ultra",
-      "state": "open",
-      "created_at": "2026-03-18T06:43:33Z",
-      "updated_at": "2026-03-20T10:12:14Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/37392",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
       "number": 37365,
       "title": "[Bug]: gdn prefill kernel errors",
       "author": "ZTurboX",
@@ -434,19 +585,6 @@
       ]
     },
     {
-      "number": 23992,
-      "title": "[Bug]: vLLM Deployment of Qwen3-8B Model Streaming Output Tool Content Missing Issue",
-      "author": "TBice123123",
-      "state": "open",
-      "created_at": "2025-08-30T14:57:55Z",
-      "updated_at": "2026-03-20T02:21:13Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/23992",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
       "number": 25523,
       "title": "[Bug]: MAGMA and LAPACK support for pytorch missing for rocm/vllm images",
       "author": "SAtacker",
@@ -459,30 +597,6 @@
         "feature request",
         "rocm",
         "stale"
-      ]
-    },
-    {
-      "number": 36906,
-      "title": "[Bug]: EAGLE3 speculative decoding + multimodal crash under high concurrency",
-      "author": "staghado",
-      "state": "open",
-      "created_at": "2026-03-12T17:30:08Z",
-      "updated_at": "2026-03-20T01:57:05Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/36906",
-      "labels": [
-        "bug"
-      ]
-    },
-    {
-      "number": 34210,
-      "title": "[Bug]: Enable DBO on Qwen3-VL-235B-A22B raise TypeError: 'NoneType' object is not subscriptable",
-      "author": "Ethan-yt",
-      "state": "open",
-      "created_at": "2026-02-10T06:49:17Z",
-      "updated_at": "2026-03-19T21:21:33Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/34210",
-      "labels": [
-        "bug"
       ]
     },
     {
@@ -573,70 +687,6 @@
       "labels": [
         "bug",
         "stale"
-      ]
-    },
-    {
-      "number": 29053,
-      "title": "[Feature]: AMD radeon 8060s rocm7.1 torch== 2.10.0.dev20251113+rocm7.1",
-      "author": "gqyalh",
-      "state": "open",
-      "created_at": "2025-11-20T01:42:39Z",
-      "updated_at": "2026-03-19T03:07:12Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/29053",
-      "labels": [
-        "feature request",
-        "rocm",
-        "stale"
-      ]
-    },
-    {
-      "number": 30387,
-      "title": "[Bug]: illegal memory access countered when using kv-cache-type=fp8  loading  a weight-fp8 model for evaltest  in flash-attn backend",
-      "author": "youngze0016",
-      "state": "open",
-      "created_at": "2025-12-10T11:43:05Z",
-      "updated_at": "2026-03-19T03:06:16Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/30387",
-      "labels": [
-        "bug",
-        "stale"
-      ]
-    },
-    {
-      "number": 30930,
-      "title": "[Draft] [RFC]: vLLM + UCC Backend",
-      "author": "lengrongfu",
-      "state": "open",
-      "created_at": "2025-12-18T05:45:47Z",
-      "updated_at": "2026-03-19T03:05:32Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/30930",
-      "labels": [
-        "RFC",
-        "stale"
-      ]
-    },
-    {
-      "number": 37472,
-      "title": "[Bug] V1 engine hangs on encoder cache profiling on AMD gfx1151 (MIOpen missing solver DB)",
-      "author": "3spky5u-oss",
-      "state": "open",
-      "created_at": "2026-03-18T19:28:22Z",
-      "updated_at": "2026-03-18T19:29:18Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/37472",
-      "labels": [
-        "rocm"
-      ]
-    },
-    {
-      "number": 32455,
-      "title": "[Roadmap] vLLM Roadmap Q1 2026",
-      "author": "simon-mo",
-      "state": "open",
-      "created_at": "2026-01-16T04:23:29Z",
-      "updated_at": "2026-03-18T13:40:45Z",
-      "html_url": "https://github.com/vllm-project/vllm/issues/32455",
-      "labels": [
-        "rocm"
       ]
     }
   ]

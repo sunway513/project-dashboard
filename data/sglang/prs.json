@@ -1,6 +1,162 @@
 {
-  "collected_at": "2026-03-20T22:05:41Z",
+  "collected_at": "2026-03-21T08:07:32Z",
   "prs": [
+    {
+      "number": 20352,
+      "title": "[Diffusion][NPU] Add support for Hunyuan3D",
+      "author": "e-martirosian",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-11T09:46:27Z",
+      "updated_at": "2026-03-21T07:22:24Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20352",
+      "labels": [
+        "run-ci",
+        "diffusion"
+      ],
+      "draft": false
+    },
+    {
+      "number": 14105,
+      "title": "[LoRA][III] Add LoRA support for MoE layers",
+      "author": "Jonahcb",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-11-28T15:49:54Z",
+      "updated_at": "2026-03-21T07:21:12Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/14105",
+      "labels": [
+        "lora",
+        "sgl-kernel",
+        "run-ci",
+        "jit-kernel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20962,
+      "title": "[Diffusion] Fix torch.compile RMSNorm fallback for Z-Image",
+      "author": "BBuf",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T01:35:42Z",
+      "updated_at": "2026-03-21T06:50:11Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20962",
+      "labels": [
+        "documentation",
+        "run-ci",
+        "diffusion",
+        "jit-kernel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 21076,
+      "title": "Fix /rerun-stage dispatch failure for non-AMD stages",
+      "author": "alisonshao",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-21T05:45:42Z",
+      "updated_at": "2026-03-21T06:48:31Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/21076",
+      "labels": [
+        "bypass-maintenance"
+      ],
+      "draft": false
+    },
+    {
+      "number": 21020,
+      "title": "[AMD] Improve openai/gpt-oss performance",
+      "author": "kkHuang-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T11:47:06Z",
+      "updated_at": "2026-03-21T06:16:48Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/21020",
+      "labels": [
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20999,
+      "title": "Replace clamp_position with JIT kernel + platform dispatch",
+      "author": "merrymercy",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T09:04:27Z",
+      "updated_at": "2026-03-21T04:38:36Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20999",
+      "labels": [
+        "documentation",
+        "run-ci",
+        "jit-kernel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 21067,
+      "title": "Revert \"[AMD] Add MoE weights and scales padding\"",
+      "author": "alisonshao",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-21T03:25:02Z",
+      "updated_at": "2026-03-21T03:26:19Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/21067",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 21002,
+      "title": "ci: unit test for `srt/observability` module",
+      "author": "jiabinwa",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T09:14:56Z",
+      "updated_at": "2026-03-21T03:03:09Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/21002",
+      "labels": [
+        "run-ci"
+      ],
+      "draft": false
+    },
+    {
+      "number": 19777,
+      "title": "[AMD] Feat/aiter ck gemm server argument",
+      "author": "akash-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-03T12:13:35Z",
+      "updated_at": "2026-03-21T02:18:05Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/19777",
+      "labels": [
+        "documentation",
+        "quant",
+        "amd",
+        "dependencies",
+        "deepseek",
+        "npu",
+        "run-ci",
+        "diffusion",
+        "model-gateway"
+      ],
+      "draft": false
+    },
+    {
+      "number": 20863,
+      "title": "[Diffusion] Add mixed-resolution benchmark support (for #20762)",
+      "author": "fengyuanyu1",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T13:45:15Z",
+      "updated_at": "2026-03-21T01:09:37Z",
+      "html_url": "https://github.com/sgl-project/sglang/pull/20863",
+      "labels": [
+        "run-ci",
+        "diffusion"
+      ],
+      "draft": false
+    },
     {
       "number": 18684,
       "title": "[AMD] Add MoE weights and scales padding",
@@ -27,23 +183,6 @@
       "labels": [
         "amd",
         "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 14105,
-      "title": "[LoRA][III] Add LoRA support for MoE layers",
-      "author": "Jonahcb",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-11-28T15:49:54Z",
-      "updated_at": "2026-03-20T19:39:54Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/14105",
-      "labels": [
-        "lora",
-        "sgl-kernel",
-        "run-ci",
-        "jit-kernel"
       ],
       "draft": false
     },
@@ -78,47 +217,18 @@
       "draft": false
     },
     {
-      "number": 21020,
-      "title": "[AMD] Improve openai/gpt-oss performance",
-      "author": "kkHuang-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T11:47:06Z",
-      "updated_at": "2026-03-20T17:42:09Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/21020",
-      "labels": [
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 20242,
       "title": "[AMD] Add aiter backend for GemmaRMSNorm, causal_conv1d and topk_softmax",
       "author": "zhentaocc",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-10T06:08:51Z",
+      "created_at": "2026-03-10T06:08:52Z",
       "updated_at": "2026-03-20T17:31:01Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/20242",
       "labels": [
         "amd",
         "aiter",
         "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20863,
-      "title": "[Diffusion] Add mixed-resolution benchmark support (for #20762)",
-      "author": "fengyuanyu1",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-18T13:45:15Z",
-      "updated_at": "2026-03-20T16:07:54Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20863",
-      "labels": [
-        "run-ci",
-        "diffusion"
       ],
       "draft": false
     },
@@ -135,21 +245,6 @@
         "documentation"
       ],
       "draft": true
-    },
-    {
-      "number": 20352,
-      "title": "[Diffusion][NPU] Add support for Hunyuan3D",
-      "author": "e-martirosian",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-11T09:46:27Z",
-      "updated_at": "2026-03-20T15:16:26Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20352",
-      "labels": [
-        "run-ci",
-        "diffusion"
-      ],
-      "draft": false
     },
     {
       "number": 21034,
@@ -179,22 +274,6 @@
       "draft": false
     },
     {
-      "number": 20999,
-      "title": "Replace clamp_position with JIT kernel + platform dispatch",
-      "author": "merrymercy",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T09:04:27Z",
-      "updated_at": "2026-03-20T12:09:11Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20999",
-      "labels": [
-        "documentation",
-        "run-ci",
-        "jit-kernel"
-      ],
-      "draft": false
-    },
-    {
       "number": 19880,
       "title": "[JIT Kernel][Feature] Support JIT custom all reduce (rewrite as v2)",
       "author": "DarkSharpness",
@@ -206,28 +285,6 @@
       "labels": [
         "run-ci",
         "jit-kernel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 19777,
-      "title": "[AMD] Feat/aiter ck gemm server argument",
-      "author": "akash-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T12:13:35Z",
-      "updated_at": "2026-03-20T10:22:44Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/19777",
-      "labels": [
-        "documentation",
-        "quant",
-        "amd",
-        "dependencies",
-        "deepseek",
-        "npu",
-        "run-ci",
-        "diffusion",
-        "model-gateway"
       ],
       "draft": false
     },
@@ -290,23 +347,6 @@
       "labels": [
         "run-ci",
         "diffusion"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20962,
-      "title": "[Diffusion] Fix torch.compile RMSNorm fallback for Z-Image",
-      "author": "BBuf",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T01:35:42Z",
-      "updated_at": "2026-03-20T08:56:37Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20962",
-      "labels": [
-        "documentation",
-        "run-ci",
-        "diffusion",
-        "jit-kernel"
       ],
       "draft": false
     },
@@ -1171,22 +1211,6 @@
       "draft": false
     },
     {
-      "number": 20647,
-      "title": "[AMD][MORI] Fix MTP crash with FP4/FP8 dispatch and add NEXTN dispatch env vars.",
-      "author": "Duyi-Wang",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-16T00:54:47Z",
-      "updated_at": "2026-03-17T08:13:42Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20647",
-      "labels": [
-        "documentation",
-        "deepseek",
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
       "number": 16809,
       "title": "[Feature] Add host process profiling support",
       "author": "zhyajie",
@@ -1196,21 +1220,6 @@
       "updated_at": "2026-03-17T07:02:02Z",
       "html_url": "https://github.com/sgl-project/sglang/pull/16809",
       "labels": [
-        "run-ci"
-      ],
-      "draft": false
-    },
-    {
-      "number": 20521,
-      "title": "[AMD] Fix AMD CI : stage-c-large-8-gpu-amd-mi35x",
-      "author": "yctseng0211",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-13T09:48:58Z",
-      "updated_at": "2026-03-17T06:53:35Z",
-      "html_url": "https://github.com/sgl-project/sglang/pull/20521",
-      "labels": [
-        "amd",
         "run-ci"
       ],
       "draft": false

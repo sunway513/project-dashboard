@@ -1,15 +1,51 @@
 {
-  "collected_at": "2026-03-20T22:06:01Z",
+  "collected_at": "2026-03-21T08:07:49Z",
   "prs": [
     {
-      "number": 2404,
-      "title": "Introduce asm 64x256 kernels for mi300",
-      "author": "JohnNikolay84",
+      "number": 2340,
+      "title": "feat: add INT8/INT4 quantization support for 2-stage ASM MoE kernels",
+      "author": "amd-zfyu",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-20T21:53:00Z",
-      "updated_at": "2026-03-20T22:05:30Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2404",
+      "created_at": "2026-03-19T02:33:48Z",
+      "updated_at": "2026-03-21T07:52:21Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2340",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2401,
+      "title": "Fix kernel map collision on MGPU context",
+      "author": "Micky774",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T17:29:07Z",
+      "updated_at": "2026-03-21T04:59:36Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2401",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2382,
+      "title": "[FEAT] exclude torch.h in a8w8 cu files",
+      "author": "junxiaguo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T08:40:25Z",
+      "updated_at": "2026-03-21T02:11:05Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2382",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2225,
+      "title": "Fix error checking in aiter_hip_common.h",
+      "author": "draganmladjenovic",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-09T17:57:19Z",
+      "updated_at": "2026-03-20T22:32:27Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2225",
       "labels": [],
       "draft": false
     },
@@ -63,18 +99,6 @@
         "triton",
         "ci:all"
       ],
-      "draft": false
-    },
-    {
-      "number": 2401,
-      "title": "Fix kernel map collision on MGPU context",
-      "author": "Micky774",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T17:29:07Z",
-      "updated_at": "2026-03-20T17:34:23Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2401",
-      "labels": [],
       "draft": false
     },
     {
@@ -134,18 +158,6 @@
       "created_at": "2026-03-20T14:52:19Z",
       "updated_at": "2026-03-20T14:53:11Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2397",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2225,
-      "title": "Fix error checking in aiter_hip_common.h",
-      "author": "draganmladjenovic",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-09T17:57:19Z",
-      "updated_at": "2026-03-20T14:52:48Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2225",
       "labels": [],
       "draft": false
     },
@@ -256,18 +268,6 @@
       "created_at": "2026-03-20T11:45:57Z",
       "updated_at": "2026-03-20T13:04:38Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2395",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2382,
-      "title": "[FEAT] exclude torch.h in a8w8 cu files",
-      "author": "junxiaguo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T08:40:25Z",
-      "updated_at": "2026-03-20T12:50:29Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2382",
       "labels": [],
       "draft": false
     },
@@ -536,18 +536,6 @@
       "draft": false
     },
     {
-      "number": 2302,
-      "title": "Improve batch prefill test coverage",
-      "author": "poyenc",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-16T15:51:29Z",
-      "updated_at": "2026-03-20T03:00:40Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2302",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2319,
       "title": "mla nps fp8 mode get_meta_param avoid  kv_tail_len < max_seqlen_q and fix nhead=128 reduce mgc",
       "author": "minmengdie",
@@ -766,18 +754,6 @@
       "html_url": "https://github.com/ROCm/aiter/pull/2344",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 2340,
-      "title": "feat: add INT8/INT4 quantization support for 2-stage ASM MoE kernels",
-      "author": "amd-zfyu",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T02:33:48Z",
-      "updated_at": "2026-03-19T02:33:49Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2340",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 2338,
@@ -2236,6 +2212,30 @@
       "draft": false
     },
     {
+      "number": 2404,
+      "title": "Introduce asm 64x256 kernels for mi300",
+      "author": "JohnNikolay84",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T21:53:00Z",
+      "updated_at": "2026-03-21T00:05:32Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2404",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2302,
+      "title": "Improve batch prefill test coverage",
+      "author": "poyenc",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-16T15:51:29Z",
+      "updated_at": "2026-03-20T23:14:49Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2302",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 2199,
       "title": "Enhance fused_qk_norm_rope_cache_quant functions by adding rotary_dim",
       "author": "zhentaocc",
@@ -2713,30 +2713,6 @@
       "created_at": "2026-03-16T05:22:50Z",
       "updated_at": "2026-03-16T11:12:00Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2288",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2085,
-      "title": "pa_decode_gluon_aot C++ api",
-      "author": "amd-yilizhao",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-24T03:55:40Z",
-      "updated_at": "2026-03-16T09:45:03Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2085",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2291,
-      "title": "CI: Use pinned CK on main branch and add nightly schedule for latest CK",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-16T08:48:13Z",
-      "updated_at": "2026-03-16T08:53:29Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2291",
       "labels": [],
       "draft": false
     }

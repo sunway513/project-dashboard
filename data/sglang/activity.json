@@ -1,30 +1,30 @@
 {
-  "collected_at": "2026-03-20T22:06:30Z",
+  "collected_at": "2026-03-21T08:08:20Z",
   "project": "sglang",
   "repo": "sgl-project/sglang",
   "pr_velocity": {
     "this_week": {
-      "opened": 38,
-      "merged": 40,
+      "opened": 39,
+      "merged": 41,
       "closed": 0
     },
     "last_week": {
-      "opened": 34,
-      "merged": 21,
+      "opened": 33,
+      "merged": 20,
       "closed": 0
     },
-    "median_time_to_merge_hours": 98.7,
-    "merge_count": 73,
+    "median_time_to_merge_hours": 95.8,
+    "merge_count": 74,
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 63,
-    "total_contributors": 76,
+    "active_this_week": 65,
+    "total_contributors": 78,
     "top_contributors": [
       {
         "author": "yctseng0211",
-        "prs_submitted": 11,
-        "prs_merged": 9,
+        "prs_submitted": 10,
+        "prs_merged": 8,
         "commits": 0
       },
       {
@@ -36,7 +36,7 @@
       {
         "author": "kkHuang-amd",
         "prs_submitted": 5,
-        "prs_merged": 4,
+        "prs_merged": 5,
         "commits": 0
       },
       {
@@ -76,7 +76,7 @@
         "commits": 0
       },
       {
-        "author": "xingsy97",
+        "author": "merrymercy",
         "prs_submitted": 3,
         "prs_merged": 2,
         "commits": 0
@@ -87,41 +87,41 @@
   "issue_health": {
     "total_open": 2,
     "opened_this_week": 0,
-    "closed_this_week": 99,
+    "closed_this_week": 103,
     "unanswered": 1
   },
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 3,
-      "failed": 14,
-      "success_rate": 15.0
-    },
-    "cuda": {
-      "total_runs": 20,
       "succeeded": 2,
       "failed": 15,
       "success_rate": 10.0
+    },
+    "cuda": {
+      "total_runs": 20,
+      "succeeded": 0,
+      "failed": 13,
+      "success_rate": 0.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 332.6,
+      "median_minutes": 438.1,
       "p90_minutes": 1514.7,
       "min_minutes": 16.2,
       "max_minutes": 1799.9
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 0.5,
-      "p90_minutes": 24.1,
-      "min_minutes": 0.3,
-      "max_minutes": 27.3
+      "median_minutes": 0.3,
+      "p90_minutes": 25.1,
+      "min_minutes": 0.2,
+      "max_minutes": 55.0
     }
   },
   "release_cadence": {
-    "days_since_last": 24.9,
+    "days_since_last": 25.3,
     "avg_interval_days": 15.3,
     "total_releases": 5,
     "latest_tag": "v0.5.9"

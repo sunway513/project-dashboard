@@ -1,6 +1,129 @@
 {
-  "collected_at": "2026-03-20T22:05:11Z",
+  "collected_at": "2026-03-21T08:07:10Z",
   "issues": [
+    {
+      "number": 178044,
+      "title": "`torch/csrc/jit/python/init.cpp` fails to compile with Apple Clang 17 due to inconsistent lambda return types",
+      "author": "pguyot",
+      "state": "open",
+      "created_at": "2026-03-21T08:01:23Z",
+      "updated_at": "2026-03-21T08:03:26Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178044",
+      "labels": [
+        "oncall: jit",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 178039,
+      "title": "`torch.compile` crashes with FakeTensor view stride error on valid model with `index_put_` scatter",
+      "author": "himi1008",
+      "state": "open",
+      "created_at": "2026-03-21T07:50:34Z",
+      "updated_at": "2026-03-21T07:53:08Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178039",
+      "labels": [
+        "triage review",
+        "module: viewing and reshaping",
+        "oncall: pt2",
+        "module: fakeTensor",
+        "topic: fuzzer",
+        "module: pt2-dispatcher",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 178038,
+      "title": "torch.dot crashes with SIGFPE (exit code 136) on RTX 5060 Ti (Blackwell, sm_120)",
+      "author": "Herxity",
+      "state": "open",
+      "created_at": "2026-03-21T06:07:42Z",
+      "updated_at": "2026-03-21T06:10:25Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178038",
+      "labels": [
+        "triage review",
+        "module: crash",
+        "module: cuda",
+        "module: cublas",
+        "has workaround",
+        "module: linear algebra",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 177482,
+      "title": "`scaled_dot_product_attention` docs describe incorrect `attn_mask` shape",
+      "author": "josh-gleason",
+      "state": "open",
+      "created_at": "2026-03-15T16:00:26Z",
+      "updated_at": "2026-03-21T04:16:23Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177482",
+      "labels": [
+        "module: docs",
+        "good first issue",
+        "triaged",
+        "small",
+        "module: sdpa",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 177422,
+      "title": "Release 2.11 validations checklist and cherry-picks",
+      "author": "atalman",
+      "state": "open",
+      "created_at": "2026-03-13T21:16:17Z",
+      "updated_at": "2026-03-21T03:09:17Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177422",
+      "labels": [
+        "triaged",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 152302,
+      "title": "NCCL out of memory error after updating to PyTorch 2.7",
+      "author": "Gabriel31173",
+      "state": "open",
+      "created_at": "2025-04-28T04:54:20Z",
+      "updated_at": "2026-03-21T02:43:04Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/152302",
+      "labels": [
+        "oncall: distributed",
+        "triaged",
+        "module: nccl",
+        "module: regression"
+      ]
+    },
+    {
+      "number": 177869,
+      "title": "[Memory Leak] torch.compile'd flex_attention_backward retains ~12GB stale tensors after first execution",
+      "author": "LucienXian",
+      "state": "open",
+      "created_at": "2026-03-19T16:50:34Z",
+      "updated_at": "2026-03-21T02:04:28Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177869",
+      "labels": [
+        "needs reproduction",
+        "module: memory usage",
+        "oncall: pt2",
+        "module: flex attention"
+      ]
+    },
+    {
+      "number": 150168,
+      "title": "[ROCm] PyTorch slow on TTS",
+      "author": "winstonma",
+      "state": "open",
+      "created_at": "2025-03-28T07:38:47Z",
+      "updated_at": "2026-03-20T23:44:05Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/150168",
+      "labels": [
+        "module: rocm",
+        "triaged",
+        "topic: performance"
+      ]
+    },
     {
       "number": 177261,
       "title": "\"ZeroTensors are immutable\" error while optimizing partial derivatives",
@@ -17,33 +140,6 @@
         "module: inductor",
         "bot-triaged",
         "bot-mislabeled"
-      ]
-    },
-    {
-      "number": 177422,
-      "title": "Release 2.11 validations checklist and cherry-picks",
-      "author": "atalman",
-      "state": "open",
-      "created_at": "2026-03-13T21:16:17Z",
-      "updated_at": "2026-03-20T22:03:10Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177422",
-      "labels": [
-        "triaged",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 177869,
-      "title": "[Memory Leak] torch.compile'd flex_attention_backward retains ~12GB stale tensors after first execution",
-      "author": "LucienXian",
-      "state": "open",
-      "created_at": "2026-03-19T16:50:34Z",
-      "updated_at": "2026-03-20T21:45:12Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177869",
-      "labels": [
-        "module: memory usage",
-        "oncall: pt2",
-        "module: flex attention"
       ]
     },
     {
@@ -91,21 +187,6 @@
         "module: dynamo",
         "dynamo-triage-dec2025",
         "bot-triaged"
-      ]
-    },
-    {
-      "number": 152302,
-      "title": "NCCL out of memory error after updating to PyTorch 2.7",
-      "author": "Gabriel31173",
-      "state": "open",
-      "created_at": "2025-04-28T04:54:20Z",
-      "updated_at": "2026-03-20T19:11:22Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/152302",
-      "labels": [
-        "oncall: distributed",
-        "triaged",
-        "module: nccl",
-        "module: regression"
       ]
     },
     {
@@ -201,20 +282,6 @@
         "module: sparse",
         "triaged",
         "enhancement",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 177945,
-      "title": "The CUTLASS CI has been failing for some time, blocking PRs landing",
-      "author": "etaf",
-      "state": "open",
-      "created_at": "2026-03-20T06:37:59Z",
-      "updated_at": "2026-03-20T06:44:19Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177945",
-      "labels": [
-        "triage review",
-        "module: ci",
         "bot-triaged"
       ]
     },
@@ -433,20 +500,6 @@
       ]
     },
     {
-      "number": 150168,
-      "title": "[ROCm] PyTorch slow on TTS",
-      "author": "winstonma",
-      "state": "open",
-      "created_at": "2025-03-28T07:38:47Z",
-      "updated_at": "2026-03-19T20:11:45Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/150168",
-      "labels": [
-        "module: rocm",
-        "triaged",
-        "topic: performance"
-      ]
-    },
-    {
       "number": 177599,
       "title": "arange CPU kernel has different precisions for scalar and vectorized executions",
       "author": "rsdcastro",
@@ -477,22 +530,6 @@
         "triaged",
         "enhancement",
         "module: floatx (formerly float8)"
-      ]
-    },
-    {
-      "number": 177842,
-      "title": "When using the cuDNN backend, custom masks become ineffective.",
-      "author": "Cherrling",
-      "state": "open",
-      "created_at": "2026-03-19T14:17:12Z",
-      "updated_at": "2026-03-19T16:22:19Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177842",
-      "labels": [
-        "triage review",
-        "module: cudnn",
-        "module: correctness (silent)",
-        "module: sdpa",
-        "bot-triaged"
       ]
     },
     {
@@ -575,43 +612,6 @@
         "matrix multiplication",
         "topic: fuzzer",
         "bot-triaged"
-      ]
-    },
-    {
-      "number": 176426,
-      "title": "Triton kernels with 2 or more tl.load() calls segfault at runtime on sm_120 (NVIDIA RTX PRO 6000 Blackwell). The kernels compile without errors but produce invalid code that crashes on execution.",
-      "author": "ultrmgns",
-      "state": "open",
-      "created_at": "2026-03-04T13:23:10Z",
-      "updated_at": "2026-03-18T17:05:19Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/176426",
-      "labels": [
-        "needs reproduction",
-        "module: crash",
-        "module: cuda",
-        "oncall: pt2",
-        "module: inductor",
-        "upstream triton",
-        "bot-triaged",
-        "PT2-Bug-Bash"
-      ]
-    },
-    {
-      "number": 167297,
-      "title": "DISABLED test_max_autotune_addmm_max_autotune_gemm_backends_ATen,Triton,CK_x_shape1 (__main__.TestCKBackend)",
-      "author": "pytorch-bot[bot]",
-      "state": "open",
-      "created_at": "2025-11-07T06:53:17Z",
-      "updated_at": "2026-03-18T13:37:08Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/167297",
-      "labels": [
-        "module: rocm",
-        "triaged",
-        "module: flaky-tests",
-        "skipped",
-        "oncall: pt2",
-        "module: inductor",
-        "rocm-skipped-tests"
       ]
     }
   ]

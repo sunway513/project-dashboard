@@ -1,14 +1,14 @@
 {
-  "collected_at": "2026-03-20T22:08:10Z",
+  "collected_at": "2026-03-21T08:09:58Z",
   "workflows": {
     "FlyDSL CI": {
       "workflow_id": 241508578,
       "latest_run": {
-        "id": 23327309137,
+        "id": 23370613206,
         "conclusion": "success",
-        "duration_minutes": 146.9,
-        "started_at": "2026-03-20T03:05:14Z",
-        "html_url": "https://github.com/ROCm/FlyDSL/actions/runs/23327309137"
+        "duration_minutes": 45.9,
+        "started_at": "2026-03-21T03:00:41Z",
+        "html_url": "https://github.com/ROCm/FlyDSL/actions/runs/23370613206"
       },
       "stats": {
         "sample_size": 12,
@@ -18,6 +18,12 @@
         "max_minutes": 309.4
       },
       "recent_runs": [
+        {
+          "id": 23370613206,
+          "conclusion": "success",
+          "duration_minutes": 45.9,
+          "date": "2026-03-21"
+        },
         {
           "id": 23327309137,
           "conclusion": "success",
@@ -131,17 +137,11 @@
           "conclusion": "success",
           "duration_minutes": 36.1,
           "date": "2026-03-09"
-        },
-        {
-          "id": 22812686010,
-          "conclusion": "success",
-          "duration_minutes": 37.8,
-          "date": "2026-03-08"
         }
       ],
       "bottleneck_job": {
         "name": "build / build",
-        "duration_minutes": 66.7
+        "duration_minutes": 22.3
       }
     }
   }

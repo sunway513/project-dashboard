@@ -1,23 +1,71 @@
 {
-  "collected_at": "2026-03-20T22:08:05Z",
+  "collected_at": "2026-03-21T08:09:53Z",
   "workflows": {
     "Aiter Test": {
       "workflow_id": 179476100,
       "latest_run": {
-        "id": 23360667138,
-        "conclusion": "cancelled",
-        "duration_minutes": 99.9,
-        "started_at": "2026-03-20T20:09:37Z",
-        "html_url": "https://github.com/ROCm/aiter/actions/runs/23360667138"
+        "id": 23369824078,
+        "conclusion": "failure",
+        "duration_minutes": 88.5,
+        "started_at": "2026-03-21T02:11:08Z",
+        "html_url": "https://github.com/ROCm/aiter/actions/runs/23369824078"
       },
       "stats": {
         "sample_size": 6,
-        "median_minutes": 130.5,
+        "median_minutes": 141.8,
         "p90_minutes": 234.1,
-        "min_minutes": 32.2,
+        "min_minutes": 89.3,
         "max_minutes": 234.1
       },
       "recent_runs": [
+        {
+          "id": 23369824078,
+          "conclusion": "failure",
+          "duration_minutes": 88.5,
+          "date": "2026-03-21"
+        },
+        {
+          "id": 23367475216,
+          "conclusion": "failure",
+          "duration_minutes": 157.3,
+          "date": "2026-03-21"
+        },
+        {
+          "id": 23366329832,
+          "conclusion": "cancelled",
+          "duration_minutes": 50.8,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23365244534,
+          "conclusion": "failure",
+          "duration_minutes": 128.4,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23364564059,
+          "conclusion": "cancelled",
+          "duration_minutes": 66.3,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23364094969,
+          "conclusion": "success",
+          "duration_minutes": 124.8,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23363971054,
+          "conclusion": "success",
+          "duration_minutes": 158.9,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23362495463,
+          "conclusion": "cancelled",
+          "duration_minutes": 64.6,
+          "date": "2026-03-20"
+        },
         {
           "id": 23360667138,
           "conclusion": "cancelled",
@@ -89,60 +137,12 @@
           "conclusion": "cancelled",
           "duration_minutes": 282.6,
           "date": "2026-03-20"
-        },
-        {
-          "id": 23352028982,
-          "conclusion": "failure",
-          "duration_minutes": 4.6,
-          "date": "2026-03-20"
-        },
-        {
-          "id": 23351464253,
-          "conclusion": "cancelled",
-          "duration_minutes": 14.8,
-          "date": "2026-03-20"
-        },
-        {
-          "id": 23350084683,
-          "conclusion": "failure",
-          "duration_minutes": 3.4,
-          "date": "2026-03-20"
-        },
-        {
-          "id": 23348402045,
-          "conclusion": "failure",
-          "duration_minutes": 3.7,
-          "date": "2026-03-20"
-        },
-        {
-          "id": 23348040034,
-          "conclusion": "failure",
-          "duration_minutes": 130.1,
-          "date": "2026-03-20"
-        },
-        {
-          "id": 23348003021,
-          "conclusion": "success",
-          "duration_minutes": 141.4,
-          "date": "2026-03-20"
-        },
-        {
-          "id": 23347781760,
-          "conclusion": "failure",
-          "duration_minutes": 2.6,
-          "date": "2026-03-20"
-        },
-        {
-          "id": 23347071474,
-          "conclusion": "success",
-          "duration_minutes": 32.2,
-          "date": "2026-03-20"
         }
       ],
       "target_minutes": 15,
       "bottleneck_job": {
         "name": "build_aiter_image",
-        "duration_minutes": 74.2
+        "duration_minutes": 62.9
       }
     }
   }

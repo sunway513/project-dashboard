@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-20T22:06:33Z",
+  "collected_at": "2026-03-21T08:08:23Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
@@ -9,7 +9,7 @@
       "closed": 0
     },
     "last_week": {
-      "opened": 1,
+      "opened": 0,
       "merged": 0,
       "closed": 0
     },
@@ -18,17 +18,11 @@
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 2,
-    "total_contributors": 2,
+    "active_this_week": 1,
+    "total_contributors": 1,
     "top_contributors": [
       {
-        "author": "magaonka-amd",
-        "prs_submitted": 2,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "mfrancepillois",
+        "author": "nurmukhametov",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -46,7 +40,7 @@
     "rocm": {
       "total_runs": 20,
       "succeeded": 0,
-      "failed": 0,
+      "failed": 5,
       "success_rate": 0.0
     },
     "cuda": {
@@ -59,17 +53,17 @@
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 24.6,
-      "p90_minutes": 82.4,
-      "min_minutes": 7.8,
-      "max_minutes": 84.4
+      "median_minutes": 43.2,
+      "p90_minutes": 169.0,
+      "min_minutes": 6.9,
+      "max_minutes": 173.2
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 13.5,
-      "p90_minutes": 25.5,
-      "min_minutes": 8.2,
-      "max_minutes": 27.6
+      "median_minutes": 9.5,
+      "p90_minutes": 11.1,
+      "min_minutes": 7.2,
+      "max_minutes": 20.0
     }
   },
   "release_cadence": {

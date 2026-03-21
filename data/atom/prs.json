@@ -1,18 +1,6 @@
 {
-  "collected_at": "2026-03-20T22:06:06Z",
+  "collected_at": "2026-03-21T08:07:54Z",
   "prs": [
-    {
-      "number": 274,
-      "title": "[QUARK-480] Phase 2: replace dict-style quant_config access with LayerQuantConfig",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-06T20:02:16Z",
-      "updated_at": "2026-03-20T16:17:00Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/274",
-      "labels": [],
-      "draft": false
-    },
     {
       "number": 352,
       "title": "[plugin][benchmark][dashboard] Enable performance dashboard for ATOM OOT mode",
@@ -20,10 +8,22 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-18T12:59:13Z",
-      "updated_at": "2026-03-20T14:26:54Z",
+      "updated_at": "2026-03-21T06:16:24Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/352",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 274,
+      "title": "[QUARK-480] Phase 2: replace dict-style quant_config access with LayerQuantConfig",
+      "author": "thpereir",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T20:02:16Z",
+      "updated_at": "2026-03-21T02:28:57Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/274",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 237,
@@ -98,18 +98,6 @@
       "draft": true
     },
     {
-      "number": 208,
-      "title": "[QUARK-401] Add support for Kimi-K2.5 models",
-      "author": "thpereir",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T00:05:43Z",
-      "updated_at": "2026-03-17T14:57:38Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/208",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 263,
       "title": "[OOT Plugin][Performance] Optimize metadata prepare",
       "author": "ganyi1996ppo",
@@ -134,18 +122,6 @@
       "draft": true
     },
     {
-      "number": 154,
-      "title": "[recipe] update qwen3 recipe",
-      "author": "gbyu-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-20T06:36:51Z",
-      "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/154",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 168,
       "title": "[POC][Deepseek] Engram support, model_runner hash compute overlap",
       "author": "ZhangLirong-amd",
@@ -156,6 +132,18 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/168",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 218,
+      "title": "Enable AllReduce+RMSNorm fusion for GPT-OSS model",
+      "author": "ChuanLi1101",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-15T10:01:28Z",
+      "updated_at": "2026-03-16T05:44:15Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/218",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 37,
@@ -194,14 +182,14 @@
       "draft": true
     },
     {
-      "number": 156,
-      "title": "Adding prefill decode markers to trace and enable shapes",
-      "author": "msiddaiah",
+      "number": 154,
+      "title": "[recipe] update qwen3 recipe",
+      "author": "gbyu-amd",
       "state": "open",
       "merged": false,
-      "created_at": "2026-01-20T17:13:35Z",
+      "created_at": "2026-01-20T06:36:51Z",
       "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/156",
+      "html_url": "https://github.com/ROCm/ATOM/pull/154",
       "labels": [],
       "draft": false
     },
@@ -278,18 +266,6 @@
       "draft": false
     },
     {
-      "number": 218,
-      "title": "Enable AllReduce+RMSNorm fusion for GPT-OSS model",
-      "author": "ChuanLi1101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-15T10:01:28Z",
-      "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/218",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 225,
       "title": "Add FlyDSL MOE backend and Triton fallback for FP8 MoE",
       "author": "sunway513",
@@ -300,6 +276,18 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/225",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 156,
+      "title": "Adding prefill decode markers to trace and enable shapes",
+      "author": "msiddaiah",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-20T17:13:35Z",
+      "updated_at": "2026-03-16T05:44:15Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/156",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 234,
@@ -454,6 +442,30 @@
       "created_at": "2026-03-11T23:30:57Z",
       "updated_at": "2026-03-16T05:44:14Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/309",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 371,
+      "title": "ci: refactor regression-rerun to matrix-by-model and fix trace race",
+      "author": "valarLip",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-21T00:43:52Z",
+      "updated_at": "2026-03-21T07:19:12Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/371",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 208,
+      "title": "[QUARK-401] Add support for Kimi-K2.5 models",
+      "author": "thpereir",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-12T00:05:43Z",
+      "updated_at": "2026-03-21T04:06:52Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/208",
       "labels": [],
       "draft": false
     },
@@ -1474,18 +1486,6 @@
       "created_at": "2026-03-02T16:41:07Z",
       "updated_at": "2026-03-03T11:29:20Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/254",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 248,
-      "title": "[Performance][Qwen3-Next] Fuse causal_conv1d and split_contiguous qkv",
-      "author": "ganyi1996ppo",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-01T06:10:20Z",
-      "updated_at": "2026-03-03T09:15:39Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/248",
       "labels": [],
       "draft": false
     }
