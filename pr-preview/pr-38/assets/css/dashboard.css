@@ -1323,6 +1323,46 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
   color: var(--text-muted);
 }
 
+/* Chart grid */
+.op-perf-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.op-chart-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.op-chart-card h3 {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.op-chart-full {
+  margin: 16px 0;
+}
+
+.op-chart-wrap {
+  position: relative;
+  height: 260px;
+}
+
+.op-chart-tall {
+  height: 380px;
+}
+
+.op-perf-chart-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
 /* Filters */
 .op-perf-filters {
   display: flex;
@@ -1335,7 +1375,7 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
   border-radius: 6px;
 }
 
-.op-perf-filter, .op-perf-metric-toggle {
+.op-perf-filter {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1343,7 +1383,7 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
   color: var(--text-muted);
 }
 
-.op-filter-select, .op-perf-metric {
+.op-filter-select, .op-chart-filter {
   background: var(--bg);
   color: var(--text);
   border: 1px solid var(--border);
@@ -1353,109 +1393,44 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
   cursor: pointer;
 }
 
-.op-filter-select:hover, .op-perf-metric:hover {
+.op-filter-select:hover, .op-chart-filter:hover {
   border-color: var(--accent-blue);
 }
 
-/* Heatmap groups */
-.hm-group {
-  margin: 16px 0;
+/* D3 Heatmap */
+.d3-heatmap-container {
+  overflow-x: auto;
+  margin: 12px 0;
+  padding: 8px 0;
+  position: relative;
 }
 
-.hm-group-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  padding: 6px 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 4px;
+.d3-heatmap-cell {
+  stroke: var(--bg);
+  stroke-width: 1;
+  cursor: pointer;
+  transition: opacity 0.15s;
 }
 
-.hm-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  table-layout: auto;
+.d3-heatmap-cell:hover {
+  stroke: var(--text);
+  stroke-width: 2;
+  opacity: 0.85;
 }
 
-.hm-table tr:hover {
-  background: var(--hover);
-}
-
-.hm-th-shape, .hm-th-gpu, .hm-th-ratio {
-  padding: 6px 10px;
-  text-align: right;
-  font-weight: 600;
-  border-bottom: 2px solid var(--border);
-  white-space: nowrap;
-}
-
-.hm-th-shape {
-  color: var(--text-muted);
-  width: 60px;
-}
-
-.hm-th-gpu {
-  min-width: 100px;
-}
-
-.op-badge-amd-bg {
-  background: rgba(31, 111, 235, 0.08);
-  color: #58a6ff;
-}
-
-.op-badge-nv-bg {
-  background: rgba(118, 185, 0, 0.08);
-  color: #7ee787;
-}
-
-.hm-th-ratio {
-  color: var(--text-muted);
-  width: 70px;
-}
-
-.hm-td-shape {
-  padding: 4px 10px;
-  text-align: right;
-  color: var(--text-muted);
-  font-family: "SFMono-Regular", Consolas, monospace;
+.d3-tooltip {
+  position: absolute;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
   font-size: 12px;
-  border-bottom: 1px solid var(--border);
-}
-
-.hm-cell {
-  padding: 4px 10px;
-  text-align: right;
-  font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 12px;
-  border-bottom: 1px solid var(--border);
-  transition: background 0.15s;
-}
-
-/* Heatmap colors */
-.hm-amd-win {
-  background: rgba(31, 111, 235, 0.25);
-  color: #79c0ff;
-}
-
-.hm-amd-slight {
-  background: rgba(31, 111, 235, 0.12);
-  color: #79c0ff;
-}
-
-.hm-nv-win {
-  background: rgba(118, 185, 0, 0.25);
-  color: #7ee787;
-}
-
-.hm-nv-slight {
-  background: rgba(118, 185, 0, 0.12);
-  color: #7ee787;
-}
-
-.hm-tie {
-  background: rgba(139, 148, 158, 0.08);
   color: var(--text);
+  pointer-events: none;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  line-height: 1.6;
+  max-width: 400px;
 }
 
 /* Notes */
@@ -1484,13 +1459,13 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
 }
 
 @media (max-width: 768px) {
+  .op-perf-charts-grid {
+    grid-template-columns: 1fr;
+  }
   .op-perf-filters {
     flex-direction: column;
   }
-  .hm-table {
-    font-size: 11px;
-  }
-  .hm-td-shape, .hm-cell {
-    padding: 3px 6px;
+  .op-chart-wrap {
+    height: 220px;
   }
 }
