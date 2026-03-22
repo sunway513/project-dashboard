@@ -43664,10 +43664,61 @@
           "nv_ms": 0.1762
         }
       ]
+    },
+    {
+      "id": "ep_communication",
+      "name": "EP Communication (Mori vs DeepEP)",
+      "results": [
+        {
+          "model": "DeepSeek-R1",
+          "op": "dispatch_fp8",
+          "label": "4096 tokens, high throughput",
+          "M": 4096,
+          "tp": 8,
+          "amd_bw": 345,
+          "nv_bw": 371
+        },
+        {
+          "model": "DeepSeek-R1",
+          "op": "dispatch_bf16",
+          "label": "4096 tokens, high throughput",
+          "M": 4096,
+          "tp": 8,
+          "amd_bw": 345,
+          "nv_bw": 506
+        },
+        {
+          "model": "DeepSeek-R1",
+          "op": "combine_bf16",
+          "label": "4096 tokens, high throughput",
+          "M": 4096,
+          "tp": 8,
+          "amd_bw": 420,
+          "nv_bw": 413
+        },
+        {
+          "model": "DeepSeek-R1",
+          "op": "dispatch_fp8_ll",
+          "label": "128 tokens, low latency (decode)",
+          "M": 128,
+          "tp": 8,
+          "amd_bw": 142,
+          "nv_bw": 95
+        },
+        {
+          "model": "DeepSeek-R1",
+          "op": "combine_bf16_ll",
+          "label": "128 tokens, low latency (decode)",
+          "M": 128,
+          "tp": 8,
+          "amd_bw": 276,
+          "nv_bw": 119
+        }
+      ]
     }
   ],
   "summary": {
-    "total_configs": 3392,
+    "total_configs": 3307,
     "operators": 8,
     "comparable": 3392,
     "geomean": 1.0629,
