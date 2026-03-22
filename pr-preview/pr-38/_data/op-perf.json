@@ -41843,34 +41843,44 @@
     "geomean_inference": 1.0775,
     "per_model": [
       {
-        "model": "Command-R-Plus",
-        "type": "Dense",
-        "geomean": 0.9753
-      },
-      {
         "model": "DeepSeek-R1",
         "type": "MoE",
         "geomean": 0.8971
       },
       {
-        "model": "GPT-OSS-120B",
+        "model": "Qwen3.5-397B",
         "type": "MoE",
-        "geomean": 1.2919
+        "geomean": 2.2641
       },
       {
-        "model": "Gemma2-27B",
-        "type": "Dense",
-        "geomean": 0.848
+        "model": "Qwen3-235B",
+        "type": "MoE",
+        "geomean": 1.3569
       },
       {
-        "model": "Gemma2-9B",
-        "type": "Dense",
-        "geomean": 0.7708
+        "model": "Llama4-Maverick",
+        "type": "MoE",
+        "geomean": 1.2715
+      },
+      {
+        "model": "Mixtral-8x7B",
+        "type": "MoE",
+        "geomean": 1.2891
+      },
+      {
+        "model": "Mixtral-8x22B",
+        "type": "MoE",
+        "geomean": 1.3488
       },
       {
         "model": "Kimi-K2.5",
         "type": "MoE",
         "geomean": 1.1338
+      },
+      {
+        "model": "GPT-OSS-120B",
+        "type": "MoE",
+        "geomean": 1.2919
       },
       {
         "model": "Llama3-405B",
@@ -41888,34 +41898,24 @@
         "geomean": 0.8176
       },
       {
-        "model": "Llama4-Maverick",
-        "type": "MoE",
-        "geomean": 1.2715
+        "model": "Gemma2-27B",
+        "type": "Dense",
+        "geomean": 0.848
+      },
+      {
+        "model": "Gemma2-9B",
+        "type": "Dense",
+        "geomean": 0.7708
+      },
+      {
+        "model": "Command-R-Plus",
+        "type": "Dense",
+        "geomean": 0.9753
       },
       {
         "model": "Mistral-7B",
         "type": "Dense",
         "geomean": 0.8106
-      },
-      {
-        "model": "Mixtral-8x22B",
-        "type": "MoE",
-        "geomean": 1.3488
-      },
-      {
-        "model": "Mixtral-8x7B",
-        "type": "MoE",
-        "geomean": 1.2891
-      },
-      {
-        "model": "Qwen3-235B",
-        "type": "MoE",
-        "geomean": 1.3569
-      },
-      {
-        "model": "Qwen3.5-397B",
-        "type": "MoE",
-        "geomean": 2.2641
       }
     ],
     "num_models": 15
