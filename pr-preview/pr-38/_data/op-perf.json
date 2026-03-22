@@ -43655,10 +43655,79 @@
           "nv_bw": 119
         }
       ]
+    },
+    {
+      "id": "custom_allreduce",
+      "name": "AITER Custom AllReduce + Fused Ops",
+      "results": [
+        {
+          "model": "AllReduce",
+          "op": "custom_ar_vs_rccl",
+          "label": "0.25MB",
+          "M": 0,
+          "tp": 8,
+          "amd_bw": 9.7,
+          "nv_bw": 8.7
+        },
+        {
+          "model": "AllReduce",
+          "op": "custom_ar_vs_rccl",
+          "label": "1MB",
+          "M": 0,
+          "tp": 8,
+          "amd_bw": 40.0,
+          "nv_bw": 41.6
+        },
+        {
+          "model": "AllReduce",
+          "op": "custom_ar_vs_rccl",
+          "label": "16MB",
+          "M": 0,
+          "tp": 8,
+          "amd_bw": 350.6,
+          "nv_bw": 349.2
+        },
+        {
+          "model": "AllReduce",
+          "op": "custom_ar_vs_rccl",
+          "label": "64MB",
+          "M": 0,
+          "tp": 8,
+          "amd_bw": 390.2,
+          "nv_bw": 390.1
+        },
+        {
+          "model": "DeepSeek-R1",
+          "op": "fused_ar_rmsnorm",
+          "label": "M=1 (decode)",
+          "M": 1,
+          "tp": 8,
+          "amd_bw": 34482.8,
+          "nv_bw": 18867.9
+        },
+        {
+          "model": "DeepSeek-R1",
+          "op": "fused_ar_rmsnorm",
+          "label": "M=256 (prefill)",
+          "M": 256,
+          "tp": 8,
+          "amd_bw": 26315.8,
+          "nv_bw": 10752.7
+        },
+        {
+          "model": "DeepSeek-R1",
+          "op": "fused_ar_rmsnorm",
+          "label": "M=4096 (prefill)",
+          "M": 4096,
+          "tp": 8,
+          "amd_bw": 2688.2,
+          "nv_bw": 2506.3
+        }
+      ]
     }
   ],
   "summary": {
-    "total_configs": 3307,
+    "total_configs": 3310,
     "operators": 8,
     "comparable": 3392,
     "geomean": 1.0629,
