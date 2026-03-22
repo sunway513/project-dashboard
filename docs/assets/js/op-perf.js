@@ -173,7 +173,7 @@ function renderOpPerf(data) {
   html += '<ul>';
   html += '<li><strong>GEMM</strong>: Both use vendor-optimized BLAS (hipBLASLt / cuBLAS) via torch.matmul and torch._scaled_mm.</li>';
   html += '<li><strong>Attention</strong>: Both use PyTorch SDPA (FlashAttention backend).</li>';
-  html += '<li><strong>Fused MoE</strong>: AMD uses AITER fused_moe (FP8 for production models). NV uses vLLM fused_experts (B300-tuned configs generated).</li>';
+  html += '<li><strong>Fused MoE</strong>: AMD uses AITER fused_moe (FP8 for production models). NV uses best-of vLLM/FlashInfer (BF16 only &mdash; <a href="METHODOLOGY.md#fp8-moe-availability-verified-2026-03-22" target="_blank">FP8 MoE not yet available on Blackwell</a>).</li>';
   html += '<li><strong>Precision</strong>: Each model benchmarked at its OpenRouter production precision (FP8, BF16, or INT4).</li>';
   html += '<li><strong>Reproducibility</strong>: Click any heatmap cell to copy the exact repro command. Run <code>python3 scripts/reproduce.py --generate-all</code> for full script.</li>';
   html += '</ul></div>';
