@@ -75,11 +75,13 @@ function renderOpPerf(data) {
   // Summary boxes
   var s = data.summary || {};
   var allStats = computeAllStats(data);
+  var geoStr = allStats.geomean > 0 ? allStats.geomean.toFixed(3) + 'x' : 'N/A';
   html += '<div class="oc-summary">';
   html += summaryBox(s.total_configs || 0, "Total Configs");
+  html += summaryBox(s.operators || 0, "Operators");
   html += summaryBox(allStats.amdWins, "AMD Wins");
   html += summaryBox(allStats.nvWins, "NV Wins");
-  html += summaryBox(allStats.matched, "Comparable");
+  html += summaryBox(geoStr, "GeoMean (AMD/NV)");
   html += '</div>';
 
   // Chart grid: win/loss bar + ratio line
@@ -127,14 +129,18 @@ function renderOpPerf(data) {
 
 // ─── Stats helpers ───
 function computeAllStats(data) {
-  var matched = 0, amdWins = 0, nvWins = 0;
+  var matched = 0, amdWins = 0, nvWins = 0, logSum = 0, logCount = 0;
   for (var c = 0; c < data.categories.length; c++) {
     var s = computeCatStats(data.categories[c].results);
     matched += s.matched;
     amdWins += s.amdWins;
     nvWins += s.nvWins;
+    for (var i = 0; i < s.ratios.length; i++) {
+      if (s.ratios[i] > 0) { logSum += Math.log(s.ratios[i]); logCount++; }
+    }
   }
-  return { matched: matched, amdWins: amdWins, nvWins: nvWins };
+  var geomean = logCount > 0 ? Math.exp(logSum / logCount) : 0;
+  return { matched: matched, amdWins: amdWins, nvWins: nvWins, geomean: geomean };
 }
 
 // Get AMD/NV performance values — works for both TFLOPS and bandwidth ops
@@ -158,7 +164,10 @@ function computeCatStats(results) {
     }
   }
   var avg = ratios.length > 0 ? ratios.reduce(function(a,b){return a+b;}, 0) / ratios.length : 0;
-  return { matched: matched, amdWins: amdWins, nvWins: nvWins, avg: avg, ratios: ratios };
+  var logSum = 0;
+  for (var j = 0; j < ratios.length; j++) { if (ratios[j] > 0) logSum += Math.log(ratios[j]); }
+  var geomean = ratios.length > 0 ? Math.exp(logSum / ratios.length) : 0;
+  return { matched: matched, amdWins: amdWins, nvWins: nvWins, avg: avg, geomean: geomean, ratios: ratios };
 }
 
 function summaryBox(num, label) {
@@ -440,7 +449,9 @@ function buildPerfCategory(cat, stats, gpus) {
   if (stats.matched > 0) {
     html += '<span class="oc-badge-amd">AMD: ' + stats.amdWins + '</span>';
     html += '<span class="oc-badge-nv">NV: ' + stats.nvWins + '</span>';
-    html += '<span class="op-badge-ratio">Avg: ' + stats.avg.toFixed(2) + 'x</span>';
+    html += '<span class="op-badge-ratio">GeoMean: ' + (stats.geomean > 0 ? stats.geomean.toFixed(2) + 'x' : 'N/A') + '</span>';
+  } else {
+    html += '<span class="op-badge-ratio">NV-only data (' + cat.results.length + ' configs)</span>';
   }
   html += '</span></summary>';
 
@@ -488,7 +499,7 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
   var tooltip = document.getElementById('tooltip-' + catId);
   if (!container) return;
 
-  // Filter results
+  // Filter results (include one-sided data)
   var results = cat.results.filter(function(r) {
     for (var f in filters) {
       if (filters[f] !== 'all' && String(r[f]) !== String(filters[f])) return false;
@@ -582,7 +593,10 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
       .attr('fill', function(col) {
         var r = rowData[col];
         var _hpv = r ? getPerfValues(r) : {amd:0, nv:0};
-        if (!r || _hpv.amd <= 0 || _hpv.nv <= 0) return '#21262d';
+        if (!r) return '#21262d';
+        if (_hpv.amd <= 0 && _hpv.nv <= 0) return '#21262d';
+        if (_hpv.amd <= 0) return 'rgba(118, 185, 0, 0.3)'; // NV only
+        if (_hpv.nv <= 0) return 'rgba(31, 111, 235, 0.3)'; // AMD only
         var logRatio = Math.log2(_hpv.amd / _hpv.nv);
         return colorScale(Math.max(-2, Math.min(2, logRatio)));
       })
@@ -590,13 +604,13 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
         var r = rowData[col];
         if (!r) return;
         var _tpv = getPerfValues(r);
-        var ratio = _tpv.nv > 0 ? (_tpv.amd / _tpv.nv).toFixed(2) : 'N/A';
+        var ratio = (_tpv.amd > 0 && _tpv.nv > 0) ? (_tpv.amd / _tpv.nv).toFixed(2) + 'x' : 'N/A';
         tooltip.style.display = 'block';
-        tooltip.innerHTML = '<strong>' + escapeHtml(rowKey) + '</strong><br>' +
-          'M=' + (r.M || r.batch || col) + '<br>' +
-          'AMD: <span style="color:#58a6ff">' + _tpv.amd.toFixed(1) + ' ' + _tpv.unit + '</span><br>' +
-          'NV: <span style="color:#7ee787">' + _tpv.nv.toFixed(1) + ' ' + _tpv.unit + '</span><br>' +
-          'Ratio: ' + ratio + 'x';
+        var ttHtml = '<strong>' + escapeHtml(rowKey) + '</strong><br>M=' + (r.M || r.batch || col) + '<br>';
+        if (_tpv.amd > 0) ttHtml += 'AMD: <span style="color:#58a6ff">' + _tpv.amd.toFixed(1) + ' ' + _tpv.unit + '</span><br>';
+        if (_tpv.nv > 0) ttHtml += 'NV: <span style="color:#7ee787">' + _tpv.nv.toFixed(1) + ' ' + _tpv.unit + '</span><br>';
+        if (_tpv.amd > 0 && _tpv.nv > 0) ttHtml += 'Ratio: ' + ratio;
+        tooltip.innerHTML = ttHtml;
         var rect = container.getBoundingClientRect();
         tooltip.style.left = (event.pageX - rect.left + 12) + 'px';
         tooltip.style.top = (event.pageY - rect.top - 60) + 'px';
@@ -617,7 +631,9 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
       .text(function(col) {
         var r = rowData[col];
         var _cpv = r ? getPerfValues(r) : {amd:0,nv:0};
-        if (!r || _cpv.amd <= 0 || _cpv.nv <= 0) return '—';
+        if (!r || (_cpv.amd <= 0 && _cpv.nv <= 0)) return '—';
+        if (_cpv.amd <= 0) return _cpv.nv.toFixed(0);
+        if (_cpv.nv <= 0) return _cpv.amd.toFixed(0);
         return (_cpv.amd / _cpv.nv).toFixed(2) + 'x';
       });
   });
