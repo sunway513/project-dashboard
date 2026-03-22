@@ -137,13 +137,21 @@ function computeAllStats(data) {
   return { matched: matched, amdWins: amdWins, nvWins: nvWins };
 }
 
+// Get AMD/NV performance values — works for both TFLOPS and bandwidth ops
+function getPerfValues(r) {
+  var amd = r.amd_tflops || r.amd_bw || 0;
+  var nv = r.nv_tflops || r.nv_bw || 0;
+  var unit = r.amd_tflops ? 'TFLOPS' : 'GB/s';
+  return { amd: amd, nv: nv, unit: unit };
+}
+
 function computeCatStats(results) {
   var matched = 0, amdWins = 0, nvWins = 0, ratios = [];
   for (var i = 0; i < results.length; i++) {
-    var r = results[i];
-    if (r.amd_tflops > 0 && r.nv_tflops > 0) {
+    var pv = getPerfValues(results[i]);
+    if (pv.amd > 0 && pv.nv > 0) {
       matched++;
-      var ratio = r.amd_tflops / r.nv_tflops;
+      var ratio = pv.amd / pv.nv;
       ratios.push(ratio);
       if (ratio > 1.05) amdWins++;
       else if (ratio < 0.95) nvWins++;
@@ -212,7 +220,8 @@ function renderRatioScalingChart(data, filterModel, filterTp) {
     var cat = data.categories[c];
     for (var i = 0; i < cat.results.length; i++) {
       var r = cat.results[i];
-      if (r.amd_tflops <= 0 || r.nv_tflops <= 0) continue;
+      var _pv = getPerfValues(r);
+      if (_pv.amd <= 0 || _pv.nv <= 0) continue;
       if (filterModel !== 'all' && r.model !== filterModel) continue;
       if (filterTp !== 'all' && String(r.tp) !== String(filterTp)) continue;
 
@@ -224,7 +233,7 @@ function renderRatioScalingChart(data, filterModel, filterTp) {
       if (!groups[opKey]) groups[opKey] = {};
       var M = r.M || r.batch || 0;
       if (!groups[opKey][M]) groups[opKey][M] = [];
-      groups[opKey][M].push(r.amd_tflops / r.nv_tflops);
+      groups[opKey][M].push(_pv.amd / _pv.nv);
     }
   }
 
@@ -322,10 +331,11 @@ function renderScatterChart(data) {
     var points = [];
     for (var i = 0; i < cat.results.length; i++) {
       var r = cat.results[i];
-      if (r.amd_tflops > 0.01 && r.nv_tflops > 0.01) {
+      var _spv = getPerfValues(r);
+      if (_spv.amd > 0.01 && _spv.nv > 0.01) {
         points.push({
-          x: r.nv_tflops,
-          y: r.amd_tflops,
+          x: _spv.nv,
+          y: _spv.amd,
           _model: r.model,
           _op: r.op || r.mode || '',
           _M: r.M || r.batch || 0,
@@ -483,7 +493,8 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
     for (var f in filters) {
       if (filters[f] !== 'all' && String(r[f]) !== String(filters[f])) return false;
     }
-    return r.amd_tflops > 0 || r.nv_tflops > 0;
+    var _fpv = getPerfValues(r);
+    return _fpv.amd > 0 || _fpv.nv > 0;
   });
 
   if (results.length === 0) {
@@ -570,19 +581,21 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
       .attr('rx', 3)
       .attr('fill', function(col) {
         var r = rowData[col];
-        if (!r || r.amd_tflops <= 0 || r.nv_tflops <= 0) return '#21262d';
-        var logRatio = Math.log2(r.amd_tflops / r.nv_tflops);
+        var _hpv = r ? getPerfValues(r) : {amd:0, nv:0};
+        if (!r || _hpv.amd <= 0 || _hpv.nv <= 0) return '#21262d';
+        var logRatio = Math.log2(_hpv.amd / _hpv.nv);
         return colorScale(Math.max(-2, Math.min(2, logRatio)));
       })
       .on('mouseover', function(event, col) {
         var r = rowData[col];
         if (!r) return;
-        var ratio = r.nv_tflops > 0 ? (r.amd_tflops / r.nv_tflops).toFixed(2) : 'N/A';
+        var _tpv = getPerfValues(r);
+        var ratio = _tpv.nv > 0 ? (_tpv.amd / _tpv.nv).toFixed(2) : 'N/A';
         tooltip.style.display = 'block';
         tooltip.innerHTML = '<strong>' + escapeHtml(rowKey) + '</strong><br>' +
           'M=' + (r.M || r.batch || col) + '<br>' +
-          'AMD: <span style="color:#58a6ff">' + r.amd_tflops.toFixed(1) + ' TFLOPS</span><br>' +
-          'NV: <span style="color:#7ee787">' + r.nv_tflops.toFixed(1) + ' TFLOPS</span><br>' +
+          'AMD: <span style="color:#58a6ff">' + _tpv.amd.toFixed(1) + ' ' + _tpv.unit + '</span><br>' +
+          'NV: <span style="color:#7ee787">' + _tpv.nv.toFixed(1) + ' ' + _tpv.unit + '</span><br>' +
           'Ratio: ' + ratio + 'x';
         var rect = container.getBoundingClientRect();
         tooltip.style.left = (event.pageX - rect.left + 12) + 'px';
@@ -603,8 +616,9 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
       .attr('pointer-events', 'none')
       .text(function(col) {
         var r = rowData[col];
-        if (!r || r.amd_tflops <= 0 || r.nv_tflops <= 0) return '—';
-        return (r.amd_tflops / r.nv_tflops).toFixed(2) + 'x';
+        var _cpv = r ? getPerfValues(r) : {amd:0,nv:0};
+        if (!r || _cpv.amd <= 0 || _cpv.nv <= 0) return '—';
+        return (_cpv.amd / _cpv.nv).toFixed(2) + 'x';
       });
   });
 }
