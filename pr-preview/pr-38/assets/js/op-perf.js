@@ -763,9 +763,12 @@ function buildModelCard(m, data) {
     }
   }
 
-  var tooltip = 'Inference-weighted GeoMean: ' + m.geomean.toFixed(3) + 'x\\n\\n' + breakdown;
-
-  var html = '<div class="op-model-card ' + cls + '" title="' + tooltip + '">';
+  var html = '<div class="op-model-card ' + cls + '">';
+  html += '<div class="op-model-tooltip">';
+  html += '<strong>' + escapeHtml(m.model) + '</strong><br>';
+  html += 'Inference-weighted GeoMean: ' + m.geomean.toFixed(3) + 'x<br><br>';
+  html += breakdown.replace(/\\n/g, '<br>');
+  html += '</div>';
   html += '<div class="op-model-name">' + escapeHtml(m.model) + '</div>';
   html += '<div class="op-model-type">' + escapeHtml(m.type) + '</div>';
   html += '<div class="op-model-geo">' + m.geomean.toFixed(3) + 'x</div>';

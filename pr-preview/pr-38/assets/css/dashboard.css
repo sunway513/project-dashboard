@@ -1457,6 +1457,41 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
 .op-model-nv .op-model-geo { color: #7ee787; }
 .op-model-tie .op-model-geo { color: var(--text); }
 
+.op-model-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.op-model-card:hover {
+  border-color: var(--link);
+}
+
+.op-model-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 11px;
+  color: var(--text);
+  white-space: pre-line;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  min-width: 220px;
+  pointer-events: none;
+  margin-bottom: 8px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  line-height: 1.6;
+}
+
+.op-model-card:hover .op-model-tooltip {
+  display: block;
+}
+
 /* D3 Heatmap */
 .d3-heatmap-container {
   overflow-x: auto;
