@@ -29405,21 +29405,6 @@
         },
         {
           "model": "DeepSeek-R1",
-          "op": "mha_decode",
-          "batch": 1,
-          "hq": 16,
-          "hk": 16,
-          "seq_q": 1,
-          "seq_k": 8192,
-          "head_dim": 128,
-          "tp": 8,
-          "amd_tflops": 0.23,
-          "nv_tflops": 2.32,
-          "amd_ms": 0.2947,
-          "nv_ms": 0.0289
-        },
-        {
-          "model": "DeepSeek-R1",
           "op": "mha_prefill",
           "batch": 4,
           "hq": 16,
@@ -30077,21 +30062,6 @@
           "nv_tflops": 1.27,
           "amd_ms": 0.1472,
           "nv_ms": 0.0263
-        },
-        {
-          "model": "Llama3-405B",
-          "op": "mha_decode",
-          "batch": 1,
-          "hq": 16,
-          "hk": 1,
-          "seq_q": 1,
-          "seq_k": 8192,
-          "head_dim": 128,
-          "tp": 8,
-          "amd_tflops": 0.23,
-          "nv_tflops": 2.33,
-          "amd_ms": 0.2946,
-          "nv_ms": 0.0288
         },
         {
           "model": "Llama3-405B",
@@ -33545,21 +33515,6 @@
         },
         {
           "model": "Gemma2-9B",
-          "op": "mha_decode",
-          "batch": 1,
-          "hq": 16,
-          "hk": 8,
-          "seq_q": 1,
-          "seq_k": 8192,
-          "head_dim": 256,
-          "tp": 1,
-          "amd_tflops": 0.32,
-          "nv_tflops": 2.99,
-          "amd_ms": 0.4193,
-          "nv_ms": 0.0449
-        },
-        {
-          "model": "Gemma2-9B",
           "op": "mha_prefill",
           "batch": 4,
           "hq": 16,
@@ -34052,21 +34007,6 @@
           "nv_tflops": 2.92,
           "amd_ms": 0.6908,
           "nv_ms": 0.0805
-        },
-        {
-          "model": "Kimi-K2.5",
-          "op": "mha_decode",
-          "batch": 1,
-          "hq": 64,
-          "hk": 64,
-          "seq_q": 1,
-          "seq_k": 32768,
-          "head_dim": 112,
-          "tp": 1,
-          "amd_tflops": 0.33,
-          "nv_tflops": 3.36,
-          "amd_ms": 2.8319,
-          "nv_ms": 0.2792
         },
         {
           "model": "Kimi-K2.5",

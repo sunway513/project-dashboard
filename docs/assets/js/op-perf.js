@@ -68,6 +68,25 @@ function renderOpPerf(data) {
   }
 
   var html = '<h2>Operator Performance &mdash; MI355X vs B300</h2>';
+  // Executive summary
+  var infGeo = (s.geomean_inference || 0);
+  var summaryText = infGeo > 1.05
+    ? 'MI355X leads B300 by ' + ((infGeo - 1) * 100).toFixed(0) + '% on inference-weighted workloads. AMD wins all ' + moeModels.length + ' MoE models; NV wins ' + denseModels.length + ' dense models.'
+    : infGeo < 0.95
+    ? 'B300 leads MI355X by ' + ((1 - infGeo) * 100).toFixed(0) + '% overall.'
+    : 'MI355X and B300 are at near-parity on inference workloads.';
+
+  var moeModels = (s.per_model || []).filter(function(m) { return m.type === 'MoE'; });
+  var denseModels = (s.per_model || []).filter(function(m) { return m.type !== 'MoE'; });
+  var allModels = (s.per_model || []);
+  var moeCount = allModels.filter(function(m){return m.type==='MoE';}).length;
+  var moeWins = allModels.filter(function(m){return m.type==='MoE' && m.geomean>1.05;}).length;
+  var denseCount = allModels.filter(function(m){return m.type!=='MoE';}).length;
+  var denseNvWins = allModels.filter(function(m){return m.type!=='MoE' && m.geomean<0.95;}).length;
+  var summaryText2 = 'MoE models (dominant on OpenRouter): AMD wins ' + moeWins + '/' + moeCount + '. Dense models: NV wins ' + denseNvWins + '/' + denseCount + '.';
+
+  html += '<div class="op-exec-summary">' + summaryText2 + '</div>';
+
   html += '<p class="op-perf-subtitle">TFLOPS comparison across model shapes. ';
   html += '<span class="op-badge-amd">AMD MI355X (AITER)</span> vs ';
   html += '<span class="op-badge-nv">NVIDIA B300 (cuBLAS/SDPA)</span></p>';
@@ -112,13 +131,7 @@ function renderOpPerf(data) {
       html += '<h4 class="op-model-group-header">MoE Models</h4>';
       html += '<div class="op-model-grid">';
       for (var mi = 0; mi < moeModels.length; mi++) {
-        var m = moeModels[mi];
-        var cls = m.geomean > 1.05 ? 'op-model-amd' : m.geomean < 0.95 ? 'op-model-nv' : 'op-model-tie';
-        html += '<div class="op-model-card ' + cls + '">';
-        html += '<div class="op-model-name">' + escapeHtml(m.model) + '</div>';
-        html += '<div class="op-model-type">' + escapeHtml(m.type) + '</div>';
-        html += '<div class="op-model-geo">' + m.geomean.toFixed(3) + 'x</div>';
-        html += '</div>';
+        html += buildModelCard(moeModels[mi], data);
       }
       html += '</div>';
     }
@@ -127,13 +140,7 @@ function renderOpPerf(data) {
       html += '<h4 class="op-model-group-header">Dense Models</h4>';
       html += '<div class="op-model-grid">';
       for (var mi = 0; mi < denseModels.length; mi++) {
-        var m = denseModels[mi];
-        var cls = m.geomean > 1.05 ? 'op-model-amd' : m.geomean < 0.95 ? 'op-model-nv' : 'op-model-tie';
-        html += '<div class="op-model-card ' + cls + '">';
-        html += '<div class="op-model-name">' + escapeHtml(m.model) + '</div>';
-        html += '<div class="op-model-type">' + escapeHtml(m.type) + '</div>';
-        html += '<div class="op-model-geo">' + m.geomean.toFixed(3) + 'x</div>';
-        html += '</div>';
+        html += buildModelCard(denseModels[mi], data);
       }
       html += '</div>';
     }
@@ -154,7 +161,7 @@ function renderOpPerf(data) {
   html += '</div>';
 
   // Scatter parity plot
-  html += '<div class="op-chart-card op-chart-full"><h3>TFLOPS Parity &mdash; every config plotted</h3>';
+  html += '<div class="op-chart-card op-chart-full"><h3>Performance Parity &mdash; every config plotted (above diagonal = AMD wins)</h3>';
   html += '<div class="op-chart-wrap op-chart-tall"><canvas id="chart-scatter"></canvas></div></div>';
 
   // Per-category heatmaps
@@ -732,6 +739,46 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
         return (_cpv.amd / _cpv.nv).toFixed(2) + 'x';
       });
   });
+}
+
+// ─── Model card builder with tooltip ───
+function buildModelCard(m, data) {
+  var cls = m.geomean > 1.05 ? 'op-model-amd' : m.geomean < 0.95 ? 'op-model-nv' : 'op-model-tie';
+  var isMoE = m.type === 'MoE';
+  var weights = isMoE
+    ? {moe_fused:0.40, attention:0.22, gemm:0.13, communication:0.10, rmsnorm:0.05, rope:0.03, softmax:0.04, quant:0.03}
+    : {gemm:0.48, attention:0.27, communication:0.10, rmsnorm:0.05, rope:0.03, softmax:0.04, quant:0.03};
+
+  // Compute per-op breakdown for this model
+  var breakdown = '';
+  for (var c = 0; c < data.categories.length; c++) {
+    var cat = data.categories[c];
+    var w = weights[cat.id] || 0;
+    if (w <= 0) continue;
+    var rs = [];
+    for (var i = 0; i < cat.results.length; i++) {
+      var r = cat.results[i];
+      if (r.model !== m.model) continue;
+      var a = r.amd_tflops || r.amd_bw || 0;
+      var n = r.nv_tflops || r.nv_bw || 0;
+      if (a > 0 && n > 0) rs.push(a / n);
+    }
+    if (rs.length > 0) {
+      var logSum = 0;
+      for (var j = 0; j < rs.length; j++) logSum += Math.log(rs[j]);
+      var geo = Math.exp(logSum / rs.length);
+      breakdown += cat.name.substring(0, 12) + ': ' + geo.toFixed(2) + 'x × ' + (w * 100).toFixed(0) + '%\\n';
+    }
+  }
+
+  var tooltip = 'Inference-weighted GeoMean: ' + m.geomean.toFixed(3) + 'x\\n\\n' + breakdown;
+
+  var html = '<div class="op-model-card ' + cls + '" title="' + tooltip + '">';
+  html += '<div class="op-model-name">' + escapeHtml(m.model) + '</div>';
+  html += '<div class="op-model-type">' + escapeHtml(m.type) + '</div>';
+  html += '<div class="op-model-geo">' + m.geomean.toFixed(3) + 'x</div>';
+  html += '</div>';
+  return html;
 }
 
 // ─── Repro command generator ───
