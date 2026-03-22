@@ -1291,3 +1291,206 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
   margin-top: 16px;
   text-align: right;
 }
+
+/* ── Op Performance Tab ───────────────────────────────── */
+
+.op-perf-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.op-badge-amd, .op-badge-nv, .op-badge-ratio {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.op-badge-amd {
+  background: rgba(31, 111, 235, 0.2);
+  color: #58a6ff;
+}
+
+.op-badge-nv {
+  background: rgba(118, 185, 0, 0.2);
+  color: #7ee787;
+}
+
+.op-badge-ratio {
+  background: rgba(139, 148, 158, 0.15);
+  color: var(--text-muted);
+}
+
+/* Filters */
+.op-perf-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0;
+  padding: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.op-perf-filter, .op-perf-metric-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.op-filter-select, .op-perf-metric {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.op-filter-select:hover, .op-perf-metric:hover {
+  border-color: var(--accent-blue);
+}
+
+/* Heatmap groups */
+.hm-group {
+  margin: 16px 0;
+}
+
+.hm-group-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+.hm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: auto;
+}
+
+.hm-table tr:hover {
+  background: var(--hover);
+}
+
+.hm-th-shape, .hm-th-gpu, .hm-th-ratio {
+  padding: 6px 10px;
+  text-align: right;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+.hm-th-shape {
+  color: var(--text-muted);
+  width: 60px;
+}
+
+.hm-th-gpu {
+  min-width: 100px;
+}
+
+.op-badge-amd-bg {
+  background: rgba(31, 111, 235, 0.08);
+  color: #58a6ff;
+}
+
+.op-badge-nv-bg {
+  background: rgba(118, 185, 0, 0.08);
+  color: #7ee787;
+}
+
+.hm-th-ratio {
+  color: var(--text-muted);
+  width: 70px;
+}
+
+.hm-td-shape {
+  padding: 4px 10px;
+  text-align: right;
+  color: var(--text-muted);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hm-cell {
+  padding: 4px 10px;
+  text-align: right;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+/* Heatmap colors */
+.hm-amd-win {
+  background: rgba(31, 111, 235, 0.25);
+  color: #79c0ff;
+}
+
+.hm-amd-slight {
+  background: rgba(31, 111, 235, 0.12);
+  color: #79c0ff;
+}
+
+.hm-nv-win {
+  background: rgba(118, 185, 0, 0.25);
+  color: #7ee787;
+}
+
+.hm-nv-slight {
+  background: rgba(118, 185, 0, 0.12);
+  color: #7ee787;
+}
+
+.hm-tie {
+  background: rgba(139, 148, 158, 0.08);
+  color: var(--text);
+}
+
+/* Notes */
+.op-perf-notes {
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.op-perf-notes h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.op-perf-notes ul {
+  padding-left: 20px;
+  color: var(--text-muted);
+}
+
+.op-perf-notes li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .op-perf-filters {
+    flex-direction: column;
+  }
+  .hm-table {
+    font-size: 11px;
+  }
+  .hm-td-shape, .hm-cell {
+    padding: 3px 6px;
+  }
+}

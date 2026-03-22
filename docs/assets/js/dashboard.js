@@ -32,6 +32,7 @@
   const historyIndex = fetchJSON("data/history/index.json");
   const parityHistPromise = fetchJSON("data/pytorch/parity_history.json");
   const opCoveragePromise = fetchJSON("_data/op-coverage.json");
+  const opPerfPromise = fetchJSON("_data/op-perf.json");
 
   await Promise.all(fetches);
   const histIdx = await historyIndex;
@@ -64,6 +65,7 @@
 
   const parityHistData = await parityHistPromise;
   const opCoverageData = await opCoveragePromise;
+  const opPerfData = await opPerfPromise;
 
   // Render all views
   renderWeeklySummary(dataMap);
@@ -72,6 +74,7 @@
   renderActivityView(projects.projects, dataMap);
   renderTrendsView(projects.projects, dataMap, historyData);
   renderOpCoverage(opCoverageData);
+  renderOpPerf(opPerfData);
   try {
     renderBuildsView(projects.projects, dataMap, historyData);
   } catch (e) {
