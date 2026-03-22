@@ -78,6 +78,7 @@ function renderOpPerf(data) {
 
   var moeModels = (s.per_model || []).filter(function(m) { return m.type === 'MoE'; });
   var denseModels = (s.per_model || []).filter(function(m) { return m.type !== 'MoE'; });
+  var s = data.summary || {};
   var allModels = (s.per_model || []);
   var moeCount = allModels.filter(function(m){return m.type==='MoE';}).length;
   var moeWins = allModels.filter(function(m){return m.type==='MoE' && m.geomean>1.05;}).length;
@@ -92,7 +93,6 @@ function renderOpPerf(data) {
   html += '<span class="op-badge-nv">NVIDIA B300 (cuBLAS/SDPA)</span></p>';
 
   // Summary boxes
-  var s = data.summary || {};
   var allStats = computeAllStats(data);
   var geoEqStr = allStats.geomean > 0 ? allStats.geomean.toFixed(3) + 'x' : 'N/A';
 
