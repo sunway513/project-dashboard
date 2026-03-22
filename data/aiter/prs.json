@@ -1,6 +1,106 @@
 {
-  "collected_at": "2026-03-21T08:07:49Z",
+  "collected_at": "2026-03-22T08:08:53Z",
   "prs": [
+    {
+      "number": 2374,
+      "title": "[Bugfix][gfx950] Force 1-stage MoE assembly kernels for FP8 blockscale",
+      "author": "maeehart",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T04:02:28Z",
+      "updated_at": "2026-03-22T07:42:49Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2374",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2411,
+      "title": "feat: CK-free shim + Triton MLA for MI450 (gfx1250)",
+      "author": "sunway513",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-22T05:15:38Z",
+      "updated_at": "2026-03-22T05:22:55Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2411",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2409,
+      "title": "Add gfx950 Triton GEMM tuning configs for DeepSeek-R1 shapes",
+      "author": "sunway513",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-22T04:11:46Z",
+      "updated_at": "2026-03-22T04:17:01Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2409",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2406,
+      "title": "Add operator performance benchmark CI workflow",
+      "author": "sunway513",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-22T02:24:27Z",
+      "updated_at": "2026-03-22T02:38:40Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2406",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2381,
+      "title": "[Bugfix] fix use after free issue in moe_sorting_fwd",
+      "author": "wangxunx",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T07:37:35Z",
+      "updated_at": "2026-03-22T01:54:44Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2381",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2262,
+      "title": "Introduce asm fmoe kernels that do not require bf16->fp8 quantization",
+      "author": "JohnNikolay84",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-12T15:02:32Z",
+      "updated_at": "2026-03-21T23:30:31Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2262",
+      "labels": [
+        "ci:sglang",
+        "ci:atom",
+        "ci:vllm"
+      ],
+      "draft": false
+    },
+    {
+      "number": 2038,
+      "title": "gfx1250 gluon initial gemm for a8w8 MoE blockscale kernel",
+      "author": "nsusanto",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-11T21:54:47Z",
+      "updated_at": "2026-03-21T22:10:44Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2038",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 2394,
+      "title": "[OPUS] enable gfx1250 support for OPUS tests",
+      "author": "carlushuang",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T10:58:11Z",
+      "updated_at": "2026-03-21T14:26:25Z",
+      "html_url": "https://github.com/ROCm/aiter/pull/2394",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 2340,
       "title": "feat: add INT8/INT4 quantization support for 2-stage ASM MoE kernels",
@@ -46,18 +146,6 @@
       "created_at": "2026-03-09T17:57:19Z",
       "updated_at": "2026-03-20T22:32:27Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2225",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2038,
-      "title": "gfx1250 gluon initial gemm for a8w8 MoE blockscale kernel",
-      "author": "nsusanto",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-11T21:54:47Z",
-      "updated_at": "2026-03-20T21:51:29Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2038",
       "labels": [],
       "draft": false
     },
@@ -284,18 +372,6 @@
       "draft": true
     },
     {
-      "number": 2394,
-      "title": "[OPUS] enable gfx1250 support for OPUS tests",
-      "author": "carlushuang",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T10:58:11Z",
-      "updated_at": "2026-03-20T10:58:50Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2394",
-      "labels": [],
-      "draft": true
-    },
-    {
       "number": 2392,
       "title": "update decode_update_mla_metadata_v1 for atom dp attention",
       "author": "junhaha666",
@@ -464,18 +540,6 @@
       "draft": false
     },
     {
-      "number": 2381,
-      "title": "[Bugfix] fix use after free issue in moe_sorting_fwd",
-      "author": "wangxunx",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T07:37:35Z",
-      "updated_at": "2026-03-20T08:29:12Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2381",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 2375,
       "title": "Add run_config and compare in tuner",
       "author": "yzhou103",
@@ -496,18 +560,6 @@
       "created_at": "2026-03-20T06:52:57Z",
       "updated_at": "2026-03-20T07:00:02Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2376",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2374,
-      "title": "[Bugfix][gfx950] Force 1-stage MoE assembly kernels for FP8 blockscale",
-      "author": "maeehart",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T04:02:28Z",
-      "updated_at": "2026-03-20T04:08:03Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2374",
       "labels": [],
       "draft": false
     },
@@ -789,22 +841,6 @@
       "updated_at": "2026-03-18T14:12:07Z",
       "html_url": "https://github.com/ROCm/aiter/pull/2228",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 2262,
-      "title": "Introduce asm fmoe kernels that do not require bf16->fp8 quantization",
-      "author": "JohnNikolay84",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-12T15:02:32Z",
-      "updated_at": "2026-03-18T11:23:04Z",
-      "html_url": "https://github.com/ROCm/aiter/pull/2262",
-      "labels": [
-        "ci:sglang",
-        "ci:atom",
-        "ci:vllm"
-      ],
       "draft": false
     },
     {

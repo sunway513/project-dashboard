@@ -1,12 +1,12 @@
 {
-  "collected_at": "2026-03-21T08:08:23Z",
+  "collected_at": "2026-03-22T08:09:29Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
-      "opened": 1,
+      "opened": 0,
       "merged": 0,
-      "closed": 0
+      "closed": 3
     },
     "last_week": {
       "opened": 0,
@@ -22,8 +22,8 @@
     "total_contributors": 1,
     "top_contributors": [
       {
-        "author": "nurmukhametov",
-        "prs_submitted": 1,
+        "author": "alekstheod",
+        "prs_submitted": 3,
         "prs_merged": 0,
         "commits": 0
       }
@@ -39,31 +39,31 @@
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 0,
-      "failed": 5,
-      "success_rate": 0.0
+      "succeeded": 18,
+      "failed": 2,
+      "success_rate": 90.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 0,
-      "failed": 19,
-      "success_rate": 0.0
+      "succeeded": 14,
+      "failed": 4,
+      "success_rate": 70.0
     }
   },
   "ci_signal_time": {
     "rocm": {
       "sample_size": 20,
-      "median_minutes": 43.2,
-      "p90_minutes": 169.0,
-      "min_minutes": 6.9,
-      "max_minutes": 173.2
+      "median_minutes": 2.6,
+      "p90_minutes": 16.0,
+      "min_minutes": 2.5,
+      "max_minutes": 18.3
     },
     "cuda": {
       "sample_size": 20,
-      "median_minutes": 9.5,
-      "p90_minutes": 11.1,
-      "min_minutes": 7.2,
-      "max_minutes": 20.0
+      "median_minutes": 9.4,
+      "p90_minutes": 10.2,
+      "min_minutes": 8.8,
+      "max_minutes": 18.1
     }
   },
   "release_cadence": {

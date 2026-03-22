@@ -1,17 +1,23 @@
 {
-  "collected_at": "2026-03-21T08:09:57Z",
+  "collected_at": "2026-03-22T08:10:59Z",
   "workflows": {
     "mori": {
       "workflow_id": 196573763,
       "latest_run": {
-        "id": 23334003412,
+        "id": 23339128522,
         "conclusion": "cancelled",
         "duration_minutes": 1440.0,
-        "started_at": "2026-03-20T07:56:33Z",
-        "html_url": "https://github.com/ROCm/mori/actions/runs/23334003412"
+        "started_at": "2026-03-20T10:36:57Z",
+        "html_url": "https://github.com/ROCm/mori/actions/runs/23339128522"
       },
       "stats": null,
       "recent_runs": [
+        {
+          "id": 23339128522,
+          "conclusion": "cancelled",
+          "duration_minutes": 1440.0,
+          "date": "2026-03-20"
+        },
         {
           "id": 23334003412,
           "conclusion": "cancelled",
@@ -125,18 +131,8 @@
           "conclusion": "cancelled",
           "duration_minutes": 1440.0,
           "date": "2026-03-19"
-        },
-        {
-          "id": 23242237282,
-          "conclusion": "cancelled",
-          "duration_minutes": 1440.0,
-          "date": "2026-03-18"
         }
-      ],
-      "bottleneck_job": {
-        "name": "mori build",
-        "duration_minutes": 1440.0
-      }
+      ]
     },
     "Build and Deploy Documentation": {
       "workflow_id": 243910332,

@@ -1,14 +1,14 @@
 {
-  "collected_at": "2026-03-21T08:09:49Z",
+  "collected_at": "2026-03-22T08:10:52Z",
   "workflows": {
     "Documentation": {
       "workflow_id": 11689091,
       "latest_run": {
-        "id": 23368471777,
+        "id": 23392609140,
         "conclusion": "cancelled",
-        "duration_minutes": 43.6,
-        "started_at": "2026-03-21T00:54:45Z",
-        "html_url": "https://github.com/triton-lang/triton/actions/runs/23368471777"
+        "duration_minutes": 30.1,
+        "started_at": "2026-03-22T01:01:16Z",
+        "html_url": "https://github.com/triton-lang/triton/actions/runs/23392609140"
       },
       "stats": {
         "sample_size": 11,
@@ -18,6 +18,12 @@
         "max_minutes": 53.0
       },
       "recent_runs": [
+        {
+          "id": 23392609140,
+          "conclusion": "cancelled",
+          "duration_minutes": 30.1,
+          "date": "2026-03-22"
+        },
         {
           "id": 23368471777,
           "conclusion": "cancelled",
@@ -131,27 +137,21 @@
           "conclusion": "success",
           "duration_minutes": 30.0,
           "date": "2026-03-03"
-        },
-        {
-          "id": 22557123884,
-          "conclusion": "cancelled",
-          "duration_minutes": 30.2,
-          "date": "2026-03-02"
         }
       ],
       "bottleneck_job": {
         "name": "Build-Documentation",
-        "duration_minutes": 30.2
+        "duration_minutes": 30.0
       }
     },
     "Wheels": {
       "workflow_id": 11689092,
       "latest_run": {
-        "id": 23334862313,
+        "id": 23375579805,
         "conclusion": "failure",
-        "duration_minutes": 2.7,
-        "started_at": "2026-03-20T08:25:57Z",
-        "html_url": "https://github.com/triton-lang/triton/actions/runs/23334862313"
+        "duration_minutes": 3.4,
+        "started_at": "2026-03-21T08:16:47Z",
+        "html_url": "https://github.com/triton-lang/triton/actions/runs/23375579805"
       },
       "stats": {
         "sample_size": 5,
@@ -161,6 +161,12 @@
         "max_minutes": 137.5
       },
       "recent_runs": [
+        {
+          "id": 23375579805,
+          "conclusion": "failure",
+          "duration_minutes": 3.4,
+          "date": "2026-03-21"
+        },
         {
           "id": 23334862313,
           "conclusion": "failure",
@@ -274,27 +280,21 @@
           "conclusion": "success",
           "duration_minutes": 128.4,
           "date": "2026-03-02"
-        },
-        {
-          "id": 22567616152,
-          "conclusion": "failure",
-          "duration_minutes": 126.7,
-          "date": "2026-03-02"
         }
       ],
       "bottleneck_job": {
         "name": "Build-Wheels (ubuntu-22.04-arm, aarch64)",
-        "duration_minutes": 2.6
+        "duration_minutes": 3.3
       }
     },
     "pages-build-deployment": {
       "workflow_id": 19403814,
       "latest_run": {
-        "id": 23325138097,
+        "id": 23393058737,
         "conclusion": "success",
-        "duration_minutes": 0.5,
-        "started_at": "2026-03-20T01:28:20Z",
-        "html_url": "https://github.com/triton-lang/triton/actions/runs/23325138097"
+        "duration_minutes": 0.4,
+        "started_at": "2026-03-22T01:31:18Z",
+        "html_url": "https://github.com/triton-lang/triton/actions/runs/23393058737"
       },
       "stats": {
         "sample_size": 20,
@@ -304,6 +304,12 @@
         "max_minutes": 0.8
       },
       "recent_runs": [
+        {
+          "id": 23393058737,
+          "conclusion": "success",
+          "duration_minutes": 0.4,
+          "date": "2026-03-22"
+        },
         {
           "id": 23325138097,
           "conclusion": "success",
@@ -417,17 +423,11 @@
           "conclusion": "success",
           "duration_minutes": 0.5,
           "date": "2026-02-13"
-        },
-        {
-          "id": 21929987060,
-          "conclusion": "success",
-          "duration_minutes": 0.4,
-          "date": "2026-02-12"
         }
       ],
       "bottleneck_job": {
-        "name": "deploy",
-        "duration_minutes": 0.2
+        "name": "build",
+        "duration_minutes": 0.1
       }
     }
   }

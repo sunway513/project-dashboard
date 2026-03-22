@@ -1,15 +1,27 @@
 {
-  "collected_at": "2026-03-21T08:07:59Z",
+  "collected_at": "2026-03-22T08:09:02Z",
   "prs": [
     {
-      "number": 228,
-      "title": "[Refactor] Extract static args elimination and DslTypes reconstruct to a separate pass",
-      "author": "sjfeng1999",
+      "number": 259,
+      "title": " preshuffled gemm iglp",
+      "author": "yadaish",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-17T08:34:04Z",
-      "updated_at": "2026-03-20T19:36:59Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/228",
+      "created_at": "2026-03-22T06:58:43Z",
+      "updated_at": "2026-03-22T06:58:43Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/259",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 257,
+      "title": "[Feature] Add JAX integration for FlyDSL kernels",
+      "author": "wenchenvincent",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-21T08:34:01Z",
+      "updated_at": "2026-03-22T05:46:17Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/257",
       "labels": [],
       "draft": false
     },
@@ -20,7 +32,7 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-20T06:32:04Z",
-      "updated_at": "2026-03-20T15:04:16Z",
+      "updated_at": "2026-03-21T13:11:58Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/252",
       "labels": [],
       "draft": false
@@ -132,6 +144,30 @@
       "html_url": "https://github.com/ROCm/FlyDSL/pull/192",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 258,
+      "title": "Fix cache and print",
+      "author": "fsx950223",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-21T09:29:32Z",
+      "updated_at": "2026-03-22T03:57:55Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/258",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 228,
+      "title": "[Refactor] Extract static args elimination and DslTypes reconstruct to a separate pass",
+      "author": "sjfeng1999",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-17T08:34:04Z",
+      "updated_at": "2026-03-21T12:38:31Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/228",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 248,
@@ -712,18 +748,6 @@
       "draft": false
     },
     {
-      "number": 116,
-      "title": "[MLIR][python]Migrate Python bindings to PyConcreteType<> and fix TypeID ODR violation",
-      "author": "jli-melchior",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T11:57:26Z",
-      "updated_at": "2026-03-09T14:20:08Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/116",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 115,
       "title": "Yxd/right inverse rebased",
       "author": "xudoyuan",
@@ -732,6 +756,18 @@
       "created_at": "2026-02-09T11:36:17Z",
       "updated_at": "2026-03-09T14:20:08Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/115",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 116,
+      "title": "[MLIR][python]Migrate Python bindings to PyConcreteType<> and fix TypeID ODR violation",
+      "author": "jli-melchior",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-09T11:57:26Z",
+      "updated_at": "2026-03-09T14:20:08Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/116",
       "labels": [],
       "draft": false
     },
@@ -808,18 +844,6 @@
       "draft": false
     },
     {
-      "number": 140,
-      "title": "fix(build): dereference MLIR symlinks in build output",
-      "author": "sunway513",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-21T15:59:15Z",
-      "updated_at": "2026-03-03T06:15:34Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/140",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 146,
       "title": "moe gemm stage2 atomics fp32",
       "author": "yadaish",
@@ -828,6 +852,18 @@
       "created_at": "2026-02-24T00:48:54Z",
       "updated_at": "2026-03-03T06:15:34Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/146",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 140,
+      "title": "fix(build): dereference MLIR symlinks in build output",
+      "author": "sunway513",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-21T15:59:15Z",
+      "updated_at": "2026-03-03T06:15:34Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/140",
       "labels": [],
       "draft": false
     },
@@ -844,18 +880,6 @@
       "draft": false
     },
     {
-      "number": 153,
-      "title": "Pre v0.1 gemm fix",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-27T06:41:53Z",
-      "updated_at": "2026-03-03T06:15:31Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 128,
       "title": "[FLYDSL]: add recast_layout op",
       "author": "xudoyuan",
@@ -864,6 +888,18 @@
       "created_at": "2026-02-12T07:09:34Z",
       "updated_at": "2026-03-03T06:15:31Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/128",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 153,
+      "title": "Pre v0.1 gemm fix",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-27T06:41:53Z",
+      "updated_at": "2026-03-03T06:15:31Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/153",
       "labels": [],
       "draft": false
     },
@@ -948,18 +984,6 @@
       "created_at": "2026-02-23T06:47:17Z",
       "updated_at": "2026-03-03T06:14:44Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 141,
-      "title": "mxfp4 preshuffled gemm optimize",
-      "author": "yadaish",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-22T09:16:02Z",
-      "updated_at": "2026-03-01T06:59:05Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/141",
       "labels": [],
       "draft": false
     }

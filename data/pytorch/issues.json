@@ -1,17 +1,192 @@
 {
-  "collected_at": "2026-03-21T08:07:10Z",
+  "collected_at": "2026-03-22T08:08:16Z",
   "issues": [
     {
+      "number": 178079,
+      "title": "[MPS] Intermittent indexing out of bounds `AcceleratorError`",
+      "author": "hvaara",
+      "state": "open",
+      "created_at": "2026-03-21T23:56:30Z",
+      "updated_at": "2026-03-22T08:04:51Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178079",
+      "labels": [
+        "triage review",
+        "module: macos",
+        "module: advanced indexing",
+        "module: mps",
+        "bot-triaged",
+        "bot-mislabeled"
+      ]
+    },
+    {
+      "number": 178085,
+      "title": "DDP mode: CUDA error: an illegal memory access was encountered",
+      "author": "rs-lsl",
+      "state": "open",
+      "created_at": "2026-03-22T07:56:51Z",
+      "updated_at": "2026-03-22T07:58:10Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178085",
+      "labels": [
+        "oncall: distributed",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 178084,
+      "title": "torch.compile introduces NaN in LayerNorm on valid float32 boundary inputs while eager remains finite",
+      "author": "hiahu329",
+      "state": "open",
+      "created_at": "2026-03-22T06:37:01Z",
+      "updated_at": "2026-03-22T06:58:17Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178084",
+      "labels": [
+        "needs reproduction",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 178080,
+      "title": "CompiledFunctionBackward RuntimeError, involving \"invalid gradient\" shape with a norm-like operation",
+      "author": "lightvector",
+      "state": "open",
+      "created_at": "2026-03-22T00:45:45Z",
+      "updated_at": "2026-03-22T00:49:54Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178080",
+      "labels": [
+        "module: cuda",
+        "triaged",
+        "oncall: pt2",
+        "module: aotdispatch",
+        "module: pt2-dispatcher",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 178077,
+      "title": "DISABLED test_serialize_export_inline_asm_elementwise_simple_cuda_float32 (__main__.TestHOPCUDA)",
+      "author": "yangw-dev",
+      "state": "open",
+      "created_at": "2026-03-21T23:06:40Z",
+      "updated_at": "2026-03-21T23:08:09Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178077",
+      "labels": [
+        "skipped",
+        "oncall: pt2",
+        "oncall: export",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 178064,
+      "title": "[2.10] [repro] torch.ops.aten._flash_attention_forward FlopCounterMode uses wrong permute, gets count wrong",
+      "author": "Birch-san",
+      "state": "open",
+      "created_at": "2026-03-21T19:11:16Z",
+      "updated_at": "2026-03-21T21:54:39Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178064",
+      "labels": [
+        "triaged",
+        "module: flop counter",
+        "module: sdpa",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 162957,
+      "title": "torch.linalg.eigh uses a large amount of memory in pytorch 2.8.0",
+      "author": "fjneumann",
+      "state": "open",
+      "created_at": "2025-09-15T12:18:40Z",
+      "updated_at": "2026-03-21T19:57:47Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/162957",
+      "labels": [
+        "needs reproduction",
+        "module: cuda",
+        "module: memory usage",
+        "triaged",
+        "module: linear algebra"
+      ]
+    },
+    {
       "number": 178044,
-      "title": "`torch/csrc/jit/python/init.cpp` fails to compile with Apple Clang 17 due to inconsistent lambda return types",
+      "title": "Compilation fails with Apple Clang 17 due to ambiguous py::make_tuple return types",
       "author": "pguyot",
       "state": "open",
       "created_at": "2026-03-21T08:01:23Z",
-      "updated_at": "2026-03-21T08:03:26Z",
+      "updated_at": "2026-03-21T18:39:19Z",
       "html_url": "https://github.com/pytorch/pytorch/issues/178044",
       "labels": [
         "oncall: jit",
         "bot-triaged"
+      ]
+    },
+    {
+      "number": 177869,
+      "title": "[Memory Leak] torch.compile'd flex_attention_backward retains ~12GB stale tensors after first execution",
+      "author": "LucienXian",
+      "state": "open",
+      "created_at": "2026-03-19T16:50:34Z",
+      "updated_at": "2026-03-21T18:01:00Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/177869",
+      "labels": [
+        "needs reproduction",
+        "module: memory usage",
+        "oncall: pt2",
+        "module: flex attention"
+      ]
+    },
+    {
+      "number": 178059,
+      "title": "Switching from CPU float32 to CUDA float32 introduces NaN/Inf on valid float32 boundary inputs, causing catastrophic downstream prediction divergence",
+      "author": "hiahu329",
+      "state": "open",
+      "created_at": "2026-03-21T17:00:41Z",
+      "updated_at": "2026-03-21T17:09:03Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178059",
+      "labels": [
+        "needs reproduction",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 178055,
+      "title": "torch.compile produces Inf on valid float32 boundary inputs while eager remains finite, leading to catastrophic downstream error propagation",
+      "author": "hiahu329",
+      "state": "open",
+      "created_at": "2026-03-21T14:50:29Z",
+      "updated_at": "2026-03-21T16:53:10Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/178055",
+      "labels": [
+        "needs reproduction",
+        "bot-triaged"
+      ]
+    },
+    {
+      "number": 176025,
+      "title": "amp + flex_attention_backward results in NoValidChoicesError",
+      "author": "mauriceweiler",
+      "state": "open",
+      "created_at": "2026-02-27T23:01:37Z",
+      "updated_at": "2026-03-21T16:46:57Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/176025",
+      "labels": [
+        "triaged",
+        "oncall: pt2",
+        "module: flex attention"
+      ]
+    },
+    {
+      "number": 150168,
+      "title": "[ROCm] PyTorch slow on TTS",
+      "author": "winstonma",
+      "state": "open",
+      "created_at": "2025-03-28T07:38:47Z",
+      "updated_at": "2026-03-21T08:49:15Z",
+      "html_url": "https://github.com/pytorch/pytorch/issues/150168",
+      "labels": [
+        "module: rocm",
+        "triaged",
+        "topic: performance"
       ]
     },
     {
@@ -93,35 +268,6 @@
         "triaged",
         "module: nccl",
         "module: regression"
-      ]
-    },
-    {
-      "number": 177869,
-      "title": "[Memory Leak] torch.compile'd flex_attention_backward retains ~12GB stale tensors after first execution",
-      "author": "LucienXian",
-      "state": "open",
-      "created_at": "2026-03-19T16:50:34Z",
-      "updated_at": "2026-03-21T02:04:28Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177869",
-      "labels": [
-        "needs reproduction",
-        "module: memory usage",
-        "oncall: pt2",
-        "module: flex attention"
-      ]
-    },
-    {
-      "number": 150168,
-      "title": "[ROCm] PyTorch slow on TTS",
-      "author": "winstonma",
-      "state": "open",
-      "created_at": "2025-03-28T07:38:47Z",
-      "updated_at": "2026-03-20T23:44:05Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/150168",
-      "labels": [
-        "module: rocm",
-        "triaged",
-        "topic: performance"
       ]
     },
     {
@@ -449,25 +595,6 @@
       ]
     },
     {
-      "number": 177829,
-      "title": "torch.lu_unpack crashes when LU_pivots is an empty tensor",
-      "author": "KnightGOKU",
-      "state": "open",
-      "created_at": "2026-03-19T09:14:11Z",
-      "updated_at": "2026-03-19T22:25:17Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177829",
-      "labels": [
-        "module: crash",
-        "module: error checking",
-        "triaged",
-        "module: linear algebra",
-        "actionable",
-        "module: edge cases",
-        "bot-triaged",
-        "bot-mislabeled"
-      ]
-    },
-    {
       "number": 177548,
       "title": "Update Internal fbsource CK",
       "author": "alugorey",
@@ -578,39 +705,6 @@
         "module: rocm",
         "triaged",
         "module: correctness (silent)",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 177691,
-      "title": "torch.compile not tracing streams properly",
-      "author": "benchislett",
-      "state": "open",
-      "created_at": "2026-03-17T20:27:07Z",
-      "updated_at": "2026-03-19T00:57:48Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177691",
-      "labels": [
-        "module: cuda",
-        "triaged",
-        "oncall: pt2",
-        "module: dynamo",
-        "bot-triaged"
-      ]
-    },
-    {
-      "number": 177480,
-      "title": "`torch.compile` silently succeeds on `bmm`/`matmul` with mixed dtypes (float16 @ float32) where eager raises RuntimeError",
-      "author": "Prorrrice",
-      "state": "open",
-      "created_at": "2026-03-15T15:32:19Z",
-      "updated_at": "2026-03-18T17:18:36Z",
-      "html_url": "https://github.com/pytorch/pytorch/issues/177480",
-      "labels": [
-        "triaged",
-        "module: meta tensors",
-        "oncall: pt2",
-        "matrix multiplication",
-        "topic: fuzzer",
         "bot-triaged"
       ]
     }

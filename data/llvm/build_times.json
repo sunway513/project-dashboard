@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-21T08:09:35Z",
+  "collected_at": "2026-03-22T08:10:39Z",
   "workflows": {
     "Clang Tests": {
       "workflow_id": 1013963,
@@ -11,10 +11,10 @@
         "html_url": "https://github.com/llvm/llvm-project/actions/runs/19843358097"
       },
       "stats": {
-        "sample_size": 4,
-        "median_minutes": 577434.4,
+        "sample_size": 3,
+        "median_minutes": 577445.2,
         "p90_minutes": 577729.6,
-        "min_minutes": 576257.8,
+        "min_minutes": 577423.6,
         "max_minutes": 577729.6
       },
       "recent_runs": [
@@ -71,12 +71,6 @@
           "conclusion": "success",
           "duration_minutes": 577729.6,
           "date": "2025-01-29"
-        },
-        {
-          "id": 12840553146,
-          "conclusion": "success",
-          "duration_minutes": 576257.8,
-          "date": "2025-01-18"
         }
       ],
       "bottleneck_job": {
@@ -218,11 +212,11 @@
     "libclang ABI Tests": {
       "workflow_id": 5540927,
       "latest_run": {
-        "id": 23368376146,
+        "id": 23384764754,
         "conclusion": "success",
-        "duration_minutes": 155.0,
-        "started_at": "2026-03-21T00:49:56Z",
-        "html_url": "https://github.com/llvm/llvm-project/actions/runs/23368376146"
+        "duration_minutes": 83.8,
+        "started_at": "2026-03-21T17:23:05Z",
+        "html_url": "https://github.com/llvm/llvm-project/actions/runs/23384764754"
       },
       "stats": {
         "sample_size": 16,
@@ -232,6 +226,12 @@
         "max_minutes": 163.7
       },
       "recent_runs": [
+        {
+          "id": 23384764754,
+          "conclusion": "success",
+          "duration_minutes": 83.8,
+          "date": "2026-03-21"
+        },
         {
           "id": 23368376146,
           "conclusion": "success",
@@ -345,17 +345,11 @@
           "conclusion": "cancelled",
           "duration_minutes": 30.7,
           "date": "2026-03-09"
-        },
-        {
-          "id": 22777799594,
-          "conclusion": "success",
-          "duration_minutes": 151.1,
-          "date": "2026-03-06"
         }
       ],
       "bottleneck_job": {
         "name": "abi-dump (build-latest)",
-        "duration_minutes": 74.4
+        "duration_minutes": 79.8
       }
     }
   }
