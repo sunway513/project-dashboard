@@ -75,13 +75,28 @@ function renderOpPerf(data) {
   // Summary boxes
   var s = data.summary || {};
   var allStats = computeAllStats(data);
-  var geoStr = allStats.geomean > 0 ? allStats.geomean.toFixed(3) + 'x' : 'N/A';
+  var geoEqStr = allStats.geomean > 0 ? allStats.geomean.toFixed(3) + 'x' : 'N/A';
+
+  // Also compute per-config geomean (for reference)
+  var configLogSum = 0, configLogCount = 0;
+  for (var ci = 0; ci < data.categories.length; ci++) {
+    var crs = data.categories[ci].results;
+    for (var ri = 0; ri < crs.length; ri++) {
+      var _a = crs[ri].amd_tflops || crs[ri].amd_bw || 0;
+      var _n = crs[ri].nv_tflops || crs[ri].nv_bw || 0;
+      if (_a > 0 && _n > 0) { configLogSum += Math.log(_a / _n); configLogCount++; }
+    }
+  }
+  var geoPerConfig = configLogCount > 0 ? Math.exp(configLogSum / configLogCount) : 0;
+  var geoCfgStr = geoPerConfig > 0 ? geoPerConfig.toFixed(3) + 'x' : 'N/A';
+
   html += '<div class="oc-summary">';
   html += summaryBox(s.total_configs || 0, "Total Configs");
   html += summaryBox(s.operators || 0, "Operators");
   html += summaryBox(allStats.amdWins, "AMD Wins");
   html += summaryBox(allStats.nvWins, "NV Wins");
-  html += summaryBox(geoStr, "GeoMean (AMD/NV)");
+  html += summaryBox(geoEqStr, "GeoMean (equal-weight)");
+  html += summaryBox(geoCfgStr, "GeoMean (per-config)");
   html += '</div>';
 
   // Chart grid: win/loss bar + ratio line
@@ -129,18 +144,28 @@ function renderOpPerf(data) {
 
 // ─── Stats helpers ───
 function computeAllStats(data) {
-  var matched = 0, amdWins = 0, nvWins = 0, logSum = 0, logCount = 0;
+  var matched = 0, amdWins = 0, nvWins = 0;
+  var opGeos = []; // per-operator geomeans for equal-weight calculation
+
   for (var c = 0; c < data.categories.length; c++) {
     var s = computeCatStats(data.categories[c].results);
     matched += s.matched;
     amdWins += s.amdWins;
     nvWins += s.nvWins;
-    for (var i = 0; i < s.ratios.length; i++) {
-      if (s.ratios[i] > 0) { logSum += Math.log(s.ratios[i]); logCount++; }
+    if (s.geomean > 0) {
+      opGeos.push(s.geomean);
     }
   }
-  var geomean = logCount > 0 ? Math.exp(logSum / logCount) : 0;
-  return { matched: matched, amdWins: amdWins, nvWins: nvWins, geomean: geomean };
+
+  // Equal-weight geomean across operators (each operator counts equally)
+  var geomean = 0;
+  if (opGeos.length > 0) {
+    var logSum = 0;
+    for (var i = 0; i < opGeos.length; i++) { logSum += Math.log(opGeos[i]); }
+    geomean = Math.exp(logSum / opGeos.length);
+  }
+
+  return { matched: matched, amdWins: amdWins, nvWins: nvWins, geomean: geomean, numOps: opGeos.length };
 }
 
 // Get AMD/NV performance values — works for both TFLOPS and bandwidth ops
