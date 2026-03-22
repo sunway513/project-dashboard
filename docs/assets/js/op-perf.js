@@ -403,9 +403,15 @@ function renderScatterChart(data) {
 
   var datasetMap = {};
   var colorMap = {
-    'GEMM': { bg: 'rgba(88,166,255,0.45)', border: '#58a6ff' },
-    'Attention': { bg: 'rgba(240,136,62,0.45)', border: '#f0883e' },
-    'Fused MoE': { bg: 'rgba(188,140,255,0.45)', border: '#bc8cff' },
+    'GEMM':                              { bg: 'rgba(88,166,255,0.50)',  border: '#58a6ff' },
+    'Attention':                         { bg: 'rgba(240,136,62,0.50)',  border: '#f0883e' },
+    'Fused MoE (production precision)':  { bg: 'rgba(188,140,255,0.50)', border: '#bc8cff' },
+    'RMSNorm':                           { bg: 'rgba(63,185,80,0.50)',   border: '#3fb950' },
+    'RoPE':                              { bg: 'rgba(219,171,255,0.50)', border: '#d2a8ff' },
+    'FP8 Quantization':                  { bg: 'rgba(255,159,28,0.50)',  border: '#ff9f1c' },
+    'Softmax':                           { bg: 'rgba(121,192,255,0.50)', border: '#79c0ff' },
+    'Communication (8 GPU, TP/EP)':      { bg: 'rgba(218,54,51,0.50)',   border: '#da3633' },
+    'EP Communication (Mori vs DeepEP)': { bg: 'rgba(255,123,114,0.50)', border: '#ff7b72' },
   };
 
   for (var c = 0; c < data.categories.length; c++) {
