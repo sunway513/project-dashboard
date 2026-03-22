@@ -67,28 +67,20 @@ function renderOpPerf(data) {
     return;
   }
 
-  var html = '<h2>Operator Performance &mdash; MI355X vs B300</h2>';
-  // Executive summary
-  var infGeo = (s.geomean_inference || 0);
-  var summaryText = infGeo > 1.05
-    ? 'MI355X leads B300 by ' + ((infGeo - 1) * 100).toFixed(0) + '% on inference-weighted workloads. AMD wins all ' + moeModels.length + ' MoE models; NV wins ' + denseModels.length + ' dense models.'
-    : infGeo < 0.95
-    ? 'B300 leads MI355X by ' + ((1 - infGeo) * 100).toFixed(0) + '% overall.'
-    : 'MI355X and B300 are at near-parity on inference workloads.';
-
-  var moeModels = (s.per_model || []).filter(function(m) { return m.type === 'MoE'; });
-  var denseModels = (s.per_model || []).filter(function(m) { return m.type !== 'MoE'; });
   var s = data.summary || {};
-  var allModels = (s.per_model || []);
+  var allModels = s.per_model || [];
   var moeCount = allModels.filter(function(m){return m.type==='MoE';}).length;
   var moeWins = allModels.filter(function(m){return m.type==='MoE' && m.geomean>1.05;}).length;
   var denseCount = allModels.filter(function(m){return m.type!=='MoE';}).length;
   var denseNvWins = allModels.filter(function(m){return m.type!=='MoE' && m.geomean<0.95;}).length;
-  var summaryText2 = 'MoE models (dominant on OpenRouter): AMD wins ' + moeWins + '/' + moeCount + '. Dense models: NV wins ' + denseNvWins + '/' + denseCount + '.';
 
-  html += '<div class="op-exec-summary">' + summaryText2 + '</div>';
+  var html = '<h2>Operator Performance &mdash; MI355X vs B300</h2>';
 
-  html += '<p class="op-perf-subtitle">TFLOPS comparison across model shapes. ';
+  // Executive summary
+  var summaryText = 'MoE models (dominant on OpenRouter): AMD wins ' + moeWins + '/' + moeCount + '. Dense models: NV wins ' + denseNvWins + '/' + denseCount + '.';
+  html += '<div class="op-exec-summary">' + summaryText + '</div>';
+
+  html += '<p class="op-perf-subtitle">Performance comparison across model shapes. ';
   html += '<span class="op-badge-amd">AMD MI355X (AITER)</span> vs ';
   html += '<span class="op-badge-nv">NVIDIA B300 (cuBLAS/SDPA)</span></p>';
 
