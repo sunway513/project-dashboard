@@ -141,10 +141,12 @@ function renderOpPerf(data) {
   }
 
   // Notes
-  html += '<div class="op-perf-notes"><h3>Notes</h3><ul>';
-  html += '<li><strong>GEMM</strong>: AMD uses AITER Triton kernels; NVIDIA uses cuBLAS via torch.matmul / _scaled_mm</li>';
-  html += '<li><strong>Attention</strong>: AMD uses AITER Triton FlashAttention; NVIDIA uses PyTorch SDPA. FA3 for Blackwell not yet available.</li>';
-  html += '<li><strong>MoE</strong>: AMD uses AITER fused_moe Triton kernel; NVIDIA uses per-expert grouped GEMM (no fused kernel for Blackwell yet).</li>';
+  html += '<div class="op-perf-notes"><h3>Methodology</h3><ul>';
+  html += '<li><strong>GEMM</strong>: Both use vendor-optimized BLAS (hipBLASLt / cuBLAS) via torch.matmul and torch._scaled_mm. AITER routes to hipBLASLt as its production backend.</li>';
+  html += '<li><strong>Attention</strong>: Both use PyTorch SDPA (FlashAttention backend). Neither uses vendor-specific FA (AITER FA / FA3).</li>';
+  html += '<li><strong>Fused MoE</strong>: AMD uses AITER fused_moe_silu (tuned for gfx950). NV uses vLLM fused_experts (<em>lacks B300 tuning config &mdash; performance sub-optimal</em>).</li>';
+  html += '<li><strong>RMSNorm / RoPE / Softmax / Quant</strong>: Identical torch code on both sides &mdash; pure HBM bandwidth test.</li>';
+  html += '<li><strong>Inference weighting</strong>: MoE models: 45% MoE + 25% Attention + 15% GEMM + 15% other. Dense models: 55% GEMM + 30% Attention + 15% other.</li>';
   html += '</ul></div>';
 
   if (data.lastUpdated) {
