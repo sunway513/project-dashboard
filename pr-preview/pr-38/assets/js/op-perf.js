@@ -165,12 +165,18 @@ function renderOpPerf(data) {
   }
 
   // Notes
-  html += '<div class="op-perf-notes"><h3>Methodology</h3><ul>';
-  html += '<li><strong>GEMM</strong>: Both use vendor-optimized BLAS (hipBLASLt / cuBLAS) via torch.matmul and torch._scaled_mm. AITER routes to hipBLASLt as its production backend.</li>';
-  html += '<li><strong>Attention</strong>: Both use PyTorch SDPA (FlashAttention backend). Neither uses vendor-specific FA (AITER FA / FA3).</li>';
-  html += '<li><strong>Fused MoE</strong>: AMD uses AITER fused_moe_silu (tuned for gfx950). NV uses vLLM fused_experts (<em>lacks B300 tuning config &mdash; performance sub-optimal</em>).</li>';
-  html += '<li><strong>RMSNorm / RoPE / Softmax / Quant</strong>: Identical torch code on both sides &mdash; pure HBM bandwidth test.</li>';
-  html += '<li><strong>Inference weighting</strong>: MoE models: 45% MoE + 25% Attention + 15% GEMM + 15% other. Dense models: 55% GEMM + 30% Attention + 15% other.</li>';
+  html += '<div class="op-perf-notes"><h3>Methodology &amp; Reproducibility</h3>';
+  html += '<p class="op-perf-links">';
+  html += '<a href="METHODOLOGY.md" target="_blank" class="op-doc-link">Design Doc &amp; Fairness Audit</a>';
+  html += '<a href="https://github.com/sunway513/project-dashboard/blob/feat/op-perf-tab/scripts/reproduce.py" target="_blank" class="op-doc-link">Reproduce Any Data Point</a>';
+  html += '<a href="https://github.com/sunway513/project-dashboard/blob/feat/op-perf-tab/docs/METHODOLOGY.md" target="_blank" class="op-doc-link">Precision Matching Table</a>';
+  html += '</p>';
+  html += '<ul>';
+  html += '<li><strong>GEMM</strong>: Both use vendor-optimized BLAS (hipBLASLt / cuBLAS) via torch.matmul and torch._scaled_mm.</li>';
+  html += '<li><strong>Attention</strong>: Both use PyTorch SDPA (FlashAttention backend).</li>';
+  html += '<li><strong>Fused MoE</strong>: AMD uses AITER fused_moe (FP8 for production models). NV uses vLLM fused_experts (B300-tuned configs generated).</li>';
+  html += '<li><strong>Precision</strong>: Each model benchmarked at its OpenRouter production precision (FP8, BF16, or INT4).</li>';
+  html += '<li><strong>Reproducibility</strong>: Click any heatmap cell to copy the exact repro command. Run <code>python3 scripts/reproduce.py --generate-all</code> for full script.</li>';
   html += '</ul></div>';
 
   if (data.lastUpdated) {
