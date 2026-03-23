@@ -1,6 +1,106 @@
 {
-  "collected_at": "2026-03-22T08:08:56Z",
+  "collected_at": "2026-03-23T08:21:09Z",
   "issues": [
+    {
+      "number": 2424,
+      "title": "[Issue]: fused_moe uses wrong quantizations for mxfp4",
+      "author": "Epliz",
+      "state": "open",
+      "created_at": "2026-03-23T07:50:10Z",
+      "updated_at": "2026-03-23T07:52:47Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2424",
+      "labels": []
+    },
+    {
+      "number": 2368,
+      "title": "[Feature]: Refactor aiter allreduce & Enable Prefill AllReduce",
+      "author": "TennyWang1223",
+      "state": "open",
+      "created_at": "2026-03-20T02:52:33Z",
+      "updated_at": "2026-03-23T02:49:18Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2368",
+      "labels": []
+    },
+    {
+      "number": 2418,
+      "title": "[Feature]: Support `apply_router_weight_on_input` with block-scaled FP8 fused MoE",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-22T22:53:51Z",
+      "updated_at": "2026-03-22T23:02:31Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2418",
+      "labels": []
+    },
+    {
+      "number": 2419,
+      "title": "[Feature]: Support static activation scales in per-token FP8 quantization (`per_token_quant_hip`)",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-22T22:55:22Z",
+      "updated_at": "2026-03-22T23:02:25Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2419",
+      "labels": []
+    },
+    {
+      "number": 2420,
+      "title": "[Feature]: Fused SiLU+Mul+FP8-Quantize kernel for batched MoE on ROCm",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-22T22:57:05Z",
+      "updated_at": "2026-03-22T23:02:19Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2420",
+      "labels": []
+    },
+    {
+      "number": 2421,
+      "title": "[Issue]: FP8 fused MoE precision",
+      "author": "AndreasKaratzas",
+      "state": "open",
+      "created_at": "2026-03-22T23:01:39Z",
+      "updated_at": "2026-03-22T23:02:09Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2421",
+      "labels": []
+    },
+    {
+      "number": 2157,
+      "title": "Support TheRock ROCm \u201cPython-managed\u201d install paths (non-/opt/rocm)",
+      "author": "akao-amd",
+      "state": "open",
+      "created_at": "2026-03-03T04:01:19Z",
+      "updated_at": "2026-03-22T21:04:17Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2157",
+      "labels": []
+    },
+    {
+      "number": 2416,
+      "title": "SDPA decode on gfx950: <6% HBM utilization, needs PA decode kernel + tuning",
+      "author": "sunway513",
+      "state": "open",
+      "created_at": "2026-03-22T18:24:21Z",
+      "updated_at": "2026-03-22T18:24:21Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2416",
+      "labels": []
+    },
+    {
+      "number": 2072,
+      "title": "[Feature]: Windows support",
+      "author": "astrelsky",
+      "state": "open",
+      "created_at": "2026-02-22T13:20:56Z",
+      "updated_at": "2026-03-22T18:02:46Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2072",
+      "labels": []
+    },
+    {
+      "number": 2415,
+      "title": "ROCm SDPA MHA (HQ=HK) 2-3x slower than GQA \u2014 Kimi-K2.5, DeepSeek affected",
+      "author": "sunway513",
+      "state": "open",
+      "created_at": "2026-03-22T16:18:49Z",
+      "updated_at": "2026-03-22T16:18:49Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2415",
+      "labels": []
+    },
     {
       "number": 2410,
       "title": "bench_mla_decode crashes with --model deepseek: randint from=1 >= to=1",
@@ -103,16 +203,6 @@
       "created_at": "2026-03-20T03:20:45Z",
       "updated_at": "2026-03-20T03:20:45Z",
       "html_url": "https://github.com/ROCm/aiter/issues/2371",
-      "labels": []
-    },
-    {
-      "number": 2368,
-      "title": "[Feature]: Replace Custom AllReduce IPC with MORI Shmem & Enable Prefill AllReduce",
-      "author": "TennyWang1223",
-      "state": "open",
-      "created_at": "2026-03-20T02:52:33Z",
-      "updated_at": "2026-03-20T02:52:50Z",
-      "html_url": "https://github.com/ROCm/aiter/issues/2368",
       "labels": []
     },
     {
@@ -270,16 +360,6 @@
       "created_at": "2026-03-05T06:50:40Z",
       "updated_at": "2026-03-05T11:44:54Z",
       "html_url": "https://github.com/ROCm/aiter/issues/2187",
-      "labels": []
-    },
-    {
-      "number": 2157,
-      "title": "Support TheRock ROCm \u201cPython-managed\u201d install paths (non-/opt/rocm)",
-      "author": "akao-amd",
-      "state": "open",
-      "created_at": "2026-03-03T04:01:19Z",
-      "updated_at": "2026-03-05T05:10:13Z",
-      "html_url": "https://github.com/ROCm/aiter/issues/2157",
       "labels": []
     },
     {

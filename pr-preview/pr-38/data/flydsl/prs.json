@@ -1,6 +1,44 @@
 {
-  "collected_at": "2026-03-22T08:09:02Z",
+  "collected_at": "2026-03-23T08:21:15Z",
   "prs": [
+    {
+      "number": 264,
+      "title": "[FEAT][DSL] Add get_dyn_shared to access dynamic shared memory",
+      "author": "sjfeng1999",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T03:57:06Z",
+      "updated_at": "2026-03-23T08:20:39Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/264",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 267,
+      "title": "Add support to setting known_block_size",
+      "author": "ruanjm",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T08:09:18Z",
+      "updated_at": "2026-03-23T08:14:10Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/267",
+      "labels": [
+        "enhancement"
+      ],
+      "draft": false
+    },
+    {
+      "number": 266,
+      "title": "feat(jit): two-phase compilation for autotuning compile_hints",
+      "author": "fsx950223",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T07:09:44Z",
+      "updated_at": "2026-03-23T07:14:36Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/266",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 259,
       "title": " preshuffled gemm iglp",
@@ -8,10 +46,22 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-22T06:58:43Z",
-      "updated_at": "2026-03-22T06:58:43Z",
+      "updated_at": "2026-03-23T04:07:23Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/259",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 250,
+      "title": "\u30102/N\u3011add support wmma kernels for RDNA4(GFX1201)",
+      "author": "vivienfanghuagood",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T03:25:04Z",
+      "updated_at": "2026-03-23T03:20:08Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/250",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 257,
@@ -26,18 +76,6 @@
       "draft": false
     },
     {
-      "number": 252,
-      "title": "Dev bs fp8 moe",
-      "author": "coderfeli",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T06:32:04Z",
-      "updated_at": "2026-03-21T13:11:58Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/252",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 251,
       "title": "[Fix] fix make_coord to require tuple arg and add crd2idx tests",
       "author": "jli-melchior",
@@ -46,18 +84,6 @@
       "created_at": "2026-03-20T03:34:05Z",
       "updated_at": "2026-03-20T14:58:05Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/251",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 250,
-      "title": "\u30102/N\u3011add support wmma kernels for RDNA4(GFX1201)",
-      "author": "vivienfanghuagood",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T03:25:04Z",
-      "updated_at": "2026-03-20T04:57:25Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/250",
       "labels": [],
       "draft": false
     },
@@ -82,18 +108,6 @@
       "created_at": "2026-03-19T03:46:23Z",
       "updated_at": "2026-03-20T02:34:47Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/238",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 243,
-      "title": "Rebase gfx1250 WMMA/mcast/mxfp4 support onto main",
-      "author": "jli-melchior",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T09:49:55Z",
-      "updated_at": "2026-03-19T09:50:21Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/243",
       "labels": [],
       "draft": false
     },
@@ -146,13 +160,133 @@
       "draft": true
     },
     {
+      "number": 265,
+      "title": "fix(jit): prevent use-after-free SIGSEGV when FLYDSL_RUNTIME_ENABLE_CACHE=0",
+      "author": "fsx950223",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T04:07:33Z",
+      "updated_at": "2026-03-23T07:20:53Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/265",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 263,
+      "title": "[Refactor] Rename BufferLDST to BufferCopy for consistency",
+      "author": "sjfeng1999",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T03:39:58Z",
+      "updated_at": "2026-03-23T06:39:00Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/263",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 262,
+      "title": "feat: support explicit kernel name in @flyc.kernel for profiler visib\u2026",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T02:34:40Z",
+      "updated_at": "2026-03-23T03:10:43Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/262",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 254,
+      "title": "[FLYDSL]: refactor tests",
+      "author": "xudoyuan",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T10:04:32Z",
+      "updated_at": "2026-03-23T02:36:58Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/254",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 244,
+      "title": "add claude skills",
+      "author": "fsx950223",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T09:50:36Z",
+      "updated_at": "2026-03-23T02:36:53Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/244",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 231,
+      "title": "[FLYDSL]: Bugfixes for dynamic upper bound of range and dynamic share\u2026",
+      "author": "xudoyuan",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-17T09:13:27Z",
+      "updated_at": "2026-03-23T02:36:50Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/231",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 248,
+      "title": "improved preshuffed gemm with async copy",
+      "author": "yadaish",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T01:31:16Z",
+      "updated_at": "2026-03-23T02:36:47Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/248",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 260,
+      "title": "[Feat][FLY] Support CoordTensor and ComposedLayout in LayoutLowering",
+      "author": "sjfeng1999",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-22T16:12:41Z",
+      "updated_at": "2026-03-23T02:36:41Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/260",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 252,
+      "title": "Dev bs fp8 moe",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T06:32:04Z",
+      "updated_at": "2026-03-23T02:36:31Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/252",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 261,
+      "title": "fix cache tag bug",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T00:51:39Z",
+      "updated_at": "2026-03-23T02:36:30Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/261",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 258,
       "title": "Fix cache and print",
       "author": "fsx950223",
       "state": "closed",
       "merged": true,
       "created_at": "2026-03-21T09:29:32Z",
-      "updated_at": "2026-03-22T03:57:55Z",
+      "updated_at": "2026-03-23T02:36:28Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/258",
       "labels": [],
       "draft": false
@@ -164,20 +298,8 @@
       "state": "closed",
       "merged": true,
       "created_at": "2026-03-17T08:34:04Z",
-      "updated_at": "2026-03-21T12:38:31Z",
+      "updated_at": "2026-03-22T16:09:48Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/228",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 248,
-      "title": "improved preshuffed gemm with async copy",
-      "author": "yadaish",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-20T01:31:16Z",
-      "updated_at": "2026-03-20T15:01:04Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/248",
       "labels": [],
       "draft": false
     },
@@ -206,30 +328,6 @@
       "draft": false
     },
     {
-      "number": 254,
-      "title": "[FLYDSL]: refactor tests",
-      "author": "xudoyuan",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-20T10:04:32Z",
-      "updated_at": "2026-03-20T14:46:02Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/254",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 231,
-      "title": "[FLYDSL]: Bugfixes for dynamic upper bound of range and dynamic share\u2026",
-      "author": "xudoyuan",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-17T09:13:27Z",
-      "updated_at": "2026-03-20T06:27:33Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/231",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 247,
       "title": "change version tag",
       "author": "coderfeli",
@@ -250,18 +348,6 @@
       "created_at": "2026-03-20T01:01:20Z",
       "updated_at": "2026-03-20T01:04:33Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/246",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 244,
-      "title": "add claude skills",
-      "author": "fsx950223",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-19T09:50:36Z",
-      "updated_at": "2026-03-19T10:09:27Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/244",
       "labels": [],
       "draft": false
     },
@@ -912,78 +998,6 @@
       "created_at": "2026-02-28T08:12:04Z",
       "updated_at": "2026-03-03T06:15:22Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/158",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 159,
-      "title": "change comments",
-      "author": "lalala-sh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-28T08:14:32Z",
-      "updated_at": "2026-03-03T06:15:21Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/159",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 152,
-      "title": "[Tool][fly-opt] Add fly-opt tool and lit-based test suite",
-      "author": "jli-melchior",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-27T02:19:55Z",
-      "updated_at": "2026-03-03T06:15:19Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/152",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 161,
-      "title": "[Pass][fly-gpu-to-llvm]  Add fly-gpu-to-llvm pass to preserve asyncObject for graph capture",
-      "author": "jli-melchior",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-28T09:20:26Z",
-      "updated_at": "2026-03-03T06:15:16Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/161",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 118,
-      "title": "rebase smooth_quant int8 to main branch",
-      "author": "yadaish",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-10T04:43:19Z",
-      "updated_at": "2026-03-03T06:14:52Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/118",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 155,
-      "title": "add AOT pre-compilation example for MOE kernels",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-28T04:19:45Z",
-      "updated_at": "2026-03-03T06:14:47Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/155",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 143,
-      "title": "W4a16 bf16 fp8 bf16 moe",
-      "author": "ClementLinCF",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-23T06:47:17Z",
-      "updated_at": "2026-03-03T06:14:44Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/143",
       "labels": [],
       "draft": false
     }

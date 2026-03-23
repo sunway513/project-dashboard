@@ -1,6 +1,18 @@
 {
-  "collected_at": "2026-03-22T08:09:00Z",
+  "collected_at": "2026-03-23T08:21:13Z",
   "prs": [
+    {
+      "number": 209,
+      "title": "Feat: UMBP Distributed integration",
+      "author": "TianDi101",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-22T14:28:30Z",
+      "updated_at": "2026-03-22T14:54:18Z",
+      "html_url": "https://github.com/ROCm/mori/pull/209",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 205,
       "title": "Optimize XGMI `batch_write`/`batch_read` for discrete (non-contiguous) buffer transfers by reducing per-segment overhead.",
@@ -12,18 +24,6 @@
       "html_url": "https://github.com/ROCm/mori/pull/205",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 180,
-      "title": "[UMP] Feat: add control plane implementation for unified memory pool",
-      "author": "TianDi101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T15:01:19Z",
-      "updated_at": "2026-03-19T08:35:20Z",
-      "html_url": "https://github.com/ROCm/mori/pull/180",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 202,
@@ -118,6 +118,42 @@
       "created_at": "2025-10-28T06:17:21Z",
       "updated_at": "2026-01-08T09:18:21Z",
       "html_url": "https://github.com/ROCm/mori/pull/99",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 211,
+      "title": "Fix(ep): align optional tensor ptrs with legacy c++ launch",
+      "author": "jhchouuu",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T06:45:57Z",
+      "updated_at": "2026-03-23T06:48:13Z",
+      "html_url": "https://github.com/ROCm/mori/pull/211",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 208,
+      "title": "Fix [UMBP]: change integration default test mode to tp",
+      "author": "TianDi101",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-22T11:02:38Z",
+      "updated_at": "2026-03-22T11:03:17Z",
+      "html_url": "https://github.com/ROCm/mori/pull/208",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 180,
+      "title": "[UMP] Feat: add control plane implementation for unified memory pool",
+      "author": "TianDi101",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-03T15:01:19Z",
+      "updated_at": "2026-03-22T10:54:31Z",
+      "html_url": "https://github.com/ROCm/mori/pull/180",
       "labels": [],
       "draft": false
     },
@@ -1114,42 +1150,6 @@
       "created_at": "2025-11-18T12:25:18Z",
       "updated_at": "2025-11-20T02:46:44Z",
       "html_url": "https://github.com/ROCm/mori/pull/109",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 55,
-      "title": "Fix: import issue in python test.",
-      "author": "Duyi-Wang",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-08-28T07:44:40Z",
-      "updated_at": "2025-11-18T05:47:13Z",
-      "html_url": "https://github.com/ROCm/mori/pull/55",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 105,
-      "title": "Fix: EP32 bug & Feat: EPV1 LL Kernel",
-      "author": "TianDi101",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-12T08:17:46Z",
-      "updated_at": "2025-11-13T02:27:19Z",
-      "html_url": "https://github.com/ROCm/mori/pull/105",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 104,
-      "title": "Fix: failed compilation by unsupported archs",
-      "author": "TianDi101",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-05T15:04:11Z",
-      "updated_at": "2025-11-05T15:05:20Z",
-      "html_url": "https://github.com/ROCm/mori/pull/104",
       "labels": [],
       "draft": false
     },

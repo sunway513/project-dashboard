@@ -1,6 +1,19 @@
 {
-  "collected_at": "2026-03-22T08:08:09Z",
+  "collected_at": "2026-03-23T08:20:13Z",
   "issues": [
+    {
+      "number": 182095,
+      "title": "AMDGPU misses dot patterns using vector reductions",
+      "author": "arsenm",
+      "state": "open",
+      "created_at": "2026-02-18T18:44:29Z",
+      "updated_at": "2026-03-22T17:55:01Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/182095",
+      "labels": [
+        "backend:AMDGPU",
+        "missed-optimization"
+      ]
+    },
     {
       "number": 186878,
       "title": "[AMDGPU] asyncmark/wait.asyncmark intrinsics produce incorrect code for 3-stage software-pipelined loops",
@@ -136,19 +149,6 @@
       "html_url": "https://github.com/llvm/llvm-project/issues/183078",
       "labels": [
         "backend:AMDGPU"
-      ]
-    },
-    {
-      "number": 182095,
-      "title": "AMDGPU misses dot patterns using vector reductions",
-      "author": "arsenm",
-      "state": "open",
-      "created_at": "2026-02-18T18:44:29Z",
-      "updated_at": "2026-02-25T15:22:58Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/182095",
-      "labels": [
-        "backend:AMDGPU",
-        "missed-optimization"
       ]
     },
     {

@@ -1,30 +1,30 @@
 {
-  "collected_at": "2026-03-22T08:09:26Z",
+  "collected_at": "2026-03-23T08:21:39Z",
   "project": "sglang",
   "repo": "sgl-project/sglang",
   "pr_velocity": {
     "this_week": {
-      "opened": 41,
+      "opened": 38,
       "merged": 40,
-      "closed": 1
-    },
-    "last_week": {
-      "opened": 29,
-      "merged": 18,
       "closed": 0
     },
-    "median_time_to_merge_hours": 78.8,
+    "last_week": {
+      "opened": 27,
+      "merged": 20,
+      "closed": 0
+    },
+    "median_time_to_merge_hours": 93.0,
     "merge_count": 73,
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 62,
+    "active_this_week": 58,
     "total_contributors": 77,
     "top_contributors": [
       {
         "author": "yctseng0211",
-        "prs_submitted": 9,
-        "prs_merged": 7,
+        "prs_submitted": 10,
+        "prs_merged": 6,
         "commits": 0
       },
       {
@@ -34,15 +34,15 @@
         "commits": 0
       },
       {
-        "author": "kkHuang-amd",
-        "prs_submitted": 5,
-        "prs_merged": 5,
-        "commits": 0
-      },
-      {
         "author": "fxmarty-amd",
         "prs_submitted": 5,
         "prs_merged": 1,
+        "commits": 0
+      },
+      {
+        "author": "merrymercy",
+        "prs_submitted": 5,
+        "prs_merged": 5,
         "commits": 0
       },
       {
@@ -58,15 +58,15 @@
         "commits": 0
       },
       {
-        "author": "merrymercy",
-        "prs_submitted": 4,
-        "prs_merged": 3,
-        "commits": 0
-      },
-      {
         "author": "zhentaocc",
         "prs_submitted": 4,
         "prs_merged": 1,
+        "commits": 0
+      },
+      {
+        "author": "kkHuang-amd",
+        "prs_submitted": 4,
+        "prs_merged": 4,
         "commits": 0
       },
       {
@@ -85,23 +85,23 @@
     "bus_factor": 9
   },
   "issue_health": {
-    "total_open": 2,
+    "total_open": 1,
     "opened_this_week": 0,
-    "closed_this_week": 100,
+    "closed_this_week": 104,
     "unanswered": 1
   },
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 2,
-      "failed": 15,
-      "success_rate": 10.0
+      "succeeded": 3,
+      "failed": 14,
+      "success_rate": 15.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 5,
-      "failed": 8,
-      "success_rate": 25.0
+      "succeeded": 0,
+      "failed": 15,
+      "success_rate": 0.0
     }
   },
   "ci_signal_time": {
@@ -109,19 +109,19 @@
       "sample_size": 20,
       "median_minutes": 332.6,
       "p90_minutes": 1514.7,
-      "min_minutes": 16.2,
+      "min_minutes": 16.4,
       "max_minutes": 1799.9
     },
     "cuda": {
       "sample_size": 20,
       "median_minutes": 0.5,
-      "p90_minutes": 9.5,
-      "min_minutes": 0.3,
-      "max_minutes": 13.8
+      "p90_minutes": 17.8,
+      "min_minutes": 0.4,
+      "max_minutes": 59.9
     }
   },
   "release_cadence": {
-    "days_since_last": 26.3,
+    "days_since_last": 27.3,
     "avg_interval_days": 15.3,
     "total_releases": 5,
     "latest_tag": "v0.5.9"

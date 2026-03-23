@@ -103,7 +103,7 @@ function renderOpPerf(data) {
 
   html += '<div class="oc-summary">';
   html += summaryBox(s.total_configs || 0, "Total Configs");
-  html += summaryBox(s.operators || 0, "Operators");
+  html += summaryBox(s.operators || 0, "Operator Categories");
   html += summaryBox(allStats.amdWins, "AMD Wins");
   html += summaryBox(allStats.nvWins, "NV Wins");
   html += summaryBox(geoEqStr, "GeoMean (equal-weight)");

@@ -1,11 +1,11 @@
 {
-  "collected_at": "2026-03-22T08:09:15Z",
+  "collected_at": "2026-03-23T08:21:27Z",
   "source": "automated",
   "rocm": {
     "workflow_name": "Integration Tests",
-    "run_id": 23381345154,
-    "run_url": "https://github.com/triton-lang/triton/actions/runs/23381345154",
-    "run_date": "2026-03-21T14:40:50Z",
+    "run_id": 23424147689,
+    "run_url": "https://github.com/triton-lang/triton/actions/runs/23424147689",
+    "run_date": "2026-03-23T06:50:38Z",
     "conclusion": "success",
     "summary": {
       "total_jobs": 3,
@@ -46,16 +46,16 @@
   },
   "cuda": {
     "workflow_name": "Integration Tests",
-    "run_id": 23381345154,
-    "run_url": "https://github.com/triton-lang/triton/actions/runs/23381345154",
-    "run_date": "2026-03-21T14:40:50Z",
+    "run_id": 23424147689,
+    "run_url": "https://github.com/triton-lang/triton/actions/runs/23424147689",
+    "run_date": "2026-03-23T06:50:38Z",
     "conclusion": "success",
     "summary": {
       "total_jobs": 3,
-      "passed": 3,
-      "failed": 0,
+      "passed": 2,
+      "failed": 1,
       "skipped": 0,
-      "pass_rate": 100.0
+      "pass_rate": 66.67
     },
     "suites": [
       {
@@ -69,7 +69,7 @@
       },
       {
         "name": "integration-tests-nvidia / integration-tests-nvidia (nvidia-gb200)",
-        "conclusion": "success",
+        "conclusion": "failure",
         "tests": null,
         "passed": null,
         "failed": null,

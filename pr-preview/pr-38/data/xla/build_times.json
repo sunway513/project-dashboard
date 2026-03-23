@@ -1,6 +1,192 @@
 {
-  "collected_at": "2026-03-22T08:10:49Z",
+  "collected_at": "2026-03-23T08:23:34Z",
   "workflows": {
+    "Scorecards supply-chain security": {
+      "workflow_id": 45834068,
+      "latest_run": {
+        "id": 23420381196,
+        "conclusion": "success",
+        "duration_minutes": 1.1,
+        "started_at": "2026-03-23T03:38:56Z",
+        "html_url": "https://github.com/openxla/xla/actions/runs/23420381196"
+      },
+      "stats": {
+        "sample_size": 20,
+        "median_minutes": 1.2,
+        "p90_minutes": 1.4,
+        "min_minutes": 1.0,
+        "max_minutes": 1.4
+      },
+      "recent_runs": [
+        {
+          "id": 23420381196,
+          "conclusion": "success",
+          "duration_minutes": 1.1,
+          "date": "2026-03-23"
+        },
+        {
+          "id": 23404760756,
+          "conclusion": "success",
+          "duration_minutes": 1.4,
+          "date": "2026-03-22"
+        },
+        {
+          "id": 23382376077,
+          "conclusion": "success",
+          "duration_minutes": 1.3,
+          "date": "2026-03-21"
+        },
+        {
+          "id": 23381557155,
+          "conclusion": "success",
+          "duration_minutes": 1.0,
+          "date": "2026-03-21"
+        },
+        {
+          "id": 23380458567,
+          "conclusion": "success",
+          "duration_minutes": 1.1,
+          "date": "2026-03-21"
+        },
+        {
+          "id": 23373132025,
+          "conclusion": "success",
+          "duration_minutes": 1.1,
+          "date": "2026-03-21"
+        },
+        {
+          "id": 23371688671,
+          "conclusion": "success",
+          "duration_minutes": 1.0,
+          "date": "2026-03-21"
+        },
+        {
+          "id": 23366427657,
+          "conclusion": "success",
+          "duration_minutes": 1.3,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23361071161,
+          "conclusion": "success",
+          "duration_minutes": 1.2,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23359055134,
+          "conclusion": "success",
+          "duration_minutes": 1.4,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23356275248,
+          "conclusion": "success",
+          "duration_minutes": 1.3,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23356050011,
+          "conclusion": "success",
+          "duration_minutes": 1.4,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23355752017,
+          "conclusion": "success",
+          "duration_minutes": 1.3,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23355508519,
+          "conclusion": "success",
+          "duration_minutes": 1.2,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23355224516,
+          "conclusion": "success",
+          "duration_minutes": 1.1,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23354456592,
+          "conclusion": "success",
+          "duration_minutes": 1.4,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23354325637,
+          "conclusion": "success",
+          "duration_minutes": 1.3,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23354071849,
+          "conclusion": "success",
+          "duration_minutes": 1.2,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23353831528,
+          "conclusion": "success",
+          "duration_minutes": 1.3,
+          "date": "2026-03-20"
+        },
+        {
+          "id": 23353580046,
+          "conclusion": "success",
+          "duration_minutes": 1.2,
+          "date": "2026-03-20"
+        }
+      ],
+      "bottleneck_job": {
+        "name": "Scorecards analysis",
+        "duration_minutes": 1.0
+      }
+    },
+    "Check Contents": {
+      "workflow_id": 49426633,
+      "latest_run": {
+        "id": 23427783505,
+        "conclusion": "skipped",
+        "duration_minutes": 0.0,
+        "started_at": "2026-03-23T08:19:30Z",
+        "html_url": "https://github.com/openxla/xla/actions/runs/23427783505"
+      },
+      "stats": {
+        "sample_size": 4,
+        "median_minutes": 0.2,
+        "p90_minutes": 0.2,
+        "min_minutes": 0.2,
+        "max_minutes": 0.2
+      },
+      "recent_runs": [
+        {
+          "id": 23424537322,
+          "conclusion": "success",
+          "duration_minutes": 0.2,
+          "date": "2026-03-23"
+        },
+        {
+          "id": 23421835591,
+          "conclusion": "success",
+          "duration_minutes": 0.2,
+          "date": "2026-03-23"
+        },
+        {
+          "id": 23421500939,
+          "conclusion": "success",
+          "duration_minutes": 0.2,
+          "date": "2026-03-23"
+        },
+        {
+          "id": 23421302182,
+          "conclusion": "success",
+          "duration_minutes": 0.2,
+          "date": "2026-03-23"
+        }
+      ]
+    },
     "Autorun CI for OpenXLA Public Members": {
       "workflow_id": 50831922,
       "latest_run": {
@@ -12,226 +198,6 @@
       },
       "stats": null,
       "recent_runs": []
-    },
-    "BAP Onboarding": {
-      "workflow_id": 233088075,
-      "latest_run": {
-        "id": 22421894457,
-        "conclusion": "success",
-        "duration_minutes": 16.1,
-        "started_at": "2026-02-26T00:13:09Z",
-        "html_url": "https://github.com/openxla/xla/actions/runs/22421894457"
-      },
-      "stats": {
-        "sample_size": 2,
-        "median_minutes": 14.2,
-        "p90_minutes": 16.1,
-        "min_minutes": 12.3,
-        "max_minutes": 16.1
-      },
-      "recent_runs": [
-        {
-          "id": 22421894457,
-          "conclusion": "success",
-          "duration_minutes": 16.1,
-          "date": "2026-02-26"
-        },
-        {
-          "id": 22413498671,
-          "conclusion": "success",
-          "duration_minutes": 12.3,
-          "date": "2026-02-25"
-        },
-        {
-          "id": 22411911569,
-          "conclusion": "failure",
-          "duration_minutes": 15.2,
-          "date": "2026-02-25"
-        },
-        {
-          "id": 22411358699,
-          "conclusion": "failure",
-          "duration_minutes": 10.0,
-          "date": "2026-02-25"
-        },
-        {
-          "id": 22410834680,
-          "conclusion": "failure",
-          "duration_minutes": 4.4,
-          "date": "2026-02-25"
-        },
-        {
-          "id": 22410393292,
-          "conclusion": "failure",
-          "duration_minutes": 9.3,
-          "date": "2026-02-25"
-        },
-        {
-          "id": 21916730233,
-          "conclusion": "failure",
-          "duration_minutes": 6.8,
-          "date": "2026-02-11"
-        },
-        {
-          "id": 21914811571,
-          "conclusion": "failure",
-          "duration_minutes": 14.5,
-          "date": "2026-02-11"
-        },
-        {
-          "id": 21914580514,
-          "conclusion": "failure",
-          "duration_minutes": 1.7,
-          "date": "2026-02-11"
-        }
-      ],
-      "bottleneck_job": {
-        "name": "Run HLO benchmarks / Run benchmark (nv_maxtext_1n1g_jit_train_step_before_optimization.hlo_GPU_B200)",
-        "duration_minutes": 12.2
-      }
-    },
-    "Bazel Dependency Violations": {
-      "workflow_id": 116752770,
-      "latest_run": {
-        "id": 23398753195,
-        "conclusion": "success",
-        "duration_minutes": 7.7,
-        "started_at": "2026-03-22T08:00:49Z",
-        "html_url": "https://github.com/openxla/xla/actions/runs/23398753195"
-      },
-      "stats": {
-        "sample_size": 19,
-        "median_minutes": 7.5,
-        "p90_minutes": 7.7,
-        "min_minutes": 7.2,
-        "max_minutes": 9.6
-      },
-      "recent_runs": [
-        {
-          "id": 23398753195,
-          "conclusion": "success",
-          "duration_minutes": 7.7,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23398660263,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23398505642,
-          "conclusion": "success",
-          "duration_minutes": 7.6,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23398376946,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23398224126,
-          "conclusion": "success",
-          "duration_minutes": 7.2,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23398021069,
-          "conclusion": "success",
-          "duration_minutes": 7.6,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397971586,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397834719,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397700949,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397519513,
-          "conclusion": "cancelled",
-          "duration_minutes": 10.3,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397457959,
-          "conclusion": "success",
-          "duration_minutes": 7.7,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397440607,
-          "conclusion": "success",
-          "duration_minutes": 7.3,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397290173,
-          "conclusion": "success",
-          "duration_minutes": 7.3,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397230122,
-          "conclusion": "success",
-          "duration_minutes": 7.6,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397172648,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23397075632,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23396902953,
-          "conclusion": "success",
-          "duration_minutes": 7.3,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23396889491,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23396794791,
-          "conclusion": "success",
-          "duration_minutes": 9.6,
-          "date": "2026-03-22"
-        },
-        {
-          "id": 23396683785,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-22"
-        }
-      ],
-      "bottleneck_job": {
-        "name": "no-rocm-only-targets-in-cpu-build",
-        "duration_minutes": 7.7
-      }
     }
   }
 }

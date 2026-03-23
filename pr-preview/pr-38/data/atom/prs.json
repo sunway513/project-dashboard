@@ -1,18 +1,6 @@
 {
-  "collected_at": "2026-03-22T08:08:58Z",
+  "collected_at": "2026-03-23T08:21:11Z",
   "prs": [
-    {
-      "number": 378,
-      "title": "ci: extract nightly benchmark params to JSON config",
-      "author": "valarLip",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-22T07:24:46Z",
-      "updated_at": "2026-03-22T07:27:25Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/378",
-      "labels": [],
-      "draft": false
-    },
     {
       "number": 352,
       "title": "[plugin][benchmark][dashboard] Enable performance dashboard for ATOM OOT mode",
@@ -20,10 +8,94 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-18T12:59:13Z",
-      "updated_at": "2026-03-21T15:11:26Z",
+      "updated_at": "2026-03-23T08:08:51Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/352",
       "labels": [],
+      "draft": false
+    },
+    {
+      "number": 385,
+      "title": "[Draft] adapt triton moe",
+      "author": "HaonanWang98",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T06:15:38Z",
+      "updated_at": "2026-03-23T07:41:30Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/385",
+      "labels": [],
       "draft": true
+    },
+    {
+      "number": 388,
+      "title": "[plugin][full oot test] change the trigger behavior to nightly + manually",
+      "author": "zejunchen-zejun",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T07:31:50Z",
+      "updated_at": "2026-03-23T07:54:53Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/388",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 355,
+      "title": "[feat] Make ATOM work with SGLang out-of-tree",
+      "author": "zhuyuhua-v",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-19T03:17:15Z",
+      "updated_at": "2026-03-23T07:30:44Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/355",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 387,
+      "title": "[draft][plugin][MLA] optimize MLA metadata build and remove D2D copy",
+      "author": "zejunchen-zejun",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T07:04:58Z",
+      "updated_at": "2026-03-23T07:10:48Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/387",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 382,
+      "title": "enable topk_softmax with share expert scoring function",
+      "author": "ganyi1996ppo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T02:39:31Z",
+      "updated_at": "2026-03-23T05:54:38Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/382",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 384,
+      "title": "enable vllm v0.17.0 on qwen3.5 and add qwen3.5 recipe for vllm plugin mode",
+      "author": "ganyi1996ppo",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T04:25:53Z",
+      "updated_at": "2026-03-23T04:47:07Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/384",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 253,
+      "title": "feat: PD disaggregation",
+      "author": "inkcherry",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T11:38:33Z",
+      "updated_at": "2026-03-23T04:02:17Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/253",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 274,
@@ -50,18 +122,6 @@
       "draft": false
     },
     {
-      "number": 355,
-      "title": "[feat] Make ATOM work with SGLang out-of-tree",
-      "author": "zhuyuhua-v",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T03:17:15Z",
-      "updated_at": "2026-03-20T03:17:37Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/355",
-      "labels": [],
-      "draft": true
-    },
-    {
       "number": 303,
       "title": "CI: Replace nightly image build with S3 aiter wheel installation",
       "author": "gyohuangxin",
@@ -84,18 +144,6 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/363",
       "labels": [],
       "draft": true
-    },
-    {
-      "number": 253,
-      "title": "feat: PD disaggregation",
-      "author": "inkcherry",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T11:38:33Z",
-      "updated_at": "2026-03-19T11:15:29Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/253",
-      "labels": [],
-      "draft": false
     },
     {
       "number": 348,
@@ -134,6 +182,18 @@
       "draft": true
     },
     {
+      "number": 146,
+      "title": "kv and output scale loading bug -- FIX",
+      "author": "amirumoAMD",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-16T21:31:04Z",
+      "updated_at": "2026-03-16T05:44:15Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/146",
+      "labels": [],
+      "draft": false
+    },
+    {
       "number": 154,
       "title": "[recipe] update qwen3 recipe",
       "author": "gbyu-amd",
@@ -142,42 +202,6 @@
       "created_at": "2026-01-20T06:36:51Z",
       "updated_at": "2026-03-16T05:44:15Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/154",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 168,
-      "title": "[POC][Deepseek] Engram support, model_runner hash compute overlap",
-      "author": "ZhangLirong-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-28T03:09:49Z",
-      "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/168",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 37,
-      "title": "[fusion] add new ar_norm fusion kernel",
-      "author": "gbyu-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-12-09T14:43:20Z",
-      "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/37",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 113,
-      "title": "[fix] disable gluon pa for llama",
-      "author": "gbyu-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-06T05:50:05Z",
-      "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/113",
       "labels": [],
       "draft": false
     },
@@ -194,26 +218,26 @@
       "draft": true
     },
     {
-      "number": 218,
-      "title": "Enable AllReduce+RMSNorm fusion for GPT-OSS model",
-      "author": "ChuanLi1101",
+      "number": 113,
+      "title": "[fix] disable gluon pa for llama",
+      "author": "gbyu-amd",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-15T10:01:28Z",
+      "created_at": "2026-01-06T05:50:05Z",
       "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/218",
+      "html_url": "https://github.com/ROCm/ATOM/pull/113",
       "labels": [],
       "draft": false
     },
     {
-      "number": 146,
-      "title": "kv and output scale loading bug -- FIX",
-      "author": "amirumoAMD",
+      "number": 37,
+      "title": "[fusion] add new ar_norm fusion kernel",
+      "author": "gbyu-amd",
       "state": "open",
       "merged": false,
-      "created_at": "2026-01-16T21:31:04Z",
+      "created_at": "2025-12-09T14:43:20Z",
       "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/146",
+      "html_url": "https://github.com/ROCm/ATOM/pull/37",
       "labels": [],
       "draft": false
     },
@@ -278,16 +302,16 @@
       "draft": false
     },
     {
-      "number": 225,
-      "title": "Add FlyDSL MOE backend and Triton fallback for FP8 MoE",
-      "author": "sunway513",
+      "number": 218,
+      "title": "Enable AllReduce+RMSNorm fusion for GPT-OSS model",
+      "author": "ChuanLi1101",
       "state": "open",
       "merged": false,
-      "created_at": "2026-02-20T05:26:17Z",
+      "created_at": "2026-02-15T10:01:28Z",
       "updated_at": "2026-03-16T05:44:15Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/225",
+      "html_url": "https://github.com/ROCm/ATOM/pull/218",
       "labels": [],
-      "draft": true
+      "draft": false
     },
     {
       "number": 156,
@@ -300,6 +324,30 @@
       "html_url": "https://github.com/ROCm/ATOM/pull/156",
       "labels": [],
       "draft": false
+    },
+    {
+      "number": 168,
+      "title": "[POC][Deepseek] Engram support, model_runner hash compute overlap",
+      "author": "ZhangLirong-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-28T03:09:49Z",
+      "updated_at": "2026-03-16T05:44:15Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/168",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 225,
+      "title": "Add FlyDSL MOE backend and Triton fallback for FP8 MoE",
+      "author": "sunway513",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T05:26:17Z",
+      "updated_at": "2026-03-16T05:44:15Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/225",
+      "labels": [],
+      "draft": true
     },
     {
       "number": 234,
@@ -454,6 +502,54 @@
       "created_at": "2026-03-11T23:30:57Z",
       "updated_at": "2026-03-16T05:44:14Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/309",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 386,
+      "title": "add ATOM_DUAL_STREAM_MOE_TOKEN_THRESHOLD env to disable deepseek dual stream path",
+      "author": "XiaobingSuper",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T06:27:10Z",
+      "updated_at": "2026-03-23T07:36:59Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/386",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 383,
+      "title": "[Misc] Support DeepSeek-R1-0528-MTP-MoE-MXFP4-Attn-PTPC-FP8",
+      "author": "haoyangli0109",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T03:41:32Z",
+      "updated_at": "2026-03-23T05:48:29Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/383",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 379,
+      "title": "fix: use completed nightly runs as regression baseline",
+      "author": "valarLip",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-22T15:22:26Z",
+      "updated_at": "2026-03-22T16:03:07Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/379",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 378,
+      "title": "ci: extract nightly benchmark params to JSON config",
+      "author": "valarLip",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-22T07:24:46Z",
+      "updated_at": "2026-03-22T09:25:15Z",
+      "html_url": "https://github.com/ROCm/ATOM/pull/378",
       "labels": [],
       "draft": false
     },
@@ -1450,54 +1546,6 @@
       "created_at": "2026-03-04T13:36:40Z",
       "updated_at": "2026-03-04T15:43:01Z",
       "html_url": "https://github.com/ROCm/ATOM/pull/266",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 261,
-      "title": "Sort benchmark summary table by Model and Max concurrency",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-04T07:04:17Z",
-      "updated_at": "2026-03-04T08:00:05Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/261",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 260,
-      "title": "CI: Optimize the cleanup in ATOM benchmark",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-04T06:36:18Z",
-      "updated_at": "2026-03-04T06:39:48Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/260",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 258,
-      "title": "fix: run all models on nightly schedule regardless of run_on_pr flag",
-      "author": "gyohuangxin",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-04T03:19:34Z",
-      "updated_at": "2026-03-04T03:23:02Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/258",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 126,
-      "title": "[1/N][feat] Make ATOM work with vLLM and SGLang",
-      "author": "zejunchen-zejun",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-12T08:50:35Z",
-      "updated_at": "2026-03-03T15:50:52Z",
-      "html_url": "https://github.com/ROCm/ATOM/pull/126",
       "labels": [],
       "draft": false
     }
