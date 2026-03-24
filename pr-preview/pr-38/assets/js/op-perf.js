@@ -111,21 +111,6 @@ function renderOpPerf(data) {
   var geoInfStr = (s.geomean_inference || 0) > 0 ? s.geomean_inference.toFixed(3) + 'x' : 'N/A';
   html += summaryBox(geoInfStr, "GeoMean (inference-weighted)");
 
-  // Compute average SOL% across all GEMM configs
-  var solSpecs = getSOLSpecs(data);
-  var amdSolSum = 0, amdSolCnt = 0, nvSolSum = 0, nvSolCnt = 0;
-  for (var si = 0; si < data.categories.length; si++) {
-    var scat = data.categories[si];
-    for (var sj = 0; sj < scat.results.length; sj++) {
-      var sol = computeSOLPercent(scat.results[sj], solSpecs);
-      if (sol.amd_sol !== null) { amdSolSum += sol.amd_sol; amdSolCnt++; }
-      if (sol.nv_sol !== null) { nvSolSum += sol.nv_sol; nvSolCnt++; }
-    }
-  }
-  var amdSolAvg = amdSolCnt > 0 ? (amdSolSum / amdSolCnt).toFixed(1) + '%' : 'N/A';
-  var nvSolAvg = nvSolCnt > 0 ? (nvSolSum / nvSolCnt).toFixed(1) + '%' : 'N/A';
-  html += summaryBox(amdSolAvg, "Avg SOL% (MI355X)");
-  html += summaryBox(nvSolAvg, "Avg SOL% (B300)");
   html += '</div>';
 
   // Per-model breakdown, grouped by MoE vs Dense
@@ -574,21 +559,6 @@ function buildChartFilter(data, id, label, field) {
 
 // ─── Category heatmap (D3.js) ───
 function buildPerfCategory(cat, stats, gpus) {
-  // Compute avg SOL% for this category
-  var solSpecs = getSOLSpecs(window._opPerfData || {});
-  var catAmdSol = 0, catAmdCnt = 0, catNvSol = 0, catNvCnt = 0;
-  for (var si = 0; si < cat.results.length; si++) {
-    var _csol = computeSOLPercent(cat.results[si], solSpecs);
-    if (_csol.amd_sol !== null) { catAmdSol += _csol.amd_sol; catAmdCnt++; }
-    if (_csol.nv_sol !== null) { catNvSol += _csol.nv_sol; catNvCnt++; }
-  }
-  var catSolStr = '';
-  if (catAmdCnt > 0 || catNvCnt > 0) {
-    var aS = catAmdCnt > 0 ? (catAmdSol / catAmdCnt).toFixed(1) + '%' : '-';
-    var nS = catNvCnt > 0 ? (catNvSol / catNvCnt).toFixed(1) + '%' : '-';
-    catSolStr = ' | SOL: AMD ' + aS + ' / NV ' + nS;
-  }
-
   var html = '<details class="oc-category" id="perf-cat-' + cat.id + '">';
   html += '<summary>';
   html += '<span class="oc-cat-name">' + escapeHtml(cat.name) + '</span>';
@@ -597,7 +567,7 @@ function buildPerfCategory(cat, stats, gpus) {
   if (stats.matched > 0) {
     html += '<span class="oc-badge-amd">AMD: ' + stats.amdWins + '</span>';
     html += '<span class="oc-badge-nv">NV: ' + stats.nvWins + '</span>';
-    html += '<span class="op-badge-ratio">GeoMean: ' + (stats.geomean > 0 ? stats.geomean.toFixed(2) + 'x' : 'N/A') + catSolStr + '</span>';
+    html += '<span class="op-badge-ratio">GeoMean: ' + (stats.geomean > 0 ? stats.geomean.toFixed(2) + 'x' : 'N/A') + '</span>';
   } else {
     html += '<span class="op-badge-ratio">NV-only data (' + cat.results.length + ' configs)</span>';
   }
@@ -753,15 +723,10 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
         if (!r) return;
         var _tpv = getPerfValues(r);
         var ratio = (_tpv.amd > 0 && _tpv.nv > 0) ? (_tpv.amd / _tpv.nv).toFixed(2) + 'x' : 'N/A';
-        var _sol = computeSOLPercent(r, getSOLSpecs(window._opPerfData || {}));
         tooltip.style.display = 'block';
         var ttHtml = '<strong>' + escapeHtml(rowKey) + '</strong><br>M=' + (r.M || r.batch || col) + '<br>';
-        if (_tpv.amd > 0) ttHtml += 'AMD: <span style="color:#58a6ff">' + _tpv.amd.toFixed(1) + ' ' + _tpv.unit + '</span>';
-        if (_sol.amd_sol !== null) ttHtml += ' <span style="color:#8b949e">(' + _sol.amd_sol.toFixed(1) + '% SOL)</span>';
-        ttHtml += '<br>';
-        if (_tpv.nv > 0) ttHtml += 'NV: <span style="color:#7ee787">' + _tpv.nv.toFixed(1) + ' ' + _tpv.unit + '</span>';
-        if (_sol.nv_sol !== null) ttHtml += ' <span style="color:#8b949e">(' + _sol.nv_sol.toFixed(1) + '% SOL)</span>';
-        ttHtml += '<br>';
+        if (_tpv.amd > 0) ttHtml += 'AMD: <span style="color:#58a6ff">' + _tpv.amd.toFixed(1) + ' ' + _tpv.unit + '</span><br>';
+        if (_tpv.nv > 0) ttHtml += 'NV: <span style="color:#7ee787">' + _tpv.nv.toFixed(1) + ' ' + _tpv.unit + '</span><br>';
         if (_tpv.amd > 0 && _tpv.nv > 0) ttHtml += 'Ratio: ' + ratio + '<br>';
         ttHtml += '<span style="color:#8b949e;font-size:10px">Click to copy repro command</span>';
         tooltip.innerHTML = ttHtml;
