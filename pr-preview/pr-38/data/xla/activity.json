@@ -1,10 +1,10 @@
 {
-  "collected_at": "2026-03-23T08:21:43Z",
+  "collected_at": "2026-03-24T08:17:39Z",
   "project": "xla",
   "repo": "openxla/xla",
   "pr_velocity": {
     "this_week": {
-      "opened": 2,
+      "opened": 1,
       "merged": 0,
       "closed": 0
     },
@@ -18,23 +18,11 @@
     "stale_prs": 0
   },
   "contributors": {
-    "active_this_week": 3,
-    "total_contributors": 3,
+    "active_this_week": 1,
+    "total_contributors": 1,
     "top_contributors": [
       {
-        "author": "Eetusjo",
-        "prs_submitted": 1,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "alekstheod",
-        "prs_submitted": 1,
-        "prs_merged": 0,
-        "commits": 0
-      },
-      {
-        "author": "magaonka-amd",
+        "author": "tsrw2048",
         "prs_submitted": 1,
         "prs_merged": 0,
         "commits": 0
@@ -45,37 +33,37 @@
   "issue_health": {
     "total_open": 0,
     "opened_this_week": 0,
-    "closed_this_week": 4,
+    "closed_this_week": 3,
     "unanswered": 0
   },
   "ci_health": {
     "rocm": {
       "total_runs": 20,
-      "succeeded": 18,
+      "succeeded": 17,
       "failed": 1,
-      "success_rate": 90.0
+      "success_rate": 85.0
     },
     "cuda": {
       "total_runs": 20,
-      "succeeded": 0,
-      "failed": 17,
-      "success_rate": 0.0
+      "succeeded": 17,
+      "failed": 2,
+      "success_rate": 85.0
     }
   },
   "ci_signal_time": {
     "rocm": {
-      "sample_size": 19,
-      "median_minutes": 2.8,
-      "p90_minutes": 24.8,
-      "min_minutes": 2.5,
-      "max_minutes": 32.7
+      "sample_size": 20,
+      "median_minutes": 10.6,
+      "p90_minutes": 33.5,
+      "min_minutes": 2.6,
+      "max_minutes": 38.6
     },
     "cuda": {
-      "sample_size": 19,
-      "median_minutes": 12.4,
-      "p90_minutes": 27.8,
-      "min_minutes": 8.7,
-      "max_minutes": 30.7
+      "sample_size": 20,
+      "median_minutes": 9.6,
+      "p90_minutes": 26.5,
+      "min_minutes": 8.3,
+      "max_minutes": 28.6
     }
   },
   "release_cadence": {

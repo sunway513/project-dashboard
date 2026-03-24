@@ -1,6 +1,56 @@
 {
-  "collected_at": "2026-03-23T08:20:13Z",
+  "collected_at": "2026-03-24T08:15:57Z",
   "issues": [
+    {
+      "number": 188087,
+      "title": "AMDGPU wave reduction intrinsics assert on 64-bit values",
+      "author": "arsenm",
+      "state": "open",
+      "created_at": "2026-03-23T17:41:58Z",
+      "updated_at": "2026-03-24T04:57:14Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/188087",
+      "labels": [
+        "backend:AMDGPU",
+        "crash-on-valid"
+      ]
+    },
+    {
+      "number": 186878,
+      "title": "[AMDGPU] asyncmark/wait.asyncmark intrinsics produce incorrect code for 3-stage software-pipelined loops",
+      "author": "jerryyin",
+      "state": "open",
+      "created_at": "2026-03-16T20:17:13Z",
+      "updated_at": "2026-03-23T18:38:59Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/186878",
+      "labels": [
+        "backend:AMDGPU"
+      ]
+    },
+    {
+      "number": 188089,
+      "title": "AMDGPU wave reduce intrinsics should support i16 and half values",
+      "author": "arsenm",
+      "state": "open",
+      "created_at": "2026-03-23T17:46:01Z",
+      "updated_at": "2026-03-23T17:46:22Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/188089",
+      "labels": [
+        "backend:AMDGPU"
+      ]
+    },
+    {
+      "number": 187996,
+      "title": "AMDGPU backend could optimize some f64 compares with constants to integer compare of the high half",
+      "author": "arsenm",
+      "state": "open",
+      "created_at": "2026-03-23T08:56:40Z",
+      "updated_at": "2026-03-23T08:57:01Z",
+      "html_url": "https://github.com/llvm/llvm-project/issues/187996",
+      "labels": [
+        "backend:AMDGPU",
+        "missed-optimization"
+      ]
+    },
     {
       "number": 182095,
       "title": "AMDGPU misses dot patterns using vector reductions",
@@ -12,18 +62,6 @@
       "labels": [
         "backend:AMDGPU",
         "missed-optimization"
-      ]
-    },
-    {
-      "number": 186878,
-      "title": "[AMDGPU] asyncmark/wait.asyncmark intrinsics produce incorrect code for 3-stage software-pipelined loops",
-      "author": "jerryyin",
-      "state": "open",
-      "created_at": "2026-03-16T20:17:13Z",
-      "updated_at": "2026-03-20T20:07:14Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/186878",
-      "labels": [
-        "backend:AMDGPU"
       ]
     },
     {
@@ -343,46 +381,6 @@
       "labels": [
         "backend:AMDGPU",
         "llvm:regalloc"
-      ]
-    },
-    {
-      "number": 175745,
-      "title": "[AMDGPU] Wrong code at -Os",
-      "author": "XChy",
-      "state": "open",
-      "created_at": "2026-01-13T11:26:52Z",
-      "updated_at": "2026-01-13T18:02:19Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/175745",
-      "labels": [
-        "backend:AMDGPU",
-        "miscompilation"
-      ]
-    },
-    {
-      "number": 170367,
-      "title": "[AMDGPU] Tool to detect race conditions?",
-      "author": "newling",
-      "state": "open",
-      "created_at": "2025-12-02T21:23:51Z",
-      "updated_at": "2026-01-02T19:09:00Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/170367",
-      "labels": [
-        "question",
-        "backend:AMDGPU"
-      ]
-    },
-    {
-      "number": 174009,
-      "title": "Improve AMDGPU codegen for copysign(x, fneg(y))",
-      "author": "arsenm",
-      "state": "open",
-      "created_at": "2025-12-30T18:00:10Z",
-      "updated_at": "2025-12-30T19:06:43Z",
-      "html_url": "https://github.com/llvm/llvm-project/issues/174009",
-      "labels": [
-        "backend:AMDGPU",
-        "missed-optimization",
-        "floating-point"
       ]
     }
   ]

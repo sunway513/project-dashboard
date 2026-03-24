@@ -1,6 +1,81 @@
 {
-  "collected_at": "2026-03-23T08:20:23Z",
+  "collected_at": "2026-03-24T08:16:10Z",
   "prs": [
+    {
+      "number": 35534,
+      "title": "[ROCm] bring gesdd for computing SVD on ROCm",
+      "author": "cj401-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T21:16:00Z",
+      "updated_at": "2026-03-23T23:58:05Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35534",
+      "labels": [
+        "enhancement",
+        "performance",
+        "jax.numpy",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 36055,
+      "title": "[ROCm] Add offload-compress flag to reduce rocm wheel size",
+      "author": "gulsumgudukbay",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T19:02:57Z",
+      "updated_at": "2026-03-23T21:24:15Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/36055",
+      "labels": [
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35785,
+      "title": "[ROCm] Fix and simplify jax rocm plugin init script",
+      "author": "alekstheod",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-10T21:06:53Z",
+      "updated_at": "2026-03-23T21:19:08Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35785",
+      "labels": [
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 36103,
+      "title": "[ROCm] Use local spawn strategy to force build locally",
+      "author": "alekstheod",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T10:51:05Z",
+      "updated_at": "2026-03-23T13:25:50Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/36103",
+      "labels": [
+        "pull ready"
+      ],
+      "draft": false
+    },
+    {
+      "number": 35995,
+      "title": "[ROCm] Add lowering for ScaledMatmul, ScaledDot",
+      "author": "shurale-nkn",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T13:41:17Z",
+      "updated_at": "2026-03-23T10:11:02Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/35995",
+      "labels": [
+        "AMD GPU"
+      ],
+      "draft": false
+    },
     {
       "number": 34135,
       "title": "[ROCm] update to test if there are GPU events when doing profiling on\u2026",
@@ -13,34 +88,6 @@
       "labels": [
         "kokoro:force-run",
         "pull ready",
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 35995,
-      "title": "[ROCm] Add lowering for ScaledMatmul, ScaledDot",
-      "author": "shurale-nkn",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-18T13:41:17Z",
-      "updated_at": "2026-03-20T20:36:51Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35995",
-      "labels": [
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 36055,
-      "title": "[ROCm] Add offload-compress flag to reduce rocm wheel size",
-      "author": "gulsumgudukbay",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T19:02:57Z",
-      "updated_at": "2026-03-20T19:48:37Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/36055",
-      "labels": [
         "AMD GPU"
       ],
       "draft": false
@@ -74,23 +121,6 @@
         "pull ready",
         "AMD GPU",
         "GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 35534,
-      "title": "[ROCm] bring gesdd for computing SVD on ROCm",
-      "author": "cj401-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T21:16:00Z",
-      "updated_at": "2026-03-20T14:42:28Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35534",
-      "labels": [
-        "enhancement",
-        "performance",
-        "jax.numpy",
-        "AMD GPU"
       ],
       "draft": false
     },
@@ -153,20 +183,6 @@
       "draft": false
     },
     {
-      "number": 35785,
-      "title": "[ROCm] Fix and simplify jax rocm plugin init script",
-      "author": "alekstheod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-10T21:06:53Z",
-      "updated_at": "2026-03-19T14:53:17Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35785",
-      "labels": [
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 35611,
       "title": "[ROCm] Skip ann_test test_pmap on ROCm due to IndivisibleError",
       "author": "AratiGanesh",
@@ -208,18 +224,6 @@
       "labels": [
         "pull ready"
       ],
-      "draft": false
-    },
-    {
-      "number": 35902,
-      "title": "[ROCm] Enable hipBLASLt in ROCm pytest CI",
-      "author": "magaonka-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-14T00:42:57Z",
-      "updated_at": "2026-03-19T08:29:28Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/35902",
-      "labels": [],
       "draft": false
     },
     {
@@ -578,36 +582,6 @@
       "created_at": "2026-01-22T16:47:47Z",
       "updated_at": "2026-02-13T22:49:38Z",
       "html_url": "https://github.com/jax-ml/jax/pull/34561",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34870,
-      "title": "[ROCm] Add ROCm backward compatibility test for lu_pivots_to_permutation",
-      "author": "AratiGanesh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-05T19:17:44Z",
-      "updated_at": "2026-02-13T10:25:01Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34870",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34501,
-      "title": "[ROCm] Enable cuda array interface test on ROCm",
-      "author": "magaonka-amd",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-01-21T00:02:17Z",
-      "updated_at": "2026-02-13T06:53:20Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34501",
       "labels": [
         "kokoro:force-run",
         "pull ready"

@@ -1,6 +1,42 @@
 {
-  "collected_at": "2026-03-23T08:20:59Z",
+  "collected_at": "2026-03-24T08:16:50Z",
   "prs": [
+    {
+      "number": 4591,
+      "title": "Support dynamic input values for range op",
+      "author": "klin2024",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-04T06:02:46Z",
+      "updated_at": "2026-03-24T07:32:29Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4591",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4677,
+      "title": "Fix FP16 overflow in GQA attention and concat_past_present buffer overflow",
+      "author": "aditya-dl",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-16T19:27:40Z",
+      "updated_at": "2026-03-24T05:51:33Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4677",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4521,
+      "title": "Correct QLinearMatMul broadcasting and QLinearConv bias quantization",
+      "author": "klin2024",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-02T08:08:20Z",
+      "updated_at": "2026-03-24T05:44:16Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4521",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 4694,
       "title": "AIMIGRAPHX-824 Set basic graph optimization for ONNX sessions in accuracy_checker.py",
@@ -8,63 +44,11 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-23T03:38:37Z",
-      "updated_at": "2026-03-23T03:42:06Z",
+      "updated_at": "2026-03-24T05:16:26Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4694",
       "labels": [
         "Continous Integration"
       ],
-      "draft": false
-    },
-    {
-      "number": 4691,
-      "title": "update Dockerfile to ubuntu 24.04",
-      "author": "kahmed10",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-21T15:44:21Z",
-      "updated_at": "2026-03-22T18:58:28Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4691",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 4692,
-      "title": "fix various typos in codebase",
-      "author": "kahmed10",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-21T16:05:59Z",
-      "updated_at": "2026-03-22T18:54:35Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4692",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4693,
-      "title": "rocMLIR Weekly Sync 2026-03-22",
-      "author": "github-actions[bot]",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-22T16:15:41Z",
-      "updated_at": "2026-03-22T16:15:43Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4693",
-      "labels": [
-        "dependencies",
-        "automated",
-        "rocMLIR"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4631,
-      "title": "[AIMIGRAPHX-578] Use Eigen 3rd party library for ref GEMMs",
-      "author": "kahmed10",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-24T23:38:34Z",
-      "updated_at": "2026-03-22T02:05:55Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4631",
-      "labels": [],
       "draft": false
     },
     {
@@ -74,10 +58,79 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-02T19:30:33Z",
-      "updated_at": "2026-03-21T03:48:51Z",
+      "updated_at": "2026-03-24T03:26:46Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4646",
       "labels": [],
       "draft": false
+    },
+    {
+      "number": 4514,
+      "title": "Add early return for element tile calculation",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-12-19T16:08:36Z",
+      "updated_at": "2026-03-24T02:45:37Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4514",
+      "labels": [
+        "simple",
+        "Cleanup"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4607,
+      "title": "Optimize 1x1 and Depthwise Convolution for Small Shapes",
+      "author": "klin2024",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-12T07:05:25Z",
+      "updated_at": "2026-03-24T01:19:14Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4607",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4696,
+      "title": "find_nop_reshapes: Remove extra assignments/inserts",
+      "author": "TedThemistokleous",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T16:05:32Z",
+      "updated_at": "2026-03-24T00:59:31Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4696",
+      "labels": [
+        "simple",
+        "Perf Improve"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4626,
+      "title": "Add debug symbols for parsed and compiler pass replaced instructions ",
+      "author": "CharlieL7",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-20T21:54:12Z",
+      "updated_at": "2026-03-24T00:32:44Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4626",
+      "labels": [
+        "enhancement",
+        "high priority"
+      ],
+      "draft": true
+    },
+    {
+      "number": 4697,
+      "title": "Add symbolic expression",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T17:33:44Z",
+      "updated_at": "2026-03-23T22:22:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4697",
+      "labels": [],
+      "draft": true
     },
     {
       "number": 4673,
@@ -86,8 +139,20 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-16T14:23:59Z",
-      "updated_at": "2026-03-21T03:00:47Z",
+      "updated_at": "2026-03-23T22:10:25Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4673",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4666,
+      "title": " jit implementation for fill",
+      "author": "bdevorem",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-13T16:29:50Z",
+      "updated_at": "2026-03-23T21:50:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4666",
       "labels": [],
       "draft": false
     },
@@ -98,26 +163,71 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-17T15:52:18Z",
-      "updated_at": "2026-03-20T21:18:11Z",
+      "updated_at": "2026-03-23T21:46:21Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4680",
       "labels": [],
       "draft": false
     },
     {
-      "number": 4690,
-      "title": "Onnxruntime Weekly Sync 2026-03-20",
-      "author": "github-actions[bot]",
+      "number": 4648,
+      "title": "Add flag to strip context",
+      "author": "pfultz2",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-20T17:22:34Z",
-      "updated_at": "2026-03-20T17:22:37Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4690",
+      "created_at": "2026-03-03T00:16:38Z",
+      "updated_at": "2026-03-23T20:12:27Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4648",
       "labels": [
-        "onnxruntime",
-        "dependencies",
-        "skip bot checks",
-        "automated"
+        "simple"
       ],
+      "draft": false
+    },
+    {
+      "number": 4653,
+      "title": "[AIMIGRAPHX-580] [AIMIGRAPHX-623] jit implementation for nonzero and scan lib",
+      "author": "bdevorem",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T17:20:59Z",
+      "updated_at": "2026-03-23T20:03:43Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4653",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4647,
+      "title": "Add kernel for fp32 channelwise convolution",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-02T21:36:20Z",
+      "updated_at": "2026-03-23T19:50:10Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4647",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4691,
+      "title": "add Dockerfile for ubuntu 24.04",
+      "author": "kahmed10",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-21T15:44:21Z",
+      "updated_at": "2026-03-23T15:09:55Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4691",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4631,
+      "title": "[AIMIGRAPHX-578] Use Eigen 3rd party library for ref GEMMs",
+      "author": "kahmed10",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-02-24T23:38:34Z",
+      "updated_at": "2026-03-23T14:19:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4631",
+      "labels": [],
       "draft": false
     },
     {
@@ -129,30 +239,6 @@
       "created_at": "2026-01-26T07:35:47Z",
       "updated_at": "2026-03-20T04:47:30Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4571",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4666,
-      "title": " jit implementation for fill",
-      "author": "bdevorem",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-13T16:29:50Z",
-      "updated_at": "2026-03-20T02:57:37Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4666",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4672,
-      "title": "[rocMLIR] Fix for inception v3 crash on Navi3x",
-      "author": "umangyadav",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-15T22:46:19Z",
-      "updated_at": "2026-03-19T19:45:40Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4672",
       "labels": [],
       "draft": false
     },
@@ -172,18 +258,6 @@
       "draft": false
     },
     {
-      "number": 4677,
-      "title": "Fix FP16 overflow in GQA attention and concat_past_present buffer overflow",
-      "author": "aditya-dl",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-16T19:27:40Z",
-      "updated_at": "2026-03-19T17:41:27Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4677",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4637,
       "title": "Adding parse for MatMulBnb4 operator and updating MultiHeadAttention operator",
       "author": "urpetkov-amd",
@@ -192,18 +266,6 @@
       "created_at": "2026-02-26T12:20:21Z",
       "updated_at": "2026-03-19T14:31:15Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4637",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4521,
-      "title": "Correct QLinearMatMul broadcasting and QLinearConv bias quantization",
-      "author": "klin2024",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-02T08:08:20Z",
-      "updated_at": "2026-03-19T13:40:34Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4521",
       "labels": [],
       "draft": false
     },
@@ -252,57 +314,6 @@
       "created_at": "2026-02-24T01:50:46Z",
       "updated_at": "2026-03-18T21:42:38Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4628",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4626,
-      "title": "Add debug symbols for parsed and compiler pass replaced instructions ",
-      "author": "CharlieL7",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-20T21:54:12Z",
-      "updated_at": "2026-03-18T17:05:38Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4626",
-      "labels": [
-        "enhancement",
-        "high priority"
-      ],
-      "draft": true
-    },
-    {
-      "number": 4607,
-      "title": "Optimize 1x1 and Depthwise Convolution for Small Shapes",
-      "author": "klin2024",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T07:05:25Z",
-      "updated_at": "2026-03-18T09:10:17Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4607",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 4591,
-      "title": "Support dynamic input values for range op",
-      "author": "klin2024",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-04T06:02:46Z",
-      "updated_at": "2026-03-18T06:09:34Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4591",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4670,
-      "title": "Fix issues with dangling references in the test framework",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-14T00:14:26Z",
-      "updated_at": "2026-03-17T22:30:35Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4670",
       "labels": [],
       "draft": false
     },
@@ -398,21 +409,6 @@
       "draft": false
     },
     {
-      "number": 4514,
-      "title": "Add early return for element tile calculation",
-      "author": "TedThemistokleous",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-12-19T16:08:36Z",
-      "updated_at": "2026-03-12T23:41:57Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4514",
-      "labels": [
-        "simple",
-        "Cleanup"
-      ],
-      "draft": false
-    },
-    {
       "number": 3766,
       "title": "Remove rocmlir unsupported reduce types",
       "author": "dhernandez0",
@@ -435,18 +431,6 @@
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4651",
       "labels": [],
       "draft": false
-    },
-    {
-      "number": 4653,
-      "title": "[AIMIGRAPHX-580] [AIMIGRAPHX-623] jit implementation for nonzero and scan lib",
-      "author": "bdevorem",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-06T17:20:59Z",
-      "updated_at": "2026-03-12T17:14:55Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4653",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 2224,
@@ -489,18 +473,6 @@
       "draft": false
     },
     {
-      "number": 4647,
-      "title": "Add kernel for fp32 channelwise convolution",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T21:36:20Z",
-      "updated_at": "2026-03-09T18:04:19Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4647",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4639,
       "title": "yolo26 example",
       "author": "alexsu52",
@@ -526,20 +498,6 @@
         "Perf Improve"
       ],
       "draft": true
-    },
-    {
-      "number": 4648,
-      "title": "Add flag to strip context",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-03T00:16:38Z",
-      "updated_at": "2026-03-04T15:32:13Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4648",
-      "labels": [
-        "simple"
-      ],
-      "draft": false
     },
     {
       "number": 4563,
@@ -1070,6 +1028,104 @@
       "created_at": "2024-09-22T22:28:36Z",
       "updated_at": "2024-10-21T22:48:16Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/3468",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4690,
+      "title": "Onnxruntime Weekly Sync 2026-03-20",
+      "author": "github-actions[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T17:22:34Z",
+      "updated_at": "2026-03-24T05:14:39Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4690",
+      "labels": [
+        "onnxruntime",
+        "dependencies",
+        "skip bot checks",
+        "automated"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4692,
+      "title": "fix various typos in codebase",
+      "author": "kahmed10",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-21T16:05:59Z",
+      "updated_at": "2026-03-24T05:14:09Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4692",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4698,
+      "title": "Update gitignore",
+      "author": "CharlieL7",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T23:57:58Z",
+      "updated_at": "2026-03-24T03:51:45Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4698",
+      "labels": [
+        "simple",
+        "skip bot checks"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4670,
+      "title": "Fix issues with dangling references in the test framework",
+      "author": "pfultz2",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-14T00:14:26Z",
+      "updated_at": "2026-03-23T20:58:56Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4670",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4693,
+      "title": "rocMLIR Weekly Sync 2026-03-22",
+      "author": "github-actions[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-22T16:15:41Z",
+      "updated_at": "2026-03-23T13:38:15Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4693",
+      "labels": [
+        "dependencies",
+        "automated",
+        "rocMLIR"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4695,
+      "title": "Bump rocm-docs-core from 1.32.1 to 1.33.1 in /docs/sphinx",
+      "author": "dependabot[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T12:45:32Z",
+      "updated_at": "2026-03-23T13:36:51Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4695",
+      "labels": [
+        "documentation"
+      ],
+      "draft": false
+    },
+    {
+      "number": 4672,
+      "title": "[rocMLIR] Fix for inception v3 crash on Navi3x",
+      "author": "umangyadav",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-15T22:46:19Z",
+      "updated_at": "2026-03-23T13:29:28Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4672",
       "labels": [],
       "draft": false
     },
@@ -1999,100 +2055,6 @@
       "created_at": "2026-02-10T20:53:49Z",
       "updated_at": "2026-02-11T23:39:32Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4601",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4603,
-      "title": "Prevent propagate precision across precision boundaries for all ops",
-      "author": "kahmed10",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-11T06:48:35Z",
-      "updated_at": "2026-02-11T23:38:37Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4603",
-      "labels": [
-        "bugfix",
-        "high priority"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4604,
-      "title": "[AIMIGRAPHX-563] Fix compilation issue on RHEL systems",
-      "author": "eddieliao",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-11T19:56:44Z",
-      "updated_at": "2026-02-11T23:36:20Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4604",
-      "labels": [
-        "bugfix",
-        "RHEL",
-        "Changelog: Not Applicable"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4341,
-      "title": "Breakout get onnx op list in MIGraphX Cpp API",
-      "author": "TedThemistokleous",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-09-30T21:58:39Z",
-      "updated_at": "2026-02-11T20:00:41Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4341",
-      "labels": [
-        "enhancement",
-        "high priority"
-      ],
-      "draft": false
-    },
-    {
-      "number": 4594,
-      "title": "Fix bug in reshape_lazy calculation",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-05T22:30:11Z",
-      "updated_at": "2026-02-10T20:34:31Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4594",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4382,
-      "title": "[AI generated] AIMIGRAPHX-236 Updated Resize op to support linear mode",
-      "author": "kahmed10",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-10-14T21:32:06Z",
-      "updated_at": "2026-02-10T05:30:07Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4382",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4431,
-      "title": "7.1.1 Generated file update",
-      "author": "causten",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-07T17:36:51Z",
-      "updated_at": "2026-02-09T16:30:32Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4431",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4597,
-      "title": "Fix mutable var check",
-      "author": "pfultz2",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-06T23:36:22Z",
-      "updated_at": "2026-02-07T02:55:28Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4597",
       "labels": [],
       "draft": false
     }

@@ -1,6 +1,42 @@
 {
-  "collected_at": "2026-03-23T08:21:13Z",
+  "collected_at": "2026-03-24T08:17:07Z",
   "prs": [
+    {
+      "number": 217,
+      "title": "ci: add Docker container with private registry credentials",
+      "author": "jhchouuu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-24T06:51:42Z",
+      "updated_at": "2026-03-24T07:11:54Z",
+      "html_url": "https://github.com/ROCm/mori/pull/217",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 205,
+      "title": "Optimize XGMI `batch_write`/`batch_read` for discrete (non-contiguous) buffer transfers by reducing per-segment overhead.",
+      "author": "inkcherry",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-19T10:46:39Z",
+      "updated_at": "2026-03-24T06:42:08Z",
+      "html_url": "https://github.com/ROCm/mori/pull/205",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 200,
+      "title": "Add ReduceScatter SDMA implementation and AG/RS benchmarks",
+      "author": "amd-andycha",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-18T09:54:13Z",
+      "updated_at": "2026-03-24T03:51:18Z",
+      "html_url": "https://github.com/ROCm/mori/pull/200",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 209,
       "title": "Feat: UMBP Distributed integration",
@@ -14,18 +50,6 @@
       "draft": false
     },
     {
-      "number": 205,
-      "title": "Optimize XGMI `batch_write`/`batch_read` for discrete (non-contiguous) buffer transfers by reducing per-segment overhead.",
-      "author": "inkcherry",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T10:46:39Z",
-      "updated_at": "2026-03-19T11:01:13Z",
-      "html_url": "https://github.com/ROCm/mori/pull/205",
-      "labels": [],
-      "draft": true
-    },
-    {
       "number": 202,
       "title": "Update Docker environment for MI355X benchmark reproducibility",
       "author": "amd-andycha",
@@ -34,18 +58,6 @@
       "created_at": "2026-03-19T03:59:06Z",
       "updated_at": "2026-03-19T03:59:06Z",
       "html_url": "https://github.com/ROCm/mori/pull/202",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 200,
-      "title": "Add ReduceScatter SDMA implementation and AG/RS benchmarks",
-      "author": "amd-andycha",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-18T09:54:13Z",
-      "updated_at": "2026-03-18T12:33:20Z",
-      "html_url": "https://github.com/ROCm/mori/pull/200",
       "labels": [],
       "draft": false
     },
@@ -118,6 +130,78 @@
       "created_at": "2025-10-28T06:17:21Z",
       "updated_at": "2026-01-08T09:18:21Z",
       "html_url": "https://github.com/ROCm/mori/pull/99",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 216,
+      "title": "fix bench_umbp_spdk: steady_clock, interpolated percentiles, wall-clo\u2026",
+      "author": "zhangfei829",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-24T03:48:11Z",
+      "updated_at": "2026-03-24T03:48:55Z",
+      "html_url": "https://github.com/ROCm/mori/pull/216",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 213,
+      "title": "support SPDK storge backend",
+      "author": "zhangfei829",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T11:58:16Z",
+      "updated_at": "2026-03-24T03:08:32Z",
+      "html_url": "https://github.com/ROCm/mori/pull/213",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 183,
+      "title": "[IO] Add QP param options/env",
+      "author": "maning00",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-04T09:27:28Z",
+      "updated_at": "2026-03-23T22:31:48Z",
+      "html_url": "https://github.com/ROCm/mori/pull/183",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 215,
+      "title": "Fix(tensor_utils): support float8_e8m0fnu in from_gpu_ptr",
+      "author": "jhchouuu",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T13:38:17Z",
+      "updated_at": "2026-03-23T13:40:22Z",
+      "html_url": "https://github.com/ROCm/mori/pull/215",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 214,
+      "title": "Refactor bench_umbp output",
+      "author": "maning00",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T13:23:41Z",
+      "updated_at": "2026-03-23T13:29:05Z",
+      "html_url": "https://github.com/ROCm/mori/pull/214",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 212,
+      "title": "Fix: enhance mlx5 find logic for correct NIC detection",
+      "author": "jhchouuu",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T09:47:28Z",
+      "updated_at": "2026-03-23T09:47:55Z",
+      "html_url": "https://github.com/ROCm/mori/pull/212",
       "labels": [],
       "draft": false
     },
@@ -442,18 +526,6 @@
       "created_at": "2026-03-04T15:18:22Z",
       "updated_at": "2026-03-05T02:38:29Z",
       "html_url": "https://github.com/ROCm/mori/pull/184",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 183,
-      "title": "[IO] Add QP param options/env",
-      "author": "maning00",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-04T09:27:28Z",
-      "updated_at": "2026-03-04T09:58:12Z",
-      "html_url": "https://github.com/ROCm/mori/pull/183",
       "labels": [],
       "draft": false
     },
@@ -1102,66 +1174,6 @@
       "created_at": "2025-12-01T08:28:05Z",
       "updated_at": "2025-12-03T06:04:47Z",
       "html_url": "https://github.com/ROCm/mori/pull/116",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 113,
-      "title": "[io] Fix: GID auto-detection, AINIC support, and enhance stability",
-      "author": "maning00",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-21T10:29:28Z",
-      "updated_at": "2025-11-27T06:44:03Z",
-      "html_url": "https://github.com/ROCm/mori/pull/113",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 112,
-      "title": "Fix: gfx950 compilation error",
-      "author": "TianDi101",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-19T08:19:49Z",
-      "updated_at": "2025-11-24T03:59:19Z",
-      "html_url": "https://github.com/ROCm/mori/pull/112",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 111,
-      "title": "Wip ionic ccqe",
-      "author": "zhangfei829",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-19T02:52:51Z",
-      "updated_at": "2025-11-21T05:57:50Z",
-      "html_url": "https://github.com/ROCm/mori/pull/111",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 109,
-      "title": "Fix: none dispatch weights when local token number is 0",
-      "author": "TianDi101",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-11-18T12:25:18Z",
-      "updated_at": "2025-11-20T02:46:44Z",
-      "html_url": "https://github.com/ROCm/mori/pull/109",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 164,
-      "title": "Add comprehensive documentation guides and improve existing docs",
-      "author": "sunway513",
-      "state": "closed",
-      "merged": false,
-      "created_at": "2026-02-08T04:44:52Z",
-      "updated_at": "2026-03-10T03:35:24Z",
-      "html_url": "https://github.com/ROCm/mori/pull/164",
       "labels": [],
       "draft": false
     }
