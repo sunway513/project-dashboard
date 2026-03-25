@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-24T08:19:15Z",
+  "collected_at": "2026-03-25T08:19:04Z",
   "workflows": {
     "Clang Tests": {
       "workflow_id": 1013963,
@@ -212,11 +212,11 @@
     "libclang ABI Tests": {
       "workflow_id": 5540927,
       "latest_run": {
-        "id": 23454395883,
+        "id": 23509374981,
         "conclusion": "success",
-        "duration_minutes": 83.1,
-        "started_at": "2026-03-23T18:46:36Z",
-        "html_url": "https://github.com/llvm/llvm-project/actions/runs/23454395883"
+        "duration_minutes": 81.5,
+        "started_at": "2026-03-24T19:53:45Z",
+        "html_url": "https://github.com/llvm/llvm-project/actions/runs/23509374981"
       },
       "stats": {
         "sample_size": 17,
@@ -226,6 +226,12 @@
         "max_minutes": 163.7
       },
       "recent_runs": [
+        {
+          "id": 23509374981,
+          "conclusion": "success",
+          "duration_minutes": 81.5,
+          "date": "2026-03-24"
+        },
         {
           "id": 23454395883,
           "conclusion": "success",
@@ -339,17 +345,11 @@
           "conclusion": "success",
           "duration_minutes": 163.7,
           "date": "2026-03-12"
-        },
-        {
-          "id": 23028707020,
-          "conclusion": "success",
-          "duration_minutes": 83.0,
-          "date": "2026-03-12"
         }
       ],
       "bottleneck_job": {
-        "name": "abi-dump (build-latest)",
-        "duration_minutes": 79.3
+        "name": "abi-dump (build-baseline)",
+        "duration_minutes": 78.7
       }
     }
   }
