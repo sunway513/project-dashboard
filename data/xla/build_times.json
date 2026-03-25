@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-24T08:19:27Z",
+  "collected_at": "2026-03-25T08:19:18Z",
   "workflows": {
     "Autorun CI for OpenXLA Public Members": {
       "workflow_id": 50831922,
@@ -93,145 +93,33 @@
     "Bazel Dependency Violations": {
       "workflow_id": 116752770,
       "latest_run": {
-        "id": 23479406093,
-        "conclusion": "success",
-        "duration_minutes": 7.5,
-        "started_at": "2026-03-24T08:10:06Z",
-        "html_url": "https://github.com/openxla/xla/actions/runs/23479406093"
+        "id": 23530967322,
+        "conclusion": "action_required",
+        "duration_minutes": 0.0,
+        "started_at": "2026-03-25T08:04:06Z",
+        "html_url": "https://github.com/openxla/xla/actions/runs/23530967322"
       },
       "stats": {
-        "sample_size": 20,
+        "sample_size": 2,
         "median_minutes": 7.5,
-        "p90_minutes": 8.8,
+        "p90_minutes": 7.7,
         "min_minutes": 7.2,
-        "max_minutes": 9.2
+        "max_minutes": 7.7
       },
       "recent_runs": [
         {
-          "id": 23479406093,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23479405709,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23479096362,
+          "id": 23528205284,
           "conclusion": "success",
           "duration_minutes": 7.2,
-          "date": "2026-03-24"
+          "date": "2026-03-25"
         },
         {
-          "id": 23478847977,
+          "id": 23527999950,
           "conclusion": "success",
           "duration_minutes": 7.7,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23478479375,
-          "conclusion": "success",
-          "duration_minutes": 7.6,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23478305489,
-          "conclusion": "success",
-          "duration_minutes": 9.2,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477698899,
-          "conclusion": "success",
-          "duration_minutes": 7.3,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477689961,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477690288,
-          "conclusion": "success",
-          "duration_minutes": 8.8,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477498883,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477482598,
-          "conclusion": "success",
-          "duration_minutes": 8.2,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477478369,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477121979,
-          "conclusion": "success",
-          "duration_minutes": 7.3,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23477121477,
-          "conclusion": "success",
-          "duration_minutes": 7.6,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23476904029,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23476691798,
-          "conclusion": "success",
-          "duration_minutes": 7.4,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23476665496,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23476659963,
-          "conclusion": "success",
-          "duration_minutes": 7.3,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23476635951,
-          "conclusion": "success",
-          "duration_minutes": 7.5,
-          "date": "2026-03-24"
-        },
-        {
-          "id": 23476513676,
-          "conclusion": "success",
-          "duration_minutes": 8.2,
-          "date": "2026-03-24"
+          "date": "2026-03-25"
         }
-      ],
-      "bottleneck_job": {
-        "name": "no-gpu-targets-in-cpu-build",
-        "duration_minutes": 7.5
-      }
+      ]
     }
   }
 }
