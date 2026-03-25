@@ -209,11 +209,33 @@ def comment_issue(issue_number, body):
 # ---------------------------------------------------------------------------
 
 def notify_teams(message):
-    """Post a message to Teams via Incoming Webhook."""
+    """Post a message to Teams via Incoming Webhook (Adaptive Card format)."""
     if not TEAMS_WEBHOOK_URL:
         return
     try:
-        payload = json.dumps({"text": message})
+        card = {
+            "type": "message",
+            "attachments": [
+                {
+                    "contentType": "application/vnd.microsoft.card.adaptive",
+                    "content": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.4",
+                        "body": [
+                            {
+                                "type": "TextBlock",
+                                "text": message,
+                                "wrap": True,
+                                "weight": "Bolder",
+                                "size": "Medium",
+                            }
+                        ],
+                    },
+                }
+            ],
+        }
+        payload = json.dumps(card)
         subprocess.run(
             ["curl", "-sS", "-H", "Content-Type: application/json",
              "-d", payload, TEAMS_WEBHOOK_URL],
