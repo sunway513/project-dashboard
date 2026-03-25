@@ -1,0 +1,20 @@
+name: "GPU Claim"
+description: "Reserve the shared GPU for your work"
+labels: ["gpu-request", "claim"]
+body:
+  - type: input
+    id: duration
+    attributes:
+      label: Estimated duration
+      description: "How long do you need the GPU? (e.g., 2h, 30m, 4h)"
+      placeholder: "2h"
+    validations:
+      required: true
+  - type: input
+    id: workload
+    attributes:
+      label: Workload description
+      description: "Brief description of what you'll be running"
+      placeholder: "vllm benchmark on DeepSeek"
+    validations:
+      required: false

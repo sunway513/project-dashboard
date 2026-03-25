@@ -1,0 +1,12 @@
+name: "GPU Release"
+description: "Release your GPU reservation"
+labels: ["gpu-request", "release"]
+body:
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: "Any notes about your session (results, issues encountered, etc.)"
+      placeholder: "Finished benchmark run, no issues"
+    validations:
+      required: false

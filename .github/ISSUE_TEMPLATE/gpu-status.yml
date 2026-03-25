@@ -1,0 +1,7 @@
+name: "GPU Status"
+description: "Check current GPU reservation status and queue"
+labels: ["gpu-request", "status"]
+body:
+  - type: markdown
+    attributes:
+      value: "Just submit this issue — the bot will reply with current GPU status and close it."
