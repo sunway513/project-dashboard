@@ -144,7 +144,7 @@ function renderOpPerf(data) {
 
   // Chart grid: win/loss bar + ratio line
   html += '<div class="op-perf-charts-grid">';
-  html += '<div class="op-chart-card"><h3>Win / Loss by Category</h3>';
+  html += '<div class="op-chart-card"><h3>GeoMean Ratio by Category (>100% = AMD faster)</h3>';
   html += '<div class="op-chart-wrap"><canvas id="chart-winloss"></canvas></div></div>';
   html += '<div class="op-chart-card"><h3>Performance Ratio vs Batch Size</h3>';
   html += '<div class="op-perf-chart-filters">';
@@ -286,43 +286,121 @@ function summaryBox(num, label) {
   return '<div class="oc-summary-box"><div class="oc-summary-num">' + num + '</div><div class="oc-summary-label">' + label + '</div></div>';
 }
 
-// ─── Chart 1: Win/Loss stacked bar ───
+// ─── Chart 1: Category GeoMean + Win/Loss ───
 function renderWinLossChart(data) {
   destroyChart('winloss');
   var canvas = document.getElementById('chart-winloss');
   if (!canvas) return;
 
   var labels = [];
-  var amdData = [], nvData = [], tieData = [];
+  var geoData = [];
+  var barColors = [];
+  var annotations = [];
+
   for (var c = 0; c < data.categories.length; c++) {
     var cat = data.categories[c];
     var s = computeCatStats(cat.results);
+    if (s.matched === 0) continue;
+    var geoPct = s.geomean * 100; // e.g. 1.2x -> 120%
     labels.push(cat.name);
-    amdData.push(s.amdWins);
-    nvData.push(s.nvWins);
-    tieData.push(s.matched - s.amdWins - s.nvWins);
+    geoData.push(geoPct);
+    // Blue if AMD wins (>105%), green if NV wins (<95%), gray if tie
+    if (geoPct > 105) barColors.push(CHART_COLORS.amd);
+    else if (geoPct < 95) barColors.push(CHART_COLORS.nv);
+    else barColors.push(CHART_COLORS.tie);
+    annotations.push('AMD ' + s.amdWins + ' / NV ' + s.nvWins + ' (' + s.matched + ')');
   }
+
+  // Sort by geomean descending
+  var indices = labels.map(function(_, i) { return i; });
+  indices.sort(function(a, b) { return geoData[b] - geoData[a]; });
+  labels = indices.map(function(i) { return labels[i]; });
+  geoData = indices.map(function(i) { return geoData[i]; });
+  barColors = indices.map(function(i) { return barColors[i]; });
+  annotations = indices.map(function(i) { return annotations[i]; });
 
   window._opPerfCharts['winloss'] = new Chart(canvas, {
     type: 'bar',
     data: {
       labels: labels,
-      datasets: [
-        { label: 'AMD Wins', data: amdData, backgroundColor: CHART_COLORS.amd },
-        { label: 'Tie (±5%)', data: tieData, backgroundColor: CHART_COLORS.tie },
-        { label: 'NV Wins', data: nvData, backgroundColor: CHART_COLORS.nv },
-      ]
+      datasets: [{
+        label: 'GeoMean AMD/NV (%)',
+        data: geoData,
+        backgroundColor: barColors,
+        borderColor: barColors.map(function(c) { return c.replace('0.8', '1.0'); }),
+        borderWidth: 1,
+      }]
     },
     options: Object.assign({}, chartDarkDefaults(), {
       indexAxis: 'y',
       scales: {
-        x: { stacked: true, ticks: { color: CHART_COLORS.text }, grid: { color: CHART_COLORS.grid } },
-        y: { stacked: true, ticks: { color: CHART_COLORS.textBright, font: { size: 12 } }, grid: { display: false } }
+        x: {
+          min: 0,
+          ticks: {
+            color: CHART_COLORS.text,
+            callback: function(v) { return v + '%'; }
+          },
+          grid: { color: CHART_COLORS.grid },
+          title: { display: true, text: 'GeoMean Ratio (100% = parity)', color: CHART_COLORS.text }
+        },
+        y: {
+          ticks: { color: CHART_COLORS.textBright, font: { size: 11 } },
+          grid: { display: false }
+        }
       },
       plugins: Object.assign({}, chartDarkDefaults().plugins, {
-        legend: { position: 'bottom', labels: { color: CHART_COLORS.textBright, usePointStyle: true, pointStyle: 'rect' } }
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#161b22',
+          borderColor: '#30363d',
+          borderWidth: 1,
+          titleColor: '#e6edf3',
+          bodyColor: '#e6edf3',
+          callbacks: {
+            label: function(ctx) {
+              var idx = ctx.dataIndex;
+              return ctx.parsed.x.toFixed(1) + '% — ' + annotations[idx];
+            }
+          }
+        },
+        // Draw parity line at 100% and annotations
+        annotation: undefined
       })
-    })
+    }),
+    plugins: [{
+      id: 'parityLine',
+      afterDraw: function(chart) {
+        var ctx = chart.ctx;
+        var xScale = chart.scales.x;
+        var yScale = chart.scales.y;
+        // Draw 100% parity line
+        var x100 = xScale.getPixelForValue(100);
+        ctx.save();
+        ctx.strokeStyle = '#8b949e';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([6, 4]);
+        ctx.beginPath();
+        ctx.moveTo(x100, yScale.top);
+        ctx.lineTo(x100, yScale.bottom);
+        ctx.stroke();
+        ctx.restore();
+
+        // Draw geomean % label at end of each bar
+        ctx.save();
+        ctx.font = '11px SFMono-Regular, Consolas, monospace';
+        ctx.fillStyle = '#e6edf3';
+        ctx.textBaseline = 'middle';
+        for (var i = 0; i < geoData.length; i++) {
+          var val = geoData[i];
+          var xPos = xScale.getPixelForValue(val);
+          var yPos = yScale.getPixelForValue(i);
+          var label = val.toFixed(0) + '%';
+          ctx.textAlign = 'left';
+          ctx.fillText(label, xPos + 6, yPos);
+        }
+        ctx.restore();
+      }
+    }]
   });
 }
 
