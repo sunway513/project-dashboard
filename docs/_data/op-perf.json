@@ -55760,6 +55760,61 @@
           "nv_tflops": 1153.93,
           "amd_ms": 0.0,
           "nv_ms": 0.0
+        },
+        {
+          "model": "VAE",
+          "op": "conv_transpose2d",
+          "label": "up 512->256 128x128",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 851.0,
+          "nv_tflops": 1847.3,
+          "amd_ms": 0.182,
+          "nv_ms": 0.084
+        },
+        {
+          "model": "VAE",
+          "op": "conv_transpose2d",
+          "label": "up 256->128 256x256",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 461.3,
+          "nv_tflops": 1455.4,
+          "amd_ms": 0.335,
+          "nv_ms": 0.106
+        },
+        {
+          "model": "VAE",
+          "op": "conv_transpose2d",
+          "label": "up 512->512 128x128",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 1222.3,
+          "nv_tflops": 2730.9,
+          "amd_ms": 0.253,
+          "nv_ms": 0.113
+        },
+        {
+          "model": "VAE",
+          "op": "conv_transpose2d",
+          "label": "up 128->128 512x512",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 629.8,
+          "nv_tflops": 912.6,
+          "amd_ms": 0.491,
+          "nv_ms": 0.339
+        },
+        {
+          "model": "VAE",
+          "op": "conv_transpose2d",
+          "label": "small 64->64 256x256",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 337.8,
+          "nv_tflops": 234.5,
+          "amd_ms": 0.057,
+          "nv_ms": 0.082
         }
       ]
     },
@@ -59430,7 +59485,7 @@
     }
   ],
   "summary": {
-    "total_configs": 4522,
+    "total_configs": 4527,
     "operators": 13,
     "comparable": 3392,
     "geomean": 0.9397,
