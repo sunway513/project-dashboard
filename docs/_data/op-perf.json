@@ -56560,138 +56560,6 @@
           "nv_ms": 0.0
         },
         {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_cross_attn",
-          "M": 1,
-          "tp": 1,
-          "amd_tflops": 66.6,
-          "nv_tflops": 128.8,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_cross_attn",
-          "M": 2,
-          "tp": 1,
-          "amd_tflops": 125.63,
-          "nv_tflops": 140.13,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_cross_attn",
-          "M": 4,
-          "tp": 1,
-          "amd_tflops": 196.02,
-          "nv_tflops": 193.48,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_cross_attn",
-          "M": 8,
-          "tp": 1,
-          "amd_tflops": 243.82,
-          "nv_tflops": 241.94,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_self",
-          "M": 1,
-          "tp": 1,
-          "amd_tflops": 0.1,
-          "nv_tflops": 0.09,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_self",
-          "M": 2,
-          "tp": 1,
-          "amd_tflops": 0.2,
-          "nv_tflops": 0.2,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_self",
-          "M": 4,
-          "tp": 1,
-          "amd_tflops": 0.39,
-          "nv_tflops": 0.37,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_self",
-          "M": 8,
-          "tp": 1,
-          "amd_tflops": 0.79,
-          "nv_tflops": 0.81,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 1,
-          "tp": 1,
-          "amd_tflops": 0.17,
-          "nv_tflops": 0.3,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 2,
-          "tp": 1,
-          "amd_tflops": 0.33,
-          "nv_tflops": 0.6,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 4,
-          "tp": 1,
-          "amd_tflops": 0.66,
-          "nv_tflops": 1.2,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 8,
-          "tp": 1,
-          "amd_tflops": 1.29,
-          "nv_tflops": 2.1,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
           "model": "FLUX.1-dev",
           "op": "self_attention",
           "label": "joint_attn_1024x1024",
@@ -58102,178 +57970,101 @@
         {
           "model": "Whisper-large-v3",
           "op": "self_attention",
-          "label": "encoder_self_attn",
+          "label": "enc_self",
           "M": 1,
           "tp": 1,
-          "amd_tflops": 39.56,
-          "nv_tflops": 234.41,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 168.8,
+          "nv_tflops": 252.0,
+          "amd_ms": 0.068,
+          "nv_ms": 0.046
         },
         {
           "model": "Whisper-large-v3",
           "op": "self_attention",
-          "label": "encoder_self_attn",
-          "M": 2,
-          "tp": 1,
-          "amd_tflops": 81.5,
-          "nv_tflops": 250.81,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "self_attention",
-          "label": "encoder_self_attn",
+          "label": "enc_self",
           "M": 4,
           "tp": 1,
-          "amd_tflops": 113.76,
-          "nv_tflops": 295.52,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 471.1,
+          "nv_tflops": 302.0,
+          "amd_ms": 0.098,
+          "nv_ms": 0.153
         },
         {
           "model": "Whisper-large-v3",
           "op": "self_attention",
-          "label": "encoder_self_attn",
+          "label": "enc_self",
           "M": 8,
           "tp": 1,
-          "amd_tflops": 143.02,
-          "nv_tflops": 322.26,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 407.0,
+          "nv_tflops": 326.6,
+          "amd_ms": 0.226,
+          "nv_ms": 0.282
         },
         {
           "model": "Whisper-large-v3",
           "op": "self_attention",
-          "label": "decoder_self_attn",
+          "label": "dec_self",
           "M": 1,
           "tp": 1,
-          "amd_tflops": 7.67,
-          "nv_tflops": 19.6,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 36.9,
+          "nv_tflops": 69.8,
+          "amd_ms": 0.028,
+          "nv_ms": 0.015
         },
         {
           "model": "Whisper-large-v3",
           "op": "self_attention",
-          "label": "decoder_self_attn",
-          "M": 2,
-          "tp": 1,
-          "amd_tflops": 13.83,
-          "nv_tflops": 43.77,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "self_attention",
-          "label": "decoder_self_attn",
+          "label": "dec_self",
           "M": 4,
           "tp": 1,
-          "amd_tflops": 19.95,
-          "nv_tflops": 75.3,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 99.4,
+          "nv_tflops": 174.9,
+          "amd_ms": 0.041,
+          "nv_ms": 0.024
         },
         {
           "model": "Whisper-large-v3",
           "op": "self_attention",
-          "label": "decoder_self_attn",
+          "label": "dec_self",
           "M": 8,
           "tp": 1,
-          "amd_tflops": 27.09,
-          "nv_tflops": 84.73,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 173.8,
+          "nv_tflops": 185.4,
+          "amd_ms": 0.047,
+          "nv_ms": 0.044
         },
         {
           "model": "Whisper-large-v3",
           "op": "cross_attention",
-          "label": "decoder_cross_attn",
+          "label": "dec_cross",
           "M": 1,
           "tp": 1,
-          "amd_tflops": 55.26,
-          "nv_tflops": 133.61,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 73.8,
+          "nv_tflops": 162.2,
+          "amd_ms": 0.047,
+          "nv_ms": 0.021
         },
         {
           "model": "Whisper-large-v3",
           "op": "cross_attention",
-          "label": "decoder_cross_attn",
-          "M": 2,
-          "tp": 1,
-          "amd_tflops": 124.19,
-          "nv_tflops": 140.02,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_cross_attn",
+          "label": "dec_cross",
           "M": 4,
           "tp": 1,
-          "amd_tflops": 194.22,
-          "nv_tflops": 193.63,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 204.9,
+          "nv_tflops": 204.9,
+          "amd_ms": 0.054,
+          "nv_ms": 0.067
         },
         {
           "model": "Whisper-large-v3",
           "op": "cross_attention",
-          "label": "decoder_cross_attn",
+          "label": "dec_cross",
           "M": 8,
           "tp": 1,
-          "amd_tflops": 240.05,
-          "nv_tflops": 241.92,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 1,
-          "tp": 1,
-          "amd_tflops": 0.17,
-          "nv_tflops": 0.3,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 2,
-          "tp": 1,
-          "amd_tflops": 0.33,
-          "nv_tflops": 0.6,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 4,
-          "tp": 1,
-          "amd_tflops": 0.67,
-          "nv_tflops": 1.21,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
-        },
-        {
-          "model": "Whisper-large-v3",
-          "op": "cross_attention",
-          "label": "decoder_decode_cross",
-          "M": 8,
-          "tp": 1,
-          "amd_tflops": 1.29,
-          "nv_tflops": 2.1,
-          "amd_ms": 0.0,
-          "nv_ms": 0.0
+          "amd_tflops": 250.4,
+          "nv_tflops": 250.4,
+          "amd_ms": 0.088,
+          "nv_ms": 0.11
         }
       ]
     },
@@ -59639,7 +59430,7 @@
     }
   ],
   "summary": {
-    "total_configs": 4541,
+    "total_configs": 4522,
     "operators": 13,
     "comparable": 3392,
     "geomean": 0.9397,
