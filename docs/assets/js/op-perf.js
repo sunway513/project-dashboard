@@ -803,7 +803,14 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
         var ratio = (_tpv.amd > 0 && _tpv.nv > 0) ? (_tpv.amd / _tpv.nv).toFixed(2) + 'x' : 'N/A';
         tooltip.style.display = 'block';
         var ttHtml = '<strong>' + escapeHtml(rowKey) + '</strong><br>M=' + (r.M || r.batch || col) + '<br>';
-        if (_tpv.amd > 0) ttHtml += 'AMD: <span style="color:#58a6ff">' + _tpv.amd.toFixed(1) + ' ' + _tpv.unit + '</span><br>';
+        if (_tpv.amd > 0) {
+          ttHtml += 'AMD: <span style="color:#58a6ff">' + _tpv.amd.toFixed(1) + ' ' + _tpv.unit + '</span>';
+          if (r.amd_backend) ttHtml += ' <span style="color:#8b949e">[' + r.amd_backend + ']</span>';
+          ttHtml += '<br>';
+        }
+        if (r.amd_tflops_hipblaslt && r.amd_tflops_hipblaslt !== _tpv.amd) {
+          ttHtml += '<span style="color:#8b949e;font-size:10px">hipBLASLt: ' + r.amd_tflops_hipblaslt.toFixed(1) + ' ' + _tpv.unit + '</span><br>';
+        }
         if (_tpv.nv > 0) ttHtml += 'NV: <span style="color:#7ee787">' + _tpv.nv.toFixed(1) + ' ' + _tpv.unit + '</span><br>';
         if (_tpv.amd > 0 && _tpv.nv > 0) ttHtml += 'Ratio: ' + ratio + '<br>';
         ttHtml += '<span style="color:#8b949e;font-size:10px">Click to copy repro command</span>';
