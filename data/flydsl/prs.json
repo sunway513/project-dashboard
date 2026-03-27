@@ -1,39 +1,27 @@
 {
-  "collected_at": "2026-03-26T08:19:37Z",
+  "collected_at": "2026-03-27T08:17:21Z",
   "prs": [
     {
-      "number": 291,
-      "title": "Add immediate offset support to buffer_load and buffer_store ops",
-      "author": "ruanjm",
+      "number": 297,
+      "title": "[FEAT] Add ir.Value caster for dsl types",
+      "author": "sjfeng1999",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-26T08:19:26Z",
-      "updated_at": "2026-03-26T08:19:27Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/291",
+      "created_at": "2026-03-27T07:06:44Z",
+      "updated_at": "2026-03-27T07:43:34Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/297",
       "labels": [],
       "draft": false
     },
     {
-      "number": 290,
-      "title": "Remove redundant _create_i64_constant",
-      "author": "wangxunx",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-26T07:41:45Z",
-      "updated_at": "2026-03-26T07:57:08Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/290",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 288,
-      "title": "add(rocdl): Support pointer casts and bf16 16x16x16 MFMA",
+      "number": 296,
+      "title": "feat(debug): dump LLVM IR when FLYDSL_DUMP_IR=1",
       "author": "fsx950223",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-26T05:20:19Z",
-      "updated_at": "2026-03-26T07:45:25Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/288",
+      "created_at": "2026-03-27T05:55:54Z",
+      "updated_at": "2026-03-27T07:07:53Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/296",
       "labels": [],
       "draft": false
     },
@@ -44,8 +32,20 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-26T06:30:46Z",
-      "updated_at": "2026-03-26T06:48:50Z",
+      "updated_at": "2026-03-27T06:53:40Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/289",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 257,
+      "title": "[Feature] Add JAX integration for FlyDSL kernels",
+      "author": "wenchenvincent",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-21T08:34:01Z",
+      "updated_at": "2026-03-27T06:51:07Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/257",
       "labels": [],
       "draft": false
     },
@@ -56,20 +56,8 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-24T05:36:46Z",
-      "updated_at": "2026-03-26T06:00:36Z",
+      "updated_at": "2026-03-27T05:37:08Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/277",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 278,
-      "title": "[Compiler][Kernel][MI450]Rebase gfx1250 WMMA/mcast/mxfp4 support onto main",
-      "author": "jli-melchior",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T06:35:41Z",
-      "updated_at": "2026-03-25T14:36:34Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/278",
       "labels": [],
       "draft": false
     },
@@ -80,8 +68,32 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-19T03:46:23Z",
-      "updated_at": "2026-03-25T12:55:19Z",
+      "updated_at": "2026-03-26T13:37:42Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/238",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 272,
+      "title": "Add fused RoPE kernel ",
+      "author": "amd-weisun",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T16:50:12Z",
+      "updated_at": "2026-03-26T11:02:54Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/272",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 278,
+      "title": "[Compiler][Kernel][MI450]Rebase gfx1250 WMMA/mcast/mxfp4 support onto main",
+      "author": "jli-melchior",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-24T06:35:41Z",
+      "updated_at": "2026-03-26T10:37:19Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/278",
       "labels": [],
       "draft": false
     },
@@ -94,18 +106,6 @@
       "created_at": "2026-03-22T06:58:43Z",
       "updated_at": "2026-03-25T09:30:39Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/259",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 257,
-      "title": "[Feature] Add JAX integration for FlyDSL kernels",
-      "author": "wenchenvincent",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-21T08:34:01Z",
-      "updated_at": "2026-03-25T06:14:43Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/257",
       "labels": [],
       "draft": false
     },
@@ -146,18 +146,6 @@
       "draft": false
     },
     {
-      "number": 272,
-      "title": "Add fused RoPE kernel ",
-      "author": "amd-weisun",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-23T16:50:12Z",
-      "updated_at": "2026-03-24T16:11:55Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/272",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 271,
       "title": "feat: python versions update",
       "author": "kiran-thumma",
@@ -182,18 +170,6 @@
       "draft": false
     },
     {
-      "number": 232,
-      "title": "[Fix][DSL] Fix while-loop lowering, nested control flow, and add fp32 GEMM output",
-      "author": "ChuanLi1101",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-17T10:04:10Z",
-      "updated_at": "2026-03-17T10:04:10Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/232",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 192,
       "title": "Fused GDR decode ksplit2 implementation",
       "author": "huizzhan",
@@ -204,6 +180,66 @@
       "html_url": "https://github.com/ROCm/FlyDSL/pull/192",
       "labels": [],
       "draft": true
+    },
+    {
+      "number": 294,
+      "title": "fix aiter install error in ci",
+      "author": "coderfeli",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T10:50:00Z",
+      "updated_at": "2026-03-26T13:24:30Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/294",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 293,
+      "title": "[Fix][JIT] correctly distinguish Type[...] params in cache key",
+      "author": "sjfeng1999",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T09:30:06Z",
+      "updated_at": "2026-03-26T13:24:28Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/293",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 288,
+      "title": "add(rocdl): Support pointer casts and bf16 16x16x16 MFMA",
+      "author": "fsx950223",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T05:20:19Z",
+      "updated_at": "2026-03-26T13:24:27Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/288",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 292,
+      "title": "[Prune] Remove the stale lang package.",
+      "author": "sjfeng1999",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T08:52:42Z",
+      "updated_at": "2026-03-26T13:22:23Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/292",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 290,
+      "title": "Remove redundant _create_i64_constant",
+      "author": "wangxunx",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T07:41:45Z",
+      "updated_at": "2026-03-26T13:13:49Z",
+      "html_url": "https://github.com/ROCm/FlyDSL/pull/290",
+      "labels": [],
+      "draft": false
     },
     {
       "number": 284,
@@ -986,54 +1022,6 @@
       "created_at": "2026-03-03T09:56:48Z",
       "updated_at": "2026-03-09T14:21:00Z",
       "html_url": "https://github.com/ROCm/FlyDSL/pull/170",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 123,
-      "title": "support mi308 async load and fix bug",
-      "author": "yadaish",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-11T03:09:41Z",
-      "updated_at": "2026-03-09T14:20:10Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/123",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 116,
-      "title": "[MLIR][python]Migrate Python bindings to PyConcreteType<> and fix TypeID ODR violation",
-      "author": "jli-melchior",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T11:57:26Z",
-      "updated_at": "2026-03-09T14:20:08Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/116",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 115,
-      "title": "Yxd/right inverse rebased",
-      "author": "xudoyuan",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T11:36:17Z",
-      "updated_at": "2026-03-09T14:20:08Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/115",
-      "labels": [],
-      "draft": false
-    },
-    {
-      "number": 180,
-      "title": "Docs website",
-      "author": "coderfeli",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-09T13:38:59Z",
-      "updated_at": "2026-03-09T14:19:43Z",
-      "html_url": "https://github.com/ROCm/FlyDSL/pull/180",
       "labels": [],
       "draft": false
     }

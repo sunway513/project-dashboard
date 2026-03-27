@@ -1,6 +1,689 @@
 {
-  "collected_at": "2026-03-26T08:18:25Z",
+  "collected_at": "2026-03-27T08:16:21Z",
   "prs": [
+    {
+      "number": 188921,
+      "title": "AMDGPU: Make VarIndex WeakTrackingVH in AMDGPUPromoteAlloca",
+      "author": "ruiling",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-27T07:57:11Z",
+      "updated_at": "2026-03-27T07:57:47Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188921",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188007,
+      "title": "[CIR][AMDGPU] Add AMDGPU-specific function attributes for HIP kernels",
+      "author": "skc7",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-23T10:01:22Z",
+      "updated_at": "2026-03-27T06:37:31Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188007",
+      "labels": [
+        "clang",
+        "backend:AMDGPU",
+        "ClangIR"
+      ],
+      "draft": false
+    },
+    {
+      "number": 173328,
+      "title": "[AMDGPU] Add folding ISD::SELECT from vXiY into vZi32 with X * Y = Z * 32",
+      "author": "Shoreshen",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-12-23T02:07:20Z",
+      "updated_at": "2026-03-27T02:25:19Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/173328",
+      "labels": [
+        "backend:AMDGPU",
+        "backend:X86"
+      ],
+      "draft": false
+    },
+    {
+      "number": 186348,
+      "title": "[AMDGPU][SILowerSGPRSpills] Correct insertion of IMPLICIT_DEF in cycle headers",
+      "author": "chrisjbris",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-13T09:33:49Z",
+      "updated_at": "2026-03-27T01:12:16Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186348",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187840,
+      "title": "[AMDGPU][GlobalISel] Add RegBankLegalize rules for amdgcn_permlane64",
+      "author": "gandhi56",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-21T04:24:05Z",
+      "updated_at": "2026-03-27T00:06:09Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187840",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187798,
+      "title": "[AMDGPU][GlobalISel] Add RegBankLegalize rules for amdgcn_perm intrinsic",
+      "author": "gandhi56",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T21:28:33Z",
+      "updated_at": "2026-03-27T00:03:33Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187798",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187550,
+      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for buffer atomics",
+      "author": "vangthao95",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T18:10:37Z",
+      "updated_at": "2026-03-26T23:28:42Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187550",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188305,
+      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for div_fmas/fixup/scale",
+      "author": "vangthao95",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-24T18:25:49Z",
+      "updated_at": "2026-03-26T23:17:58Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188305",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188869,
+      "title": "[NFC][AMDGPU] Add CostModel tests for transcendental ops with varying function attrs",
+      "author": "chinmaydd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T22:57:59Z",
+      "updated_at": "2026-03-26T23:07:41Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188869",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:analysis"
+      ],
+      "draft": false
+    },
+    {
+      "number": 134016,
+      "title": "[SPIRV][AMDGPU][clang][CodeGen][opt] Add late-resolved feature identifying predicates",
+      "author": "AlexVlx",
+      "state": "open",
+      "merged": false,
+      "created_at": "2025-04-02T02:34:56Z",
+      "updated_at": "2026-03-26T22:57:31Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/134016",
+      "labels": [
+        "clang",
+        "backend:AMDGPU",
+        "clang:frontend",
+        "clang:codegen",
+        "SPIR-V",
+        "llvm:transforms"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188862,
+      "title": "AMDGPU: Regenerate test checks",
+      "author": "arsenm",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T22:15:10Z",
+      "updated_at": "2026-03-26T22:48:53Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188862",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188266,
+      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for ds_permute",
+      "author": "vangthao95",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-24T15:30:57Z",
+      "updated_at": "2026-03-26T22:24:55Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188266",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188316,
+      "title": "[AMDGPU] Change isSingleLaneExecution to account for WWM enabling lanes even if there's only one workitem",
+      "author": "saxlungs",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-24T19:13:26Z",
+      "updated_at": "2026-03-26T22:19:57Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188316",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel",
+        "llvm:analysis",
+        "llvm:transforms"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188831,
+      "title": "AMDGPU: Mark wqm_vote as SourceOfDivergence",
+      "author": "vangthao95",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T19:41:49Z",
+      "updated_at": "2026-03-26T21:42:52Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188831",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:analysis"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188809,
+      "title": "[AMDGPU] Do not overlap dst with srcs for v_cvt_scalef32_2xpk16_fp6/bf6_f32 ",
+      "author": "changpeng",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T18:08:12Z",
+      "updated_at": "2026-03-26T21:38:33Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188809",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 174539,
+      "title": "[AMDGPU] using divergent/uniform information in ISel of zext",
+      "author": "zwu-2025",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-06T07:18:29Z",
+      "updated_at": "2026-03-26T20:46:55Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/174539",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:SelectionDAG"
+      ],
+      "draft": false
+    },
+    {
+      "number": 184929,
+      "title": "[AMDGPU] Add HWUI pressure heuristics to coexec strategy",
+      "author": "jrbyrnes",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-06T01:45:37Z",
+      "updated_at": "2026-03-26T20:37:20Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/184929",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 186766,
+      "title": "[AMDGPU] Use value's DebugLoc for bitcast in performStoreCombine",
+      "author": "jwu10003",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-16T10:24:28Z",
+      "updated_at": "2026-03-26T20:01:15Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/186766",
+      "labels": [
+        "backend:AArch64",
+        "backend:AMDGPU",
+        "backend:Hexagon",
+        "backend:RISC-V",
+        "backend:PowerPC",
+        "backend:X86",
+        "debuginfo",
+        "backend:NVPTX",
+        "backend:loongarch",
+        "llvm:SelectionDAG"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188750,
+      "title": "[AMDGPU] Avoid rewrite for code patterns that the mfma rewrite scheduler stage cannot properly handle.",
+      "author": "tlinthic",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T14:11:54Z",
+      "updated_at": "2026-03-26T19:40:06Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188750",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187668,
+      "title": "AMDGPU: Don't save FP/BP for noreturn functions",
+      "author": "rovka",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-20T10:03:22Z",
+      "updated_at": "2026-03-26T19:14:46Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187668",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188457,
+      "title": "[MLIR][AMDGPU] Added l2-prefetch op to AMDGPU",
+      "author": "ravil-mobile",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-25T10:37:15Z",
+      "updated_at": "2026-03-26T18:48:21Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188457",
+      "labels": [
+        "backend:AMDGPU",
+        "mlir:gpu",
+        "mlir",
+        "mlir:amdgpu"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188429,
+      "title": "[AMDGPU] DPP insns cannot use SGPR for src1 on gfx11",
+      "author": "LU-JOHN",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-25T07:53:04Z",
+      "updated_at": "2026-03-26T18:17:13Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188429",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188781,
+      "title": "[AMDGPU][GlobalISel] Guard against use of `hi16` for SGPR registers",
+      "author": "IgWod",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T16:00:52Z",
+      "updated_at": "2026-03-26T17:40:10Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188781",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188031,
+      "title": "[AMDGPU][MC] Function scope resource usage struct",
+      "author": "JanekvO",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-23T12:46:17Z",
+      "updated_at": "2026-03-26T17:22:31Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188031",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187248,
+      "title": "[AMDGPU][GlobalIsel] Add register bank legalization rules for amdgcn_interp_inreg",
+      "author": "mssefat",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-18T12:13:02Z",
+      "updated_at": "2026-03-26T16:55:18Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187248",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 66533,
+      "title": "[AMDGPU]: Accept constant zero bytes in v_perm OrCombine",
+      "author": "jrbyrnes",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-09-15T17:34:47Z",
+      "updated_at": "2026-03-26T15:52:14Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/66533",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 68004,
+      "title": "[AMDGPU][MachineScheduler] Alternative way to control excess RP.",
+      "author": "alex-t",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-10-02T16:46:58Z",
+      "updated_at": "2026-03-26T15:52:12Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/68004",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 71126,
+      "title": "[AMDGPU][SILoadStoreOptimizer] Try to find common base for L/Ss with 0 offset",
+      "author": "jrbyrnes",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-11-02T23:33:54Z",
+      "updated_at": "2026-03-26T15:52:12Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/71126",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 68229,
+      "title": "[AMDGPU][MISCHED] GCNBalancedSchedStrategy.",
+      "author": "alex-t",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-10-04T15:40:31Z",
+      "updated_at": "2026-03-26T15:52:10Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/68229",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 68367,
+      "title": "[AMDGPU] Use 32-bit SGPR to save/restore of SCC",
+      "author": "srpande",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-10-05T23:45:32Z",
+      "updated_at": "2026-03-26T15:52:10Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/68367",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 69229,
+      "title": "[AMDGPU] Add an option to disable unsafe uses of atomic xor",
+      "author": "pasaulais",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-10-16T17:38:45Z",
+      "updated_at": "2026-03-26T15:52:10Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/69229",
+      "labels": [
+        "clang",
+        "backend:AMDGPU",
+        "clang:driver",
+        "clang:frontend",
+        "clang:codegen"
+      ],
+      "draft": false
+    },
+    {
+      "number": 69776,
+      "title": "[AMDGPU] Infer Alignments after Inferring AddressSpaces",
+      "author": "jrbyrnes",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-10-20T20:38:48Z",
+      "updated_at": "2026-03-26T15:52:09Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/69776",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel",
+        "llvm:transforms"
+      ],
+      "draft": true
+    },
+    {
+      "number": 72461,
+      "title": "[AMDGPU] Allocate i1 argument to SGPRs",
+      "author": "jwanggit86",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-11-16T01:54:18Z",
+      "updated_at": "2026-03-26T15:52:08Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/72461",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 72556,
+      "title": "[AMDGPU] Enable OpenCL hostcall printf (WIP)",
+      "author": "vikramRH",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-11-16T18:55:59Z",
+      "updated_at": "2026-03-26T15:52:07Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/72556",
+      "labels": [
+        "clang",
+        "backend:AMDGPU",
+        "clang:driver",
+        "clang:frontend",
+        "clang:codegen",
+        "llvm:transforms"
+      ],
+      "draft": false
+    },
+    {
+      "number": 74080,
+      "title": "[OpenMP][AMDGPU] Adapt dynamic callstack sizes to HIP behavior",
+      "author": "mhalk",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-12-01T14:07:47Z",
+      "updated_at": "2026-03-26T15:52:06Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/74080",
+      "labels": [
+        "backend:AMDGPU",
+        "openmp:libomptarget"
+      ],
+      "draft": false
+    },
+    {
+      "number": 73613,
+      "title": "[AMDGPU] Introduce ordering parameter to atomic intrinsics and introduce new llvm.amdgcn.image.atomic.load intrinsic.",
+      "author": "sstipano",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-11-28T06:33:27Z",
+      "updated_at": "2026-03-26T15:52:06Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/73613",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel",
+        "llvm:SelectionDAG",
+        "llvm:ir",
+        "llvm:analysis"
+      ],
+      "draft": false
+    },
+    {
+      "number": 74741,
+      "title": "[AMDGPU] support lib call",
+      "author": "yxsamliu",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-12-07T17:41:22Z",
+      "updated_at": "2026-03-26T15:52:05Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/74741",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 72505,
+      "title": "[AMDGPU] Reimplement PreRARematStage stage for the GCNSchedStrategy. Early-preview, WIP.",
+      "author": "vpykhtin",
+      "state": "open",
+      "merged": false,
+      "created_at": "2023-11-16T11:52:03Z",
+      "updated_at": "2026-03-26T15:52:05Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/72505",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 188243,
+      "title": "clang: Define FP_FAST_FMA_HALF macro for AMDGPU",
+      "author": "arsenm",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-24T13:23:45Z",
+      "updated_at": "2026-03-26T15:34:36Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188243",
+      "labels": [
+        "clang",
+        "backend:AMDGPU",
+        "clang:driver",
+        "clang:frontend"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187694,
+      "title": "[AMDGPU] Remove AMDGPUISD::FFBH_I32 and add ISD::CTLS lowering",
+      "author": "MrSidims",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T12:51:48Z",
+      "updated_at": "2026-03-26T15:14:34Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187694",
+      "labels": [
+        "backend:AMDGPU",
+        "llvm:globalisel"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188262,
+      "title": "[Driver][HIP] Bundle AMDGPU -S output under the new offload driver",
+      "author": "yxsamliu",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-24T14:57:11Z",
+      "updated_at": "2026-03-26T14:57:54Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188262",
+      "labels": [
+        "clang",
+        "clang:driver"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187806,
+      "title": "[AMDGPU][GlobalISel] Add RegBankLegalize rules for permlane16_var/permlanex16_var",
+      "author": "gandhi56",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-20T21:56:54Z",
+      "updated_at": "2026-03-26T14:07:50Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187806",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 187520,
+      "title": "[AMDGPU] Rework NeedNopBeforeSetVGPRMSB flag. NFC.",
+      "author": "jayfoad",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-19T15:21:38Z",
+      "updated_at": "2026-03-26T12:10:07Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/187520",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188460,
+      "title": "[AMDGPU] Don't allow nesting hard clauses.",
+      "author": "sstipano",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-25T11:21:04Z",
+      "updated_at": "2026-03-26T10:59:33Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188460",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 188527,
+      "title": "[AMDGPU] Remove redundant S_WAIT_XCNT after inserting S_SET_VGPR_MSB",
+      "author": "jayfoad",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-25T16:27:04Z",
+      "updated_at": "2026-03-26T10:59:30Z",
+      "html_url": "https://github.com/llvm/llvm-project/pull/188527",
+      "labels": [
+        "backend:AMDGPU"
+      ],
+      "draft": false
+    },
     {
       "number": 188649,
       "title": "[AMDGPU] Disable neg_lo[0:1] and neg_hi[0:1] on wmma_f32_16x16x32_bf16",
@@ -22,21 +705,6 @@
       "draft": false
     },
     {
-      "number": 173328,
-      "title": "[AMDGPU] Add folding ISD::SELECT from vXiY into vZi32 with X * Y = Z * 32",
-      "author": "Shoreshen",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-12-23T02:07:20Z",
-      "updated_at": "2026-03-26T06:57:14Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/173328",
-      "labels": [
-        "backend:AMDGPU",
-        "backend:X86"
-      ],
-      "draft": false
-    },
-    {
       "number": 188662,
       "title": "AMDGPU: Make VarIndex a WeakVH in AMDGPUPromoteAlloca",
       "author": "ruiling",
@@ -45,48 +713,6 @@
       "created_at": "2026-03-26T01:52:39Z",
       "updated_at": "2026-03-26T06:03:44Z",
       "html_url": "https://github.com/llvm/llvm-project/pull/188662",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 185813,
-      "title": "[AMDGPU] asyncmark support for ASYNC_CNT",
-      "author": "ssahasra",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-11T06:18:01Z",
-      "updated_at": "2026-03-26T05:42:08Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/185813",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 178873,
-      "title": "AMDGPU: Add NextUseAnalysis Pass",
-      "author": "macurtis-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T11:58:32Z",
-      "updated_at": "2026-03-26T05:06:36Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/178873",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188175,
-      "title": "[AMDGPU] Disable DPP reduction path for 64-bit values",
-      "author": "easyonaadit",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T05:07:32Z",
-      "updated_at": "2026-03-26T04:42:45Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188175",
       "labels": [
         "backend:AMDGPU"
       ],
@@ -107,70 +733,6 @@
       "draft": false
     },
     {
-      "number": 188658,
-      "title": "[AMDGPU] Add MemoryPipeline scheduling to Coexec sched",
-      "author": "jrbyrnes",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-26T01:28:52Z",
-      "updated_at": "2026-03-26T01:30:32Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188658",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 134016,
-      "title": "[SPIRV][AMDGPU][clang][CodeGen][opt] Add late-resolved feature identifying predicates",
-      "author": "AlexVlx",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-04-02T02:34:56Z",
-      "updated_at": "2026-03-26T01:29:19Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/134016",
-      "labels": [
-        "clang",
-        "backend:AMDGPU",
-        "clang:frontend",
-        "clang:codegen",
-        "SPIR-V",
-        "llvm:transforms"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187823,
-      "title": "[AMDGPU][NFC] Move InstrCounterType and Waitcnt to SIInsertWaitcnts.h",
-      "author": "vporpo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-21T00:00:07Z",
-      "updated_at": "2026-03-25T23:05:25Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187823",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188457,
-      "title": "[MLIR][AMDGPU] Added l2-prefetch op to AMDGPU",
-      "author": "ravil-mobile",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-25T10:37:15Z",
-      "updated_at": "2026-03-25T23:01:15Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188457",
-      "labels": [
-        "backend:AMDGPU",
-        "mlir:gpu",
-        "mlir",
-        "mlir:amdgpu"
-      ],
-      "draft": false
-    },
-    {
       "number": 188594,
       "title": "libclc: Fix amdgpu sub_group_broadcast for double",
       "author": "arsenm",
@@ -182,21 +744,6 @@
       "labels": [
         "backend:AMDGPU",
         "libclc"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188266,
-      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for ds_permute",
-      "author": "vangthao95",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T15:30:57Z",
-      "updated_at": "2026-03-25T22:07:02Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188266",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
       ],
       "draft": false
     },
@@ -216,21 +763,6 @@
       "draft": false
     },
     {
-      "number": 188305,
-      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for div_fmas/fixup/scale",
-      "author": "vangthao95",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T18:25:49Z",
-      "updated_at": "2026-03-25T21:34:46Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188305",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
       "number": 187514,
       "title": "[AMDGPU][True16] turn on true16 for gfx12",
       "author": "broxigarchen",
@@ -242,35 +774,6 @@
       "labels": [
         "backend:AMDGPU",
         "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188527,
-      "title": "[AMDGPU] Remove redundant S_WAIT_XCNT after inserting S_SET_VGPR_MSB",
-      "author": "jayfoad",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-25T16:27:04Z",
-      "updated_at": "2026-03-25T21:25:42Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188527",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188356,
-      "title": "[AMDGPU][ISel] Reduce `f64` compare to integer compare of upper half",
-      "author": "zGoldthorpe",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T21:20:25Z",
-      "updated_at": "2026-03-25T21:05:15Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188356",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:SelectionDAG"
       ],
       "draft": false
     },
@@ -305,34 +808,6 @@
       "draft": false
     },
     {
-      "number": 188375,
-      "title": "[AMDGPU] Add v2i32 and/or patterns for VOP3 AND_OR and OR3 operations",
-      "author": "wooseoklee",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T23:22:23Z",
-      "updated_at": "2026-03-25T19:44:28Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188375",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 184084,
-      "title": "[AMDGPU] Introduce GCNPostGenericScheduler to model MFMA-VALU coexecution",
-      "author": "gandhi56",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-02T09:49:20Z",
-      "updated_at": "2026-03-25T19:03:04Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/184084",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 187629,
       "title": "[AMDGPU][True16]  Generate correct reg size for reg_sequence16 in wmma src mod select",
       "author": "broxigarchen",
@@ -342,206 +817,6 @@
       "updated_at": "2026-03-25T18:59:06Z",
       "html_url": "https://github.com/llvm/llvm-project/pull/187629",
       "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187798,
-      "title": "[AMDGPU][GlobalISel] Add RegBankLegalize rules for amdgcn_perm intrinsic",
-      "author": "gandhi56",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T21:28:33Z",
-      "updated_at": "2026-03-25T18:46:49Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187798",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188316,
-      "title": "[AMDGPU] Change isSingleLaneExecution to account for WWM enabling lanes even if there's only one workitem",
-      "author": "saxlungs",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T19:13:26Z",
-      "updated_at": "2026-03-25T18:42:29Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188316",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188287,
-      "title": "[AMDGPU] Correctly extract higher 16 bits from sgpr when G_UNMERGE_VALUES is used",
-      "author": "IgWod",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T17:12:47Z",
-      "updated_at": "2026-03-25T18:30:14Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188287",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187840,
-      "title": "[AMDGPU][GlobalISel] Add RegBankLegalize rules for amdgcn_permlane64",
-      "author": "gandhi56",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-21T04:24:05Z",
-      "updated_at": "2026-03-25T18:14:26Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187840",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187248,
-      "title": "[AMDGPU][GlobalIsel] Add register bank legalization rules for amdgcn_interp_inreg",
-      "author": "mssefat",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-18T12:13:02Z",
-      "updated_at": "2026-03-25T18:06:12Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187248",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187806,
-      "title": "[AMDGPU][GlobalISel] Add RegBankLegalize rules for permlane16_var/permlanex16_var",
-      "author": "gandhi56",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-20T21:56:54Z",
-      "updated_at": "2026-03-25T17:55:09Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187806",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188510,
-      "title": "[AMDGPU] Tweak Changed tracking in AMDGPULowerVGPREncoding. NFC.",
-      "author": "jayfoad",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-25T15:26:45Z",
-      "updated_at": "2026-03-25T17:52:28Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188510",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187520,
-      "title": "[AMDGPU] Rework NeedNopBeforeSetVGPRMSB flag. NFC.",
-      "author": "jayfoad",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-19T15:21:38Z",
-      "updated_at": "2026-03-25T17:49:17Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187520",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 183297,
-      "title": "[AMDGPU] Fix crash with dead frame indices in debug values",
-      "author": "skatrak",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-25T13:23:07Z",
-      "updated_at": "2026-03-25T17:34:54Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/183297",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 185993,
-      "title": "[AMDGPU][SIInsertWaitcnt][NFC] Replace LastFlat array with distinct variables",
-      "author": "vporpo",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-11T22:32:47Z",
-      "updated_at": "2026-03-25T16:43:18Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/185993",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188031,
-      "title": "[AMDGPU][MC] Function scope resource usage struct",
-      "author": "JanekvO",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-23T12:46:17Z",
-      "updated_at": "2026-03-25T16:31:16Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188031",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188382,
-      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for wqm_vote, kill",
-      "author": "vangthao95",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T23:48:28Z",
-      "updated_at": "2026-03-25T16:29:54Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188382",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 102345,
-      "title": "AMDGPU: Fold frame indexes into disjoint s_or_b32",
-      "author": "arsenm",
-      "state": "open",
-      "merged": false,
-      "created_at": "2024-08-07T18:06:20Z",
-      "updated_at": "2026-03-25T16:22:43Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/102345",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 184710,
-      "title": "[AMDGPU] Documentation files for GFX950 instructions",
-      "author": "jwanggit86",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-05T00:23:55Z",
-      "updated_at": "2026-03-25T16:20:26Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/184710",
-      "labels": [
-        "documentation",
         "backend:AMDGPU"
       ],
       "draft": false
@@ -592,38 +867,6 @@
       "draft": false
     },
     {
-      "number": 160922,
-      "title": "[AMDGPU] Replace relaxed-buffer-oob-mode feature with module flag",
-      "author": "piotrAMD",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-09-26T16:38:03Z",
-      "updated_at": "2026-03-25T16:06:16Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/160922",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:ir",
-        "llvm:transforms"
-      ],
-      "draft": false
-    },
-    {
-      "number": 168710,
-      "title": "[AMDGPU] Use V_FMAC_F64 in \"if (cond) a -= c\"",
-      "author": "vpykhtin",
-      "state": "open",
-      "merged": false,
-      "created_at": "2025-11-19T14:18:01Z",
-      "updated_at": "2026-03-25T15:48:06Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/168710",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel",
-        "llvm:SelectionDAG"
-      ],
-      "draft": false
-    },
-    {
       "number": 188472,
       "title": "clang: Report subgroup ext types for AMDGPU with llvm env",
       "author": "arsenm",
@@ -662,226 +905,6 @@
       "created_at": "2026-03-24T15:14:42Z",
       "updated_at": "2026-03-25T10:28:31Z",
       "html_url": "https://github.com/llvm/llvm-project/pull/188264",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188245,
-      "title": "libclc: Force assuming fast float fma for AMDGPU",
-      "author": "arsenm",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-24T13:29:03Z",
-      "updated_at": "2026-03-25T08:39:48Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188245",
-      "labels": [
-        "libclc"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188349,
-      "title": "[AMDGPU] Disable neg_lo[0:1] and neg_hi[0:1] on gfx1250 WMMA, MC part",
-      "author": "rampitec",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-24T21:05:15Z",
-      "updated_at": "2026-03-25T08:26:00Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188349",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188202,
-      "title": "AMDGPU: Simplify placeholder replacement in AMDGPUPromoteAlloca",
-      "author": "ruiling",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-24T09:38:22Z",
-      "updated_at": "2026-03-25T07:26:45Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188202",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 180096,
-      "title": "[AMDGPU][True16] add true16 pattern for cvt_pk_fp32_f8",
-      "author": "broxigarchen",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-06T01:09:30Z",
-      "updated_at": "2026-03-24T19:03:01Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/180096",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188101,
-      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for ps_live",
-      "author": "vangthao95",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-23T18:41:57Z",
-      "updated_at": "2026-03-24T17:08:45Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188101",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 137639,
-      "title": "[AMDGPU][Uniformity][TTI] Make Uniformity Analysis Operand-Aware via Custom Uniformity Checks",
-      "author": "PankajDwivedi-25",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-04-28T14:29:01Z",
-      "updated_at": "2026-03-24T16:54:57Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/137639",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:codegen",
-        "backend:NVPTX",
-        "llvm:analysis",
-        "llvm:adt"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187758,
-      "title": "[AMDGPU][SIInsertWaitcnts] Fix counterOutOfOrder() check for LOAD_CNT",
-      "author": "vporpo",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-20T17:56:52Z",
-      "updated_at": "2026-03-24T15:33:33Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187758",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188132,
-      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for fmad_ftz",
-      "author": "vangthao95",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-23T21:28:13Z",
-      "updated_at": "2026-03-24T15:08:27Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188132",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187834,
-      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for cvt_pknorm",
-      "author": "vangthao95",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-21T01:20:14Z",
-      "updated_at": "2026-03-24T15:06:57Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187834",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187762,
-      "title": "AMDGPU/GlobalISel: RegBankLegalize rules for cube intrinsics",
-      "author": "vangthao95",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-20T18:31:25Z",
-      "updated_at": "2026-03-24T15:05:44Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187762",
-      "labels": [
-        "backend:AMDGPU",
-        "llvm:globalisel"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188067,
-      "title": "[libc] Support AMDGPU device interrupts for the RPC interface",
-      "author": "jhuber6",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-23T16:39:22Z",
-      "updated_at": "2026-03-24T13:54:44Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188067",
-      "labels": [
-        "backend:AMDGPU",
-        "libc",
-        "offload"
-      ],
-      "draft": false
-    },
-    {
-      "number": 187915,
-      "title": "[AMDGPU] Disable atomic optimizer for single lane execution",
-      "author": "perlfu",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-22T06:50:53Z",
-      "updated_at": "2026-03-24T08:59:46Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/187915",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188180,
-      "title": "Revert \"AMDGPU: Delay value replacement in PromoteAlloca (#186944)\"",
-      "author": "ruiling",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-24T06:13:50Z",
-      "updated_at": "2026-03-24T06:42:28Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188180",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188102,
-      "title": "[AMDGPU][NFC] Update test to use update_llc_test_checks",
-      "author": "vangthao95",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-23T18:43:52Z",
-      "updated_at": "2026-03-23T21:17:26Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188102",
-      "labels": [
-        "backend:AMDGPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 188107,
-      "title": "[AMDGPU][NFC] Update permute tests to use auto-generated checks",
-      "author": "vangthao95",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-23T19:20:55Z",
-      "updated_at": "2026-03-23T20:29:43Z",
-      "html_url": "https://github.com/llvm/llvm-project/pull/188107",
       "labels": [
         "backend:AMDGPU"
       ],

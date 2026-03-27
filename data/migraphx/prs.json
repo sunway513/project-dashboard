@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-03-26T08:19:18Z",
+  "collected_at": "2026-03-27T08:17:04Z",
   "prs": [
     {
       "number": 4591,
@@ -8,44 +8,68 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-04T06:02:46Z",
-      "updated_at": "2026-03-26T08:05:58Z",
+      "updated_at": "2026-03-27T08:16:49Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4591",
       "labels": [],
       "draft": false
     },
     {
-      "number": 4699,
-      "title": "Nonmaxsuppression op support dynamic input",
+      "number": 4710,
+      "title": "Fix GPU MLIR-off builds and extend MLIR pointwise support",
+      "author": "Rolaand-Jayz",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T13:41:36Z",
+      "updated_at": "2026-03-27T04:52:38Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4710",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4703,
+      "title": "Adding past inputs to MultiHeadAttention parser for supporting new models",
+      "author": "urpetkov-amd",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-25T11:24:38Z",
+      "updated_at": "2026-03-27T04:41:12Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4703",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4582,
+      "title": "Adjust allocation even when a fill is used on the allocation",
+      "author": "pfultz2",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-01-30T01:26:52Z",
+      "updated_at": "2026-03-27T04:17:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4582",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4607,
+      "title": "Optimize 1x1 and Depthwise Convolution for Small Shapes",
       "author": "klin2024",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-24T08:51:59Z",
-      "updated_at": "2026-03-26T07:35:00Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4699",
+      "created_at": "2026-02-12T07:05:25Z",
+      "updated_at": "2026-03-27T04:13:37Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4607",
       "labels": [],
       "draft": true
     },
     {
-      "number": 4702,
-      "title": "[AIMIGRAPHX-835] integrate symbolic expression in dynamic_dimension",
-      "author": "shivadbhavsar",
+      "number": 4711,
+      "title": "Revert quick-tune lists",
+      "author": "mirza-halilcevic",
       "state": "open",
       "merged": false,
-      "created_at": "2026-03-25T00:26:52Z",
-      "updated_at": "2026-03-26T06:34:22Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4702",
-      "labels": [],
-      "draft": true
-    },
-    {
-      "number": 4700,
-      "title": "[AIMIGRAPHX-886] [AIMIGRAPHX-834] custom symbolic expression lib",
-      "author": "shivadbhavsar",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-24T18:23:05Z",
-      "updated_at": "2026-03-26T06:16:18Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4700",
+      "created_at": "2026-03-26T20:51:50Z",
+      "updated_at": "2026-03-27T00:29:12Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4711",
       "labels": [],
       "draft": false
     },
@@ -56,12 +80,96 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-02-20T21:54:12Z",
-      "updated_at": "2026-03-26T05:42:59Z",
+      "updated_at": "2026-03-26T23:17:02Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4626",
       "labels": [
         "enhancement",
         "high priority"
       ],
+      "draft": false
+    },
+    {
+      "number": 4712,
+      "title": "Output debug symbols",
+      "author": "CharlieL7",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T22:10:40Z",
+      "updated_at": "2026-03-26T22:10:40Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4712",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4700,
+      "title": "[AIMIGRAPHX-886] [AIMIGRAPHX-834] custom symbolic expression lib",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-24T18:23:05Z",
+      "updated_at": "2026-03-26T21:53:18Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4700",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4699,
+      "title": "Support dynamic input shapes for NonMaxSuppression op with runtime validation",
+      "author": "klin2024",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-24T08:51:59Z",
+      "updated_at": "2026-03-26T18:51:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4699",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4702,
+      "title": "[AIMIGRAPHX-835] integrate symbolic expression in dynamic_dimension",
+      "author": "shivadbhavsar",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-25T00:26:52Z",
+      "updated_at": "2026-03-26T18:06:35Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4702",
+      "labels": [],
+      "draft": true
+    },
+    {
+      "number": 4709,
+      "title": "Tune GPU scheduling, return copies, and pointwise launch bounds",
+      "author": "Rolaand-Jayz",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T13:41:34Z",
+      "updated_at": "2026-03-26T16:35:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4709",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4708,
+      "title": "Cache repeated HIP compilation and MIOpen solution lookups",
+      "author": "Rolaand-Jayz",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T13:41:31Z",
+      "updated_at": "2026-03-26T15:29:17Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4708",
+      "labels": [],
+      "draft": false
+    },
+    {
+      "number": 4707,
+      "title": "Improve adaptive GPU defaults and device feature caching",
+      "author": "Rolaand-Jayz",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T13:41:29Z",
+      "updated_at": "2026-03-26T14:06:47Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4707",
+      "labels": [],
       "draft": false
     },
     {
@@ -112,18 +220,6 @@
       "labels": [
         "documentation"
       ],
-      "draft": false
-    },
-    {
-      "number": 4703,
-      "title": "Adding past inputs to MultiHeadAttention parser for supporting new models",
-      "author": "urpetkov-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-25T11:24:38Z",
-      "updated_at": "2026-03-25T18:37:05Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4703",
-      "labels": [],
       "draft": false
     },
     {
@@ -187,18 +283,6 @@
       "draft": false
     },
     {
-      "number": 4668,
-      "title": "Improve GPU defaults, caching, and pointwise scheduling",
-      "author": "Rolaand-Jayz",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-03-13T20:01:02Z",
-      "updated_at": "2026-03-24T18:18:06Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4668",
-      "labels": [],
-      "draft": false
-    },
-    {
       "number": 4653,
       "title": "[AIMIGRAPHX-580] [AIMIGRAPHX-623] jit implementation for nonzero and scan lib",
       "author": "bdevorem",
@@ -223,18 +307,6 @@
         "simple"
       ],
       "draft": false
-    },
-    {
-      "number": 4607,
-      "title": "Optimize 1x1 and Depthwise Convolution for Small Shapes",
-      "author": "klin2024",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-12T07:05:25Z",
-      "updated_at": "2026-03-24T13:54:15Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4607",
-      "labels": [],
-      "draft": true
     },
     {
       "number": 4514,
@@ -602,18 +674,6 @@
       "labels": [
         "Cleanup"
       ],
-      "draft": false
-    },
-    {
-      "number": 4582,
-      "title": "Adjust allocation even when a fill is used on the allocation",
-      "author": "pfultz2",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-30T01:26:52Z",
-      "updated_at": "2026-02-03T22:05:41Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4582",
-      "labels": [],
       "draft": false
     },
     {
@@ -995,6 +1055,21 @@
       "draft": false
     },
     {
+      "number": 4652,
+      "title": "Add Cubic resize jit kernel",
+      "author": "TedThemistokleous",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-05T21:40:43Z",
+      "updated_at": "2026-03-26T15:08:17Z",
+      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
+      "labels": [
+        "onnx",
+        "Onnx Operators"
+      ],
+      "draft": false
+    },
+    {
       "number": 4705,
       "title": "Reset the Develop performance tests",
       "author": "causten",
@@ -1191,21 +1266,6 @@
       "updated_at": "2026-03-20T14:07:13Z",
       "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4684",
       "labels": [],
-      "draft": false
-    },
-    {
-      "number": 4652,
-      "title": "Add Cubic resize jit kernel",
-      "author": "TedThemistokleous",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-03-05T21:40:43Z",
-      "updated_at": "2026-03-20T12:59:19Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4652",
-      "labels": [
-        "onnx",
-        "Onnx Operators"
-      ],
       "draft": false
     },
     {
@@ -1987,18 +2047,6 @@
         "automated",
         "rocMLIR"
       ],
-      "draft": false
-    },
-    {
-      "number": 4362,
-      "title": "disable matching for dynamic shapes",
-      "author": "shivadbhavsar",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2025-10-07T23:04:46Z",
-      "updated_at": "2026-02-18T02:30:09Z",
-      "html_url": "https://github.com/ROCm/AMDMIGraphX/pull/4362",
-      "labels": [],
       "draft": false
     }
   ]

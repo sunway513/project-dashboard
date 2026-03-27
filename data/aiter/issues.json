@@ -1,14 +1,36 @@
 {
-  "collected_at": "2026-03-26T08:19:29Z",
+  "collected_at": "2026-03-27T08:17:14Z",
   "issues": [
     {
-      "number": 2484,
-      "title": "[Bug] Step-3.5-Flash-FP8 via vLLM fails on ROCm AITER MoE with missing swiglu FP8/per_1x128 CK 2-stage JIT module",
-      "author": "GoldenGrapeGentleman",
+      "number": 2312,
+      "title": "CI: Run Triton tests on MI355",
+      "author": "gyohuangxin",
       "state": "open",
-      "created_at": "2026-03-26T08:17:28Z",
-      "updated_at": "2026-03-26T08:17:28Z",
-      "html_url": "https://github.com/ROCm/aiter/issues/2484",
+      "created_at": "2026-03-17T16:42:16Z",
+      "updated_at": "2026-03-27T05:48:23Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2312",
+      "labels": [
+        "frameworks-devops"
+      ]
+    },
+    {
+      "number": 2495,
+      "title": "Paged attention single-request latency 2x slower than FlashInfer at batch=1",
+      "author": "sunway513",
+      "state": "open",
+      "created_at": "2026-03-27T01:47:07Z",
+      "updated_at": "2026-03-27T01:47:07Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2495",
+      "labels": []
+    },
+    {
+      "number": 2493,
+      "title": "Need MLA decode micro-benchmark for MI355X vs B300 operator comparison",
+      "author": "sunway513",
+      "state": "open",
+      "created_at": "2026-03-26T23:29:33Z",
+      "updated_at": "2026-03-26T23:29:33Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2493",
       "labels": []
     },
     {
@@ -17,21 +39,19 @@
       "author": "astrelsky",
       "state": "open",
       "created_at": "2026-03-25T20:46:43Z",
-      "updated_at": "2026-03-25T20:47:47Z",
+      "updated_at": "2026-03-26T20:14:19Z",
       "html_url": "https://github.com/ROCm/aiter/issues/2470",
       "labels": []
     },
     {
-      "number": 2312,
-      "title": "CI: Run Triton tests on MI355",
-      "author": "gyohuangxin",
+      "number": 2484,
+      "title": "[Bug] Step-3.5-Flash-FP8 via vLLM fails on ROCm AITER MoE with missing swiglu FP8/per_1x128 CK 2-stage JIT module",
+      "author": "GoldenGrapeGentleman",
       "state": "open",
-      "created_at": "2026-03-17T16:42:16Z",
-      "updated_at": "2026-03-25T16:28:06Z",
-      "html_url": "https://github.com/ROCm/aiter/issues/2312",
-      "labels": [
-        "frameworks-devops"
-      ]
+      "created_at": "2026-03-26T08:17:28Z",
+      "updated_at": "2026-03-26T08:55:24Z",
+      "html_url": "https://github.com/ROCm/aiter/issues/2484",
+      "labels": []
     },
     {
       "number": 1945,
@@ -161,16 +181,6 @@
       "created_at": "2026-03-23T07:50:10Z",
       "updated_at": "2026-03-24T21:03:09Z",
       "html_url": "https://github.com/ROCm/aiter/issues/2424",
-      "labels": []
-    },
-    {
-      "number": 2129,
-      "title": "Large launch overhead for aiter.flash_attn_func",
-      "author": "SampoAMD",
-      "state": "open",
-      "created_at": "2026-02-27T13:12:48Z",
-      "updated_at": "2026-03-24T16:00:59Z",
-      "html_url": "https://github.com/ROCm/aiter/issues/2129",
       "labels": []
     },
     {

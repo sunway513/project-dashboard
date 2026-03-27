@@ -1,6 +1,51 @@
 {
-  "collected_at": "2026-03-26T08:18:37Z",
+  "collected_at": "2026-03-27T08:16:31Z",
   "prs": [
+    {
+      "number": 34971,
+      "title": "[ROCm] fix the performance issue when n=1 or 2",
+      "author": "cj401-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-02-10T21:50:42Z",
+      "updated_at": "2026-03-26T23:20:17Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34971",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU",
+        "GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 34135,
+      "title": "[ROCm] update to test if there are GPU events when doing profiling on\u2026",
+      "author": "cj401-amd",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-01-02T18:02:18Z",
+      "updated_at": "2026-03-26T23:11:12Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/34135",
+      "labels": [
+        "kokoro:force-run",
+        "pull ready",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 36267,
+      "title": "Bump rules_ml_toolchain to version with ROCM/SYCL (OneAPI) changes",
+      "author": "copybara-service[bot]",
+      "state": "closed",
+      "merged": true,
+      "created_at": "2026-03-26T20:53:43Z",
+      "updated_at": "2026-03-26T22:45:28Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/36267",
+      "labels": [],
+      "draft": false
+    },
     {
       "number": 35534,
       "title": "[ROCm] bring gesdd for computing SVD on ROCm",
@@ -8,12 +53,26 @@
       "state": "open",
       "merged": false,
       "created_at": "2026-03-02T21:16:00Z",
-      "updated_at": "2026-03-26T00:10:56Z",
+      "updated_at": "2026-03-26T21:57:08Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35534",
       "labels": [
         "enhancement",
         "performance",
         "jax.numpy",
+        "AMD GPU"
+      ],
+      "draft": false
+    },
+    {
+      "number": 36244,
+      "title": "[ROCm] Skipped tests on ROCm that are flaky and sometimes cause CI failures",
+      "author": "tsrw2048",
+      "state": "open",
+      "merged": false,
+      "created_at": "2026-03-26T14:17:48Z",
+      "updated_at": "2026-03-26T15:02:55Z",
+      "html_url": "https://github.com/jax-ml/jax/pull/36244",
+      "labels": [
         "AMD GPU"
       ],
       "draft": false
@@ -78,22 +137,6 @@
       "draft": false
     },
     {
-      "number": 34135,
-      "title": "[ROCm] update to test if there are GPU events when doing profiling on\u2026",
-      "author": "cj401-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-01-02T18:02:18Z",
-      "updated_at": "2026-03-20T23:34:29Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34135",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
       "number": 36056,
       "title": "[ROCm] Add wheel version suffix support for ROCm post-release builds",
       "author": "gulsumgudukbay",
@@ -105,23 +148,6 @@
       "labels": [
         "pull ready",
         "AMD GPU"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34971,
-      "title": "[ROCm] fix the performance issue when n=1 or 2",
-      "author": "cj401-amd",
-      "state": "open",
-      "merged": false,
-      "created_at": "2026-02-10T21:50:42Z",
-      "updated_at": "2026-03-20T16:10:34Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34971",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready",
-        "AMD GPU",
-        "GPU"
       ],
       "draft": false
     },
@@ -523,51 +549,6 @@
       "created_at": "2026-02-16T20:01:30Z",
       "updated_at": "2026-02-19T07:48:42Z",
       "html_url": "https://github.com/jax-ml/jax/pull/35115",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34829,
-      "title": "[ROCm] Add ROCm LU solver to backward compatibility tests",
-      "author": "AratiGanesh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-04T20:12:52Z",
-      "updated_at": "2026-02-16T14:16:22Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34829",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34929,
-      "title": "[ROCm] Modified `test_with_memory_space` to include ROCm tests.",
-      "author": "tsrw2048",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-09T17:39:25Z",
-      "updated_at": "2026-02-15T21:12:08Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34929",
-      "labels": [
-        "kokoro:force-run",
-        "pull ready"
-      ],
-      "draft": false
-    },
-    {
-      "number": 34966,
-      "title": "[ROCm] Skip test_batch_axis_sharding_jvp",
-      "author": "AratiGanesh",
-      "state": "closed",
-      "merged": true,
-      "created_at": "2026-02-10T20:39:00Z",
-      "updated_at": "2026-02-14T03:35:47Z",
-      "html_url": "https://github.com/jax-ml/jax/pull/34966",
       "labels": [
         "kokoro:force-run",
         "pull ready"
