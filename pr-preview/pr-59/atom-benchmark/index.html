@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATOM Benchmark Dashboard</title>
+  <style>
+    /* ============================================================
+       CSS VARIABLES & RESET
+       ============================================================ */
+    :root {
+      /* Background — pure dark, high contrast */
+      --bg-primary: #0b0c10; --bg-secondary: #141519; --bg-tertiary: #1c1d24;
+      --border: #303140; --border-light: #262733;
+      /* Text — brighter for readability */
+      --text-primary: #eef0f6; --text-secondary: #bfc1d0; --text-tertiary: #7e8094;
+      /* Brand — ATOM logo magenta, accent only (header line, logo) */
+      --brand: #d86ecc; --brand-dim: rgba(216,110,204,0.12);
+      /* UI accent — slightly brighter slate blue */
+      --ui: #8899b8; --ui-bright: #a4b3ce; --ui-dim: rgba(136,153,184,0.12);
+      /* Semantic — slightly more vivid */
+      --accent-green: #56d472; --accent-red: #f25c4e;
+      --accent-orange: #eda06a; --accent-purple: #c49af5; --accent-yellow: #ddb040;
+      /* Spacing */
+      --gap-sm: 8px; --gap-md: 16px; --gap-lg: 24px; --radius: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow-x: hidden; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg-primary); color: var(--text-secondary); }
+    body::after { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: url('atom_logo.png') no-repeat center/240px 60px; opacity: 0.04; pointer-events: none; z-index: 0; }
+    .container { max-width: 1440px; margin: 0 auto; padding: var(--gap-lg); }
+    a { color: var(--ui-bright); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { font-family: "SF Mono", "Fira Code", Consolas, monospace; font-size: 12px; background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px; }
+
+    /* ============================================================
+       HEADER & FILTER BAR
+       ============================================================ */
+    header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--gap-md); padding: var(--gap-md) var(--gap-lg); border-bottom: 2px solid var(--brand); position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--bg-primary); }
+    .header-spacer { margin-bottom: var(--gap-lg); }
+    .fixed-thead { position: fixed; z-index: 40; background: var(--bg-secondary); display: none; overflow: hidden; }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-logo { height: 28px; opacity: 0.9; }
+    h1 { font-size: 20px; color: var(--text-primary); font-weight: 600; }
+    h1 .h1-sep { color: var(--text-tertiary); font-weight: 300; margin: 0 2px; }
+    h1 .h1-sub { color: var(--text-secondary); font-weight: 400; }
+    .meta { font-size: 12px; color: var(--text-tertiary); margin-top: 2px; }
+
+    .filter-bar { display: flex; gap: var(--gap-sm); flex-wrap: wrap; align-items: center; }
+    .filter-group { position: relative; }
+    .filter-btn { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 12px; white-space: nowrap; }
+    .filter-btn:hover, .filter-btn.open { background: var(--bg-tertiary); color: var(--text-primary); }
+    .filter-btn .count { background: var(--ui); color: #fff; border-radius: 10px; padding: 1px 6px; margin-left: 4px; font-size: 10px; }
+    .filter-dropdown { display: none; position: absolute; top: 100%; left: 0; margin-top: 4px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 0; min-width: 200px; max-height: 300px; overflow-y: auto; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.4); right: auto; }
+    .filter-group:last-of-type .filter-dropdown { left: auto; right: 0; }
+    .filter-dropdown.open { display: block; }
+    .filter-dropdown label { display: flex; align-items: center; gap: 8px; padding: 4px 12px; font-size: 12px; cursor: pointer; color: var(--text-secondary); }
+    .filter-dropdown label:hover { background: var(--bg-tertiary); }
+    .filter-dropdown input[type="checkbox"] { accent-color: var(--ui); }
+    .filter-dropdown .sep { border-top: 1px solid var(--border); margin: 4px 0; }
+    .filter-reset { background: none; color: var(--text-tertiary); border: 1px solid var(--border); border-radius: 6px; padding: 5px 10px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+    .filter-reset:hover { color: var(--text-secondary); background: var(--bg-tertiary); }
+
+    /* ============================================================
+       KPI CARDS (Level 1 — Overview)
+       ============================================================ */
+    .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap-md); margin-bottom: var(--gap-lg); }
+    .kpi-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--gap-md); }
+    .kpi-card .kpi-label { font-size: 11px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .kpi-card .kpi-value { font-size: 28px; font-weight: 700; color: var(--text-primary); font-family: "SF Mono", "Fira Code", monospace; }
+    .kpi-card .kpi-unit { font-size: 13px; color: var(--text-tertiary); font-weight: 400; }
+    .kpi-card .kpi-sub { font-size: 11px; color: var(--text-tertiary); margin-top: 4px; min-height: 16px; }
+    .kpi-card .kpi-trend { font-size: 12px; font-weight: 600; margin-top: 2px; }
+    .kpi-card.alert { border-color: var(--accent-red); animation: pulse-border 2s infinite; }
+    .kpi-card.alert-warning { border-color: var(--accent-orange); }
+    .kpi-card.ok { border-color: var(--accent-green); }
+    @keyframes pulse-border { 0%, 100% { border-color: var(--accent-red); } 50% { border-color: rgba(248,81,73,0.3); } }
+    .kpi-card.clickable { cursor: pointer; }
+    .kpi-card.clickable:hover { background: var(--bg-tertiary); }
+    .perf-table tbody tr.flash { animation: flash-row 1.5s ease-out; }
+    @keyframes flash-row { 0% { background: rgba(240,85,69,0.3); } 100% { background: transparent; } }
+    .trend-up { color: var(--accent-green); }
+    .trend-down { color: var(--accent-red); }
+    .trend-neutral { color: var(--text-tertiary); }
+    /* Throughput: up is good. TPOT/TTFT: down is good — callers handle inversion */
+
+    /* ============================================================
+       TABS (Level 2 — Diagnostic)
+       ============================================================ */
+    .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: var(--gap-lg); }
+    .tab { padding: 8px 16px; font-size: 13px; color: var(--text-tertiary); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; user-select: none; }
+    .tab:hover { color: var(--text-secondary); }
+    .tab.active { color: var(--text-primary); border-bottom-color: var(--ui); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ============================================================
+       CHART CARDS
+       ============================================================ */
+    .chart-grid { display: grid; grid-template-columns: 1fr; gap: var(--gap-lg); }
+    .chart-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--gap-md); }
+    .chart-card h3 { font-size: 13px; color: var(--text-tertiary); margin-bottom: var(--gap-sm); font-weight: 500; letter-spacing: 0.3px; }
+    .chart-card canvas { width: 100% !important; }
+    .chart-card .chart-wrap { position: relative; width: 100%; }
+    .chart-card.hero .chart-wrap { height: 380px; }
+    .chart-card.half .chart-wrap { height: 300px; }
+    .chart-card:not(.hero):not(.half) .chart-wrap { height: 320px; }
+    @media (min-width: 1024px) {
+      .chart-grid { grid-template-columns: repeat(2, 1fr); }
+      .chart-card.hero { grid-column: 1 / -1; }
+    }
+    .chart-empty { text-align: center; padding: 60px 20px; color: var(--text-tertiary); font-size: 14px; }
+    .chart-card canvas { cursor: pointer; }
+
+    /* Model selector (Trends tab) — matches filter-btn style */
+    .model-selector { display: flex; gap: var(--gap-sm); align-items: center; margin-bottom: var(--gap-md); flex-wrap: wrap; }
+    .model-selector .sel-label { font-size: 12px; color: var(--text-tertiary); margin-right: 4px; }
+    .model-selector .sel-btn { background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+    .model-selector .sel-btn:hover { background: var(--bg-tertiary); color: var(--text-primary); }
+    .model-selector .sel-btn.active { background: var(--ui); color: #fff; border-color: var(--ui); }
+
+    /* ============================================================
+       TABLES — Conditional Formatting
+       ============================================================ */
+    .perf-table { width: 100%; min-width: 1100px; border-collapse: collapse; font-size: 12px; }
+    .table-watermark { position: relative; overflow-x: scroll; }
+    .table-watermark::-webkit-scrollbar { height: 8px; }
+    .table-watermark::-webkit-scrollbar-track { background: var(--bg-tertiary); border-radius: 4px; }
+    .table-watermark::-webkit-scrollbar-thumb { background: var(--text-tertiary); border-radius: 4px; }
+    .table-watermark::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+    .perf-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--border); color: var(--text-tertiary); font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; background: var(--bg-secondary); }
+    .perf-table th.num { text-align: right; }
+    .perf-table td { padding: 7px 10px; border-bottom: 1px solid var(--border-light); }
+    .perf-table td.num { text-align: right; font-family: "SF Mono", "Fira Code", monospace; font-size: 12px; }
+    .perf-table td.model-name { font-weight: 500; white-space: nowrap; }
+    .perf-table tbody tr[data-key] { cursor: pointer; transition: background 0.1s; }
+    #tab-performance .perf-table tbody tr[data-key] td:first-child::before,
+    #tab-data .perf-table tbody tr[data-key] td:first-child::before { content: '▸ '; color: var(--text-tertiary); font-size: 10px; }
+    #tab-performance .perf-table tbody tr[data-key].row-open td:first-child::before,
+    #tab-data .perf-table tbody tr[data-key].row-open td:first-child::before { content: '▾ '; }
+    .perf-table tbody tr:nth-child(4n+1), .perf-table tbody tr:nth-child(4n+2) { background: rgba(22,27,34,0.5); }
+    .perf-table tbody tr:hover { background: var(--bg-tertiary); }
+    .perf-table tbody tr.regression { background: rgba(248,81,73,0.08) !important; }
+    .perf-table tbody tr.regression:hover { background: rgba(248,81,73,0.14) !important; }
+    .perf-table tbody tr.regression-warning { background: rgba(237,160,106,0.08) !important; }
+    .perf-table tbody tr.regression-warning:hover { background: rgba(237,160,106,0.14) !important; }
+    .perf-table .warn { color: var(--accent-red); }
+    /* Data bar for throughput */
+    .data-bar { position: relative; }
+    .data-bar-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 2px; pointer-events: none; }
+    .data-bar-text { position: relative; z-index: 1; }
+
+    .trend-jump { background: none; color: var(--ui-bright); border: none; padding: 0; font-size: 11px; cursor: pointer; white-space: nowrap; margin-left: 6px; }
+    .trend-jump:hover { color: var(--text-primary); text-decoration: underline; }
+
+    /* Detail row (expandable) */
+    .detail-row { display: none; }
+    .detail-row.expanded { display: table-row; }
+    .detail-row td { padding: 12px 16px; background: var(--bg-tertiary); border-bottom: 1px solid var(--border); }
+    .detail-box { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-md); font-size: 12px; }
+    .detail-box .detail-section h4 { font-size: 11px; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 6px; }
+    .detail-box .detail-item { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid var(--border-light); }
+    .detail-box .detail-key { color: var(--text-tertiary); }
+    .detail-box .detail-val { color: var(--text-primary); font-family: "SF Mono", monospace; }
+    .action-row { display: flex; gap: var(--gap-sm); margin-top: var(--gap-md); flex-wrap: wrap; }
+    .action-btn { background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 5px 12px; font-size: 11px; cursor: pointer; text-decoration: none; display: inline-block; }
+    .action-btn:hover { background: var(--border); color: var(--text-primary); text-decoration: none; }
+
+    /* ============================================================
+       TIMELINE VIEW (Data & Trace tab)
+       ============================================================ */
+    .view-toggle { display: flex; gap: 0; }
+    .view-toggle button { background: var(--bg-secondary); color: var(--text-tertiary); border: 1px solid var(--border); padding: 6px 14px; font-size: 12px; cursor: pointer; }
+    .view-toggle button:first-child { border-radius: 6px 0 0 6px; }
+    .view-toggle button:last-child { border-radius: 0 6px 6px 0; border-left: none; }
+    .view-toggle button.active { background: var(--bg-tertiary); color: var(--text-primary); border-color: var(--text-tertiary); }
+    .timeline { padding-left: 24px; border-left: 2px solid var(--border); }
+    .tl-node { position: relative; padding: 0 0 var(--gap-lg) var(--gap-lg); }
+    .tl-node::before { content: ''; position: absolute; left: -29px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--ui); border: 2px solid var(--bg-primary); }
+    .tl-node.has-regression::before { background: var(--accent-red); }
+    .tl-header { display: flex; align-items: center; gap: var(--gap-sm); flex-wrap: wrap; }
+    .tl-header .commit-id { font-family: "SF Mono", monospace; font-weight: 600; color: var(--text-primary); }
+    .tl-header .date { color: var(--text-tertiary); font-size: 12px; }
+    .tl-header .badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border); }
+    .tl-header .badge.warn { background: rgba(248,81,73,0.15); color: var(--accent-red); border-color: var(--accent-red); }
+    .tl-msg { color: var(--text-tertiary); font-size: 12px; margin-top: 4px; max-width: 600px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .tl-details { margin-top: var(--gap-sm); display: none; }
+    .tl-details.expanded { display: block; }
+    .tl-toggle { background: none; border: none; color: var(--ui-bright); cursor: pointer; font-size: 12px; padding: 0; margin-top: 4px; }
+    .tl-toggle:hover { text-decoration: underline; }
+
+    /* ============================================================
+       POPOVER
+       ============================================================ */
+    .popover-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 200; background: rgba(0,0,0,0.5); }
+    .popover-overlay.open { display: flex; align-items: center; justify-content: center; }
+    .popover { position: relative; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--gap-lg); padding-top: 40px; max-width: 520px; width: 90vw; max-height: 80vh; overflow-y: auto; box-shadow: 0 16px 48px rgba(0,0,0,0.6); }
+    .popover h3 { color: var(--text-primary); font-size: 15px; margin-bottom: var(--gap-md); padding-bottom: var(--gap-sm); border-bottom: 1px solid var(--border); }
+    .popover .pop-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 13px; }
+    .popover .pop-key { color: var(--text-tertiary); }
+    .popover .pop-val { color: var(--text-primary); font-family: "SF Mono", monospace; }
+    .popover .pop-section { margin-top: var(--gap-md); padding-top: var(--gap-sm); border-top: 1px solid var(--border); }
+    /* pop-actions uses shared action-row + action-btn */
+    .pop-close { position: absolute; top: 12px; right: 12px; background: none; border: none; color: var(--text-tertiary); font-size: 18px; cursor: pointer; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer { margin-top: var(--gap-lg); padding-top: 12px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-tertiary); flex-wrap: wrap; gap: var(--gap-sm); }
+    footer button { background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 5px 12px; cursor: pointer; font-size: 11px; }
+    footer button:hover { background: var(--bg-tertiary); }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 768px) {
+      .kpi-row { grid-template-columns: repeat(2, 1fr); }
+      .kpi-card .kpi-value { font-size: 22px; }
+      .kpi-card .kpi-sub { font-size: 10px; }
+      .filter-bar { width: 100%; }
+      .tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .detail-box { grid-template-columns: 1fr; }
+      .heatmap-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .model-selector { gap: 4px; }
+      .model-selector .sel-btn { padding: 5px 8px; font-size: 11px; }
+      header { padding: var(--gap-sm) var(--gap-md); }
+      h1 { font-size: 16px; }
+      .chart-card.hero .chart-wrap, .chart-card.half .chart-wrap { height: 260px; }
+      .popover { max-width: 95vw; padding: var(--gap-md); padding-top: 36px; }
+    }
+    @media (max-width: 480px) {
+      .kpi-row { grid-template-columns: 1fr; }
+      .container { padding: var(--gap-sm); }
+      header { padding: var(--gap-sm); }
+      .filter-bar { gap: 4px; }
+      .filter-btn, .filter-reset { padding: 5px 8px; font-size: 11px; }
+      .tabs .tab { padding: 6px 10px; font-size: 12px; }
+      .chart-card.hero .chart-wrap, .chart-card.half .chart-wrap, .chart-card .chart-wrap { height: 220px; }
+      .perf-table { font-size: 11px; }
+      .perf-table th, .perf-table td { padding: 5px 6px; }
+      .heatmap-table th, .heatmap-table td { padding: 4px 6px; font-size: 10px; }
+    }
+
+
+    /* Stale data warning */
+    .meta .stale { color: var(--accent-orange); }
+    .perf-table tbody tr.stale-data td.model-name { opacity: 0.5; }
+
+    /* Heatmap table */
+    .heatmap-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: var(--gap-md); }
+    .heatmap-table th { text-align: center; padding: 6px 10px; border-bottom: 2px solid var(--border); color: var(--text-tertiary); font-weight: 500; font-size: 11px; background: var(--bg-secondary); }
+    .heatmap-table td { text-align: center; padding: 6px 10px; border: 1px solid var(--border-light); font-family: "SF Mono", monospace; font-size: 11px; color: var(--text-primary); }
+    .heatmap-table td.row-label { text-align: left; font-family: inherit; color: var(--text-secondary); white-space: nowrap; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <img class="header-logo" src="atom_logo.png" alt="ATOM" onerror="this.style.display='none'">
+    <div>
+      <h1>Benchmark Dashboard</h1>
+      <div class="meta"><span id="last-update"></span> · <a id="repo-link" target="_blank"></a></div>
+    </div>
+  </div>
+  <div class="filter-bar" id="filter-bar"></div>
+</header>
+<div class="header-spacer" id="header-spacer"></div>
+<div class="fixed-thead" id="fixed-thead"></div>
+<div class="container">
+  <!-- Level 1: KPI Summary (always visible) -->
+  <div class="kpi-row" id="kpi-row"></div>
+
+  <!-- Level 2-3: Tabs -->
+  <div class="tabs" id="tabs-nav">
+    <div class="tab active" data-tab="performance">Performance</div>
+    <div class="tab" data-tab="tradeoff">Throughput vs Latency</div>
+    <div class="tab" data-tab="trends">Trends</div>
+    <div class="tab" data-tab="data">Data &amp; Trace</div>
+  </div>
+
+  <div class="tab-content active" id="tab-performance"></div>
+  <div class="tab-content" id="tab-tradeoff"></div>
+  <div class="tab-content" id="tab-trends"></div>
+  <div class="tab-content" id="tab-data"></div>
+
+  <footer>
+    <div>
+      <button id="dl-btn">Download JSON</button>
+    </div>
+    <span>Powered by <a href="https://github.com/benchmark-action/github-action-benchmark" target="_blank">github-action-benchmark</a> · ATOM Inference Engine</span>
+  </footer>
+</div>
+
+<!-- Popover -->
+<div class="popover-overlay" id="popover-overlay"><div class="popover" id="popover"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha384-bs/nf9FbdNouRbMiFcrcZfLXYPKiPaGVGplVbv7dLGECccEXDW+S3zjqSKR5ZEaD" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha384-y49Zu59jZHJL/PLKgZPv3k2WI9c0Yp3pWB76V8OBVCb0QBKS8l4Ff3YslzHVX76Y" crossorigin="anonymous"></script>
+<script src="data.js"></script>
+<script>
+'use strict';
+(function() {
+/* ================================================================
+   1. CONSTANTS & COLOR PALETTE
+   ================================================================ */
+// HSL-based palette: each model gets a distinct hue, bar alpha varies by concurrency
+const MODEL_HUES = {
+  'DeepSeek-R1-0528':      210,   // blue
+  'DeepSeek-R1-0528-mtp3': 175,   // cyan/teal — distinct from base DeepSeek
+  'DeepSeek-R1-0528-MXFP4': 190,  // teal
+  'GLM-5-FP8':             140,   // green
+  'gpt-oss-120b':          15,    // orange
+  'Kimi-K2-Thinking-MXFP4': 320,  // magenta
+  'Meta-Llama-3-8B-Instruct': 270, // purple
+  'Qwen3-235B-A22B-Instruct-2507-FP8': 50, // gold
+};
+const FALLBACK_HUES = [45, 330, 190, 30]; // yellow, pink, teal, amber
+let fallbackHueIdx = 0;
+function getModelHue(backend, model) {
+  const backendModelKey = backend ? `${backend}::${model}` : model;
+  if (MODEL_HUES[backendModelKey] != null) return MODEL_HUES[backendModelKey];
+  if (MODEL_HUES[model] != null) return MODEL_HUES[model];
+  const h = FALLBACK_HUES[fallbackHueIdx % FALLBACK_HUES.length];
+  MODEL_HUES[backendModelKey] = h;
+  fallbackHueIdx++;
+  return h;
+}
+function getModelColor(backend, model) {
+  const h = getModelHue(backend, model);
+  return {
+    border: `hsl(${h}, 55%, 65%)`,
+    bg:     `hsla(${h}, 55%, 65%, 0.12)`,
+    text:   `hsl(${h}, 35%, 75%)`,
+  };
+}
+// Bar color: lower saturation, higher lightness for a soft pastel look
+function getBarColor(backend, model, conc, concList) {
+  const h = getModelHue(backend, model);
+  const sorted = [...concList].sort((a, b) => a - b);
+  const rank = sorted.indexOf(conc);
+  const alpha = concList.length <= 1 ? 0.55 : 0.3 + (rank / (sorted.length - 1)) * 0.35;
+  return `hsla(${h}, 50%, 72%, ${alpha.toFixed(2)})`;
+}
+
+// Chart color constants (match CSS --text-tertiary / --text-secondary)
+const C_TICK = '#8a8da0';    // axis ticks, labels
+const C_LEGEND = '#9ea0b2';  // legend text, datalabels
+const C_TOOLTIP_BG = '#141519';
+const C_TOOLTIP_BD = '#303140';
+const C_TOOLTIP_TITLE = '#eef0f6';
+const C_TOOLTIP_BODY = '#bfc1d0';
+
+// Register datalabels globally but disable by default
+if (typeof ChartDataLabels !== 'undefined') Chart.register(ChartDataLabels);
+Chart.defaults.plugins.datalabels = { display: false };
+Chart.defaults.color = C_TICK;
+Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+Chart.defaults.font.size = 11;
+
+// Legend hover plugin: fade non-hovered datasets via canvas globalAlpha
+Chart.register({
+  id: 'legendFocus',
+  beforeDatasetDraw(chart, args) {
+    if (chart._legendFocusIndex == null) return;
+    if (args.index !== chart._legendFocusIndex) {
+      chart.ctx.save();
+      chart.ctx.globalAlpha = 0.12;
+    }
+  },
+  afterDatasetDraw(chart, args) {
+    if (chart._legendFocusIndex == null) return;
+    if (args.index !== chart._legendFocusIndex) {
+      chart.ctx.restore();
+    }
+  }
+});
+Chart.defaults.plugins.legend.onHover = function(e, item, legend) {
+  legend.chart._legendFocusIndex = item.datasetIndex;
+  legend.chart.draw();
+  if (e.native?.target) e.native.target.style.cursor = 'pointer';
+};
+Chart.defaults.plugins.legend.onLeave = function(e, item, legend) {
+  legend.chart._legendFocusIndex = null;
+  legend.chart.draw();
+  if (e.native?.target) e.native.target.style.cursor = 'default';
+};
+
+// Watermark plugin: draw ATOM logo as faded background on all charts
+const _watermarkImg = new Image();
+_watermarkImg.src = document.querySelector('.header-logo')?.src || 'atom_logo.png';
+Chart.register({
+  id: 'watermark',
+  beforeDraw(chart) {
+    if (!_watermarkImg.complete || !_watermarkImg.naturalWidth) return;
+    const { ctx, chartArea: area } = chart;
+    if (!area) return;
+    const maxW = (area.right - area.left) * 0.4;
+    const scale = maxW / _watermarkImg.naturalWidth;
+    const w = _watermarkImg.naturalWidth * scale;
+    const h = _watermarkImg.naturalHeight * scale;
+    const x = area.left + (area.right - area.left - w) / 2;
+    const y = area.top + (area.bottom - area.top - h) / 2;
+    ctx.save();
+    ctx.globalAlpha = 0.07;
+    ctx.drawImage(_watermarkImg, x, y, w, h);
+    ctx.restore();
+  }
+});
+
+const REGRESSION_WARNING = 0.05;   // 5% → warning
+const REGRESSION_CRITICAL = 0.10;  // 10% → critical
+
+/* ================================================================
+   2. DATA PARSING
+   ================================================================ */
+const rawData = window.BENCHMARK_DATA;
+
+function parseBenchName(name) {
+  let backend = 'ATOM';
+  let rawName = name;
+  const backendMatch = name.match(/^([^:]+)::(.+)$/);
+  if (backendMatch) {
+    backend = backendMatch[1];
+    rawName = backendMatch[2];
+  }
+  if (backend === 'OOT') backend = 'ATOM-vLLM';
+  let m = rawName.match(/^(\S+)\s+(\d+\/\d+)\s+c=(\d+)\s+(.+?)\s*\((.+)\)$/);
+  if (m) return { backend, model: m[1], islOsl: m[2], conc: +m[3], metric: m[4].trim(), unit: m[5] };
+  m = rawName.match(/^(\S+)\s+(\d+\/\d+)\s+c=(\d+)\s+(_gpu_count)$/);
+  if (m) return { backend, model: m[1], islOsl: m[2], conc: +m[3], metric: '_gpu_count', unit: '' };
+  return null;
+}
+
+// Parse all runs sorted by date descending
+const allRuns = Object.values(rawData.entries).flat().sort((a, b) => b.date - a.date);
+
+// For each run, parse benches into structured configs
+function parseRunConfigs(run) {
+  const configs = {}; // key: "backend|model|isl/osl|conc"
+  for (const b of run.benches) {
+    const p = parseBenchName(b.name);
+    if (!p || p.islOsl === '0/0') continue;
+    const key = `${p.backend}|${p.model}|${p.islOsl}|${p.conc}`;
+    if (!configs[key]) configs[key] = { backend: p.backend, model: p.model, islOsl: p.islOsl, conc: p.conc, commit: run.commit, date: run.date, runUrl: '' };
+    configs[key][p.metric] = b.value;
+    if (b.extra) {
+      configs[key]._extra = b.extra;
+      const rm = b.extra.match(/Run:\s*(https:\/\/\S+)/);
+      if (rm) configs[key].runUrl = rm[1];
+      const gm = b.extra.match(/GPU:\s*([^|]+)/);
+      if (gm) configs[key]._gpu_name = gm[1].trim();
+      const vm = b.extra.match(/VRAM:\s*(\d+)GB/);
+      if (vm) configs[key]._gpu_vram_gb = +vm[1];
+      const rcm = b.extra.match(/ROCm:\s*([\d.]+)/);
+      if (rcm) configs[key]._rocm_version = rcm[1];
+    }
+  }
+  return configs;
+}
+
+// All parsed configs from all runs, keyed by configKey, each holding array of values over time
+const historyMap = {}; // key -> [{date, commit, throughput, ...}, ...]
+for (const run of allRuns) {
+  const configs = parseRunConfigs(run);
+  for (const [key, cfg] of Object.entries(configs)) {
+    if (!historyMap[key]) historyMap[key] = [];
+    historyMap[key].push(cfg);
+  }
+}
+
+// For each config, take the most recent data point across all runs
+// This ensures all models appear even if the latest run only tested a subset
+const latestRun = allRuns[0];
+const latestConfigs = {};
+for (const [key, history] of Object.entries(historyMap)) {
+  latestConfigs[key] = history[0]; // history is sorted desc by date
+}
+
+// Detect regressions: compare to most recent previous value for same config
+function detectRegressions() {
+  const regressions = {};
+  for (const [key, cfg] of Object.entries(latestConfigs)) {
+    const history = historyMap[key];
+    if (!history || history.length < 2) continue;
+    const prev = history[1]; // second entry is previous (sorted desc)
+    if (!prev || !prev.throughput || !cfg.throughput) continue;
+    const tputChange = (cfg.throughput - prev.throughput) / prev.throughput;
+    const tpotChange = (prev.TPOT && cfg.TPOT) ? (cfg.TPOT - prev.TPOT) / prev.TPOT : 0;
+    const worstDelta = Math.max(-tputChange, tpotChange);
+    if (worstDelta >= REGRESSION_WARNING) {
+      const severity = worstDelta >= REGRESSION_CRITICAL ? 'critical' : 'warning';
+      regressions[key] = { tputPct: tputChange * 100, tpotPct: tpotChange * 100, prev, severity };
+    }
+  }
+  return regressions;
+}
+const regressions = detectRegressions();
+
+// Extract unique filter values from ALL runs (not just latest) so historical models are always visible
+const allBackends = [...new Set(Object.keys(historyMap).map(k => k.split('|')[0]))].sort();
+const allModels = [...new Set(Object.keys(historyMap).map(k => k.split('|')[1]))].sort();
+const allIslOsl = [...new Set(Object.keys(historyMap).map(k => k.split('|')[2]))].sort();
+const allConc = [...new Set(Object.keys(historyMap).map(k => +k.split('|')[3]))].sort((a, b) => a - b);
+const allTrendModelKeys = [...new Set(Object.values(latestConfigs).map(cfg => `${cfg.backend}|${cfg.model}`))].sort();
+
+/* ================================================================
+   3. STATE
+   ================================================================ */
+const PERF_METRICS = [
+  { key: 'Total Tput',  label: 'Total Throughput',  unit: 'tok/s', lower: false },
+  { key: 'throughput',  label: 'Output Throughput', unit: 'tok/s', lower: false },
+  { key: 'TPOT',        label: 'TPOT',              unit: 'ms',    lower: true },
+  { key: 'TTFT',        label: 'TTFT',              unit: 'ms',    lower: true },
+];
+const state = {
+  filters: { backends: [...allBackends], models: [...allModels], islOsl: [...allIslOsl], conc: [...allConc] },
+  activeTab: 'performance',
+  perfMetric: 'Total Tput',
+  trendModelKey: allTrendModelKeys[0] || '',
+  dataView: 'table',
+};
+
+function filteredConfigs() {
+  const out = {};
+  for (const [key, cfg] of Object.entries(latestConfigs)) {
+    if (!state.filters.backends.includes(cfg.backend)) continue;
+    if (!state.filters.models.includes(cfg.model)) continue;
+    if (!state.filters.islOsl.includes(cfg.islOsl)) continue;
+    if (!state.filters.conc.includes(cfg.conc)) continue;
+    out[key] = cfg;
+  }
+  return out;
+}
+
+/* ================================================================
+   4. UTILITY FUNCTIONS
+   ================================================================ */
+// ISL/OSL compact format: "1024/1024" → "1k/1k", "8192/1024" → "8k/1k"
+function fmtIslOsl(s) { return s.replace(/\d+/g, n => +n >= 1024 ? parseFloat((+n / 1024).toPrecision(3)) + 'k' : n); }
+
+// Model family grouping: "DeepSeek-R1-0528-mtp3" → family "DeepSeek-R1-0528", variant "mtp3"
+function modelFamily(name) {
+  const m = name.match(/^([A-Za-z][\w]*(?:-[A-Za-z0-9]+){1,3}?)(?:[-_](?:mtp|MTP|moe|MoE|MXFP|mxfp).*)?$/);
+  return m ? m[1] : name;
+}
+function modelVariant(name) {
+  const fam = modelFamily(name);
+  return name === fam ? 'base' : name.slice(fam.length).replace(/^[-_]+/, '');
+}
+
+function fmtNum(v, dec) { return v != null ? v.toLocaleString(undefined, { minimumFractionDigits: dec, maximumFractionDigits: dec }) : '—'; }
+// Compact format: 13960 → "14.0K", 1350 → "1,350" (only abbreviate ≥ 10K)
+function fmtCompact(v, dec) {
+  if (v == null) return '—';
+  if (v >= 10000) return (v / 1000).toFixed(1) + 'K';
+  return fmtNum(v, dec);
+}
+function fmtDate(ts) { return new Date(ts).toLocaleString(); }
+function relTime(ts) {
+  const diff = Date.now() - ts;
+  if (diff < 3600000) return Math.round(diff / 60000) + 'm ago';
+  if (diff < 86400000) return Math.round(diff / 3600000) + 'h ago';
+  return Math.round(diff / 86400000) + 'd ago';
+}
+
+function trendHTML(current, previous, inverse) {
+  // inverse=true means lower is better (TPOT, TTFT)
+  if (previous == null || current == null) return '<span class="trend-neutral">—</span>';
+  const pct = ((current - previous) / previous * 100);
+  const abs = Math.abs(pct).toFixed(1);
+  if (Math.abs(pct) < 1) return `<span class="trend-neutral">${pct >= 0 ? '+' : ''}${abs}%</span>`;
+  const isGood = inverse ? pct < 0 : pct > 0;
+  const arrow = pct > 0 ? '▲' : '▼';
+  const cls = isGood ? 'trend-up' : 'trend-down';
+  return `<span class="${cls}">${arrow} ${abs}%</span>`;
+}
+
+// Heat color: ratio 0 (best) → 1 (worst)
+function heatBg(ratio) {
+  const r = Math.min(1, Math.max(0, ratio));
+  if (r < 0.5) return `rgba(63,185,80,${0.12 + r * 0.16})`;
+  return `rgba(248,81,73,${(r - 0.5) * 0.24 + 0.04})`;
+}
+
+function destroyChartsIn(container) {
+  container.querySelectorAll('canvas').forEach(c => { const ch = Chart.getChart(c); if (ch) ch.destroy(); });
+}
+
+const _ftHead = document.getElementById('fixed-thead');
+let _ftTable = null;
+let _ftWrapper = null;
+
+function syncHeaderH() {
+  const h = document.querySelector('header');
+  const spacer = document.getElementById('header-spacer');
+  if (h && spacer) spacer.style.height = h.offsetHeight + 'px';
+  if (h && _ftHead) _ftHead.style.top = h.offsetHeight + 'px';
+}
+
+function bindFixedThead(container) {
+  const table = container.querySelector('.perf-table');
+  _ftTable = table;
+  _ftWrapper = table ? table.closest('.table-watermark') : null;
+  if (!table) { _ftHead.style.display = 'none'; return; }
+
+  // Clone table structure with only thead for pixel-perfect alignment
+  requestAnimationFrame(() => {
+    const clone = table.cloneNode(false); // clone table element without children
+    clone.style.tableLayout = 'fixed';
+    const thead = table.querySelector('thead');
+    if (!thead) return;
+    // Copy col widths from real table cells
+    const ths = thead.querySelectorAll('th');
+    const colgroup = document.createElement('colgroup');
+    ths.forEach(th => {
+      const col = document.createElement('col');
+      col.style.width = th.offsetWidth + 'px';
+      colgroup.appendChild(col);
+    });
+    clone.appendChild(colgroup);
+    clone.appendChild(thead.cloneNode(true));
+    _ftHead.innerHTML = '';
+    _ftHead.appendChild(clone);
+  });
+
+  // Sync horizontal scroll
+  if (_ftWrapper) {
+    _ftWrapper.addEventListener('scroll', () => {
+      if (_ftHead.firstChild) _ftHead.firstChild.style.marginLeft = -_ftWrapper.scrollLeft + 'px';
+    }, { passive: true });
+  }
+}
+
+window.addEventListener('scroll', () => {
+  if (!_ftTable || !_ftWrapper) { _ftHead.style.display = 'none'; return; }
+  const thead = _ftTable.querySelector('thead');
+  if (!thead) { _ftHead.style.display = 'none'; return; }
+  const headerH = document.querySelector('header')?.offsetHeight || 52;
+  const theadTop = thead.getBoundingClientRect().top;
+  const tableBottom = _ftTable.getBoundingClientRect().bottom;
+  if (theadTop < headerH && tableBottom > headerH + 40) {
+    const r = _ftWrapper.getBoundingClientRect();
+    _ftHead.style.display = 'block';
+    _ftHead.style.left = r.left + 'px';
+    _ftHead.style.width = r.width + 'px';
+    if (_ftHead.firstChild) _ftHead.firstChild.style.marginLeft = -_ftWrapper.scrollLeft + 'px';
+  } else {
+    _ftHead.style.display = 'none';
+  }
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+  syncHeaderH();
+  if (_ftTable) bindFixedThead(_ftTable.closest('.tab-content') || _ftTable.parentElement);
+}, { passive: true });
+
+function chartGridOpts() {
+  return { color: 'rgba(65,67,85,0.4)', drawBorder: false };
+}
+
+// Reference line plugin — draws a dashed horizontal line with label
+function avgLinePlugin(avgValue, label, color) {
+  return {
+    id: 'avgLine_' + Math.random(),
+    afterDraw(chart) {
+      if (avgValue == null) return;
+      const yScale = chart.scales.y;
+      const y = yScale.getPixelForValue(avgValue);
+      if (y < yScale.top || y > yScale.bottom) return;
+      const ctx = chart.ctx;
+      ctx.save();
+      ctx.strokeStyle = color || 'rgba(154,155,170,0.5)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([6, 4]);
+      ctx.beginPath();
+      ctx.moveTo(chart.chartArea.left, y);
+      ctx.lineTo(chart.chartArea.right, y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = color || 'rgba(154,155,170,0.7)';
+      ctx.font = '10px -apple-system, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText(label || 'avg', chart.chartArea.right, y - 4);
+      ctx.restore();
+    }
+  };
+}
+function chartTooltipOpts() {
+  return { backgroundColor: C_TOOLTIP_BG, borderColor: C_TOOLTIP_BD, borderWidth: 1, titleColor: C_TOOLTIP_TITLE, bodyColor: C_TOOLTIP_BODY, cornerRadius: 6, padding: 12 };
+}
+
+/* ================================================================
+   5. HEADER & META
+   ================================================================ */
+const _updateAge = Date.now() - rawData.lastUpdate;
+const _updateEl = document.getElementById('last-update');
+const _isStale = _updateAge > 86400000; // > 24h
+_updateEl.textContent = 'Updated ' + relTime(rawData.lastUpdate);
+if (_isStale) { _updateEl.classList.add('stale'); _updateEl.textContent += ' — data may be stale'; }
+const repoLink = document.getElementById('repo-link');
+repoLink.href = rawData.repoUrl; repoLink.textContent = rawData.repoUrl.replace('https://github.com/', '');
+// Append GPU platform info to header meta from first available config
+const _firstCfgWithGpu = Object.values(latestConfigs).find(c => c._gpu_name);
+if (_firstCfgWithGpu) {
+  const metaEl = document.querySelector('.meta');
+  const gpuSpan = document.createElement('span');
+  gpuSpan.textContent = ' · ' + _firstCfgWithGpu._gpu_name + (_firstCfgWithGpu._rocm_version ? ' · ROCm ' + _firstCfgWithGpu._rocm_version : '');
+  metaEl.appendChild(gpuSpan);
+}
+document.getElementById('dl-btn').onclick = () => {
+  const a = document.createElement('a');
+  a.href = 'data:application/json,' + encodeURIComponent(JSON.stringify(rawData, null, 2));
+  a.download = 'benchmark_data.json'; a.click();
+};
+
+/* ================================================================
+   6. FILTERS
+   ================================================================ */
+const filterDefs = [
+  { id: 'backends', label: 'Backend', options: allBackends },
+  { id: 'models', label: 'Model', options: allModels },
+  { id: 'islOsl', label: 'ISL/OSL', options: allIslOsl },
+  { id: 'conc', label: 'Concurrency', options: allConc.map(String) },
+];
+
+function getFilterState(id) {
+  return id === 'conc' ? state.filters.conc.map(String) : state.filters[id];
+}
+
+// Update only the button badge text — no DOM rebuild
+function updateFilterBadge(id) {
+  const btn = document.querySelector(`.filter-btn[data-filter="${id}"]`);
+  if (!btn) return;
+  const def = filterDefs.find(d => d.id === id);
+  const sel = getFilterState(id);
+  const allSelected = sel.length === def.options.length;
+  btn.innerHTML = allSelected ? `${def.label} ▾` : `${def.label} ▾<span class="count">${sel.length}</span>`;
+}
+
+function renderFilters() {
+  const bar = document.getElementById('filter-bar');
+  bar.innerHTML = '';
+  for (const d of filterDefs) {
+    const sel = getFilterState(d.id);
+    const allSelected = sel.length === d.options.length;
+    const group = document.createElement('div');
+    group.className = 'filter-group';
+    group.innerHTML = `<button class="filter-btn" data-filter="${d.id}">${d.label} ▾${allSelected ? '' : '<span class="count">' + sel.length + '</span>'}</button>
+      <div class="filter-dropdown" id="fd-${d.id}">
+        <label><input type="checkbox" value="__all__" ${allSelected ? 'checked' : ''}> All</label>
+        <div class="sep"></div>
+        ${d.options.map(o => `<label><input type="checkbox" value="${o}" ${sel.includes(o) ? 'checked' : ''}> ${d.id === 'islOsl' ? fmtIslOsl(o) : o}</label>`).join('')}
+      </div>`;
+    bar.appendChild(group);
+  }
+  // Reset button
+  const resetBtn = document.createElement('button');
+  resetBtn.className = 'filter-reset';
+  resetBtn.textContent = 'Reset';
+  resetBtn.addEventListener('click', () => {
+    state.filters.backends = [...allBackends];
+    state.filters.models = [...allModels];
+    state.filters.islOsl = [...allIslOsl];
+    state.filters.conc = [...allConc];
+    renderFilters();
+    renderActiveTab();
+    renderKPICards();
+    syncToHash();
+  });
+  bar.appendChild(resetBtn);
+
+  // Copy Link button
+  const copyLinkBtn = document.createElement('button');
+  copyLinkBtn.className = 'filter-reset';
+  copyLinkBtn.textContent = 'Copy Link';
+  copyLinkBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      copyLinkBtn.textContent = 'Copied!';
+      setTimeout(() => { copyLinkBtn.textContent = 'Copy Link'; }, 1500);
+    });
+  });
+  bar.appendChild(copyLinkBtn);
+
+  // Event: toggle dropdown (stopPropagation keeps it open)
+  bar.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const dd = document.getElementById('fd-' + btn.dataset.filter);
+      const wasOpen = dd.classList.contains('open');
+      closeAllDropdowns();
+      if (!wasOpen) { dd.classList.add('open'); btn.classList.add('open'); }
+    });
+  });
+
+  // Event: clicks inside dropdown must NOT close it
+  bar.querySelectorAll('.filter-dropdown').forEach(dd => {
+    dd.addEventListener('click', (e) => e.stopPropagation());
+  });
+
+  // Event: checkbox change — update state & badge in-place, no DOM rebuild
+  bar.querySelectorAll('.filter-dropdown').forEach(dd => {
+    dd.addEventListener('change', (e) => {
+      const filterId = dd.id.replace('fd-', '');
+      const allCb = dd.querySelector('input[value="__all__"]');
+      const itemCbs = [...dd.querySelectorAll('input:not([value="__all__"])')];
+      if (e.target.value === '__all__') {
+        itemCbs.forEach(cb => cb.checked = e.target.checked);
+      } else {
+        allCb.checked = itemCbs.every(cb => cb.checked);
+      }
+      const selected = itemCbs.filter(cb => cb.checked).map(cb => cb.value);
+      if (filterId === 'conc') {
+        state.filters.conc = selected.map(Number);
+      } else {
+        state.filters[filterId] = selected;
+      }
+      // Only update badge — dropdown stays open
+      updateFilterBadge(filterId);
+      renderActiveTab();
+      renderKPICards();
+      syncToHash();
+    });
+  });
+}
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.filter-dropdown').forEach(d => d.classList.remove('open'));
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('open'));
+}
+// Close dropdowns on outside click
+document.addEventListener('click', closeAllDropdowns);
+
+/* ================================================================
+   7. KPI CARDS
+   ================================================================ */
+function renderKPICards() {
+  const fc = filteredConfigs();
+  const entries = Object.entries(fc);
+  const row = document.getElementById('kpi-row');
+
+  // Find peak total throughput
+  let peakTput = null, peakTputCfg = null, peakTputPrev = null;
+  let bestTpot = null, bestTpotCfg = null, bestTpotPrev = null;
+  for (const [key, cfg] of entries) {
+    const totalTput = cfg['Total Tput'];
+    if (totalTput != null && (peakTput === null || totalTput > peakTput)) {
+      peakTput = totalTput; peakTputCfg = cfg;
+      const hist = historyMap[key]; peakTputPrev = (hist && hist.length > 1) ? hist[1]['Total Tput'] : null;
+    }
+    if (cfg.TPOT != null && (bestTpot === null || cfg.TPOT < bestTpot)) {
+      bestTpot = cfg.TPOT; bestTpotCfg = cfg;
+      const hist = historyMap[key]; bestTpotPrev = (hist && hist.length > 1) ? hist[1].TPOT : null;
+    }
+  }
+
+  const models = new Set(entries.map(([, c]) => c.model));
+  const backends = new Set(entries.map(([, c]) => c.backend));
+  const gpuCounts = [...new Set(entries.map(([, c]) => c._gpu_count).filter(Boolean))].sort((a, b) => a - b);
+  const gpuLabel = gpuCounts.length === 1 ? gpuCounts[0] + '× GPU' : gpuCounts.length > 1 ? gpuCounts[0] + '-' + gpuCounts[gpuCounts.length - 1] + '× GPU' : '';
+
+  // GPU platform info from latest configs
+  const gpuNames = [...new Set(entries.map(([, c]) => c._gpu_name).filter(Boolean))];
+  const gpuVrams = [...new Set(entries.map(([, c]) => c._gpu_vram_gb).filter(Boolean))];
+  const rocmVersions = [...new Set(entries.map(([, c]) => c._rocm_version).filter(Boolean))];
+  const gpuNameLabel = gpuNames.length === 1 ? gpuNames[0] : gpuNames.length > 1 ? gpuNames.join(', ') : '';
+  const gpuVramLabel = gpuVrams.length === 1 ? gpuVrams[0] + 'GB' : '';
+  const rocmLabel = rocmVersions.length === 1 ? 'ROCm ' + rocmVersions[0] : '';
+
+  // Regression counts by severity
+  const filteredRegKeys = Object.keys(regressions).filter(k => {
+    const c = latestConfigs[k];
+    return c && state.filters.backends.includes(c.backend) &&
+      state.filters.models.includes(c.model) &&
+      state.filters.islOsl.includes(c.islOsl) && state.filters.conc.includes(c.conc);
+  });
+  const regCount = filteredRegKeys.length;
+  const criticalCount = filteredRegKeys.filter(k => regressions[k].severity === 'critical').length;
+  const warningCount = regCount - criticalCount;
+  const regCardClass = regCount > 0 ? (criticalCount > 0 ? 'alert clickable' : 'alert-warning clickable') : 'ok';
+
+  // Build GPU sub-label
+  const gpuParts = [entries.length + ' configs', backends.size + ' modes'];
+  if (gpuLabel) gpuParts.push(gpuLabel);
+  if (gpuNameLabel) gpuParts.push(gpuNameLabel);
+  if (gpuVramLabel) gpuParts.push(gpuVramLabel);
+  if (rocmLabel) gpuParts.push(rocmLabel);
+
+  // Regression sub-label
+  let regSub;
+  if (regCount === 0) {
+    regSub = 'No regressions detected';
+  } else if (criticalCount > 0 && warningCount > 0) {
+    regSub = `${criticalCount} critical, ${warningCount} warning`;
+  } else if (criticalCount > 0) {
+    regSub = `${criticalCount} critical`;
+  } else {
+    regSub = `${warningCount} warning`;
+  }
+
+  row.innerHTML = `
+    <div class="kpi-card">
+      <div class="kpi-label">Peak Total Throughput</div>
+      <div class="kpi-value">${peakTput != null ? fmtCompact(peakTput, 0) : '—'} <span class="kpi-unit">tok/s</span></div>
+      <div class="kpi-trend">${trendHTML(peakTput, peakTputPrev, false)}</div>
+      <div class="kpi-sub">${peakTputCfg ? peakTputCfg.model + ' ' + fmtIslOsl(peakTputCfg.islOsl) + ' c=' + peakTputCfg.conc : ''}</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Best TPOT (Lowest)</div>
+      <div class="kpi-value">${bestTpot != null ? fmtNum(bestTpot, 2) : '—'} <span class="kpi-unit">ms</span></div>
+      <div class="kpi-trend">${trendHTML(bestTpot, bestTpotPrev, true)}</div>
+      <div class="kpi-sub">${bestTpotCfg ? bestTpotCfg.model + ' ' + fmtIslOsl(bestTpotCfg.islOsl) + ' c=' + bestTpotCfg.conc : ''}</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Test Matrix</div>
+      <div class="kpi-value">${models.size} <span class="kpi-unit">models</span></div>
+      <div class="kpi-sub">${gpuParts.join(' · ')}</div>
+    </div>
+    <div class="kpi-card ${regCardClass}" id="kpi-reg" ${regCount > 0 ? 'title="Click to view regressions"' : ''}>
+      <div class="kpi-label">Regressions</div>
+      <div class="kpi-value">${regCount > 0 ? regCount : '0'} <span class="kpi-unit">${regCount > 0 ? '⚠' : '✓'}</span></div>
+      <div class="kpi-sub">${regSub}</div>
+    </div>`;
+
+
+  // Regression card click → switch to Performance tab, scroll to first regression, flash highlight
+  const regCard = document.getElementById('kpi-reg');
+  if (regCard && regCount > 0) {
+    regCard.addEventListener('click', () => {
+      // Switch to Performance tab if not already
+      if (state.activeTab !== 'performance') {
+        document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === 'performance'));
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.toggle('active', t.id === 'tab-performance'));
+        state.activeTab = 'performance';
+        renderActiveTab();
+        syncToHash();
+      }
+      // Wait for render, then scroll and flash
+      requestAnimationFrame(() => {
+        const rows = document.querySelectorAll('#tab-performance tr.regression');
+        if (rows.length) {
+          rows[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+          rows.forEach(r => { r.classList.add('flash'); setTimeout(() => r.classList.remove('flash'), 1500); });
+        }
+      });
+    });
+  }
+}
+
+
+/* ================================================================
+   8. TAB SWITCHING
+   ================================================================ */
+document.getElementById('tabs-nav').addEventListener('click', (e) => {
+  const tab = e.target.closest('.tab');
+  if (!tab) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  state.activeTab = tab.dataset.tab;
+  document.getElementById('tab-' + state.activeTab).classList.add('active');
+  renderActiveTab();
+  syncToHash();
+});
+
+function renderActiveTab() {
+  switch (state.activeTab) {
+    case 'performance': renderPerformanceTab(); break;
+    case 'tradeoff': renderTradeoffTab(); break;
+    case 'trends': renderTrendsTab(); break;
+    case 'data': renderDataTab(); break;
+  }
+  syncHeaderH();
+}
+
+/* ================================================================
+   9. PERFORMANCE TAB
+   ================================================================ */
+let _perfChartRAF = null;
+function renderPerformanceTab() {
+  if (_perfChartRAF) { cancelAnimationFrame(_perfChartRAF); _perfChartRAF = null; }
+  const container = document.getElementById('tab-performance');
+  destroyChartsIn(container);
+  const fc = filteredConfigs();
+  // Sort by backend → model → ISL/OSL → concurrency for grouped readability
+  const entries = Object.entries(fc).sort((a, b) => {
+    const am = a[1], bm = b[1];
+    return am.backend.localeCompare(bm.backend) || am.model.localeCompare(bm.model) || am.islOsl.localeCompare(bm.islOsl) || am.conc - bm.conc;
+  });
+
+  if (entries.length === 0) {
+    container.innerHTML = '<div class="chart-empty">No data matches the current filters.</div>';
+    return;
+  }
+
+  // --- Bar Charts: one per model ---
+  const pm = PERF_METRICS.find(m => m.key === state.perfMetric) || PERF_METRICS[0];
+  const metricBtns = PERF_METRICS.map(m =>
+    `<button class="sel-btn ${m.key === state.perfMetric ? 'active' : ''}" data-metric="${m.key}">${m.label}</button>`
+  ).join('');
+
+  // Group entries by backend + model so native/OOT stay distinct
+  const byModel = {};
+  for (const [key, cfg] of entries) {
+    const groupKey = `${cfg.backend}|${cfg.model}`;
+    if (!byModel[groupKey]) {
+      const group = [];
+      group._backend = cfg.backend;
+      group._model = cfg.model;
+      byModel[groupKey] = group;
+    }
+    byModel[groupKey].push([key, cfg]);
+  }
+
+  let html = `<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:var(--gap-md)">
+    <h3 style="margin:0;font-size:13px;color:var(--text-tertiary)">${pm.label} — Model Comparison</h3>
+    <div class="model-selector" style="margin:0">${metricBtns}</div>
+  </div><div class="chart-grid">`;
+
+  let chartIdx = 0;
+  for (const [groupKey, modelEntries] of Object.entries(byModel)) {
+    const backend = modelEntries._backend;
+    const model = modelEntries._model;
+    const color = getModelColor(backend, model);
+    const concList = [...new Set(modelEntries.map(([, c]) => c.conc))];
+    const sortedEntries = modelEntries.sort((a, b) => a[1].islOsl.localeCompare(b[1].islOsl) || a[1].conc - b[1].conc);
+    const mLabels = sortedEntries.map(([, c]) => `${fmtIslOsl(c.islOsl)} c=${c.conc}`);
+    const mValues = sortedEntries.map(([, c]) => c[pm.key] || 0);
+    const mBgColors = sortedEntries.map(([, c]) => getBarColor(backend, model, c.conc, concList));
+    const mBdColors = sortedEntries.map(([k]) => regressions[k] ? 'rgba(240,85,69,0.8)' : color.border);
+    const mBdWidths = sortedEntries.map(([k]) => regressions[k] ? 2.5 : 1.5);
+    const avgVal = mValues.length ? mValues.reduce((a, b) => a + b, 0) / mValues.length : null;
+
+    html += `<div class="chart-card${Object.keys(byModel).length <= 2 ? ' hero' : ''}">
+      <h3 style="color:${color.text}">${backend} · ${model}</h3>
+      <div class="chart-wrap"><canvas id="perf-bar-${chartIdx}"></canvas></div>
+    </div>`;
+    // Store data for chart creation after innerHTML
+    byModel[groupKey]._chartData = { id: `perf-bar-${chartIdx}`, labels: mLabels, values: mValues, bgColors: mBgColors, bdColors: mBdColors, bdWidths: mBdWidths, avgVal, sortedEntries };
+    chartIdx++;
+  }
+  html += '</div>';
+
+  // --- Table ---
+  html += `<div class="table-watermark"><table class="perf-table"><thead><tr>
+    <th>Mode</th><th>Model</th><th>ISL/OSL</th><th class="num">Conc</th><th class="num">TP</th><th>GPU</th>
+    <th class="num">Total Tput (tok/s)</th><th class="num">Output Tput (tok/s)</th>
+    <th class="num">Interac.</th>
+    <th class="num">TPOT (ms)</th><th class="num">TTFT (ms)</th>
+    <th class="num">Trend</th><th>Commit</th><th>Run</th>
+  </tr></thead><tbody>`;
+
+  const totalTputMax = Math.max(...entries.map(([, c]) => c['Total Tput'] || 0), 1);
+  const outTputMax = Math.max(...entries.map(([, c]) => c.throughput || 0), 1);
+  const tpots = entries.map(([, c]) => c.TPOT).filter(v => v != null);
+  const tpotMin = Math.min(...tpots, 0), tpotMax = Math.max(...tpots, 1);
+  const ttfts = entries.map(([, c]) => c.TTFT).filter(v => v != null);
+  const ttftMin = Math.min(...ttfts, 0), ttftMax = Math.max(...ttfts, 1);
+
+  for (const [key, cfg] of entries) {
+    const reg = regressions[key];
+    const hist = historyMap[key];
+    const prev = (hist && hist.length > 1) ? hist[1] : null;
+    const commitId = cfg.commit.id ? cfg.commit.id.slice(0, 7) : '';
+    const totalTputPct = (cfg['Total Tput'] || 0) / totalTputMax * 100;
+    const outTputPct = (cfg.throughput || 0) / outTputMax * 100;
+    const tpotRatio = cfg.TPOT != null ? (cfg.TPOT - tpotMin) / (tpotMax - tpotMin || 1) : 0;
+    const ttftRatio = cfg.TTFT != null ? (cfg.TTFT - ttftMin) / (ttftMax - ttftMin || 1) : 0;
+
+    const modelTextColor = getModelColor(cfg.backend, cfg.model).text;
+    const regClass = reg ? (reg.severity === 'critical' ? 'regression' : 'regression-warning') : '';
+    const dataAge = Date.now() - cfg.date;
+    const staleClass = dataAge > 3 * 86400000 ? ' stale-data' : '';
+    html += `<tr class="${regClass}${staleClass}" data-key="${key}">
+      <td>${cfg.backend}</td>
+      <td class="model-name" style="color:${modelTextColor}">${reg ? '⚠ ' : ''}${cfg.model}</td>
+      <td>${fmtIslOsl(cfg.islOsl)}</td>
+      <td class="num">${cfg.conc}</td>
+      <td class="num">${cfg._gpu_count || '—'}</td>
+      <td style="white-space:nowrap;font-size:11px">${cfg._gpu_name || '—'}</td>
+      <td class="num data-bar"><div class="data-bar-fill" style="width:${totalTputPct}%;background:rgba(63,185,80,0.12)"></div><span class="data-bar-text">${cfg['Total Tput'] != null ? fmtNum(cfg['Total Tput'], 1) : '—'}</span></td>
+      <td class="num data-bar"><div class="data-bar-fill" style="width:${outTputPct}%;background:rgba(126,143,174,0.10)"></div><span class="data-bar-text">${fmtNum(cfg.throughput, 1)}</span></td>
+      <td class="num">${cfg.TPOT != null && cfg.TPOT > 0 ? fmtNum(1000 / cfg.TPOT, 1) : '—'}</td>
+      <td class="num" style="background:${heatBg(tpotRatio)}">${cfg.TPOT != null ? fmtNum(cfg.TPOT, 2) : '—'}</td>
+      <td class="num" style="background:${heatBg(ttftRatio)}">${cfg.TTFT != null ? fmtNum(cfg.TTFT, 1) : '—'}</td>
+      <td class="num">${trendHTML(cfg.throughput, prev ? prev.throughput : null, false)} <button class="trend-jump" data-trend-key="${cfg.backend}|${cfg.model}" title="View trends">trend →</button></td>
+      <td><a href="${cfg.commit.url || '#'}" target="_blank">${commitId}</a></td>
+      <td>${cfg.runUrl ? '<a href="' + cfg.runUrl + '" target="_blank">view</a>' : '—'}</td>
+    </tr>`;
+    // Detail row
+    html += `<tr class="detail-row" data-detail="${key}"><td colspan="14">${buildDetailHTML(key, cfg)}</td></tr>`;
+  }
+  html += '</tbody></table></div>';
+
+  container.innerHTML = html;
+
+  // Bind table events immediately (fast, no chart rendering)
+  _bindPerfTableEvents(container, byModel);
+  syncHeaderH();
+  bindFixedThead(container);
+
+  // Defer chart creation to next frame so table renders first
+  _perfChartRAF = requestAnimationFrame(() => {
+    _perfChartRAF = null;
+    if (!document.getElementById(Object.values(byModel)[0]?._chartData?.id)) return;
+    _createPerfCharts(byModel, pm);
+  });
+}
+
+function _createPerfCharts(byModel, pm) {
+  for (const [model, modelEntries] of Object.entries(byModel)) {
+    const cd = modelEntries._chartData;
+    if (!cd) continue;
+    new Chart(document.getElementById(cd.id), {
+      type: 'bar',
+      data: { labels: cd.labels, datasets: [{ data: cd.values, backgroundColor: cd.bgColors, borderColor: cd.bdColors, borderWidth: cd.bdWidths, borderRadius: 4 }] },
+      plugins: [avgLinePlugin(cd.avgVal, 'avg ' + fmtCompact(cd.avgVal, pm.key === 'TPOT' ? 2 : 0))],
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { top: 24 } },
+        plugins: {
+          legend: { display: false },
+          tooltip: { ...chartTooltipOpts(), callbacks: {
+            title: (items) => model + ' · ' + cd.labels[items[0].dataIndex],
+            label: (item) => ` ${pm.label}: ${fmtNum(item.raw, pm.key === 'TPOT' ? 2 : 1)} ${pm.unit}`,
+            afterBody: () => '\nClick for details'
+          }},
+          datalabels: { display: cd.values.length <= 16, color: C_LEGEND, anchor: 'end', align: 'top', clip: false, font: { size: 10, family: '"SF Mono", monospace' }, formatter: v => fmtCompact(v, pm.key === 'TPOT' ? 2 : 0) }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: C_TICK, maxRotation: 45, font: { size: 10 } } },
+          y: { grid: chartGridOpts(), title: { display: true, text: pm.unit, color: C_TICK }, ticks: { color: C_TICK }, grace: '5%' }
+        },
+        onClick: (_e, elems) => {
+          if (!elems.length) return;
+          const [key, cfg] = cd.sortedEntries[elems[0].index];
+          if (key) showPopover(key, cfg);
+        }
+      }
+    });
+  }
+}
+
+function _bindPerfTableEvents(container, byModel) {
+  container.querySelectorAll('tr.detail-row').forEach(dr => {
+    dr.addEventListener('click', (e) => e.stopPropagation());
+  });
+  container.querySelectorAll('tr[data-key]').forEach(row => {
+    row.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      const detail = container.querySelector(`tr[data-detail="${row.dataset.key}"]`);
+      if (detail) { detail.classList.toggle('expanded'); row.classList.toggle('row-open'); }
+    });
+  });
+  container.querySelectorAll('.trend-jump').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      switchToTrends(btn.dataset.trendKey);
+    });
+  });
+  container.querySelectorAll('.sel-btn[data-metric]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.perfMetric = btn.dataset.metric;
+      renderPerformanceTab();
+    });
+  });
+}
+
+function switchToTrends(trendModelKey) {
+  state.trendModelKey = trendModelKey;
+  state.activeTab = 'trends';
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === 'trends'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.toggle('active', t.id === 'tab-trends'));
+  renderTrendsTab();
+  syncToHash();
+  document.getElementById('tab-trends').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function switchToTrace(configKey, runDate) {
+  state.activeTab = 'data';
+  state.dataView = 'table';
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === 'data'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.toggle('active', t.id === 'tab-data'));
+  renderDataTab();
+  syncToHash();
+  // Find and expand the matching row, then scroll to it
+  requestAnimationFrame(() => {
+    const container = document.getElementById('tab-data');
+    const rowId = `data-${configKey}-${runDate}`;
+    const row = container.querySelector(`tr[data-key="${rowId}"]`);
+    if (row) {
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const detail = container.querySelector(`tr[data-detail="${rowId}"]`);
+      if (detail && !detail.classList.contains('expanded')) {
+        detail.classList.add('expanded');
+        row.classList.add('row-open');
+      }
+      row.classList.add('flash');
+      setTimeout(() => row.classList.remove('flash'), 1500);
+    }
+  });
+}
+
+/* ================================================================
+   10. TRADEOFF TAB
+   ================================================================ */
+function renderTradeoffTab() {
+  const container = document.getElementById('tab-tradeoff');
+  destroyChartsIn(container);
+  const fc = filteredConfigs();
+  const entries = Object.entries(fc);
+  if (entries.length === 0) { container.innerHTML = '<div class="chart-empty">No data matches the current filters.</div>'; return; }
+
+  // Group by backend+model+ISL/OSL for scatter series
+  const seriesMap = {};
+  for (const [key, cfg] of entries) {
+    const sKey = `${cfg.backend} · ${cfg.model} ${cfg.islOsl}`;
+    if (!seriesMap[sKey]) seriesMap[sKey] = { backend: cfg.backend, model: cfg.model, islOsl: cfg.islOsl, points: [], concLabels: [], configKeys: [] };
+    const tpot = cfg.TPOT;
+    const totalTput = cfg['Total Tput'];
+    const gpuCount = cfg._gpu_count || 8;
+    if (tpot && tpot > 0 && totalTput) {
+      seriesMap[sKey].points.push({ x: 1000 / tpot, y: totalTput / gpuCount });
+      seriesMap[sKey].concLabels.push(cfg.conc);
+      seriesMap[sKey].configKeys.push(key);
+    }
+  }
+
+  // Group models into families
+  const familyMap = {};
+  for (const [, cfg] of entries) {
+    const fam = modelFamily(cfg.model);
+    if (!familyMap[fam]) familyMap[fam] = new Set();
+    familyMap[fam].add(cfg.model);
+  }
+  const tradeoffFamilies = Object.keys(familyMap).sort();
+
+  let html = '<div class="chart-grid">';
+  for (let fi = 0; fi < tradeoffFamilies.length; fi++) {
+    const fam = tradeoffFamilies[fi];
+    const safeId = fi + '-' + fam.replace(/[^a-zA-Z0-9]/g, '');
+    const famLabel = familyMap[fam].size > 1 ? fam + ' family' : fam;
+    html += `<div class="chart-card half"><h3>${famLabel} — Interactive vs Total Throughput</h3><div class="chart-wrap"><canvas id="hero-${safeId}"></canvas></div></div>`;
+    html += `<div class="chart-card half"><h3>${famLabel} — Concurrency Scaling</h3><div class="chart-wrap"><canvas id="scaling-${safeId}"></canvas></div></div>`;
+  }
+  html += '</div>';
+
+  // Heatmap: Concurrency × ISL/OSL, one per model
+  const heatModels = {};
+  for (const [, cfg] of entries) {
+    const mk = `${cfg.backend} · ${cfg.model}`;
+    if (!heatModels[mk]) heatModels[mk] = { model: cfg.model, backend: cfg.backend, data: {} };
+    const rk = cfg.islOsl;
+    if (!heatModels[mk].data[rk]) heatModels[mk].data[rk] = {};
+    if (cfg['Total Tput'] != null) heatModels[mk].data[rk][cfg.conc] = cfg['Total Tput'];
+  }
+  const heatConcs = [...state.filters.conc].sort((a, b) => a - b);
+  for (const [mk, hm] of Object.entries(heatModels)) {
+    const rowKeys = Object.keys(hm.data).sort();
+    if (rowKeys.length < 1 || heatConcs.length < 2) continue;
+    const allVals = rowKeys.flatMap(rk => heatConcs.map(c => hm.data[rk]?.[c]).filter(v => v != null));
+    if (allVals.length < 3) continue;
+    const minV = Math.min(...allVals), maxV = Math.max(...allVals), rangeV = maxV - minV || 1;
+    html += `<div class="chart-card"><h3>${mk} — Throughput Heatmap (tok/s)</h3>`;
+    html += '<table class="heatmap-table"><thead><tr><th>ISL/OSL</th>';
+    for (const c of heatConcs) html += `<th>c=${c}</th>`;
+    html += '</tr></thead><tbody>';
+    for (const rk of rowKeys) {
+      html += `<tr><td class="row-label">${fmtIslOsl(rk)}</td>`;
+      for (const c of heatConcs) {
+        const v = hm.data[rk]?.[c];
+        if (v != null) {
+          const ratio = (v - minV) / rangeV;
+          const bg = `hsla(${Math.round(ratio * 120)}, 50%, 40%, 0.35)`;
+          html += `<td style="background:${bg}">${fmtCompact(v, 0)}</td>`;
+        } else {
+          html += '<td style="color:var(--text-tertiary)">—</td>';
+        }
+      }
+      html += '</tr>';
+    }
+    html += '</tbody></table></div>';
+  }
+
+  container.innerHTML = html;
+
+  // Per-family charts (e.g. DeepSeek base + mtp3 in same chart)
+  for (let fi = 0; fi < tradeoffFamilies.length; fi++) {
+    const fam = tradeoffFamilies[fi];
+    const safeId = fi + '-' + fam.replace(/[^a-zA-Z0-9]/g, '');
+    const famModels = [...familyMap[fam]].sort();
+    const famConfigs = {};
+    for (const [key, cfg] of entries) {
+      if (famModels.includes(cfg.model)) famConfigs[key] = cfg;
+    }
+
+    // Interactive vs Total Throughput scatter — all variants in one chart
+    const heroDS = [];
+    for (const [sKey, s] of Object.entries(seriesMap)) {
+      if (!famModels.includes(s.model) || s.points.length === 0) continue;
+      const indices = s.points.map((_, i) => i).sort((a, b) => s.points[a].x - s.points[b].x);
+      const color = getModelColor(s.backend, s.model);
+      heroDS.push({
+        label: `${s.backend} · ${modelVariant(s.model)} ${fmtIslOsl(s.islOsl)}`, data: indices.map(i => s.points[i]),
+        borderColor: color.border, backgroundColor: color.bg,
+        borderWidth: 2, pointRadius: 5, pointHoverRadius: 7, showLine: true, fill: false,
+        _concLabels: indices.map(i => s.concLabels[i]), _configKeys: indices.map(i => s.configKeys[i])
+      });
+    }
+    heroDS.sort((a, b) => a.label.localeCompare(b.label));
+    const heroConcPlugin = {
+      id: 'heroConcLabels_' + safeId,
+      afterDatasetsDraw(chart) {
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.font = '8px -apple-system, sans-serif';
+        const focus = chart._legendFocusIndex;
+        chart.data.datasets.forEach((ds, di) => {
+          if (!ds._concLabels) return;
+          const meta = chart.getDatasetMeta(di);
+          ctx.globalAlpha = (focus != null && focus !== di) ? 0.12 : 1;
+          ctx.fillStyle = ds.borderColor;
+          meta.data.forEach((pt, pi) => {
+            if (ds.data[pi] == null) return;
+            ctx.fillText('c' + ds._concLabels[pi], pt.x + 5, pt.y - 5);
+          });
+        });
+        ctx.restore();
+      }
+    };
+    if (heroDS.length) {
+      new Chart(document.getElementById('hero-' + safeId), {
+        type: 'scatter', data: { datasets: heroDS },
+        plugins: [heroConcPlugin],
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          layout: { padding: { top: 8, right: 12 } },
+          plugins: {
+            legend: heroDS.length <= 8 ? { labels: { color: C_LEGEND, font: { size: 10 }, boxWidth: 10 } } : { display: false },
+            tooltip: { ...chartTooltipOpts(), callbacks: {
+              title: (items) => {
+                const ds = heroDS[items[0].datasetIndex];
+                return ds.label + ' · c=' + (ds._concLabels[items[0].dataIndex] || '?');
+              },
+              label: (item) => [
+                ` Interactive:  ${fmtNum(item.parsed.x, 1)} tok/s/user`,
+                ` Total Tput:   ${fmtNum(item.parsed.y, 0)} tok/s/gpu`,
+              ],
+              afterBody: () => '\nClick for details'
+            }}
+          },
+          scales: {
+            x: { grid: chartGridOpts(), title: { display: true, text: 'Interactive (tok/s/user)', color: C_TICK }, ticks: { color: C_TICK }, grace: '5%' },
+            y: { grid: chartGridOpts(), title: { display: true, text: 'Total Tput (tok/s/gpu)', color: C_TICK }, ticks: { color: C_TICK }, grace: '5%' }
+          },
+          onClick: (_e, elems) => {
+            if (!elems.length) return;
+            const ds = heroDS[elems[0].datasetIndex];
+            const key = ds._configKeys?.[elems[0].index];
+            if (key) { const cfg = latestConfigs[key]; if (cfg) showPopover(key, cfg); }
+          }
+        }
+      });
+    }
+
+    // Concurrency Scaling — all variants in one chart
+    buildConcurrencyScaling('scaling-' + safeId, famConfigs, fam, famModels);
+  }
+}
+
+function buildSimpleScatter(canvasId, configs, xMetric, yMetric, xLabel, yLabel) {
+  const seriesMap = {};
+  for (const [key, cfg] of Object.entries(configs)) {
+    const sKey = `${cfg.backend} · ${cfg.model} ${cfg.islOsl}`;
+    if (!seriesMap[sKey]) seriesMap[sKey] = { backend: cfg.backend, model: cfg.model, points: [], concLabels: [], configKeys: [] };
+    if (cfg[xMetric] != null && cfg[yMetric] != null) {
+      seriesMap[sKey].points.push({ x: cfg[xMetric], y: cfg[yMetric] });
+      seriesMap[sKey].concLabels.push(cfg.conc);
+      seriesMap[sKey].configKeys.push(key);
+    }
+  }
+  const datasets = [];
+  for (const [sKey, s] of Object.entries(seriesMap)) {
+    if (!s.points.length) continue;
+    // Sort by x so lines don't zigzag
+    const indices = s.points.map((_, i) => i).sort((a, b) => s.points[a].x - s.points[b].x);
+    const color = getModelColor(s.backend, s.model);
+    datasets.push({ label: sKey, data: indices.map(i => s.points[i]), borderColor: color.border, backgroundColor: color.bg, borderWidth: 2, pointRadius: 4, pointHoverRadius: 6, showLine: true, fill: false, _concLabels: indices.map(i => s.concLabels[i]), _configKeys: indices.map(i => s.configKeys[i]) });
+  }
+  if (!datasets.length) return;
+  new Chart(document.getElementById(canvasId), {
+    type: 'scatter', data: { datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      layout: { padding: { top: 8, right: 12 } },
+      plugins: {
+        legend: datasets.length <= 8 ? { labels: { color: C_LEGEND, font: { size: 10 }, boxWidth: 10 } } : { display: false },
+        tooltip: { ...chartTooltipOpts(), callbacks: {
+          title: (items) => datasets[items[0].datasetIndex].label,
+          label: (item) => {
+            const ds = datasets[item.datasetIndex];
+            return ` c=${ds._concLabels[item.dataIndex] || '?'}: ${xLabel.split(' ')[0]}=${(+item.parsed.x).toFixed(1)}, ${yLabel.split(' ')[0]}=${(+item.parsed.y).toFixed(2)}`;
+          },
+          afterBody: () => '\nClick for details'
+        }}
+      },
+      scales: {
+        x: { grid: chartGridOpts(), title: { display: true, text: xLabel, color: C_TICK }, ticks: { color: C_TICK }, grace: '5%' },
+        y: { grid: chartGridOpts(), title: { display: true, text: yLabel, color: C_TICK }, ticks: { color: C_TICK }, grace: '5%' }
+      },
+      onClick: (_e, elems) => {
+        if (!elems.length) return;
+        const ds = datasets[elems[0].datasetIndex];
+        const key = ds._configKeys?.[elems[0].index];
+        if (key) { const cfg = latestConfigs[key]; if (cfg) showPopover(key, cfg); }
+      }
+    }
+  });
+}
+
+function buildConcurrencyScaling(canvasId, configs, familyName, famModels) {
+  // Group by model+ISL/OSL, dual metric: throughput (left Y) + TPOT (right Y)
+  if (!famModels) famModels = [familyName];
+  const byKey = {}; // key: "model|islOsl"
+  for (const [key, cfg] of Object.entries(configs)) {
+    const sKey = `${cfg.backend}|${cfg.model}|${cfg.islOsl}`;
+    if (!byKey[sKey]) byKey[sKey] = { backend: cfg.backend, model: cfg.model, islOsl: cfg.islOsl, tputPoints: [], tpotPoints: [], tputKeys: [], tpotKeys: [] };
+    const gpuCount = cfg._gpu_count || 8;
+    if (cfg['Total Tput'] != null) { byKey[sKey].tputPoints.push({ x: cfg.conc, y: cfg['Total Tput'] / gpuCount }); byKey[sKey].tputKeys.push(key); }
+    if (cfg.TPOT != null) { byKey[sKey].tpotPoints.push({ x: cfg.conc, y: cfg.TPOT }); byKey[sKey].tpotKeys.push(key); }
+  }
+
+  const datasets = [];
+  const seriesKeys = Object.keys(byKey).sort();
+  const dashPatterns = [[], [6, 3], [2, 2], [8, 4, 2, 4]];
+
+  for (let i = 0; i < seriesKeys.length; i++) {
+    const s = byKey[seriesKeys[i]];
+    const dash = dashPatterns[i % dashPatterns.length];
+    const h = getModelHue(s.backend, s.model);
+    const variantBits = [s.backend];
+    if (famModels.length > 1) variantBits.push(modelVariant(s.model));
+    variantBits.push(fmtIslOsl(s.islOsl));
+    const variantLabel = variantBits.join(' ');
+    // Throughput: use model color
+    if (s.tputPoints.length) {
+      const sorted = s.tputPoints.map((_, j) => j).sort((a, b) => s.tputPoints[a].x - s.tputPoints[b].x);
+      datasets.push({
+        label: `${variantLabel} Tput`, data: sorted.map(j => s.tputPoints[j]),
+        borderColor: `hsl(${h}, 55%, 65%)`, backgroundColor: `hsla(${h}, 55%, 65%, 0.1)`,
+        borderWidth: 2, borderDash: dash, pointRadius: 4, pointHoverRadius: 6,
+        showLine: true, fill: false, tension: 0.2, yAxisID: 'y',
+        _configKeys: sorted.map(j => s.tputKeys[j])
+      });
+    }
+    // TPOT: use hue-shifted color
+    if (s.tpotPoints.length) {
+      const sorted = s.tpotPoints.map((_, j) => j).sort((a, b) => s.tpotPoints[a].x - s.tpotPoints[b].x);
+      datasets.push({
+        label: `${variantLabel} TPOT`, data: sorted.map(j => s.tpotPoints[j]),
+        borderColor: `hsl(${(h + 120) % 360}, 45%, 65%)`, backgroundColor: `hsla(${(h + 120) % 360}, 45%, 65%, 0.1)`,
+        borderWidth: 2, borderDash: dash, pointRadius: 3, pointHoverRadius: 5,
+        showLine: true, fill: false, tension: 0.2, yAxisID: 'y2',
+        pointStyle: 'triangle',
+        _configKeys: sorted.map(j => s.tpotKeys[j])
+      });
+    }
+  }
+  if (!datasets.length) return;
+
+  // Concurrency values for x-axis ticks
+  const allConcs = [...new Set(Object.values(byKey).flatMap(s => [...s.tputPoints, ...s.tpotPoints].map(p => p.x)))].sort((a, b) => a - b);
+
+  new Chart(document.getElementById(canvasId), {
+    type: 'scatter', data: { datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      layout: { padding: { top: 8, right: 8 } },
+      plugins: {
+        legend: datasets.length <= 8 ? { labels: { color: C_LEGEND, font: { size: 10 }, boxWidth: 10, usePointStyle: true } } : { display: false },
+        tooltip: { ...chartTooltipOpts(), callbacks: {
+          title: (items) => {
+            const ds = datasets[items[0].datasetIndex];
+            return ds.label.replace(/ (Tput|TPOT)$/, '') + ' · c=' + items[0].parsed.x;
+          },
+          label: (item) => {
+            const isTPOT = item.dataset.yAxisID === 'y2';
+            return isTPOT
+              ? ` TPOT:        ${fmtNum(item.parsed.y, 2)} ms`
+              : ` Total Tput:  ${fmtNum(item.parsed.y, 1)} tok/s/gpu`;
+          },
+          afterBody: () => '\nClick for details'
+        }}
+      },
+      scales: {
+        x: {
+          type: 'logarithmic',
+          grid: chartGridOpts(),
+          title: { display: true, text: 'Concurrency', color: C_TICK },
+          ticks: { color: C_TICK, callback: function(v) { return allConcs.includes(v) ? v : ''; } },
+          afterBuildTicks: function(axis) { axis.ticks = allConcs.map(v => ({ value: v })); }
+        },
+        y: {
+          position: 'left', grid: chartGridOpts(),
+          title: { display: true, text: 'Total Tput (tok/s/gpu)', color: C_TICK },
+          ticks: { color: C_TICK }, grace: '5%'
+        },
+        y2: {
+          position: 'right', grid: { drawOnChartArea: false },
+          title: { display: true, text: 'TPOT (ms)', color: C_TICK },
+          ticks: { color: C_TICK }, grace: '5%'
+        }
+      },
+      onClick: (_e, elems) => {
+        if (!elems.length) return;
+        const ds = datasets[elems[0].datasetIndex];
+        const key = ds._configKeys?.[elems[0].index];
+        if (key) { const cfg = latestConfigs[key]; if (cfg) showPopover(key, cfg); }
+      }
+    }
+  });
+}
+
+/* ================================================================
+   11. TRENDS TAB
+   ================================================================ */
+function renderTrendsTab() {
+  const container = document.getElementById('tab-trends');
+  destroyChartsIn(container);
+
+  // Mode+model selector — keeps native and ATOM-vLLM trend lines distinct
+  const trendOptions = [...new Set(Object.values(latestConfigs)
+    .filter(cfg => state.filters.backends.includes(cfg.backend) && state.filters.models.includes(cfg.model))
+    .map(cfg => `${cfg.backend}|${cfg.model}`))]
+    .sort();
+  if (!trendOptions.includes(state.trendModelKey)) state.trendModelKey = trendOptions[0] || '';
+
+  let html = '';
+  // Only show selector when there are multiple mode/model pairs to choose from
+  if (trendOptions.length > 1) {
+    html += '<div class="model-selector"><span class="sel-label">Model:</span>';
+    for (const trendKey of trendOptions) {
+      const [backend, model] = trendKey.split('|');
+      const _tc = getModelColor(backend, model);
+      const _tActive = trendKey === state.trendModelKey;
+      html += `<button class="sel-btn ${_tActive ? 'active' : ''}" data-trend-key="${trendKey}" style="border-color:${_tc.border};color:${_tActive ? '#fff' : _tc.text};${_tActive ? 'background:' + _tc.border : ''}">${backend} · ${model}</button>`;
+    }
+    html += '</div>';
+  }
+  html += '<div class="chart-grid" id="trend-charts"></div>';
+  container.innerHTML = html;
+
+  container.querySelectorAll('.sel-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.trendModelKey = btn.dataset.trendKey;
+      renderTrendsTab();
+    });
+  });
+
+  if (!state.trendModelKey) return;
+  const [trendBackend, trendModel] = state.trendModelKey.split('|');
+
+  // Build ordered x-axis: use date as primary key (not commit ID)
+  // Each run gets a unique index; x-axis shows short date labels
+  const runsAsc = [...allRuns].reverse();
+  const seen = new Set();
+  const orderedRuns = []; // [{cid, date, label}]
+  for (const r of runsAsc) {
+    const cid = r.commit.id.slice(0, 7);
+    if (!seen.has(cid)) {
+      seen.add(cid);
+      const d = new Date(r.date);
+      orderedRuns.push({ cid, date: r.date, label: (d.getMonth()+1) + '/' + d.getDate() + ' ' + cid });
+    }
+  }
+  const orderedLabels = orderedRuns.map(r => r.label);
+  const commitDateMap = {}; const labelToCid = {};
+  orderedRuns.forEach(r => { commitDateMap[r.label] = r.date; labelToCid[r.label] = r.cid; });
+
+  const metrics = [
+    { key: 'Total Tput', title: 'Total Throughput', unit: 'tok/s' },
+    { key: 'throughput', title: 'Output Throughput', unit: 'tok/s' },
+    { key: 'TPOT', title: 'Time Per Output Token', unit: 'ms' },
+    { key: 'TTFT', title: 'Time To First Token', unit: 'ms' },
+  ];
+
+  const grid = document.getElementById('trend-charts');
+
+  for (const met of metrics) {
+    const card = document.createElement('div');
+    card.className = 'chart-card';
+    card.innerHTML = `<h3>${trendBackend} · ${trendModel} — ${met.title}</h3>`;
+    const wrap = document.createElement('div');
+    wrap.className = 'chart-wrap';
+    const canvas = document.createElement('canvas');
+    wrap.appendChild(canvas);
+    card.appendChild(wrap);
+    grid.appendChild(card);
+
+    // Find all configs for this model
+    const datasets = [];
+    for (const [key, history] of Object.entries(historyMap)) {
+      if (!key.startsWith(state.trendModelKey + '|')) continue;
+      const parts = key.split('|');
+      // Respect global ISL/OSL and Concurrency filters
+      if (!state.filters.islOsl.includes(parts[2])) continue;
+      if (!state.filters.conc.includes(+parts[3])) continue;
+      const seriesLabel = fmtIslOsl(parts[2]) + ' c=' + parts[3];
+      const color = getModelColor(trendBackend, trendModel);
+
+      const pointMap = {};
+      for (const pt of history) {
+        const cid = pt.commit.id.slice(0, 7);
+        // Map to the label that contains this commit ID
+        const matchLabel = orderedRuns.find(r => r.cid === cid)?.label;
+        if (matchLabel && pt[met.key] != null) pointMap[matchLabel] = pt[met.key];
+      }
+      const data = orderedLabels.map(lbl => pointMap[lbl] != null ? pointMap[lbl] : null);
+      if (data.every(v => v === null)) continue;
+
+      datasets.push({
+        label: seriesLabel, data,
+        borderColor: color.border, backgroundColor: color.bg,
+        borderWidth: 2, pointRadius: 3, pointHoverRadius: 5, fill: false, spanGaps: true, tension: 0.1,
+        _configKey: key, _pointMap: pointMap, _conc: parts[3]
+      });
+    }
+
+    // Sort by ISL/OSL then concurrency (numeric)
+    datasets.sort((a, b) => {
+      const ka = a._configKey.split('|'), kb = b._configKey.split('|');
+      return ka[1].localeCompare(kb[1]) || (+ka[2]) - (+kb[2]);
+    });
+
+    if (datasets.length === 0) {
+      card.innerHTML += '<div class="chart-empty">No historical data for this mode/model and metric.</div>';
+      continue;
+    }
+    if (datasets.length > 8) {
+      const note = document.createElement('div');
+      note.style.cssText = 'font-size:11px;color:var(--text-tertiary);margin-bottom:4px';
+      note.textContent = `${datasets.length} configs — hover to identify, use filters to narrow down`;
+      card.insertBefore(note, wrap);
+    }
+
+    // Plugin: draw concurrency labels at last data point (Total Tput only)
+    const concLabelPlugin = met.key === 'Total Tput' && datasets.length <= 12 ? {
+      id: 'concLabels_' + Math.random(),
+      afterDatasetsDraw(chart) {
+        const ctx = chart.ctx;
+        ctx.save();
+        ctx.font = '9px -apple-system, sans-serif';
+        ctx.textAlign = 'left';
+        const focus = chart._legendFocusIndex;
+        chart.data.datasets.forEach((ds, di) => {
+          if (!ds._conc) return;
+          const meta = chart.getDatasetMeta(di);
+          ctx.globalAlpha = (focus != null && focus !== di) ? 0.12 : 1;
+          // Find last visible (non-null) point
+          for (let i = meta.data.length - 1; i >= 0; i--) {
+            if (ds.data[i] != null) {
+              const pt = meta.data[i];
+              ctx.fillStyle = ds.borderColor;
+              ctx.fillText('c' + ds._conc, pt.x + 6, pt.y + 3);
+              break;
+            }
+          }
+        });
+        ctx.restore();
+      }
+    } : null;
+
+    new Chart(canvas, {
+      type: 'line', data: { labels: orderedLabels, datasets },
+      plugins: concLabelPlugin ? [concLabelPlugin] : [],
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { top: 8, right: concLabelPlugin ? 50 : 8 } },
+        plugins: {
+          legend: datasets.length <= 8
+            ? { labels: { color: C_LEGEND, font: { size: 10 }, boxWidth: 10 } }
+            : { display: false },
+          tooltip: { ...chartTooltipOpts(), callbacks: {
+            title: (items) => {
+              const ds = items[0].dataset;
+              const lbl = orderedLabels[items[0].dataIndex];
+              return ds.label + ' · ' + (labelToCid[lbl] || '');
+            },
+            label: (item) => {
+              const lbl = orderedLabels[item.dataIndex];
+              return [
+                ` ${met.title}:  ${fmtNum(item.raw, met.key === 'TPOT' ? 2 : 1)} ${met.unit}`,
+                ` Date:  ${fmtDate(commitDateMap[lbl])}`
+              ];
+            },
+            afterBody: () => '\nClick to trace'
+          }},
+          datalabels: { display: false }
+        },
+        scales: {
+          x: { grid: chartGridOpts(), title: { display: true, text: 'Commit', color: C_TICK }, ticks: { color: C_TICK } },
+          y: { grid: chartGridOpts(), title: { display: true, text: met.unit, color: C_TICK }, ticks: { color: C_TICK } }
+        },
+        onClick: (_e, elems) => {
+          if (!elems.length) return;
+          const ds = datasets[elems[0].datasetIndex];
+          const lbl = orderedLabels[elems[0].index];
+          const cid = labelToCid[lbl];
+          const run = cid ? allRuns.find(r => r.commit.id.slice(0, 7) === cid) : null;
+          if (run && ds._configKey) switchToTrace(ds._configKey, run.date);
+        }
+      }
+    });
+  }
+}
+
+/* ================================================================
+   12. DATA & TRACE TAB
+   ================================================================ */
+function renderDataTab() {
+  const container = document.getElementById('tab-data');
+  destroyChartsIn(container);
+
+  let html = '<div style="display:flex;align-items:center;gap:var(--gap-sm);margin-bottom:var(--gap-md);flex-wrap:wrap">';
+  html += '<div class="view-toggle">';
+  html += `<button class="${state.dataView === 'table' ? 'active' : ''}" data-view="table">Table View</button>`;
+  html += `<button class="${state.dataView === 'timeline' ? 'active' : ''}" data-view="timeline">Timeline View</button>`;
+  html += '</div><button class="action-btn" id="copy-csv-btn" style="margin-left:auto">Copy CSV</button></div>';
+
+  if (state.dataView === 'table') {
+    html += renderDataTable();
+  } else {
+    html += renderTimeline();
+  }
+  container.innerHTML = html;
+
+  // View toggle
+  container.querySelectorAll('.view-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.dataView = btn.dataset.view;
+      renderDataTab();
+    });
+  });
+
+  // Copy CSV
+  const csvBtn = document.getElementById('copy-csv-btn');
+  if (csvBtn) {
+    csvBtn.addEventListener('click', () => {
+      const header = 'Date,Commit,Mode,Model,ISL/OSL,Concurrency,TP,Throughput (tok/s),TPOT (ms),TTFT (ms),Run URL';
+      const rows = [];
+      for (const run of allRuns) {
+        const configs = parseRunConfigs(run);
+        for (const [, cfg] of Object.entries(configs)) {
+          if (!state.filters.backends.includes(cfg.backend)) continue;
+          if (!state.filters.models.includes(cfg.model)) continue;
+          if (!state.filters.islOsl.includes(cfg.islOsl)) continue;
+          if (!state.filters.conc.includes(cfg.conc)) continue;
+          rows.push([fmtDate(cfg.date), cfg.commit.id?.slice(0,7), cfg.backend, cfg.model, cfg.islOsl, cfg.conc,
+            cfg._gpu_count ?? '', cfg.throughput ?? '', cfg.TPOT ?? '', cfg.TTFT ?? '', cfg.runUrl].join(','));
+        }
+      }
+      navigator.clipboard.writeText(header + '\n' + rows.join('\n'));
+      csvBtn.textContent = 'Copied!';
+      setTimeout(() => { csvBtn.textContent = 'Copy CSV'; }, 1500);
+    });
+  }
+
+  // Row expansion for table — detail rows stop propagation
+  if (state.dataView === 'table') {
+    container.querySelectorAll('tr.detail-row').forEach(dr => {
+      dr.addEventListener('click', (e) => e.stopPropagation());
+    });
+    container.querySelectorAll('tr[data-key]').forEach(row => {
+      row.addEventListener('click', (e) => {
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        const detail = container.querySelector(`tr[data-detail="${row.dataset.key}"]`);
+        if (detail) { detail.classList.toggle('expanded'); row.classList.toggle('row-open'); }
+      });
+    });
+  }
+
+  // Timeline expand
+  container.querySelectorAll('.tl-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const details = btn.closest('.tl-node').querySelector('.tl-details');
+      if (details) {
+        details.classList.toggle('expanded');
+        btn.textContent = details.classList.contains('expanded') ? 'Hide Details' : 'Show Details';
+      }
+    });
+  });
+
+  // Fixed table header (only for main table, not timeline sub-tables)
+  if (state.dataView === 'table') { syncHeaderH(); bindFixedThead(container); }
+}
+
+function renderDataTable() {
+  let html = `<div class="table-watermark"><table class="perf-table"><thead><tr>
+    <th>Date</th><th>Commit</th><th>Mode</th><th>Model</th><th>ISL/OSL</th><th class="num">Conc</th><th class="num">TP</th><th>GPU</th>
+    <th class="num">Throughput (tok/s)</th><th class="num">TPOT (ms)</th><th class="num">TTFT (ms)</th><th>Run</th>
+  </tr></thead><tbody>`;
+
+  // All runs, all configs, filtered
+  for (const run of allRuns) {
+    const configs = parseRunConfigs(run);
+    for (const [key, cfg] of Object.entries(configs)) {
+      if (!state.filters.backends.includes(cfg.backend)) continue;
+      if (!state.filters.models.includes(cfg.model)) continue;
+      if (!state.filters.islOsl.includes(cfg.islOsl)) continue;
+      if (!state.filters.conc.includes(cfg.conc)) continue;
+      const commitId = cfg.commit.id ? cfg.commit.id.slice(0, 7) : '';
+      html += `<tr data-key="data-${key}-${run.date}">
+        <td>${fmtDate(cfg.date)}</td>
+        <td><a href="${cfg.commit.url || '#'}" target="_blank">${commitId}</a></td>
+        <td>${cfg.backend}</td>
+        <td class="model-name" style="color:${getModelColor(cfg.backend, cfg.model).text}">${cfg.model}</td>
+        <td>${fmtIslOsl(cfg.islOsl)}</td>
+        <td class="num">${cfg.conc}</td>
+        <td class="num">${cfg._gpu_count || '—'}</td>
+        <td style="white-space:nowrap;font-size:11px">${cfg._gpu_name || '—'}</td>
+        <td class="num">${cfg.throughput != null ? fmtNum(cfg.throughput, 1) : '—'}</td>
+        <td class="num">${cfg.TPOT != null ? fmtNum(cfg.TPOT, 2) : '—'}</td>
+        <td class="num">${cfg.TTFT != null ? fmtNum(cfg.TTFT, 1) : '—'}</td>
+        <td>${cfg.runUrl ? '<a href="' + cfg.runUrl + '" target="_blank">view</a>' : '—'}</td>
+      </tr>`;
+      html += `<tr class="detail-row" data-detail="data-${key}-${run.date}"><td colspan="12">${buildDetailHTML(key, cfg)}</td></tr>`;
+    }
+  }
+  html += '</tbody></table></div>';
+  return html;
+}
+
+function renderTimeline() {
+  let html = '<div class="timeline">';
+  for (const run of allRuns) {
+    const configs = parseRunConfigs(run);
+    // Apply global filters to timeline entries
+    const entries = Object.entries(configs).filter(([, c]) =>
+      state.filters.backends.includes(c.backend) &&
+      state.filters.models.includes(c.model) &&
+      state.filters.islOsl.includes(c.islOsl) &&
+      state.filters.conc.includes(c.conc));
+    if (entries.length === 0) continue;
+    const commitId = run.commit.id.slice(0, 7);
+    const backends = [...new Set(entries.map(([, c]) => c.backend))];
+    const models = [...new Set(entries.map(([, c]) => c.model))];
+    const runRegCount = entries.filter(([k]) => regressions[k]).length;
+    const hasReg = runRegCount > 0;
+    const runUrl = entries.find(([, c]) => c.runUrl)?.[1].runUrl || '';
+
+    html += `<div class="tl-node ${hasReg ? 'has-regression' : ''}">
+      <div class="tl-header">
+        <span class="commit-id"><a href="${run.commit.url || '#'}" target="_blank">${commitId}</a></span>
+        <span class="date">${fmtDate(run.date)}</span>
+        <span class="badge">${entries.length} configs</span>
+        <span class="badge">${backends.join(', ')}</span>
+        <span class="badge">${models.join(', ')}</span>
+        ${hasReg ? `<span class="badge warn">⚠ ${runRegCount} regressions</span>` : ''}
+        ${runUrl ? `<a href="${runUrl}" target="_blank" style="font-size:12px">Open CI Run ↗</a>` : ''}
+      </div>
+      <div class="tl-msg" title="${(run.commit.message || '').replace(/"/g, '&quot;')}">${run.commit.message.split('\n')[0]}</div>
+      <button class="tl-toggle">Show Details</button>
+      <div class="tl-details">
+        <table class="perf-table" style="margin-top:8px"><thead><tr>
+          <th>Mode</th><th>Model</th><th>ISL/OSL</th><th class="num">Conc</th><th class="num">TP</th><th>GPU</th>
+          <th class="num">Throughput (tok/s)</th><th class="num">TPOT (ms)</th><th class="num">TTFT (ms)</th>
+        </tr></thead><tbody>`;
+    for (const [, cfg] of entries) {
+      html += `<tr>
+        <td>${cfg.backend}</td><td class="model-name" style="color:${getModelColor(cfg.backend, cfg.model).text}">${cfg.model}</td><td>${fmtIslOsl(cfg.islOsl)}</td><td class="num">${cfg.conc}</td><td class="num">${cfg._gpu_count || '—'}</td><td style="white-space:nowrap;font-size:11px">${cfg._gpu_name || '—'}</td>
+        <td class="num">${cfg.throughput != null ? fmtNum(cfg.throughput, 1) : '—'}</td>
+        <td class="num">${cfg.TPOT != null ? fmtNum(cfg.TPOT, 2) : '—'}</td>
+        <td class="num">${cfg.TTFT != null ? fmtNum(cfg.TTFT, 1) : '—'}</td>
+      </tr>`;
+    }
+    html += '</tbody></table></div></div></div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+/* ================================================================
+   13. DETAIL HTML (shared by Performance & Data tabs)
+   ================================================================ */
+function buildDetailHTML(key, cfg) {
+  const hist = historyMap[key];
+  const prev = (hist && hist.length > 1) ? hist[1] : null;
+  const reg = regressions[key];
+
+  const interactive = cfg.TPOT && cfg.TPOT > 0 ? 1000 / cfg.TPOT : null;
+  const prevInteractive = prev?.TPOT && prev.TPOT > 0 ? 1000 / prev.TPOT : null;
+  const metricsRows = [
+    ['Total Throughput', cfg['Total Tput'], 'tok/s', prev?.['Total Tput'], false],
+    ['Output Throughput', cfg.throughput, 'tok/s', prev?.throughput, false],
+    ['Interactive', interactive, 'tok/s/user', prevInteractive, false],
+    ['TPOT', cfg.TPOT, 'ms', prev?.TPOT, true],
+    ['TTFT', cfg.TTFT, 'ms', prev?.TTFT, true],
+    ['GPU Count', cfg._gpu_count, '', null, false],
+  ].map(([label, val, unit, prevVal, inv]) =>
+    `<div class="detail-item"><span class="detail-key">${label}</span><span class="detail-val">${val != null ? fmtNum(val, 2) + ' ' + unit : '—'} ${prevVal != null ? trendHTML(val, prevVal, inv) : ''}</span></div>`
+  ).join('');
+
+  return `<div class="detail-box">
+    <div class="detail-section">
+      <h4>Metrics</h4>${metricsRows}
+      ${reg ? `<div style="margin-top:8px;color:${reg.severity === 'critical' ? 'var(--accent-red)' : 'var(--accent-orange)'};font-size:12px">⚠ ${reg.severity.toUpperCase()}: throughput ${reg.tputPct.toFixed(1)}%, TPOT ${reg.tpotPct.toFixed(1)}%</div>` : ''}
+    </div>
+    <div class="detail-section">
+      <h4>Environment</h4>
+      <div class="detail-item"><span class="detail-key">Mode</span><span class="detail-val" style="font-family:inherit">${cfg.backend}</span></div>
+      <div class="detail-item"><span class="detail-key">GPU</span><span class="detail-val" style="font-family:inherit">${cfg._gpu_count ? cfg._gpu_count + '× ' : ''}${cfg._gpu_name || '—'}</span></div>
+      <div class="detail-item"><span class="detail-key">VRAM</span><span class="detail-val">${cfg._gpu_vram_gb ? (cfg._gpu_count ? cfg._gpu_count + '× ' : '') + cfg._gpu_vram_gb + ' GB' : '—'}</span></div>
+      <div class="detail-item"><span class="detail-key">ROCm</span><span class="detail-val">${cfg._rocm_version || '—'}</span></div>
+      <div class="detail-item"><span class="detail-key">Commit</span><span class="detail-val"><a href="${cfg.commit.url || '#'}" target="_blank">${cfg.commit.id?.slice(0, 7) || '—'}</a></span></div>
+      <div class="detail-item"><span class="detail-key">Message</span><span class="detail-val" style="font-family:inherit;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${(cfg.commit.message || '').replace(/"/g, '&quot;')}">${cfg.commit.message?.split('\n')[0] || '—'}</span></div>
+      <div class="detail-item"><span class="detail-key">Author</span><span class="detail-val" style="font-family:inherit">${cfg.commit.author?.name || '—'}</span></div>
+      <div class="detail-item"><span class="detail-key">Date</span><span class="detail-val">${cfg.commit.timestamp ? fmtDate(new Date(cfg.commit.timestamp).getTime()) : '—'}</span></div>
+      <div class="action-row">
+        ${cfg.runUrl ? `<a class="action-btn" href="${cfg.runUrl}" target="_blank">Open CI Run ↗</a>` : ''}
+        <a class="action-btn" href="${cfg.commit.url || '#'}" target="_blank">View Commit ↗</a>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ================================================================
+   14. POPOVER
+   ================================================================ */
+function showPopover(key, cfg) {
+  const hist = historyMap[key];
+  const prev = (hist && hist.length > 1) ? hist[1] : null;
+  const reg = regressions[key];
+
+  const pop = document.getElementById('popover');
+  pop.innerHTML = `<button class="pop-close" id="pop-close-btn">&times;</button>
+    <h3>${cfg.model} ${fmtIslOsl(cfg.islOsl)} c=${cfg.conc}</h3>
+    <div class="pop-row"><span class="pop-key">Total Throughput</span><span class="pop-val">${cfg['Total Tput'] != null ? fmtNum(cfg['Total Tput'], 1) + ' tok/s ' + trendHTML(cfg['Total Tput'], prev?.['Total Tput'], false) : '—'}</span></div>
+    <div class="pop-row"><span class="pop-key">Output Throughput</span><span class="pop-val">${fmtNum(cfg.throughput, 1)} tok/s ${trendHTML(cfg.throughput, prev?.throughput, false)}</span></div>
+    <div class="pop-row"><span class="pop-key">TPOT</span><span class="pop-val">${cfg.TPOT != null ? fmtNum(cfg.TPOT, 2) + ' ms ' + trendHTML(cfg.TPOT, prev?.TPOT, true) : '—'}</span></div>
+    <div class="pop-row"><span class="pop-key">TTFT</span><span class="pop-val">${cfg.TTFT != null ? fmtNum(cfg.TTFT, 1) + ' ms' : '—'}</span></div>
+    ${reg ? `<div style="margin-top:8px;color:${reg.severity === 'critical' ? 'var(--accent-red)' : 'var(--accent-orange)'};font-size:13px">⚠ ${reg.severity.toUpperCase()}: throughput ${reg.tputPct.toFixed(1)}%, TPOT ${reg.tpotPct.toFixed(1)}%</div>` : ''}
+    <div class="pop-section">
+      <div class="pop-row"><span class="pop-key">Mode</span><span class="pop-val" style="font-family:inherit">${cfg.backend}</span></div>
+      <div class="pop-row"><span class="pop-key">GPU</span><span class="pop-val" style="font-family:inherit">${cfg._gpu_count ? cfg._gpu_count + '× ' : ''}${cfg._gpu_name || '—'}${cfg._gpu_vram_gb ? ' · ' + cfg._gpu_vram_gb + 'GB' : ''}</span></div>
+      <div class="pop-row"><span class="pop-key">ROCm</span><span class="pop-val">${cfg._rocm_version || '—'}</span></div>
+      <div class="pop-row"><span class="pop-key">Commit</span><span class="pop-val"><a href="${cfg.commit.url || '#'}" target="_blank">${cfg.commit.id?.slice(0, 7) || '—'}</a></span></div>
+      <div class="pop-row"><span class="pop-key">Message</span><span class="pop-val" style="font-family:inherit;font-size:12px">${cfg.commit.message?.split('\n')[0] || '—'}</span></div>
+      <div class="pop-row"><span class="pop-key">Author</span><span class="pop-val" style="font-family:inherit">${cfg.commit.author?.name || '—'}</span></div>
+      <div class="pop-row"><span class="pop-key">Date</span><span class="pop-val">${fmtDate(cfg.date)}</span></div>
+    </div>
+    <div class="action-row">
+      <button class="action-btn" id="pop-trace-btn">Trace →</button>
+      ${cfg.runUrl ? `<a class="action-btn" href="${cfg.runUrl}" target="_blank">Open CI Run ↗</a>` : ''}
+      <a class="action-btn" href="${cfg.commit.url || '#'}" target="_blank">View Commit ↗</a>
+    </div>`;
+  document.getElementById('popover-overlay').classList.add('open');
+  document.getElementById('pop-close-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopover();
+  });
+  document.getElementById('pop-trace-btn').addEventListener('click', () => {
+    hidePopover();
+    switchToTrace(key, cfg.date);
+  });
+}
+function hidePopover() { document.getElementById('popover-overlay').classList.remove('open'); }
+document.getElementById('popover-overlay').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) hidePopover();
+});
+
+// Escape key: close popover or dropdowns
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const overlay = document.getElementById('popover-overlay');
+    if (overlay.classList.contains('open')) { hidePopover(); return; }
+    closeAllDropdowns();
+  }
+});
+
+/* ================================================================
+   15. URL HASH SYNC
+   ================================================================ */
+let hashUpdateFromCode = false;
+function syncToHash() {
+  const parts = [];
+  if (state.filters.backends.length !== allBackends.length) parts.push('backend=' + state.filters.backends.join(','));
+  if (state.filters.models.length !== allModels.length) parts.push('model=' + state.filters.models.join(','));
+  if (state.filters.islOsl.length !== allIslOsl.length) parts.push('isl=' + state.filters.islOsl.join(','));
+  if (state.filters.conc.length !== allConc.length) parts.push('conc=' + state.filters.conc.join(','));
+  if (state.activeTab !== 'performance') parts.push('tab=' + state.activeTab);
+  hashUpdateFromCode = true;
+  window.location.hash = parts.join('&');
+}
+
+function readFromHash() {
+  const hash = window.location.hash.slice(1);
+  if (!hash) return;
+  for (const part of hash.split('&')) {
+    const [k, v] = part.split('=');
+    if (!v) continue;
+    if (k === 'backend') state.filters.backends = v.split(',').filter(b => allBackends.includes(b));
+    if (k === 'model') state.filters.models = v.split(',').filter(m => allModels.includes(m));
+    if (k === 'isl') state.filters.islOsl = v.split(',').filter(i => allIslOsl.includes(i));
+    if (k === 'conc') state.filters.conc = v.split(',').map(Number).filter(c => allConc.includes(c));
+    if (k === 'tab') {
+      state.activeTab = v;
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === v));
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.toggle('active', t.id === 'tab-' + v));
+    }
+  }
+}
+
+/* ================================================================
+   16. INIT
+   ================================================================ */
+readFromHash();
+renderFilters();
+renderKPICards();
+renderActiveTab();
+
+syncHeaderH();
+
+// Browser back/forward — re-apply hash state (skip if we triggered it ourselves)
+window.addEventListener('hashchange', () => {
+  if (hashUpdateFromCode) { hashUpdateFromCode = false; return; }
+  readFromHash();
+  renderFilters();
+  renderKPICards();
+  renderActiveTab();
+});
+})();
+</script>
+</body>
+</html>
