@@ -35678,6 +35678,402 @@
           "nv_ms": 0.0925,
           "amd_tflops_hipblaslt": 1384.04,
           "amd_backend": "asm"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "qkv_double",
+          "M": 1,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 4.34,
+          "amd_ms": 0.0167,
+          "nv_tflops": 5.83,
+          "nv_ms": 0.0097,
+          "amd_tflops_hipblaslt": 3.39,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "qkv_double",
+          "M": 64,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 240.69,
+          "amd_ms": 0.0205,
+          "nv_tflops": 449.13,
+          "nv_ms": 0.0081,
+          "amd_tflops_hipblaslt": 176.59,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "qkv_double",
+          "M": 1024,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 923.32,
+          "amd_ms": 0.0518,
+          "nv_tflops": 1521.36,
+          "nv_ms": 0.0381,
+          "amd_tflops_hipblaslt": 1119.47,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "qkv_double",
+          "M": 4096,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1205.18,
+          "amd_ms": 0.1695,
+          "nv_tflops": 1680.75,
+          "nv_ms": 0.138,
+          "amd_tflops_hipblaslt": 1368.65,
+          "amd_backend": "hipblaslt"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 1,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 4.66,
+          "amd_ms": 0.0188,
+          "nv_tflops": 2.87,
+          "nv_ms": 0.0263,
+          "amd_tflops_hipblaslt": 4.02,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 64,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 266.07,
+          "amd_ms": 0.0226,
+          "nv_tflops": 221.56,
+          "nv_ms": 0.0218,
+          "amd_tflops_hipblaslt": 213.49,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 1024,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 753.38,
+          "amd_ms": 0.0829,
+          "nv_tflops": 1316.16,
+          "nv_ms": 0.0587,
+          "amd_tflops_hipblaslt": 932.81,
+          "amd_backend": "hipblaslt"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 4096,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 1311.53,
+          "amd_ms": 0.2069,
+          "nv_tflops": 1521.15,
+          "nv_ms": 0.2033,
+          "amd_tflops_hipblaslt": 1494.66,
+          "amd_backend": "hipblaslt"
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 1,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1.49,
+          "amd_ms": 0.0127,
+          "nv_tflops": 2.61,
+          "nv_ms": 0.0072
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 64,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 89.32,
+          "amd_ms": 0.0135,
+          "nv_tflops": 170.27,
+          "nv_ms": 0.0071
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 1024,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1217.63,
+          "amd_ms": 0.0159,
+          "nv_tflops": 2254.8,
+          "nv_ms": 0.0086
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 4096,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1812.44,
+          "amd_ms": 0.0427,
+          "nv_tflops": 2781.27,
+          "nv_ms": 0.0278
+        },
+        {
+          "model": "Wan2.1-14B",
+          "op": "gemm_fp8_blockscale",
+          "label": "o_proj",
+          "M": 1,
+          "N": 5120,
+          "K": 5120,
+          "tp": 1,
+          "amd_tflops": 2.58,
+          "nv_tflops": 3.98,
+          "amd_ms": 0.0203,
+          "nv_ms": 0.0132
+        },
+        {
+          "model": "Wan2.1-14B",
+          "op": "gemm_fp8_blockscale",
+          "label": "o_proj",
+          "M": 64,
+          "N": 5120,
+          "K": 5120,
+          "tp": 1,
+          "amd_tflops": 164.56,
+          "nv_tflops": 254.99,
+          "amd_ms": 0.0204,
+          "nv_ms": 0.0132
+        },
+        {
+          "model": "Wan2.1-14B",
+          "op": "gemm_fp8_blockscale",
+          "label": "o_proj",
+          "M": 1024,
+          "N": 5120,
+          "K": 5120,
+          "tp": 1,
+          "amd_tflops": 1573.79,
+          "nv_tflops": 2192.79,
+          "amd_ms": 0.0341,
+          "nv_ms": 0.0245
+        },
+        {
+          "model": "Wan2.1-14B",
+          "op": "gemm_fp8_blockscale",
+          "label": "o_proj",
+          "M": 4096,
+          "N": 5120,
+          "K": 5120,
+          "tp": 1,
+          "amd_tflops": 2288.63,
+          "nv_tflops": 2911.35,
+          "amd_ms": 0.0938,
+          "nv_ms": 0.0738
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "qkv",
+          "M": 1,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 4.34,
+          "amd_ms": 0.0167,
+          "nv_tflops": 5.83,
+          "nv_ms": 0.0097,
+          "amd_tflops_hipblaslt": 3.39,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "qkv",
+          "M": 64,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 240.69,
+          "amd_ms": 0.0205,
+          "nv_tflops": 449.13,
+          "nv_ms": 0.0081,
+          "amd_tflops_hipblaslt": 176.59,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "qkv",
+          "M": 1024,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 923.32,
+          "amd_ms": 0.0518,
+          "nv_tflops": 1521.36,
+          "nv_ms": 0.0381,
+          "amd_tflops_hipblaslt": 1119.47,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "qkv",
+          "M": 4096,
+          "N": 9216,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1205.18,
+          "amd_ms": 0.1695,
+          "nv_tflops": 1680.75,
+          "nv_ms": 0.138,
+          "amd_tflops_hipblaslt": 1368.65,
+          "amd_backend": "hipblaslt"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 1,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 4.66,
+          "amd_ms": 0.0188,
+          "nv_tflops": 2.87,
+          "nv_ms": 0.0263,
+          "amd_tflops_hipblaslt": 4.02,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 64,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 266.07,
+          "amd_ms": 0.0226,
+          "nv_tflops": 221.56,
+          "nv_ms": 0.0218,
+          "amd_tflops_hipblaslt": 213.49,
+          "amd_backend": "asm"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 1024,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 753.38,
+          "amd_ms": 0.0829,
+          "nv_tflops": 1316.16,
+          "nv_ms": 0.0587,
+          "amd_tflops_hipblaslt": 932.81,
+          "amd_backend": "hipblaslt"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_bf16",
+          "label": "mlp_down",
+          "M": 4096,
+          "N": 3072,
+          "K": 12288,
+          "tp": 1,
+          "amd_tflops": 1311.53,
+          "amd_ms": 0.2069,
+          "nv_tflops": 1521.15,
+          "nv_ms": 0.2033,
+          "amd_tflops_hipblaslt": 1494.66,
+          "amd_backend": "hipblaslt"
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 1,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1.49,
+          "amd_ms": 0.0127,
+          "nv_tflops": 2.61,
+          "nv_ms": 0.0072
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 64,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 89.32,
+          "amd_ms": 0.0135,
+          "nv_tflops": 170.27,
+          "nv_ms": 0.0071
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 1024,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1217.63,
+          "amd_ms": 0.0159,
+          "nv_tflops": 2254.8,
+          "nv_ms": 0.0086
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "gemm_fp8",
+          "label": "o_proj",
+          "M": 4096,
+          "N": 3072,
+          "K": 3072,
+          "tp": 1,
+          "amd_tflops": 1812.44,
+          "amd_ms": 0.0427,
+          "nv_tflops": 2781.27,
+          "nv_ms": 0.0278
         }
       ]
     },
@@ -53256,7 +53652,7 @@
       "name": "Conv2D (MIOpen vs cuDNN)",
       "results": [
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_early_1024",
           "M": 1,
@@ -53267,7 +53663,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_early_1024",
           "M": 2,
@@ -53278,7 +53674,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_early_1024",
           "M": 4,
@@ -53289,7 +53685,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_early_1024",
           "M": 8,
@@ -53300,7 +53696,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_mid_512",
           "M": 1,
@@ -53311,7 +53707,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_mid_512",
           "M": 2,
@@ -53322,7 +53718,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_mid_512",
           "M": 4,
@@ -53333,7 +53729,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_mid_512",
           "M": 8,
@@ -53344,7 +53740,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_256",
           "M": 1,
@@ -53355,7 +53751,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_256",
           "M": 2,
@@ -53366,7 +53762,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_256",
           "M": 4,
@@ -53377,7 +53773,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_256",
           "M": 8,
@@ -53388,7 +53784,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_128",
           "M": 1,
@@ -53399,7 +53795,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_128",
           "M": 2,
@@ -53410,7 +53806,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_128",
           "M": 4,
@@ -53421,7 +53817,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "vae_deep_128",
           "M": 8,
@@ -53432,7 +53828,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level0",
           "M": 1,
@@ -53443,7 +53839,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level0",
           "M": 2,
@@ -53454,7 +53850,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level0",
           "M": 4,
@@ -53465,7 +53861,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level0",
           "M": 8,
@@ -53476,7 +53872,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level1",
           "M": 1,
@@ -53487,7 +53883,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level1",
           "M": 2,
@@ -53498,7 +53894,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level1",
           "M": 4,
@@ -53509,7 +53905,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level1",
           "M": 8,
@@ -53520,7 +53916,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level2",
           "M": 1,
@@ -53531,7 +53927,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level2",
           "M": 2,
@@ -53542,7 +53938,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level2",
           "M": 4,
@@ -53553,7 +53949,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level2",
           "M": 8,
@@ -53564,7 +53960,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level3",
           "M": 1,
@@ -53575,7 +53971,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level3",
           "M": 2,
@@ -53586,7 +53982,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level3",
           "M": 4,
@@ -53597,7 +53993,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "unet_level3",
           "M": 8,
@@ -53608,7 +54004,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level0",
           "M": 1,
@@ -53619,7 +54015,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level0",
           "M": 2,
@@ -53630,7 +54026,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level0",
           "M": 4,
@@ -53641,7 +54037,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level0",
           "M": 8,
@@ -53652,7 +54048,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level1",
           "M": 1,
@@ -53663,7 +54059,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level1",
           "M": 2,
@@ -53674,7 +54070,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level1",
           "M": 4,
@@ -53685,7 +54081,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level1",
           "M": 8,
@@ -53696,7 +54092,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level2",
           "M": 1,
@@ -53707,7 +54103,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level2",
           "M": 2,
@@ -53718,7 +54114,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level2",
           "M": 4,
@@ -53729,7 +54125,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "downsample_level2",
           "M": 8,
@@ -53740,7 +54136,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_0to1",
           "M": 1,
@@ -53751,7 +54147,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_0to1",
           "M": 2,
@@ -53762,7 +54158,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_0to1",
           "M": 4,
@@ -53773,7 +54169,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_0to1",
           "M": 8,
@@ -53784,7 +54180,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_1to2",
           "M": 1,
@@ -53795,7 +54191,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_1to2",
           "M": 2,
@@ -53806,7 +54202,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_1to2",
           "M": 4,
@@ -53817,7 +54213,7 @@
           "nv_ms": 0.0
         },
         {
-          "model": "hardcoded",
+          "model": "SDXL",
           "op": "conv2d",
           "label": "channel_mix_1to2",
           "M": 8,
@@ -53881,6 +54277,534 @@
           "nv_tflops": 234.5,
           "amd_ms": 0.057,
           "nv_ms": 0.082
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 408.48,
+          "nv_tflops": 453.52,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 408.48,
+          "nv_tflops": 453.52,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 408.48,
+          "nv_tflops": 453.52,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 401.93,
+          "nv_tflops": 509.32,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 401.93,
+          "nv_tflops": 509.32,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 401.93,
+          "nv_tflops": 509.32,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 416.37,
+          "nv_tflops": 540.06,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 416.37,
+          "nv_tflops": 540.06,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 416.37,
+          "nv_tflops": 540.06,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 376.99,
+          "nv_tflops": 556.96,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 376.99,
+          "nv_tflops": 556.96,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_early_1024",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 376.99,
+          "nv_tflops": 556.96,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 606.99,
+          "nv_tflops": 664.77,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 606.99,
+          "nv_tflops": 664.77,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 606.99,
+          "nv_tflops": 664.77,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 561.09,
+          "nv_tflops": 777.19,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 561.09,
+          "nv_tflops": 777.19,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 561.09,
+          "nv_tflops": 777.19,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 591.3,
+          "nv_tflops": 832.52,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 591.3,
+          "nv_tflops": 832.52,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 591.3,
+          "nv_tflops": 832.52,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 609.26,
+          "nv_tflops": 886.31,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 609.26,
+          "nv_tflops": 886.31,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_mid_512",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 609.26,
+          "nv_tflops": 886.31,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 752.46,
+          "nv_tflops": 1038.43,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 752.46,
+          "nv_tflops": 1038.43,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 752.46,
+          "nv_tflops": 1038.43,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 739.61,
+          "nv_tflops": 1104.51,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 739.61,
+          "nv_tflops": 1104.51,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 739.61,
+          "nv_tflops": 1104.51,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 742.37,
+          "nv_tflops": 1179.32,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 742.37,
+          "nv_tflops": 1179.32,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 742.37,
+          "nv_tflops": 1179.32,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 673.64,
+          "nv_tflops": 1175.81,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 673.64,
+          "nv_tflops": 1175.81,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_256",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 673.64,
+          "nv_tflops": 1175.81,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 659.36,
+          "nv_tflops": 786.93,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 659.36,
+          "nv_tflops": 786.93,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 1,
+          "tp": 1,
+          "amd_tflops": 659.36,
+          "nv_tflops": 786.93,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 710.29,
+          "nv_tflops": 766.28,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 710.29,
+          "nv_tflops": 766.28,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 2,
+          "tp": 1,
+          "amd_tflops": 710.29,
+          "nv_tflops": 766.28,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 759.77,
+          "nv_tflops": 964.94,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 759.77,
+          "nv_tflops": 964.94,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 4,
+          "tp": 1,
+          "amd_tflops": 759.77,
+          "nv_tflops": 964.94,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 764.76,
+          "nv_tflops": 1176.98,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 764.76,
+          "nv_tflops": 1176.98,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "conv2d",
+          "label": "vae_deep_128",
+          "M": 8,
+          "tp": 1,
+          "amd_tflops": 764.76,
+          "nv_tflops": 1176.98,
+          "amd_ms": 0.0,
+          "nv_ms": 0.0
         }
       ]
     },
@@ -56370,7 +57294,7 @@
           "nv_ms": 0.0214
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_1024",
           "M": 1,
@@ -56381,7 +57305,7 @@
           "nv_ms": 4.1852
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_1024",
           "M": 2,
@@ -56392,7 +57316,7 @@
           "nv_ms": 4.5045
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_1024",
           "M": 4,
@@ -56403,7 +57327,7 @@
           "nv_ms": 5.1236
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_1024",
           "M": 8,
@@ -56414,7 +57338,7 @@
           "nv_ms": 6.315
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_512",
           "M": 1,
@@ -56425,7 +57349,7 @@
           "nv_ms": 1.0346
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_512",
           "M": 2,
@@ -56436,7 +57360,7 @@
           "nv_ms": 1.1359
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_512",
           "M": 4,
@@ -56447,7 +57371,7 @@
           "nv_ms": 1.2957
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_128_512",
           "M": 8,
@@ -56458,7 +57382,7 @@
           "nv_ms": 1.5939
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_512",
           "M": 1,
@@ -56469,7 +57393,7 @@
           "nv_ms": 2.095
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_512",
           "M": 2,
@@ -56480,7 +57404,7 @@
           "nv_ms": 2.262
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_512",
           "M": 4,
@@ -56491,7 +57415,7 @@
           "nv_ms": 2.5715
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_512",
           "M": 8,
@@ -56502,7 +57426,7 @@
           "nv_ms": 3.1697
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_256",
           "M": 1,
@@ -56513,7 +57437,7 @@
           "nv_ms": 0.2396
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_256",
           "M": 2,
@@ -56524,7 +57448,7 @@
           "nv_ms": 0.5612
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_256",
           "M": 4,
@@ -56535,7 +57459,7 @@
           "nv_ms": 0.6546
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_256_256",
           "M": 8,
@@ -56546,7 +57470,7 @@
           "nv_ms": 0.8067
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_256",
           "M": 1,
@@ -56557,7 +57481,7 @@
           "nv_ms": 1.0346
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_256",
           "M": 2,
@@ -56568,7 +57492,7 @@
           "nv_ms": 1.136
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_256",
           "M": 4,
@@ -56579,7 +57503,7 @@
           "nv_ms": 1.2955
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_256",
           "M": 8,
@@ -56590,7 +57514,7 @@
           "nv_ms": 1.5944
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_128",
           "M": 1,
@@ -56601,7 +57525,7 @@
           "nv_ms": 0.1228
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_128",
           "M": 2,
@@ -56612,7 +57536,7 @@
           "nv_ms": 0.1466
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_128",
           "M": 4,
@@ -56623,7 +57547,7 @@
           "nv_ms": 0.3239
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_128",
           "M": 8,
@@ -56634,7 +57558,7 @@
           "nv_ms": 0.4104
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_64",
           "M": 1,
@@ -56645,7 +57569,7 @@
           "nv_ms": 0.0388
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_64",
           "M": 2,
@@ -56656,7 +57580,7 @@
           "nv_ms": 0.0429
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
           "op": "groupnorm",
           "label": "vae_gn_512_64",
           "M": 4,
@@ -56667,7 +57591,1239 @@
           "nv_ms": 0.0514
         },
         {
-          "model": "VAE-SD",
+          "model": "SDXL",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1022.6,
+          "nv_bw": 877.7,
+          "amd_ms": 0.0656,
+          "nv_ms": 0.0765
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 134.2,
+          "nv_bw": 128.3,
+          "amd_ms": 4.0019,
+          "nv_ms": 4.1852
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 134.2,
+          "nv_bw": 128.3,
+          "amd_ms": 4.0019,
+          "nv_ms": 4.1852
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 134.2,
+          "nv_bw": 128.3,
+          "amd_ms": 4.0019,
+          "nv_ms": 4.1852
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 134.2,
+          "nv_bw": 128.3,
+          "amd_ms": 4.0019,
+          "nv_ms": 4.1852
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 262.9,
+          "nv_bw": 238.4,
+          "amd_ms": 4.0836,
+          "nv_ms": 4.5045
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 262.9,
+          "nv_bw": 238.4,
+          "amd_ms": 4.0836,
+          "nv_ms": 4.5045
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 262.9,
+          "nv_bw": 238.4,
+          "amd_ms": 4.0836,
+          "nv_ms": 4.5045
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 262.9,
+          "nv_bw": 238.4,
+          "amd_ms": 4.0836,
+          "nv_ms": 4.5045
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 463.1,
+          "nv_bw": 419.1,
+          "amd_ms": 4.6374,
+          "nv_ms": 5.1236
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 463.1,
+          "nv_bw": 419.1,
+          "amd_ms": 4.6374,
+          "nv_ms": 5.1236
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 463.1,
+          "nv_bw": 419.1,
+          "amd_ms": 4.6374,
+          "nv_ms": 5.1236
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 463.1,
+          "nv_bw": 419.1,
+          "amd_ms": 4.6374,
+          "nv_ms": 5.1236
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 896.0,
+          "nv_bw": 680.1,
+          "amd_ms": 4.7936,
+          "nv_ms": 6.315
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 896.0,
+          "nv_bw": 680.1,
+          "amd_ms": 4.7936,
+          "nv_ms": 6.315
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 896.0,
+          "nv_bw": 680.1,
+          "amd_ms": 4.7936,
+          "nv_ms": 6.315
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_1024",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 896.0,
+          "nv_bw": 680.1,
+          "amd_ms": 4.7936,
+          "nv_ms": 6.315
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 186.8,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7184,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 186.8,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7184,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 186.8,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7184,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 186.8,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7184,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.0,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7416,
+          "nv_ms": 1.1359
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.0,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7416,
+          "nv_ms": 1.1359
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.0,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7416,
+          "nv_ms": 1.1359
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.0,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7416,
+          "nv_ms": 1.1359
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 492.6,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0898,
+          "nv_ms": 1.2957
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 492.6,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0898,
+          "nv_ms": 1.2957
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 492.6,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0898,
+          "nv_ms": 1.2957
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 492.6,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0898,
+          "nv_ms": 1.2957
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 893.8,
+          "nv_bw": 673.6,
+          "amd_ms": 1.2014,
+          "nv_ms": 1.5939
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 893.8,
+          "nv_bw": 673.6,
+          "amd_ms": 1.2014,
+          "nv_ms": 1.5939
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 893.8,
+          "nv_bw": 673.6,
+          "amd_ms": 1.2014,
+          "nv_ms": 1.5939
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_128_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 893.8,
+          "nv_bw": 673.6,
+          "amd_ms": 1.2014,
+          "nv_ms": 1.5939
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 188.1,
+          "nv_bw": 128.1,
+          "amd_ms": 1.4269,
+          "nv_ms": 2.095
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 188.1,
+          "nv_bw": 128.1,
+          "amd_ms": 1.4269,
+          "nv_ms": 2.095
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 188.1,
+          "nv_bw": 128.1,
+          "amd_ms": 1.4269,
+          "nv_ms": 2.095
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 188.1,
+          "nv_bw": 128.1,
+          "amd_ms": 1.4269,
+          "nv_ms": 2.095
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 260.5,
+          "nv_bw": 237.3,
+          "amd_ms": 2.0606,
+          "nv_ms": 2.262
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 260.5,
+          "nv_bw": 237.3,
+          "amd_ms": 2.0606,
+          "nv_ms": 2.262
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 260.5,
+          "nv_bw": 237.3,
+          "amd_ms": 2.0606,
+          "nv_ms": 2.262
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 260.5,
+          "nv_bw": 237.3,
+          "amd_ms": 2.0606,
+          "nv_ms": 2.262
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 497.7,
+          "nv_bw": 417.6,
+          "amd_ms": 2.1573,
+          "nv_ms": 2.5715
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 497.7,
+          "nv_bw": 417.6,
+          "amd_ms": 2.1573,
+          "nv_ms": 2.5715
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 497.7,
+          "nv_bw": 417.6,
+          "amd_ms": 2.1573,
+          "nv_ms": 2.5715
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 497.7,
+          "nv_bw": 417.6,
+          "amd_ms": 2.1573,
+          "nv_ms": 2.5715
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 899.2,
+          "nv_bw": 677.5,
+          "amd_ms": 2.3881,
+          "nv_ms": 3.1697
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 899.2,
+          "nv_bw": 677.5,
+          "amd_ms": 2.3881,
+          "nv_ms": 3.1697
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 899.2,
+          "nv_bw": 677.5,
+          "amd_ms": 2.3881,
+          "nv_ms": 3.1697
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_512",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 899.2,
+          "nv_bw": 677.5,
+          "amd_ms": 2.3881,
+          "nv_ms": 3.1697
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 185.1,
+          "nv_bw": 280.1,
+          "amd_ms": 0.3625,
+          "nv_ms": 0.2396
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 185.1,
+          "nv_bw": 280.1,
+          "amd_ms": 0.3625,
+          "nv_ms": 0.2396
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 185.1,
+          "nv_bw": 280.1,
+          "amd_ms": 0.3625,
+          "nv_ms": 0.2396
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 185.1,
+          "nv_bw": 280.1,
+          "amd_ms": 0.3625,
+          "nv_ms": 0.2396
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 357.7,
+          "nv_bw": 239.2,
+          "amd_ms": 0.3752,
+          "nv_ms": 0.5612
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 357.7,
+          "nv_bw": 239.2,
+          "amd_ms": 0.3752,
+          "nv_ms": 0.5612
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 357.7,
+          "nv_bw": 239.2,
+          "amd_ms": 0.3752,
+          "nv_ms": 0.5612
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 357.7,
+          "nv_bw": 239.2,
+          "amd_ms": 0.3752,
+          "nv_ms": 0.5612
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 672.1,
+          "nv_bw": 410.1,
+          "amd_ms": 0.3994,
+          "nv_ms": 0.6546
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 672.1,
+          "nv_bw": 410.1,
+          "amd_ms": 0.3994,
+          "nv_ms": 0.6546
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 672.1,
+          "nv_bw": 410.1,
+          "amd_ms": 0.3994,
+          "nv_ms": 0.6546
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 672.1,
+          "nv_bw": 410.1,
+          "amd_ms": 0.3994,
+          "nv_ms": 0.6546
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 876.6,
+          "nv_bw": 665.5,
+          "amd_ms": 0.6124,
+          "nv_ms": 0.8067
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 876.6,
+          "nv_bw": 665.5,
+          "amd_ms": 0.6124,
+          "nv_ms": 0.8067
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 876.6,
+          "nv_bw": 665.5,
+          "amd_ms": 0.6124,
+          "nv_ms": 0.8067
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_256_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 876.6,
+          "nv_bw": 665.5,
+          "amd_ms": 0.6124,
+          "nv_ms": 0.8067
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 187.1,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7175,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 187.1,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7175,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 187.1,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7175,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 187.1,
+          "nv_bw": 129.7,
+          "amd_ms": 0.7175,
+          "nv_ms": 1.0346
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.6,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7404,
+          "nv_ms": 1.136
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.6,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7404,
+          "nv_ms": 1.136
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.6,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7404,
+          "nv_ms": 1.136
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 362.6,
+          "nv_bw": 236.3,
+          "amd_ms": 0.7404,
+          "nv_ms": 1.136
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 491.7,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0918,
+          "nv_ms": 1.2955
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 491.7,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0918,
+          "nv_ms": 1.2955
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 491.7,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0918,
+          "nv_ms": 1.2955
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 491.7,
+          "nv_bw": 414.4,
+          "amd_ms": 1.0918,
+          "nv_ms": 1.2955
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 894.4,
+          "nv_bw": 673.5,
+          "amd_ms": 1.2005,
+          "nv_ms": 1.5944
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 894.4,
+          "nv_bw": 673.5,
+          "amd_ms": 1.2005,
+          "nv_ms": 1.5944
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 894.4,
+          "nv_bw": 673.5,
+          "amd_ms": 1.2005,
+          "nv_ms": 1.5944
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_256",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 894.4,
+          "nv_bw": 673.5,
+          "amd_ms": 1.2005,
+          "nv_ms": 1.5944
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 182.1,
+          "nv_bw": 273.2,
+          "amd_ms": 0.1842,
+          "nv_ms": 0.1228
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 182.1,
+          "nv_bw": 273.2,
+          "amd_ms": 0.1842,
+          "nv_ms": 0.1228
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 182.1,
+          "nv_bw": 273.2,
+          "amd_ms": 0.1842,
+          "nv_ms": 0.1228
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 182.1,
+          "nv_bw": 273.2,
+          "amd_ms": 0.1842,
+          "nv_ms": 0.1228
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 350.0,
+          "nv_bw": 457.9,
+          "amd_ms": 0.1918,
+          "nv_ms": 0.1466
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 350.0,
+          "nv_bw": 457.9,
+          "amd_ms": 0.1918,
+          "nv_ms": 0.1466
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 350.0,
+          "nv_bw": 457.9,
+          "amd_ms": 0.1918,
+          "nv_ms": 0.1466
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 350.0,
+          "nv_bw": 457.9,
+          "amd_ms": 0.1918,
+          "nv_ms": 0.1466
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 657.4,
+          "nv_bw": 414.4,
+          "amd_ms": 0.2042,
+          "nv_ms": 0.3239
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 657.4,
+          "nv_bw": 414.4,
+          "amd_ms": 0.2042,
+          "nv_ms": 0.3239
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 657.4,
+          "nv_bw": 414.4,
+          "amd_ms": 0.2042,
+          "nv_ms": 0.3239
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 657.4,
+          "nv_bw": 414.4,
+          "amd_ms": 0.2042,
+          "nv_ms": 0.3239
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1163.6,
+          "nv_bw": 654.1,
+          "amd_ms": 0.2307,
+          "nv_ms": 0.4104
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1163.6,
+          "nv_bw": 654.1,
+          "amd_ms": 0.2307,
+          "nv_ms": 0.4104
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1163.6,
+          "nv_bw": 654.1,
+          "amd_ms": 0.2307,
+          "nv_ms": 0.4104
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_128",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1163.6,
+          "nv_bw": 654.1,
+          "amd_ms": 0.2307,
+          "nv_ms": 0.4104
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 269.1,
+          "nv_bw": 216.0,
+          "amd_ms": 0.0312,
+          "nv_ms": 0.0388
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 269.1,
+          "nv_bw": 216.0,
+          "amd_ms": 0.0312,
+          "nv_ms": 0.0388
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 269.1,
+          "nv_bw": 216.0,
+          "amd_ms": 0.0312,
+          "nv_ms": 0.0388
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 1,
+          "tp": 1,
+          "amd_bw": 269.1,
+          "nv_bw": 216.0,
+          "amd_ms": 0.0312,
+          "nv_ms": 0.0388
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 492.2,
+          "nv_bw": 390.9,
+          "amd_ms": 0.0341,
+          "nv_ms": 0.0429
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 492.2,
+          "nv_bw": 390.9,
+          "amd_ms": 0.0341,
+          "nv_ms": 0.0429
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 492.2,
+          "nv_bw": 390.9,
+          "amd_ms": 0.0341,
+          "nv_ms": 0.0429
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 2,
+          "tp": 1,
+          "amd_bw": 492.2,
+          "nv_bw": 390.9,
+          "amd_ms": 0.0341,
+          "nv_ms": 0.0429
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 577.4,
+          "nv_bw": 652.4,
+          "amd_ms": 0.0581,
+          "nv_ms": 0.0514
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 577.4,
+          "nv_bw": 652.4,
+          "amd_ms": 0.0581,
+          "nv_ms": 0.0514
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 577.4,
+          "nv_bw": 652.4,
+          "amd_ms": 0.0581,
+          "nv_ms": 0.0514
+        },
+        {
+          "model": "CogVideoX-5B",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 4,
+          "tp": 1,
+          "amd_bw": 577.4,
+          "nv_bw": 652.4,
+          "amd_ms": 0.0581,
+          "nv_ms": 0.0514
+        },
+        {
+          "model": "FLUX.1-dev",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1022.6,
+          "nv_bw": 877.7,
+          "amd_ms": 0.0656,
+          "nv_ms": 0.0765
+        },
+        {
+          "model": "HunyuanVideo",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1022.6,
+          "nv_bw": 877.7,
+          "amd_ms": 0.0656,
+          "nv_ms": 0.0765
+        },
+        {
+          "model": "SD3.5-Large",
+          "op": "groupnorm",
+          "label": "vae_gn_512_64",
+          "M": 8,
+          "tp": 1,
+          "amd_bw": 1022.6,
+          "nv_bw": 877.7,
+          "amd_ms": 0.0656,
+          "nv_ms": 0.0765
+        },
+        {
+          "model": "CogVideoX-5B",
           "op": "groupnorm",
           "label": "vae_gn_512_64",
           "M": 8,
@@ -57551,7 +59707,7 @@
     }
   ],
   "summary": {
-    "total_configs": 4354,
+    "total_configs": 4542,
     "operators": 13,
     "comparable": 3392,
     "geomean": 1.0391,
