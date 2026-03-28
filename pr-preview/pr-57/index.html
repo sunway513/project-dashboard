@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Dashboard</title>
+  <link rel="stylesheet" href="assets/css/dashboard.css?v=8">
+</head>
+<body>
+  <header>
+    <h1>Project Dashboard</h1>
+    <p id="last-updated">Loading...</p>
+  </header>
+
+  <nav id="tab-bar">
+    <button class="tab-btn active" data-tab="projects">Projects</button>
+    <button class="tab-btn" data-tab="test-parity">Test Parity</button>
+    <button class="tab-btn" data-tab="activity">Activity</button>
+    <button class="tab-btn" data-tab="trends">Trends</button>
+    <button class="tab-btn" data-tab="builds">Builds</button>
+    <button class="tab-btn" data-tab="op-coverage">AI Operator Coverage</button>
+    <button class="tab-btn" data-tab="op-perf">Op Performance</button>
+  </nav>
+
+  <div id="tab-projects" class="tab-panel active">
+    <section id="weekly-summary"></section>
+    <main id="dashboard"></main>
+  </div>
+
+  <div id="tab-test-parity" class="tab-panel">
+    <section id="parity-view"></section>
+  </div>
+
+  <div id="tab-activity" class="tab-panel">
+    <section id="activity-view"></section>
+  </div>
+
+  <div id="tab-trends" class="tab-panel">
+    <section id="trends-view"></section>
+  </div>
+
+  <div id="tab-builds" class="tab-panel">
+    <section id="builds-view"></section>
+  </div>
+
+  <div id="tab-op-coverage" class="tab-panel">
+    <section id="op-coverage-view"></section>
+  </div>
+
+  <div id="tab-op-perf" class="tab-panel">
+    <section id="op-perf-view"></section>
+  </div>
+
+  <footer>
+    <p>Data collected via <a href="https://github.com/sunway513/project-dashboard">project-dashboard</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@dagrejs/dagre@1/dist/dagre.min.js"></script>
+  <script src="assets/js/utils.js?v=3"></script>
+  <script src="assets/js/op-coverage.js?v=6"></script>
+  <script src="assets/js/op-perf.js?v=36"></script>
+  <script src="assets/js/dashboard.js?v=3"></script>
+</body>
+</html>
