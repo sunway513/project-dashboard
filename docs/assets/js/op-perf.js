@@ -70,16 +70,26 @@ function renderOpPerf(data) {
 
   var s = data.summary || {};
   var allModels = s.per_model || [];
-  var moeCount = allModels.filter(function(m){return m.type==='MoE';}).length;
-  var moeWins = allModels.filter(function(m){return m.type==='MoE' && m.geomean>1.05;}).length;
-  var denseCount = allModels.filter(function(m){return m.type!=='MoE';}).length;
-  var denseNvWins = allModels.filter(function(m){return m.type!=='MoE' && m.geomean<0.95;}).length;
+
+  // Count wins per category
+  function countWins(type) {
+    var models = allModels.filter(function(m) { return m.type === type; });
+    var wins = models.filter(function(m) { return m.geomean > 1.05; }).length;
+    return { total: models.length, wins: wins };
+  }
+  var moe = countWins('LLM-MoE'), dense = countWins('LLM-Dense');
+  var img = countWins('Image'), vid = countWins('Video'), aud = countWins('Audio');
 
   var html = '<h2>Operator Performance &mdash; MI355X vs B300</h2>';
 
   // Executive summary
-  var summaryText = 'MoE models (dominant on OpenRouter): AMD wins ' + moeWins + '/' + moeCount + '. Dense models: NV wins ' + denseNvWins + '/' + denseCount + '.';
-  html += '<div class="op-exec-summary">' + summaryText + '</div>';
+  var summaryParts = [];
+  if (moe.total > 0) summaryParts.push('LLM-MoE: AMD wins ' + moe.wins + '/' + moe.total);
+  if (dense.total > 0) summaryParts.push('LLM-Dense: NV wins ' + (dense.total - dense.wins) + '/' + dense.total);
+  if (img.total > 0) summaryParts.push('Image: AMD wins ' + img.wins + '/' + img.total);
+  if (vid.total > 0) summaryParts.push('Video: AMD wins ' + vid.wins + '/' + vid.total);
+  if (aud.total > 0) summaryParts.push('Audio: ' + (aud.wins > 0 ? 'AMD' : 'NV') + ' wins ' + (aud.wins || (aud.total - aud.wins)) + '/' + aud.total);
+  html += '<div class="op-exec-summary">' + summaryParts.join(' &bull; ') + '</div>';
 
   html += '<p class="op-perf-subtitle">Performance comparison across model shapes. ';
   html += '<span class="op-badge-amd">AMD MI355X (AITER)</span> vs ';
@@ -113,28 +123,47 @@ function renderOpPerf(data) {
 
   html += '</div>';
 
-  // Per-model breakdown, grouped by MoE vs Dense
+  // Per-model breakdown, grouped by: LLM-MoE, LLM-Dense, Image, Video, Audio
   if (s.per_model && s.per_model.length > 0) {
     html += '<div class="op-perf-models">';
     html += '<h3>Per-Model Inference-Weighted GeoMean</h3>';
 
-    var moeModels = s.per_model.filter(function(m) { return m.type === 'MoE'; });
-    var denseModels = s.per_model.filter(function(m) { return m.type !== 'MoE'; });
+    var modelGroups = [
+      { key: 'LLM-MoE', label: 'LLM &mdash; MoE Models', icon: '&#x1F9E0;' },
+      { key: 'LLM-Dense', label: 'LLM &mdash; Dense Models', icon: '&#x1F4A0;' },
+      { key: 'Image', label: 'Image Generation', icon: '&#x1F5BC;' },
+      { key: 'Video', label: 'Video Generation', icon: '&#x1F3AC;' },
+      { key: 'Audio', label: 'Audio / Speech', icon: '&#x1F3B5;' },
+    ];
 
-    if (moeModels.length > 0) {
-      html += '<h4 class="op-model-group-header">MoE Models</h4>';
+    for (var gi = 0; gi < modelGroups.length; gi++) {
+      var group = modelGroups[gi];
+      var models = s.per_model.filter(function(m) { return m.type === group.key; });
+      if (models.length === 0) continue;
+
+      // Compute group geomean
+      var gLog = 0;
+      for (var gmi = 0; gmi < models.length; gmi++) { gLog += Math.log(models[gmi].geomean); }
+      var groupGeo = Math.exp(gLog / models.length);
+      var groupClass = groupGeo > 1.05 ? 'op-group-amd' : groupGeo < 0.95 ? 'op-group-nv' : 'op-group-tie';
+
+      html += '<h4 class="op-model-group-header ' + groupClass + '">' + group.label;
+      html += ' <span class="op-group-geo">(' + groupGeo.toFixed(2) + 'x, ' + models.length + ' models)</span></h4>';
       html += '<div class="op-model-grid">';
-      for (var mi = 0; mi < moeModels.length; mi++) {
-        html += buildModelCard(moeModels[mi], data);
+      for (var mi = 0; mi < models.length; mi++) {
+        html += buildModelCard(models[mi], data);
       }
       html += '</div>';
     }
 
-    if (denseModels.length > 0) {
-      html += '<h4 class="op-model-group-header">Dense Models</h4>';
+    // Handle any uncategorized models
+    var knownTypes = modelGroups.map(function(g) { return g.key; });
+    var otherModels = s.per_model.filter(function(m) { return knownTypes.indexOf(m.type) === -1; });
+    if (otherModels.length > 0) {
+      html += '<h4 class="op-model-group-header">Other</h4>';
       html += '<div class="op-model-grid">';
-      for (var mi = 0; mi < denseModels.length; mi++) {
-        html += buildModelCard(denseModels[mi], data);
+      for (var mi = 0; mi < otherModels.length; mi++) {
+        html += buildModelCard(otherModels[mi], data);
       }
       html += '</div>';
     }
@@ -859,10 +888,14 @@ function renderD3Heatmap(catId, cat, gpus, filters) {
 // ─── Model card builder with tooltip ───
 function buildModelCard(m, data) {
   var cls = m.geomean > 1.05 ? 'op-model-amd' : m.geomean < 0.95 ? 'op-model-nv' : 'op-model-tie';
-  var isMoE = m.type === 'MoE';
-  var weights = isMoE
-    ? {moe_fused:0.40, attention:0.22, gemm:0.13, communication:0.10, rmsnorm:0.05, rope:0.03, softmax:0.04, quant:0.03}
-    : {gemm:0.48, attention:0.27, communication:0.10, rmsnorm:0.05, rope:0.03, softmax:0.04, quant:0.03};
+  var WEIGHT_PROFILES = {
+    'LLM-MoE': {moe_fused:0.40, attention:0.22, gemm:0.13, communication:0.10, fused_rmsnorm:0.05, rope:0.03, softmax:0.04, quant:0.03},
+    'LLM-Dense': {gemm:0.48, attention:0.27, communication:0.10, fused_rmsnorm:0.05, rope:0.03, softmax:0.04, quant:0.03},
+    'Image': {diffusion_attention:0.45, conv2d:0.25, diffusion_adaln:0.08, diffusion_geglu:0.07, diffusion_norm:0.05, gemm:0.10},
+    'Video': {diffusion_attention:0.50, conv2d:0.15, diffusion_adaln:0.08, diffusion_geglu:0.07, diffusion_norm:0.05, gemm:0.15},
+    'Audio': {attention:0.35, diffusion_attention:0.15, gemm:0.25, fused_rmsnorm:0.05, rope:0.03, softmax:0.04, quant:0.03},
+  };
+  var weights = WEIGHT_PROFILES[m.type] || WEIGHT_PROFILES['LLM-Dense'];
 
   // Compute per-op breakdown for this model
   var breakdown = '';

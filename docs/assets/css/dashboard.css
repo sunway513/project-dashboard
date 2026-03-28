@@ -1294,6 +1294,22 @@ a.oc-be-link .oc-be:hover { filter: brightness(1.3); }
 
 /* ── Op Performance Tab ───────────────────────────────── */
 
+.op-model-group-header {
+  margin: 20px 0 8px 0;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #21262d;
+  border-left: 3px solid #8b949e;
+}
+.op-model-group-header.op-group-amd { border-left-color: #1f6feb; }
+.op-model-group-header.op-group-nv { border-left-color: #76b900; }
+.op-group-geo {
+  font-size: 13px;
+  font-weight: normal;
+  color: #8b949e;
+}
+
 .op-perf-subtitle {
   color: var(--text-muted);
   margin-bottom: 16px;
